@@ -1,0 +1,489 @@
+{
+ "time": "2026-10-18T14:24:18",
+ "by_mode": {
+  "bm25_only": {
+   "runs": 7,
+   "ok": 7,
+   "mean_tool_calls": 3.7,
+   "mean_tokens": 60524.4,
+   "mean_seconds": 29.2,
+   "answered": 6,
+   "no_evidence": 1,
+   "expected_britannica_cited": "6/6",
+   "expected_wikipedia_cited": "6/6",
+   "citations": 15,
+   "unresolved_citations": 0
+  },
+  "embed_only": {
+   "runs": 7,
+   "ok": 7,
+   "mean_tool_calls": 4.3,
+   "mean_tokens": 71034.7,
+   "mean_seconds": 38.3,
+   "answered": 6,
+   "no_evidence": 1,
+   "expected_britannica_cited": "6/6",
+   "expected_wikipedia_cited": "6/6",
+   "citations": 19,
+   "unresolved_citations": 0
+  },
+  "full": {
+   "runs": 7,
+   "ok": 7,
+   "mean_tool_calls": 4.3,
+   "mean_tokens": 66688.1,
+   "mean_seconds": 38.6,
+   "answered": 6,
+   "no_evidence": 1,
+   "expected_britannica_cited": "6/6",
+   "expected_wikipedia_cited": "6/6",
+   "citations": 15,
+   "unresolved_citations": 0
+  }
+ },
+ "runs": [
+  {
+   "mode": "bm25_only",
+   "question": "What did the Britannica say about lightning, and how does Wikipedia explain lightning today?",
+   "path": "runs/agent/ablation/bm25_only/20261018-141835-what-did-the-britannica-say-about-lightn.json",
+   "status": "ok",
+   "tool_calls": 5,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "search_sources",
+    "view_scan"
+   ],
+   "tokens": 54574,
+   "seconds": 30.3,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "How does the Britannica explain why a magnet attracts iron, compared with Wikipedia?",
+   "path": "runs/agent/ablation/bm25_only/20261018-141905-how-does-the-britannica-explain-why-a-ma.json",
+   "status": "ok",
+   "tool_calls": 5,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 92278,
+   "seconds": 28.0,
+   "no_evidence": false,
+   "citations": 3,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "Which Britannica claims about coining money in a mint still hold today according to Wikipedia?",
+   "path": "runs/agent/ablation/bm25_only/20261018-141933-which-britannica-claims-about-coining-mo.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 64622,
+   "seconds": 20.6,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "Compare the Britannica and Wikipedia accounts of the Huguenots. Cite both sides.",
+   "path": "runs/agent/ablation/bm25_only/20261018-141954-compare-the-britannica-and-wikipedia-acc.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 61472,
+   "seconds": 37.4,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "How did the Britannica describe the city of Erfurt, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/bm25_only/20261018-142031-how-did-the-britannica-describe-the-city.json",
+   "status": "ok",
+   "tool_calls": 2,
+   "calls": [
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 22292,
+   "seconds": 17.0,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "What did the Britannica say about inflammable air (firedamp) in coal mines, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/bm25_only/20261018-142048-what-did-the-britannica-say-about-inflam.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 89242,
+   "seconds": 50.6,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "bm25_only",
+   "question": "What does the Britannica say about the planet Neptune?",
+   "path": "runs/agent/ablation/bm25_only/20261018-142138-what-does-the-britannica-say-about-the-p.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources"
+   ],
+   "tokens": 39191,
+   "seconds": 20.4,
+   "no_evidence": true,
+   "citations": 2,
+   "expected_b_cited": null,
+   "expected_w_cited": null,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "What did the Britannica say about lightning, and how does Wikipedia explain lightning today?",
+   "path": "runs/agent/ablation/embed_only/20261018-141835-what-did-the-britannica-say-about-lightn.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 66115,
+   "seconds": 37.3,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "How does the Britannica explain why a magnet attracts iron, compared with Wikipedia?",
+   "path": "runs/agent/ablation/embed_only/20261018-141912-how-does-the-britannica-explain-why-a-ma.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 79274,
+   "seconds": 25.8,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "Which Britannica claims about coining money in a mint still hold today according to Wikipedia?",
+   "path": "runs/agent/ablation/embed_only/20261018-141938-which-britannica-claims-about-coining-mo.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 45417,
+   "seconds": 21.5,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "Compare the Britannica and Wikipedia accounts of the Huguenots. Cite both sides.",
+   "path": "runs/agent/ablation/embed_only/20261018-141959-compare-the-britannica-and-wikipedia-acc.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 67387,
+   "seconds": 50.5,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "How did the Britannica describe the city of Erfurt, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/embed_only/20261018-142050-how-did-the-britannica-describe-the-city.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan",
+    "view_scan"
+   ],
+   "tokens": 66955,
+   "seconds": 48.1,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "What did the Britannica say about inflammable air (firedamp) in coal mines, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/embed_only/20261018-142138-what-did-the-britannica-say-about-inflam.json",
+   "status": "ok",
+   "tool_calls": 10,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "view_scan",
+    "find_drift",
+    "find_drift",
+    "find_drift"
+   ],
+   "tokens": 143246,
+   "seconds": 65.4,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "embed_only",
+   "question": "What does the Britannica say about the planet Neptune?",
+   "path": "runs/agent/ablation/embed_only/20261018-142243-what-does-the-britannica-say-about-the-p.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "search_sources"
+   ],
+   "tokens": 28849,
+   "seconds": 19.8,
+   "no_evidence": true,
+   "citations": 7,
+   "expected_b_cited": null,
+   "expected_w_cited": null,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "What did the Britannica say about lightning, and how does Wikipedia explain lightning today?",
+   "path": "runs/agent/ablation/full/20261018-141835-what-did-the-britannica-say-about-lightn.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 56841,
+   "seconds": 41.6,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "How does the Britannica explain why a magnet attracts iron, compared with Wikipedia?",
+   "path": "runs/agent/ablation/full/20261018-141916-how-does-the-britannica-explain-why-a-ma.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 58300,
+   "seconds": 25.3,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "Which Britannica claims about coining money in a mint still hold today according to Wikipedia?",
+   "path": "runs/agent/ablation/full/20261018-141942-which-britannica-claims-about-coining-mo.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 50968,
+   "seconds": 24.9,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "Compare the Britannica and Wikipedia accounts of the Huguenots. Cite both sides.",
+   "path": "runs/agent/ablation/full/20261018-142006-compare-the-britannica-and-wikipedia-acc.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 58712,
+   "seconds": 38.4,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "How did the Britannica describe the city of Erfurt, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/full/20261018-142045-how-did-the-britannica-describe-the-city.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 48212,
+   "seconds": 20.0,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "What did the Britannica say about inflammable air (firedamp) in coal mines, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/full/20261018-142105-what-did-the-britannica-say-about-inflam.json",
+   "status": "ok",
+   "tool_calls": 6,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "search_sources",
+    "search_sources",
+    "view_scan",
+    "search_sources"
+   ],
+   "tokens": 95016,
+   "seconds": 76.6,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "full",
+   "question": "What does the Britannica say about the planet Neptune?",
+   "path": "runs/agent/ablation/full/20261018-142221-what-does-the-britannica-say-about-the-p.json",
+   "status": "ok",
+   "tool_calls": 8,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources",
+    "search_sources"
+   ],
+   "tokens": 98768,
+   "seconds": 43.2,
+   "no_evidence": true,
+   "citations": 3,
+   "expected_b_cited": null,
+   "expected_w_cited": null,
+   "unresolved_citations": []
+  }
+ ],
+ "metrics": {
+  "answered/no_evidence": "regex on the final text for no-evidence phrases",
+  "expected_*_cited": "the final answer cites the entry / Wikipedia page we know is the right source",
+  "unresolved_citations": "ids in the answer that name no real entry, or no Wikipedia page at that revision"
+ },
+ "hand_check": {
+  "method": "We read the 21 final answers. For the firedamp question we checked quoted Wikipedia fragments against the Firedamp article (page 505455) text from the Wikipedia API.",
+  "firedamp": {
+   "bm25_only": "answered both sides: Wikipedia BM25 returned Firedamp at rank 1; 3 quoted fragments are verbatim in the article",
+   "embed_only": "partial: cited [W:505455:1345728236] from get_pair but said it could not retrieve a quotable Wikipedia passage",
+   "full": "partial: same as embed_only; declined to quote Wikipedia from memory",
+   "cause": "LanceDB wiki_chunks holds only matched articles; B:1214:0 -> Firedamp is below tau, so Firedamp is not indexed"
+  },
+  "neptune": "all three modes: no evidence in Britannica (correct)",
+  "other_5_questions": "all modes cited the expected B entry and W page; the Wikipedia side came from get_pair (saved pair), so retrieval mode did not change it",
+  "grounded_both_sides": {
+   "bm25_only": "6/6",
+   "embed_only": "5/6",
+   "full": "5/6"
+  }
+ }
+}

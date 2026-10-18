@@ -1,0 +1,238 @@
+# id	cause	right article (if known)	note (one reader's judgment)
+B:13:0	pool_miss	Shipbuilding	entry pass never retrieved Shipbuilding; page vision pass found it at top 1 but below the rules
+B:104:0	pool_miss	Weights and measures	metric units text; main article not retrieved, only Acts of Parliament
+B:115:0	threshold_miss	Bleach	short pass top 1 is Bleach (logit -7.6, flat margin)
+B:217:0	pool_miss	Farm	entry pass missed Farm; page vision pass found and accepted it
+B:220:0	threshold_miss	Maritime fur trade	Cook's voyage, fur trade at Nootka; vision top 1 Maritime fur trade below rules
+B:247:0	pool_miss	Mount Etna	entry pass missed Mount Etna; vision page pass ranks it top 1 below rules
+B:251:0	threshold_miss	History of Switzerland	top 1 correct, logit -4.9, flat margin
+B:251:2	other		segmentation merged SWOONING (cross-reference) with SWORD; two subjects in one entry
+B:251:3	other	Blood brother	ranking miss: Blood brother at rank 2 behind National Oath
+B:257:0	threshold_miss	Jonathan Swift	top 1 correct at entry level (logit -6.9); page accepted via vision
+B:258:0	pool_miss	Edward III of England	reign of Edward III; article never retrieved
+B:258:1	other		WILLIAM: cross-reference list of kings of England; no single counterpart
+B:258:2	threshold_miss	Williamsburg, Virginia	top 1 correct, logit -5.2, small margin
+B:266:0	threshold_miss	Marriage law	Marriage / Marriage law at top 2 with margin near 0
+B:268:0	pool_miss	Laurus	LAURUS genus; Laurus entered the pool only through vision phrases
+B:270:0	no_text		plate caption only; page matched by plate worker
+B:318:0	pool_miss	Nile	White Nile found only by vision; Nile not retrieved
+B:374:0	no_text		blank scan (picture block only)
+B:383:0	pool_miss	Political economy	entry pass missed it; page vision pass accepted Political economy
+B:383:1	pool_miss	Political economy	chapter of the same treatise
+B:473:0	pool_miss	Conchology	entry pass missed it; page vision pass accepted Conchology
+B:493:0	pool_miss	Islay	footnote on Isla (Islay); Islay entered the pool through vision
+B:493:1	pool_miss	Juffureh	JILLIFREE, town on the Gambia; vision found Jufureh, below rules
+B:493:2	no_text		fragment "IIN. No Getta."
+B:493:3	ocr_failure	Icknield Street	headword garbled (REENLD STREET); Roman road
+B:493:4	threshold_miss	Islay	ISLA garbled as "HEL, Levy For Eddy"; short pass top 1 Islay below rules
+B:513:0	threshold_miss	William II of England	Norman history; short pass top 1 William II of England
+B:523:0	no_text		6-char fragment "Englos"
+B:523:2	obsolete_or_minor	Pale (heraldry)	ENDORSE, a heraldic diminutive with no own article
+B:523:3	obsolete_or_minor		ENDORSED, heraldic term
+B:523:4	threshold_miss	Dower	ENDOWMENT of dower; Dower top 1 (logit -6.0)
+B:523:6	obsolete_or_minor	Demonic possession	ENERGUMENS, church-history term
+B:523:7	pool_miss	Energeia	ENERGY in the Greek sense of efficacy
+B:523:8	ocr_failure	Forlorn hope	ENFANS PERDUS garbled as ENFANS RADS
+B:523:9	ocr_failure	Enfilade and defilade	ENFILADE read as ENTILADE; article never retrieved
+B:523:10	obsolete_or_minor	Ventriloquism	ENGASTRIMYTHI, pagan oracle speakers
+B:523:11	obsolete_or_minor		ENGENDERING, general word sense
+B:523:13	ocr_failure	Military engineering	ENGINEER read as ENGINEEN
+B:546:0	ocr_failure		Super VL reports a blank page; Parse text is invented modern prose
+B:560:0	ocr_failure		garbled botanical text (Amothygular, feminquinquifed)
+B:560:1	ocr_failure	Amhara	AMHARA read as AMHAN
+B:560:3	ocr_failure	Asbestos	AMIANTHUS read as AMIMAYTHUS
+B:560:4	obsolete_or_minor		AMICABLE, general word sense
+B:560:5	obsolete_or_minor		AMICULUM, minor Roman garment
+B:563:0	obsolete_or_minor		ACROTELEUTIC, liturgical term
+B:563:1	obsolete_or_minor		AGROTHYMON, old medical term
+B:563:2	other		ACT, broad multi-sense entry (philosophy, law)
+B:604:0	other		funeral ceremony fragment; subject unclear from the text
+B:604:1	threshold_miss	Jacques Auguste de Thou	THOU (de Thou), top 1 correct, logit -6.0
+B:604:3	ocr_failure	Thrapston	THRAPSTON read as THRARESTON
+B:611:0	pool_miss	Drag (physics)	resistance of fluids; physics articles not retrieved
+B:681:1	other	Magic lantern	ranking miss: Magic lantern at rank 4 behind Lens
+B:713:0	threshold_miss	Sheep	OVIS continuation; Sheep top 1 (logit -5.1)
+B:713:2	ocr_failure	Oulx	OULX read as OULC
+B:713:4	ocr_failure	Oundle	OUNDLE read as OUNDELE; article never retrieved
+B:713:6	ocr_failure		headword and place names garbled (OUSTLAGH)
+B:914:0	pool_miss	Arabs	entry pass missed it; page vision pass accepted Arabs
+B:944:0	threshold_miss	Units of measurement	MEASURE treatise; Ell / Cubit at top, flat margin
+B:948:0	no_text	Lava	plate caption "Lava. Plate CCLXXIV." only
+B:1017:0	other	Hell	ranking miss: Hell at rank 2 behind Purgatory
+B:1017:1	threshold_miss	Hellebore	top 1 correct, logit -5.7, margin 0.57
+B:1017:3	threshold_miss	Koine Greek	Language of the New Testament top 1 (close)
+B:1017:4	pool_miss	Dardanelles	HELLESPONT; Dardanelles not retrieved
+B:1017:5	pool_miss	Helmet	general Helmet article not retrieved, only helmet types
+B:1017:6	obsolete_or_minor		HELMINTHOLITHUS, old name for fossil worms
+B:1017:8	ocr_failure	Helmstedt	HELMSTADT read as HELMSSTAT
+B:1017:10	ocr_failure	Helsinki	HELSINGFORS read as HELSINGTORDIN
+B:1017:12	pool_miss	Hälsinge runes	runic script of Hälsingland
+B:1017:13	ocr_failure	Helston	HELSTON read as HELLTON
+B:1017:14	threshold_miss	Hellevoetsluis	top 1 correct, logit -7.3
+B:1032:0	threshold_miss	Heart	Heart top 1 (logit -4.7), flat margin
+B:1032:1	pool_miss	Heat	HEAT; main article not retrieved
+B:1102:0	threshold_miss	Philippe de Commines	short pass top 1 correct
+B:1102:1	pool_miss	County	COMITATUS, county
+B:1102:2	pool_miss	Comitia	Curiate assembly retrieved, Comitia not
+B:1214:0	threshold_miss	Firedamp	mine damps; Firedamp / Blackdamp at top
+B:1214:2	threshold_miss	Dan (ancient city)	short pass top 1 Dan River (Middle East)
+B:1214:3	other	Danake	ranking miss: Danake at rank 2 behind Charon's obol
+B:1250:0	pool_miss	Coin	COIN continuation; Coin not retrieved
+B:1268:0	other		naval officers text under a NAXIA/NAZARETH running head; out of place
+B:1268:3	threshold_miss	Naxos	exact title but logit -10.2 (below -9)
+B:1268:4	ocr_failure	Nazareth	NAZARETH read as NAZARRUH; article never retrieved
+B:1268:5	threshold_miss	Nazarene (title)	short pass top 1 correct
+B:1284:0	pool_miss	History of Scotland	Mary Queen of Scots era; general article not retrieved
+B:1298:0	threshold_miss	Bryan Edwards (politician)	top 1 correct (logit -4.9)
+B:1324:0	threshold_miss	Hedge	top 1 correct (logit -5.1); page accepted via vision
+B:1327:0	ocr_failure		garbled text (der legant all fill it rises)
+B:1327:2	threshold_miss	Huéscar	top 1 correct (logit -4.7), small margin
+B:1327:3	ocr_failure	Ven (Sweden)	HUENE (Hven, Tycho Brahe) read as HUESNE
+B:1327:5	pool_miss	John Hughes (poet)	only Ted Hughes and other Hughes retrieved
+B:1327:6	ocr_failure	Hooghly	HUGHLY read as HUGHILY
+B:1327:7	pool_miss	Hugonia	plant genus Hugonia not retrieved
+B:1344:0	pool_miss	Horse	veterinary text; Horse not retrieved
+B:1400:0	no_text	Midwifery	plate caption only
+B:1415:0	pool_miss	Ethiopia	ETHIOPIA continuation; main article not retrieved
+B:1422:0	pool_miss	Education	EDUCATION continuation; main article not retrieved
+B:1430:0	pool_miss	Ancient Egypt	EGYPT continuation; main article not retrieved
+B:1466:0	threshold_miss	Metallurgical assay	ESSAYING; vision top 1 Metallurgical assay
+B:1473:2	ocr_failure		ESCALDOLIN, garbled botanical entry
+B:1473:4	no_text	Shallot	bare cross-reference "See ALUM"
+B:1473:6	obsolete_or_minor		ESCHARA, old coral genus
+B:1614:0	ocr_failure	Thirsk	fragment; THIRSK place names garbled
+B:1614:1	threshold_miss	Polydipsia	Polydipsia top 1 after dropping a disambiguation page, logit -11.3
+B:1614:2	threshold_miss	Order of the Thistle	top 1 correct, logit -4.8, margin 0.82
+B:1614:3	ocr_failure	Thlaspi	THLASPI read as THILSPH
+B:1614:4	pool_miss	Saint Thomas Christians	THOMAS CHRISTIANS; article not retrieved
+B:1614:6	threshold_miss	Physical premotion	THOMISTS; related Thomism article
+B:1614:8	ocr_failure	Toruń	THORN read as THONN
+B:1615:0	no_text		blank scan
+B:1649:0	threshold_miss	Chivalry	short pass top 1 correct
+B:1670:0	threshold_miss	Kingdom of Cappadocia	top 1 correct (labeled), logit -6.3
+B:1670:1	threshold_miss	Caper	CAPPARIS; Caper top 1, margin 1.02 < 1.2
+B:1670:2	ocr_failure	Goat	CAPRA read as CORPA
+B:1678:0	other		continuation; subject unclear (Billinger?)
+B:1722:0	pool_miss	Arsenic	entry pass missed it; page vision pass accepted Arsenic
+B:1765:0	pool_miss	Kalmyks	KALMUCKS; Kalmyks not retrieved
+B:1803:0	other	Line engraving	ranking miss: BM25 rank 1 dropped by the embed filter
+B:1805:0	pool_miss	Capital punishment	EXECUTION continuation
+B:1805:1	obsolete_or_minor		EXEGETES, Athenian interpreters of law
+B:1805:2	obsolete_or_minor		EXEGESIS in old algebra (root finding)
+B:1805:3	obsolete_or_minor		EXEMPLAR, general word sense
+B:1805:4	obsolete_or_minor		EXEMPTION, old legal privilege (labeled none)
+B:1845:0	no_text		caption "XVII." only
+B:1904:0	threshold_miss	Lyre	top 1 correct (logit -4.2)
+B:1933:0	pool_miss	Rhetoric	ORATORY treatise; Rhetoric not retrieved
+B:1939:0	pool_miss	Essential oil	PHARMACY, essential oils section
+B:1942:0	threshold_miss	Fruit preserves	PHARMACY conserves; short pass top 1 close
+B:1945:0	other		astronomical instruments under an OPTICS head; index pages win
+B:2001:0	threshold_miss	History of Silesia	short pass top 1 correct
+B:2001:1	obsolete_or_minor		SILESIAN EARTH, materia medica bole
+B:2001:2	obsolete_or_minor		SILICERNIUM, Roman funeral feast
+B:2001:3	no_text		bare cross-reference "See SLATE"
+B:2001:4	no_text		bare cross-reference "See SILICA"
+B:2051:0	threshold_miss	Kingdom of the Lombards	top 1 correct (logit -5.0); page accepted via guide word
+B:2077:0	no_text		blank scan
+B:2087:0	pool_miss	History of the United Kingdom	Napoleonic-era British history; general article not retrieved
+B:2093:0	pool_miss	Moral sense theory	SENTIMENT / moral sense; related book retrieved instead
+B:2108:0	threshold_miss	Duke Ferdinand of Brunswick-Wolfenbüttel	top 1 plausible (logit -6.8)
+B:2131:0	other		weather table for Bombay; no single article
+B:2155:0	other		music table for the blind (labeled none)
+B:2155:1	other	Nyctography	writing frame for the blind; Nyctography top 1 in short pass, uncertain
+B:2171:0	pool_miss	Ataraxia	ATARAXY; Ataraxia not retrieved
+B:2171:1	pool_miss	Atarneus	town article not retrieved; Hermias of Atarneus instead
+B:2171:2	pool_miss	Ataxia	ATAXY; Ataxia not retrieved
+B:2171:3	ocr_failure	Akçe	AKCHE read as AGCHE
+B:2171:5	ocr_failure		ATCHIEVE, garbled entry
+B:2171:7	pool_miss	Ategua	ancient town article not retrieved
+B:2171:11	obsolete_or_minor		ATHEMADULET, Persian court title
+B:2171:12	ocr_failure	Athamanta	ATHAMANTA read as THAMANTA
+B:2209:0	no_text		caption "Plate. XLVI" only
+B:2243:0	no_text		caption letters only
+B:2250:0	pool_miss	Thomas Button	BUTTON'S BAY; explorer not retrieved
+B:2250:2	ocr_failure	Bützow	BUTZOW read as BUTZAW
+B:2250:5	ocr_failure	Buis-les-Baronnies	BUIS read as BUS'
+B:2250:7	ocr_failure	Bykhaw	BYCHOW read as BYGHOF
+B:2250:9	obsolete_or_minor		BIRLAW, old Scots local court
+B:2250:10	ocr_failure	Byrrhus	BYRRHUS read as BYRHUS
+B:2250:11	obsolete_or_minor		BYSSUS as an algae genus (obsolete)
+B:2250:12	pool_miss	Byssus	fine linen of antiquity; Byssus not retrieved
+B:2250:13	no_text	Bezant	bare cross-reference "See BEZANT"
+B:2277:0	other		figure key for neck muscles; list of labels
+B:2277:1	threshold_miss	Sense	top 1 correct (logit -4.4)
+B:2296:0	pool_miss	Arctic exploration	polar voyages; article not retrieved
+B:2307:0	threshold_miss	Algiers expedition (1541)	top 1 close; page accepted via guide word
+B:2402:0	pool_miss	Vertebral column	vertebrae; Coccyx retrieved instead
+B:2424:0	threshold_miss	Livestock	top 1 correct (logit -4.8)
+B:2424:1	ocr_failure	Sheep	SHEEP read as SIEER
+B:2446:0	pool_miss	Chemistry	CHEMISTRY continuation; main article not retrieved
+B:2448:0	other		reflective prose; subject unclear
+B:2464:0	pool_miss	Kabbalah	CABBALA continuation; Kabbalah only in a neighbor entry pool
+B:2464:2	obsolete_or_minor		CABESSE, trade name for East Indian silk
+B:2464:3	ocr_failure	Cabinda	CABENDA read as CABENIA
+B:2464:6	threshold_miss	Cabinetry	top 1 partial match (logit -7.8)
+B:2464:9	obsolete_or_minor		CABILAN, minor kingdom in India
+B:2473:0	threshold_miss	Onager	wild ass; Onager / African wild ass at top
+B:2473:1	obsolete_or_minor		ERANARCHA, minor Greek office
+B:2473:2	ocr_failure	Eranthemum	ERANTHEMUM read as ERANTHEUMUJ
+B:2473:3	no_text		bare cross-reference
+B:2473:4	obsolete_or_minor		ERECTION, general word sense
+B:2473:5	no_text		bare cross-reference
+B:2473:6	no_text		bare cross-reference
+B:2473:7	no_text		bare cross-reference
+B:2473:8	no_text		bare cross-reference
+B:2473:13	ocr_failure	Lake Erie	ERIE read as ERRI
+B:2473:14	ocr_failure	Erigeron	ERIGERON read as ERGGERON
+B:2473:15	ocr_failure	Erinaceus	ERINACEUS read as ERNIACEUS
+B:2479:0	threshold_miss	Diligence (Scots law)	short pass top 1 correct
+B:2493:0	other		CHEMISTRY index table
+B:2570:0	threshold_miss	Ethiopian Empire	long pass top 1 correct (logit -5.2)
+P:13	threshold_miss	Shipbuilding	vision top 1 Shipbuilding (logit -6.27, margin 0.37)
+P:104	pool_miss	Weights and measures	only Acts of Parliament retrieved
+P:115	threshold_miss	Bleach	top 1 Bleach, flat margin
+P:220	threshold_miss	Maritime fur trade	vision top 1, logit -6.69
+P:247	threshold_miss	Mount Etna	vision top 1 (logit -4.75, margin 0.18)
+P:266	threshold_miss	Marriage law	vision top 1 (logit -4.38, margin 0.01)
+P:268	threshold_miss	Laurus	vision top 1 (logit -7.32, margin 0.11)
+P:318	threshold_miss	Nile	vision top 1 White Nile (close)
+P:493	threshold_miss	Juffureh	vision top 1 Jufureh; page has several minor entries
+P:513	threshold_miss	William II of England	Norman history; England in the High Middle Ages at top
+P:546	ocr_failure		Super VL reports a blank page; Parse text invented
+P:563	obsolete_or_minor		dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)
+P:611	pool_miss	Drag (physics)	resistance of fluids
+P:1032	pool_miss	Heat	HEAT; main article not retrieved
+P:1102	threshold_miss	Philippe de Commines	page mixes COMINES and COMITIA
+P:1298	threshold_miss	Bryan Edwards (politician)	top 1 correct (logit -4.28 in vision pass)
+P:1344	pool_miss	Horse	veterinary text
+P:1415	pool_miss	Ethiopia	main article not retrieved
+P:1466	threshold_miss	Metallurgical assay	vision top 1
+P:1670	threshold_miss	Kingdom of Cappadocia	Cappadocia articles at top, flat margin
+P:1765	pool_miss	Kalmyks	vision subject read only "Kal"
+P:1803	pool_miss	Engraving	engraver lists retrieved, not Engraving
+P:1933	pool_miss	Rhetoric	ORATORY
+P:1939	pool_miss	Essential oil	PHARMACY essential oils
+P:1942	threshold_miss	Fruit preserves	PHARMACY conserves; Confectionery / Fruit preserves at top
+P:1945	other		astronomical instruments under an OPTICS head; index pages win
+P:2087	pool_miss	History of the United Kingdom	Napoleonic-era history
+P:2093	pool_miss	Moral sense theory	SENTIMENT
+P:2108	threshold_miss	Hecatoncheires	BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79)
+P:2131	other		weather table for Bombay
+P:2155	other		writing and music aids for the blind; no single article
+P:2277	threshold_miss	Head and neck anatomy	vision top 1 close
+P:2296	pool_miss	Arctic exploration	polar voyages
+P:2402	pool_miss	Vertebral column	Coccyx retrieved instead
+P:2424	threshold_miss	Livestock	top 1 correct
+P:2446	pool_miss	Chemistry	main article not retrieved
+P:2448	other		reflective prose; subject unclear
+P:2493	other		CHEMISTRY index table
+P:2570	threshold_miss	Ethiopian Empire	long pass top 1; vision chose a musical
+P:374	no_text		blank scan
+P:651	threshold_miss	Helminthology	plate worker: Embed VL top 1 Helminthology, rerank chose the journal
+P:948	pool_miss	Lava	caption "Lava"; Lava article not retrieved by the plate pass
+P:1400	pool_miss	Midwifery	plate worker top 1 Midwife; general article not retrieved
+P:1615	no_text		blank scan
+P:1845	no_text		caption "XVII." only
+P:2077	no_text		blank scan
+P:2209	no_text		caption "Plate. XLVI" only, no subject
+P:2243	no_text		caption letters only, no subject

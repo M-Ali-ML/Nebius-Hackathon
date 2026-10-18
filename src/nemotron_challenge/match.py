@@ -757,4 +757,7 @@ def run_page_match(settings: Settings, work_dir: Path) -> dict[str, Any]:
 
         (mdir / "page_matches_v1.jsonl").write_text((mdir / "page_matches.jsonl").read_text())
         report["vision_expand"] = {k: v for k, v in apply_vision(settings, work_dir).items() if k != "recall"}
+    from .uncertainty import run_uncertainty
+
+    report["uncertainty"] = {k: v for k, v in run_uncertainty(work_dir).items() if k != "causes"}
     return {"collected": collected, **report}

@@ -80,6 +80,43 @@ A loss from the embed filter: ENGRAVING continuation [B:1803:0].
 BM25 ranked Line engraving [W:4148783:1326288842] first.
 The embedder did not keep it in its top 10, so the reranker never saw it and chose Etching revival [W:3083357:1347822839].
 
+## Vision query expansion
+
+Some pages have no accepted match after the text passes, mostly because BM25 never returns the right article.
+For these pages we ask Super VL (`nvidia/Nemotron-3.5-Super-VL`, thinking off) to read the scan.
+
+1. Input: the scan as a JPEG (longest side 1,600 px) and the Parse running head.
+2. Super VL returns JSON: the page subject and 3 to 5 Wikipedia search phrases. It does not write or fix source text, and it does not decide the match.
+3. BM25 runs on each phrase (top 10). One more BM25 query joins the subject, the phrases, and 20 distinctive page terms, because bare titles rank short pages first.
+4. The new hits join the page's earlier candidates. Embed VL ranks them against a short page query (subject + 600 chars of page text). Rerank VL scores the top 16.
+5. The same accept rules decide (logit > -4.0, or margin, or exact title against the Super VL subject).
+
+Records: `artifacts/match/vision_expand/<row>.json` (Super VL reply, searches, all hits, scores), method `vision_expand`.
+Summary: `artifacts/match/vision_summary.json`. The page table before this step is `artifacts/match/page_matches_v1.jsonl`.
+
+Results:
+
+- 46 non-plate pages had no match. Super VL answered for 45. Plate pages were already handled by the site worker's visual matching.
+- Page 546 failed: Super VL says the scan is a blank page. Parse had returned modern-sounding text for it. Inference: that text was invented by Parse, and the page has no counterpart.
+- 7 pages were accepted: Farm (217), Jonathan Swift (257), Political economy (383), Conchology (473), Arabs (914), Hedge (1324), Arsenic (1722).
+- Page coverage: 45 of 100 before, 52 of 100 after.
+- Cost: 45 Super VL calls, 28,321 prompt tokens and 1,808 completion tokens, 1.4 s per call on average.
+
+Effect on the labeled set (6 labeled entries with a counterpart sit on expanded pages):
+
+| | Before | After |
+| --- | --- | --- |
+| Gold article anywhere in the pool | 4 of 6 | 6 of 6 |
+| Gold article in the top 10 after rerank | 3 of 6 | 5 of 6 |
+| Gold article at top 1 | | 2 of 6 |
+
+Laurus [B:268:0] and Islay [B:493:0] entered the pool only through Super VL phrases.
+Laurus is now the top-1 for its page. It was not accepted because the margin is flat (-7.32, margin 0.11).
+
+Still rejected, with the right article now at top 1: Shipbuilding (13), Mount Etna (247), Laurus (268).
+These fail the accept rules on logit or margin. They stay `no_clear_counterpart`, with the reason in `page_matches.jsonl`.
+Inference: candidate recall improved more than the decision rules can show. A softer rule (for example, agreement between the Super VL subject and the rerank top-1) could accept them, but we have not tested it on labels.
+
 ## Limits
 
 - 40 items, one reader. One item changes P@1 by about 4 points.

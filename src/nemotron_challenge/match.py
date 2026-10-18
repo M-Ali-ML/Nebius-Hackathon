@@ -228,7 +228,7 @@ def _norm_title(text: str) -> str:
 
 # A bracketed qualifier naming a creative work or a thing named after the topic ("Abyssinia (1906 musical)")
 # does not make the title the same subject.
-WORK_QUALIFIER = re.compile(r"\((?:[^)]*\b(?:film|album|song|musical|novel|band|play|tv|series|ship|magazine|newspaper|"
+WORK_QUALIFIER = re.compile(r"\((?:[^)]*\b(?:film|fiction|album|song|musical|novel|band|character|comics|dc comics|play|tv|series|ship|magazine|newspaper|"
                             r"company|game|opera|poem|comics?|book|journal|surname|given name|\d{4})\b[^)]*)\)", re.I)
 
 
@@ -750,4 +750,11 @@ def run_page_match(settings: Settings, work_dir: Path) -> dict[str, Any]:
     collected = collect_short(settings, work_dir)
     report = finalize_short(settings, work_dir)
     report["ablation"] = ablation(work_dir)
+    mdir = work_dir / "match"
+    if (mdir / "vision_expand").is_dir():
+        # page_matches_v1.jsonl is the pass without vision; apply_vision writes page_matches.jsonl from it.
+        from .vision_expand import apply_vision
+
+        (mdir / "page_matches_v1.jsonl").write_text((mdir / "page_matches.jsonl").read_text())
+        report["vision_expand"] = {k: v for k, v in apply_vision(settings, work_dir).items() if k != "recall"}
     return {"collected": collected, **report}

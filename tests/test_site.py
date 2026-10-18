@@ -80,3 +80,18 @@ def test_explore_rows_link_both_sources_and_flag_ocr_terms(tmp_path):
     assert len(claims) == 1 and claims[0]["rev"] == "https://en.wikipedia.org/w/index.php?oldid=9"
     assert claims[0]["row"] == 7 and claims[0]["tag"] == "renamed"
     assert [t["ocr"] for t in terms] == [False, True]
+
+
+def test_site_shows_uncertainty_cause_in_inspector_and_index(tmp_path):
+    work = _work_dir(tmp_path, with_matches=True)
+    cause = {"id": "B:7:0", "level": "entry", "cause": "pool_miss", "note": "never retrieved Anatomy"}
+    (work / "match" / "uncertainty.jsonl").write_text(json.dumps(cause) + "\n")
+    page_match = {"row_index": 7, "status": "no_clear_counterpart", "page_kind": "dictionary",
+                  "uncertainty_cause": "threshold_miss", "uncertainty_note": "top 1 below tau"}
+    (work / "match" / "page_matches.jsonl").write_text(json.dumps(page_match) + "\n")
+    build_site(work)
+    page = (tmp_path / "site" / "pages" / "7.html").read_text()
+    index = (tmp_path / "site" / "index.html").read_text()
+    assert "candidate pool miss" in page and "never retrieved Anatomy" in page
+    assert "threshold miss" in page and "top 1 below tau" in page
+    assert 'data-filter="cause-threshold_miss"' in index and "cause-threshold_miss" in index

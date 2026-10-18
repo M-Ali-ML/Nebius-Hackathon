@@ -1,0 +1,29 @@
+{# Shared presentation helpers. #}
+{% macro scores(m, cos=True) -%}
+{%- set parts = [] -%}
+{%- if m.rerank_logit is number %}{% set _ = parts.append("rerank " ~ '%.2f'|format(m.rerank_logit)) %}{% endif -%}
+{%- if m.rerank_margin is number %}{% set _ = parts.append("margin " ~ '%.2f'|format(m.rerank_margin)) %}{% endif -%}
+{%- if cos and m.embed_cos is number %}{% set _ = parts.append("cos " ~ '%.3f'|format(m.embed_cos)) %}{% endif -%}
+{%- if m.bm25_rank is number %}{% set _ = parts.append("BM25 rank " ~ m.bm25_rank) %}{% endif -%}
+{%- if parts %}
+<dl class="kv" title="{{ parts|join(' · ') }}">
+  {% if m.rerank_logit is number %}<div><dt>Rerank</dt><dd>{{ '%.2f'|format(m.rerank_logit) }}</dd></div>{% endif %}
+  {% if m.rerank_margin is number %}<div><dt>Margin</dt><dd>{{ '%.2f'|format(m.rerank_margin) }}</dd></div>{% endif %}
+  {% if cos and m.embed_cos is number %}<div><dt>Cosine</dt><dd>{{ '%.3f'|format(m.embed_cos) }}</dd></div>{% endif %}
+  {% if m.bm25_rank is number %}<div><dt>BM25 rank</dt><dd>{{ m.bm25_rank }}</dd></div>{% endif %}
+</dl>
+{%- endif %}
+{%- if m.method %}<div class="subline"><span class="meta" title="method">{{ m.method }}</span></div>{% endif %}
+{%- endmacro %}
+
+{% macro wcite(page_id, rev, url=None) -%}
+{%- if url %}<a class="cite" href="{{ url }}" target="_blank" rel="noopener">[W:{{ page_id }}:{{ rev }}]</a>{% else %}<span class="cite">[W:{{ page_id }}:{{ rev }}]</span>{% endif -%}
+{%- endmacro %}
+
+{% macro search_icon() -%}
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3" stroke-linecap="round"/></svg>
+{%- endmacro %}
+
+{% macro cause(u) -%}
+{%- if u %}<span class="pill cause" title="uncertainty cause: {{ u.cause }}">{{ u.label }}</span>{% if u.note %}<span class="cause-note">{{ u.note }}{% if u.right_article %} (likely article: {{ u.right_article }}){% endif %}</span>{% endif %}{% endif -%}
+{%- endmacro %}

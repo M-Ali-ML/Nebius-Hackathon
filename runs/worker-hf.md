@@ -60,3 +60,9 @@ Card numbers (P@1, drift shares, match counts, row counts) are computed from the
 ## Failed attempts
 
 - First `publish` run: uploads succeeded, then `/is-valid` returned HTTP 500 while the viewer processed the new dataset. Fixed: verify now retries on errors.
+
+## 15:30: LaTeX PDF blocked in the Space (fixed)
+
+Symptom: on huggingface.co the LaTeX panel showed "This page has been blocked by Chrome".
+Cause: Hugging Face shows a static Space inside an iframe with a `sandbox` attribute. Chrome does not run its PDF viewer in a sandboxed frame, and our PDF iframe inherits the sandbox. A GET of the PDF has no blocking header.
+Fix (Space build only, `site/` unchanged): `publish_hf.py` adds `pdfview.html` (PDF.js 3.11.174 from cdnjs) and points each `iframe.pdf` at it. "Open PDF" links now open in a new tab, which leaves the sandbox. Tested in a local iframe with the same sandbox flags, then republished with the current site and new screenshots.

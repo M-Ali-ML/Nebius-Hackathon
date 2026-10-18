@@ -44,3 +44,9 @@ Branch `M-Ali-ML/mvp-design`. Scope: the visual design of the static site (`src/
 - Index: cause notes on hover; cause chips appear only with the Uncertain filter.
 - Claim quotes clamp to 4 lines; click to show the full quote.
 - Screenshots: runs/design/calm-*.png.
+
+## Hugging Face look
+
+- Fonts: Source Sans 3 (UI, headings, brand) and IBM Plex Mono (IDs, scores, citations), as on huggingface.co. Newsreader stays for Britannica source text only.
+- Tailwind gray neutrals, green status pills, 8px radius, white-to-gray gradient buttons, underline nav tabs, sentence-case labels.
+- Screenshots: runs/design/hf-*.png.

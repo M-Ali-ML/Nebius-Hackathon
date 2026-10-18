@@ -137,6 +137,7 @@ Hermes setup: see [docs/hermes.md](docs/hermes.md) and the install commands in `
 - The BM25 candidate pool sets the ceiling: if the right article is not in the pool, embed and rerank cannot find it.
 - Page 452 is a blank cover. Parse invented fluent text for it, and the error passed through every stage ([failure-3](docs/cases/failure-3.md)).
 - The quote check proves that a quote exists in the source, not that it supports the claim.
+- The plate prompt in `plates.py` names "about 1820 to 1842", so Super VL search phrases for plates can repeat that range. The collection covers 1768 to 1860, and we do not know the edition of each page.
 
 ## Licenses
 

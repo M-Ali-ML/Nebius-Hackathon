@@ -72,6 +72,15 @@ def test_decision_threshold_margin_and_ablation_ranking():
     assert d["status"] == "matched" and d["wiki_page_id"] == "2" and d["rerank_margin"] == 2.0
     assert decide(record, tau=5.0)["status"] == "no_clear_counterpart"
     assert decide({"entry_id": "B:1:1", "hits": []})["status"] == "no_clear_counterpart"
+    # margin rule needs a headword; exact-title rule; short entries; disambiguation pages are skipped
+    low = {"entry_id": "B:1:2", "hits": [hit("2", 1, 0.5, -6.0), hit("3", 2, 0.4, -7.5)]}
+    assert decide(low, entry={"headword": "T3", "chars": 500})["rule"] == "margin"
+    assert decide(low, entry={"headword": None, "chars": 500})["status"] == "no_clear_counterpart"
+    flat = {"entry_id": "B:1:3", "hits": [hit("2", 1, 0.5, -8.5), hit("3", 2, 0.4, -8.6)]}
+    assert decide(flat, entry={"headword": "T2", "chars": 500})["rule"] == "exact_title"
+    assert decide(record, tau=2.0, entry={"headword": "X", "chars": 10})["status"] == "no_clear_counterpart"
+    dis = {"entry_id": "B:1:4", "hits": [{**hit("9", 1, 0.9, 9.0), "title": "Farm (disambiguation)"}, hit("2", 2, 0.5, 3.0)]}
+    assert decide(dis, tau=2.0)["wiki_page_id"] == "2"
 
 
 def test_cap_keeps_longest_entries_and_plates():

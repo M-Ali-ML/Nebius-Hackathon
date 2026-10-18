@@ -21,8 +21,15 @@ from typing import Any, Callable
 from .clients import RetrievalClient, ServiceError, WikiClient
 from .config import Settings
 
-TAU = 0.0  # rerank logit threshold; see runs/match-threshold-check.md
-CAP_PER_PAGE = 3
+# Decision thresholds on raw rerank logits, set from the logit distribution and a 15-pair hand check
+# (runs/match-threshold-check.md). Logits are low for long OCR queries, so a margin rule and an exact-title
+# rule accept clear matches below TAU.
+TAU = -4.0          # accept any candidate above this logit
+TAU_MARGIN = -8.0   # entries with a headword: accept above this logit if margin >= MIN_MARGIN
+MIN_MARGIN = 1.2
+TAU_EXACT = -9.0    # entries with a headword: accept above this logit if the title equals the headword
+MIN_CHARS = 40      # shorter entries (bare captions, fragments) are not judged
+CAP_PER_PAGE = None  # 262 entries in total, so all are processed; set 3 for the MVP cap
 BM25_K, EMBED_KEEP = 30, 10
 QUERY_CHARS = 2000
 METHODS = ("bm25", "bm25+embed", "bm25+embed+rerank")
@@ -70,7 +77,7 @@ def head_of(entry: dict[str, Any]) -> str:
 
 
 def bm25_query(entry: dict[str, Any], tfidf: TfIdf) -> str:
-    head = head_of(entry).title()
+    head = re.sub(r"[^A-Za-z ]", " ", head_of(entry)).title()
     words = head.split() * 2 + [w for w in tfidf.top_terms(entry["text_norm"], 64) if w not in head.lower().split()]
     query = ""
     for word in words[:64]:
@@ -138,7 +145,15 @@ def match_entry(entry: dict[str, Any], tfidf: TfIdf, wiki: WikiClient, retr: Ret
 
     t = time.time()
     qtext = entry_query_text(entry)
-    qvec = call(lambda: retr.embed([qtext], "query"), "embed query")[0]
+    # The embedder's query context is 512 tokens; dense OCR text can exceed it at 2,000 chars (HTTP 422).
+    for limit in (QUERY_CHARS, 1200, 600):
+        try:
+            qvec = call(lambda: retr.embed([qtext[:limit]], "query"), "embed query")[0]
+            break
+        except ServiceError as exc:
+            if exc.status_code != 422 or limit == 600:
+                raise
+    timing["embed_query_chars"] = limit
     dvecs: list[list[float]] = []
     docs = [doc_text(h) for h in hits]
     for i in range(0, len(docs), 16):
@@ -171,12 +186,13 @@ def rank(record: dict[str, Any], method: str) -> list[dict[str, Any]]:
     raise ValueError(f"unknown method {method}")
 
 
-def decide(record: dict[str, Any], tau: float = TAU) -> dict[str, Any]:
-    ranked = rank(record, "bm25+embed+rerank")
+def decide(record: dict[str, Any], tau: float = TAU, entry: dict[str, Any] | None = None) -> dict[str, Any]:
+    entry = entry or {}
+    ranked = [h for h in rank(record, "bm25+embed+rerank") if not h["title"].endswith("(disambiguation)")]
     out = {"entry_id": record["entry_id"], "status": "no_clear_counterpart", "wiki_page_id": None, "wiki_title": None,
            "wiki_revision_id": None, "wiki_url": None, "text_sha256": None, "bm25_rank": None, "embed_cos": None,
            "rerank_logit": None, "rerank_margin": None, "method": "bm25+embed+rerank", "tau": tau,
-           "reason": record.get("reason", ""), "timing": record.get("timing", {})}
+           "rule": None, "reason": record.get("reason", ""), "timing": record.get("timing", {})}
     if not ranked:
         out["reason"] = out["reason"] or "no reranked candidates"
         return out
@@ -186,10 +202,20 @@ def decide(record: dict[str, Any], tau: float = TAU) -> dict[str, Any]:
                wiki_url=best["url"], text_sha256=best["text_sha256"], bm25_rank=best["bm25_rank"],
                embed_cos=best["embed_cos"], rerank_logit=best["rerank_logit"],
                rerank_margin=round(margin, 6) if margin is not None else None)
-    if best["rerank_logit"] > tau:
-        out.update(status="matched", reason=f"top rerank logit {best['rerank_logit']:.2f} > tau {tau}")
+    logit, head = best["rerank_logit"], head_of(entry) if entry else (record.get("headword") or "")
+    chars = entry.get("chars", MIN_CHARS)
+    relation = title_relation(head, best["title"], best["excerpt"][:400])
+    if chars < MIN_CHARS:
+        out["reason"] = f"entry has {chars} chars (< {MIN_CHARS}); too short to judge"
+    elif logit > tau:
+        out.update(status="matched", rule="logit", reason=f"top rerank logit {logit:.2f} > tau {tau}")
+    elif head and logit > TAU_MARGIN and margin is not None and margin >= MIN_MARGIN:
+        out.update(status="matched", rule="margin",
+                   reason=f"logit {logit:.2f} > {TAU_MARGIN} and margin {margin:.2f} >= {MIN_MARGIN}")
+    elif head and logit > TAU_EXACT and relation == "exact":
+        out.update(status="matched", rule="exact_title", reason=f"logit {logit:.2f} > {TAU_EXACT} and title equals headword")
     else:
-        out.update(reason=f"top rerank logit {best['rerank_logit']:.2f} <= tau {tau}; best candidate kept for review")
+        out["reason"] = f"top rerank logit {logit:.2f} below the acceptance rules; best candidate kept for review"
     return out
 
 
@@ -222,7 +248,7 @@ def shared_terms(entry_text: str, article_text: str, tfidf: TfIdf, k: int = 5) -
 def explain(decision: dict[str, Any], record: dict[str, Any], entry: dict[str, Any], tfidf: TfIdf,
             article_text: str | None, tau: float) -> None:
     """Add "why" and "shared_terms" from evidence only (no LLM)."""
-    ranked = rank(record, "bm25+embed+rerank")
+    ranked = [h for h in rank(record, "bm25+embed+rerank") if not h["title"].endswith("(disambiguation)")]
     head = head_of(entry)
     if not ranked:
         decision.update(why=decision["reason"] or "no candidates to compare", shared_terms=[], title_relation="none")
@@ -243,9 +269,11 @@ def explain(decision: dict[str, Any], record: dict[str, Any], entry: dict[str, A
                            f"{', '.join(terms) or 'none'}. Scores: {scores}.")
         return
     problems = []
+    if entry.get("chars", MIN_CHARS) < MIN_CHARS:
+        problems.append(f"entry too short ({entry.get('chars')} chars)")
     if best["rerank_logit"] <= tau:
         problems.append(f"low top rerank logit {best['rerank_logit']:.2f} <= tau {tau}")
-    if margin is not None and margin < 1.0:
+    if margin is not None and margin < MIN_MARGIN:
         problems.append(f"flat margin {margin:.2f} between '{best['title']}' and '{ranked[1]['title']}'")
     top3 = ranked[:3]
     if head and all(title_relation(head, h["title"]) == "none" for h in top3):
@@ -330,7 +358,7 @@ def run_match(settings: Settings, work_dir: Path, cap: int | None = CAP_PER_PAGE
                 decisions.append({"entry_id": entry["entry_id"], "status": "error", "method": "bm25+embed+rerank",
                                   "reason": error_ids.get(entry["entry_id"], "no candidate file")})
                 continue
-            decision = decide(json.loads(path.read_text()), tau)
+            decision = decide(json.loads(path.read_text()), tau, entry)
             if decision["status"] == "matched" and not (art_dir / f"{decision['wiki_page_id']}.json").is_file():
                 try:
                     article = fetch_article(wiki, decision["wiki_page_id"], decision["text_sha256"])

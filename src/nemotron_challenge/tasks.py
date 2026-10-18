@@ -25,13 +25,18 @@ def match(settings: Settings, work_dir: Path) -> dict[str, Any]:
 
 
 def compare(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: define your vocabulary, frequency, or topic comparison."""
-    _unfinished("compare")
+    """Corpus word frequencies, pair comparisons with checked quotes, and the drift decomposition."""
+    from .compare import run
+
+    return run(settings, work_dir)
 
 
 def agent(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: implement your Hermes tools and evidence checks."""
-    _unfinished("agent")
+    """Send the questions in runs/agent/questions.json (or the defaults) to Hermes and save each transcript."""
+    from .agent_runner import RUNS, load_questions, run_questions
+
+    del settings, work_dir  # Hermes reads its own config; the tools read the shared artifacts
+    return run_questions(load_questions(RUNS / "questions.json"), repo=Path(__file__).resolve().parents[2])
 
 
 def site(settings: Settings, work_dir: Path) -> dict[str, Any]:

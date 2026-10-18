@@ -107,6 +107,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         has_pdf = _copy(work_dir / "latex" / f"{row}.pdf", site_dir / "pdf" / f"{row}.pdf")
         _copy(work_dir / "latex" / f"{row}.tex", site_dir / "pdf" / f"{row}.tex")
         build = status.get(row, {})
+        plate = load_plate(work_dir, site_dir, row)
         entries = inputs["by_row"].get(row, [])
         info = {
             "row": row, "page_id": record["page_id"], "filename": record["filename"],
@@ -118,6 +119,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
             "latex": build.get("status", "not built"), "latex_error": build.get("error", ""),
             "two_column": build.get("two_column"), "has_pdf": has_pdf, "has_scan": has_scan,
             "classes": sorted({b["cls"] for b in record["blocks"]}),
+            "plate_status": plate["status"] if plate else None,
         }
         rows.append(info)
         neighbours = {"prev": records[i - 1]["row_index"] if i > 0 else None,
@@ -125,7 +127,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         blocks = [{**b, "color": CLASS_COLORS.get(b["cls"], "#4a5568")}
                   for b in sorted(record["blocks"], key=lambda b: b["order"])]
         html = env.get_template("page.html").render(
-            page=info, blocks=blocks, entries=entries, inputs=inputs, nav=neighbours, built=built,
+            page=info, blocks=blocks, plate=plate, entries=entries, inputs=inputs, nav=neighbours, built=built,
             colors={c: CLASS_COLORS.get(c, "#4a5568") for c in info["classes"]},
             aspect=record["height"] / record["width"] if record.get("width") else 1.4)
         (site_dir / "pages").mkdir(exist_ok=True)
@@ -142,6 +144,24 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         rows=rows, totals=totals, inputs=inputs, built=built))
     analysis = build_analysis(env, work_dir, site_dir, built)
     return {"site_dir": str(site_dir), **totals, "missing_scans": missing_scans, "analysis": analysis}
+
+
+def load_plate(work_dir: Path, site_dir: Path, row: int) -> dict[str, Any] | None:
+    """Plate result from plates/<row>.json, with neighbor scans copied into the site."""
+    path = work_dir / "plates" / f"{row}.json"
+    if not path.is_file():
+        return None
+    plate = json.loads(path.read_text())
+    for n in plate.get("neighbors", []):
+        src = work_dir / n["image"]
+        n["href"] = f"../neighbors/{row}/{n['row_index']}.jpg"
+        n["thumb"] = f"../neighbors/{row}/{n['row_index']}.thumb.jpg"
+        n["has_image"] = _copy(src, site_dir / "neighbors" / str(row) / f"{n['row_index']}.jpg")
+        if n["has_image"]:
+            _thumb(src, site_dir / "neighbors" / str(row) / f"{n['row_index']}.thumb.jpg", width=110)
+    top = [c for c in plate.get("candidates", []) if c.get("rerank_logit") is not None]
+    plate["reranked"] = sorted(top, key=lambda c: -c["rerank_logit"])
+    return plate
 
 
 def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str) -> dict[str, Any]:

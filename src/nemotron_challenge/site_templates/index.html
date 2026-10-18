@@ -22,7 +22,7 @@
       <tr data-search="{{ r.row }} {{ r.head|lower }}">
         <td><a href="pages/{{ r.row }}.html">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}no scan{% endif %}</a></td>
         <td><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
-        <td class="head">{{ r.head or "(no running head)" }}</td>
+        <td class="head">{{ r.head or "(no running head)" }}{% if r.plate_status %} <span class="badge {{ 'ok' if r.plate_status == 'matched' else ('bad' if r.plate_status == 'error' else 'warn') }}">plate: {{ r.plate_status }}</span>{% endif %}</td>
         <td>{{ r.n_blocks }}</td>
         <td>{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
         <td>{{ r.n_matched if inputs.has_matches else "n/a" }}</td>

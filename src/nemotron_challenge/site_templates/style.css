@@ -72,3 +72,13 @@ pre.err { white-space: pre-wrap; font-size: 11px; background: #fff5f5; padding: 
 .plot img { max-width: 100%; }
 .wf { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
 @media (max-width: 1000px) { .panes { grid-template-columns: 1fr; } iframe.pdf { height: 70vh; } }
+.plate { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--gen-line); }
+.src-box { background: var(--src); border: 1px solid var(--src-line); border-radius: 4px; padding: 6px; margin-bottom: 8px; }
+.gen-box { background: #fff; border: 1px solid var(--gen-line); border-radius: 4px; padding: 6px; margin-bottom: 8px; }
+.nstrip { display: flex; gap: 6px; overflow-x: auto; margin-top: 4px; }
+.nthumb { display: flex; flex-direction: column; font-size: 11px; text-decoration: none; color: var(--fg); min-width: 80px; }
+.nthumb img { width: 80px; border: 1px solid var(--src-line); }
+.desc { font-size: 14px; margin: 4px 0; }
+.ptable { border-collapse: collapse; width: 100%; font-size: 12px; background: #fff; margin-top: 6px; }
+.ptable th, .ptable td { border-bottom: 1px solid var(--line); padding: 2px 4px; text-align: left; }
+.ptable tr.chosen { background: #e6f4ea; }

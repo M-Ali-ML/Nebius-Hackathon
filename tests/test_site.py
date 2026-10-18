@@ -63,3 +63,20 @@ def test_page_drift_counts_tags_and_picks_varied_examples():
     assert drift["terms"][0]["cite_b"] == "[B:7:0]"
     assert page_drift([{"pair": None}]) is None
     assert reason_group("top rerank logit -6.67 below the acceptance rules") == "rerank logit below the acceptance rules"
+
+
+def test_explore_rows_link_both_sources_and_flag_ocr_terms(tmp_path):
+    from nemotron_challenge.site import explore_rows
+    pairs = tmp_path / "compare" / "pairs"
+    pairs.mkdir(parents=True)
+    pair = {"cite_britannica": "[B:7:0]", "cite_wikipedia": "[W:1:9]", "row_index": 7, "headword": "ANATOMY",
+            "wiki_title": "Anatomy", "wiki_revision_id": "9",
+            "claims": [{"claim": "c", "tag": "renamed", "quote_britannica": "x", "quote_wikipedia": "y"},
+                       {"claim": "z", "tag": "bogus"}],
+            "term_pairs": [{"old": "anatomie", "new": "anatomy"}, {"old": "gulph", "new": "gulf"}],
+            "drift": {"lexical": {"likely_ocr_or_spelling": [{"old": "gulph", "new": "gulf"}]}}}
+    (pairs / "B_7_0.json").write_text(json.dumps(pair))
+    claims, terms = explore_rows(tmp_path)
+    assert len(claims) == 1 and claims[0]["rev"] == "https://en.wikipedia.org/w/index.php?oldid=9"
+    assert claims[0]["row"] == 7 and claims[0]["tag"] == "renamed"
+    assert [t["ocr"] for t in terms] == [False, True]

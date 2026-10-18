@@ -1,0 +1,70 @@
+{
+ "time": "2026-10-18T16:27:19",
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "debates": [
+  {
+   "slug": "coining",
+   "turns_ok": 5,
+   "turns": 5,
+   "tool_calls": 7,
+   "tokens": 98269,
+   "seconds": 69.7,
+   "verified": 3,
+   "cited": 15,
+   "unverified": 4,
+   "echo": 1,
+   "claims": 22,
+   "verified_share": 0.136,
+   "grounded_share": 0.818,
+   "rule": "verified: every cited id resolves to a saved record or a tool result, and every quote is a substring of the cited source (compare.quote_ok). cited: ids resolve, no quote. unverified: an id does not resolve or a quote is not in the source. echo: an uncited quote of the opponent's words; not counted in claims."
+  },
+  {
+   "slug": "firedamp",
+   "turns_ok": 5,
+   "turns": 5,
+   "tool_calls": 8,
+   "tokens": 98938,
+   "seconds": 54.1,
+   "verified": 4,
+   "cited": 9,
+   "unverified": 0,
+   "echo": 1,
+   "claims": 13,
+   "verified_share": 0.308,
+   "grounded_share": 1.0,
+   "rule": "verified: every cited id resolves to a saved record or a tool result, and every quote is a substring of the cited source (compare.quote_ok). cited: ids resolve, no quote. unverified: an id does not resolve or a quote is not in the source. echo: an uncited quote of the opponent's words; not counted in claims."
+  },
+  {
+   "slug": "lightning",
+   "turns_ok": 5,
+   "turns": 5,
+   "tool_calls": 8,
+   "tokens": 126166,
+   "seconds": 70.9,
+   "verified": 3,
+   "cited": 16,
+   "unverified": 3,
+   "echo": 2,
+   "claims": 22,
+   "verified_share": 0.136,
+   "grounded_share": 0.864,
+   "rule": "verified: every cited id resolves to a saved record or a tool result, and every quote is a substring of the cited source (compare.quote_ok). cited: ids resolve, no quote. unverified: an id does not resolve or a quote is not in the source. echo: an uncited quote of the opponent's words; not counted in claims."
+  },
+  {
+   "slug": "magnetism",
+   "turns_ok": 5,
+   "turns": 5,
+   "tool_calls": 12,
+   "tokens": 127175,
+   "seconds": 86.2,
+   "verified": 2,
+   "cited": 2,
+   "unverified": 8,
+   "echo": 1,
+   "claims": 12,
+   "verified_share": 0.167,
+   "grounded_share": 0.333,
+   "rule": "verified: every cited id resolves to a saved record or a tool result, and every quote is a substring of the cited source (compare.quote_ok). cited: ids resolve, no quote. unverified: an id does not resolve or a quote is not in the source. echo: an uncited quote of the opponent's words; not counted in claims."
+  }
+ ]
+}

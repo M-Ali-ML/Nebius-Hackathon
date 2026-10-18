@@ -271,11 +271,14 @@ def check(data: dict[str, Any], btext: str, wtext: str) -> tuple[dict[str, list]
     return kept, rejected
 
 
-def spelling_like(old: str, new: str, cutoff: float = 0.7) -> bool:
-    """True when old and new differ only a little in letters: more likely OCR or spelling than a new term."""
+def spelling_like(old: str, new: str, cutoff: float = 0.6) -> bool:
+    """True when the words that differ are close in letters: more likely OCR or spelling than a new term."""
     from difflib import SequenceMatcher
 
-    return SequenceMatcher(None, old.lower(), new.lower()).ratio() >= cutoff
+    a, b = old.lower().split(), new.lower().split()
+    shared = set(a) & set(b)
+    a, b = " ".join(w for w in a if w not in shared), " ".join(w for w in b if w not in shared)
+    return not a or not b or SequenceMatcher(None, a, b).ratio() >= cutoff
 
 
 def drift(entry: dict[str, Any], kept: dict[str, list]) -> dict[str, Any]:

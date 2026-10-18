@@ -131,3 +131,9 @@ def test_runner_summary_pairs_tool_calls_with_results():
     s = summarize(events)
     assert s["model_ok"] and s["completed"] and s["tool_calls"][0]["output"] == "{}"
     assert slug("Did the Language change?") == "did-the-language-change"
+
+
+def test_spelling_like_separates_ocr_from_new_terms():
+    assert compare.spelling_like("prisoners of var", "prisoners of war")
+    assert not compare.spelling_like("electric fire", "electric charge")
+    assert not compare.spelling_like("fixed air", "carbon dioxide")

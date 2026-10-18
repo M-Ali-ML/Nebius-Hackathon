@@ -368,8 +368,28 @@ def build_space(root: Path, out: Path, counts: dict) -> None:
         shutil.rmtree(out)
     shutil.copytree(root / "site", out, ignore=shutil.ignore_patterns(".DS_Store", "*.log"))
     shutil.copytree(CARDS / "img", out / "img_card", dirs_exist_ok=True)
+    patch_pdf_embeds(out)
     card = Template((CARDS / "space_card.md").read_text()).substitute(stats(root, counts))
     (out / "README.md").write_text(card)
+
+
+PDF_IFRAME_RE = re.compile(r'(<iframe class="pdf" src=")\.\./(pdf/[\w.-]+\.pdf)(?:#[^"]*)?"')
+PDF_LINK_RE = re.compile(r'<a ([^>]*?)href="(\.\./pdf/[\w.-]+\.pdf)"')
+
+
+def patch_pdf_embeds(out: Path) -> int:
+    """Hugging Face shows a Space in a sandboxed iframe, and Chrome blocks its PDF viewer there.
+    Point the PDF iframes at pdfview.html (PDF.js) and open PDF links in a new tab, which leaves the sandbox."""
+    shutil.copy(CARDS / "pdfview.html", out / "pdfview.html")
+    n = 0
+    for page in out.glob("**/*.html"):
+        text = page.read_text()
+        new = PDF_IFRAME_RE.sub(r'\1../pdfview.html?f=\2"', text)
+        new = PDF_LINK_RE.sub(r'<a \1href="\2" target="_blank" rel="noopener"', new)
+        if new != text:
+            page.write_text(new)
+            n += 1
+    return n
 
 
 def size(path: Path) -> str:

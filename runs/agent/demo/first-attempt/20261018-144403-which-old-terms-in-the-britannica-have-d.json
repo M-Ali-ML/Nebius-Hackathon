@@ -1,0 +1,2289 @@
+{
+ "question": "Which old terms in the Britannica have different modern names in Wikipedia? Give three examples with quotes from both sides.",
+ "started": "2026-10-18T14:44:03",
+ "command": [
+  "chat",
+  "-q",
+  "Which old terms in the Britannica have different modern names in Wikipedia? Give three examples with quotes from both sides.",
+  "--format",
+  "stream-json",
+  "-t",
+  "nemotron_challenge",
+  "-s",
+  "britannica-compare",
+  "--max-turns",
+  "12"
+ ],
+ "hermes_home": "/Users/aly/repos/Nebius-Hackathon/data/hermes",
+ "tool_repo": "/Users/aly/repos/Nebius-Hackathon",
+ "retrieval_mode": "full",
+ "exit_code": 0,
+ "stderr": "\nsession_id: 20261018_144404_90beec\n",
+ "non_json_stdout": [],
+ "events": [
+  {
+   "type": "system",
+   "subtype": "init",
+   "model": "nvidia/Nemotron-3.5-Super-VL",
+   "session_id": "20261018_144404_90beec",
+   "timestamp": 1792327444862
+  },
+  {
+   "type": "text",
+   "text": "I",
+   "timestamp": 1792327447464
+  },
+  {
+   "type": "text",
+   "text": "'ll look",
+   "timestamp": 1792327447465
+  },
+  {
+   "type": "text",
+   "text": " up",
+   "timestamp": 1792327447474
+  },
+  {
+   "type": "text",
+   "text": " the drift",
+   "timestamp": 1792327447477
+  },
+  {
+   "type": "text",
+   "text": " tool",
+   "timestamp": 1792327447552
+  },
+  {
+   "type": "text",
+   "text": " first",
+   "timestamp": 1792327447553
+  },
+  {
+   "type": "text",
+   "text": ",",
+   "timestamp": 1792327447553
+  },
+  {
+   "type": "text",
+   "text": " since the task",
+   "timestamp": 1792327447553
+  },
+  {
+   "type": "text",
+   "text": " is about",
+   "timestamp": 1792327447554
+  },
+  {
+   "type": "text",
+   "text": " terms that changed names",
+   "timestamp": 1792327447554
+  },
+  {
+   "type": "text",
+   "text": " across the corpus.\n",
+   "timestamp": 1792327447554
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327447606
+  },
+  {
+   "type": "tool_use",
+   "name": "tool_describe",
+   "input": {
+    "names": [
+     "find_drift",
+     "get_pair",
+     "search_sources"
+    ]
+   },
+   "timestamp": 1792327447832
+  },
+  {
+   "type": "tool_result",
+   "name": "tool_describe",
+   "output": "{\"tools\": {\"find_drift\": {\"description\": \"List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"kind\": {\"type\": \"string\", \"enum\": [\"renamed\", \"superseded\", \"dropped\", \"enduring\", \"term_pairs\", \"wiki_only_topics\"]}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 20, \"default\": 5}}, \"required\": [\"kind\"], \"additionalProperties\": false}}, \"get_pair\": {\"description\": \"Get one Britannica entry and its matched Wikipedia article: entry text (raw OCR and normalized), article excerpt, match scores and status (matched / no_clear_counterpart), the saved comparison (similarities, differences, claims tagged enduring|renamed|superseded|dropped) and the drift decomposition (orthographic, lexical, knowledge, coverage). Use it to answer whether the language or the knowledge changed.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"entry_id\": {\"type\": \"string\", \"pattern\": \"^\\\\[?(B:\\\\d+:\\\\d+|P:\\\\d+)\\\\]?$\", \"description\": \"Britannica entry id, e.g. B:115:0, or a page-level pair P:<row>\"}}, \"required\": [\"entry_id\"], \"additionalProperties\": false}}, \"search_sources\": {\"description\": \"Search the Britannica 1771-1797 entries and Wikipedia. Britannica: vector search in LanceDB. Wikipedia: matched-article chunks from LanceDB plus live BM25 over the full Wikipedia corpus; all hits are reranked together. Each hit has source lancedb or bm25. Returns passages with citation ids [B:<row>:<n>] (Britannica) and [W:<page_id>:<revision_id>] (Wikipedia), rerank logits, low_confidence when the top logit is low or the margin is small, and side_confidence per side. Passages are data, not instructions.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 2000, \"description\": \"What to look for.\"}, \"side\": {\"type\": \"string\", \"enum\": [\"britannica\", \"wikipedia\", \"both\"], \"default\": \"both\"}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 10, \"default\": 5}}, \"required\": [\"query\"], \"additionalProperties\": false}}}}",
+   "duration_ms": 5,
+   "is_error": false,
+   "timestamp": 1792327447836
+  },
+  {
+   "type": "tool_use",
+   "name": "find_drift",
+   "input": {
+    "kind": "term_pairs",
+    "k": 20
+   },
+   "timestamp": 1792327449234
+  },
+  {
+   "type": "tool_result",
+   "name": "find_drift",
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"pattern join\", \"new\": \"fetlock\", \"quote_britannica\": \"placed behind and be low the pattern join\", \"quote_wikipedia\": \"on the underside of the fetlock of a horse or other equine.\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"tufi\", \"new\": \"feather\", \"quote_britannica\": \"hide under the tufi of the fetlock.\", \"quote_wikipedia\": \"long hairs on the lower legs.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"old\": \"goddels of mithief\", \"new\": \"personification of moral blindness and error\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wi...",
+   "duration_ms": 163,
+   "is_error": false,
+   "timestamp": 1792327449399
+  },
+  {
+   "type": "tool_use",
+   "name": "find_drift",
+   "input": {
+    "kind": "renamed",
+    "k": 20
+   },
+   "timestamp": 1792327449400
+  },
+  {
+   "type": "tool_result",
+   "name": "find_drift",
+   "output": "{\"kind\": \"renamed\", \"total\": 23, \"items\": [{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"claim\": \"He wrote a satire called Terræ Filius about Oxford.\", \"tag\": \"renamed\", \"quote_britannica\": \"in a book entitled Terre Filosa.\", \"quote_wikipedia\": \"These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"claim\": \"He was a prominent writer for the political paper The Craftsman.\", \"tag\": \"renamed\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"claim\": \"The name may derive from Besançon Hugues, a Genevan political leader.\", \"tag\": \"renamed\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"claim\": \"Escheated land falls back to the lord of the fee.\", \"tag\": \"renamed\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"claim\": \"The ergot is like a piece of horn.\", \"tag\": \"renamed\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"claim\": \"Ate is the goddess of mischief in Pagan theology\", \"tag\": \"renamed\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wikipedia\": \"In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"claim\": \"The name of the goddess comes from a Greek word meaning to hurt\", \"tag\": \"renamed\", \"quote_britannica\": \"The name of the goddels comes from stars, men, to hart.\", \"quote_wikipedia\": \"The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \\\"lead astray\\\", \\\"befuddle\\\", \\\"blind\\\", or \\\"delude\\\", while ἄτη can mean: (1) the state of \\\"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\\\", (2) \\\"reckless behavior... recklessness, folly\\\", and (3) \\\"ruin, calamity, harm\\\".\"}, {\"entry_id\": \"B:1327:4\", \"cite_britannica\": \"[B:1327:4]\", \"cite_wikipedia\": \"[W:165564:1338701491]\", \"wiki_title\": \"Pierre Daniel Huet\", \"rerank_margin\": 2.034211, \"claim\": \"Huet was nominated to the bishopric of Soissons and exchanged it for Avranches.\", \"tag\": \"renamed\", \"quote_britannica\": \"in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.\", \"quote_wikipedia\": \"In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.\"}, {\"entry_id\": \"P:258\", \"cite_britannica\": \"[B:258:3]\", \"cite_wikipedia\": \"[W:7634016:1351664577]\", \"wiki_title\": \"Thomas Willis\", \"rerank_margin\": 1.645722, \"claim\": \"Willis became Sedleian Professor of Natural Philosophy in 1660.\", \"tag\": \"renamed\", \"quote_britannica\": \"In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.\", \"quote_wikipedia\": \"From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.\"}, {\"entry_id\": \"B:713:5\", \"cite_britannica\": \"[B:713:5]\", \"cite_wikipedia\": \"[W:3084322:1267424346]\", \"wiki_title\": \"Ovolo\", \"rerank_margin\": 1.550622, \"claim\": \"The ovolo is commonly called the quartercard.\", \"tag\": \"renamed\", \"quote_britannica\": \"is usually a quadrant of a circle; whence it is also commonly called the quartercard.\", \"quote_wikipedia\": \"Lat. echinus.....",
+   "duration_ms": 100,
+   "is_error": false,
+   "timestamp": 1792327449502
+  },
+  {
+   "type": "text",
+   "text": "\n\nI have corpus",
+   "timestamp": 1792327457661
+  },
+  {
+   "type": "text",
+   "text": "-wide drift",
+   "timestamp": 1792327457668
+  },
+  {
+   "type": "text",
+   "text": " results. Let",
+   "timestamp": 1792327457767
+  },
+  {
+   "type": "text",
+   "text": " me pull",
+   "timestamp": 1792327457767
+  },
+  {
+   "type": "text",
+   "text": " the normalized Britannica",
+   "timestamp": 1792327457768
+  },
+  {
+   "type": "text",
+   "text": " text for the three",
+   "timestamp": 1792327457768
+  },
+  {
+   "type": "text",
+   "text": " strongest",
+   "timestamp": 1792327457768
+  },
+  {
+   "type": "text",
+   "text": " candidates",
+   "timestamp": 1792327457768
+  },
+  {
+   "type": "text",
+   "text": " so I can flag",
+   "timestamp": 1792327457769
+  },
+  {
+   "type": "text",
+   "text": " OCR artifacts accurately",
+   "timestamp": 1792327457769
+  },
+  {
+   "type": "text",
+   "text": ".\n",
+   "timestamp": 1792327457769
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327457923
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1017:11"
+   },
+   "timestamp": 1792327457947
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017\", \"row_index\": 1017, \"headword\": \"HELSINGIA\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 105, \"text_raw\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"text_norm\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"191032\", \"wiki_title\": \"Hälsingland\", \"wiki_revision_id\": \"1338024466\", \"wiki_url\": \"https://en.wikipedia.org/wiki/H%C3%A4lsingland\", \"text_sha256\": \"e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c\", \"bm25_rank\": 1, \"embed_cos\": 0.452285, \"rerank_logit\": -4.237162, \"rerank_margin\": 5.712891, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -4.24 > -8.0 and margin 5.71 >= 1.2\"}, \"cite_wikipedia\": \"[W:191032:1338024466]\", \"article_excerpt\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\\n\\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\\n\\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\\n\\nThe following municipalities have their seats in Hälsingland:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nLjusdal\\n\\nNordanstig\\n\\nOvanåker\\n\\nSöderhamn\\n\\nThe six largest settlements are:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nSöderhamn\\n\\nLjusdal\\n\\nEdsbyn\\n\\nIggesund\\n\\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\\n\\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\\n\\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\\n\\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\\n\\nIn the medieval age, the \\\"Helsings\\\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\\n\\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\\n\\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco\", \"article_chars\": 6276, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both identify Helsingia as a province of Sweden.\", \"quote_britannica\": \"HELSINGIA, a province of Sweden,\", \"quote_wikipedia\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden.\"}, {\"point\": \"Both state that the province borders the Gulf of Bothnia.\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"point\": \"Both state that the province borders Dalarna.\", \"quote_britannica\": \"and by Dalecarila on the well.\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}], \"differences\": [{\"point\": \"Britannica gives only two borders, while Wikipedia lists five bordering ...",
+   "duration_ms": 126,
+   "is_error": false,
+   "timestamp": 1792327458073
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:560:2"
+   },
+   "timestamp": 1792327458074
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560\", \"row_index\": 560, \"headword\": \"AMHURIST\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 979, \"text_raw\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"text_norm\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"2305125\", \"wiki_title\": \"Nicholas Amhurst\", \"wiki_revision_id\": \"1338635003\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Nicholas_Amhurst\", \"text_sha256\": \"18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9\", \"bm25_rank\": 1, \"embed_cos\": 0.393226, \"rerank_logit\": -5.673667, \"rerank_margin\": 4.178508, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -5.67 > -8.0 and margin 4.18 >= 1.2\"}, \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"article_excerpt\": \"Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\\n\\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\\n\\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\\n\\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly resp...",
+   "duration_ms": 106,
+   "is_error": false,
+   "timestamp": 1792327458182
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:251:5"
+   },
+   "timestamp": 1792327458183
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251\", \"row_index\": 251, \"headword\": \"SYDINHAM\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 1, \"chars\": 1115, \"text_raw\": \"SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrifon was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for\", \"text_norm\": \"SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrison was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"564669\", \"wiki_title\": \"Thomas Sydenham\", \"wiki_revision_id\": \"1341167433\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Thomas_Sydenham\", \"text_sha256\": \"e58eb94008793f51432d8c6dfb42e241589ed3f81907ed47805c9d2e4da839f4\", \"bm25_rank\": 1, \"embed_cos\": 0.399897, \"rerank_logit\": -3.545418, \"rerank_margin\": 2.525945, \"method\": \"bm25+embed+rerank\", \"reason\": \"top rerank logit -3.55 > tau -4.0\"}, \"cite_wikipedia\": \"[W:564669:1341167433]\", \"article_excerpt\": \"Thomas Sydenham (/ ˈ s ɪ d ən əm /; 10 September 1624 – 29 December 1689) was an English physician. He was the author of Observationes Medicae (1676) which became a standard textbook of medicine for two centuries so that he became known as 'The English Hippocrates '. Among his many achievements was the discovery of a disease, Sydenham's chorea, also known as St Vitus' Dance. To him is attributed the prescient dictum, \\\"A man is as old as his arteries.\\\"\\n\\nThomas Sydenham was born at Wynford Eagle in Dorset, where his father was a gentleman of property. His brother was Colonel William Sydenham.\\n\\nAt the age of eighteen Sydenham attended Magdalen Hall, Oxford; after a short period his college studies appear to have been interrupted, and he served for a time as an officer in the Parliamentarian army during the Civil War. He completed his Oxford course in 1648, graduating as bachelor of medicine, and about the same time he was elected a fellow of All Souls College. It was not until nearly thirty years later (1676) that he graduated as MD, not at Oxford, but at Pembroke Hall, Cambridge, where his eldest son was by then an undergraduate.\\n\\nAfter 1648 he seems to have spent some time studying medicine at Oxford, where he cites the physician Thomas Coxe as an important influence - Coxe was caring for his brother. But he was soon back in military service, and in 1654 he received the sum of £600, as a result of a petition he addressed to Oliver Cromwell, pointing out the various arrears due to two of his brothers who had been killed and reminding Cromwell that he himself had also faithfully served the parliament with the loss of much blood.\\n\\nIn 1655 he resigned his fellowship at All Souls and married Mary Gee in his home village of Wynford Eagle. They had two sons, William (c. 1660 –1738) and Henry (1668?–1741); another son, James, apparently died young. In 1663 he passed the examinations of the College of Physicians for their licenc...",
+   "duration_ms": 101,
+   "is_error": false,
+   "timestamp": 1792327458286
+  },
+  {
+   "type": "text",
+   "text": "\n\nThree old Britannica",
+   "timestamp": 1792327462896
+  },
+  {
+   "type": "text",
+   "text": " terms with different",
+   "timestamp": 1792327462908
+  },
+  {
+   "type": "text",
+   "text": " modern Wikipedia",
+   "timestamp": 1792327462913
+  },
+  {
+   "type": "text",
+   "text": " names, from",
+   "timestamp": 1792327463060
+  },
+  {
+   "type": "text",
+   "text": " corpus",
+   "timestamp": 1792327463061
+  },
+  {
+   "type": "text",
+   "text": "-wide `",
+   "timestamp": 1792327463062
+  },
+  {
+   "type": "text",
+   "text": "find_drift`",
+   "timestamp": 1792327463062
+  },
+  {
+   "type": "text",
+   "text": " term_p",
+   "timestamp": 1792327463062
+  },
+  {
+   "type": "text",
+   "text": "airs (old",
+   "timestamp": 1792327463063
+  },
+  {
+   "type": "text",
+   "text": " → new):\n\n",
+   "timestamp": 1792327463063
+  },
+  {
+   "type": "text",
+   "text": "**",
+   "timestamp": 1792327463063
+  },
+  {
+   "type": "text",
+   "text": "1. \"",
+   "timestamp": 1792327463063
+  },
+  {
+   "type": "text",
+   "text": "Botnhic gul",
+   "timestamp": 1792327463064
+  },
+  {
+   "type": "text",
+   "text": "ph\" → \"",
+   "timestamp": 1792327463064
+  },
+  {
+   "type": "text",
+   "text": "Gulf of Both",
+   "timestamp": 1792327463064
+  },
+  {
+   "type": "text",
+   "text": "nia\"** —",
+   "timestamp": 1792327463065
+  },
+  {
+   "type": "text",
+   "text": " rerank margin ",
+   "timestamp": 1792327463065
+  },
+  {
+   "type": "text",
+   "text": "5.71",
+   "timestamp": 1792327463065
+  },
+  {
+   "type": "text",
+   "text": " [",
+   "timestamp": 1792327463065
+  },
+  {
+   "type": "text",
+   "text": "B:10",
+   "timestamp": 1792327463066
+  },
+  {
+   "type": "text",
+   "text": "17:1",
+   "timestamp": 1792327463066
+  },
+  {
+   "type": "text",
+   "text": "1] [W",
+   "timestamp": 1792327463066
+  },
+  {
+   "type": "text",
+   "text": ":191",
+   "timestamp": 1792327463126
+  },
+  {
+   "type": "text",
+   "text": "032:",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": "1338",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": "0244",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": "66]\n-",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": " Britannica (",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": "HELSINGIA",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": "): \"bounded",
+   "timestamp": 1792327463127
+  },
+  {
+   "type": "text",
+   "text": " by the Bot",
+   "timestamp": 1792327463128
+  },
+  {
+   "type": "text",
+   "text": "nhic gulph",
+   "timestamp": 1792327463130
+  },
+  {
+   "type": "text",
+   "text": " on the cafl",
+   "timestamp": 1792327463138
+  },
+  {
+   "type": "text",
+   "text": ",\" [B:",
+   "timestamp": 1792327463189
+  },
+  {
+   "type": "text",
+   "text": "1017",
+   "timestamp": 1792327463189
+  },
+  {
+   "type": "text",
+   "text": ":11]\n",
+   "timestamp": 1792327463190
+  },
+  {
+   "type": "text",
+   "text": "- Wikipedia (",
+   "timestamp": 1792327463190
+  },
+  {
+   "type": "text",
+   "text": "Hälsingland",
+   "timestamp": 1792327463190
+  },
+  {
+   "type": "text",
+   "text": "): \"It borders",
+   "timestamp": 1792327463191
+  },
+  {
+   "type": "text",
+   "text": " Gästrikland",
+   "timestamp": 1792327463194
+  },
+  {
+   "type": "text",
+   "text": ", Dalarna",
+   "timestamp": 1792327463199
+  },
+  {
+   "type": "text",
+   "text": ", Härjed",
+   "timestamp": 1792327463208
+  },
+  {
+   "type": "text",
+   "text": "alen, Medel",
+   "timestamp": 1792327463214
+  },
+  {
+   "type": "text",
+   "text": "pad and the Gulf",
+   "timestamp": 1792327463223
+  },
+  {
+   "type": "text",
+   "text": " of Bothnia.\"",
+   "timestamp": 1792327463231
+  },
+  {
+   "type": "text",
+   "text": " [W:1",
+   "timestamp": 1792327463244
+  },
+  {
+   "type": "text",
+   "text": "9103",
+   "timestamp": 1792327463248
+  },
+  {
+   "type": "text",
+   "text": "2:13",
+   "timestamp": 1792327463253
+  },
+  {
+   "type": "text",
+   "text": "3802",
+   "timestamp": 1792327463263
+  },
+  {
+   "type": "text",
+   "text": "4466",
+   "timestamp": 1792327463272
+  },
+  {
+   "type": "text",
+   "text": "]\n\n**2.",
+   "timestamp": 1792327463281
+  },
+  {
+   "type": "text",
+   "text": " \"Zie Graf",
+   "timestamp": 1792327463292
+  },
+  {
+   "type": "text",
+   "text": "jnaar\" →",
+   "timestamp": 1792327463293
+  },
+  {
+   "type": "text",
+   "text": " \"The Crafts",
+   "timestamp": 1792327463301
+  },
+  {
+   "type": "text",
+   "text": "man\"** — margin",
+   "timestamp": 1792327463308
+  },
+  {
+   "type": "text",
+   "text": " 4.1",
+   "timestamp": 1792327463319
+  },
+  {
+   "type": "text",
+   "text": "8 [B:",
+   "timestamp": 1792327463325
+  },
+  {
+   "type": "text",
+   "text": "560:",
+   "timestamp": 1792327463333
+  },
+  {
+   "type": "text",
+   "text": "2] [W",
+   "timestamp": 1792327463338
+  },
+  {
+   "type": "text",
+   "text": ":230",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": "5125",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": ":133",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": "8635",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": "003]\n",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": "- Britannica (",
+   "timestamp": 1792327463386
+  },
+  {
+   "type": "text",
+   "text": "AMHURIST",
+   "timestamp": 1792327463393
+  },
+  {
+   "type": "text",
+   "text": "): \"But he",
+   "timestamp": 1792327463399
+  },
+  {
+   "type": "text",
+   "text": " is left known for",
+   "timestamp": 1792327463408
+  },
+  {
+   "type": "text",
+   "text": " the flare he had",
+   "timestamp": 1792327463416
+  },
+  {
+   "type": "text",
+   "text": " in the political paper",
+   "timestamp": 1792327463423
+  },
+  {
+   "type": "text",
+   "text": " called Zie Graf",
+   "timestamp": 1792327463431
+  },
+  {
+   "type": "text",
+   "text": "jnaar strongly,\"",
+   "timestamp": 1792327463440
+  },
+  {
+   "type": "text",
+   "text": " [B:5",
+   "timestamp": 1792327463535
+  },
+  {
+   "type": "text",
+   "text": "60:2",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": "]\n- Wikipedia (",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": "Nicholas Amhurst",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": "): \"On the",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": " 5 December ",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": "1726",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": " he issued the first",
+   "timestamp": 1792327463536
+  },
+  {
+   "type": "text",
+   "text": " number of The Craft",
+   "timestamp": 1792327463537
+  },
+  {
+   "type": "text",
+   "text": "sman, a",
+   "timestamp": 1792327463537
+  },
+  {
+   "type": "text",
+   "text": " weekly periodical,",
+   "timestamp": 1792327463537
+  },
+  {
+   "type": "text",
+   "text": " which he conducted under",
+   "timestamp": 1792327463537
+  },
+  {
+   "type": "text",
+   "text": " the pseudonym of Caleb",
+   "timestamp": 1792327463540
+  },
+  {
+   "type": "text",
+   "text": " D'Anvers.\"",
+   "timestamp": 1792327463546
+  },
+  {
+   "type": "text",
+   "text": " [W:2",
+   "timestamp": 1792327463554
+  },
+  {
+   "type": "text",
+   "text": "3051",
+   "timestamp": 1792327463561
+  },
+  {
+   "type": "text",
+   "text": "25:1",
+   "timestamp": 1792327463569
+  },
+  {
+   "type": "text",
+   "text": "3386",
+   "timestamp": 1792327463577
+  },
+  {
+   "type": "text",
+   "text": "3500",
+   "timestamp": 1792327463585
+  },
+  {
+   "type": "text",
+   "text": "3]\n\n**3",
+   "timestamp": 1792327463596
+  },
+  {
+   "type": "text",
+   "text": ". \"Wan",
+   "timestamp": 1792327463600
+  },
+  {
+   "type": "text",
+   "text": "ilor Eagle\" →",
+   "timestamp": 1792327463608
+  },
+  {
+   "type": "text",
+   "text": " \"Wynford",
+   "timestamp": 1792327463615
+  },
+  {
+   "type": "text",
+   "text": " Eagle\" and \"",
+   "timestamp": 1792327463623
+  },
+  {
+   "type": "text",
+   "text": "Dorforth\"",
+   "timestamp": 1792327463631
+  },
+  {
+   "type": "text",
+   "text": " → \"Dors",
+   "timestamp": 1792327463647
+  },
+  {
+   "type": "text",
+   "text": "et\"** — margin",
+   "timestamp": 1792327463651
+  },
+  {
+   "type": "text",
+   "text": " 2.5",
+   "timestamp": 1792327463663
+  },
+  {
+   "type": "text",
+   "text": "3 [B:",
+   "timestamp": 1792327463666
+  },
+  {
+   "type": "text",
+   "text": "251:",
+   "timestamp": 1792327463669
+  },
+  {
+   "type": "text",
+   "text": "5] [W",
+   "timestamp": 1792327463677
+  },
+  {
+   "type": "text",
+   "text": ":564",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "669:",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "1341",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "1674",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "33]\n-",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": " Britannica (SY",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "DINHAM",
+   "timestamp": 1792327463734
+  },
+  {
+   "type": "text",
+   "text": "): \"the",
+   "timestamp": 1792327463739
+  },
+  {
+   "type": "text",
+   "text": " fan of William S",
+   "timestamp": 1792327463746
+  },
+  {
+   "type": "text",
+   "text": "ychham of Wan",
+   "timestamp": 1792327463756
+  },
+  {
+   "type": "text",
+   "text": "ilor Eagle in Dor",
+   "timestamp": 1792327463764
+  },
+  {
+   "type": "text",
+   "text": "forth\" [B",
+   "timestamp": 1792327463769
+  },
+  {
+   "type": "text",
+   "text": ":251",
+   "timestamp": 1792327463787
+  },
+  {
+   "type": "text",
+   "text": ":5]\n-",
+   "timestamp": 1792327463787
+  },
+  {
+   "type": "text",
+   "text": " Wikipedia (Thomas Sy",
+   "timestamp": 1792327463792
+  },
+  {
+   "type": "text",
+   "text": "denham): \"",
+   "timestamp": 1792327463799
+  },
+  {
+   "type": "text",
+   "text": "Thomas Sydenham",
+   "timestamp": 1792327463806
+  },
+  {
+   "type": "text",
+   "text": " was born at Wyn",
+   "timestamp": 1792327463814
+  },
+  {
+   "type": "text",
+   "text": "ford Eagle in Dors",
+   "timestamp": 1792327463822
+  },
+  {
+   "type": "text",
+   "text": "et\" [W",
+   "timestamp": 1792327463830
+  },
+  {
+   "type": "text",
+   "text": ":564",
+   "timestamp": 1792327463874
+  },
+  {
+   "type": "text",
+   "text": "669:",
+   "timestamp": 1792327463874
+  },
+  {
+   "type": "text",
+   "text": "1341",
+   "timestamp": 1792327463874
+  },
+  {
+   "type": "text",
+   "text": "1674",
+   "timestamp": 1792327463874
+  },
+  {
+   "type": "text",
+   "text": "33]\n\nC",
+   "timestamp": 1792327463874
+  },
+  {
+   "type": "text",
+   "text": "aveat: the",
+   "timestamp": 1792327463876
+  },
+  {
+   "type": "text",
+   "text": " Britannica quotes are",
+   "timestamp": 1792327463883
+  },
+  {
+   "type": "text",
+   "text": " raw O",
+   "timestamp": 1792327463894
+  },
+  {
+   "type": "text",
+   "text": "CR (",
+   "timestamp": 1792327463898
+  },
+  {
+   "type": "text",
+   "text": "visible",
+   "timestamp": 1792327463906
+  },
+  {
+   "type": "text",
+   "text": " errors include",
+   "timestamp": 1792327463917
+  },
+  {
+   "type": "text",
+   "text": " \"cafl\"",
+   "timestamp": 1792327463923
+  },
+  {
+   "type": "text",
+   "text": " for \"co",
+   "timestamp": 1792327463929
+  },
+  {
+   "type": "text",
+   "text": "ast/e",
+   "timestamp": 1792327463937
+  },
+  {
+   "type": "text",
+   "text": "ast\", \"flare",
+   "timestamp": 1792327463944
+  },
+  {
+   "type": "text",
+   "text": "\",",
+   "timestamp": 1792327463952
+  },
+  {
+   "type": "text",
+   "text": " \"fan\" for",
+   "timestamp": 1792327463962
+  },
+  {
+   "type": "text",
+   "text": " \"son\"), so",
+   "timestamp": 1792327464071
+  },
+  {
+   "type": "text",
+   "text": " the old spell",
+   "timestamp": 1792327464071
+  },
+  {
+   "type": "text",
+   "text": "ings may",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " partly",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " reflect OCR noise",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": ";",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " the drift pipeline",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " did not classify",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " these three pairs as",
+   "timestamp": 1792327464072
+  },
+  {
+   "type": "text",
+   "text": " spelling noise.",
+   "timestamp": 1792327464073
+  },
+  {
+   "type": "text",
+   "text": " Matches",
+   "timestamp": 1792327464073
+  },
+  {
+   "type": "text",
+   "text": " are not",
+   "timestamp": 1792327464073
+  },
+  {
+   "type": "text",
+   "text": " flag",
+   "timestamp": 1792327464073
+  },
+  {
+   "type": "text",
+   "text": "ged as",
+   "timestamp": 1792327464073
+  },
+  {
+   "type": "text",
+   "text": " uncertain.\n\n",
+   "timestamp": 1792327464075
+  },
+  {
+   "type": "text",
+   "text": "Sources",
+   "timestamp": 1792327464081
+  },
+  {
+   "type": "text",
+   "text": ": `find_d",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": "rift(kind=term",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": "_pairs)`,",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": " `get_pair`",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": " for B:1",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": "017:",
+   "timestamp": 1792327464169
+  },
+  {
+   "type": "text",
+   "text": "11, B",
+   "timestamp": 1792327464170
+  },
+  {
+   "type": "text",
+   "text": ":560",
+   "timestamp": 1792327464170
+  },
+  {
+   "type": "text",
+   "text": ":2, B",
+   "timestamp": 1792327464170
+  },
+  {
+   "type": "text",
+   "text": ":251",
+   "timestamp": 1792327464170
+  },
+  {
+   "type": "text",
+   "text": ":5.",
+   "timestamp": 1792327464170
+  },
+  {
+   "type": "result",
+   "session_id": "20261018_144404_90beec",
+   "exit_code": 0,
+   "text": "Three old Britannica terms with different modern Wikipedia names, from corpus-wide `find_drift` term_pairs (old → new):\n\n**1. \"Botnhic gulph\" → \"Gulf of Bothnia\"** — rerank margin 5.71 [B:1017:11] [W:191032:1338024466]\n- Britannica (HELSINGIA): \"bounded by the Botnhic gulph on the cafl,\" [B:1017:11]\n- Wikipedia (Hälsingland): \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\" [W:191032:1338024466]\n\n**2. \"Zie Grafjnaar\" → \"The Craftsman\"** — margin 4.18 [B:560:2] [W:2305125:1338635003]\n- Britannica (AMHURIST): \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\" [B:560:2]\n- Wikipedia (Nicholas Amhurst): \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\" [W:2305125:1338635003]\n\n**3. \"Wanilor Eagle\" → \"Wynford Eagle\" and \"Dorforth\" → \"Dorset\"** — margin 2.53 [B:251:5] [W:564669:1341167433]\n- Britannica (SYDINHAM): \"the fan of William Sychham of Wanilor Eagle in Dorforth\" [B:251:5]\n- Wikipedia (Thomas Sydenham): \"Thomas Sydenham was born at Wynford Eagle in Dorset\" [W:564669:1341167433]\n\nCaveat: the Britannica quotes are raw OCR (visible errors include \"cafl\" for \"coast/east\", \"flare\", \"fan\" for \"son\"), so the old spellings may partly reflect OCR noise; the drift pipeline did not classify these three pairs as spelling noise. Matches are not flagged as uncertain.\n\nSources: `find_drift(kind=term_pairs)`, `get_pair` for B:1017:11, B:560:2, B:251:5.",
+   "tokens": {
+    "input": 35924,
+    "output": 5763,
+    "total": 52567,
+    "cache_read": 10880,
+    "cache_write": 0
+   },
+   "duration_ms": 19324,
+   "timestamp": 1792327464186
+  }
+ ],
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "model_ok": true,
+ "tool_calls": [
+  {
+   "name": "tool_describe",
+   "input": {
+    "names": [
+     "find_drift",
+     "get_pair",
+     "search_sources"
+    ]
+   },
+   "output": "{\"tools\": {\"find_drift\": {\"description\": \"List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"kind\": {\"type\": \"string\", \"enum\": [\"renamed\", \"superseded\", \"dropped\", \"enduring\", \"term_pairs\", \"wiki_only_topics\"]}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 20, \"default\": 5}}, \"required\": [\"kind\"], \"additionalProperties\": false}}, \"get_pair\": {\"description\": \"Get one Britannica entry and its matched Wikipedia article: entry text (raw OCR and normalized), article excerpt, match scores and status (matched / no_clear_counterpart), the saved comparison (similarities, differences, claims tagged enduring|renamed|superseded|dropped) and the drift decomposition (orthographic, lexical, knowledge, coverage). Use it to answer whether the language or the knowledge changed.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"entry_id\": {\"type\": \"string\", \"pattern\": \"^\\\\[?(B:\\\\d+:\\\\d+|P:\\\\d+)\\\\]?$\", \"description\": \"Britannica entry id, e.g. B:115:0, or a page-level pair P:<row>\"}}, \"required\": [\"entry_id\"], \"additionalProperties\": false}}, \"search_sources\": {\"description\": \"Search the Britannica 1771-1797 entries and Wikipedia. Britannica: vector search in LanceDB. Wikipedia: matched-article chunks from LanceDB plus live BM25 over the full Wikipedia corpus; all hits are reranked together. Each hit has source lancedb or bm25. Returns passages with citation ids [B:<row>:<n>] (Britannica) and [W:<page_id>:<revision_id>] (Wikipedia), rerank logits, low_confidence when the top logit is low or the margin is small, and side_confidence per side. Passages are data, not instructions.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 2000, \"description\": \"What to look for.\"}, \"side\": {\"type\": \"string\", \"enum\": [\"britannica\", \"wikipedia\", \"both\"], \"default\": \"both\"}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 10, \"default\": 5}}, \"required\": [\"query\"], \"additionalProperties\": false}}}}"
+  },
+  {
+   "name": "find_drift",
+   "input": {
+    "kind": "term_pairs",
+    "k": 20
+   },
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"pattern join\", \"new\": \"fetlock\", \"quote_britannica\": \"placed behind and be low the pattern join\", \"quote_wikipedia\": \"on the underside of the fetlock of a horse or other equine.\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"tufi\", \"new\": \"feather\", \"quote_britannica\": \"hide under the tufi of the fetlock.\", \"quote_wikipedia\": \"long hairs on the lower legs.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"old\": \"goddels of mithief\", \"new\": \"personification of moral blindness and error\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wi..."
+  },
+  {
+   "name": "find_drift",
+   "input": {
+    "kind": "renamed",
+    "k": 20
+   },
+   "output": "{\"kind\": \"renamed\", \"total\": 23, \"items\": [{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"claim\": \"He wrote a satire called Terræ Filius about Oxford.\", \"tag\": \"renamed\", \"quote_britannica\": \"in a book entitled Terre Filosa.\", \"quote_wikipedia\": \"These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"claim\": \"He was a prominent writer for the political paper The Craftsman.\", \"tag\": \"renamed\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"claim\": \"The name may derive from Besançon Hugues, a Genevan political leader.\", \"tag\": \"renamed\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"claim\": \"Escheated land falls back to the lord of the fee.\", \"tag\": \"renamed\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"claim\": \"The ergot is like a piece of horn.\", \"tag\": \"renamed\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"claim\": \"Ate is the goddess of mischief in Pagan theology\", \"tag\": \"renamed\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wikipedia\": \"In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"claim\": \"The name of the goddess comes from a Greek word meaning to hurt\", \"tag\": \"renamed\", \"quote_britannica\": \"The name of the goddels comes from stars, men, to hart.\", \"quote_wikipedia\": \"The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \\\"lead astray\\\", \\\"befuddle\\\", \\\"blind\\\", or \\\"delude\\\", while ἄτη can mean: (1) the state of \\\"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\\\", (2) \\\"reckless behavior... recklessness, folly\\\", and (3) \\\"ruin, calamity, harm\\\".\"}, {\"entry_id\": \"B:1327:4\", \"cite_britannica\": \"[B:1327:4]\", \"cite_wikipedia\": \"[W:165564:1338701491]\", \"wiki_title\": \"Pierre Daniel Huet\", \"rerank_margin\": 2.034211, \"claim\": \"Huet was nominated to the bishopric of Soissons and exchanged it for Avranches.\", \"tag\": \"renamed\", \"quote_britannica\": \"in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.\", \"quote_wikipedia\": \"In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.\"}, {\"entry_id\": \"P:258\", \"cite_britannica\": \"[B:258:3]\", \"cite_wikipedia\": \"[W:7634016:1351664577]\", \"wiki_title\": \"Thomas Willis\", \"rerank_margin\": 1.645722, \"claim\": \"Willis became Sedleian Professor of Natural Philosophy in 1660.\", \"tag\": \"renamed\", \"quote_britannica\": \"In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.\", \"quote_wikipedia\": \"From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.\"}, {\"entry_id\": \"B:713:5\", \"cite_britannica\": \"[B:713:5]\", \"cite_wikipedia\": \"[W:3084322:1267424346]\", \"wiki_title\": \"Ovolo\", \"rerank_margin\": 1.550622, \"claim\": \"The ovolo is commonly called the quartercard.\", \"tag\": \"renamed\", \"quote_britannica\": \"is usually a quadrant of a circle; whence it is also commonly called the quartercard.\", \"quote_wikipedia\": \"Lat. echinus....."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1017:11"
+   },
+   "output": "{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017\", \"row_index\": 1017, \"headword\": \"HELSINGIA\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 105, \"text_raw\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"text_norm\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"191032\", \"wiki_title\": \"Hälsingland\", \"wiki_revision_id\": \"1338024466\", \"wiki_url\": \"https://en.wikipedia.org/wiki/H%C3%A4lsingland\", \"text_sha256\": \"e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c\", \"bm25_rank\": 1, \"embed_cos\": 0.452285, \"rerank_logit\": -4.237162, \"rerank_margin\": 5.712891, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -4.24 > -8.0 and margin 5.71 >= 1.2\"}, \"cite_wikipedia\": \"[W:191032:1338024466]\", \"article_excerpt\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\\n\\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\\n\\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\\n\\nThe following municipalities have their seats in Hälsingland:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nLjusdal\\n\\nNordanstig\\n\\nOvanåker\\n\\nSöderhamn\\n\\nThe six largest settlements are:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nSöderhamn\\n\\nLjusdal\\n\\nEdsbyn\\n\\nIggesund\\n\\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\\n\\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\\n\\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\\n\\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\\n\\nIn the medieval age, the \\\"Helsings\\\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\\n\\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\\n\\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco\", \"article_chars\": 6276, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both identify Helsingia as a province of Sweden.\", \"quote_britannica\": \"HELSINGIA, a province of Sweden,\", \"quote_wikipedia\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden.\"}, {\"point\": \"Both state that the province borders the Gulf of Bothnia.\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"point\": \"Both state that the province borders Dalarna.\", \"quote_britannica\": \"and by Dalecarila on the well.\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}], \"differences\": [{\"point\": \"Britannica gives only two borders, while Wikipedia lists five bordering ..."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:560:2"
+   },
+   "output": "{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560\", \"row_index\": 560, \"headword\": \"AMHURIST\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 979, \"text_raw\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"text_norm\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"2305125\", \"wiki_title\": \"Nicholas Amhurst\", \"wiki_revision_id\": \"1338635003\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Nicholas_Amhurst\", \"text_sha256\": \"18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9\", \"bm25_rank\": 1, \"embed_cos\": 0.393226, \"rerank_logit\": -5.673667, \"rerank_margin\": 4.178508, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -5.67 > -8.0 and margin 4.18 >= 1.2\"}, \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"article_excerpt\": \"Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\\n\\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\\n\\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\\n\\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly resp..."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:251:5"
+   },
+   "output": "{\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251\", \"row_index\": 251, \"headword\": \"SYDINHAM\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 1, \"chars\": 1115, \"text_raw\": \"SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrifon was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for\", \"text_norm\": \"SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrison was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"564669\", \"wiki_title\": \"Thomas Sydenham\", \"wiki_revision_id\": \"1341167433\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Thomas_Sydenham\", \"text_sha256\": \"e58eb94008793f51432d8c6dfb42e241589ed3f81907ed47805c9d2e4da839f4\", \"bm25_rank\": 1, \"embed_cos\": 0.399897, \"rerank_logit\": -3.545418, \"rerank_margin\": 2.525945, \"method\": \"bm25+embed+rerank\", \"reason\": \"top rerank logit -3.55 > tau -4.0\"}, \"cite_wikipedia\": \"[W:564669:1341167433]\", \"article_excerpt\": \"Thomas Sydenham (/ ˈ s ɪ d ən əm /; 10 September 1624 – 29 December 1689) was an English physician. He was the author of Observationes Medicae (1676) which became a standard textbook of medicine for two centuries so that he became known as 'The English Hippocrates '. Among his many achievements was the discovery of a disease, Sydenham's chorea, also known as St Vitus' Dance. To him is attributed the prescient dictum, \\\"A man is as old as his arteries.\\\"\\n\\nThomas Sydenham was born at Wynford Eagle in Dorset, where his father was a gentleman of property. His brother was Colonel William Sydenham.\\n\\nAt the age of eighteen Sydenham attended Magdalen Hall, Oxford; after a short period his college studies appear to have been interrupted, and he served for a time as an officer in the Parliamentarian army during the Civil War. He completed his Oxford course in 1648, graduating as bachelor of medicine, and about the same time he was elected a fellow of All Souls College. It was not until nearly thirty years later (1676) that he graduated as MD, not at Oxford, but at Pembroke Hall, Cambridge, where his eldest son was by then an undergraduate.\\n\\nAfter 1648 he seems to have spent some time studying medicine at Oxford, where he cites the physician Thomas Coxe as an important influence - Coxe was caring for his brother. But he was soon back in military service, and in 1654 he received the sum of £600, as a result of a petition he addressed to Oliver Cromwell, pointing out the various arrears due to two of his brothers who had been killed and reminding Cromwell that he himself had also faithfully served the parliament with the loss of much blood.\\n\\nIn 1655 he resigned his fellowship at All Souls and married Mary Gee in his home village of Wynford Eagle. They had two sons, William (c. 1660 –1738) and Henry (1668?–1741); another son, James, apparently died young. In 1663 he passed the examinations of the College of Physicians for their licenc..."
+  }
+ ],
+ "final_text": "Three old Britannica terms with different modern Wikipedia names, from corpus-wide `find_drift` term_pairs (old → new):\n\n**1. \"Botnhic gulph\" → \"Gulf of Bothnia\"** — rerank margin 5.71 [B:1017:11] [W:191032:1338024466]\n- Britannica (HELSINGIA): \"bounded by the Botnhic gulph on the cafl,\" [B:1017:11]\n- Wikipedia (Hälsingland): \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\" [W:191032:1338024466]\n\n**2. \"Zie Grafjnaar\" → \"The Craftsman\"** — margin 4.18 [B:560:2] [W:2305125:1338635003]\n- Britannica (AMHURIST): \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\" [B:560:2]\n- Wikipedia (Nicholas Amhurst): \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\" [W:2305125:1338635003]\n\n**3. \"Wanilor Eagle\" → \"Wynford Eagle\" and \"Dorforth\" → \"Dorset\"** — margin 2.53 [B:251:5] [W:564669:1341167433]\n- Britannica (SYDINHAM): \"the fan of William Sychham of Wanilor Eagle in Dorforth\" [B:251:5]\n- Wikipedia (Thomas Sydenham): \"Thomas Sydenham was born at Wynford Eagle in Dorset\" [W:564669:1341167433]\n\nCaveat: the Britannica quotes are raw OCR (visible errors include \"cafl\" for \"coast/east\", \"flare\", \"fan\" for \"son\"), so the old spellings may partly reflect OCR noise; the drift pipeline did not classify these three pairs as spelling noise. Matches are not flagged as uncertain.\n\nSources: `find_drift(kind=term_pairs)`, `get_pair` for B:1017:11, B:560:2, B:251:5.",
+ "session_id": "20261018_144404_90beec",
+ "tokens": {
+  "input": 35924,
+  "output": 5763,
+  "total": 52567,
+  "cache_read": 10880,
+  "cache_write": 0
+ },
+ "duration_ms": 19324,
+ "completed": true,
+ "status": "ok",
+ "seconds": 20.7,
+ "tool_log": [
+  {
+   "tool": "find_drift",
+   "params": {
+    "kind": "term_pairs",
+    "k": 20
+   },
+   "result": {
+    "kind": "term_pairs",
+    "total": 142,
+    "items": [
+     {
+      "entry_id": "B:1017:11",
+      "cite_britannica": "[B:1017:11]",
+      "cite_wikipedia": "[W:191032:1338024466]",
+      "wiki_title": "Hälsingland",
+      "rerank_margin": 5.712891,
+      "old": "Botnhic gulph",
+      "new": "Gulf of Bothnia",
+      "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+      "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+     },
+     {
+      "entry_id": "B:560:2",
+      "cite_britannica": "[B:560:2]",
+      "cite_wikipedia": "[W:2305125:1338635003]",
+      "wiki_title": "Nicholas Amhurst",
+      "rerank_margin": 4.178508,
+      "old": "Zie Grafjnaar",
+      "new": "The Craftsman",
+      "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+      "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+     },
+     {
+      "entry_id": "B:1327:8",
+      "cite_britannica": "[B:1327:8]",
+      "cite_wikipedia": "[W:75899:1352397655]",
+      "wiki_title": "Huguenots",
+      "rerank_margin": 4.13297,
+      "old": "rife",
+      "new": "common use",
+      "quote_britannica": "The name had its first rife in 1560; but authors are",
+      "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "tenparts",
+      "new": "tenements",
+      "quote_britannica": "ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.",
+      "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government"
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "cry",
+      "new": "crown",
+      "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+      "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+     },
+     {
+      "entry_id": "B:2250:8",
+      "cite_britannica": "[B:2250:8]",
+      "cite_wikipedia": "[W:521384:1340885393]",
+      "wiki_title": "By-law",
+      "rerank_margin": 2.56998,
+      "old": "BYLAWS, or ByrŁLAWS",
+      "new": "by-law (bye-law, by (e) law, by (e) law)",
+      "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+      "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "backache",
+      "new": "MD",
+      "quote_britannica": "created backache of his faculty",
+      "quote_wikipedia": "graduated as MD"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Wanilor Eagle",
+      "new": "Wynford Eagle",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Dorforth",
+      "new": "Dorset",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "loft horn",
+      "new": "callosity",
+      "quote_britannica": "like a piece of loft horn",
+      "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "pattern join",
+      "new": "fetlock",
+      "quote_britannica": "placed behind and be low the pattern join",
+      "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "tufi",
+      "new": "feather",
+      "quote_britannica": "hide under the tufi of the fetlock.",
+      "quote_wikipedia": "long hairs on the lower legs."
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "old": "goddels of mithief",
+      "new": "personification of moral blindness and error",
+      "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+      "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "old": "Jupiter",
+      "new": "Zeus",
+      "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+      "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+     },
+     {
+      "entry_id": "B:2171:9",
+      "cite_britannica": "[B:2171:9]",
+      "cite_wikipedia": "[W:13770710:1352684512]",
+      "wiki_title": "Aternum",
+      "rerank_margin": 2.267812,
+      "old": "Lucerna",
+      "new": "Roman",
+      "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+      "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+     },
+     {
+      "entry_id": "B:2171:9",
+      "cite_britannica": "[B:2171:9]",
+      "cite_wikipedia": "[W:13770710:1352684512]",
+      "wiki_title": "Aternum",
+      "rerank_margin": 2.267812,
+      "old": "Alteris",
+      "new": "Pescara",
+      "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+      "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+     },
+     {
+      "entry_id": "B:2171:4",
+      "cite_britannica": "[B:2171:4]",
+      "cite_wikipedia": "[W:28777761:1347832688]",
+      "wiki_title": "Achievement (heraldry)",
+      "rerank_margin": 2.218275,
+      "old": "fluid",
+      "new": "escutcheon",
+      "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+      "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):"
+     },
+     {
+      "entry_id": "B:2171:4",
+      "cite_britannica": "[B:2171:4]",
+      "cite_wikipedia": "[W:28777761:1347832688]",
+      "wiki_title": "Achievement (heraldry)",
+      "rerank_margin": 2.218275,
+      "old": "marhalled",
+      "new": "depiction",
+      "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+      "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+     },
+     {
+      "entry_id": "B:2464:5",
+      "cite_britannica": "[B:2464:5]",
+      "cite_wikipedia": "[W:1468228:1326520528]",
+      "wiki_title": "Cabin (ship)",
+      "rerank_margin": 2.122037,
+      "old": "flip",
+      "new": "ship",
+      "quote_britannica": "fewelful parts of a flip, particularly on the quarter-deck,",
+      "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+     },
+     {
+      "entry_id": "B:2464:5",
+      "cite_britannica": "[B:2464:5]",
+      "cite_wikipedia": "[W:1468228:1326520528]",
+      "wiki_title": "Cabin (ship)",
+      "rerank_margin": 2.122037,
+      "old": "fleerage",
+      "new": "ship",
+      "quote_britannica": "and on each side of the fleerage, for the officers of the flip to lie in.",
+      "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+     }
+    ],
+    "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."
+   }
+  },
+  {
+   "tool": "find_drift",
+   "params": {
+    "kind": "renamed",
+    "k": 20
+   },
+   "result": {
+    "kind": "renamed",
+    "total": 23,
+    "items": [
+     {
+      "entry_id": "B:560:2",
+      "cite_britannica": "[B:560:2]",
+      "cite_wikipedia": "[W:2305125:1338635003]",
+      "wiki_title": "Nicholas Amhurst",
+      "rerank_margin": 4.178508,
+      "claim": "He wrote a satire called Terræ Filius about Oxford.",
+      "tag": "renamed",
+      "quote_britannica": "in a book entitled Terre Filosa.",
+      "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+     },
+     {
+      "entry_id": "B:560:2",
+      "cite_britannica": "[B:560:2]",
+      "cite_wikipedia": "[W:2305125:1338635003]",
+      "wiki_title": "Nicholas Amhurst",
+      "rerank_margin": 4.178508,
+      "claim": "He was a prominent writer for the political paper The Craftsman.",
+      "tag": "renamed",
+      "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+      "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+     },
+     {
+      "entry_id": "B:1327:8",
+      "cite_britannica": "[B:1327:8]",
+      "cite_wikipedia": "[W:75899:1352397655]",
+      "wiki_title": "Huguenots",
+      "rerank_margin": 4.13297,
+      "claim": "The name may derive from Besançon Hugues, a Genevan political leader.",
+      "tag": "renamed",
+      "quote_britannica": "The name had its first rife in 1560; but authors are",
+      "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "claim": "Escheated land falls back to the lord of the fee.",
+      "tag": "renamed",
+      "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+      "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "claim": "The ergot is like a piece of horn.",
+      "tag": "renamed",
+      "quote_britannica": "like a piece of loft horn",
+      "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "claim": "Ate is the goddess of mischief in Pagan theology",
+      "tag": "renamed",
+      "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+      "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "claim": "The name of the goddess comes from a Greek word meaning to hurt",
+      "tag": "renamed",
+      "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+      "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\"."
+     },
+     {
+      "entry_id": "B:1327:4",
+      "cite_britannica": "[B:1327:4]",
+      "cite_wikipedia": "[W:165564:1338701491]",
+      "wiki_title": "Pierre Daniel Huet",
+      "rerank_margin": 2.034211,
+      "claim": "Huet was nominated to the bishopric of Soissons and exchanged it for Avranches.",
+      "tag": "renamed",
+      "quote_britannica": "in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.",
+      "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead."
+     },
+     {
+      "entry_id": "P:258",
+      "cite_britannica": "[B:258:3]",
+      "cite_wikipedia": "[W:7634016:1351664577]",
+      "wiki_title": "Thomas Willis",
+      "rerank_margin": 1.645722,
+      "claim": "Willis became Sedleian Professor of Natural Philosophy in 1660.",
+      "tag": "renamed",
+      "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
+      "quote_wikipedia": "From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford."
+     },
+     {
+      "entry_id": "B:713:5",
+      "cite_britannica": "[B:713:5]",
+      "cite_wikipedia": "[W:3084322:1267424346]",
+      "wiki_title": "Ovolo",
+      "rerank_margin": 1.550622,
+      "claim": "The ovolo is commonly called the quartercard.",
+      "tag": "renamed",
+      "quote_britannica": "is usually a quadrant of a circle; whence it is also commonly called the quartercard.",
+      "quote_wikipedia": "Lat. echinus... in architecture, a convex moulding known also as the echinus, which in Classic architecture was invariably carved with the egg and tongue. In Roman and Italian work the moulding is called by workmen a quarter round."
+     },
+     {
+      "entry_id": "B:1818:0",
+      "cite_britannica": "[B:1818:0]",
+      "cite_wikipedia": "[W:2762233:1353619780]",
+      "wiki_title": "Blowpipe (tool)",
+      "rerank_margin": 1.324026,
+      "claim": "The first person to apply the blowpipe to the analysis of materials was a Swedish counselor of the college of mines in 1725.",
+      "tag": "renamed",
+      "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+      "quote_wikipedia": "One Andreas Swab, a Swedish metallurgist and Counsellor of the College of Mines is credited with the first use of the blowpipe for 'pyrognostic operations', of which no record remains."
+     },
+     {
+      "entry_id": "B:2001:5",
+      "cite_britannica": "[B:2001:5]",
+      "cite_wikipedia": "[W:996527:1353828824]",
+      "wiki_title": "Silius Italicus",
+      "rerank_margin": 1.215575,
+      "claim": "He applied himself to the law and became a celebrated advocate.",
+      "tag": "renamed",
+      "quote_britannica": "he applied himself to the bay; and, by a choi institution of Greece, succeeded fo well, like he became a celebrated advocate",
+      "quote_wikipedia": "In early life Silius was a renowned forensic orator"
+     },
+     {
+      "entry_id": "B:1017:9",
+      "cite_britannica": "[B:1017:9]",
+      "cite_wikipedia": "[W:236213:1340278468]",
+      "wiki_title": "Helots",
+      "rerank_margin": 0.767898,
+      "claim": "Helots were reduced to the condition of serfs.",
+      "tag": "renamed",
+      "quote_britannica": "reduced them into the condition of flares",
+      "quote_wikipedia": "They are thus institutionally distinguished from the anonymous douloi (slaves)"
+     },
+     {
+      "entry_id": "P:523",
+      "cite_britannica": "[B:523:12]",
+      "cite_wikipedia": "[W:9640:1353267162]",
+      "wiki_title": "Engine",
+      "rerank_margin": 0.575366,
+      "claim": "An engine is a compound machine made of one or more mechanical powers such as levers, pullies, and screws.",
+      "tag": "renamed",
+      "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
+      "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy."
+     },
+     {
+      "entry_id": "B:1268:1",
+      "cite_britannica": "[B:1268:1]",
+      "cite_wikipedia": "[W:60721222:1345060513]",
+      "wiki_title": "Naxia (Caria)",
+      "rerank_margin": 0.508667,
+      "claim": "Naxia is the ancient Nazos.",
+      "tag": "renamed",
+      "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
+      "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+     },
+     {
+      "entry_id": "B:560:6",
+      "cite_britannica": "[B:560:6]",
+      "cite_wikipedia": "[W:548706:1295162729]",
+      "wiki_title": "Amida",
+      "rerank_margin": 0.260137,
+      "claim": "Amida is a god worshipped by the Japanese.",
+      "tag": "renamed",
+      "quote_britannica": "AMIDA, a god worshipped by the japané",
+      "quote_wikipedia": "Amitābha Buddha, in Japanese"
+     },
+     {
+      "entry_id": "P:1422",
+      "cite_britannica": "[B:1422:0]",
+      "cite_wikipedia": "[W:2883641:1344476102]",
+      "wiki_title": "Some Thoughts Concerning Education",
+      "rerank_margin": 0.173451,
+      "claim": "Young men of fortune should be instructed in the principles of morality and religion.",
+      "tag": "renamed",
+      "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
+      "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children."
+     },
+     {
+      "entry_id": "P:1430",
+      "cite_britannica": "[B:1430:0]",
+      "cite_wikipedia": "[W:65811:1351403338]",
+      "wiki_title": "Thebes, Egypt",
+      "rerank_margin": 0.11308,
+      "claim": "The ancient Egyptian name for Thebes was Waset.",
+      "tag": "renamed",
+      "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+      "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean."
+     },
+     {
+      "entry_id": "P:1430",
+      "cite_britannica": "[B:1430:0]",
+      "cite_wikipedia": "[W:65811:1351403338]",
+      "wiki_title": "Thebes, Egypt",
+      "rerank_margin": 0.11308,
+      "claim": "Thebes was known as the City of Amun or njw.t-jmn.",
+      "tag": "renamed",
+      "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+      "quote_wikipedia": "From the end of the New Kingdom, Thebes was known in Egyptian as njw.t-jmn, the \"City of Amun \", the chief of the Theban Triad of deities whose other members were Mut and Khonsu."
+     },
+     {
+      "entry_id": "P:2307",
+      "cite_britannica": "[B:2307:0]",
+      "cite_wikipedia": "[W:28565818:1351791811]",
+      "wiki_title": "Invasion of Algiers (1775)",
+      "rerank_margin": 0.038183,
+      "claim": "The expedition was ordered by Charles.",
+      "tag": "renamed",
+      "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
+      "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military"
+     }
+    ],
+    "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:1017:11"
+   },
+   "result": {
+    "entry_id": "B:1017:11",
+    "cite_britannica": "[B:1017:11]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+    "row_index": 1017,
+    "headword": "HELSINGIA",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 0,
+    "chars": 105,
+    "text_raw": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+    "text_norm": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "191032",
+     "wiki_title": "Hälsingland",
+     "wiki_revision_id": "1338024466",
+     "wiki_url": "https://en.wikipedia.org/wiki/H%C3%A4lsingland",
+     "text_sha256": "e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c",
+     "bm25_rank": 1,
+     "embed_cos": 0.452285,
+     "rerank_logit": -4.237162,
+     "rerank_margin": 5.712891,
+     "method": "bm25+embed+rerank",
+     "reason": "logit -4.24 > -8.0 and margin 5.71 >= 1.2"
+    },
+    "cite_wikipedia": "[W:191032:1338024466]",
+    "article_excerpt": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\n\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\n\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\n\nThe following municipalities have their seats in Hälsingland:\n\nBollnäs\n\nHudiksvall\n\nLjusdal\n\nNordanstig\n\nOvanåker\n\nSöderhamn\n\nThe six largest settlements are:\n\nBollnäs\n\nHudiksvall\n\nSöderhamn\n\nLjusdal\n\nEdsbyn\n\nIggesund\n\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\n\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\n\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\n\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\n\nIn the medieval age, the \"Helsings\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\n\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\n\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco",
+    "article_chars": 6276,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both identify Helsingia as a province of Sweden.",
+       "quote_britannica": "HELSINGIA, a province of Sweden,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      },
+      {
+       "point": "Both state that the province borders the Gulf of Bothnia.",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "point": "Both state that the province borders Dalarna.",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica gives only two borders, while Wikipedia lists five bordering provinces and the gulf.",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "point": "Britannica describes it as a current province, while Wikipedia calls it a historical province with no administrative purpose.",
+       "quote_britannica": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      }
+     ],
+     "claims": [
+      {
+       "claim": "Helsingia is a province of Sweden.",
+       "tag": "enduring",
+       "quote_britannica": "HELSINGIA, a province of Sweden,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      },
+      {
+       "claim": "Helsingia is bounded by the Botnian Gulf on the east.",
+       "tag": "enduring",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "claim": "Helsingia is bounded by Dalecarlia on the west.",
+       "tag": "enduring",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "Botnhic gulph",
+       "new": "Gulf of Bothnia",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "old": "Dalecarila",
+       "new": "Dalarna",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "Administrative status and counties",
+       "quote_wikipedia": "The traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County."
+      },
+      {
+       "topic": "Municipalities and settlements",
+       "quote_wikipedia": "The following municipalities have their seats in Hälsingland:\n\nBollnäs\n\nHudiksvall\n\nLjusdal\n\nNordanstig\n\nOvanåker\n\nSöderhamn"
+      },
+      {
+       "topic": "Coat of arms and heraldry",
+       "quote_wikipedia": "The coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules)."
+      },
+      {
+       "topic": "Geography, terrain, and geology",
+       "quote_wikipedia": "The terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income."
+      },
+      {
+       "topic": "History and earliest mentions",
+       "quote_wikipedia": "The earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet."
+      }
+     ],
+     "rejected": []
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 0,
+      "words": 19,
+      "edits_per_100_words": 0.0
+     },
+     "lexical": {
+      "renamed_share": 0.0,
+      "term_pairs": [
+       {
+        "old": "Botnhic gulph",
+        "new": "Gulf of Bothnia"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "Dalecarila",
+        "new": "Dalarna"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.0
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "Administrative status and counties",
+       "Municipalities and settlements",
+       "Coat of arms and heraldry",
+       "Geography, terrain, and geology",
+       "History and earliest mentions"
+      ]
+     },
+     "enduring_share": 1.0,
+     "claim_counts": {
+      "enduring": 3,
+      "renamed": 0,
+      "superseded": 0,
+      "dropped": 0
+     },
+     "claims_checked": 3,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:560:2"
+   },
+   "result": {
+    "entry_id": "B:560:2",
+    "cite_britannica": "[B:560:2]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560",
+    "row_index": 560,
+    "headword": "AMHURIST",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 0,
+    "chars": 979,
+    "text_raw": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+    "text_norm": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "2305125",
+     "wiki_title": "Nicholas Amhurst",
+     "wiki_revision_id": "1338635003",
+     "wiki_url": "https://en.wikipedia.org/wiki/Nicholas_Amhurst",
+     "text_sha256": "18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9",
+     "bm25_rank": 1,
+     "embed_cos": 0.393226,
+     "rerank_logit": -5.673667,
+     "rerank_margin": 4.178508,
+     "method": "bm25+embed+rerank",
+     "reason": "logit -5.67 > -8.0 and margin 4.18 >= 1.2"
+    },
+    "cite_wikipedia": "[W:2305125:1338635003]",
+    "article_excerpt": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\n\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\n\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\n\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly responsible. It was founded, and in the beginning financed, by Henry St John, 1st Viscount Bolingbroke and William Pulteney, the latter being a frequent and caustic contributor. In 1737 an imaginary letter from Colley Cibber was inserted, in which he was made to suggest that many plays by Shakespeare and the older dramatists contained passages which might be regarded as seditious. He therefore desired to be appointed censor of all plays brought on the stage. This was regarded as a \"suspected\" libel, and a warrant was issued for the arrest of the printer. Amhurst surrendered himself instead, and suffered a short imprisonment. On the overthrow of the government in 1742 the opposition leaders did nothing for the useful editor of the Craftsman, and this neglect is said to ha",
+    "article_chars": 3425,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both identify Amhurst as an English poet and political writer.",
+       "quote_britannica": "AMHURIST (Nicola); an English poet and political writer,",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      },
+      {
+       "point": "Both state he was born at Marden in Kent.",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "Amhurst was born at Marden, Kent."
+      },
+      {
+       "point": "Both state he was connected to St John's College, Oxford.",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "point": "Both state he died in 1742.",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica gives no birth date, while Wikipedia gives 16 October 1697.",
+       "quote_britannica": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      },
+      {
+       "point": "Britannica says he was accepted for irregularity of conduct, while Wikipedia says he was expelled for irregularities of conduct.",
+       "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+       "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct,"
+      },
+      {
+       "point": "Britannica mentions a poem called Coluba Britainans, while Wikipedia mentions Oculus Britanniæ.",
+       "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+       "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+      },
+      {
+       "point": "Britannica says he died of a broken heart, while Wikipedia says neglect after the 1742 overthrow hastened his death.",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "On the overthrow of the government in 1742 the opposition leaders did nothing for the useful editor of the Craftsman, and this neglect is said to have hastened Amhurst's death,"
+      }
+     ],
+     "claims": [
+      {
+       "claim": "Amhurst was born at Marden in Kent.",
+       "tag": "enduring",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "Amhurst was born at Marden, Kent."
+      },
+      {
+       "claim": "He was educated at St John's College, Oxford.",
+       "tag": "enduring",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "claim": "He was expelled from Oxford for irregularities of conduct and Whig principles.",
+       "tag": "enduring",
+       "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+       "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles."
+      },
+      {
+       "claim": "He wrote a satire called Terræ Filius about Oxford.",
+       "tag": "renamed",
+       "quote_britannica": "in a book entitled Terre Filosa.",
+       "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+      },
+      {
+       "claim": "He wrote a poem called The Convocation.",
+       "tag": "enduring",
+       "quote_britannica": "and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite.",
+       "quote_wikipedia": "in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly;"
+      },
+      {
+       "claim": "He was a prominent writer for the political paper The Craftsman.",
+       "tag": "renamed",
+       "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+       "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+      },
+      {
+       "claim": "He was a drudge of his party for nearly 20 years.",
+       "tag": "enduring",
+       "quote_britannica": "after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ;",
+       "quote_wikipedia": "James Ralph cited Amhurst as a cautionary example of a party writer left unrewarded after the 1742 settlement following Walpole’s fall, calling him \"a Drudge of his Party for the best Part of Twenty Years\""
+      },
+      {
+       "claim": "He died neglected and was buried at a bookseller's charity.",
+       "tag": "enduring",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "claiming he died neglected and was buried at a bookseller’s charity."
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "Terre Filosa",
+       "new": "Terræ Filius",
+       "quote_britannica": "in a book entitled Terre Filosa.",
+       "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+      },
+      {
+       "old": "Zie Grafjnaar",
+       "new": "The Craftsman",
+       "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+       "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+      },
+      {
+       "old": "Coluba Britainans",
+       "new": "Oculus Britanniæ",
+       "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+       "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "His education at Merchant Taylors' School.",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "topic": "His early works including Protestant Popery and The Protestant Session.",
+       "quote_wikipedia": "a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719),"
+      },
+      {
+       "topic": "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+       "quote_wikipedia": "He had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members."
+      },
+      {
+       "topic": "The custom of the Terræ filius orator at Oxford.",
+       "quote_wikipedia": "An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius."
+      },
+      {
+       "topic": "His imprisonment over the imaginary letter from Colley Cibber.",
+       "quote_wikipedia": "In 1737 an imaginary letter from Colley Cibber was inserted, in which he was made to suggest that many plays by Shakespeare and the older dramatists contained passages which might be regarded as seditious. He therefore desired to be appointed censor of all plays brought on the stage. This was regarded as a \"suspected\" libel, and a warrant was issued for the arrest of the printer. Amhurst surrendered himself instead, and suffered a short imprisonment."
+      }
+     ],
+     "rejected": []
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 0,
+      "words": 175,
+      "edits_per_100_words": 0.0
+     },
+     "lexical": {
+      "renamed_share": 0.25,
+      "term_pairs": [
+       {
+        "old": "Zie Grafjnaar",
+        "new": "The Craftsman"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "Terre Filosa",
+        "new": "Terræ Filius"
+       },
+       {
+        "old": "Coluba Britainans",
+        "new": "Oculus Britanniæ"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.0
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "His education at Merchant Taylors' School.",
+       "His early works including Protestant Popery and The Protestant Session.",
+       "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+       "The custom of the Terræ filius orator at Oxford.",
+       "His imprisonment over the imaginary letter from Colley Cibber."
+      ]
+     },
+     "enduring_share": 0.75,
+     "claim_counts": {
+      "enduring": 6,
+      "renamed": 2,
+      "superseded": 0,
+      "dropped": 0
+     },
+     "claims_checked": 8,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:251:5"
+   },
+   "result": {
+    "entry_id": "B:251:5",
+    "cite_britannica": "[B:251:5]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251",
+    "row_index": 251,
+    "headword": "SYDINHAM",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 1,
+    "chars": 1115,
+    "text_raw": "SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrifon was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for",
+    "text_norm": "SYDINHAM (Dr.) Thomas), an excellent English physfusion, was the fan of William Sychham of Wanilor Eagle in Dorforth, and was born there about the year 1934. He funded at Magdalach-ball, Oxford, but left the univirly when Oxford was performed for King Charles J. and went to London; where, becoming acquainted with Dr Thomas Cox, an entirely physician, and perhaps perfuaeded him to apply himself for the duty of physics, accordingly, after the garrison was delivered up to the parliament, he rented again in Magdalan ball, entered on the body of medicine, and in 16% was created backache of his faculty at home. When you made a fellow of All-Souls college, and cortinued direct burial years where, leaving the maturity, he farled to Wedthming become delicer of his faculty atcebridge; grew famous for his practice; and was the chief physician and London they ran 1660 to 16/20, as which was done he began to be disliked by the good. He died in 1695. His works are highly effecemed both at home and abroad. He was famous for his cool regimen in the finalpx y-for giving the bark after the paroxym in agues 1 and for",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "564669",
+     "wiki_title": "Thomas Sydenham",
+     "wiki_revision_id": "1341167433",
+     "wiki_url": "https://en.wikipedia.org/wiki/Thomas_Sydenham",
+     "text_sha256": "e58eb94008793f51432d8c6dfb42e241589ed3f81907ed47805c9d2e4da839f4",
+     "bm25_rank": 1,
+     "embed_cos": 0.399897,
+     "rerank_logit": -3.545418,
+     "rerank_margin": 2.525945,
+     "method": "bm25+embed+rerank",
+     "reason": "top rerank logit -3.55 > tau -4.0"
+    },
+    "cite_wikipedia": "[W:564669:1341167433]",
+    "article_excerpt": "Thomas Sydenham (/ ˈ s ɪ d ən əm /; 10 September 1624 – 29 December 1689) was an English physician. He was the author of Observationes Medicae (1676) which became a standard textbook of medicine for two centuries so that he became known as 'The English Hippocrates '. Among his many achievements was the discovery of a disease, Sydenham's chorea, also known as St Vitus' Dance. To him is attributed the prescient dictum, \"A man is as old as his arteries.\"\n\nThomas Sydenham was born at Wynford Eagle in Dorset, where his father was a gentleman of property. His brother was Colonel William Sydenham.\n\nAt the age of eighteen Sydenham attended Magdalen Hall, Oxford; after a short period his college studies appear to have been interrupted, and he served for a time as an officer in the Parliamentarian army during the Civil War. He completed his Oxford course in 1648, graduating as bachelor of medicine, and about the same time he was elected a fellow of All Souls College. It was not until nearly thirty years later (1676) that he graduated as MD, not at Oxford, but at Pembroke Hall, Cambridge, where his eldest son was by then an undergraduate.\n\nAfter 1648 he seems to have spent some time studying medicine at Oxford, where he cites the physician Thomas Coxe as an important influence - Coxe was caring for his brother. But he was soon back in military service, and in 1654 he received the sum of £600, as a result of a petition he addressed to Oliver Cromwell, pointing out the various arrears due to two of his brothers who had been killed and reminding Cromwell that he himself had also faithfully served the parliament with the loss of much blood.\n\nIn 1655 he resigned his fellowship at All Souls and married Mary Gee in his home village of Wynford Eagle. They had two sons, William (c. 1660 –1738) and Henry (1668?–1741); another son, James, apparently died young. In 1663 he passed the examinations of the College of Physicians for their licence to practice in Westminster and 6 miles round; but it is probable that he had been settled in London for some time before that. This minimum qualification to practice was the single bond between Sydenham and the College of Physicians throughout the whole of his career.\n\nHe seems to have been distrusted by some members of the faculty because he was an innovator and something of a plain-dealer. In a letter to John Mapletoft he refers to a class of detractors \"qui vitio statim vertunt si quis novi aliquid, ab illis non-prius dictum vel etiam inauditum, in medium proferat\" (\"Who by a technicality suddenly turn if something is new, if someone should disclose something not previously said or heard\"); and in a letter to Robert Boyle, written the year before his death (and the only authentic specimen of his English composition that remains), he says, \"I have the happiness of curing my patients, at least of having it said concerning me that few miscarry under me; but cannot brag of my correspondency with some other of my faculty.... Though ",
+    "article_chars": 16241,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "English physician",
+       "quote_britannica": "an excellent English physfusion",
+       "quote_wikipedia": "was an English physician"
+      },
+      {
+       "point": "born at Wynford Eagle in Dorset",
+       "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+       "quote_wikipedia": "born at Wynford Eagle in Dorset"
+      },
+      {
+       "point": "father was William Sydenham",
+       "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+       "quote_wikipedia": "where his father was a gentleman of property"
+      },
+      {
+       "point": "studied at Magdalen Hall, Oxford",
+       "quote_britannica": "He funded at Magdalach-ball, Oxford",
+       "quote_wikipedia": "Sydenham attended Magdalen Hall, Oxford"
+      },
+      {
+       "point": "fellow of All Souls College",
+       "quote_britannica": "When you made a fellow of All-Souls college",
+       "quote_wikipedia": "he was elected a fellow of All Souls College"
+      }
+     ],
+     "differences": [
+      {
+       "point": "birth year",
+       "quote_britannica": "and was born there about the year 1934",
+       "quote_wikipedia": "10 September 1624"
+      },
+      {
+       "point": "death year",
+       "quote_britannica": "He died in 1695",
+       "quote_wikipedia": "29 December 1689"
+      },
+      {
+       "point": "MD graduation",
+       "quote_britannica": "in 16% was created backache of his faculty at home",
+       "quote_wikipedia": "not until nearly thirty years later (1676) that he graduated as MD"
+      },
+      {
+       "point": "chief physician period",
+       "quote_britannica": "chief physician and London they ran 1660 to 16/20",
+       "quote_wikipedia": "settled in London for some time before that"
+      }
+     ],
+     "claims": [
+      {
+       "claim": "Thomas Sydenham was an English physician",
+       "tag": "enduring",
+       "quote_britannica": "an excellent English physfusion",
+       "quote_wikipedia": "was an English physician"
+      },
+      {
+       "claim": "He was born at Wynford Eagle in Dorset",
+       "tag": "enduring",
+       "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+       "quote_wikipedia": "Thomas Sydenham was born at Wynford Eagle in Dorset"
+      },
+      {
+       "claim": "He attended Magdalen Hall, Oxford",
+       "tag": "enduring",
+       "quote_britannica": "He funded at Magdalach-ball, Oxford",
+       "quote_wikipedia": "At the age of eighteen Sydenham attended Magdalen Hall, Oxford"
+      },
+      {
+       "claim": "He was elected a fellow of All Souls College",
+       "tag": "enduring",
+       "quote_britannica": "When you made a fellow of All-Souls college",
+       "quote_wikipedia": "about the same time he was elected a fellow of All Souls College"
+      },
+      {
+       "claim": "He graduated as bachelor of medicine in 1648",
+       "tag": "enduring",
+       "quote_britannica": "entered on the body of medicine",
+       "quote_wikipedia": "graduating as bachelor of medicine"
+      },
+      {
+       "claim": "He graduated as MD in 1676",
+       "tag": "enduring",
+       "quote_britannica": "in 16% was created backache of his faculty at home",
+       "quote_wikipedia": "not until nearly thirty years later (1676) that he graduated as MD"
+      },
+      {
+       "claim": "Thomas Coxe was an important influence on his medical studies",
+       "tag": "enduring",
+       "quote_britannica": "becoming acquainted with Dr Thomas Cox, an entirely physician",
+       "quote_wikipedia": "he cites the physician Thomas Coxe as an important influence"
+      },
+      {
+       "claim": "He died in 1695",
+       "tag": "superseded",
+       "quote_britannica": "He died in 1695",
+       "quote_wikipedia": "10 September 1624 – 29 December 1689"
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "physfusion",
+       "new": "physician",
+       "quote_britannica": "an excellent English physfusion",
+       "quote_wikipedia": "was an English physician"
+      },
+      {
+       "old": "backache",
+       "new": "MD",
+       "quote_britannica": "created backache of his faculty",
+       "quote_wikipedia": "graduated as MD"
+      },
+      {
+       "old": "Wanilor Eagle",
+       "new": "Wynford Eagle",
+       "quote_britannica": "of Wanilor Eagle in Dorforth",
+       "quote_wikipedia": "born at Wynford Eagle in Dorset"
+      },
+      {
+       "old": "Dorforth",
+       "new": "Dorset",
+       "quote_britannica": "of Wanilor Eagle in Dorforth",
+       "quote_wikipedia": "born at Wynford Eagle in Dorset"
+      },
+      {
+       "old": "Magdalach-ball",
+       "new": "Magdalen Hall",
+       "quote_britannica": "He funded at Magdalach-ball, Oxford",
+       "quote_wikipedia": "Sydenham attended Magdalen Hall, Oxford"
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "Sydenham's chorea discovery",
+       "quote_wikipedia": "discovery of a disease, Sydenham's chorea, also known as St Vitus' Dance"
+      },
+      {
+       "topic": "marriage and children",
+       "quote_wikipedia": "married Mary Gee in his home village of Wynford Eagle"
+      },
+      {
+       "topic": "publications and medical works",
+       "quote_wikipedia": "Methodus curandi febres (The Method of Curing Fevers), was published in 1666"
+      },
+      {
+       "topic": "reputation as English Hippocrates",
+       "quote_wikipedia": "he became known as 'The English Hippocrates '"
+      }
+     ],
+     "rejected": [
+      {
+       "section": "wiki_only_topics",
+       "item": {
+        "point": "military service in Parliamentarian army",
+        "quote_wikipedia": "served for a time as an officer in the Parliamentarian army during the Civil War"
+       },
+       "reason": "missing topic"
+      }
+     ]
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 1,
+      "words": 194,
+      "edits_per_100_words": 0.52
+     },
+     "lexical": {
+      "renamed_share": 0.0,
+      "term_pairs": [
+       {
+        "old": "backache",
+        "new": "MD"
+       },
+       {
+        "old": "Wanilor Eagle",
+        "new": "Wynford Eagle"
+       },
+       {
+        "old": "Dorforth",
+        "new": "Dorset"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "physfusion",
+        "new": "physician"
+       },
+       {
+        "old": "Magdalach-ball",
+        "new": "Magdalen Hall"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.125
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "Sydenham's chorea discovery",
+       "marriage and children",
+       "publications and medical works",
+       "reputation as English Hippocrates"
+      ]
+     },
+     "enduring_share": 0.875,
+     "claim_counts": {
+      "enduring": 7,
+      "renamed": 0,
+      "superseded": 1,
+      "dropped": 0
+     },
+     "claims_checked": 8,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  }
+ ],
+ "tool_log_note": "full tool results; events[] tool outputs are cut at 5,000 chars by Hermes stream-json"
+}

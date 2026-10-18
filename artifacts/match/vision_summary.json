@@ -1,0 +1,86 @@
+{
+ "pages_tried": 45,
+ "pages_failed": 1,
+ "pages_accepted": 7,
+ "pages_matched_before": 45,
+ "pages_matched_after": 52,
+ "article_errors": 0,
+ "recall": {
+  "labeled_positives_on_expanded_pages": 6,
+  "gold_in_pool_before": 4,
+  "gold_in_pool_after": 6,
+  "recall_at_10_before": 3,
+  "recall_at_10_after": 5,
+  "top1_after": 2,
+  "items": [
+   {
+    "entry_id": "B:268:0",
+    "gold": [
+     "Laurus"
+    ],
+    "in_pool_before": false,
+    "in_pool_after": true,
+    "top10_before": false,
+    "top10_after": true,
+    "top1_after": true
+   },
+   {
+    "entry_id": "B:1670:0",
+    "gold": [
+     "Kingdom of Cappadocia",
+     "Cappadocia"
+    ],
+    "in_pool_before": true,
+    "in_pool_after": true,
+    "top10_before": true,
+    "top10_after": true,
+    "top1_after": false
+   },
+   {
+    "entry_id": "B:493:0",
+    "gold": [
+     "Islay"
+    ],
+    "in_pool_before": false,
+    "in_pool_after": true,
+    "top10_before": false,
+    "top10_after": true,
+    "top1_after": false
+   },
+   {
+    "entry_id": "B:266:0",
+    "gold": [
+     "Marriage law",
+     "Scots family law"
+    ],
+    "in_pool_before": true,
+    "in_pool_after": true,
+    "top10_before": true,
+    "top10_after": true,
+    "top1_after": true
+   },
+   {
+    "entry_id": "B:473:0",
+    "gold": [
+     "Mollusc shell"
+    ],
+    "in_pool_before": true,
+    "in_pool_after": true,
+    "top10_before": true,
+    "top10_after": true,
+    "top1_after": false
+   },
+   {
+    "entry_id": "B:1803:0",
+    "gold": [
+     "Line engraving"
+    ],
+    "in_pool_before": true,
+    "in_pool_after": true,
+    "top10_before": false,
+    "top10_after": false,
+    "top1_after": false
+   }
+  ]
+ }
+}

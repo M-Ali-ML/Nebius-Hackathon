@@ -142,7 +142,21 @@
    "old": "fluid",
    "new": "escutcheon",
    "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
-   "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):"
+   "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):",
+   "scan_check": {
+    "scan_reading": "field",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the word field, which the OCR misread as fluid, and the term escutcheon does not appear in the passage.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "credit",
@@ -160,7 +174,21 @@
    "old": "marhalled",
    "new": "depiction",
    "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
-   "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+   "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled.",
+   "scan_check": {
+    "scan_reading": "marshalled",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints marshalled, so the OCR reading marhalled is a misreading, and the term is not a renamed concept.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -201,11 +229,39 @@
    "term_pairs": [
     {
      "old": "fluid",
-     "new": "escutcheon"
+     "new": "escutcheon",
+     "scan_check": {
+      "scan_reading": "field",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints the word field, which the OCR misread as fluid, and the term escutcheon does not appear in the passage.",
+      "scan_entry_id": "B:2171:4",
+      "bbox": [
+       0.1071,
+       0.2139,
+       0.5433,
+       0.3236
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "marhalled",
-     "new": "depiction"
+     "new": "depiction",
+     "scan_check": {
+      "scan_reading": "marshalled",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints marshalled, so the OCR reading marhalled is a misreading, and the term is not a renamed concept.",
+      "scan_entry_id": "B:2171:4",
+      "bbox": [
+       0.1071,
+       0.2139,
+       0.5433,
+       0.3236
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

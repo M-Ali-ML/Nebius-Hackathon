@@ -66,7 +66,21 @@
    "claim": "Amida is a god worshipped by the Japanese.",
    "tag": "renamed",
    "quote_britannica": "AMIDA, a god worshipped by the japané",
-   "quote_wikipedia": "Amitābha Buddha, in Japanese"
+   "quote_wikipedia": "Amitābha Buddha, in Japanese",
+   "scan_check": {
+    "scan_reading": "AMIDA, a god worshipped by the Japanese",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'AMIDA, a god worshipped by the Japanese', matching the OCR and confirming the historical claim rather than an OCR error.",
+    "scan_entry_id": "B:560:6",
+    "bbox": [
+     0.4899,
+     0.6053,
+     0.9212,
+     0.9384
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Amida has many temples credited to him in Japan.",

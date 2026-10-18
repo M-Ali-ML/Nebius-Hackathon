@@ -1,0 +1,100 @@
+{
+ "check_id": "P_403_superseded_0_dd5921ec",
+ "entry_id": "P:403",
+ "scan_entry_id": "B:403:0",
+ "bbox": [
+  0.0,
+  0.0386,
+  0.4858,
+  0.4637
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:403",
+  "row_index": 403,
+  "image_sha256": "44f912e1c3237b35750b6e188e94f3a20f2af3f1dba0a4bdb630dff640ddbf3c",
+  "scan_size": [
+   600,
+   823
+  ],
+  "bbox": [
+   0.0,
+   0.0386,
+   0.4858,
+   0.4637
+  ],
+  "image_size": [
+   665,
+   800
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "Chaldaic",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'Chaldaic' in the phrase 'either Chaldaic, or at least a branch of that language', so the OCR's 'Chahidae' is a misreading of the long-s and ligatured letters.",
+  "scan_entry_id": "B:403:0",
+  "bbox": [
+   0.0,
+   0.0386,
+   0.4858,
+   0.4637
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-b3ba633e2075f31c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"Chaldaic\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'Chaldaic' in the phrase 'either Chaldaic, or at least a branch of that language', so the OCR's 'Chahidae' is a misreading of the long-s and ligatured letters.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331132,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 87,
+   "prompt_tokens": 1148,
+   "total_tokens": 1235,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 527
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.56
+ }
+}

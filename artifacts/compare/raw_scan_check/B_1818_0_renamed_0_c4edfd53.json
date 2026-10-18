@@ -1,0 +1,85 @@
+{
+ "check_id": "B_1818_0_renamed_0_c4edfd53",
+ "entry_id": "B:1818:0",
+ "scan_entry_id": "B:1818:0",
+ "bbox": null,
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1818",
+  "row_index": 1818,
+  "image_sha256": "e6693d1961ef5657ea724a54f5c12cc8b62568f84a2ff587847275075a99e6a0",
+  "scan_size": [
+   600,
+   816
+  ],
+  "bbox": null,
+  "image_size": [
+   600,
+   816
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'Sweden' in the phrase 'in Sweden in 1725', so the OCR's 'weak' is a misreading of the printed word.",
+  "scan_entry_id": "B:1818:0",
+  "bbox": null,
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-b33afefe16f51095",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'Sweden' in the phrase 'in Sweden in 1725', so the OCR's 'weak' is a misreading of the printed word.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331167,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 102,
+   "prompt_tokens": 1144,
+   "total_tokens": 1246,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 496
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.97
+ }
+}

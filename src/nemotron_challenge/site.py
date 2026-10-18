@@ -171,7 +171,8 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
     site_dir.mkdir(parents=True, exist_ok=True)
     for asset in ("style.css", "app.js", "explore.js"):
         shutil.copy2(TEMPLATES / asset, site_dir / asset)
-    _copy(DOCS / "uncertainty.md", site_dir / "docs" / "uncertainty.md")
+    for doc_name in ("uncertainty.md", "topics.md", "retrieval-ablation.md"):
+        _copy(DOCS / doc_name, site_dir / "docs" / doc_name)
 
     records = sorted((json.loads(p.read_text()) for p in (work_dir / "extract" / "pages").glob("*.json")),
                      key=lambda r: r["row_index"])
@@ -259,14 +260,18 @@ def explore_rows(work_dir: Path) -> tuple[list[dict[str, Any]], list[dict[str, A
                 "title": pair.get("wiki_title"), "rev": revision_url(pair.get("wiki_revision_id"))}
         for claim in pair["claims"]:
             if claim.get("tag") in DRIFT_TAGS:
+                sc = claim.get("scan_check") or {}
                 claims.append({**base, "tag": claim["tag"], "claim": claim.get("claim"),
-                               "qb": claim.get("quote_britannica"), "qw": claim.get("quote_wikipedia")})
+                               "qb": claim.get("quote_britannica"), "qw": claim.get("quote_wikipedia"),
+                               "scan_status": sc.get("status"), "scan_reading": sc.get("scan_reading")})
         lexical = ((pair.get("drift") or {}).get("lexical") or {})
         ocr = {(t.get("old"), t.get("new")) for t in lexical.get("likely_ocr_or_spelling") or []}
         for term in pair.get("term_pairs") or []:
+            sc = term.get("scan_check") or {}
+            is_ocr = (term.get("old"), term.get("new")) in ocr or sc.get("status") == "ocr_error"
             terms.append({**base, "old": term.get("old"), "new": term.get("new"),
                           "qb": term.get("quote_britannica"), "qw": term.get("quote_wikipedia"),
-                          "ocr": (term.get("old"), term.get("new")) in ocr})
+                          "ocr": is_ocr, "scan_status": sc.get("status"), "scan_reading": sc.get("scan_reading")})
     return claims, terms
 
 
@@ -320,6 +325,8 @@ def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str,
     pair_files = sorted((compare / "pairs").glob("*.json")) if (compare / "pairs").is_dir() else []
     pairs = sum(1 for f in pair_files if (_read_json(f) or {}).get("claims") is not None)
     drift = _read_json(compare / "drift_summary.json")
+    drift_verification = _read_json(compare / "drift_verification.json")
+    topics = _read_json(compare / "topics.json")
     plates = [p for p in (_read_json(f) for f in sorted((work_dir / "plates").glob("[0-9]*.json"),
                                                        key=lambda f: int(f.stem))) if p] \
         if (work_dir / "plates").is_dir() else []
@@ -334,7 +341,8 @@ def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str,
         "compare_failures": len(read_jsonl(compare / "failures.jsonl")),
     }
     (site_dir / "analysis.html").write_text(env.get_template("analysis.html").render(
-        plots=plots, wordfreq=wordfreq, sections=_wordfreq_sections(wordfreq), pairs=pairs, built=built, drift=drift, tags=DRIFT_TAGS,
+        plots=plots, wordfreq=wordfreq, sections=_wordfreq_sections(wordfreq), pairs=pairs, built=built, drift=drift,
+        drift_verification=drift_verification, topics=topics, tags=DRIFT_TAGS,
         plates=plates, coverage=coverage, totals=totals))
     return {"plots": len(plots), "wordfreq": wordfreq is not None, "pairs": pairs}
 

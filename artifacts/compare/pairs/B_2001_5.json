@@ -122,7 +122,21 @@
    "claim": "He applied himself to the law and became a celebrated advocate.",
    "tag": "renamed",
    "quote_britannica": "he applied himself to the bay; and, by a choi institution of Greece, succeeded fo well, like he became a celebrated advocate",
-   "quote_wikipedia": "In early life Silius was a renowned forensic orator"
+   "quote_wikipedia": "In early life Silius was a renowned forensic orator",
+   "scan_check": {
+    "scan_reading": "he applied himſelf to the bar; and, by a cloſe imitation of Cicero, ſucceeded ſo well, that he became a celebrated advocate",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'bar' and 'cloſe imitation of Cicero', which the OCR misread as 'bay' and 'choi institution of Greece', but the claim that he became a celebrated advocate matches the scan.",
+    "scan_entry_id": "B:2001:5",
+    "bbox": [
+     0.4557,
+     0.6584,
+     0.8695,
+     0.9384
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "He was possessed of the confidence of the highest in the republic when Nero died.",

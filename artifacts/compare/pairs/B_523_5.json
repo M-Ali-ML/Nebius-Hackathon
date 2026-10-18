@@ -76,7 +76,21 @@
    "claim": "Endymion was the 12th king of Elia",
    "tag": "superseded",
    "quote_britannica": "the 1zth king of Elia",
-   "quote_wikipedia": "was variously a handsome Aeolian shepherd, hunter, or king who was said to rule and live at Olympia in Elis"
+   "quote_wikipedia": "was variously a handsome Aeolian shepherd, hunter, or king who was said to rule and live at Olympia in Elis",
+   "scan_check": {
+    "scan_reading": "the 12th king of Elis",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints '12th' and 'Elis', so the OCR's '1zth' and 'Elia' are misreadings, not a historical shift.",
+    "scan_entry_id": "B:523:5",
+    "bbox": [
+     0.0719,
+     0.1936,
+     0.5072,
+     0.3337
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Endymion was expelled from his kingdom",

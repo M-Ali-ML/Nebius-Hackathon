@@ -98,7 +98,21 @@
    "claim": "Escheat occurs from the extinction of the blood of the tenant by natural or criminal means.",
    "tag": "superseded",
    "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
-   "quote_wikipedia": "If a person had no heir to receive his lands under his will, or under the laws of intestacy, then any land he owned at death would escheat."
+   "quote_wikipedia": "If a person had no heir to receive his lands under his will, or under the laws of intestacy, then any land he owned at death would escheat.",
+   "scan_check": {
+    "scan_reading": "from the extinction of the blood of the latter by either natural or civil means",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints natural and civil, not the OCR's anaural and crist, so the difference is an OCR misreading of the long s and worn letters.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Escheat occurs if the tenant dies without heirs of his blood.",
@@ -110,7 +124,21 @@
    "claim": "Escheat occurs if the tenant's blood is corrupted by attainder or felony.",
    "tag": "superseded",
    "quote_britannica": "or if his blood the company and named by comunition of coercion or fidory",
-   "quote_wikipedia": "In most common-law jurisdictions, this type of escheat has been abolished outright, for example in the United States under Article 3 § 3 of the United States Constitution"
+   "quote_wikipedia": "In most common-law jurisdictions, this type of escheat has been abolished outright, for example in the United States under Article 3 § 3 of the United States Constitution",
+   "scan_check": {
+    "scan_reading": "if his blood was corrupted and tainted by commiſſion of treaſon or felony",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the historical escheat rule about corrupted blood from treason or felony, so the OCR quote is a misreading and the claim matches the scan.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Escheat occurs when a tenant perpetrates an atrocious crime.",
@@ -122,7 +150,21 @@
    "claim": "Escheated land falls back to the lord of the fee.",
    "tag": "renamed",
    "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
-   "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+   "quote_wikipedia": "the fee reverted to the King's demesne permanently",
+   "scan_check": {
+    "scan_reading": "In fuch cafes the land efcheated or fell back to the lord of the fee",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'efcheated' and 'lord of the fee', which are long-s forms of 'escheated' and 'fee', matching the claim, so the OCR's 'cakes the hand echated or fell back to the lost of the cry' is a misreading.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The grant of the fee extended to heirs of the tenant.",
@@ -136,31 +178,101 @@
    "old": "tenparts",
    "new": "tenements",
    "quote_britannica": "ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.",
-   "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government"
+   "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government",
+   "scan_check": {
+    "scan_reading": "tenements",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the word tenements, so the OCR reading tenparts is a misreading of the old type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "tenans",
    "new": "tenant",
    "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
-   "quote_wikipedia": "if a tenant was outlawed or convicted of a felony"
+   "quote_wikipedia": "if a tenant was outlawed or convicted of a felony",
+   "scan_check": {
+    "scan_reading": "tenant",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'tenant' in the phrase 'between the lord and tenant', so the OCR's 'tenans' is a misreading, not a historical term shift.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "loud",
    "new": "lord",
    "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
-   "quote_wikipedia": "reverted to the immediately superior feudal lord."
+   "quote_wikipedia": "reverted to the immediately superior feudal lord.",
+   "scan_check": {
+    "scan_reading": "lord",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'lord' in the phrase 'fall to a lord within his manor', so the OCR's 'anaural or crist' is a misreading and the apparent 'loud' to 'lord' shift is not genuine.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "cry",
    "new": "crown",
    "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
-   "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+   "quote_wikipedia": "the fee reverted to the King's demesne permanently",
+   "scan_check": {
+    "scan_reading": "crown",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'crown' in the phrase 'fell back to the lost of the crown', so the OCR reading 'cry' is a misreading of the worn type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "feed",
    "new": "fee",
    "quote_britannica": "to which hers alone the grant of the feed extended",
-   "quote_wikipedia": "the tenant of a fee (or \"fief\") died without an heir"
+   "quote_wikipedia": "the tenant of a fee (or \"fief\") died without an heir",
+   "scan_check": {
+    "scan_reading": "to which heirs alone the grant of the feud extended",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'feud', not 'feed', and the OCR also misread 'heirs' as 'hers', so the apparent term pair is an OCR misreading.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -206,25 +318,95 @@
    "term_pairs": [
     {
      "old": "tenparts",
-     "new": "tenements"
+     "new": "tenements",
+     "scan_check": {
+      "scan_reading": "tenements",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan clearly prints the word tenements, so the OCR reading tenparts is a misreading of the old type.",
+      "scan_entry_id": "B:1473:7",
+      "bbox": [
+       0.4606,
+       0.6342,
+       0.8627,
+       0.9205
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "cry",
-     "new": "crown"
+     "new": "crown",
+     "scan_check": {
+      "scan_reading": "crown",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan clearly prints 'crown' in the phrase 'fell back to the lost of the crown', so the OCR reading 'cry' is a misreading of the worn type.",
+      "scan_entry_id": "B:1473:7",
+      "bbox": [
+       0.4606,
+       0.6342,
+       0.8627,
+       0.9205
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [
     {
      "old": "tenans",
-     "new": "tenant"
+     "new": "tenant",
+     "scan_check": {
+      "scan_reading": "tenant",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'tenant' in the phrase 'between the lord and tenant', so the OCR's 'tenans' is a misreading, not a historical term shift.",
+      "scan_entry_id": "B:1473:7",
+      "bbox": [
+       0.4606,
+       0.6342,
+       0.8627,
+       0.9205
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "loud",
-     "new": "lord"
+     "new": "lord",
+     "scan_check": {
+      "scan_reading": "lord",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'lord' in the phrase 'fall to a lord within his manor', so the OCR's 'anaural or crist' is a misreading and the apparent 'loud' to 'lord' shift is not genuine.",
+      "scan_entry_id": "B:1473:7",
+      "bbox": [
+       0.4606,
+       0.6342,
+       0.8627,
+       0.9205
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "feed",
-     "new": "fee"
+     "new": "fee",
+     "scan_check": {
+      "scan_reading": "to which heirs alone the grant of the feud extended",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'feud', not 'feed', and the OCR also misread 'heirs' as 'hers', so the apparent term pair is an OCR misreading.",
+      "scan_entry_id": "B:1473:7",
+      "bbox": [
+       0.4606,
+       0.6342,
+       0.8627,
+       0.9205
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ]
   },

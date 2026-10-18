@@ -105,7 +105,21 @@
    "claim": "Round blanks are cut from a metal plate using a trepan.",
    "tag": "superseded",
    "quote_britannica": "Indeed of dividing the lamina can final figures, they at once even clean out of it as many plantaches as it can contain, by means of a sharp fleet trepan, of a roundill figure, hollow within, and of a properizationable diameter, to shape and cut of the pieces at one unit the fames times.",
-   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal."
+   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal.",
+   "scan_check": {
+    "scan_reading": "planchets",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'planchets', not 'plantaches', and describes cutting blanks from a lamina, which matches the modern concept of punching coin blanks rather than a genuine historical shift.",
+    "scan_entry_id": "B:1250:1",
+    "bbox": [
+     0.5239,
+     0.0355,
+     0.9497,
+     0.3973
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Planchets are boiled and made clear before striking.",

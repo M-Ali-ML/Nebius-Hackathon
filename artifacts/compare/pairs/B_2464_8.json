@@ -110,7 +110,21 @@
    "old": "fests, gods",
    "new": "Cabeiri",
    "quote_britannica": "All who were initiated into the welfare of the fests, gods, were fought to be featured thereby from florms at tea, and all other dangers.",
-   "quote_wikipedia": "In Greek mythology, the Cabeiri or Cabiri / k ə ˈ b aɪ r iː / (Ancient Greek: Κάβειροι, romanized: Kábeiroi), also transliterated Kabeiri or Kabiri, were a group of enigmatic chthonic deities."
+   "quote_wikipedia": "In Greek mythology, the Cabeiri or Cabiri / k ə ˈ b aɪ r iː / (Ancient Greek: Κάβειροι, romanized: Kábeiroi), also transliterated Kabeiri or Kabiri, were a group of enigmatic chthonic deities.",
+   "scan_check": {
+    "scan_reading": "CABIRIA, festivals in honour of the cabiri, celebrated in Thebes and Lemnos, but especially in Samothracia, an island consecrated to the cabiri. All who were initiated into the mysteries of these gods, were thought to be secured thereby from storms at sea, and all other dangers.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints CABIRIA, not fests, gods, and the OCR misread long-s and other letters, corrupting the passage about the Cabeiri.",
+    "scan_entry_id": "B:2464:8",
+    "bbox": [
+     0.4655,
+     0.3967,
+     0.9144,
+     0.5673
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -151,7 +165,21 @@
    "term_pairs": [
     {
      "old": "fests, gods",
-     "new": "Cabeiri"
+     "new": "Cabeiri",
+     "scan_check": {
+      "scan_reading": "CABIRIA, festivals in honour of the cabiri, celebrated in Thebes and Lemnos, but especially in Samothracia, an island consecrated to the cabiri. All who were initiated into the mysteries of these gods, were thought to be secured thereby from storms at sea, and all other dangers.",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints CABIRIA, not fests, gods, and the OCR misread long-s and other letters, corrupting the passage about the Cabeiri.",
+      "scan_entry_id": "B:2464:8",
+      "bbox": [
+       0.4655,
+       0.3967,
+       0.9144,
+       0.5673
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

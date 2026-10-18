@@ -419,13 +419,24 @@ def run_pairs(settings: Settings, work_dir: Path, limit: int = MAX_PAIRS, redo: 
             "errors": [r for r in results if r["status"] != "ok"]}
 
 
+def _clean_head(head: Any, entry_id: str) -> str:
+    if isinstance(head, list):
+        return f"{entry_id} {head[0]}.." if head else entry_id
+    text = str(head or entry_id)
+    if text.startswith("["):
+        m = re.search(r"['\"]([^'\"]+)['\"]", text)
+        return f"{entry_id} {m[1]}.." if m else entry_id
+    return text
+
+
 def drift_summary(work_dir: Path) -> dict[str, Any]:
     pairs = [json.loads(p.read_text()) for p in sorted((work_dir / "compare" / "pairs").glob("*.json"))]
     pairs = [p for p in pairs if p.get("status") == "ok"]
     rows = []
     for p in pairs:
         d = p["drift"]
-        rows.append({"entry_id": p["entry_id"], "label": f"{p.get('headword') or p.get('topic_hint') or p['entry_id']} -> {p['wiki_title']}",
+        head = _clean_head(p.get("headword") or p.get("topic_hint"), p["entry_id"])
+        rows.append({"entry_id": p["entry_id"], "label": f"{head} -> {p['wiki_title']}",
                      "cite_wikipedia": p["cite_wikipedia"], "claims_checked": d["claims_checked"],
                      "orthographic_per_100w": d["orthographic"]["edits_per_100_words"],
                      **{t: d["claim_counts"][t] for t in TAGS},
@@ -458,7 +469,7 @@ def _plot_drift(rows: list[dict[str, Any]], out: Path) -> None:
     import matplotlib.pyplot as plt
 
     rows = sorted(rows, key=lambda r: -(r["superseded"] + r["renamed"]) / max(1, r["claims_checked"]))
-    labels = [r["label"][:38] for r in rows]
+    labels = [re.sub(r"^\[['\"]([^'\"]+)['\"].*?\]", lambda m: f"{r.get('entry_id', '')} {m[1]}..".strip(), r["label"])[:38] for r in rows]
     ys = list(range(len(rows)))
     fig, (ax, ax2) = plt.subplots(1, 2, figsize=(12, 0.3 * len(rows) + 1.6), sharey=True,
                                   gridspec_kw={"width_ratios": [3, 1]}, layout="constrained")

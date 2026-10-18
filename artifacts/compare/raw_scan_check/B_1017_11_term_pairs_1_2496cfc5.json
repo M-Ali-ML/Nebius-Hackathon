@@ -1,0 +1,100 @@
+{
+ "check_id": "B_1017_11_term_pairs_1_2496cfc5",
+ "entry_id": "B:1017:11",
+ "scan_entry_id": "B:1017:11",
+ "bbox": [
+  0.4801,
+  0.6084,
+  0.9076,
+  0.6783
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+  "row_index": 1017,
+  "image_sha256": "5395deb0e1413694dd6a4e16890741c049681f5838d6fc92ef14a3019a1c87a4",
+  "scan_size": [
+   600,
+   812
+  ],
+  "bbox": [
+   0.4801,
+   0.6084,
+   0.9076,
+   0.6783
+  ],
+  "image_size": [
+   800,
+   175
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "Dalecarlia",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'Dalecarlia', an older spelling of Dalarna, so the OCR's 'Dalecarila' is a misreading, not a genuine historical shift.",
+  "scan_entry_id": "B:1017:11",
+  "bbox": [
+   0.4801,
+   0.6084,
+   0.9076,
+   0.6783
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-97b20b552fa5ebc3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"Dalecarlia\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'Dalecarlia', an older spelling of Dalarna, so the OCR's 'Dalecarila' is a misreading, not a genuine historical shift.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331170,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 79,
+   "prompt_tokens": 868,
+   "total_tokens": 947,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 282
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.05
+ }
+}

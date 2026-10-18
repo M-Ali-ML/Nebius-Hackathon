@@ -86,19 +86,61 @@
    "claim": "A returning firele is produced by the sudden removal of electrical pressure from a charged thunder-cloud.",
    "tag": "superseded",
    "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
-   "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground."
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke' with a long-s in 'stroke', which the OCR misread as 'firele' and 'fuddro' for 'sudden'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The strength of such a returning firele must be enormous.",
    "tag": "superseded",
    "quote_britannica": "the frength of such a retraining fireks mult be enormous.",
-   "quote_wikipedia": "An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+   "quote_wikipedia": "An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy.",
+   "scan_check": {
+    "scan_reading": "the strength of such a returning fire must be enormous",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints long-s as 'frength' and 'retraining' and 'fireks' due to OCR misreading, but the actual text reads 'strength', 'returning', and 'fire'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.028,
+     0.0405,
+     0.9486,
+     0.9556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "A person's body can transmit all the electric fire of which the large cloud could have been robbed through to a conductor.",
    "tag": "superseded",
    "quote_britannica": "but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
-   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes.",
+   "scan_check": {
+    "scan_reading": "but likewise transmits through it, at the fame instant, in consequence of his peculiar situation, all the electric fire of which the large second conductor had been robbed, and which must necessarily re-pafs through his body, to arrive at that conductor.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'fame instant' and 're-pafs' where the OCR produced 'fame infant' and 're-pafa', clear long-s misreadings, while the underlying claim about electric fire matches the historical text.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0972,
+     0.3581,
+     0.5386,
+     0.7184
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The quantity of natural electricity expelled from a person's body is not usually very large.",
@@ -116,7 +158,21 @@
    "claim": "A man walking outdoors could be killed by a returning firele at the instant of a distant explosion.",
    "tag": "superseded",
    "quote_britannica": "if a man walking out of doors were to be killed by a returning firele, the electrical line would rub into that each body into his feets, and his feet only ; which would not be the case, here he to be killed by any main fireke of exploding, either positive negative.",
-   "quote_wikipedia": "Positive lightning strikes tend to be much more intense than their negative counterparts. An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+   "quote_wikipedia": "Positive lightning strikes tend to be much more intense than their negative counterparts. An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke', not 'returning firele', so the OCR misread the long-s and other letters in the phrase.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.5083,
+     0.2511,
+     0.9507,
+     0.452
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The returning firele is not of alarming magnitude as the author suggests.",
@@ -136,31 +192,101 @@
    "old": "returning firele",
    "new": "return stroke",
    "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
-   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke' with a long-s in 'returning' and a clear 'stroke', which the OCR misread as 'returning firele'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "electric fire",
    "new": "electric charge",
    "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion;",
-   "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+   "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud).",
+   "scan_check": {
+    "scan_reading": "electric fire",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electric fire, which is a genuine historical term for what is now called electric charge.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0982,
+     0.6792,
+     0.5415,
+     0.8263
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "natural electricity",
    "new": "electrostatic discharges",
    "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
-   "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions."
+   "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions.",
+   "scan_check": {
+    "scan_reading": "natural electricity",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the phrase natural electricity, so the OCR quote's mention of protons and sloos torna is a misreading, not a genuine historical term shift.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.5083,
+     0.2511,
+     0.9507,
+     0.452
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "prime conductor",
    "new": "lightning rod",
    "quote_britannica": "the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted.",
-   "quote_wikipedia": "Positive lightning has also been shown to trigger the occurrence of upward lightning flashes from the tops of tall structures and is largely responsible for the initiation of sprites several tens of kilometers above ground level."
+   "quote_wikipedia": "Positive lightning has also been shown to trigger the occurrence of upward lightning flashes from the tops of tall structures and is largely responsible for the initiation of sprites several tens of kilometers above ground level.",
+   "scan_check": {
+    "scan_reading": "prime conductor",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0952,
+     0.1183,
+     0.5405,
+     0.3973
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "electrical atmosphere",
    "new": "electric field",
    "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged;",
-   "quote_wikipedia": "Establishment of an electric field"
+   "quote_wikipedia": "Establishment of an electric field",
+   "scan_check": {
+    "scan_reading": "electrical atmosphere",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electrical atmosphere, which is a genuine historical term distinct from the modern term electric field.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -201,25 +327,95 @@
    "term_pairs": [
     {
      "old": "electric fire",
-     "new": "electric charge"
+     "new": "electric charge",
+     "scan_check": {
+      "scan_reading": "electric fire",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints the 18th-century term electric fire, which is a genuine historical term for what is now called electric charge.",
+      "scan_entry_id": "B:1910:0",
+      "bbox": [
+       0.0982,
+       0.6792,
+       0.5415,
+       0.8263
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "natural electricity",
-     "new": "electrostatic discharges"
+     "new": "electrostatic discharges",
+     "scan_check": {
+      "scan_reading": "natural electricity",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan clearly prints the phrase natural electricity, so the OCR quote's mention of protons and sloos torna is a misreading, not a genuine historical term shift.",
+      "scan_entry_id": "B:1910:0",
+      "bbox": [
+       0.5083,
+       0.2511,
+       0.9507,
+       0.452
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "prime conductor",
-     "new": "lightning rod"
+     "new": "lightning rod",
+     "scan_check": {
+      "scan_reading": "prime conductor",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.",
+      "scan_entry_id": "B:1910:0",
+      "bbox": [
+       0.0952,
+       0.1183,
+       0.5405,
+       0.3973
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "electrical atmosphere",
-     "new": "electric field"
+     "new": "electric field",
+     "scan_check": {
+      "scan_reading": "electrical atmosphere",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints the 18th-century term electrical atmosphere, which is a genuine historical term distinct from the modern term electric field.",
+      "scan_entry_id": "B:1910:0",
+      "bbox": [
+       0.023,
+       0.0363,
+       0.5395,
+       0.1591
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [
     {
      "old": "returning firele",
-     "new": "return stroke"
+     "new": "return stroke",
+     "scan_check": {
+      "scan_reading": "returning stroke",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'returning stroke' with a long-s in 'returning' and a clear 'stroke', which the OCR misread as 'returning firele'.",
+      "scan_entry_id": "B:1910:0",
+      "bbox": [
+       0.023,
+       0.0363,
+       0.5395,
+       0.1591
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ]
   },

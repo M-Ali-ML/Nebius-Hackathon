@@ -1,0 +1,100 @@
+{
+ "check_id": "B_1268_1_renamed_0_85a08aa3",
+ "entry_id": "B:1268:1",
+ "scan_entry_id": "B:1268:1",
+ "bbox": [
+  0.1373,
+  0.1538,
+  0.8705,
+  0.3455
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1268",
+  "row_index": 1268,
+  "image_sha256": "e5ec9e5b4086576d908e749cf55ee5aa6db8079444bb0961627c9475b434ca7e",
+  "scan_size": [
+   600,
+   787
+  ],
+  "bbox": [
+   0.1373,
+   0.1538,
+   0.8705,
+   0.3455
+  ],
+  "image_size": [
+   800,
+   272
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "NAXIA, the ancient Naxos, is one of the largest",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'Naxos', not 'Nazos', so the OCR misread the long-s or a letter in the ancient name.",
+  "scan_entry_id": "B:1268:1",
+  "bbox": [
+   0.1373,
+   0.1538,
+   0.8705,
+   0.3455
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-a78faa2ba149f84e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"NAXIA, the ancient Naxos, is one of the largest\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'Naxos', not 'Nazos', so the OCR misread the long-s or a letter in the ancient name.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331140,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 80,
+   "prompt_tokens": 860,
+   "total_tokens": 940,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 272
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.29
+ }
+}

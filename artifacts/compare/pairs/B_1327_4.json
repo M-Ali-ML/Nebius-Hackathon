@@ -98,7 +98,21 @@
    "claim": "Huet was nominated to the bishopric of Soissons and exchanged it for Avranches.",
    "tag": "renamed",
    "quote_britannica": "in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.",
-   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead."
+   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.",
+   "scan_check": {
+    "scan_reading": "in 1685 was nominated to the bishopric of Soissons, which he exchanged for the see of Avranches.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'bishopric of Soissons' and 'see of Avranches', while the OCR misread 'bishopric' as 'hillopric', 'Soissons' as 'Sollions', 'exchanged' as 'exchange', 'see' as 'free', and 'Avranches' as 'Armouth'.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Huet died in 1721.",
@@ -142,7 +156,21 @@
    "old": "free of Armouth",
    "new": "bishopric of Avranches",
    "quote_britannica": "in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.",
-   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead."
+   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.",
+   "scan_check": {
+    "scan_reading": "bishopric of Avranches",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints bishopric of Avranches, so the OCR's free of Armouth is a misreading of that phrase.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Romanza",
@@ -154,7 +182,21 @@
    "old": "Demonstrate du rival and semi porti- constitutes",
    "new": "Demonstratio evangelica",
    "quote_britannica": "Demonstrate du rival and semi porti- constitutes.",
-   "quote_wikipedia": "He issued one of his major works, the Demonstratio evangelica, in 1679."
+   "quote_wikipedia": "He issued one of his major works, the Demonstratio evangelica, in 1679.",
+   "scan_check": {
+    "scan_reading": "Demonstratio evangelica constitutes",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Demonstratio evangelica, and the OCR misread it as Demonstrate du rival and semi porti-.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -210,11 +252,39 @@
    "term_pairs": [
     {
      "old": "free of Armouth",
-     "new": "bishopric of Avranches"
+     "new": "bishopric of Avranches",
+     "scan_check": {
+      "scan_reading": "bishopric of Avranches",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints bishopric of Avranches, so the OCR's free of Armouth is a misreading of that phrase.",
+      "scan_entry_id": "B:1327:4",
+      "bbox": [
+       0.0543,
+       0.0491,
+       0.8539,
+       0.9517
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Demonstrate du rival and semi porti- constitutes",
-     "new": "Demonstratio evangelica"
+     "new": "Demonstratio evangelica",
+     "scan_check": {
+      "scan_reading": "Demonstratio evangelica constitutes",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints Demonstratio evangelica, and the OCR misread it as Demonstrate du rival and semi porti-.",
+      "scan_entry_id": "B:1327:4",
+      "bbox": [
+       0.0543,
+       0.0491,
+       0.8539,
+       0.9517
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

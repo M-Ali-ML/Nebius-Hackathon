@@ -1,0 +1,100 @@
+{
+ "check_id": "P_1422_renamed_3_87f89e34",
+ "entry_id": "P:1422",
+ "scan_entry_id": "B:1422:0",
+ "bbox": [
+  0.4488,
+  0.0323,
+  0.8725,
+  0.4419
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1422",
+  "row_index": 1422,
+  "image_sha256": "8d39d99af99249708a75d8e526080ae109f37e42e0fecd3c25a81e10774f2f4e",
+  "scan_size": [
+   600,
+   783
+  ],
+  "bbox": [
+   0.4488,
+   0.0323,
+   0.8725,
+   0.4419
+  ],
+  "image_size": [
+   633,
+   800
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "Let them be carefully instructed in the principles of morality and religion.",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'morality', not 'monality', so the OCR misread the long-s or a letter in the word.",
+  "scan_entry_id": "B:1422:0",
+  "bbox": [
+   0.4488,
+   0.0323,
+   0.8725,
+   0.4419
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-a0c9aca96f0a202c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"Let them be carefully instructed in the principles of morality and religion.\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'morality', not 'monality', so the OCR misread the long-s or a letter in the word.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331167,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 74,
+   "prompt_tokens": 1095,
+   "total_tokens": 1169,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 502
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.93
+ }
+}

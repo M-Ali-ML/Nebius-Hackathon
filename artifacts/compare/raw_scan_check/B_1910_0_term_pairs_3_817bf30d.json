@@ -1,0 +1,100 @@
+{
+ "check_id": "B_1910_0_term_pairs_3_817bf30d",
+ "entry_id": "B:1910:0",
+ "scan_entry_id": "B:1910:0",
+ "bbox": [
+  0.0952,
+  0.1183,
+  0.5405,
+  0.3973
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910",
+  "row_index": 1910,
+  "image_sha256": "f4723acc17718590625f337a0d5ddeef3e257ff963f793fe287f0f0cb81834ee",
+  "scan_size": [
+   600,
+   824
+  ],
+  "bbox": [
+   0.0952,
+   0.1183,
+   0.5405,
+   0.3973
+  ],
+  "image_size": [
+   800,
+   689
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "prime conductor",
+  "is_ocr_error": false,
+  "status": "confirmed",
+  "explanation": "The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.",
+  "scan_entry_id": "B:1910:0",
+  "bbox": [
+   0.0952,
+   0.1183,
+   0.5405,
+   0.3973
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-81cb70bcb62eb0ef",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"prime conductor\",\n  \"is_ocr_error\": false,\n  \"status\": \"confirmed\",\n  \"explanation\": \"The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331083,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 56,
+   "prompt_tokens": 1156,
+   "total_tokens": 1212,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 552
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.41
+ }
+}

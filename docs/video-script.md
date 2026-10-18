@@ -18,24 +18,24 @@ Say: "Parse 3.5 reads all 100 scans into ordered blocks with classes and boxes. 
 Show: a page with matches, scores, and one `no_clear_counterpart` badge. Then `docs/retrieval-ablation.md` chart. Then the Hydrostatics plate page.
 Say: "For each entry, BM25 gives 30 Wikipedia candidates, Embed VL keeps 10, Rerank VL decides. On 40 entries we labeled, top-1 accuracy goes from 0.30 with BM25 to 0.56 with the embedder to 0.70 with the reranker. When no candidate is good enough, we say so. Plates have no text: Super VL describes the engraving, and both vision models compare the image itself. BM25 picks 'Hydrostatic skeleton'. The image picks 'Hydrostatics'."
 
-## 1:25 to 1:55 Drift decomposition
+## 1:25 to 1:55 Drift decomposition, scan verification, and shared topic space
 
-Show: the drift panel on a page and the drift chart on `analysis.html`.
-Say: "To separate language from knowledge, Super VL tags each historical claim with quotes from both sides: enduring, renamed, superseded, or dropped. We reject any quote that is not in the source. Across our pairs about half the claims still hold, and about a third are gone from Wikipedia."
+Show: the drift panel on a page, then `analysis.html` (the Super VL Scan Check card, the 14 Super VL topic clusters, `shared_space_umap.png`, and `drift.png`).
+Say: "To separate language from knowledge across 87 pairs, Super VL tags each historical claim with quotes from both sides: enduring, renamed, superseded, or dropped. We reject any quote that is not in the source. Because 18th-century OCR misreads the long-s, 84 percent of naive text drift is actually OCR noise, like 'fitteenth' for 'sixteenth' of a pound. So Super VL inspects the scan crop to filter out 79 OCR illusions and keep verified shifts. In our shared Embed VL space, 76 percent of matched pairs land in the same c-TF-IDF cluster, with topic labels refined by Super VL."
 
 ## 1:55 to 2:35 Hermes agent: one success
 
 Show: Hermes terminal, lightning question (`runs/agent/20261018-140114-...`). Show the tool calls, the `view_scan` image read, and the cited answer.
-Say: "The Hermes agent runs on Super VL with our four tools. It searches LanceDB, reads the pair and the drift, and looks at the original scan to check the OCR. Every claim cites a Britannica entry and a Wikipedia revision, and it reports when a match is uncertain."
+Say: "The Hermes agent runs on Super VL with our five tools. It runs hybrid search across LanceDB and live Wikipedia BM25, reads the pair and the drift, and looks at the original scan to check the OCR. Every claim cites a Britannica entry and a Wikipedia revision, and it reports when a match is uncertain."
 
 ## 2:35 to 2:55 Failures and repairs
 
-Show: plate 2077 with view_neighbors (cut the search part), then failure-1 next to success-3 (old terms; point only at "Botnhic gulph -> Gulf of Bothnia", the other two pairs are OCR errors), then failure-3 (page 452).
-Say: "Plate 2077 is blank. Our view_neighbors tool shows Super VL the next scan, which is the real microscope plate. Three failures taught us the most. A corpus-wide question failed after 35 tool calls, but the agent invented nothing. We added a find_drift tool, and the same question worked with 86 percent fewer tokens. Page 452 is a blank cover: Parse invented text, and the error passed through every stage. The case files explain each one."
+Show: plate 2077 with `view_neighbors` (cut the search part), then failure-1 next to success-3 (`find_drift` with scan-verified term pairs or topics), then failure-3 (page 452).
+Say: "Plate 2077 is blank. Our view_neighbors tool shows Super VL the next scan, which is the real microscope plate. Three failures taught us the most. A corpus-wide question failed after 35 tool calls, but the agent invented nothing. We added the find_drift tool with scan-verified filtering and topic cluster lookup, and the same question worked with 86 percent fewer tokens. Page 452 is a blank cover: Parse invented text, and the error passed through every stage until view_scan caught the blank page. The case files explain each one."
 
 Commands, timings, and runs not to use: [docs/demo-commands.md](demo-commands.md).
 
 ## 2:55 to 3:00 Close
 
-Show: README model table.
-Say: "Parse, Embed VL, Rerank VL, and Super VL, each with a job. Code, archive, and all six cases are in the repo."
+Show: README model table and Hugging Face Space (`nebius-build-week/britannica-across-time`).
+Say: "Parse, Embed VL, Rerank VL, and Super VL, each with a job. Code, static archive, Hugging Face dataset, and all six cases are in the repo."

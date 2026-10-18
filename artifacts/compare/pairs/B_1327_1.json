@@ -72,19 +72,61 @@
    "claim": "Huesca is located in the kingdom of Granada",
    "tag": "superseded",
    "quote_britannica": "in the kingdom of Granada, fieldsed on a plain",
-   "quote_wikipedia": "within the autonomous community of Aragon."
+   "quote_wikipedia": "within the autonomous community of Aragon.",
+   "scan_check": {
+    "scan_reading": "in the kingdom of Arragon",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Arragon', not 'Granada', so the OCR misread the kingdom name.",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Huesca is situated on a plain",
    "tag": "superseded",
    "quote_britannica": "fieldsed on a plain in W. Long. 1..45, N. Lat. 32.",
-   "quote_wikipedia": "Huesca lies on a plateau in the northern region of Aragón"
+   "quote_wikipedia": "Huesca lies on a plateau in the northern region of Aragón",
+   "scan_check": {
+    "scan_reading": "It is feated on the Iffuela, in a foil producing excellent wine, in W. Long. o. 13. N. Lat. 40. 2.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'feated' (OCR for 'situated') and 'Iffuela' (long-s for 'Isuela'), not 'fieldsed', and the coordinates differ from the OCR claim.",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Huesca is at West Longitude 1..45 and North Latitude 32",
    "tag": "superseded",
    "quote_britannica": "W. Long. 1..45, N. Lat. 32.",
-   "quote_wikipedia": "The geographical coordinates of the city are: 42° 08´ N, 0° 24´ W."
+   "quote_wikipedia": "The geographical coordinates of the city are: 42° 08´ N, 0° 24´ W.",
+   "scan_check": {
+    "scan_reading": "W. Long. 0. 13. N. Lat. 40. 2.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'W. Long. 0. 13. N. Lat. 40. 2.', not 'W. Long. 1..45, N. Lat. 32.'",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [

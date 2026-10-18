@@ -1,0 +1,100 @@
+{
+ "check_id": "B_2250_8_term_pairs_0_e7a43bb4",
+ "entry_id": "B:2250:8",
+ "scan_entry_id": "B:2250:8",
+ "bbox": [
+  0.4733,
+  0.2248,
+  0.9261,
+  0.3642
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2250",
+  "row_index": 2250,
+  "image_sha256": "75315f45500988daa37cc73e58bee8b227772229b576475ee23ddb584172baee",
+  "scan_size": [
+   600,
+   822
+  ],
+  "bbox": [
+   0.4733,
+   0.2248,
+   0.9261,
+   0.3642
+  ],
+  "image_size": [
+   800,
+   338
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "BY-LAWS, or BYE-LAWS",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.",
+  "scan_entry_id": "B:2250:8",
+  "bbox": [
+   0.4733,
+   0.2248,
+   0.9261,
+   0.3642
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-9488aff71d9d76f8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"BY-LAWS, or BYE-LAWS\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331073,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 88,
+   "prompt_tokens": 930,
+   "total_tokens": 1018,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 277
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.16
+ }
+}

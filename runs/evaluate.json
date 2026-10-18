@@ -1,8 +1,8 @@
 {
- "time": "2026-10-18T14:40:23",
- "code_revision": "4d85e472b8f403103340da4467e4b01eda402c3e",
- "code_dirty": false,
- "branch": "M-Ali-ML/mvp-agent",
+ "time": "2026-10-18T16:03:41",
+ "code_revision": "59188fd62c6191bfc5c24cee940ec57b51693a53",
+ "code_dirty": true,
+ "branch": "main",
  "models": {
   "parse": "nvidia/nemotron-3.5-parse",
   "embed": {
@@ -35,18 +35,18 @@
    "no_clear_counterpart": 195,
    "matched": 67
   },
-  "compare_pairs": 83,
+  "compare_pairs": 87,
   "drift": {
-   "pairs": 83,
-   "claims_checked": 476,
+   "pairs": 87,
+   "claims_checked": 508,
    "claim_shares": {
-    "enduring": 0.441,
-    "renamed": 0.048,
+    "enduring": 0.429,
+    "renamed": 0.047,
     "superseded": 0.132,
-    "dropped": 0.378
+    "dropped": 0.392
    },
-   "quotes_kept": 1567,
-   "quotes_rejected": 64
+   "quotes_kept": 1669,
+   "quotes_rejected": 66
   }
  },
  "agent_transcripts": {

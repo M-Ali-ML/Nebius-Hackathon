@@ -1,0 +1,266 @@
+{
+ "entry_id": "B:1214:0",
+ "level": "entry",
+ "entry_ids": [
+  "B:1214:0"
+ ],
+ "page_kind": null,
+ "cite_britannica": "[B:1214:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1214",
+ "row_index": 1214,
+ "image_sha256": "17d180a99e0a48546a555d98cd7fdf15bb8f8ea4b751c50e02536eba79c2473a",
+ "headword": null,
+ "topic_hint": null,
+ "wiki_page_id": "505455",
+ "wiki_revision_id": "1345728236",
+ "wiki_title": "Firedamp",
+ "wiki_url": "https://en.wikipedia.org/wiki/Firedamp",
+ "text_sha256": "a26f8ae6cbfd64ba8fbdefa70c087ef4c40b48b172a981f8c6ca4f9ece4586dd",
+ "cite_wikipedia": "[W:505455:1345728236]",
+ "rerank_logit": -4.458293,
+ "rerank_margin": 0.483592,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2436,
+  "prompt_tokens": 2809,
+  "total_tokens": 5245,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 4653,
+ "article_chars_used": 5781,
+ "article_chars_total": 5781,
+ "similarities": [
+  {
+   "point": "Both describe firedamp as a flammable gas found in coal mines that can cause explosions.",
+   "quote_britannica": "In another pits, however, it from apparently, and at half produced a multi terrible explolions.",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  },
+  {
+   "point": "Both mention that the gas accumulates in pockets in the coal and adjacent strata.",
+   "quote_britannica": "gradually occurringfalling in chois places where it is not a constant threat of atmospheric air to carry it off, will foam produce the desirable effects already mentioned.",
+   "quote_wikipedia": "The gas accumulates in pockets in the coal and adjacent strata and, when they are penetrated, the release of the gas can cause explosions."
+  },
+  {
+   "point": "Both discuss the use of candles or flames in relation to the gas.",
+   "quote_britannica": "holding up a lighted candle fixed upon a pole, you at once fee the mine from fetch a troublehome goodt.",
+   "quote_wikipedia": "Ignited with a candle, it had given a steady flame \"about half a Yard in Diameter, and near two Yards high\"."
+  },
+  {
+   "point": "Both mention the collection of the gas in a bladder.",
+   "quote_britannica": "If a large bladder;\" fays he, \" into which a foliation of lime in vater is introduced, be filled with dephlogilitated air,",
+   "quote_wikipedia": "filling a large bladder in a few seconds."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica attributes the gas to phlogiston and elementary fire, while Wikipedia identifies it as methane.",
+   "quote_britannica": "Dr Priefley has flown, that inflammable air is comprised of pure elementary fire charcoal or phologines and stable veter;",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  },
+  {
+   "point": "Britannica suggests letting fire to the gas to prevent accumulation, while Wikipedia describes safety lamps to prevent ignition.",
+   "quote_britannica": "The inflammation lies at one kind develops on eye methods of preventing it from accumulating, viz., by letting fire to it.",
+   "quote_wikipedia": "A great step forward in countering the problem of firedamp came when safety lamps, intended to provide illumination whilst being incapable of igniting firedamp, were proposed by both George Stephenson and Humphry Davy"
+  },
+  {
+   "point": "Britannica describes ventilation via temperature difference in shafts, while Wikipedia focuses on safety lamps and electric lamps.",
+   "quote_britannica": "To procure this they make a perpendicular opening, which they call haunk or flaqls, to that the mine may have two or more openings;",
+   "quote_wikipedia": "It was not until the 1890s that safe and reliable electric lamps became available in collieries."
+  },
+  {
+   "point": "Britannica proposes breathing dephlogisticated air via bladder to enter mines, while Wikipedia does not mention this.",
+   "quote_britannica": "A large bladder of dephiglittered air will fever be above a quarter of an hour, which is a length of time follicles for various purposes besides,",
+   "quote_wikipedia": "Firedamp is explosive at concentrations between 4% and 16%, with most explosions occurring at around 10%."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Inflammable air is comprised of pure elementary fire, charcoal or phlogiston and stable water.",
+   "tag": "superseded",
+   "quote_britannica": "Dr Priefley has flown, that inflammable air is comprised of pure elementary fire charcoal or phologines and stable veter;",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  },
+  {
+   "claim": "Coal, a bitumen imbalance, is abundantly able to supply the phogililon.",
+   "tag": "superseded",
+   "quote_britannica": "Coal, a bitumen imbalance, is abundantly able to supply the phogililon;",
+   "quote_wikipedia": "It is particularly found in areas where the coal is bituminous."
+  },
+  {
+   "claim": "The natural motions of the earth affords water, and the heat, between goods, which constantly calls in the bowels of the earth, may be sufficient to produce a quantity of fullammable air.",
+   "tag": "superseded",
+   "quote_britannica": "the natural motions of the earth affords water, and the heat, between goods, which constantly calls in the bowels of the earth, may be sufficient to produce a quantity of fullammable air,",
+   "quote_wikipedia": "The gas accumulates in pockets in the coal and adjacent strata and, when they are penetrated, the release of the gas can cause explosions."
+  },
+  {
+   "claim": "Inflammable air, being much lighter than any other kind will naturally fit to the day.",
+   "tag": "enduring",
+   "quote_britannica": "I’m the insanhammable air, being much lighter than any other kind will naturally fit to the day",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  },
+  {
+   "claim": "A man, lying flat on the ground to avoid the force of the explosion, and holding up a lighted candle fixed upon a pole, you at once fee the mine from fetch a troublehome goodt.",
+   "tag": "dropped",
+   "quote_britannica": "a man, lying flat on the ground to avoid the force of the explosion, and holding up a lighted candle fixed upon a pole, you at once fee the mine from fetch a troublehome goodt.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "By realtion of the difference of emperature between the open atmosphere and that in the mine, there is a constant danger of air through them both.",
+   "tag": "dropped",
+   "quote_britannica": "and thus by realtion of the difference of emperature between the open atmosphere and that in the mine, there is a constant danger of air through them both.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "This current will always be fronger in proportion to the difference between the external atmendapre and that of the mine; and likewise in proportion to the difference between the depth of the two thafts.",
+   "tag": "dropped",
+   "quote_britannica": "This current will always be fronger in proportion to the difference between the external atmendapre and that of the mine; and likewise in proportion to the difference between the depth of the two thafts.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Mr Cavallo reckons that of recurring people from the dangerous effects of dams in mines, and some fishermenous places.",
+   "tag": "dropped",
+   "quote_britannica": "Mr Cavallo reckona that of recurring people from the dangerous effects of dams in mines, and some fishermenous places.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "inflammable air",
+   "new": "firedamp",
+   "quote_britannica": "Dr Priefley has flown, that inflammable air is comprised of pure elementary fire charcoal or phologines and stable veter;",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  },
+  {
+   "old": "dephlogilitated air",
+   "new": "blackdamp",
+   "quote_britannica": "If a large bladder;\" fays he, \" into which a foliation of lime in vater is introduced, be filled with dephlogilitated air,",
+   "quote_wikipedia": "blackdamp (nonbreathable mixture of carbon dioxide, water vapour and other gases);"
+  },
+  {
+   "old": "dams",
+   "new": "damps",
+   "quote_britannica": "Mr Cavallo reckona that of recurring people from the dangerous effects of dams in mines,",
+   "quote_wikipedia": "Damp is the collective name given to all gases (other than air) found in coal mines in Great Britain and North America."
+  },
+  {
+   "old": "haunk or flaqls",
+   "new": "shaft",
+   "quote_britannica": "To procure this they make a perpendicular opening, which they call haunk or flaqls, to that the mine may have two or more openings;",
+   "quote_wikipedia": "as a shaft was being sunk for a new pit at Saltom near Whitehaven"
+  },
+  {
+   "old": "phlogines",
+   "new": "phlogiston",
+   "quote_britannica": "Dr Priefley has flown, that inflammable air is comprised of pure elementary fire charcoal or phologines and stable veter;",
+   "quote_wikipedia": "Firedamp is any flammable gas found in coal mines, typically coalbed methane."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology of firedamp and damp",
+   "quote_wikipedia": "Often hyphenated as fire-damp, this term for a flammable type of underground mine gas in first part derives via the Old English fyr, and from the proto-Germanic fūr for \"fire\""
+  },
+  {
+   "topic": "Specific types of damps (blackdamp, whitedamp, stinkdamp, afterdamp)",
+   "quote_wikipedia": "As well as firedamp, other damps include blackdamp (nonbreathable mixture of carbon dioxide, water vapour and other gases); whitedamp (carbon monoxide and other gases produced by combustion);"
+  },
+  {
+   "topic": "Explosive concentration limits of firedamp",
+   "quote_wikipedia": "Firedamp is explosive at concentrations between 4% and 16%, with most explosions occurring at around 10%."
+  },
+  {
+   "topic": "History of firedamp and Royal Society involvement",
+   "quote_wikipedia": "The problem of firedamp in mines had been brought to the attention of the Royal Society by 1677 and in 1733 James Lowther reported that as a shaft was being sunk for a new pit at Saltom near Whitehaven there had been a major release"
+  },
+  {
+   "topic": "Development of safety lamps (Geordie and Davy lamps)",
+   "quote_wikipedia": "A great step forward in countering the problem of firedamp came when safety lamps, intended to provide illumination whilst being incapable of igniting firedamp, were proposed by both George Stephenson and Humphry Davy"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 5,
+   "words": 811,
+   "edits_per_100_words": 0.62
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "inflammable air",
+     "new": "firedamp"
+    },
+    {
+     "old": "dephlogilitated air",
+     "new": "blackdamp"
+    },
+    {
+     "old": "haunk or flaqls",
+     "new": "shaft"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "dams",
+     "new": "damps"
+    },
+    {
+     "old": "phlogines",
+     "new": "phlogiston"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.375
+  },
+  "coverage": {
+   "dropped_share": 0.5,
+   "wiki_only_topics": [
+    "Etymology of firedamp and damp",
+    "Specific types of damps (blackdamp, whitedamp, stinkdamp, afterdamp)",
+    "Explosive concentration limits of firedamp",
+    "History of firedamp and Royal Society involvement",
+    "Development of safety lamps (Geordie and Davy lamps)"
+   ]
+  },
+  "enduring_share": 0.125,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 4
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok",
+ "rescued_threshold_miss": true,
+ "rescue_metadata": {
+  "candidate_source": "match/candidates/B_1214_0.json",
+  "method": "bm25+embed+rerank",
+  "tau": -4.0,
+  "rerank_logit": -4.458293,
+  "rerank_margin": 0.483592,
+  "runner_up_title": "Blackdamp",
+  "runner_up_logit": -4.941885,
+  "rationale": "Top-1 reranked candidate is Firedamp (BM25 rank 1, embed cosine 0.393, rerank logit -4.46, margin 0.48 over Blackdamp). The entry is a continuation without a printed headword on row 1214, so only the raw logit rule (TAU = -4.0) applied and missed by 0.46 logit."
+ }
+}

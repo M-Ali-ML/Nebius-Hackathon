@@ -1,0 +1,100 @@
+{
+ "check_id": "P_1430_renamed_6_a828f3e0",
+ "entry_id": "P:1430",
+ "scan_entry_id": "B:1430:0",
+ "bbox": [
+  0.0269,
+  0.0378,
+  0.522,
+  0.3903
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1430",
+  "row_index": 1430,
+  "image_sha256": "4405fefdf7b68a3c6472787e25922ed5125f57c753e650518ecdaaf630f59566",
+  "scan_size": [
+   600,
+   783
+  ],
+  "bbox": [
+   0.0269,
+   0.0378,
+   0.522,
+   0.3903
+  ],
+  "image_size": [
+   800,
+   743
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "To one Salatis our author ascribes the destruction of Thebes in Upper Egypt, so much celebrated by Homer for its magnificence.",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'Salatis' and 'Thebes', not 'Salaris' or 'City of Amun or njw.t-jmn', so the OCR misread the text and paired it with a modern Wikipedia term not present in the 18th-century entry.",
+  "scan_entry_id": "B:1430:0",
+  "bbox": [
+   0.0269,
+   0.0378,
+   0.522,
+   0.3903
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-b73a687a451d5f04",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"To one Salatis our author ascribes the destruction of Thebes in Upper Egypt, so much celebrated by Homer for its magnificence.\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'Salatis' and 'Thebes', not 'Salaris' or 'City of Amun or njw.t-jmn', so the OCR misread the text and paired it with a modern Wikipedia term not present in the 18th-century entry.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331169,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 119,
+   "prompt_tokens": 1234,
+   "total_tokens": 1353,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 602
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.64
+ }
+}

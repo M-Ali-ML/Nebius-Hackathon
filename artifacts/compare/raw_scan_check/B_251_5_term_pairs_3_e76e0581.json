@@ -1,0 +1,100 @@
+{
+ "check_id": "B_251_5_term_pairs_3_e76e0581",
+ "entry_id": "B:251:5",
+ "scan_entry_id": "B:251:5",
+ "bbox": [
+  0.5026,
+  0.6491,
+  0.9349,
+  0.947
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251",
+  "row_index": 251,
+  "image_sha256": "69952e7c4a0f40267d357d04308f674155b3ab206ce8f2f4887124ce481f8c1d",
+  "scan_size": [
+   600,
+   796
+  ],
+  "bbox": [
+   0.5026,
+   0.6491,
+   0.9349,
+   0.947
+  ],
+  "image_size": [
+   800,
+   732
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "Dorsetshire",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.",
+  "scan_entry_id": "B:251:5",
+  "bbox": [
+   0.5026,
+   0.6491,
+   0.9349,
+   0.947
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-8694a78455dc9ebb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"Dorsetshire\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331074,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 64,
+   "prompt_tokens": 1137,
+   "total_tokens": 1201,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 577
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.12
+ }
+}

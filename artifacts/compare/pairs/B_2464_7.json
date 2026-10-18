@@ -104,7 +104,21 @@
    "claim": "There are four gods: Axieros, Axiocerla, Axiocerfius, and Calinila.",
    "tag": "superseded",
    "quote_britannica": "the fests go are laid to be, in number, four, viz. Axieros, Axiocerla, Axiocerfius, and Calinila",
-   "quote_wikipedia": "The number of Cabeiri also varies, with some accounts citing four (often a pair of males and a pair of females), and some even more"
+   "quote_wikipedia": "The number of Cabeiri also varies, with some accounts citing four (often a pair of males and a pair of females), and some even more",
+   "scan_check": {
+    "scan_reading": "Axieros, Axiocerfa, Axiocerfus, and Cafinilus",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Axiocerfa and Axiocerfus, not Axiocerla and Axiocerfius, and Cafinilus, not Calinila, so the OCR misread the long s and other letters.",
+    "scan_entry_id": "B:2464:7",
+    "bbox": [
+     0.4645,
+     0.285,
+     0.9095,
+     0.4252
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Festivals called cabinets were celebrated in their honour.",
@@ -136,7 +150,21 @@
    "old": "cabinets",
    "new": "mystery cult",
    "quote_britannica": "where the cabinets were celebrated in honour of them",
-   "quote_wikipedia": "They were worshipped in a mystery cult closely associated with that of Hephaestus"
+   "quote_wikipedia": "They were worshipped in a mystery cult closely associated with that of Hephaestus",
+   "scan_check": {
+    "scan_reading": "cabiria",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints cabiria, a festival term, not cabinets, so the OCR misread the word and created a false contrast with mystery cult.",
+    "scan_entry_id": "B:2464:7",
+    "bbox": [
+     0.4645,
+     0.285,
+     0.9095,
+     0.4252
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Axiocerfius",
@@ -183,7 +211,21 @@
    "term_pairs": [
     {
      "old": "cabinets",
-     "new": "mystery cult"
+     "new": "mystery cult",
+     "scan_check": {
+      "scan_reading": "cabiria",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints cabiria, a festival term, not cabinets, so the OCR misread the word and created a false contrast with mystery cult.",
+      "scan_entry_id": "B:2464:7",
+      "bbox": [
+       0.4645,
+       0.285,
+       0.9095,
+       0.4252
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

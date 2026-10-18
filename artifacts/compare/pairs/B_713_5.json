@@ -98,7 +98,21 @@
    "claim": "The ovolo is commonly called the quartercard.",
    "tag": "renamed",
    "quote_britannica": "is usually a quadrant of a circle; whence it is also commonly called the quartercard.",
-   "quote_wikipedia": "Lat. echinus... in architecture, a convex moulding known also as the echinus, which in Classic architecture was invariably carved with the egg and tongue. In Roman and Italian work the moulding is called by workmen a quarter round."
+   "quote_wikipedia": "Lat. echinus... in architecture, a convex moulding known also as the echinus, which in Classic architecture was invariably carved with the egg and tongue. In Roman and Italian work the moulding is called by workmen a quarter round.",
+   "scan_check": {
+    "scan_reading": "quarter.round",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'quarter.round' with a long-s, not 'quartercard', so the OCR misread the long-s as f and dropped the period.",
+    "scan_entry_id": "B:713:5",
+    "bbox": [
+     0.4488,
+     0.6284,
+     0.9409,
+     0.7208
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The ovolo is mainly cut with the reproduction of eggs and anchors or arrows heads placed alternately.",

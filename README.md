@@ -26,7 +26,9 @@ The saved run is already in this checkout: `site/`, `artifacts/`, `docs/cases/`,
 | LaTeX | 100 of 100 PDFs. 89 two-column. |
 | Match | 73 entries matched in either pass. 52 of 100 pages matched. The rest are `no_clear_counterpart` with a reason. |
 | Retrieval | P@1 on 27 labeled entries in the BM25 pool: BM25 0.30, plus Embed VL 0.56, plus Rerank VL 0.70. [Details](docs/retrieval-ablation.md) |
-| Compare | 83 pairs, 476 quote-checked claims. Enduring 44.1%, dropped 37.8%, superseded 13.2%, renamed 4.8%. |
+| Compare | 87 pairs (83 matched plus 4 rescued threshold misses), 508 quote-checked claims. Enduring 42.9%, dropped 39.2%, superseded 13.2%, renamed 4.7%. |
+| Scan check | Super VL read the scan for 94 drift items: 79 were OCR errors, 15 confirmed. `find_drift` leaves out the OCR errors. |
+| Topics | 14 shared topic clusters over Britannica and Wikipedia vectors. [Details](docs/topics.md) |
 | Agent | 5 tools. 3 success and 3 failure cases. [Cases](docs/cases/README.md) |
 
 `find_drift` is the tool added after a corpus question failed (35 calls, 435,766 tokens, no invented answer). The same question then used 62,455 tokens.

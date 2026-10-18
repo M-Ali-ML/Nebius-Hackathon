@@ -127,7 +127,21 @@
    "tag": "renamed",
    "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
    "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy.",
-   "cite_britannica": "[B:523:12]"
+   "cite_britannica": "[B:523:12]",
+   "scan_check": {
+    "scan_reading": "ENGINE, % mechanics, is a compound machine, made of one or more mechanical powers, as levers, pullies, screws, &c. in order to raise, cast, or sustain any weight, or produce any effect which could not be easily effected otherwise.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'screws' and 'sustain', which the OCR misread as 'ferws' and 'fulanany', so the apparent difference is an OCR error rather than a historical shift.",
+    "scan_entry_id": "B:523:12",
+    "bbox": [
+     0.0581,
+     0.8277,
+     0.5102,
+     0.9364
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The word engine comes from the French and Latin ingenium, relating to ingenuity.",

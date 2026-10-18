@@ -56,7 +56,21 @@
    "claim": "Naxia is the ancient Nazos.",
    "tag": "renamed",
    "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
-   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria.",
+   "scan_check": {
+    "scan_reading": "NAXIA, the ancient Naxos, is one of the largest",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Naxos', not 'Nazos', so the OCR misread the long-s or a letter in the ancient name.",
+    "scan_entry_id": "B:1268:1",
+    "bbox": [
+     0.1373,
+     0.1538,
+     0.8705,
+     0.3455
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Naxia is one of the largest and most fertile islands in the Cyclades.",

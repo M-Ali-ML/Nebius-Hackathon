@@ -1,0 +1,100 @@
+{
+ "check_id": "B_2001_5_renamed_6_fea882e0",
+ "entry_id": "B:2001:5",
+ "scan_entry_id": "B:2001:5",
+ "bbox": [
+  0.4557,
+  0.6584,
+  0.8695,
+  0.9384
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2001",
+  "row_index": 2001,
+  "image_sha256": "93040a5ab3625efc0259c9878caea3e2285bc73aae0c1fda452f9f5198dedd67",
+  "scan_size": [
+   600,
+   810
+  ],
+  "bbox": [
+   0.4557,
+   0.6584,
+   0.8695,
+   0.9384
+  ],
+  "image_size": [
+   800,
+   732
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "he applied himſelf to the bar; and, by a cloſe imitation of Cicero, ſucceeded ſo well, that he became a celebrated advocate",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'bar' and 'cloſe imitation of Cicero', which the OCR misread as 'bay' and 'choi institution of Greece', but the claim that he became a celebrated advocate matches the scan.",
+  "scan_entry_id": "B:2001:5",
+  "bbox": [
+   0.4557,
+   0.6584,
+   0.8695,
+   0.9384
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-8cbc66186278daf5",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"he applied himſelf to the bar; and, by a cloſe imitation of Cicero, ſucceeded ſo well, that he became a celebrated advocate\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'bar' and 'cloſe imitation of Cicero', which the OCR misread as 'bay' and 'choi institution of Greece', but the claim that he became a celebrated advocate matches the scan.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331140,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 119,
+   "prompt_tokens": 1170,
+   "total_tokens": 1289,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 577
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.66
+ }
+}

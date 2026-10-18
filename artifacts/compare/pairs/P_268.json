@@ -1,0 +1,290 @@
+{
+ "entry_id": "P:268",
+ "level": "page",
+ "entry_ids": [
+  "B:268:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:268:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:268",
+ "row_index": 268,
+ "image_sha256": "4f70fe5dafd60ccb4d258630071448612eebe999713dac3954c2011faacf3929",
+ "headword": null,
+ "topic_hint": "LAU",
+ "wiki_page_id": "1467913",
+ "wiki_revision_id": "1343771027",
+ "wiki_title": "Laurus",
+ "wiki_url": "https://en.wikipedia.org/wiki/Laurus",
+ "text_sha256": "2ff47bbefabb2d0c9b88b751b52d491daa0efc1b34a3c4d5f86b59999478a700",
+ "cite_wikipedia": "[W:1467913:1343771027]",
+ "rerank_logit": -7.316444,
+ "rerank_margin": 0.106872,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2220,
+  "prompt_tokens": 2518,
+  "total_tokens": 4738,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6724,
+ "article_chars_used": 1828,
+ "article_chars_total": 1828,
+ "similarities": [
+  {
+   "point": "Both mention yellow flowers.",
+   "quote_britannica": "it is diltinguished at a great distance by their beautiful yellow colour.",
+   "quote_wikipedia": "insignificant yellow male and female flowers borne on separate plants (dioecious).",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "point": "Both mention the plant's fragrance.",
+   "quote_britannica": "When buried, they emit a fine fragrance.",
+   "quote_wikipedia": "evergreen aromatic shrubs or trees with alternate, ovate leaves",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "point": "Both describe the leaves as green.",
+   "quote_britannica": "The leaves on their upper surface are smooth and of a fine light-green colour",
+   "quote_wikipedia": "alternate, ovate leaves and insignificant yellow male and female flowers borne on separate plants (dioecious).",
+   "cite_britannica": "[B:268:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica discusses medicinal uses of sassafras, while Wikipedia describes Laurus as a culinary herb.",
+   "quote_britannica": "If the warm agentes and corroborate, and frequently employed with good fucsels for purifying and foreseeing the blood and juices.",
+   "quote_wikipedia": "Used as an ornamental plant and culinary herb (one type of bay leaf) used in Mediterranean style dishes.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "point": "Britannica mentions dyeing uses of the bark, while Wikipedia does not.",
+   "quote_britannica": "The bark of this tree is used by the women in Pen-flyingia and other part of North America in dying worried a fine falling orange-colour, which does not fade in the form.",
+   "quote_wikipedia": "Laurus azorica, (Seub.) Franco – Azores laurel. Native to the Azores.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "point": "Britannica describes sassafras wood as worm-prone, while Wikipedia does not discuss wood durability.",
+   "quote_britannica": "but it is likewise laid, that there is hardly any kind of wood which is more stacked by worms than this way it is expected to the air without cover, and that in a short time it is quite worm-teaten through and through.",
+   "quote_wikipedia": "They are frost-hardy but in temperate zones they require a sheltered spot in full sun that is not subject to prolonged freezing.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "point": "Britannica discusses avocado (alligator pear), while Wikipedia is strictly about the Laurus genus.",
+   "quote_britannica": "The perfus, or alligator pear tree,is cultivated universally in the Well Infinity all ranks of people.",
+   "quote_wikipedia": "The genus contains three or more species, including the bay laurel or sweet bay, L. nobilis, widely cultivated as an ornamental plant and a culinary herb.",
+   "cite_britannica": "[B:268:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Sassafras bark is used for dyeing orange color.",
+   "tag": "dropped",
+   "quote_britannica": "The bark of this tree is used by the women in Pen-flyingia and other part of North America in dying worried a fine falling orange-colour, which does not fade in the form.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Sassafras wood is prone to worm damage.",
+   "tag": "dropped",
+   "quote_britannica": "there is hardly any kind of wood which is more stacked by worms than this way it is expected to the air without cover, and that in a short time it is quite worm-teaten through and through.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Sassafras yields a fragrant oil through distillation.",
+   "tag": "dropped",
+   "quote_britannica": "Stifafras yields in di-filtration an extremely fragrant oil of a penetrating pungent tafes, foodcords (postwithstanding lightened to the deep yield) as to find in water.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Sassafras has a fragrant smell when cut.",
+   "tag": "dropped",
+   "quote_britannica": "On cutting-forme part of the fallafras tree, or its shoots, and holding it to the nose, it has a throng but pleasant feel.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "The alligator pear fruit is ripe in August and September.",
+   "tag": "dropped",
+   "quote_britannica": "This fruit is ripe in August and September, as coilitates one of the melt agreeable articles of diet for fix or eight weeks to the progress.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Laurus contains three or more species.",
+   "tag": "enduring",
+   "quote_britannica": "Some are large, and of an coal figures; others are finally, and of the time hopes, while o-thers again are to divided into three lobes, as to a flexible the length of fine fame first of the fig trees.",
+   "quote_wikipedia": "The genus contains three or more species, including the bay laurel or sweet bay, L. nobilis, widely cultivated as an ornamental plant and a culinary herb.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Laurus nobilis is native to the Mediterranean region.",
+   "tag": "enduring",
+   "quote_britannica": "In America, the fallafras generally hands fining in the woods, and along the forces round the fields.",
+   "quote_wikipedia": "Laurus nobilis L. – bay laurel, true laurel, or sweet bay. Native to the Mediterranean region.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "claim": "Laurel forests were formerly more widely distributed around the Mediterranean and North Africa.",
+   "tag": "enduring",
+   "quote_britannica": "This tree was formerly milken for that which produces the thinly called forests in which is now known to be chained forests of places.",
+   "quote_wikipedia": "Fossils dating from before the Pleistocene glaciations show that laurel forests containing species of Laurus were formerly distributed more widely around the Mediterranean and North Africa, when the climate was more humid and mild than at present.",
+   "cite_britannica": "[B:268:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fallafras",
+   "new": "sassafras",
+   "quote_britannica": "In America, the fallafras generally hands fining in the woods, and along the forces round the fields.",
+   "quote_wikipedia": "Laurus nobilis L. – bay laurel, true laurel, or sweet bay. Native to the Mediterranean region.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "old": "perfus, or alligator pear tree",
+   "new": "avocado",
+   "quote_britannica": "The perfus, or alligator pear tree,is cultivated universally in the Well Infinity all ranks of people.",
+   "quote_wikipedia": "The genus contains three or more species, including the bay laurel or sweet bay, L. nobilis, widely cultivated as an ornamental plant and a culinary herb.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "old": "Svvxxax",
+   "new": "Laurus",
+   "quote_britannica": "See Svvxxax.",
+   "quote_wikipedia": "Laurus (/ ˈ l ɔː r ə s /) is a genus of evergreen trees or shrubs belonging to the laurel family.",
+   "cite_britannica": "[B:268:0]"
+  },
+  {
+   "old": "alligator pear",
+   "new": "avocado",
+   "quote_britannica": "The perfus, or alligator pear tree,is cultivated universally in the Well Infinity all ranks of people.",
+   "quote_wikipedia": "Laurus azorica, (Seub.) Franco – Azores laurel. Native to the Azores.",
+   "cite_britannica": "[B:268:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Species list and taxonomy of Laurus",
+   "quote_wikipedia": "Three species are currently accepted: Laurus azorica, (Seub.) Franco – Azores laurel. Native to the Azores."
+  },
+  {
+   "topic": "Fossil history and glacial retreat of Laurus",
+   "quote_wikipedia": "Fossils dating from before the Pleistocene glaciations show that laurel forests containing species of Laurus were formerly distributed more widely around the Mediterranean and North Africa, when the climate was more humid and mild than at present."
+  },
+  {
+   "topic": "Cultivation requirements of Laurus",
+   "quote_wikipedia": "They are frost-hardy but in temperate zones they require a sheltered spot in full sun that is not subject to prolonged freezing. Plants in pots can be moved into a cold greenhouse during the winter months."
+  },
+  {
+   "topic": "Laurel wreath of ancient Greece",
+   "quote_wikipedia": "It was also the original source of the laurel wreath of ancient Greece."
+  },
+  {
+   "topic": "Laurus novocanariensis native to Madeira and Canary Islands",
+   "quote_wikipedia": "Laurus novocanariensis Rivas Mart., Lousã, Fern.Prieto, E.Días, J.C.Costa & C.Aguiar – native to Madeira and the Canary Islands. Formerly included in L. azorica."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both describe Laurus as evergreen trees or shrubs.",
+    "quote_britannica": "The becaom tree will grow to a much larger five than the other, and its branches are more numerous",
+    "quote_wikipedia": "Laurus is a genus of evergreen trees or shrubs belonging to the laurel family."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "fixed air",
+    "new": "carbon dioxide",
+    "quote_britannica": "The becaom tree will grow to a much larger five than the other, and its branches are more numerous",
+    "quote_wikipedia": "Laurus is a genus of evergreen trees or shrubs belonging to the laurel family."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 24,
+  "rejected": 2
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 14,
+   "words": 1198,
+   "edits_per_100_words": 1.17
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "perfus, or alligator pear tree",
+     "new": "avocado"
+    },
+    {
+     "old": "Svvxxax",
+     "new": "Laurus"
+    },
+    {
+     "old": "alligator pear",
+     "new": "avocado"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fallafras",
+     "new": "sassafras"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.625,
+   "wiki_only_topics": [
+    "Species list and taxonomy of Laurus",
+    "Fossil history and glacial retreat of Laurus",
+    "Cultivation requirements of Laurus",
+    "Laurel wreath of ancient Greece",
+    "Laurus novocanariensis native to Madeira and Canary Islands"
+   ]
+  },
+  "enduring_share": 0.375,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 5
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok",
+ "rescued_threshold_miss": true,
+ "rescue_metadata": {
+  "candidate_source": "match/vision_expand/268.json",
+  "method": "vision_expand",
+  "tau": -4.0,
+  "rerank_logit": -7.316444,
+  "rerank_margin": 0.106872,
+  "runner_up_title": "Lauraceae",
+  "runner_up_logit": -7.423316,
+  "rationale": "Top-1 vision-expanded reranked candidate is Laurus (rerank logit -7.32, margin 0.11 over Lauraceae). The page continues the botanical entry on the genus Laurus (bay, cinnamon, camphor, sassafras) under running head LAU."
+ }
+}

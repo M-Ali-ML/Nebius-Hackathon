@@ -1,0 +1,259 @@
+{
+ "generated_at": "2026-10-18T15:40:22",
+ "tau": -4.0,
+ "count": 4,
+ "ok": 4,
+ "total_quotes_kept": 102,
+ "total_quotes_rejected": 2,
+ "note": "These 4 pairs ranked the exact counterpart Wikipedia article at top-1 in reranking, but their raw rerank logits fell below TAU = -4.0 because they lacked an exact-matching printed entry headword for the exact-title fallback rule. Each pair is saved with rescued_threshold_miss=true so get_pair and downstream inspection preserve full provenance and threshold transparency.",
+ "rescued_pairs": [
+  {
+   "entry_id": "B:1214:0",
+   "level": "entry",
+   "row_index": 1214,
+   "britannica_head": "DAMP (continuation on DAM page)",
+   "candidate_source": "match/candidates/B_1214_0.json",
+   "method": "bm25+embed+rerank",
+   "wiki_page_id": "505455",
+   "wiki_revision_id": "1345728236",
+   "wiki_title": "Firedamp",
+   "wiki_url": "https://en.wikipedia.org/wiki/Firedamp",
+   "text_sha256": "a26f8ae6cbfd64ba8fbdefa70c087ef4c40b48b172a981f8c6ca4f9ece4586dd",
+   "article_total_chars": 5781,
+   "bm25_rank": 1,
+   "embed_cos": 0.392938,
+   "rerank_logit": -4.458293,
+   "rerank_margin": 0.483592,
+   "runner_up_title": "Blackdamp",
+   "runner_up_logit": -4.941885,
+   "tau": -4.0,
+   "rationale": "Top-1 reranked candidate is Firedamp (BM25 rank 1, embed cosine 0.393, rerank logit -4.46, margin 0.48 over Blackdamp). The entry is a continuation without a printed headword on row 1214, so only the raw logit rule (TAU = -4.0) applied and missed by 0.46 logit.",
+   "compare_status": "ok",
+   "pair_file": "compare/pairs/B_1214_0.json",
+   "raw_file": "compare/raw/B_1214_0.json",
+   "article_file": "match/articles/505455.json",
+   "rescued_threshold_miss": true,
+   "quote_check": {
+    "kept": 26,
+    "rejected": 0
+   },
+   "claim_counts": {
+    "enduring": 1,
+    "renamed": 0,
+    "superseded": 3,
+    "dropped": 4
+   },
+   "claims_checked": 8,
+   "superseded_share": 0.375,
+   "renamed_share": 0.0,
+   "enduring_share": 0.125,
+   "dropped_share": 0.5,
+   "term_pairs": [
+    {
+     "old": "inflammable air",
+     "new": "firedamp"
+    },
+    {
+     "old": "dephlogilitated air",
+     "new": "blackdamp"
+    },
+    {
+     "old": "haunk or flaqls",
+     "new": "shaft"
+    }
+   ],
+   "wiki_only_topics": [
+    "Etymology of firedamp and damp",
+    "Specific types of damps (blackdamp, whitedamp, stinkdamp, afterdamp)",
+    "Explosive concentration limits of firedamp",
+    "History of firedamp and Royal Society involvement",
+    "Development of safety lamps (Geordie and Davy lamps)"
+   ]
+  },
+  {
+   "entry_id": "P:13",
+   "level": "page",
+   "row_index": 13,
+   "britannica_head": "SHIP-BUILDING",
+   "candidate_source": "match/vision_expand/13.json",
+   "method": "vision_expand",
+   "wiki_page_id": "187377",
+   "wiki_revision_id": "1348971360",
+   "wiki_title": "Shipbuilding",
+   "wiki_url": "https://en.wikipedia.org/wiki/Shipbuilding",
+   "text_sha256": "4e0ee6694b55edc40293146c4a9f0fddc6a7ec7b983ea5a733fc935ee8a93e73",
+   "article_total_chars": 35551,
+   "bm25_rank": 6,
+   "embed_cos": 0.182172,
+   "rerank_logit": -6.269448,
+   "rerank_margin": 0.367814,
+   "runner_up_title": "Longitudinal framing",
+   "runner_up_logit": -6.637262,
+   "tau": -4.0,
+   "rationale": "Top-1 vision-expanded reranked candidate is Shipbuilding (rerank logit -6.27, margin 0.37 over Longitudinal framing). Super VL read the running head SHIP-BUILDING and proposed Shipbuilding, which matches the treatise topic.",
+   "compare_status": "ok",
+   "pair_file": "compare/pairs/P_13.json",
+   "raw_file": "compare/raw/P_13.json",
+   "article_file": "match/articles/187377.json",
+   "rescued_threshold_miss": true,
+   "quote_check": {
+    "kept": 26,
+    "rejected": 0
+   },
+   "claim_counts": {
+    "enduring": 0,
+    "renamed": 0,
+    "superseded": 0,
+    "dropped": 8
+   },
+   "claims_checked": 8,
+   "superseded_share": 0.0,
+   "renamed_share": 0.0,
+   "enduring_share": 0.0,
+   "dropped_share": 1.0,
+   "term_pairs": [
+    {
+     "old": "scarded",
+     "new": "joined"
+    },
+    {
+     "old": "boys'l away",
+     "new": "navy"
+    }
+   ],
+   "wiki_only_topics": [
+    "Ancient Egyptian shipbuilding techniques",
+    "Austronesian maritime technology and expansion",
+    "Transition from iron to steel ship construction",
+    "Ship breaking and dismantling",
+    "Early evidence of maritime transport and raft technology"
+   ]
+  },
+  {
+   "entry_id": "P:247",
+   "level": "page",
+   "row_index": 247,
+   "britannica_head": "AETNA / ETN",
+   "candidate_source": "match/vision_expand/247.json",
+   "method": "vision_expand",
+   "wiki_page_id": "169351",
+   "wiki_revision_id": "1348791979",
+   "wiki_title": "Mount Etna",
+   "wiki_url": "https://en.wikipedia.org/wiki/Mount_Etna",
+   "text_sha256": "81b7c4eadf9b4f8fd5376c683423a526cce18fe441af55f25a5511ae5ca06a5d",
+   "article_total_chars": 24132,
+   "bm25_rank": 3,
+   "embed_cos": 0.227884,
+   "rerank_logit": -4.748843,
+   "rerank_margin": 0.182832,
+   "runner_up_title": "Etna, Wisconsin",
+   "runner_up_logit": -4.931675,
+   "tau": -4.0,
+   "rationale": "Top-1 vision-expanded reranked candidate is Mount Etna (rerank logit -4.75, margin 0.18 over Etna, Wisconsin). The 18th-century entry uses the Latin spelling AETNA (running head ETN); vision query expansion recovered Mount Etna at rank 1 just below TAU = -4.0.",
+   "compare_status": "ok",
+   "pair_file": "compare/pairs/P_247.json",
+   "raw_file": "compare/raw/P_247.json",
+   "article_file": "match/articles/169351.json",
+   "rescued_threshold_miss": true,
+   "quote_check": {
+    "kept": 26,
+    "rejected": 0
+   },
+   "claim_counts": {
+    "enduring": 4,
+    "renamed": 1,
+    "superseded": 1,
+    "dropped": 2
+   },
+   "claims_checked": 8,
+   "superseded_share": 0.125,
+   "renamed_share": 0.125,
+   "enduring_share": 0.5,
+   "dropped_share": 0.25,
+   "term_pairs": [
+    {
+     "old": "internal fire",
+     "new": "magma"
+    },
+    {
+     "old": "sulphureous exalations",
+     "new": "volcanic gases"
+    },
+    {
+     "old": "focus of the volume",
+     "new": "magma chamber"
+    }
+   ],
+   "wiki_only_topics": [
+    "UNESCO World Heritage Site designation",
+    "Plate tectonics setting",
+    "Etymology of the name Etna",
+    "Mythological associations (Typhon, Vulcan/Hephaestus)",
+    "Historical eruptions timeline"
+   ]
+  },
+  {
+   "entry_id": "P:268",
+   "level": "page",
+   "row_index": 268,
+   "britannica_head": "LAURUS / LAU",
+   "candidate_source": "match/vision_expand/268.json",
+   "method": "vision_expand",
+   "wiki_page_id": "1467913",
+   "wiki_revision_id": "1343771027",
+   "wiki_title": "Laurus",
+   "wiki_url": "https://en.wikipedia.org/wiki/Laurus",
+   "text_sha256": "2ff47bbefabb2d0c9b88b751b52d491daa0efc1b34a3c4d5f86b59999478a700",
+   "article_total_chars": 1828,
+   "bm25_rank": 1,
+   "embed_cos": 0.230686,
+   "rerank_logit": -7.316444,
+   "rerank_margin": 0.106872,
+   "runner_up_title": "Lauraceae",
+   "runner_up_logit": -7.423316,
+   "tau": -4.0,
+   "rationale": "Top-1 vision-expanded reranked candidate is Laurus (rerank logit -7.32, margin 0.11 over Lauraceae). The page continues the botanical entry on the genus Laurus (bay, cinnamon, camphor, sassafras) under running head LAU.",
+   "compare_status": "ok",
+   "pair_file": "compare/pairs/P_268.json",
+   "raw_file": "compare/raw/P_268.json",
+   "article_file": "match/articles/1467913.json",
+   "rescued_threshold_miss": true,
+   "quote_check": {
+    "kept": 24,
+    "rejected": 2
+   },
+   "claim_counts": {
+    "enduring": 3,
+    "renamed": 0,
+    "superseded": 0,
+    "dropped": 5
+   },
+   "claims_checked": 8,
+   "superseded_share": 0.0,
+   "renamed_share": 0.0,
+   "enduring_share": 0.375,
+   "dropped_share": 0.625,
+   "term_pairs": [
+    {
+     "old": "perfus, or alligator pear tree",
+     "new": "avocado"
+    },
+    {
+     "old": "Svvxxax",
+     "new": "Laurus"
+    },
+    {
+     "old": "alligator pear",
+     "new": "avocado"
+    }
+   ],
+   "wiki_only_topics": [
+    "Species list and taxonomy of Laurus",
+    "Fossil history and glacial retreat of Laurus",
+    "Cultivation requirements of Laurus",
+    "Laurel wreath of ancient Greece",
+    "Laurus novocanariensis native to Madeira and Canary Islands"
+   ]
+  }
+ ]
+}

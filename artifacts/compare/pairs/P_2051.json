@@ -135,14 +135,42 @@
    "tag": "renamed",
    "quote_britannica": "chole Authars the four in Clephie for their king",
    "quote_wikipedia": "The king was traditionally elected by the very highest-ranking aristocrats, the dukes",
-   "cite_britannica": "[B:2051:0]"
+   "cite_britannica": "[B:2051:0]",
+   "scan_check": {
+    "scan_reading": "chose Autharis the four in Clephie for their king",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'chose Autharis the four in Clephie for their king', where OCR misread 'chose' as 'chole' and 'Autharis' as 'Authars', corrupting the historical claim about election by dukes.",
+    "scan_entry_id": "B:2051:0",
+    "bbox": [
+     0.0982,
+     0.3214,
+     0.562,
+     0.8606
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The kingdom was later known as the Kingdom of Italy",
    "tag": "renamed",
    "quote_britannica": "making himself king of Italy by her means",
    "quote_wikipedia": "also known as the Lombard Kingdom and later as the Kingdom of all Italy (Latin: Regnum totius Italiae)",
-   "cite_britannica": "[B:2051:0]"
+   "cite_britannica": "[B:2051:0]",
+   "scan_check": {
+    "scan_reading": "making himself king of Italy by her means",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'making himself king of Italy by her means', so the OCR does not support the renamed claim 'The kingdom was later known as the Kingdom of Italy'.",
+    "scan_entry_id": "B:2051:0",
+    "bbox": [
+     0.0962,
+     0.0613,
+     0.563,
+     0.3622
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The Lombards converted to Catholicism by the end of the 7th century",

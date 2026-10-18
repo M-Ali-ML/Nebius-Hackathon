@@ -13,7 +13,7 @@ Record these four, in this order, with `/new` between them. Together they show f
 | 3 | Blank cover B:452:0 (alternate Question 3) | `view_scan` catches a Parse hallucination that passed every pipeline stage | about 25 s |
 | 4 | Neptune: `What does the Britannica say about the planet Neptune?` | Says "No evidence found in Britannica" and labels the 1846 discovery as inference | about 15 s |
 
-If you have time for a fifth, use the old-terms question (Question 3) to show `find_drift`. Point only at "Botnhic gulph" to "Gulf of Bothnia"; other pairs in that answer are often OCR noise.
+If you have time for a fifth, use Question 3 (`find_drift` for old terms, now scan-verified so OCR noise is already filtered out) or Question 5 (`find_drift` with `kind="topics"` to show the 14 Super VL topic clusters).
 
 ## Before you record
 
@@ -91,7 +91,7 @@ Point at:
 - The next scan `[R:2078]` has the running head "MICROSCOPE. / Plate CCC." and shows a compound microscope in lettered figures.
 - It checks the other neighbor `[R:2079]` ("MID", page 760) and says that page does not explain the plate. It does not invent the page that does.
 
-## Question 3: corpus-wide drift (find_drift)
+## Question 3: corpus-wide drift (find_drift, scan-verified)
 
 Paste:
 
@@ -99,20 +99,18 @@ Paste:
 Which old terms in the Britannica have different modern names in Wikipedia? Give three examples with quotes from both sides.
 ```
 
-Expected tool calls (rehearsal `runs/agent/demo/20261018-144715-which-old-terms-in-the-britannica-have-d.json`, 47 s, 66k tokens):
-1. `find_drift` kind term_pairs (one call over all 83 saved comparisons)
-2. `get_pair` x3 for the chosen entries
-3. `find_drift` again with k 20
+Expected tool calls:
+1. `find_drift` kind `term_pairs` (one call over all 87 saved comparisons; automatically filters out 20 OCR-error term pairs caught by Super VL scan verification and ranks scan-confirmed historical renames first)
+2. `get_pair` for the chosen entries
 
 Point at:
 - One tool call searches all saved comparisons. Without `find_drift` the same question took 35 calls and 436k tokens and failed (`docs/cases/failure-1.md`).
-- "Botnhic gulph" `[B:1017:11]` and "Gulf of Bothnia" `[W:191032:1338024466]`, with quotes from both sides.
-- The agent's own caveat: it dropped OCR-noise pairs ("tenparts" to "tenements", "cry" to "crown").
-- Be careful: in the rehearsal, "rife" to "common use" is an OCR error for "rise", and "Zie Grafjnaar" is OCR for "The Craftsman". Do not present those two as real renames.
+- Scan-confirmed pairs rank at the top: `"Botnhic gulph"` `[B:1017:11]` -> `"Gulf of Bothnia"` `[W:191032:1338024466]`, `"European Turkey"` `[B:604:2]` -> `"East Thrace"` `[W:2356527:1349354581]`, `"Jupiter"` `[B:2171:6]` -> `"Zeus"` `[W:360731:1343072536]`, and `"electric fire"` `[B:1910:0]` -> `"electric charge"` `[W:61344:1353843790]`.
+- Note on earlier rehearsal transcript (`runs/agent/demo/20261018-144715-...`): that transcript was recorded before `verify_drift.py` added `scan_check` filtering, so it contained `"rife"` (OCR for `"rise"`) and `"Zie Grafjnaar"` (OCR for `"The Craftsman"`). Live `find_drift` calls now filter those out automatically (`ocr_errors_filtered: 20`).
 
-## Alternate question 3: blank cover (view_scan catches a Parse error)
+## Alternate Question 3: blank cover (view_scan catches a Parse error)
 
-Short and visual. Use it if question 3 gives OCR-noise examples on the day.
+Short and visual.
 
 ```
 What does Britannica entry B:452:0 say, and how does it compare with its matched Wikipedia article?
@@ -120,8 +118,19 @@ What does Britannica entry B:452:0 say, and how does it compare with its matched
 
 Rehearsal `runs/agent/demo/20261018-145209-what-does-britannica-entry-b-452-0-say-a.json`, 23 s, 37k tokens: `get_pair` B:452:0, then `view_scan` B:452:0. Point at: the stored text is repeated modern prose about "number of cells", the scan is a blank cover, and the agent says the OCR cannot be trusted. The original failure is `docs/cases/failure-3.md`.
 
-## Do not use in the demo
+## Optional Question 5: topic clusters across both encyclopaedias (find_drift kind="topics")
 
-- `runs/agent/demo/20261018-144811-which-facts-in-the-18th-century-britanni.json` ("superseded facts"). It looks good but example 2 is wrong: the OCR says the ounce is the "fitteenth" part of a pound, the scan says "ſixteenth". The compare stage and the agent both took an OCR error as a superseded fact.
-- `runs/agent/demo/20261018-144845-find-three-britannica-claims-where-the-f.json` (renamed claims, checked against scans). It hit the turn limit (24 calls, 319k tokens). Finding: of 20 "renamed" candidates the agent kept only 2 after it checked the scans.
+Directly answers the two questions that failed on Slide 9 of the organizer's presentation:
+
+```
+What topic clusters do you have across the Britannica and Wikipedia embeddings?
+```
+
+Expected tool call:
+1. `find_drift` kind `topics`, `k=14` (returns the 14 shared `Embed-VL` + c-TF-IDF clusters refined with `Super-VL` topic labels and summaries, plus entry and article lists).
+
+## Do not use old pre-verification transcripts in the demo
+
+- `runs/agent/demo/20261018-144811-which-facts-in-the-18th-century-britanni.json` (recorded before `verify_drift.py`): in that old transcript, example 2 took the OCR misreading `"fitteenth"` part of a pound (`B:713:3` OUNCE) as a superseded fact, whereas the scan prints `"ſixteenth"`. `verify_drift.py` now flags `B:713:3` as `ocr_error` and filters it out of `find_drift(kind="superseded")` (`ocr_errors_filtered: 26`), or you can query `find_drift(kind="ocr_errors")` to showcase how Super VL caught it!
+- `runs/agent/demo/20261018-144845-find-three-britannica-claims-where-the-f.json`: hit the turn limit (24 calls, 319k tokens) because it checked 20 scans live one by one before `verify_drift.py` pre-verified them.
 - `runs/agent/demo/first-attempt/`: the first rehearsal. It ran in `full` mode by mistake, and the plate question failed with the 8-image limit. Fixed in `3402ab4`.

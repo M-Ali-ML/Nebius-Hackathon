@@ -98,7 +98,21 @@
    "old": "BYLAWS, or ByrŁLAWS",
    "new": "by-law (bye-law, by (e) law, by (e) law)",
    "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
-   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.",
+   "scan_check": {
+    "scan_reading": "BY-LAWS, or BYE-LAWS",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.",
+    "scan_entry_id": "B:2250:8",
+    "bbox": [
+     0.4733,
+     0.2248,
+     0.9261,
+     0.3642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -139,7 +153,21 @@
    "term_pairs": [
     {
      "old": "BYLAWS, or ByrŁLAWS",
-     "new": "by-law (bye-law, by (e) law, by (e) law)"
+     "new": "by-law (bye-law, by (e) law, by (e) law)",
+     "scan_check": {
+      "scan_reading": "BY-LAWS, or BYE-LAWS",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.",
+      "scan_entry_id": "B:2250:8",
+      "bbox": [
+       0.4733,
+       0.2248,
+       0.9261,
+       0.3642
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": []

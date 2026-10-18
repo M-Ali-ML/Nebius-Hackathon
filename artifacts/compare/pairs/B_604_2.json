@@ -104,7 +104,21 @@
    "claim": "It was bounded on the north by the Danube, east by the Euxine and Bosporus, south by the Propontis and Aegean, and west by the Strymon or later the Nestus.",
    "tag": "superseded",
    "quote_britannica": "It was bounded on the 7b, by the Danube, E. by the Exiton and the Boskolome, S. by the Proponents and the Aegean, and W. by the Strymon, or, as a later period by the Neustus, and the separated in from Macedonia.",
-   "quote_wikipedia": "As the Greeks gained knowledge of world geography, \"Thrace\" came to designate the area bordered by the Danube on the north, by the Euxine Sea (Black Sea) on the east, by northern Macedonia in the south, and by Illyria to the west."
+   "quote_wikipedia": "As the Greeks gained knowledge of world geography, \"Thrace\" came to designate the area bordered by the Danube on the north, by the Euxine Sea (Black Sea) on the east, by northern Macedonia in the south, and by Illyria to the west.",
+   "scan_check": {
+    "scan_reading": "It was bounded on the N. by the Danube, E. by the Euxine and the Bosphorus, S. by the Propontis and the Aegean, and W. by the Strymon, or, at a later period, by the Nestus, which separated it from Macedonia.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the standard ancient boundaries of Thrace, while the OCR garbled Bosphorus as Boskolome, Propontis as Proponents, and Nestus as Neustus, and the Wikipedia description reflects a later or different geographic convention.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "After the Roman conquest its size was further reduced by the chain of the same being made its northern boundary.",
@@ -116,7 +130,21 @@
    "claim": "It corresponds with the modern Rumelia, which also includes part of Macedonia and Thessaly.",
    "tag": "superseded",
    "quote_britannica": "It corresponds parting with the modern Rumell, which also includes part of Macedonia and Thessaly.",
-   "quote_wikipedia": "In Turkish, Thrace is commonly referred to as Rumeli, meaning \"Land of the Romans\", which was the name traditionally given by Turkic societies to the Byzantine Empire and Orthodox Christians."
+   "quote_wikipedia": "In Turkish, Thrace is commonly referred to as Rumeli, meaning \"Land of the Romans\", which was the name traditionally given by Turkic societies to the Byzantine Empire and Orthodox Christians.",
+   "scan_check": {
+    "scan_reading": "It corresponds partly with the modern Rumili, which also includes part of Macedonia and Thessaly.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Rumili' and 'partly', while the OCR misread them as 'Rumell' and 'parting', creating a false discrepancy with Wikipedia's 'Rumeli'.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [
@@ -124,7 +152,21 @@
    "old": "European Turkey",
    "new": "East Thrace",
    "quote_britannica": "now forming part of European Turkey.",
-   "quote_wikipedia": "and the European part of Turkey (East Thrace)."
+   "quote_wikipedia": "and the European part of Turkey (East Thrace).",
+   "scan_check": {
+    "scan_reading": "European Turkey",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints European Turkey, an 18th-century term for the Ottoman-held European territory now called East Thrace.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Exiton",
@@ -189,7 +231,21 @@
    "term_pairs": [
     {
      "old": "European Turkey",
-     "new": "East Thrace"
+     "new": "East Thrace",
+     "scan_check": {
+      "scan_reading": "European Turkey",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints European Turkey, an 18th-century term for the Ottoman-held European territory now called East Thrace.",
+      "scan_entry_id": "B:604:2",
+      "bbox": [
+       0.4498,
+       0.6905,
+       0.8627,
+       0.9017
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Exiton",

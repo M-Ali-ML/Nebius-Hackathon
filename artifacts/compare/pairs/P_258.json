@@ -107,7 +107,21 @@
    "tag": "superseded",
    "quote_britannica": "was born at Great Bodwin, in WildHere, in 1611",
    "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
-   "cite_britannica": "[B:258:3]"
+   "cite_britannica": "[B:258:3]",
+   "scan_check": {
+    "scan_reading": "was born at Great Bodwin, in WildHere, in 1611",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints Great Bodwin, WildHere, and 1611, which are archaic or erroneous historical readings that differ from modern Wikipedia.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Willis studied at Christ Church, Oxford.",
@@ -128,7 +142,21 @@
    "tag": "renamed",
    "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
    "quote_wikipedia": "From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.",
-   "cite_britannica": "[B:258:3]"
+   "cite_britannica": "[B:258:3]",
+   "scan_check": {
+    "scan_reading": "In 1660, he became Seeldian professor of natural philosophy, and the same year took the degree of doctor of physick.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints '1660' and 'Seeldian professor', so the OCR's '1604' and 'profiler' are misreadings, while 'Seeldian' is an archaic spelling of 'Sedleian'.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Willis was one of the first members of the Royal Society.",
@@ -149,7 +177,21 @@
    "tag": "superseded",
    "quote_britannica": "His wife allo boating under the frame different the areas of providing for his family, died in 1670.",
    "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
-   "cite_britannica": "[B:258:3]"
+   "cite_britannica": "[B:258:3]",
+   "scan_check": {
+    "scan_reading": "His wife also labouring under the fame diforder, he offered to leave the town; but flew, not fuffering him to neglect the means of providing for his family, died in 1670.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints that Willis's wife died in 1670, not Willis, so the OCR-derived claim misattributes the death date to the wrong person.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Willis refused the honour of knighthood.",

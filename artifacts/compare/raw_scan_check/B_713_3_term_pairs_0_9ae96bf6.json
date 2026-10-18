@@ -1,0 +1,100 @@
+{
+ "check_id": "B_713_3_term_pairs_0_9ae96bf6",
+ "entry_id": "B:713:3",
+ "scan_entry_id": "B:713:3",
+ "bbox": [
+  0.4586,
+  0.5459,
+  0.9379,
+  0.6095
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:713",
+  "row_index": 713,
+  "image_sha256": "3db0c66f81f48bd0948a7644d3f0c1c4213d3d49e54c500a317bf147695b1fc5",
+  "scan_size": [
+   600,
+   855
+  ],
+  "bbox": [
+   0.4586,
+   0.5459,
+   0.9379,
+   0.6095
+  ],
+  "image_size": [
+   800,
+   153
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "the sixteenth part of a pound avoirdupois",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'sixteenth' with a long-s that OCR misread as 'fitteenth', matching the modern 1/16 avoirdupois pound.",
+  "scan_entry_id": "B:713:3",
+  "bbox": [
+   0.4586,
+   0.5459,
+   0.9379,
+   0.6095
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-b8afd56a24a4b924",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"the sixteenth part of a pound avoirdupois\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'sixteenth' with a long-s that OCR misread as 'fitteenth', matching the modern 1/16 avoirdupois pound.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331321,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 77,
+   "prompt_tokens": 920,
+   "total_tokens": 997,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 290
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.4
+ }
+}

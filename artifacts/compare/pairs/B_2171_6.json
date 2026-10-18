@@ -86,7 +86,21 @@
    "claim": "Ate is the goddess of mischief in Pagan theology",
    "tag": "renamed",
    "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
-   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.",
+   "scan_check": {
+    "scan_reading": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'goddess' and 'mischief' with long-s forms misread by OCR as 'goddels' and 'mithief', and 'theology' split as 'tho-ology', so the claim is an OCR misreading, not a historical rename.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Ate was the daughter of Jupiter",
@@ -116,7 +130,21 @@
    "claim": "The name of the goddess comes from a Greek word meaning to hurt",
    "tag": "renamed",
    "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
-   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\"."
+   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\".",
+   "scan_check": {
+    "scan_reading": "The name of this goddess comes from ατα, noceo, to hurt.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'goddess', 'ατα', 'noceo', and 'to hurt', so the OCR's 'goddels', 'stars, men', and 'hart' are misreadings.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Her being the daughter of Jupiter means that no evil happens to us but by the permissive providence",
@@ -136,13 +164,41 @@
    "old": "goddels of mithief",
    "new": "personification of moral blindness and error",
    "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
-   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.",
+   "scan_check": {
+    "scan_reading": "ATE, the goddesf of mifchief, in the Pagan theology.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints long-s as f, so OCR read goddesf as goddels and mifchief as mithief, but the actual words are goddess and mischief.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Jupiter",
    "new": "Zeus",
    "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
-   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife).",
+   "scan_check": {
+    "scan_reading": "Jupiter",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints Jupiter, the Roman name, while Wikipedia uses Zeus, the Greek equivalent, reflecting a genuine historical terminology shift.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Hercules",
@@ -201,11 +257,39 @@
    "term_pairs": [
     {
      "old": "goddels of mithief",
-     "new": "personification of moral blindness and error"
+     "new": "personification of moral blindness and error",
+     "scan_check": {
+      "scan_reading": "ATE, the goddesf of mifchief, in the Pagan theology.",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints long-s as f, so OCR read goddesf as goddels and mifchief as mithief, but the actual words are goddess and mischief.",
+      "scan_entry_id": "B:2171:6",
+      "bbox": [
+       0.1051,
+       0.3483,
+       0.5384,
+       0.5642
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Jupiter",
-     "new": "Zeus"
+     "new": "Zeus",
+     "scan_check": {
+      "scan_reading": "Jupiter",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints Jupiter, the Roman name, while Wikipedia uses Zeus, the Greek equivalent, reflecting a genuine historical terminology shift.",
+      "scan_entry_id": "B:2171:6",
+      "bbox": [
+       0.1051,
+       0.3483,
+       0.5384,
+       0.5642
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

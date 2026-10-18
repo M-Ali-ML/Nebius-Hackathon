@@ -115,7 +115,21 @@
    "tag": "renamed",
    "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
    "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children.",
-   "cite_britannica": "[B:1422:0]"
+   "cite_britannica": "[B:1422:0]",
+   "scan_check": {
+    "scan_reading": "Let them be carefully instructed in the principles of morality and religion.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'morality', not 'monality', so the OCR misread the long-s or a letter in the word.",
+    "scan_entry_id": "B:1422:0",
+    "bbox": [
+     0.4488,
+     0.0323,
+     0.8725,
+     0.4419
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Learning a mechanical art is not absolutely necessary for a man of fortune.",

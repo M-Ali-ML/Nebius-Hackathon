@@ -1,6 +1,6 @@
 # Case studies
 
-Six cases from saved Hermes runs on the real pipeline output (100 pages, 262 entries, 67 matched pairs).
+Six cases from saved Hermes runs on the real pipeline output (100 pages, 262 entries, 83 compared pairs at run time: 67 entry-level matched pairs and 16 page-level pairs; 87 after 4 threshold misses were rescued later) using the 5 Hermes tools (`search_sources`, `get_pair`, `find_drift`, `view_scan`, `view_neighbors`).
 Each case links to its transcript in `runs/agent/`. `uv run nemotron-challenge run evaluate` checks the links and writes `runs/evaluate.json`.
 
 | Case | Class | Question | Tools | Tokens | What it shows |
@@ -12,7 +12,7 @@ Each case links to its transcript in `runs/agent/`. `uv run nemotron-challenge r
 | [failure-2](failure-2.md) | failure | Plate B:651:0 | get_pair | 16,154 | Plate matched to "Fig (restaurant)"; bad BM25 pool |
 | [failure-3](failure-3.md) | failure | Blank cover B:452:0 | get_pair | 18,151 | Parse invents text; error passes through every stage |
 
-Changes from the first pick: firedamp was replaced by coinage. In the real-data run, B:1214:0 -> Firedamp had logit -4.46, below tau -4.0, so no comparison exists. Its "phlogiston superseded" answer exists only in a fixture run.
+Changes from the first pick: firedamp was replaced by coinage. In the real-data run, B:1214:0 -> Firedamp had logit -4.46, below tau -4.0, so no comparison existed at run time. Its "phlogiston superseded" answer exists only in a fixture run. Later, `rescue_matches.py` saved a comparison for this pair with `rescued_threshold_miss: true` (`artifacts/match/rescued_threshold_misses.json`). The case runs predate it.
 
 ## Where the agent does well
 
@@ -53,7 +53,7 @@ We ran the same 7 questions through Hermes with four `search_sources` modes, set
 - `full`: embedding, LanceDB search, then the reranker.
 - `hybrid` (the default since this ablation): Britannica from LanceDB vectors; Wikipedia from LanceDB `wiki_chunks` plus live BM25 (top 20, 1,000-char excerpts) over the full corpus; all hits reranked together, each marked `lancedb` or `bm25`.
 
-The other tools (`get_pair`, `find_drift`, `view_scan`) are the same in every mode.
+The other tools (`get_pair`, `find_drift`, `view_scan`, `view_neighbors`) are the same in every mode.
 Questions: lightning, magnetism, coinage, Huguenots, Erfurt, firedamp, Neptune (expected: no evidence).
 Transcripts: `runs/agent/ablation/<mode>/`. Numbers: `runs/agent/ablation/summary.json`.
 

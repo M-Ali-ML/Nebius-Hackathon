@@ -72,7 +72,21 @@
    "claim": "Olney is situated nine miles South-east of Northampton.",
    "tag": "superseded",
    "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
-   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough."
+   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough.",
+   "scan_check": {
+    "scan_reading": "OULNEY, a market-town of Buckinghamshire, situated nine miles south-east of Northampton.",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'OULNEY' and 'nine miles south-east of Northampton', matching the OCR quote and differing from Wikipedia's modern '10 miles' distance.",
+    "scan_entry_id": "B:713:1",
+    "bbox": [
+     0.4743,
+     0.4998,
+     0.9398,
+     0.5541
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [

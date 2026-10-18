@@ -1,0 +1,100 @@
+{
+ "check_id": "B_560_6_renamed_0_5dd4c36c",
+ "entry_id": "B:560:6",
+ "scan_entry_id": "B:560:6",
+ "bbox": [
+  0.4899,
+  0.6053,
+  0.9212,
+  0.9384
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560",
+  "row_index": 560,
+  "image_sha256": "c458f594fc79392e42082ac7a8c338082e8d5e2c2c79dd2f49f1940b91144300",
+  "scan_size": [
+   600,
+   784
+  ],
+  "bbox": [
+   0.4899,
+   0.6053,
+   0.9212,
+   0.9384
+  ],
+  "image_size": [
+   793,
+   800
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "AMIDA, a god worshipped by the Japanese",
+  "is_ocr_error": false,
+  "status": "confirmed",
+  "explanation": "The scan prints 'AMIDA, a god worshipped by the Japanese', matching the OCR and confirming the historical claim rather than an OCR error.",
+  "scan_entry_id": "B:560:6",
+  "bbox": [
+   0.4899,
+   0.6053,
+   0.9212,
+   0.9384
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-ac0d810c5ea72215",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"AMIDA, a god worshipped by the Japanese\",\n  \"is_ocr_error\": false,\n  \"status\": \"confirmed\",\n  \"explanation\": \"The scan prints 'AMIDA, a god worshipped by the Japanese', matching the OCR and confirming the historical claim rather than an OCR error.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331167,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 79,
+   "prompt_tokens": 1199,
+   "total_tokens": 1278,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 627
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.93
+ }
+}

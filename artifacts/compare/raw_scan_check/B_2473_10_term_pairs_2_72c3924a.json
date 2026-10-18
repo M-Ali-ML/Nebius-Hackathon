@@ -1,0 +1,100 @@
+{
+ "check_id": "B_2473_10_term_pairs_2_72c3924a",
+ "entry_id": "B:2473:10",
+ "scan_entry_id": "B:2473:10",
+ "bbox": [
+  0.4782,
+  0.2248,
+  0.932,
+  0.3111
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2473",
+  "row_index": 2473,
+  "image_sha256": "b849fb7f25f25b39685069d12c13b17d47169beeea958446bdff439c230a0f65",
+  "scan_size": [
+   600,
+   809
+  ],
+  "bbox": [
+   0.4782,
+   0.2248,
+   0.932,
+   0.3111
+  ],
+  "image_size": [
+   800,
+   205
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "tufi",
+  "is_ocr_error": false,
+  "status": "confirmed",
+  "explanation": "The scan prints the archaic spelling \"tufi\" for tuft, which is a genuine historical term rather than an OCR error.",
+  "scan_entry_id": "B:2473:10",
+  "bbox": [
+   0.4782,
+   0.2248,
+   0.932,
+   0.3111
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-8da31639cdcea64c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"tufi\",\n  \"is_ocr_error\": false,\n  \"status\": \"confirmed\",\n  \"explanation\": \"The scan prints the archaic spelling \\\"tufi\\\" for tuft, which is a genuine historical term rather than an OCR error.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331075,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 66,
+   "prompt_tokens": 853,
+   "total_tokens": 919,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 290
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.04
+ }
+}

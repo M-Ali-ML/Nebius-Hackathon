@@ -1,0 +1,2844 @@
+{
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "prompt_version": "scan-check-v1",
+ "total_checked": 94,
+ "confirmed_count": 15,
+ "ocr_error_count": 79,
+ "ocr_error_rate": 0.84,
+ "by_kind": {
+  "term_pairs": {
+   "checked": 41,
+   "confirmed": 9,
+   "ocr_error": 32
+  },
+  "superseded": {
+   "checked": 29,
+   "confirmed": 3,
+   "ocr_error": 26
+  },
+  "renamed": {
+   "checked": 24,
+   "confirmed": 3,
+   "ocr_error": 21
+  }
+ },
+ "ocr_illusions": [
+  {
+   "check_id": "B_560_2_term_pairs_1_be7b80d8",
+   "entry_id": "B:560:2",
+   "scan_entry_id": "B:560:2",
+   "cite_britannica": "[B:560:2]",
+   "cite_wikipedia": "[W:2305125:1338635003]",
+   "wiki_title": "Nicholas Amhurst",
+   "rerank_margin": 4.178508,
+   "kind": "term_pairs",
+   "rank": 2,
+   "old": "Zie Grafjnaar",
+   "new": "The Craftsman",
+   "claim": null,
+   "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.",
+   "scan_check": {
+    "scan_reading": "The Craftsman",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints The Craftsman, so Zie Grafjnaar is an OCR misreading of the old-style type.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_8_term_pairs_0_71567fe0",
+   "entry_id": "B:1327:8",
+   "scan_entry_id": "B:1327:8",
+   "cite_britannica": "[B:1327:8]",
+   "cite_wikipedia": "[W:75899:1352397655]",
+   "wiki_title": "Huguenots",
+   "rerank_margin": 4.13297,
+   "kind": "term_pairs",
+   "rank": 3,
+   "old": "rife",
+   "new": "common use",
+   "claim": null,
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.",
+   "scan_check": {
+    "scan_reading": "rise",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife'.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_term_pairs_0_720e407c",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "term_pairs",
+   "rank": 4,
+   "old": "tenparts",
+   "new": "tenements",
+   "claim": null,
+   "quote_britannica": "ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.",
+   "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government",
+   "scan_check": {
+    "scan_reading": "tenements",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the word tenements, so the OCR reading tenparts is a misreading of the old type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_term_pairs_3_a4105ef5",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "term_pairs",
+   "rank": 5,
+   "old": "cry",
+   "new": "crown",
+   "claim": null,
+   "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+   "quote_wikipedia": "the fee reverted to the King's demesne permanently",
+   "scan_check": {
+    "scan_reading": "crown",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'crown' in the phrase 'fell back to the lost of the crown', so the OCR reading 'cry' is a misreading of the worn type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2250_8_term_pairs_0_e7a43bb4",
+   "entry_id": "B:2250:8",
+   "scan_entry_id": "B:2250:8",
+   "cite_britannica": "[B:2250:8]",
+   "cite_wikipedia": "[W:521384:1340885393]",
+   "wiki_title": "By-law",
+   "rerank_margin": 2.56998,
+   "kind": "term_pairs",
+   "rank": 6,
+   "old": "BYLAWS, or ByrŁLAWS",
+   "new": "by-law (bye-law, by (e) law, by (e) law)",
+   "claim": null,
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.",
+   "scan_check": {
+    "scan_reading": "BY-LAWS, or BYE-LAWS",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.",
+    "scan_entry_id": "B:2250:8",
+    "bbox": [
+     0.4733,
+     0.2248,
+     0.9261,
+     0.3642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_251_5_term_pairs_1_29710f93",
+   "entry_id": "B:251:5",
+   "scan_entry_id": "B:251:5",
+   "cite_britannica": "[B:251:5]",
+   "cite_wikipedia": "[W:564669:1341167433]",
+   "wiki_title": "Thomas Sydenham",
+   "rerank_margin": 2.525945,
+   "kind": "term_pairs",
+   "rank": 7,
+   "old": "backache",
+   "new": "MD",
+   "claim": null,
+   "quote_britannica": "created backache of his faculty",
+   "quote_wikipedia": "graduated as MD",
+   "scan_check": {
+    "scan_reading": "bachelor of his faculty",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints \"bachelor of his faculty\", not \"backache\", so the OCR misread the word and the pair is not a genuine historical shift.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_251_5_term_pairs_2_e046a9dc",
+   "entry_id": "B:251:5",
+   "scan_entry_id": "B:251:5",
+   "cite_britannica": "[B:251:5]",
+   "cite_wikipedia": "[W:564669:1341167433]",
+   "wiki_title": "Thomas Sydenham",
+   "rerank_margin": 2.525945,
+   "kind": "term_pairs",
+   "rank": 8,
+   "old": "Wanilor Eagle",
+   "new": "Wynford Eagle",
+   "claim": null,
+   "quote_britannica": "of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "born at Wynford Eagle in Dorset",
+   "scan_check": {
+    "scan_reading": "Winford Eagle",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Winford Eagle, so the OCR's Wanilor is a misreading and not a historical name change.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_251_5_term_pairs_3_e76e0581",
+   "entry_id": "B:251:5",
+   "scan_entry_id": "B:251:5",
+   "cite_britannica": "[B:251:5]",
+   "cite_wikipedia": "[W:564669:1341167433]",
+   "wiki_title": "Thomas Sydenham",
+   "rerank_margin": 2.525945,
+   "kind": "term_pairs",
+   "rank": 9,
+   "old": "Dorforth",
+   "new": "Dorset",
+   "claim": null,
+   "quote_britannica": "of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "born at Wynford Eagle in Dorset",
+   "scan_check": {
+    "scan_reading": "Dorsetshire",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_10_term_pairs_1_e15b7287",
+   "entry_id": "B:2473:10",
+   "scan_entry_id": "B:2473:10",
+   "cite_britannica": "[B:2473:10]",
+   "cite_wikipedia": "[W:21445971:1324376018]",
+   "wiki_title": "Ergot (horse anatomy)",
+   "rerank_margin": 2.355466,
+   "kind": "term_pairs",
+   "rank": 11,
+   "old": "pattern join",
+   "new": "fetlock",
+   "claim": null,
+   "quote_britannica": "placed behind and be low the pattern join",
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine.",
+   "scan_check": {
+    "scan_reading": "pattern-joint",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints pattern-joint, not pattern join, and the OCR split the hyphenated word and dropped the hyphen.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_6_term_pairs_0_3c7be981",
+   "entry_id": "B:2171:6",
+   "scan_entry_id": "B:2171:6",
+   "cite_britannica": "[B:2171:6]",
+   "cite_wikipedia": "[W:79071:1353135063]",
+   "wiki_title": "Ate (mythology)",
+   "rerank_margin": 2.342574,
+   "kind": "term_pairs",
+   "rank": 13,
+   "old": "goddels of mithief",
+   "new": "personification of moral blindness and error",
+   "claim": null,
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.",
+   "scan_check": {
+    "scan_reading": "ATE, the goddesf of mifchief, in the Pagan theology.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints long-s as f, so OCR read goddesf as goddels and mifchief as mithief, but the actual words are goddess and mischief.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_term_pairs_0_1421b8ef",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "term_pairs",
+   "rank": 15,
+   "old": "Lucerna",
+   "new": "Roman",
+   "claim": null,
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alerni, (Cluvenus): Also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Lucania, not Lucerna, so the OCR misread the word and created a false old-to-new term pair.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_term_pairs_1_bc272c88",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "term_pairs",
+   "rank": 16,
+   "old": "Alteris",
+   "new": "Pescara",
+   "claim": null,
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alterni, (Cluvenius): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Pescara, not Alteris, so the OCR misread the entry and the apparent rename is false.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_4_term_pairs_1_68c449bf",
+   "entry_id": "B:2171:4",
+   "scan_entry_id": "B:2171:4",
+   "cite_britannica": "[B:2171:4]",
+   "cite_wikipedia": "[W:28777761:1347832688]",
+   "wiki_title": "Achievement (heraldry)",
+   "rerank_margin": 2.218275,
+   "kind": "term_pairs",
+   "rank": 17,
+   "old": "fluid",
+   "new": "escutcheon",
+   "claim": null,
+   "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):",
+   "scan_check": {
+    "scan_reading": "field",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the word field, which the OCR misread as fluid, and the term escutcheon does not appear in the passage.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_4_term_pairs_4_4761f421",
+   "entry_id": "B:2171:4",
+   "scan_entry_id": "B:2171:4",
+   "cite_britannica": "[B:2171:4]",
+   "cite_wikipedia": "[W:28777761:1347832688]",
+   "wiki_title": "Achievement (heraldry)",
+   "rerank_margin": 2.218275,
+   "kind": "term_pairs",
+   "rank": 18,
+   "old": "marhalled",
+   "new": "depiction",
+   "claim": null,
+   "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled.",
+   "scan_check": {
+    "scan_reading": "marshalled",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints marshalled, so the OCR reading marhalled is a misreading, and the term is not a renamed concept.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2464_5_term_pairs_0_80bf7e7f",
+   "entry_id": "B:2464:5",
+   "scan_entry_id": "B:2464:5",
+   "cite_britannica": "[B:2464:5]",
+   "cite_wikipedia": "[W:1468228:1326520528]",
+   "wiki_title": "Cabin (ship)",
+   "rerank_margin": 2.122037,
+   "kind": "term_pairs",
+   "rank": 19,
+   "old": "flip",
+   "new": "ship",
+   "claim": null,
+   "quote_britannica": "fewelful parts of a flip, particularly on the quarter-deck,",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin.",
+   "scan_check": {
+    "scan_reading": "ship",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the long-s form of ship, which the OCR misread as flip.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_4_term_pairs_1_bb3f8623",
+   "entry_id": "B:1327:4",
+   "scan_entry_id": "B:1327:4",
+   "cite_britannica": "[B:1327:4]",
+   "cite_wikipedia": "[W:165564:1338701491]",
+   "wiki_title": "Pierre Daniel Huet",
+   "rerank_margin": 2.034211,
+   "kind": "term_pairs",
+   "rank": 21,
+   "old": "free of Armouth",
+   "new": "bishopric of Avranches",
+   "claim": null,
+   "quote_britannica": "in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.",
+   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.",
+   "scan_check": {
+    "scan_reading": "bishopric of Avranches",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints bishopric of Avranches, so the OCR's free of Armouth is a misreading of that phrase.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_4_term_pairs_3_b90f4355",
+   "entry_id": "B:1327:4",
+   "scan_entry_id": "B:1327:4",
+   "cite_britannica": "[B:1327:4]",
+   "cite_wikipedia": "[W:165564:1338701491]",
+   "wiki_title": "Pierre Daniel Huet",
+   "rerank_margin": 2.034211,
+   "kind": "term_pairs",
+   "rank": 22,
+   "old": "Demonstrate du rival and semi porti- constitutes",
+   "new": "Demonstratio evangelica",
+   "claim": null,
+   "quote_britannica": "Demonstrate du rival and semi porti- constitutes.",
+   "quote_wikipedia": "He issued one of his major works, the Demonstratio evangelica, in 1679.",
+   "scan_check": {
+    "scan_reading": "Demonstratio evangelica constitutes",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Demonstratio evangelica, and the OCR misread it as Demonstrate du rival and semi porti-.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2464_7_term_pairs_3_5a6bbb51",
+   "entry_id": "B:2464:7",
+   "scan_entry_id": "B:2464:7",
+   "cite_britannica": "[B:2464:7]",
+   "cite_wikipedia": "[W:82889:1348781554]",
+   "wiki_title": "Cabeiri",
+   "rerank_margin": 1.897956,
+   "kind": "term_pairs",
+   "rank": 23,
+   "old": "cabinets",
+   "new": "mystery cult",
+   "claim": null,
+   "quote_britannica": "where the cabinets were celebrated in honour of them",
+   "quote_wikipedia": "They were worshipped in a mystery cult closely associated with that of Hephaestus",
+   "scan_check": {
+    "scan_reading": "cabiria",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints cabiria, a festival term, not cabinets, so the OCR misread the word and created a false contrast with mystery cult.",
+    "scan_entry_id": "B:2464:7",
+    "bbox": [
+     0.4645,
+     0.285,
+     0.9095,
+     0.4252
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2464_8_term_pairs_2_2699aca2",
+   "entry_id": "B:2464:8",
+   "scan_entry_id": "B:2464:8",
+   "cite_britannica": "[B:2464:8]",
+   "cite_wikipedia": "[W:82889:1348781554]",
+   "wiki_title": "Cabeiri",
+   "rerank_margin": 1.886491,
+   "kind": "term_pairs",
+   "rank": 24,
+   "old": "fests, gods",
+   "new": "Cabeiri",
+   "claim": null,
+   "quote_britannica": "All who were initiated into the welfare of the fests, gods, were fought to be featured thereby from florms at tea, and all other dangers.",
+   "quote_wikipedia": "In Greek mythology, the Cabeiri or Cabiri / k ə ˈ b aɪ r iː / (Ancient Greek: Κάβειροι, romanized: Kábeiroi), also transliterated Kabeiri or Kabiri, were a group of enigmatic chthonic deities.",
+   "scan_check": {
+    "scan_reading": "CABIRIA, festivals in honour of the cabiri, celebrated in Thebes and Lemnos, but especially in Samothracia, an island consecrated to the cabiri. All who were initiated into the mysteries of these gods, were thought to be secured thereby from storms at sea, and all other dangers.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints CABIRIA, not fests, gods, and the OCR misread long-s and other letters, corrupting the passage about the Cabeiri.",
+    "scan_entry_id": "B:2464:8",
+    "bbox": [
+     0.4655,
+     0.3967,
+     0.9144,
+     0.5673
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_term_pairs_2_58adc535",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "natural electricity",
+   "new": "electrostatic discharges",
+   "claim": null,
+   "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
+   "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions.",
+   "scan_check": {
+    "scan_reading": "natural electricity",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the phrase natural electricity, so the OCR quote's mention of protons and sloos torna is a misreading, not a genuine historical term shift.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.5083,
+     0.2511,
+     0.9507,
+     0.452
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_superseded_2_f660574c",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "superseded",
+   "rank": 1,
+   "old": null,
+   "new": null,
+   "claim": "Escheat occurs from the extinction of the blood of the tenant by natural or criminal means.",
+   "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
+   "quote_wikipedia": "If a person had no heir to receive his lands under his will, or under the laws of intestacy, then any land he owned at death would escheat.",
+   "scan_check": {
+    "scan_reading": "from the extinction of the blood of the latter by either natural or civil means",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints natural and civil, not the OCR's anaural and crist, so the difference is an OCR misreading of the long s and worn letters.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_superseded_4_6f448ae2",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "superseded",
+   "rank": 2,
+   "old": null,
+   "new": null,
+   "claim": "Escheat occurs if the tenant's blood is corrupted by attainder or felony.",
+   "quote_britannica": "or if his blood the company and named by comunition of coercion or fidory",
+   "quote_wikipedia": "In most common-law jurisdictions, this type of escheat has been abolished outright, for example in the United States under Article 3 § 3 of the United States Constitution",
+   "scan_check": {
+    "scan_reading": "if his blood was corrupted and tainted by commiſſion of treaſon or felony",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the historical escheat rule about corrupted blood from treason or felony, so the OCR quote is a misreading and the claim matches the scan.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_251_5_superseded_7_bf222733",
+   "entry_id": "B:251:5",
+   "scan_entry_id": "B:251:5",
+   "cite_britannica": "[B:251:5]",
+   "cite_wikipedia": "[W:564669:1341167433]",
+   "wiki_title": "Thomas Sydenham",
+   "rerank_margin": 2.525945,
+   "kind": "superseded",
+   "rank": 3,
+   "old": null,
+   "new": null,
+   "claim": "He died in 1695",
+   "quote_britannica": "He died in 1695",
+   "quote_wikipedia": "10 September 1624 – 29 December 1689",
+   "scan_check": {
+    "scan_reading": "He died in 1689",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 1689, so the OCR quote of 1695 is a misreading and the historical date is unchanged.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_713_3_superseded_0_555f21e4",
+   "entry_id": "B:713:3",
+   "scan_entry_id": "B:713:3",
+   "cite_britannica": "[B:713:3]",
+   "cite_wikipedia": "[W:180279:1326550449]",
+   "wiki_title": "Ounce",
+   "rerank_margin": 2.433997,
+   "kind": "superseded",
+   "rank": 4,
+   "old": null,
+   "new": null,
+   "claim": "The ounce is the fifteenth part of a pound avoirdupois",
+   "quote_britannica": "the fitteenth part of a pound avoirdupois",
+   "quote_wikipedia": "The avoirdupois ounce (exactly 28.349 523 125 g) is 1 ⁄ 16 avoirdupois pound",
+   "scan_check": {
+    "scan_reading": "the sixteenth part of a pound avoirdupois",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints a long-s in 'sixteenth', which the OCR misread as 'fitteenth', so the apparent difference from Wikipedia's one-sixteenth is an OCR error.",
+    "scan_entry_id": "B:713:3",
+    "bbox": [
+     0.4557,
+     0.5459,
+     0.9379,
+     0.6228
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_superseded_1_2eba2924",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "superseded",
+   "rank": 5,
+   "old": null,
+   "new": null,
+   "claim": "Aternum is now called Alteris.",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Aterni, (Cluvenus): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Aterni, not Alteris, and the OCR also misread Lucania as Lucerna and Cluvenus as Chorusas, so the claimed rename is an OCR misreading.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_superseded_2_200731a1",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "superseded",
+   "rank": 6,
+   "old": null,
+   "new": null,
+   "claim": "Aternum is in the territory of the Piceni and is now Pescara, a port-town of Naples.",
+   "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "now Pescara, a port-town of Naples, situated on the Adriatic",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Pescara and situated, so the OCR's Pofcara and fitu-ated are long-s misreadings, not a historical difference.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_superseded_3_ed84da9b",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "superseded",
+   "rank": 7,
+   "old": null,
+   "new": null,
+   "claim": "Aternum is at East Longitude 15.25 and Latitude 42.50.",
+   "quote_britannica": "E. Long 15.25. V.Lav. 42.50.",
+   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E",
+   "scan_check": {
+    "scan_reading": "E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints N. Lat. 42. 30, not V.Lav. 42.50, so the OCR misread the latitude and the claim is an OCR error.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2464_7_superseded_3_33e37099",
+   "entry_id": "B:2464:7",
+   "scan_entry_id": "B:2464:7",
+   "cite_britannica": "[B:2464:7]",
+   "cite_wikipedia": "[W:82889:1348781554]",
+   "wiki_title": "Cabeiri",
+   "rerank_margin": 1.897956,
+   "kind": "superseded",
+   "rank": 8,
+   "old": null,
+   "new": null,
+   "claim": "There are four gods: Axieros, Axiocerla, Axiocerfius, and Calinila.",
+   "quote_britannica": "the fests go are laid to be, in number, four, viz. Axieros, Axiocerla, Axiocerfius, and Calinila",
+   "quote_wikipedia": "The number of Cabeiri also varies, with some accounts citing four (often a pair of males and a pair of females), and some even more",
+   "scan_check": {
+    "scan_reading": "Axieros, Axiocerfa, Axiocerfus, and Cafinilus",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Axiocerfa and Axiocerfus, not Axiocerla and Axiocerfius, and Cafinilus, not Calinila, so the OCR misread the long s and other letters.",
+    "scan_entry_id": "B:2464:7",
+    "bbox": [
+     0.4645,
+     0.285,
+     0.9095,
+     0.4252
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_604_2_superseded_3_9677c79c",
+   "entry_id": "B:604:2",
+   "scan_entry_id": "B:604:2",
+   "cite_britannica": "[B:604:2]",
+   "cite_wikipedia": "[W:36857:1353074612]",
+   "wiki_title": "Thrace",
+   "rerank_margin": 1.855739,
+   "kind": "superseded",
+   "rank": 9,
+   "old": null,
+   "new": null,
+   "claim": "It was bounded on the north by the Danube, east by the Euxine and Bosporus, south by the Propontis and Aegean, and west by the Strymon or later the Nestus.",
+   "quote_britannica": "It was bounded on the 7b, by the Danube, E. by the Exiton and the Boskolome, S. by the Proponents and the Aegean, and W. by the Strymon, or, as a later period by the Neustus, and the separated in from Macedonia.",
+   "quote_wikipedia": "As the Greeks gained knowledge of world geography, \"Thrace\" came to designate the area bordered by the Danube on the north, by the Euxine Sea (Black Sea) on the east, by northern Macedonia in the south, and by Illyria to the west.",
+   "scan_check": {
+    "scan_reading": "It was bounded on the N. by the Danube, E. by the Euxine and the Bosphorus, S. by the Propontis and the Aegean, and W. by the Strymon, or, at a later period, by the Nestus, which separated it from Macedonia.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the standard ancient boundaries of Thrace, while the OCR garbled Bosphorus as Boskolome, Propontis as Proponents, and Nestus as Neustus, and the Wikipedia description reflects a later or different geographic convention.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_604_2_superseded_5_526bd370",
+   "entry_id": "B:604:2",
+   "scan_entry_id": "B:604:2",
+   "cite_britannica": "[B:604:2]",
+   "cite_wikipedia": "[W:36857:1353074612]",
+   "wiki_title": "Thrace",
+   "rerank_margin": 1.855739,
+   "kind": "superseded",
+   "rank": 10,
+   "old": null,
+   "new": null,
+   "claim": "It corresponds with the modern Rumelia, which also includes part of Macedonia and Thessaly.",
+   "quote_britannica": "It corresponds parting with the modern Rumell, which also includes part of Macedonia and Thessaly.",
+   "quote_wikipedia": "In Turkish, Thrace is commonly referred to as Rumeli, meaning \"Land of the Romans\", which was the name traditionally given by Turkic societies to the Byzantine Empire and Orthodox Christians.",
+   "scan_check": {
+    "scan_reading": "It corresponds partly with the modern Rumili, which also includes part of Macedonia and Thessaly.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Rumili' and 'partly', while the OCR misread them as 'Rumell' and 'parting', creating a false discrepancy with Wikipedia's 'Rumeli'.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_523_5_superseded_0_5e19a8a0",
+   "entry_id": "B:523:5",
+   "scan_entry_id": "B:523:5",
+   "cite_britannica": "[B:523:5]",
+   "cite_wikipedia": "[W:739097:1344055979]",
+   "wiki_title": "Endymion (mythology)",
+   "rerank_margin": 1.726366,
+   "kind": "superseded",
+   "rank": 11,
+   "old": null,
+   "new": null,
+   "claim": "Endymion was the 12th king of Elia",
+   "quote_britannica": "the 1zth king of Elia",
+   "quote_wikipedia": "was variously a handsome Aeolian shepherd, hunter, or king who was said to rule and live at Olympia in Elis",
+   "scan_check": {
+    "scan_reading": "the 12th king of Elis",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints '12th' and 'Elis', so the OCR's '1zth' and 'Elia' are misreadings, not a historical shift.",
+    "scan_entry_id": "B:523:5",
+    "bbox": [
+     0.0719,
+     0.1936,
+     0.5072,
+     0.3337
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_258_superseded_6_8fa5d93d",
+   "entry_id": "P:258",
+   "scan_entry_id": "B:258:3",
+   "cite_britannica": "[B:258:3]",
+   "cite_wikipedia": "[W:7634016:1351664577]",
+   "wiki_title": "Thomas Willis",
+   "rerank_margin": 1.645722,
+   "kind": "superseded",
+   "rank": 14,
+   "old": null,
+   "new": null,
+   "claim": "Willis died in 1670.",
+   "quote_britannica": "His wife allo boating under the frame different the areas of providing for his family, died in 1670.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "scan_check": {
+    "scan_reading": "His wife also labouring under the fame diforder, he offered to leave the town; but flew, not fuffering him to neglect the means of providing for his family, died in 1670.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints that Willis's wife died in 1670, not Willis, so the OCR-derived claim misattributes the death date to the wrong person.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_1_superseded_1_9175827c",
+   "entry_id": "B:1327:1",
+   "scan_entry_id": "B:1327:1",
+   "cite_britannica": "[B:1327:1]",
+   "cite_wikipedia": "[W:68298:1331057656]",
+   "wiki_title": "Huesca",
+   "rerank_margin": 1.562214,
+   "kind": "superseded",
+   "rank": 15,
+   "old": null,
+   "new": null,
+   "claim": "Huesca is located in the kingdom of Granada",
+   "quote_britannica": "in the kingdom of Granada, fieldsed on a plain",
+   "quote_wikipedia": "within the autonomous community of Aragon.",
+   "scan_check": {
+    "scan_reading": "in the kingdom of Arragon",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Arragon', not 'Granada', so the OCR misread the kingdom name.",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_1_superseded_2_b1902e85",
+   "entry_id": "B:1327:1",
+   "scan_entry_id": "B:1327:1",
+   "cite_britannica": "[B:1327:1]",
+   "cite_wikipedia": "[W:68298:1331057656]",
+   "wiki_title": "Huesca",
+   "rerank_margin": 1.562214,
+   "kind": "superseded",
+   "rank": 16,
+   "old": null,
+   "new": null,
+   "claim": "Huesca is situated on a plain",
+   "quote_britannica": "fieldsed on a plain in W. Long. 1..45, N. Lat. 32.",
+   "quote_wikipedia": "Huesca lies on a plateau in the northern region of Aragón",
+   "scan_check": {
+    "scan_reading": "It is feated on the Iffuela, in a foil producing excellent wine, in W. Long. o. 13. N. Lat. 40. 2.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'feated' (OCR for 'situated') and 'Iffuela' (long-s for 'Isuela'), not 'fieldsed', and the coordinates differ from the OCR claim.",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_1_superseded_3_cb82e1aa",
+   "entry_id": "B:1327:1",
+   "scan_entry_id": "B:1327:1",
+   "cite_britannica": "[B:1327:1]",
+   "cite_wikipedia": "[W:68298:1331057656]",
+   "wiki_title": "Huesca",
+   "rerank_margin": 1.562214,
+   "kind": "superseded",
+   "rank": 17,
+   "old": null,
+   "new": null,
+   "claim": "Huesca is at West Longitude 1..45 and North Latitude 32",
+   "quote_britannica": "W. Long. 1..45, N. Lat. 32.",
+   "quote_wikipedia": "The geographical coordinates of the city are: 42° 08´ N, 0° 24´ W.",
+   "scan_check": {
+    "scan_reading": "W. Long. 0. 13. N. Lat. 40. 2.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'W. Long. 0. 13. N. Lat. 40. 2.', not 'W. Long. 1..45, N. Lat. 32.'",
+    "scan_entry_id": "B:1327:1",
+    "bbox": [
+     0.0573,
+     0.3186,
+     0.4642,
+     0.4111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_403_superseded_0_dd5921ec",
+   "entry_id": "P:403",
+   "scan_entry_id": "B:403:0",
+   "cite_britannica": "[B:403:0]",
+   "cite_wikipedia": "[W:23193:1349939971]",
+   "wiki_title": "Philology",
+   "rerank_margin": 1.516692,
+   "kind": "superseded",
+   "rank": 18,
+   "old": null,
+   "new": null,
+   "claim": "The Ethiopian language was originally Chahidae or a branch of that language.",
+   "quote_britannica": "whatever changes the Ethiopian dialect may have un-dergone in the course of three thousand years, it was originally either Chahidae, or at least a branch of that language.",
+   "quote_wikipedia": "Philology (from Ancient Greek φιλολογία (philología) ' love of word ') is the study of language in oral and written historical sources.",
+   "scan_check": {
+    "scan_reading": "Chaldaic",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Chaldaic' in the phrase 'either Chaldaic, or at least a branch of that language', so the OCR's 'Chahidae' is a misreading of the long-s and ligatured letters.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.0,
+     0.0386,
+     0.4858,
+     0.4637
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_403_superseded_3_71fa4426",
+   "entry_id": "P:403",
+   "scan_entry_id": "B:403:0",
+   "cite_britannica": "[B:403:0]",
+   "cite_wikipedia": "[W:23193:1349939971]",
+   "wiki_title": "Philology",
+   "rerank_margin": 1.516692,
+   "kind": "superseded",
+   "rank": 19,
+   "old": null,
+   "new": null,
+   "claim": "The Sanscrit character were deduced from the Chahida.",
+   "quote_britannica": "Six Villan Jones seems to have paved, by very plausible arguments, that the Sanscrit character were deduced from the Chahida.",
+   "quote_wikipedia": "Similarities between Sanskrit and European languages were first noted in the early 19th century.",
+   "scan_check": {
+    "scan_reading": "Sir William Jones seems to have proved, by very plausible arguments, that the Sanscrit characters were deduced from the Chaldaic.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Sir William Jones', 'proved', 'characters', and 'Chaldaic', not the OCR's 'Six Villan Jones', 'paved', 'character', and 'Chahida'.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.0,
+     0.0386,
+     0.4858,
+     0.4637
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_403_superseded_6_c0a968d1",
+   "entry_id": "P:403",
+   "scan_entry_id": "B:403:0",
+   "cite_britannica": "[B:403:0]",
+   "cite_wikipedia": "[W:23193:1349939971]",
+   "wiki_title": "Philology",
+   "rerank_margin": 1.516692,
+   "kind": "superseded",
+   "rank": 20,
+   "old": null,
+   "new": null,
+   "claim": "The rare ancient language of Ethiopians, called Abyssian, was the Geest spoken by the ancient Chinese shopdesks.",
+   "quote_britannica": "The rare ancient language of Ethiopians, which we shall now call by its modern name of Abyssian, was according to that gentleman, the Geest, which was spoken by the ancient Chinese shopdesks.",
+   "quote_wikipedia": "Work on the ancient languages of the Near East progressed rapidly. In the mid-19th century, Henry Rawlinson and others deciphered the Behistun Inscription, which records the same text in Old Persian, Elamite, and Akkadian, using a variation of cuneiform for each language.",
+   "scan_check": {
+    "scan_reading": "The most ancient language of Ethiopia, which we shall now call by its modern name of Abyssinia, was, according to that gentleman, the Geez, which was spoken by the ancient Cushite shepherds.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Abyssinia', 'Geez', and 'Cushite shepherds', not the OCR's 'Abyssian', 'Geest', and 'Chinese shopdesks'.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.4429,
+     0.4253,
+     0.9106,
+     0.72
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_9_superseded_1_02fd0ecb",
+   "entry_id": "B:2473:9",
+   "scan_entry_id": "B:2473:9",
+   "cite_britannica": "[B:2473:9]",
+   "cite_wikipedia": "[W:9481:1352872890]",
+   "wiki_title": "Erfurt",
+   "rerank_margin": 1.50958,
+   "kind": "superseded",
+   "rank": 22,
+   "old": null,
+   "new": null,
+   "claim": "Erfurt is the capital of Thailand.",
+   "quote_britannica": "capital of Thailand, and subject to the elckor of Menus",
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia, with a population of around 216,000.",
+   "scan_check": {
+    "scan_reading": "capital of Thuringia, and subject to the elector of Mentz",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Thuringia' and 'elector of Mentz', so the OCR's 'Thailand' and 'elckor of Menus' are misreadings of the long-s and worn letters.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_9_superseded_3_5250a5c2",
+   "entry_id": "B:2473:9",
+   "scan_entry_id": "B:2473:9",
+   "cite_britannica": "[B:2473:9]",
+   "cite_wikipedia": "[W:9481:1352872890]",
+   "wiki_title": "Erfurt",
+   "rerank_margin": 1.50958,
+   "kind": "superseded",
+   "rank": 23,
+   "old": null,
+   "new": null,
+   "claim": "Erfurt is at East longitude 117 degrees.",
+   "quote_britannica": "E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "Erfurt is 100 km (62 mi) south-west of Leipzig, 250 km (155 mi) north-east of Frankfurt",
+   "scan_check": {
+    "scan_reading": "E. long. 11° 6', N. lat. 51°.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'E. long. 11° 6', N. lat. 51°', so the OCR's '117 é'' and '910' are misreadings of the degree, minute, and latitude figures.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_9_superseded_4_a262baea",
+   "entry_id": "B:2473:9",
+   "scan_entry_id": "B:2473:9",
+   "cite_britannica": "[B:2473:9]",
+   "cite_wikipedia": "[W:9481:1352872890]",
+   "wiki_title": "Erfurt",
+   "rerank_margin": 1.50958,
+   "kind": "superseded",
+   "rank": 24,
+   "old": null,
+   "new": null,
+   "claim": "Erfurt is at North latitude 910.",
+   "quote_britannica": "E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin",
+   "scan_check": {
+    "scan_reading": "N. lat. 51°",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'N. lat. 51°', so the OCR's '910' is a misreading of '51°'.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1250_1_superseded_4_e4abaacd",
+   "entry_id": "B:1250:1",
+   "scan_entry_id": "B:1250:1",
+   "cite_britannica": "[B:1250:1]",
+   "cite_wikipedia": "[W:24057311:1345146028]",
+   "wiki_title": "Coining (mint)",
+   "rerank_margin": 1.352541,
+   "kind": "superseded",
+   "rank": 25,
+   "old": null,
+   "new": null,
+   "claim": "Round blanks are cut from a metal plate using a trepan.",
+   "quote_britannica": "Indeed of dividing the lamina can final figures, they at once even clean out of it as many plantaches as it can contain, by means of a sharp fleet trepan, of a roundill figure, hollow within, and of a properizationable diameter, to shape and cut of the pieces at one unit the fames times.",
+   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal.",
+   "scan_check": {
+    "scan_reading": "planchets",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'planchets', not 'plantaches', and describes cutting blanks from a lamina, which matches the modern concept of punching coin blanks rather than a genuine historical shift.",
+    "scan_entry_id": "B:1250:1",
+    "bbox": [
+     0.5239,
+     0.0355,
+     0.9497,
+     0.3973
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_superseded_0_646dd75e",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "superseded",
+   "rank": null,
+   "old": null,
+   "new": null,
+   "claim": "A returning firele is produced by the sudden removal of electrical pressure from a charged thunder-cloud.",
+   "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke' with a long-s in 'stroke', which the OCR misread as 'firele' and 'fuddro' for 'sudden'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_superseded_1_aa414fa3",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "superseded",
+   "rank": null,
+   "old": null,
+   "new": null,
+   "claim": "The strength of such a returning firele must be enormous.",
+   "quote_britannica": "the frength of such a retraining fireks mult be enormous.",
+   "quote_wikipedia": "An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy.",
+   "scan_check": {
+    "scan_reading": "the strength of such a returning fire must be enormous",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints long-s as 'frength' and 'retraining' and 'fireks' due to OCR misreading, but the actual text reads 'strength', 'returning', and 'fire'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.028,
+     0.0405,
+     0.9486,
+     0.9556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_superseded_2_388034b5",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "superseded",
+   "rank": null,
+   "old": null,
+   "new": null,
+   "claim": "A person's body can transmit all the electric fire of which the large cloud could have been robbed through to a conductor.",
+   "quote_britannica": "but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes.",
+   "scan_check": {
+    "scan_reading": "but likewise transmits through it, at the fame instant, in consequence of his peculiar situation, all the electric fire of which the large second conductor had been robbed, and which must necessarily re-pafs through his body, to arrive at that conductor.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'fame instant' and 're-pafs' where the OCR produced 'fame infant' and 're-pafa', clear long-s misreadings, while the underlying claim about electric fire matches the historical text.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0972,
+     0.3581,
+     0.5386,
+     0.7184
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_superseded_5_48453080",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "superseded",
+   "rank": null,
+   "old": null,
+   "new": null,
+   "claim": "A man walking outdoors could be killed by a returning firele at the instant of a distant explosion.",
+   "quote_britannica": "if a man walking out of doors were to be killed by a returning firele, the electrical line would rub into that each body into his feets, and his feet only ; which would not be the case, here he to be killed by any main fireke of exploding, either positive negative.",
+   "quote_wikipedia": "Positive lightning strikes tend to be much more intense than their negative counterparts. An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke', not 'returning firele', so the OCR misread the long-s and other letters in the phrase.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.5083,
+     0.2511,
+     0.9507,
+     0.452
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_560_2_renamed_3_91d2e743",
+   "entry_id": "B:560:2",
+   "scan_entry_id": "B:560:2",
+   "cite_britannica": "[B:560:2]",
+   "cite_wikipedia": "[W:2305125:1338635003]",
+   "wiki_title": "Nicholas Amhurst",
+   "rerank_margin": 4.178508,
+   "kind": "renamed",
+   "rank": 1,
+   "old": null,
+   "new": null,
+   "claim": "He wrote a satire called Terræ Filius about Oxford.",
+   "quote_britannica": "in a book entitled Terre Filosa.",
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.",
+   "scan_check": {
+    "scan_reading": "Terra Filius",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Terra Filius', so the OCR's 'Terre Filosa' is a misreading, not a genuine historical rename.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_560_2_renamed_5_d7a569a8",
+   "entry_id": "B:560:2",
+   "scan_entry_id": "B:560:2",
+   "cite_britannica": "[B:560:2]",
+   "cite_wikipedia": "[W:2305125:1338635003]",
+   "wiki_title": "Nicholas Amhurst",
+   "rerank_margin": 4.178508,
+   "kind": "renamed",
+   "rank": 2,
+   "old": null,
+   "new": null,
+   "claim": "He was a prominent writer for the political paper The Craftsman.",
+   "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.",
+   "scan_check": {
+    "scan_reading": "The Craftsman",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'The Craftsman', so the OCR's 'Zie Grafjnaar' and 'flare' are misreadings of the long-s and worn type.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_8_renamed_2_cf079007",
+   "entry_id": "B:1327:8",
+   "scan_entry_id": "B:1327:8",
+   "cite_britannica": "[B:1327:8]",
+   "cite_wikipedia": "[W:75899:1352397655]",
+   "wiki_title": "Huguenots",
+   "rerank_margin": 4.13297,
+   "kind": "renamed",
+   "rank": 3,
+   "old": null,
+   "new": null,
+   "claim": "The name may derive from Besançon Hugues, a Genevan political leader.",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.",
+   "scan_check": {
+    "scan_reading": "The name had its first rise in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife', and the date 1560 differs from Wikipedia's circa 1550, but the etymological claim about Besançon Hugues is not present in the visible Britannica text.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_renamed_6_2e285b5a",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "renamed",
+   "rank": 4,
+   "old": null,
+   "new": null,
+   "claim": "Escheated land falls back to the lord of the fee.",
+   "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+   "quote_wikipedia": "the fee reverted to the King's demesne permanently",
+   "scan_check": {
+    "scan_reading": "In fuch cafes the land efcheated or fell back to the lord of the fee",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'efcheated' and 'lord of the fee', which are long-s forms of 'escheated' and 'fee', matching the claim, so the OCR's 'cakes the hand echated or fell back to the lost of the cry' is a misreading.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_10_renamed_2_0b82b0dd",
+   "entry_id": "B:2473:10",
+   "scan_entry_id": "B:2473:10",
+   "cite_britannica": "[B:2473:10]",
+   "cite_wikipedia": "[W:21445971:1324376018]",
+   "wiki_title": "Ergot (horse anatomy)",
+   "rerank_margin": 2.355466,
+   "kind": "renamed",
+   "rank": 5,
+   "old": null,
+   "new": null,
+   "claim": "The ergot is like a piece of horn.",
+   "quote_britannica": "like a piece of loft horn",
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)",
+   "scan_check": {
+    "scan_reading": "like a piece of loft horn",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'soft horn', and the OCR misread the long-s in 'soft' as an f, producing 'loft horn'.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_6_renamed_0_0dbc5940",
+   "entry_id": "B:2171:6",
+   "scan_entry_id": "B:2171:6",
+   "cite_britannica": "[B:2171:6]",
+   "cite_wikipedia": "[W:79071:1353135063]",
+   "wiki_title": "Ate (mythology)",
+   "rerank_margin": 2.342574,
+   "kind": "renamed",
+   "rank": 6,
+   "old": null,
+   "new": null,
+   "claim": "Ate is the goddess of mischief in Pagan theology",
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error.",
+   "scan_check": {
+    "scan_reading": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'goddess' and 'mischief' with long-s forms misread by OCR as 'goddels' and 'mithief', and 'theology' split as 'tho-ology', so the claim is an OCR misreading, not a historical rename.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_6_renamed_5_d9b787d7",
+   "entry_id": "B:2171:6",
+   "scan_entry_id": "B:2171:6",
+   "cite_britannica": "[B:2171:6]",
+   "cite_wikipedia": "[W:79071:1353135063]",
+   "wiki_title": "Ate (mythology)",
+   "rerank_margin": 2.342574,
+   "kind": "renamed",
+   "rank": 7,
+   "old": null,
+   "new": null,
+   "claim": "The name of the goddess comes from a Greek word meaning to hurt",
+   "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\".",
+   "scan_check": {
+    "scan_reading": "The name of this goddess comes from ατα, noceo, to hurt.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'goddess', 'ατα', 'noceo', and 'to hurt', so the OCR's 'goddels', 'stars, men', and 'hart' are misreadings.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_4_renamed_2_12555cc5",
+   "entry_id": "B:1327:4",
+   "scan_entry_id": "B:1327:4",
+   "cite_britannica": "[B:1327:4]",
+   "cite_wikipedia": "[W:165564:1338701491]",
+   "wiki_title": "Pierre Daniel Huet",
+   "rerank_margin": 2.034211,
+   "kind": "renamed",
+   "rank": 8,
+   "old": null,
+   "new": null,
+   "claim": "Huet was nominated to the bishopric of Soissons and exchanged it for Avranches.",
+   "quote_britannica": "in 168s was nominated to the hillopric of Sollions, which he exchange for the free of Armouth.",
+   "quote_wikipedia": "In 1685 he became Bishop of Soissons, but after waiting for installation for four years he took the bishopric of Avranches instead.",
+   "scan_check": {
+    "scan_reading": "in 1685 was nominated to the bishopric of Soissons, which he exchanged for the see of Avranches.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'bishopric of Soissons' and 'see of Avranches', while the OCR misread 'bishopric' as 'hillopric', 'Soissons' as 'Sollions', 'exchanged' as 'exchange', 'see' as 'free', and 'Avranches' as 'Armouth'.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_258_renamed_3_656958ca",
+   "entry_id": "P:258",
+   "scan_entry_id": "B:258:3",
+   "cite_britannica": "[B:258:3]",
+   "cite_wikipedia": "[W:7634016:1351664577]",
+   "wiki_title": "Thomas Willis",
+   "rerank_margin": 1.645722,
+   "kind": "renamed",
+   "rank": 9,
+   "old": null,
+   "new": null,
+   "claim": "Willis became Sedleian Professor of Natural Philosophy in 1660.",
+   "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
+   "quote_wikipedia": "From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.",
+   "scan_check": {
+    "scan_reading": "In 1660, he became Seeldian professor of natural philosophy, and the same year took the degree of doctor of physick.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints '1660' and 'Seeldian professor', so the OCR's '1604' and 'profiler' are misreadings, while 'Seeldian' is an archaic spelling of 'Sedleian'.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_713_5_renamed_2_8a19fbf4",
+   "entry_id": "B:713:5",
+   "scan_entry_id": "B:713:5",
+   "cite_britannica": "[B:713:5]",
+   "cite_wikipedia": "[W:3084322:1267424346]",
+   "wiki_title": "Ovolo",
+   "rerank_margin": 1.550622,
+   "kind": "renamed",
+   "rank": 10,
+   "old": null,
+   "new": null,
+   "claim": "The ovolo is commonly called the quartercard.",
+   "quote_britannica": "is usually a quadrant of a circle; whence it is also commonly called the quartercard.",
+   "quote_wikipedia": "Lat. echinus... in architecture, a convex moulding known also as the echinus, which in Classic architecture was invariably carved with the egg and tongue. In Roman and Italian work the moulding is called by workmen a quarter round.",
+   "scan_check": {
+    "scan_reading": "quarter.round",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'quarter.round' with a long-s, not 'quartercard', so the OCR misread the long-s as f and dropped the period.",
+    "scan_entry_id": "B:713:5",
+    "bbox": [
+     0.4488,
+     0.6284,
+     0.9409,
+     0.7208
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1818_0_renamed_0_c4edfd53",
+   "entry_id": "B:1818:0",
+   "scan_entry_id": "B:1818:0",
+   "cite_britannica": "[B:1818:0]",
+   "cite_wikipedia": "[W:2762233:1353619780]",
+   "wiki_title": "Blowpipe (tool)",
+   "rerank_margin": 1.324026,
+   "kind": "renamed",
+   "rank": 11,
+   "old": null,
+   "new": null,
+   "claim": "The first person to apply the blowpipe to the analysis of materials was a Swedish counselor of the college of mines in 1725.",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": "One Andreas Swab, a Swedish metallurgist and Counsellor of the College of Mines is credited with the first use of the blowpipe for 'pyrognostic operations', of which no record remains.",
+   "scan_check": {
+    "scan_reading": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Sweden' in the phrase 'in Sweden in 1725', so the OCR's 'weak' is a misreading of the printed word.",
+    "scan_entry_id": "B:1818:0",
+    "bbox": null,
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2001_5_renamed_6_fea882e0",
+   "entry_id": "B:2001:5",
+   "scan_entry_id": "B:2001:5",
+   "cite_britannica": "[B:2001:5]",
+   "cite_wikipedia": "[W:996527:1353828824]",
+   "wiki_title": "Silius Italicus",
+   "rerank_margin": 1.215575,
+   "kind": "renamed",
+   "rank": 12,
+   "old": null,
+   "new": null,
+   "claim": "He applied himself to the law and became a celebrated advocate.",
+   "quote_britannica": "he applied himself to the bay; and, by a choi institution of Greece, succeeded fo well, like he became a celebrated advocate",
+   "quote_wikipedia": "In early life Silius was a renowned forensic orator",
+   "scan_check": {
+    "scan_reading": "he applied himſelf to the bar; and, by a cloſe imitation of Cicero, ſucceeded ſo well, that he became a celebrated advocate",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'bar' and 'cloſe imitation of Cicero', which the OCR misread as 'bay' and 'choi institution of Greece', but the claim that he became a celebrated advocate matches the scan.",
+    "scan_entry_id": "B:2001:5",
+    "bbox": [
+     0.4557,
+     0.6584,
+     0.8695,
+     0.9384
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1017_9_renamed_2_e91fa6fe",
+   "entry_id": "B:1017:9",
+   "scan_entry_id": "B:1017:9",
+   "cite_britannica": "[B:1017:9]",
+   "cite_wikipedia": "[W:236213:1340278468]",
+   "wiki_title": "Helots",
+   "rerank_margin": 0.767898,
+   "kind": "renamed",
+   "rank": 13,
+   "old": null,
+   "new": null,
+   "claim": "Helots were reduced to the condition of serfs.",
+   "quote_britannica": "reduced them into the condition of flares",
+   "quote_wikipedia": "They are thus institutionally distinguished from the anonymous douloi (slaves)",
+   "scan_check": {
+    "scan_reading": "reduced them into the condition of flares",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the long-s word 'ſlaves' (slaves), which the OCR misread as 'flares'.",
+    "scan_entry_id": "B:1017:9",
+    "bbox": [
+     0.4821,
+     0.46,
+     0.9076,
+     0.597
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_523_renamed_0_845b4df5",
+   "entry_id": "P:523",
+   "scan_entry_id": "B:523:12",
+   "cite_britannica": "[B:523:12]",
+   "cite_wikipedia": "[W:9640:1353267162]",
+   "wiki_title": "Engine",
+   "rerank_margin": 0.575366,
+   "kind": "renamed",
+   "rank": 14,
+   "old": null,
+   "new": null,
+   "claim": "An engine is a compound machine made of one or more mechanical powers such as levers, pullies, and screws.",
+   "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
+   "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy.",
+   "scan_check": {
+    "scan_reading": "ENGINE, % mechanics, is a compound machine, made of one or more mechanical powers, as levers, pullies, screws, &c. in order to raise, cast, or sustain any weight, or produce any effect which could not be easily effected otherwise.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'screws' and 'sustain', which the OCR misread as 'ferws' and 'fulanany', so the apparent difference is an OCR error rather than a historical shift.",
+    "scan_entry_id": "B:523:12",
+    "bbox": [
+     0.0581,
+     0.8277,
+     0.5102,
+     0.9364
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1268_1_renamed_0_85a08aa3",
+   "entry_id": "B:1268:1",
+   "scan_entry_id": "B:1268:1",
+   "cite_britannica": "[B:1268:1]",
+   "cite_wikipedia": "[W:60721222:1345060513]",
+   "wiki_title": "Naxia (Caria)",
+   "rerank_margin": 0.508667,
+   "kind": "renamed",
+   "rank": 15,
+   "old": null,
+   "new": null,
+   "claim": "Naxia is the ancient Nazos.",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria.",
+   "scan_check": {
+    "scan_reading": "NAXIA, the ancient Naxos, is one of the largest",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Naxos', not 'Nazos', so the OCR misread the long-s or a letter in the ancient name.",
+    "scan_entry_id": "B:1268:1",
+    "bbox": [
+     0.1373,
+     0.1538,
+     0.8705,
+     0.3455
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_247_renamed_6_bcb537e2",
+   "entry_id": "P:247",
+   "scan_entry_id": "B:247:0",
+   "cite_britannica": "[B:247:0]",
+   "cite_wikipedia": "[W:169351:1348791979]",
+   "wiki_title": "Mount Etna",
+   "rerank_margin": 0.182832,
+   "kind": "renamed",
+   "rank": 17,
+   "old": null,
+   "new": null,
+   "claim": "The mountain is called Etna or Etaa by travelers.",
+   "quote_britannica": "Like other travellers to mount Etaa, this gentleman South wind found the wind blowing from the fourth ;",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "scan_check": {
+    "scan_reading": "Etna",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'mount Etna' and 'top of Etna', so the OCR's 'Etaa' is a misreading of the long-s or italic type.",
+    "scan_entry_id": "B:247:0",
+    "bbox": [
+     0.5132,
+     0.5573,
+     0.935,
+     0.863
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_1422_renamed_3_87f89e34",
+   "entry_id": "P:1422",
+   "scan_entry_id": "B:1422:0",
+   "cite_britannica": "[B:1422:0]",
+   "cite_wikipedia": "[W:2883641:1344476102]",
+   "wiki_title": "Some Thoughts Concerning Education",
+   "rerank_margin": 0.173451,
+   "kind": "renamed",
+   "rank": 18,
+   "old": null,
+   "new": null,
+   "claim": "Young men of fortune should be instructed in the principles of morality and religion.",
+   "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
+   "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children.",
+   "scan_check": {
+    "scan_reading": "Let them be carefully instructed in the principles of morality and religion.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'morality', not 'monality', so the OCR misread the long-s or a letter in the word.",
+    "scan_entry_id": "B:1422:0",
+    "bbox": [
+     0.4488,
+     0.0323,
+     0.8725,
+     0.4419
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_1430_renamed_5_d53ce740",
+   "entry_id": "P:1430",
+   "scan_entry_id": "B:1430:0",
+   "cite_britannica": "[B:1430:0]",
+   "cite_wikipedia": "[W:65811:1351403338]",
+   "wiki_title": "Thebes, Egypt",
+   "rerank_margin": 0.11308,
+   "kind": "renamed",
+   "rank": 19,
+   "old": null,
+   "new": null,
+   "claim": "The ancient Egyptian name for Thebes was Waset.",
+   "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+   "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
+   "scan_check": {
+    "scan_reading": "Thebes",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Thebes' and contains no mention of the ancient Egyptian name 'Waset', so the renamed claim is an OCR-derived mismatch.",
+    "scan_entry_id": "B:1430:0",
+    "bbox": [
+     0.0269,
+     0.0378,
+     0.522,
+     0.3903
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_1430_renamed_6_a828f3e0",
+   "entry_id": "P:1430",
+   "scan_entry_id": "B:1430:0",
+   "cite_britannica": "[B:1430:0]",
+   "cite_wikipedia": "[W:65811:1351403338]",
+   "wiki_title": "Thebes, Egypt",
+   "rerank_margin": 0.11308,
+   "kind": "renamed",
+   "rank": 20,
+   "old": null,
+   "new": null,
+   "claim": "Thebes was known as the City of Amun or njw.t-jmn.",
+   "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "From the end of the New Kingdom, Thebes was known in Egyptian as njw.t-jmn, the \"City of Amun \", the chief of the Theban Triad of deities whose other members were Mut and Khonsu.",
+   "scan_check": {
+    "scan_reading": "To one Salatis our author ascribes the destruction of Thebes in Upper Egypt, so much celebrated by Homer for its magnificence.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Salatis' and 'Thebes', not 'Salaris' or 'City of Amun or njw.t-jmn', so the OCR misread the text and paired it with a modern Wikipedia term not present in the 18th-century entry.",
+    "scan_entry_id": "B:1430:0",
+    "bbox": [
+     0.0269,
+     0.0378,
+     0.522,
+     0.3903
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_2051_renamed_5_d526c8a0",
+   "entry_id": "P:2051",
+   "scan_entry_id": "B:2051:0",
+   "cite_britannica": "[B:2051:0]",
+   "cite_wikipedia": "[W:7946956:1345727904]",
+   "wiki_title": "Kingdom of the Lombards",
+   "rerank_margin": 0.029739,
+   "kind": "renamed",
+   "rank": 23,
+   "old": null,
+   "new": null,
+   "claim": "The king was elected by the dukes",
+   "quote_britannica": "chole Authars the four in Clephie for their king",
+   "quote_wikipedia": "The king was traditionally elected by the very highest-ranking aristocrats, the dukes",
+   "scan_check": {
+    "scan_reading": "chose Autharis the four in Clephie for their king",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'chose Autharis the four in Clephie for their king', where OCR misread 'chose' as 'chole' and 'Autharis' as 'Authars', corrupting the historical claim about election by dukes.",
+    "scan_entry_id": "B:2051:0",
+    "bbox": [
+     0.0982,
+     0.3214,
+     0.562,
+     0.8606
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_2051_renamed_6_86e470fc",
+   "entry_id": "P:2051",
+   "scan_entry_id": "B:2051:0",
+   "cite_britannica": "[B:2051:0]",
+   "cite_wikipedia": "[W:7946956:1345727904]",
+   "wiki_title": "Kingdom of the Lombards",
+   "rerank_margin": 0.029739,
+   "kind": "renamed",
+   "rank": 24,
+   "old": null,
+   "new": null,
+   "claim": "The kingdom was later known as the Kingdom of Italy",
+   "quote_britannica": "making himself king of Italy by her means",
+   "quote_wikipedia": "also known as the Lombard Kingdom and later as the Kingdom of all Italy (Latin: Regnum totius Italiae)",
+   "scan_check": {
+    "scan_reading": "making himself king of Italy by her means",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'making himself king of Italy by her means', so the OCR does not support the renamed claim 'The kingdom was later known as the Kingdom of Italy'.",
+    "scan_entry_id": "B:2051:0",
+    "bbox": [
+     0.0962,
+     0.0613,
+     0.563,
+     0.3622
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1017_11_term_pairs_1_2496cfc5",
+   "entry_id": "B:1017:11",
+   "scan_entry_id": "B:1017:11",
+   "cite_britannica": "[B:1017:11]",
+   "cite_wikipedia": "[W:191032:1338024466]",
+   "wiki_title": "Hälsingland",
+   "rerank_margin": 5.712891,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Dalecarila",
+   "new": "Dalarna",
+   "claim": null,
+   "quote_britannica": "and by Dalecarila on the well.",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.",
+   "scan_check": {
+    "scan_reading": "Dalecarlia",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Dalecarlia', an older spelling of Dalarna, so the OCR's 'Dalecarila' is a misreading, not a genuine historical shift.",
+    "scan_entry_id": "B:1017:11",
+    "bbox": [
+     0.4801,
+     0.6084,
+     0.9076,
+     0.6783
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_8_term_pairs_1_3cead709",
+   "entry_id": "B:1327:8",
+   "scan_entry_id": "B:1327:8",
+   "cite_britannica": "[B:1327:8]",
+   "cite_wikipedia": "[W:75899:1352397655]",
+   "wiki_title": "Huguenots",
+   "rerank_margin": 4.13297,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Amboyse",
+   "new": "Amboise",
+   "claim": null,
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560",
+   "scan_check": {
+    "scan_reading": "The name had its first rife in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the scan does not contain the term 'Amboyse' or 'Amboise'.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1327_8_term_pairs_2_8915c5eb",
+   "entry_id": "B:1327:8",
+   "scan_entry_id": "B:1327:8",
+   "cite_britannica": "[B:1327:8]",
+   "cite_wikipedia": "[W:75899:1352397655]",
+   "wiki_title": "Huguenots",
+   "rerank_margin": 4.13297,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Tourraine",
+   "new": "Touraine",
+   "claim": null,
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\"",
+   "scan_check": {
+    "scan_reading": "The name had its first rife in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the candidate pair 'Tourraine' to 'Touraine' is not supported by the visible text.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_term_pairs_1_9af590b6",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "tenans",
+   "new": "tenant",
+   "claim": null,
+   "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
+   "quote_wikipedia": "if a tenant was outlawed or convicted of a felony",
+   "scan_check": {
+    "scan_reading": "tenant",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'tenant' in the phrase 'between the lord and tenant', so the OCR's 'tenans' is a misreading, not a historical term shift.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_term_pairs_2_9f32df25",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "loud",
+   "new": "lord",
+   "claim": null,
+   "quote_britannica": "from the extinction of the blood of the latter by other anaural or crist means",
+   "quote_wikipedia": "reverted to the immediately superior feudal lord.",
+   "scan_check": {
+    "scan_reading": "lord",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'lord' in the phrase 'fall to a lord within his manor', so the OCR's 'anaural or crist' is a misreading and the apparent 'loud' to 'lord' shift is not genuine.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1473_7_term_pairs_4_6cf90279",
+   "entry_id": "B:1473:7",
+   "scan_entry_id": "B:1473:7",
+   "cite_britannica": "[B:1473:7]",
+   "cite_wikipedia": "[W:175519:1353158843]",
+   "wiki_title": "Escheat",
+   "rerank_margin": 2.66776,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "feed",
+   "new": "fee",
+   "claim": null,
+   "quote_britannica": "to which hers alone the grant of the feed extended",
+   "quote_wikipedia": "the tenant of a fee (or \"fief\") died without an heir",
+   "scan_check": {
+    "scan_reading": "to which heirs alone the grant of the feud extended",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'feud', not 'feed', and the OCR also misread 'heirs' as 'hers', so the apparent term pair is an OCR misreading.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_term_pairs_0_7f9fd78e",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "returning firele",
+   "new": "return stroke",
+   "claim": null,
+   "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes.",
+   "scan_check": {
+    "scan_reading": "returning stroke",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'returning stroke' with a long-s in 'returning' and a clear 'stroke', which the OCR misread as 'returning firele'.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_9_term_pairs_2_35ccdbae",
+   "entry_id": "B:2171:9",
+   "scan_entry_id": "B:2171:9",
+   "cite_britannica": "[B:2171:9]",
+   "cite_wikipedia": "[W:13770710:1352684512]",
+   "wiki_title": "Aternum",
+   "rerank_margin": 2.267812,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Pofcara",
+   "new": "Pescara",
+   "claim": null,
+   "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "Pescara",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Pescara' with a long-s, which the OCR misread as 'Pofcara'.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_560_2_term_pairs_0_bea6fb33",
+   "entry_id": "B:560:2",
+   "scan_entry_id": "B:560:2",
+   "cite_britannica": "[B:560:2]",
+   "cite_wikipedia": "[W:2305125:1338635003]",
+   "wiki_title": "Nicholas Amhurst",
+   "rerank_margin": 4.178508,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Terre Filosa",
+   "new": "Terræ Filius",
+   "claim": null,
+   "quote_britannica": "in a book entitled Terre Filosa.",
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.",
+   "scan_check": {
+    "scan_reading": "Terra Filius",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Terra Filius', so the OCR's 'Terre Filosa' is a misreading, not a genuine historical term shift.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_560_2_term_pairs_2_285db16a",
+   "entry_id": "B:560:2",
+   "scan_entry_id": "B:560:2",
+   "cite_britannica": "[B:560:2]",
+   "cite_wikipedia": "[W:2305125:1338635003]",
+   "wiki_title": "Nicholas Amhurst",
+   "rerank_margin": 4.178508,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "Coluba Britainans",
+   "new": "Oculus Britanniæ",
+   "claim": null,
+   "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+   "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724.",
+   "scan_check": {
+    "scan_reading": "Oculus Britanniae",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Oculus Britanniae', not 'Coluba Britainans', so the OCR misread the title and date.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_713_3_term_pairs_0_9ae96bf6",
+   "entry_id": "B:713:3",
+   "scan_entry_id": "B:713:3",
+   "cite_britannica": "[B:713:3]",
+   "cite_wikipedia": "[W:180279:1326550449]",
+   "wiki_title": "Ounce",
+   "rerank_margin": 2.433997,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "fitteenth",
+   "new": "sixteenth",
+   "claim": null,
+   "quote_britannica": "the fitteenth part of a pound avoirdupois",
+   "quote_wikipedia": "The avoirdupois ounce (exactly 28.349 523 125 g) is 1 ⁄ 16 avoirdupois pound",
+   "scan_check": {
+    "scan_reading": "the sixteenth part of a pound avoirdupois",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'sixteenth' with a long-s that OCR misread as 'fitteenth', matching the modern 1/16 avoirdupois pound.",
+    "scan_entry_id": "B:713:3",
+    "bbox": [
+     0.4586,
+     0.5459,
+     0.9379,
+     0.6095
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_713_3_term_pairs_1_7303d6d6",
+   "entry_id": "B:713:3",
+   "scan_entry_id": "B:713:3",
+   "cite_britannica": "[B:713:3]",
+   "cite_wikipedia": "[W:180279:1326550449]",
+   "wiki_title": "Ounce",
+   "rerank_margin": 2.433997,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "wealth",
+   "new": "twelfth",
+   "claim": null,
+   "quote_britannica": "and the wealth part of a pound troy",
+   "quote_wikipedia": "There are 12 troy ounces in the obsolete troy pound",
+   "scan_check": {
+    "scan_reading": "twelfth",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'twelfth' for the troy pound, so the OCR's 'wealth' is a misreading, not a historical shift.",
+    "scan_entry_id": "B:713:3",
+    "bbox": [
+     0.4586,
+     0.5459,
+     0.9379,
+     0.6095
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  }
+ ],
+ "confirmed_shifts": [
+  {
+   "check_id": "B_1017_11_term_pairs_0_0347a26e",
+   "entry_id": "B:1017:11",
+   "scan_entry_id": "B:1017:11",
+   "cite_britannica": "[B:1017:11]",
+   "cite_wikipedia": "[W:191032:1338024466]",
+   "wiki_title": "Hälsingland",
+   "rerank_margin": 5.712891,
+   "kind": "term_pairs",
+   "rank": 1,
+   "old": "Botnhic gulph",
+   "new": "Gulf of Bothnia",
+   "claim": null,
+   "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.",
+   "scan_check": {
+    "scan_reading": "Bothnic gulph",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic term Bothnic gulph, which is a historical name for the Gulf of Bothnia.",
+    "scan_entry_id": "B:1017:11",
+    "bbox": [
+     0.4801,
+     0.6084,
+     0.9076,
+     0.6783
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_10_term_pairs_0_a212b875",
+   "entry_id": "B:2473:10",
+   "scan_entry_id": "B:2473:10",
+   "cite_britannica": "[B:2473:10]",
+   "cite_wikipedia": "[W:21445971:1324376018]",
+   "wiki_title": "Ergot (horse anatomy)",
+   "rerank_margin": 2.355466,
+   "kind": "term_pairs",
+   "rank": 10,
+   "old": "loft horn",
+   "new": "callosity",
+   "claim": null,
+   "quote_britannica": "like a piece of loft horn",
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)",
+   "scan_check": {
+    "scan_reading": "loft horn",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints loft horn, an 18th-century term for the ergot, which modern sources call a callosity.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_10_term_pairs_2_72c3924a",
+   "entry_id": "B:2473:10",
+   "scan_entry_id": "B:2473:10",
+   "cite_britannica": "[B:2473:10]",
+   "cite_wikipedia": "[W:21445971:1324376018]",
+   "wiki_title": "Ergot (horse anatomy)",
+   "rerank_margin": 2.355466,
+   "kind": "term_pairs",
+   "rank": 12,
+   "old": "tufi",
+   "new": "feather",
+   "claim": null,
+   "quote_britannica": "hide under the tufi of the fetlock.",
+   "quote_wikipedia": "long hairs on the lower legs.",
+   "scan_check": {
+    "scan_reading": "tufi",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic spelling \"tufi\" for tuft, which is a genuine historical term rather than an OCR error.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2171_6_term_pairs_1_a34ce82c",
+   "entry_id": "B:2171:6",
+   "scan_entry_id": "B:2171:6",
+   "cite_britannica": "[B:2171:6]",
+   "cite_wikipedia": "[W:79071:1353135063]",
+   "wiki_title": "Ate (mythology)",
+   "rerank_margin": 2.342574,
+   "kind": "term_pairs",
+   "rank": 14,
+   "old": "Jupiter",
+   "new": "Zeus",
+   "claim": null,
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife).",
+   "scan_check": {
+    "scan_reading": "Jupiter",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints Jupiter, the Roman name, while Wikipedia uses Zeus, the Greek equivalent, reflecting a genuine historical terminology shift.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2464_5_term_pairs_1_6e4c368f",
+   "entry_id": "B:2464:5",
+   "scan_entry_id": "B:2464:5",
+   "cite_britannica": "[B:2464:5]",
+   "cite_wikipedia": "[W:1468228:1326520528]",
+   "wiki_title": "Cabin (ship)",
+   "rerank_margin": 2.122037,
+   "kind": "term_pairs",
+   "rank": 20,
+   "old": "fleerage",
+   "new": "ship",
+   "claim": null,
+   "quote_britannica": "and on each side of the fleerage, for the officers of the flip to lie in.",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin.",
+   "scan_check": {
+    "scan_reading": "fleeage",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic term fleeage, an 18th-century spelling of flage meaning a ship's deck or upper works, not an OCR corruption of ship.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_604_2_term_pairs_0_a2bf1935",
+   "entry_id": "B:604:2",
+   "scan_entry_id": "B:604:2",
+   "cite_britannica": "[B:604:2]",
+   "cite_wikipedia": "[W:36857:1353074612]",
+   "wiki_title": "Thrace",
+   "rerank_margin": 1.855739,
+   "kind": "term_pairs",
+   "rank": 25,
+   "old": "European Turkey",
+   "new": "East Thrace",
+   "claim": null,
+   "quote_britannica": "now forming part of European Turkey.",
+   "quote_wikipedia": "and the European part of Turkey (East Thrace).",
+   "scan_check": {
+    "scan_reading": "European Turkey",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints European Turkey, an 18th-century term for the Ottoman-held European territory now called East Thrace.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_term_pairs_1_16865914",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "electric fire",
+   "new": "electric charge",
+   "claim": null,
+   "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion;",
+   "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud).",
+   "scan_check": {
+    "scan_reading": "electric fire",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electric fire, which is a genuine historical term for what is now called electric charge.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0982,
+     0.6792,
+     0.5415,
+     0.8263
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_term_pairs_3_817bf30d",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "prime conductor",
+   "new": "lightning rod",
+   "claim": null,
+   "quote_britannica": "the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted.",
+   "quote_wikipedia": "Positive lightning has also been shown to trigger the occurrence of upward lightning flashes from the tops of tall structures and is largely responsible for the initiation of sprites several tens of kilometers above ground level.",
+   "scan_check": {
+    "scan_reading": "prime conductor",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0952,
+     0.1183,
+     0.5405,
+     0.3973
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_1910_0_term_pairs_4_339cc5c2",
+   "entry_id": "B:1910:0",
+   "scan_entry_id": "B:1910:0",
+   "cite_britannica": "[B:1910:0]",
+   "cite_wikipedia": "[W:61344:1353843790]",
+   "wiki_title": "Lightning",
+   "rerank_margin": 0.724155,
+   "kind": "term_pairs",
+   "rank": null,
+   "old": "electrical atmosphere",
+   "new": "electric field",
+   "claim": null,
+   "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "Establishment of an electric field",
+   "scan_check": {
+    "scan_reading": "electrical atmosphere",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electrical atmosphere, which is a genuine historical term distinct from the modern term electric field.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_713_1_superseded_1_3b789f5a",
+   "entry_id": "B:713:1",
+   "scan_entry_id": "B:713:1",
+   "cite_britannica": "[B:713:1]",
+   "cite_wikipedia": "[W:381069:1353841714]",
+   "wiki_title": "Olney, Buckinghamshire",
+   "rerank_margin": 1.709785,
+   "kind": "superseded",
+   "rank": 12,
+   "old": null,
+   "new": null,
+   "claim": "Olney is situated nine miles South-east of Northampton.",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough.",
+   "scan_check": {
+    "scan_reading": "OULNEY, a market-town of Buckinghamshire, situated nine miles south-east of Northampton.",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'OULNEY' and 'nine miles south-east of Northampton', matching the OCR quote and differing from Wikipedia's modern '10 miles' distance.",
+    "scan_entry_id": "B:713:1",
+    "bbox": [
+     0.4743,
+     0.4998,
+     0.9398,
+     0.5541
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_258_superseded_0_8964ccac",
+   "entry_id": "P:258",
+   "scan_entry_id": "B:258:3",
+   "cite_britannica": "[B:258:3]",
+   "cite_wikipedia": "[W:7634016:1351664577]",
+   "wiki_title": "Thomas Willis",
+   "rerank_margin": 1.645722,
+   "kind": "superseded",
+   "rank": 13,
+   "old": null,
+   "new": null,
+   "claim": "Thomas Willis was born in Great Bedwyn, Wiltshire in 1611.",
+   "quote_britannica": "was born at Great Bodwin, in WildHere, in 1611",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "scan_check": {
+    "scan_reading": "was born at Great Bodwin, in WildHere, in 1611",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints Great Bodwin, WildHere, and 1611, which are archaic or erroneous historical readings that differ from modern Wikipedia.",
+    "scan_entry_id": "B:258:3",
+    "bbox": [
+     0.5172,
+     0.3944,
+     0.974,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_2473_9_superseded_0_935e2905",
+   "entry_id": "B:2473:9",
+   "scan_entry_id": "B:2473:9",
+   "cite_britannica": "[B:2473:9]",
+   "cite_wikipedia": "[W:9481:1352872890]",
+   "wiki_title": "Erfurt",
+   "rerank_margin": 1.50958,
+   "kind": "superseded",
+   "rank": 21,
+   "old": null,
+   "new": null,
+   "claim": "Erfurt is a large and beautiful city in Upper Saxony, Germany.",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
+   "quote_wikipedia": "Erfurt (German pronunciation:) is the capital and largest city of the Central German state of Thuringia",
+   "scan_check": {
+    "scan_reading": "ERFURT, a large and beautiful city of Upper Saxony in Germany, capital of Thuringia, and subject to the elector of Mentz",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Upper Saxony' and 'capital of Thuringia', so the historical regional label is genuine, not an OCR misreading.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "B_560_6_renamed_0_5dd4c36c",
+   "entry_id": "B:560:6",
+   "scan_entry_id": "B:560:6",
+   "cite_britannica": "[B:560:6]",
+   "cite_wikipedia": "[W:548706:1295162729]",
+   "wiki_title": "Amida",
+   "rerank_margin": 0.260137,
+   "kind": "renamed",
+   "rank": 16,
+   "old": null,
+   "new": null,
+   "claim": "Amida is a god worshipped by the Japanese.",
+   "quote_britannica": "AMIDA, a god worshipped by the japané",
+   "quote_wikipedia": "Amitābha Buddha, in Japanese",
+   "scan_check": {
+    "scan_reading": "AMIDA, a god worshipped by the Japanese",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'AMIDA, a god worshipped by the Japanese', matching the OCR and confirming the historical claim rather than an OCR error.",
+    "scan_entry_id": "B:560:6",
+    "bbox": [
+     0.4899,
+     0.6053,
+     0.9212,
+     0.9384
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_2307_renamed_0_af4b365f",
+   "entry_id": "P:2307",
+   "scan_entry_id": "B:2307:0",
+   "cite_britannica": "[B:2307:0]",
+   "cite_wikipedia": "[W:28565818:1351791811]",
+   "wiki_title": "Invasion of Algiers (1775)",
+   "rerank_margin": 0.038183,
+   "kind": "renamed",
+   "rank": 21,
+   "old": null,
+   "new": null,
+   "claim": "The expedition was ordered by Charles.",
+   "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
+   "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military",
+   "scan_check": {
+    "scan_reading": "Even ladies of birth and character attended Charles in his expedition,",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Charles' without a regnal number, while Wikipedia identifies him as Charles III, a genuine historical naming difference rather than an OCR misreading.",
+    "scan_entry_id": "B:2307:0",
+    "bbox": [
+     0.0816,
+     0.03,
+     0.5141,
+     0.1841
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "check_id": "P_2307_renamed_6_315c41ac",
+   "entry_id": "P:2307",
+   "scan_entry_id": "B:2307:0",
+   "cite_britannica": "[B:2307:0]",
+   "cite_wikipedia": "[W:28565818:1351791811]",
+   "wiki_title": "Invasion of Algiers (1775)",
+   "rerank_margin": 0.038183,
+   "kind": "renamed",
+   "rank": 22,
+   "old": null,
+   "new": null,
+   "claim": "The Algerian leader was named Hassan.",
+   "quote_britannica": "Being now reduced to the utmost difrets, Haffan received a immune to formative art direction,",
+   "quote_wikipedia": "The defending Algerian forces were led by Baba Mohammed ben-Osman.",
+   "scan_check": {
+    "scan_reading": "Haffan",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Haffan' (long-s for Hassan), a genuine 18th-century spelling of the Algerian leader's name, not an OCR error.",
+    "scan_entry_id": "B:2307:0",
+    "bbox": [
+     0.0825,
+     0.1448,
+     0.5151,
+     0.8934
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  }
+ ]
+}

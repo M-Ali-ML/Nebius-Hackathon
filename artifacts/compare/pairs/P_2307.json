@@ -100,7 +100,21 @@
    "tag": "renamed",
    "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
    "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military",
-   "cite_britannica": "[B:2307:0]"
+   "cite_britannica": "[B:2307:0]",
+   "scan_check": {
+    "scan_reading": "Even ladies of birth and character attended Charles in his expedition,",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Charles' without a regnal number, while Wikipedia identifies him as Charles III, a genuine historical naming difference rather than an OCR misreading.",
+    "scan_entry_id": "B:2307:0",
+    "bbox": [
+     0.0816,
+     0.03,
+     0.5141,
+     0.1841
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The Spanish landed without opposition.",
@@ -142,7 +156,21 @@
    "tag": "renamed",
    "quote_britannica": "Being now reduced to the utmost difrets, Haffan received a immune to formative art direction,",
    "quote_wikipedia": "The defending Algerian forces were led by Baba Mohammed ben-Osman.",
-   "cite_britannica": "[B:2307:0]"
+   "cite_britannica": "[B:2307:0]",
+   "scan_check": {
+    "scan_reading": "Haffan",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Haffan' (long-s for Hassan), a genuine 18th-century spelling of the Algerian leader's name, not an OCR error.",
+    "scan_entry_id": "B:2307:0",
+    "bbox": [
+     0.0825,
+     0.1448,
+     0.5151,
+     0.8934
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The expedition was a disastrous failure for Spain.",

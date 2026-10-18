@@ -104,7 +104,21 @@
    "claim": "He wrote a satire called Terræ Filius about Oxford.",
    "tag": "renamed",
    "quote_britannica": "in a book entitled Terre Filosa.",
-   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.",
+   "scan_check": {
+    "scan_reading": "Terra Filius",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Terra Filius', so the OCR's 'Terre Filosa' is a misreading, not a genuine historical rename.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "He wrote a poem called The Convocation.",
@@ -116,7 +130,21 @@
    "claim": "He was a prominent writer for the political paper The Craftsman.",
    "tag": "renamed",
    "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
-   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.",
+   "scan_check": {
+    "scan_reading": "The Craftsman",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'The Craftsman', so the OCR's 'Zie Grafjnaar' and 'flare' are misreadings of the long-s and worn type.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "He was a drudge of his party for nearly 20 years.",
@@ -136,19 +164,61 @@
    "old": "Terre Filosa",
    "new": "Terræ Filius",
    "quote_britannica": "in a book entitled Terre Filosa.",
-   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford.",
+   "scan_check": {
+    "scan_reading": "Terra Filius",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Terra Filius', so the OCR's 'Terre Filosa' is a misreading, not a genuine historical term shift.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Zie Grafjnaar",
    "new": "The Craftsman",
    "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
-   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.",
+   "scan_check": {
+    "scan_reading": "The Craftsman",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints The Craftsman, so Zie Grafjnaar is an OCR misreading of the old-style type.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Coluba Britainans",
    "new": "Oculus Britanniæ",
    "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
-   "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+   "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724.",
+   "scan_check": {
+    "scan_reading": "Oculus Britanniae",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Oculus Britanniae', not 'Coluba Britainans', so the OCR misread the title and date.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -189,17 +259,59 @@
    "term_pairs": [
     {
      "old": "Zie Grafjnaar",
-     "new": "The Craftsman"
+     "new": "The Craftsman",
+     "scan_check": {
+      "scan_reading": "The Craftsman",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan clearly prints The Craftsman, so Zie Grafjnaar is an OCR misreading of the old-style type.",
+      "scan_entry_id": "B:560:2",
+      "bbox": [
+       0.0758,
+       0.6061,
+       0.516,
+       0.8892
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [
     {
      "old": "Terre Filosa",
-     "new": "Terræ Filius"
+     "new": "Terræ Filius",
+     "scan_check": {
+      "scan_reading": "Terra Filius",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'Terra Filius', so the OCR's 'Terre Filosa' is a misreading, not a genuine historical term shift.",
+      "scan_entry_id": "B:560:2",
+      "bbox": [
+       0.0758,
+       0.6061,
+       0.516,
+       0.8892
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Coluba Britainans",
-     "new": "Oculus Britanniæ"
+     "new": "Oculus Britanniæ",
+     "scan_check": {
+      "scan_reading": "Oculus Britanniae",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'Oculus Britanniae', not 'Coluba Britainans', so the OCR misread the title and date.",
+      "scan_entry_id": "B:560:2",
+      "bbox": [
+       0.0758,
+       0.6061,
+       0.516,
+       0.8892
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ]
   },

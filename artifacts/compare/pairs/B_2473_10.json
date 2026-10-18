@@ -73,7 +73,21 @@
    "claim": "The ergot is like a piece of horn.",
    "tag": "renamed",
    "quote_britannica": "like a piece of loft horn",
-   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)",
+   "scan_check": {
+    "scan_reading": "like a piece of loft horn",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'soft horn', and the OCR misread the long-s in 'soft' as an f, producing 'loft horn'.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [
@@ -81,19 +95,61 @@
    "old": "loft horn",
    "new": "callosity",
    "quote_britannica": "like a piece of loft horn",
-   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)",
+   "scan_check": {
+    "scan_reading": "loft horn",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints loft horn, an 18th-century term for the ergot, which modern sources call a callosity.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "pattern join",
    "new": "fetlock",
    "quote_britannica": "placed behind and be low the pattern join",
-   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine.",
+   "scan_check": {
+    "scan_reading": "pattern-joint",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints pattern-joint, not pattern join, and the OCR split the hyphenated word and dropped the hyphen.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "tufi",
    "new": "feather",
    "quote_britannica": "hide under the tufi of the fetlock.",
-   "quote_wikipedia": "long hairs on the lower legs."
+   "quote_wikipedia": "long hairs on the lower legs.",
+   "scan_check": {
+    "scan_reading": "tufi",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic spelling \"tufi\" for tuft, which is a genuine historical term rather than an OCR error.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -136,15 +192,57 @@
    "term_pairs": [
     {
      "old": "loft horn",
-     "new": "callosity"
+     "new": "callosity",
+     "scan_check": {
+      "scan_reading": "loft horn",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints loft horn, an 18th-century term for the ergot, which modern sources call a callosity.",
+      "scan_entry_id": "B:2473:10",
+      "bbox": [
+       0.4782,
+       0.2248,
+       0.932,
+       0.3111
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "pattern join",
-     "new": "fetlock"
+     "new": "fetlock",
+     "scan_check": {
+      "scan_reading": "pattern-joint",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints pattern-joint, not pattern join, and the OCR split the hyphenated word and dropped the hyphen.",
+      "scan_entry_id": "B:2473:10",
+      "bbox": [
+       0.4782,
+       0.2248,
+       0.932,
+       0.3111
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "tufi",
-     "new": "feather"
+     "new": "feather",
+     "scan_check": {
+      "scan_reading": "tufi",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints the archaic spelling \"tufi\" for tuft, which is a genuine historical term rather than an OCR error.",
+      "scan_entry_id": "B:2473:10",
+      "bbox": [
+       0.4782,
+       0.2248,
+       0.932,
+       0.3111
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": []

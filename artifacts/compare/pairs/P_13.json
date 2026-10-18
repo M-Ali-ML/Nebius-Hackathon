@@ -1,0 +1,287 @@
+{
+ "entry_id": "P:13",
+ "level": "page",
+ "entry_ids": [
+  "B:13:0"
+ ],
+ "page_kind": "treatise",
+ "cite_britannica": "[B:13:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:13",
+ "row_index": 13,
+ "image_sha256": "50049db49e8b83dc59735eae8cc35e6df733062d4bcb07c5cb4663d51cade012",
+ "headword": null,
+ "topic_hint": "Shipbuilding",
+ "wiki_page_id": "187377",
+ "wiki_revision_id": "1348971360",
+ "wiki_title": "Shipbuilding",
+ "wiki_url": "https://en.wikipedia.org/wiki/Shipbuilding",
+ "text_sha256": "4e0ee6694b55edc40293146c4a9f0fddc6a7ec7b983ea5a733fc935ee8a93e73",
+ "cite_wikipedia": "[W:187377:1348971360]",
+ "rerank_logit": -6.269448,
+ "rerank_margin": 0.367814,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2248,
+  "prompt_tokens": 4459,
+  "total_tokens": 6707,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7954,
+ "article_chars_used": 10000,
+ "article_chars_total": 35551,
+ "similarities": [
+  {
+   "point": "Both texts describe the use of iron knees as structural components in shipbuilding.",
+   "quote_britannica": "The current non-plate knees for securing the otlop-beans, and the iron frontal knees of the other decks, are described in (a) and (a).",
+   "quote_wikipedia": "Iron was used for more than fastenings (nails and bolts) as structural components such as iron knees were introduced, with examples existing in the mid-18th century and from the mid-19th century onwards.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Both texts discuss the use of bolts to secure ship components.",
+   "quote_britannica": "and being then firmly bolted to the side, instead of becoming a mere local fixer of the beam to the shiny's exterior frame, as likely were, they are seen continued and general security.",
+   "quote_wikipedia": "Iron was used for more than fastenings (nails and bolts) as structural components such as iron knees were introduced, with examples existing in the mid-18th century and from the mid-19th century onwards.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Both texts mention that shipbuilding is a specialized occupation or activity.",
+   "quote_britannica": "These various alterations from the old system of building had the effect of very greatly increasing the strength of the ship of the boys'l away.",
+   "quote_wikipedia": "Shipbuilders, also called shipwrights, follow a specialized occupation that traces its roots to before recorded history.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Both texts refer to the construction of ships and vessels.",
+   "quote_britannica": "The beams are discussed in the system nearly as we usual, except that in buildings, where a ship necessarily re-quires the greatest security, two additional beams have been introduced.",
+   "quote_wikipedia": "Shipbuilding is the construction of ships and other floating vessels.",
+   "cite_britannica": "[B:13:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on Sir Robert Seapings' specific diagonal framing system, while Wikipedia provides a broad historical overview of shipbuilding.",
+   "quote_britannica": "we have chosen the perfected application of Sir Robert Seapings' system, after the adoption of the circular stem into the service,",
+   "quote_wikipedia": "Shipbuilding is the construction of ships and other floating vessels. In modern times, it normally takes place in a specialized facility known as a shipyard.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Britannica uses archaic OCR-corrupted terminology for ship parts, whereas Wikipedia uses standard modern terminology.",
+   "quote_britannica": "The beams of the several decks are attached to the shiny's side in the following manner.",
+   "quote_wikipedia": "The construction of boats is a similar activity called boat building.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Britannica discusses 18th-century structural innovations in detail, while Wikipedia covers ancient to modern shipbuilding history.",
+   "quote_britannica": "The trust--pieces so intended into one rhombed, are to the diagonal frames where the key-stone is to the arch;",
+   "quote_wikipedia": "The earliest evidence of maritime transport by modern humans is the settlement of Australia between 50,000 and 60,000 years ago.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "point": "Britannica is a technical treatise on a specific building system, while Wikipedia is a general encyclopedic article.",
+   "quote_britannica": "This arch-like property of the diagonal frame not only opposes an alteration of position in a longitudinal direction, but also restate external pressure on the bottom,",
+   "quote_wikipedia": "Shipbuilding and ship repairs, both commercial and military, are referred to as naval engineering.",
+   "cite_britannica": "[B:13:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The diagonal frame has an arch-like property that opposes alteration of position in a longitudinal direction.",
+   "tag": "dropped",
+   "quote_britannica": "This arch-like property of the diagonal frame not only opposes an alteration of position in a longitudinal direction, but also restate external pressure on the bottom,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "The diagonal frame resists external pressure on the bottom from grounding or other causes.",
+   "tag": "dropped",
+   "quote_britannica": "but also restate external pressure on the bottom, either from grounding or any other cause, because so impression can be made in its figure in these directions,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "Two additional beams have been introduced in buildings where a ship requires the greatest security.",
+   "tag": "dropped",
+   "quote_britannica": "except that in buildings, where a ship necessarily re-quires the greatest security, two additional beams have been introduced.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "Shelf-pieces are composed of several lengths of timber, scarfed or joined together by coaks or circular dowels.",
+   "tag": "dropped",
+   "quote_britannica": "These shelf-pieces are composed of several lengths of timber, scarded or joined together by coaks or circular downs, so as to form a full of internal hoop,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "Chocks are placed under all the shelf-pieces in walls of the beams, except the drop, to receive the up and down arm of the iron knees.",
+   "tag": "dropped",
+   "quote_britannica": "By chocks, represented in Plate CCCCLV. (m.,) which are placed under all the shelf-pieces in walls of the beams, except the drop in such a manner as to receive the up and down arm of the iron knes.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "The lower ends of chocks under the span-deck-pipe step on the ends of the otlop-beams.",
+   "tag": "dropped",
+   "quote_britannica": "The lower ends of those under the span-deck-pipe step on the ends of the otp-bears; and those of the several decks above, step on the projecting part of the splashing beams.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "The trusing between the ports has been discontinued in France.",
+   "tag": "dropped",
+   "quote_britannica": "The trusing between the ports has been discontinued in France.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "claim": "The actual inclined contents of the diagonal frame were less than those of the ceiling which is superseded.",
+   "tag": "dropped",
+   "quote_britannica": "According to the estimate made the IRS of Robert Seapings, the actual inclined contents of the diagonal frame were less than those of the ceiling which is superseded.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:13:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "shiny",
+   "new": "ship",
+   "quote_britannica": "The beams of the several decks are attached to the shiny's side in the following manner.",
+   "quote_wikipedia": "Shipbuilding is the construction of ships and other floating vessels.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "old": "otlop-beams",
+   "new": "beams",
+   "quote_britannica": "The current non-plate knees for securing the otlop-beans, and the iron frontal knees of the other decks, are described in (a) and (a).",
+   "quote_wikipedia": "Iron was used for more than fastenings (nails and bolts) as structural components such as iron knees were introduced, with examples existing in the mid-18th century and from the mid-19th century onwards.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "old": "knes",
+   "new": "knees",
+   "quote_britannica": "except the drop in such a manner as to receive the up and down arm of the iron knes.",
+   "quote_wikipedia": "Iron was used for more than fastenings (nails and bolts) as structural components such as iron knees were introduced, with examples existing in the mid-18th century and from the mid-19th century onwards.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "old": "scarded",
+   "new": "joined",
+   "quote_britannica": "These shelf-pieces are composed of several lengths of timber, scarded or joined together by coaks or circular downs,",
+   "quote_wikipedia": "The ships of ancient Egypt were built by joining the hull planks together, edge to edge, with tenons set in mortices cut in the mating edges.",
+   "cite_britannica": "[B:13:0]"
+  },
+  {
+   "old": "boys'l away",
+   "new": "navy",
+   "quote_britannica": "These various alterations from the old system of building had the effect of very greatly increasing the strength of the ship of the boys'l away.",
+   "quote_wikipedia": "Shipbuilding and ship repairs, both commercial and military, are referred to as naval engineering.",
+   "cite_britannica": "[B:13:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Ancient Egyptian shipbuilding techniques",
+   "quote_wikipedia": "The ships of ancient Egypt were built by joining the hull planks together, edge to edge, with tenons set in mortices cut in the mating edges."
+  },
+  {
+   "topic": "Austronesian maritime technology and expansion",
+   "quote_wikipedia": "The Austronesian expansion, which began c. 3000 BC with migration from Taiwan to the island of Luzon in the Philippines, spread across Island Southeast Asia."
+  },
+  {
+   "topic": "Transition from iron to steel ship construction",
+   "quote_wikipedia": "Ultimately, whole ships were made of iron and, later, steel."
+  },
+  {
+   "topic": "Ship breaking and dismantling",
+   "quote_wikipedia": "The dismantling of ships is called ship breaking."
+  },
+  {
+   "topic": "Early evidence of maritime transport and raft technology",
+   "quote_wikipedia": "The earliest evidence of maritime transport by modern humans is the settlement of Australia between 50,000 and 60,000 years ago."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1370,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "scarded",
+     "new": "joined"
+    },
+    {
+     "old": "boys'l away",
+     "new": "navy"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "shiny",
+     "new": "ship"
+    },
+    {
+     "old": "otlop-beams",
+     "new": "beams"
+    },
+    {
+     "old": "knes",
+     "new": "knees"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Ancient Egyptian shipbuilding techniques",
+    "Austronesian maritime technology and expansion",
+    "Transition from iron to steel ship construction",
+    "Ship breaking and dismantling",
+    "Early evidence of maritime transport and raft technology"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 8
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok",
+ "rescued_threshold_miss": true,
+ "rescue_metadata": {
+  "candidate_source": "match/vision_expand/13.json",
+  "method": "vision_expand",
+  "tau": -4.0,
+  "rerank_logit": -6.269448,
+  "rerank_margin": 0.367814,
+  "runner_up_title": "Longitudinal framing",
+  "runner_up_logit": -6.637262,
+  "rationale": "Top-1 vision-expanded reranked candidate is Shipbuilding (rerank logit -6.27, margin 0.37 over Longitudinal framing). Super VL read the running head SHIP-BUILDING and proposed Shipbuilding, which matches the treatise topic."
+ }
+}

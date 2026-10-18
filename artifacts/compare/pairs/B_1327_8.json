@@ -93,7 +93,21 @@
    "claim": "The name may derive from Besançon Hugues, a Genevan political leader.",
    "tag": "renamed",
    "quote_britannica": "The name had its first rife in 1560; but authors are",
-   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.",
+   "scan_check": {
+    "scan_reading": "The name had its first rise in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife', and the date 1560 differs from Wikipedia's circa 1550, but the etymological claim about Besançon Hugues is not present in the visible Britannica text.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The name may derive from spirits called le Roy Huguet in Tours.",
@@ -125,19 +139,61 @@
    "old": "rife",
    "new": "common use",
    "quote_britannica": "The name had its first rife in 1560; but authors are",
-   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.",
+   "scan_check": {
+    "scan_reading": "rise",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife'.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Amboyse",
    "new": "Amboise",
    "quote_britannica": "The name had its first rife in 1560; but authors are",
-   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560",
+   "scan_check": {
+    "scan_reading": "The name had its first rife in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the scan does not contain the term 'Amboyse' or 'Amboise'.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Tourraine",
    "new": "Touraine",
    "quote_britannica": "The name had its first rife in 1560; but authors are",
-   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\"",
+   "scan_check": {
+    "scan_reading": "The name had its first rife in 1560; but authors are",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the candidate pair 'Tourraine' to 'Touraine' is not supported by the visible text.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -222,17 +278,59 @@
    "term_pairs": [
     {
      "old": "rife",
-     "new": "common use"
+     "new": "common use",
+     "scan_check": {
+      "scan_reading": "rise",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife'.",
+      "scan_entry_id": "B:1327:8",
+      "bbox": [
+       0.445,
+       0.8678,
+       0.8421,
+       0.9525
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [
     {
      "old": "Amboyse",
-     "new": "Amboise"
+     "new": "Amboise",
+     "scan_check": {
+      "scan_reading": "The name had its first rife in 1560; but authors are",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the scan does not contain the term 'Amboyse' or 'Amboise'.",
+      "scan_entry_id": "B:1327:8",
+      "bbox": [
+       0.445,
+       0.8678,
+       0.8421,
+       0.9525
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Tourraine",
-     "new": "Touraine"
+     "new": "Touraine",
+     "scan_check": {
+      "scan_reading": "The name had its first rife in 1560; but authors are",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'rife' where the OCR should read 'rise', a long-s misreading, and the candidate pair 'Tourraine' to 'Touraine' is not supported by the visible text.",
+      "scan_entry_id": "B:1327:8",
+      "bbox": [
+       0.445,
+       0.8678,
+       0.8421,
+       0.9525
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ]
   },

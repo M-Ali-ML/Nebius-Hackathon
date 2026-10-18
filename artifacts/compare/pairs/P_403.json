@@ -100,7 +100,21 @@
    "tag": "superseded",
    "quote_britannica": "whatever changes the Ethiopian dialect may have un-dergone in the course of three thousand years, it was originally either Chahidae, or at least a branch of that language.",
    "quote_wikipedia": "Philology (from Ancient Greek φιλολογία (philología) ' love of word ') is the study of language in oral and written historical sources.",
-   "cite_britannica": "[B:403:0]"
+   "cite_britannica": "[B:403:0]",
+   "scan_check": {
+    "scan_reading": "Chaldaic",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Chaldaic' in the phrase 'either Chaldaic, or at least a branch of that language', so the OCR's 'Chahidae' is a misreading of the long-s and ligatured letters.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.0,
+     0.0386,
+     0.4858,
+     0.4637
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The Ethiopians call themselves Chadleans.",
@@ -121,7 +135,21 @@
    "tag": "superseded",
    "quote_britannica": "Six Villan Jones seems to have paved, by very plausible arguments, that the Sanscrit character were deduced from the Chahida.",
    "quote_wikipedia": "Similarities between Sanskrit and European languages were first noted in the early 19th century.",
-   "cite_britannica": "[B:403:0]"
+   "cite_britannica": "[B:403:0]",
+   "scan_check": {
+    "scan_reading": "Sir William Jones seems to have proved, by very plausible arguments, that the Sanscrit characters were deduced from the Chaldaic.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Sir William Jones', 'proved', 'characters', and 'Chaldaic', not the OCR's 'Six Villan Jones', 'paved', 'character', and 'Chahida'.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.0,
+     0.0386,
+     0.4858,
+     0.4637
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "The Ethiopians were a highly civilized people whose laws, institutions, and religion were celebrated far and wide.",
@@ -142,7 +170,21 @@
    "tag": "superseded",
    "quote_britannica": "The rare ancient language of Ethiopians, which we shall now call by its modern name of Abyssian, was according to that gentleman, the Geest, which was spoken by the ancient Chinese shopdesks.",
    "quote_wikipedia": "Work on the ancient languages of the Near East progressed rapidly. In the mid-19th century, Henry Rawlinson and others deciphered the Behistun Inscription, which records the same text in Old Persian, Elamite, and Akkadian, using a variation of cuneiform for each language.",
-   "cite_britannica": "[B:403:0]"
+   "cite_britannica": "[B:403:0]",
+   "scan_check": {
+    "scan_reading": "The most ancient language of Ethiopia, which we shall now call by its modern name of Abyssinia, was, according to that gentleman, the Geez, which was spoken by the ancient Cushite shepherds.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Abyssinia', 'Geez', and 'Cushite shepherds', not the OCR's 'Abyssian', 'Geest', and 'Chinese shopdesks'.",
+    "scan_entry_id": "B:403:0",
+    "bbox": [
+     0.4429,
+     0.4253,
+     0.9106,
+     0.72
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [

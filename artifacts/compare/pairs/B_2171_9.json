@@ -72,19 +72,61 @@
    "claim": "Aternum is now called Alteris.",
    "tag": "superseded",
    "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
-   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Aterni, (Cluvenus): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Aterni, not Alteris, and the OCR also misread Lucania as Lucerna and Cluvenus as Chorusas, so the claimed rename is an OCR misreading.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Aternum is in the territory of the Piceni and is now Pescara, a port-town of Naples.",
    "tag": "superseded",
    "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
-   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "now Pescara, a port-town of Naples, situated on the Adriatic",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Pescara and situated, so the OCR's Pofcara and fitu-ated are long-s misreadings, not a historical difference.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Aternum is at East Longitude 15.25 and Latitude 42.50.",
    "tag": "superseded",
    "quote_britannica": "E. Long 15.25. V.Lav. 42.50.",
-   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E"
+   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E",
+   "scan_check": {
+    "scan_reading": "E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints N. Lat. 42. 30, not V.Lav. 42.50, so the OCR misread the latitude and the claim is an OCR error.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [
@@ -92,19 +134,61 @@
    "old": "Lucerna",
    "new": "Roman",
    "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
-   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alerni, (Cluvenus): Also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Lucania, not Lucerna, so the OCR misread the word and created a false old-to-new term pair.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Alteris",
    "new": "Pescara",
    "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
-   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alterni, (Cluvenius): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Pescara, not Alteris, so the OCR misread the entry and the apparent rename is false.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Pofcara",
    "new": "Pescara",
    "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
-   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy.",
+   "scan_check": {
+    "scan_reading": "Pescara",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Pescara' with a long-s, which the OCR misread as 'Pofcara'.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -145,17 +229,59 @@
    "term_pairs": [
     {
      "old": "Lucerna",
-     "new": "Roman"
+     "new": "Roman",
+     "scan_check": {
+      "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alerni, (Cluvenus): Also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints Lucania, not Lucerna, so the OCR misread the word and created a false old-to-new term pair.",
+      "scan_entry_id": "B:2171:9",
+      "bbox": [
+       0.1012,
+       0.828,
+       0.5443,
+       0.908
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Alteris",
-     "new": "Pescara"
+     "new": "Pescara",
+     "scan_check": {
+      "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alterni, (Cluvenius): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic.",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints Pescara, not Alteris, so the OCR misread the entry and the apparent rename is false.",
+      "scan_entry_id": "B:2171:9",
+      "bbox": [
+       0.1012,
+       0.828,
+       0.5443,
+       0.908
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [
     {
      "old": "Pofcara",
-     "new": "Pescara"
+     "new": "Pescara",
+     "scan_check": {
+      "scan_reading": "Pescara",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints 'Pescara' with a long-s, which the OCR misread as 'Pofcara'.",
+      "scan_entry_id": "B:2171:9",
+      "bbox": [
+       0.1012,
+       0.828,
+       0.5443,
+       0.908
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ]
   },

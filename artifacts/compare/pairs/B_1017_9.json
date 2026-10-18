@@ -98,7 +98,21 @@
    "claim": "Helots were reduced to the condition of serfs.",
    "tag": "renamed",
    "quote_britannica": "reduced them into the condition of flares",
-   "quote_wikipedia": "They are thus institutionally distinguished from the anonymous douloi (slaves)"
+   "quote_wikipedia": "They are thus institutionally distinguished from the anonymous douloi (slaves)",
+   "scan_check": {
+    "scan_reading": "reduced them into the condition of flares",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the long-s word 'ſlaves' (slaves), which the OCR misread as 'flares'.",
+    "scan_entry_id": "B:1017:9",
+    "bbox": [
+     0.4821,
+     0.46,
+     0.9076,
+     0.597
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Spartan women were forbidden from engaging in manual or mechanical employment.",

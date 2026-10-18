@@ -1,0 +1,100 @@
+{
+ "check_id": "B_1473_7_term_pairs_2_9f32df25",
+ "entry_id": "B:1473:7",
+ "scan_entry_id": "B:1473:7",
+ "bbox": [
+  0.4606,
+  0.6342,
+  0.8627,
+  0.9205
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1473",
+  "row_index": 1473,
+  "image_sha256": "b3b602ef6a3d4961fd1926a15d634a40ec929c15b00e2f7cc5109b3f7180daac",
+  "scan_size": [
+   600,
+   783
+  ],
+  "bbox": [
+   0.4606,
+   0.6342,
+   0.8627,
+   0.9205
+  ],
+  "image_size": [
+   800,
+   743
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "lord",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'lord' in the phrase 'fall to a lord within his manor', so the OCR's 'anaural or crist' is a misreading and the apparent 'loud' to 'lord' shift is not genuine.",
+  "scan_entry_id": "B:1473:7",
+  "bbox": [
+   0.4606,
+   0.6342,
+   0.8627,
+   0.9205
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-8e1f3f17fe193d80",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"scan_reading\": \"lord\",\n  \"is_ocr_error\": true,\n  \"status\": \"ocr_error\",\n  \"explanation\": \"The scan prints 'lord' in the phrase 'fall to a lord within his manor', so the OCR's 'anaural or crist' is a misreading and the apparent 'loud' to 'lord' shift is not genuine.\"\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331172,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 84,
+   "prompt_tokens": 1172,
+   "total_tokens": 1256,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 602
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.56
+ }
+}

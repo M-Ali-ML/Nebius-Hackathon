@@ -104,13 +104,41 @@
    "old": "flip",
    "new": "ship",
    "quote_britannica": "fewelful parts of a flip, particularly on the quarter-deck,",
-   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin.",
+   "scan_check": {
+    "scan_reading": "ship",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the long-s form of ship, which the OCR misread as flip.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "fleerage",
    "new": "ship",
    "quote_britannica": "and on each side of the fleerage, for the officers of the flip to lie in.",
-   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin.",
+   "scan_check": {
+    "scan_reading": "fleeage",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic term fleeage, an 18th-century spelling of flage meaning a ship's deck or upper works, not an OCR corruption of ship.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "wiki_only_topics": [
@@ -151,11 +179,39 @@
    "term_pairs": [
     {
      "old": "flip",
-     "new": "ship"
+     "new": "ship",
+     "scan_check": {
+      "scan_reading": "ship",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints the long-s form of ship, which the OCR misread as flip.",
+      "scan_entry_id": "B:2464:5",
+      "bbox": [
+       0.027,
+       0.8053,
+       0.4838,
+       0.9361
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "fleerage",
-     "new": "ship"
+     "new": "ship",
+     "scan_check": {
+      "scan_reading": "fleeage",
+      "is_ocr_error": false,
+      "status": "confirmed",
+      "explanation": "The scan prints the archaic term fleeage, an 18th-century spelling of flage meaning a ship's deck or upper works, not an OCR corruption of ship.",
+      "scan_entry_id": "B:2464:5",
+      "bbox": [
+       0.027,
+       0.8053,
+       0.4838,
+       0.9361
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": []

@@ -86,13 +86,41 @@
    "claim": "Erfurt is a large and beautiful city in Upper Saxony, Germany.",
    "tag": "superseded",
    "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
-   "quote_wikipedia": "Erfurt (German pronunciation:) is the capital and largest city of the Central German state of Thuringia"
+   "quote_wikipedia": "Erfurt (German pronunciation:) is the capital and largest city of the Central German state of Thuringia",
+   "scan_check": {
+    "scan_reading": "ERFURT, a large and beautiful city of Upper Saxony in Germany, capital of Thuringia, and subject to the elector of Mentz",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints 'Upper Saxony' and 'capital of Thuringia', so the historical regional label is genuine, not an OCR misreading.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Erfurt is the capital of Thailand.",
    "tag": "superseded",
    "quote_britannica": "capital of Thailand, and subject to the elckor of Menus",
-   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia, with a population of around 216,000."
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia, with a population of around 216,000.",
+   "scan_check": {
+    "scan_reading": "capital of Thuringia, and subject to the elector of Mentz",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Thuringia' and 'elector of Mentz', so the OCR's 'Thailand' and 'elckor of Menus' are misreadings of the long-s and worn letters.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Erfurt is subject to the Elector of Mainz.",
@@ -104,13 +132,41 @@
    "claim": "Erfurt is at East longitude 117 degrees.",
    "tag": "superseded",
    "quote_britannica": "E. long.117 é', N.lax. 910.",
-   "quote_wikipedia": "Erfurt is 100 km (62 mi) south-west of Leipzig, 250 km (155 mi) north-east of Frankfurt"
+   "quote_wikipedia": "Erfurt is 100 km (62 mi) south-west of Leipzig, 250 km (155 mi) north-east of Frankfurt",
+   "scan_check": {
+    "scan_reading": "E. long. 11° 6', N. lat. 51°.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'E. long. 11° 6', N. lat. 51°', so the OCR's '117 é'' and '910' are misreadings of the degree, minute, and latitude figures.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Erfurt is at North latitude 910.",
    "tag": "superseded",
    "quote_britannica": "E. long.117 é', N.lax. 910.",
-   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin"
+   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin",
+   "scan_check": {
+    "scan_reading": "N. lat. 51°",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'N. lat. 51°', so the OCR's '910' is a misreading of '51°'.",
+    "scan_entry_id": "B:2473:9",
+    "bbox": [
+     0.485,
+     0.185,
+     0.931,
+     0.2556
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [

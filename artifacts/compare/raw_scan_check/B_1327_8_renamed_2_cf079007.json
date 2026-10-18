@@ -1,0 +1,100 @@
+{
+ "check_id": "B_1327_8_renamed_2_cf079007",
+ "entry_id": "B:1327:8",
+ "scan_entry_id": "B:1327:8",
+ "bbox": [
+  0.445,
+  0.8678,
+  0.8421,
+  0.9525
+ ],
+ "scan_meta": {
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1327",
+  "row_index": 1327,
+  "image_sha256": "7d41b1db21d5e291f0cbf58aa92f8820d11602e700d5e337935c65b9d75b6211",
+  "scan_size": [
+   600,
+   767
+  ],
+  "bbox": [
+   0.445,
+   0.8678,
+   0.8421,
+   0.9525
+  ],
+  "image_size": [
+   800,
+   218
+  ]
+ },
+ "prompt_version": "scan-check-v1",
+ "parsed": {
+  "scan_reading": "The name had its first rise in 1560; but authors are",
+  "is_ocr_error": true,
+  "status": "ocr_error",
+  "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife', and the date 1560 differs from Wikipedia's circa 1550, but the etymological claim about Besançon Hugues is not present in the visible Britannica text.",
+  "scan_entry_id": "B:1327:8",
+  "bbox": [
+   0.445,
+   0.8678,
+   0.8421,
+   0.9525
+  ],
+  "model": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "reply": {
+  "id": "chatcmpl-9e2791d7c9f901cd",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"scan_reading\": \"The name had its first rise in 1560; but authors are\", \"is_ocr_error\": true, \"status\": \"ocr_error\", \"explanation\": \"The scan prints 'rise' with a long-s, which the OCR misread as 'rife', and the date 1560 differs from Wikipedia's circa 1550, but the etymological claim about Besançon Hugues is not present in the visible Britannica text.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792331136,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 107,
+   "prompt_tokens": 895,
+   "total_tokens": 1002,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": {
+     "image": 281
+    }
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.52
+ }
+}

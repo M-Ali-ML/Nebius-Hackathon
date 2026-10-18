@@ -135,14 +135,42 @@
    "tag": "renamed",
    "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
    "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
-   "cite_britannica": "[B:1430:0]"
+   "cite_britannica": "[B:1430:0]",
+   "scan_check": {
+    "scan_reading": "Thebes",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Thebes' and contains no mention of the ancient Egyptian name 'Waset', so the renamed claim is an OCR-derived mismatch.",
+    "scan_entry_id": "B:1430:0",
+    "bbox": [
+     0.0269,
+     0.0378,
+     0.522,
+     0.3903
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "claim": "Thebes was known as the City of Amun or njw.t-jmn.",
    "tag": "renamed",
    "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
    "quote_wikipedia": "From the end of the New Kingdom, Thebes was known in Egyptian as njw.t-jmn, the \"City of Amun \", the chief of the Theban Triad of deities whose other members were Mut and Khonsu.",
-   "cite_britannica": "[B:1430:0]"
+   "cite_britannica": "[B:1430:0]",
+   "scan_check": {
+    "scan_reading": "To one Salatis our author ascribes the destruction of Thebes in Upper Egypt, so much celebrated by Homer for its magnificence.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'Salatis' and 'Thebes', not 'Salaris' or 'City of Amun or njw.t-jmn', so the OCR misread the text and paired it with a modern Wikipedia term not present in the 18th-century entry.",
+    "scan_entry_id": "B:1430:0",
+    "bbox": [
+     0.0269,
+     0.0378,
+     0.522,
+     0.3903
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [

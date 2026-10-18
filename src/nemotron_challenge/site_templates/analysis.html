@@ -49,6 +49,28 @@
     </tbody></table></div></details>
   {% endif %}
   {% else %}<p class="note">No drift summary yet (compare/drift_summary.json).</p>{% endif %}
+  {% if drift_verification %}
+  <div class="frame" style="margin-top: var(--s4)">
+    <div class="gen-note"><span class="pill gen mono">Super VL Scan Check</span> Visual verification of <b>{{ drift_verification.total_checked }}</b> candidate drift items against cropped page scans: <b>{{ drift_verification.confirmed_count }}</b> confirmed as genuine historical changes, <b>{{ drift_verification.ocr_error_count }}</b> ({{ '%.1f'|format(100 * drift_verification.ocr_error_rate) }}%) caught as OCR reading errors (such as long-s <code>ſ</code> misread as <code>f</code> in <code>fitteenth</code> vs <code>ſixteenth</code>).</div>
+    <details class="disclose" style="margin-top: var(--s3)"><summary>Confirmed historical shifts on the scan <span class="meta">{{ drift_verification.confirmed_shifts|length }}</span></summary>
+      <div class="tablewrap"><table class="data"><thead><tr><th>Entry</th><th>Kind</th><th>Britannica (OCR / Scan)</th><th>Wikipedia</th><th>Super VL Scan Note</th></tr></thead><tbody>
+      {% for item in drift_verification.confirmed_shifts %}<tr><td><a class="cite" href="pages/{{ item.entry_id.split(':')[1] }}.html">{{ item.entry_id }}</a></td><td class="mono">{{ item.kind }}</td><td><b>{{ item.old or item.claim }}</b><br><span class="small muted">Scan: {{ item.scan_check.scan_reading }}</span></td><td>{{ item.new or item.wiki_title }}</td><td class="small">{{ item.scan_check.explanation }}</td></tr>{% endfor %}
+      </tbody></table></div></details>
+    <details class="disclose" style="margin-top: var(--s2)"><summary>Caught OCR illusions filtered out <span class="meta">{{ drift_verification.ocr_illusions|length }}</span></summary>
+      <div class="tablewrap"><table class="data"><thead><tr><th>Entry</th><th>Kind</th><th>Apparent OCR Drift</th><th>Actual Scan Reading</th><th>Super VL Scan Note</th></tr></thead><tbody>
+      {% for item in drift_verification.ocr_illusions[:25] %}<tr><td><a class="cite" href="pages/{{ item.entry_id.split(':')[1] }}.html">{{ item.entry_id }}</a></td><td class="mono">{{ item.kind }}</td><td>{{ item.old or item.claim }}</td><td class="mono">{{ item.scan_check.scan_reading }}</td><td class="small muted">{{ item.scan_check.explanation }}</td></tr>{% endfor %}
+      </tbody></table></div></details>
+  </div>
+  {% endif %}
+
+  {% if topics and topics.clusters %}
+  <h2>Shared embedding topic space</h2>
+  <p class="small muted">{{ topics.britannica_count }} Britannica entries and {{ topics.wikipedia_count }} matched Wikipedia articles embedded with <span class="mono">{{ topics.model_embed }}</span> (2,048-d), grouped with cosine clustering and c-TF-IDF, and refined with <span class="mono">{{ topics.model_refine }}</span> topic labels. {{ topics.matched_same_cluster_count }} of {{ topics.matched_pairs_count }} matched pairs fall into the same cluster. Details in <a class="link" href="docs/topics.md">docs/topics.md</a>.</p>
+  <details class="disclose" style="margin-top: var(--s3)" open><summary>Topic clusters refined by Super VL <span class="meta">{{ topics.cluster_count }} clusters + {{ topics.outlier_count }} outliers</span></summary>
+    <div class="tablewrap"><table class="data"><thead><tr><th>ID</th><th>Super VL Topic Label</th><th>Top c-TF-IDF Terms</th><th class="n">Brit.</th><th class="n">Wiki</th><th>Summary</th></tr></thead><tbody>
+    {% for c in topics.clusters %}<tr><td class="mono">{{ '%02d'|format(c.cluster_id) }}</td><td><b>{{ c.super_label }}</b></td><td class="mono small">{{ c.ctfidf_terms[:5]|join(' · ') }}</td><td class="n">{{ c.britannica_count }}</td><td class="n">{{ c.wikipedia_count }}</td><td class="small muted">{{ c.super_summary }}</td></tr>{% endfor %}
+    </tbody></table></div></details>
+  {% endif %}
 
   {% for p in plots %}
     <figure class="plot"><img src="analysis/{{ p }}" alt="{{ p }}"><figcaption>{{ p }}</figcaption></figure>

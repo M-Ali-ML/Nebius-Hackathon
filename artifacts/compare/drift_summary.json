@@ -1,28 +1,42 @@
 {
- "pairs": 83,
- "claims_checked": 476,
+ "pairs": 87,
+ "claims_checked": 508,
  "claim_totals": {
-  "enduring": 210,
-  "renamed": 23,
-  "superseded": 63,
-  "dropped": 180
+  "enduring": 218,
+  "renamed": 24,
+  "superseded": 67,
+  "dropped": 199
  },
  "claim_shares": {
-  "enduring": 0.441,
-  "renamed": 0.048,
+  "enduring": 0.429,
+  "renamed": 0.047,
   "superseded": 0.132,
-  "dropped": 0.378
+  "dropped": 0.392
  },
- "mean_orthographic_per_100w": 0.996,
- "term_pairs_total": 142,
- "wiki_only_topics_total": 362,
- "quotes_kept": 1567,
- "quotes_rejected": 64,
+ "mean_orthographic_per_100w": 0.979,
+ "term_pairs_total": 153,
+ "wiki_only_topics_total": 382,
+ "quotes_kept": 1669,
+ "quotes_rejected": 66,
  "all_term_pairs": [
   {
    "entry_id": "B:1017:11",
    "old": "Botnhic gulph",
-   "new": "Gulf of Bothnia"
+   "new": "Gulf of Bothnia",
+   "scan_check": {
+    "scan_reading": "Bothnic gulph",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic term Bothnic gulph, which is a historical name for the Gulf of Bothnia.",
+    "scan_entry_id": "B:1017:11",
+    "bbox": [
+     0.4801,
+     0.6084,
+     0.9076,
+     0.6783
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1017:15",
@@ -48,6 +62,21 @@
    "entry_id": "B:1166:0",
    "old": "legislative assembly",
    "new": "newspapers"
+  },
+  {
+   "entry_id": "B:1214:0",
+   "old": "inflammable air",
+   "new": "firedamp"
+  },
+  {
+   "entry_id": "B:1214:0",
+   "old": "dephlogilitated air",
+   "new": "blackdamp"
+  },
+  {
+   "entry_id": "B:1214:0",
+   "old": "haunk or flaqls",
+   "new": "shaft"
   },
   {
    "entry_id": "B:1250:1",
@@ -87,17 +116,59 @@
   {
    "entry_id": "B:1327:4",
    "old": "free of Armouth",
-   "new": "bishopric of Avranches"
+   "new": "bishopric of Avranches",
+   "scan_check": {
+    "scan_reading": "bishopric of Avranches",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints bishopric of Avranches, so the OCR's free of Armouth is a misreading of that phrase.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1327:4",
    "old": "Demonstrate du rival and semi porti- constitutes",
-   "new": "Demonstratio evangelica"
+   "new": "Demonstratio evangelica",
+   "scan_check": {
+    "scan_reading": "Demonstratio evangelica constitutes",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Demonstratio evangelica, and the OCR misread it as Demonstrate du rival and semi porti-.",
+    "scan_entry_id": "B:1327:4",
+    "bbox": [
+     0.0543,
+     0.0491,
+     0.8539,
+     0.9517
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1327:8",
    "old": "rife",
-   "new": "common use"
+   "new": "common use",
+   "scan_check": {
+    "scan_reading": "rise",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints 'rise' with a long-s, which the OCR misread as 'rife'.",
+    "scan_entry_id": "B:1327:8",
+    "bbox": [
+     0.445,
+     0.8678,
+     0.8421,
+     0.9525
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1473:0",
@@ -132,12 +203,40 @@
   {
    "entry_id": "B:1473:7",
    "old": "tenparts",
-   "new": "tenements"
+   "new": "tenements",
+   "scan_check": {
+    "scan_reading": "tenements",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the word tenements, so the OCR reading tenparts is a misreading of the old type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1473:7",
    "old": "cry",
-   "new": "crown"
+   "new": "crown",
+   "scan_check": {
+    "scan_reading": "crown",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'crown' in the phrase 'fell back to the lost of the crown', so the OCR reading 'cry' is a misreading of the worn type.",
+    "scan_entry_id": "B:1473:7",
+    "bbox": [
+     0.4606,
+     0.6342,
+     0.8627,
+     0.9205
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1614:5",
@@ -227,22 +326,78 @@
   {
    "entry_id": "B:1910:0",
    "old": "electric fire",
-   "new": "electric charge"
+   "new": "electric charge",
+   "scan_check": {
+    "scan_reading": "electric fire",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electric fire, which is a genuine historical term for what is now called electric charge.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0982,
+     0.6792,
+     0.5415,
+     0.8263
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1910:0",
    "old": "natural electricity",
-   "new": "electrostatic discharges"
+   "new": "electrostatic discharges",
+   "scan_check": {
+    "scan_reading": "natural electricity",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints the phrase natural electricity, so the OCR quote's mention of protons and sloos torna is a misreading, not a genuine historical term shift.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.5083,
+     0.2511,
+     0.9507,
+     0.452
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1910:0",
    "old": "prime conductor",
-   "new": "lightning rod"
+   "new": "lightning rod",
+   "scan_check": {
+    "scan_reading": "prime conductor",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan clearly prints the historical term prime conductor, which is an older name for a lightning rod.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.0952,
+     0.1183,
+     0.5405,
+     0.3973
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:1910:0",
    "old": "electrical atmosphere",
-   "new": "electric field"
+   "new": "electric field",
+   "scan_check": {
+    "scan_reading": "electrical atmosphere",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the 18th-century term electrical atmosphere, which is a genuine historical term distinct from the modern term electric field.",
+    "scan_entry_id": "B:1910:0",
+    "bbox": [
+     0.023,
+     0.0363,
+     0.5395,
+     0.1591
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2001:5",
@@ -282,22 +437,78 @@
   {
    "entry_id": "B:2171:4",
    "old": "fluid",
-   "new": "escutcheon"
+   "new": "escutcheon",
+   "scan_check": {
+    "scan_reading": "field",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the word field, which the OCR misread as fluid, and the term escutcheon does not appear in the passage.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2171:4",
    "old": "marhalled",
-   "new": "depiction"
+   "new": "depiction",
+   "scan_check": {
+    "scan_reading": "marshalled",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints marshalled, so the OCR reading marhalled is a misreading, and the term is not a renamed concept.",
+    "scan_entry_id": "B:2171:4",
+    "bbox": [
+     0.1071,
+     0.2139,
+     0.5433,
+     0.3236
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2171:6",
    "old": "goddels of mithief",
-   "new": "personification of moral blindness and error"
+   "new": "personification of moral blindness and error",
+   "scan_check": {
+    "scan_reading": "ATE, the goddesf of mifchief, in the Pagan theology.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints long-s as f, so OCR read goddesf as goddels and mifchief as mithief, but the actual words are goddess and mischief.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2171:6",
    "old": "Jupiter",
-   "new": "Zeus"
+   "new": "Zeus",
+   "scan_check": {
+    "scan_reading": "Jupiter",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints Jupiter, the Roman name, while Wikipedia uses Zeus, the Greek equivalent, reflecting a genuine historical terminology shift.",
+    "scan_entry_id": "B:2171:6",
+    "bbox": [
+     0.1051,
+     0.3483,
+     0.5384,
+     0.5642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2171:8",
@@ -312,12 +523,40 @@
   {
    "entry_id": "B:2171:9",
    "old": "Lucerna",
-   "new": "Roman"
+   "new": "Roman",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alerni, (Cluvenus): Also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic. E. Long. 15. 25. N. Lat. 42. 30.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Lucania, not Lucerna, so the OCR misread the word and created a false old-to-new term pair.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2171:9",
    "old": "Alteris",
-   "new": "Pescara"
+   "new": "Pescara",
+   "scan_check": {
+    "scan_reading": "ATERNUM, a town of Lucania in Italy, now Alterni, (Cluvenius): also a town in the territory of the Piceni, now Pescara, a port-town of Naples, situated on the Adriatic.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Pescara, not Alteris, so the OCR misread the entry and the apparent rename is false.",
+    "scan_entry_id": "B:2171:9",
+    "bbox": [
+     0.1012,
+     0.828,
+     0.5443,
+     0.908
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2250:1",
@@ -362,7 +601,21 @@
   {
    "entry_id": "B:2250:8",
    "old": "BYLAWS, or ByrŁLAWS",
-   "new": "by-law (bye-law, by (e) law, by (e) law)"
+   "new": "by-law (bye-law, by (e) law, by (e) law)",
+   "scan_check": {
+    "scan_reading": "BY-LAWS, or BYE-LAWS",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints BY-LAWS, or BYE-LAWS, so the OCR's ByrŁLAWS is a misreading of the long s and hyphenated spelling, not a genuine historical term shift.",
+    "scan_entry_id": "B:2250:8",
+    "bbox": [
+     0.4733,
+     0.2248,
+     0.9261,
+     0.3642
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2464:10",
@@ -372,37 +625,135 @@
   {
    "entry_id": "B:2464:5",
    "old": "flip",
-   "new": "ship"
+   "new": "ship",
+   "scan_check": {
+    "scan_reading": "ship",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints the long-s form of ship, which the OCR misread as flip.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2464:5",
    "old": "fleerage",
-   "new": "ship"
+   "new": "ship",
+   "scan_check": {
+    "scan_reading": "fleeage",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic term fleeage, an 18th-century spelling of flage meaning a ship's deck or upper works, not an OCR corruption of ship.",
+    "scan_entry_id": "B:2464:5",
+    "bbox": [
+     0.027,
+     0.8053,
+     0.4838,
+     0.9361
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2464:7",
    "old": "cabinets",
-   "new": "mystery cult"
+   "new": "mystery cult",
+   "scan_check": {
+    "scan_reading": "cabiria",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints cabiria, a festival term, not cabinets, so the OCR misread the word and created a false contrast with mystery cult.",
+    "scan_entry_id": "B:2464:7",
+    "bbox": [
+     0.4645,
+     0.285,
+     0.9095,
+     0.4252
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2464:8",
    "old": "fests, gods",
-   "new": "Cabeiri"
+   "new": "Cabeiri",
+   "scan_check": {
+    "scan_reading": "CABIRIA, festivals in honour of the cabiri, celebrated in Thebes and Lemnos, but especially in Samothracia, an island consecrated to the cabiri. All who were initiated into the mysteries of these gods, were thought to be secured thereby from storms at sea, and all other dangers.",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints CABIRIA, not fests, gods, and the OCR misread long-s and other letters, corrupting the passage about the Cabeiri.",
+    "scan_entry_id": "B:2464:8",
+    "bbox": [
+     0.4655,
+     0.3967,
+     0.9144,
+     0.5673
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2473:10",
    "old": "loft horn",
-   "new": "callosity"
+   "new": "callosity",
+   "scan_check": {
+    "scan_reading": "loft horn",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints loft horn, an 18th-century term for the ergot, which modern sources call a callosity.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2473:10",
    "old": "pattern join",
-   "new": "fetlock"
+   "new": "fetlock",
+   "scan_check": {
+    "scan_reading": "pattern-joint",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints pattern-joint, not pattern join, and the OCR split the hyphenated word and dropped the hyphen.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2473:10",
    "old": "tufi",
-   "new": "feather"
+   "new": "feather",
+   "scan_check": {
+    "scan_reading": "tufi",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints the archaic spelling \"tufi\" for tuft, which is a genuine historical term rather than an OCR error.",
+    "scan_entry_id": "B:2473:10",
+    "bbox": [
+     0.4782,
+     0.2248,
+     0.932,
+     0.3111
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2473:9",
@@ -442,17 +793,59 @@
   {
    "entry_id": "B:251:5",
    "old": "backache",
-   "new": "MD"
+   "new": "MD",
+   "scan_check": {
+    "scan_reading": "bachelor of his faculty",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints \"bachelor of his faculty\", not \"backache\", so the OCR misread the word and the pair is not a genuine historical shift.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:251:5",
    "old": "Wanilor Eagle",
-   "new": "Wynford Eagle"
+   "new": "Wynford Eagle",
+   "scan_check": {
+    "scan_reading": "Winford Eagle",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Winford Eagle, so the OCR's Wanilor is a misreading and not a historical name change.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:251:5",
    "old": "Dorforth",
-   "new": "Dorset"
+   "new": "Dorset",
+   "scan_check": {
+    "scan_reading": "Dorsetshire",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:2569:0",
@@ -512,7 +905,21 @@
   {
    "entry_id": "B:560:2",
    "old": "Zie Grafjnaar",
-   "new": "The Craftsman"
+   "new": "The Craftsman",
+   "scan_check": {
+    "scan_reading": "The Craftsman",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints The Craftsman, so Zie Grafjnaar is an OCR misreading of the old-style type.",
+    "scan_entry_id": "B:560:2",
+    "bbox": [
+     0.0758,
+     0.6061,
+     0.516,
+     0.8892
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:560:6",
@@ -522,7 +929,21 @@
   {
    "entry_id": "B:604:2",
    "old": "European Turkey",
-   "new": "East Thrace"
+   "new": "East Thrace",
+   "scan_check": {
+    "scan_reading": "European Turkey",
+    "is_ocr_error": false,
+    "status": "confirmed",
+    "explanation": "The scan prints European Turkey, an 18th-century term for the Ottoman-held European territory now called East Thrace.",
+    "scan_entry_id": "B:604:2",
+    "bbox": [
+     0.4498,
+     0.6905,
+     0.8627,
+     0.9017
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "entry_id": "B:604:2",
@@ -588,6 +1009,16 @@
    "entry_id": "P:1284",
    "old": "conspiracy of Bologony",
    "new": "Babington Plot"
+  },
+  {
+   "entry_id": "P:13",
+   "old": "scarded",
+   "new": "joined"
+  },
+  {
+   "entry_id": "P:13",
+   "old": "boys'l away",
+   "new": "navy"
   },
   {
    "entry_id": "P:1422",
@@ -675,6 +1106,21 @@
    "new": "Deylik"
   },
   {
+   "entry_id": "P:247",
+   "old": "internal fire",
+   "new": "magma"
+  },
+  {
+   "entry_id": "P:247",
+   "old": "sulphureous exalations",
+   "new": "volcanic gases"
+  },
+  {
+   "entry_id": "P:247",
+   "old": "focus of the volume",
+   "new": "magma chamber"
+  },
+  {
    "entry_id": "P:2479",
    "old": "induicie legator",
    "new": "days allowed for appearance"
@@ -703,6 +1149,21 @@
    "entry_id": "P:258",
    "old": "fifathmande abby",
    "new": "Westminster Abbey"
+  },
+  {
+   "entry_id": "P:268",
+   "old": "perfus, or alligator pear tree",
+   "new": "avocado"
+  },
+  {
+   "entry_id": "P:268",
+   "old": "Svvxxax",
+   "new": "Laurus"
+  },
+  {
+   "entry_id": "P:268",
+   "old": "alligator pear",
+   "new": "avocado"
   },
   {
    "entry_id": "P:403",
@@ -820,6 +1281,21 @@
    "wiki_only_topics": 3,
    "quotes_rejected": 0,
    "quotes_kept": 17
+  },
+  {
+   "entry_id": "B:1214:0",
+   "label": "B:1214:0 -> Firedamp",
+   "cite_wikipedia": "[W:505455:1345728236]",
+   "claims_checked": 8,
+   "orthographic_per_100w": 0.62,
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 4,
+   "term_pairs": 3,
+   "wiki_only_topics": 5,
+   "quotes_rejected": 0,
+   "quotes_kept": 26
   },
   {
    "entry_id": "B:1214:1",
@@ -1752,6 +2228,21 @@
    "quotes_kept": 23
   },
   {
+   "entry_id": "P:13",
+   "label": "Shipbuilding -> Shipbuilding",
+   "cite_wikipedia": "[W:187377:1348971360]",
+   "claims_checked": 8,
+   "orthographic_per_100w": 0.0,
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 8,
+   "term_pairs": 2,
+   "wiki_only_topics": 5,
+   "quotes_rejected": 0,
+   "quotes_kept": 26
+  },
+  {
    "entry_id": "P:1422",
    "label": "EDU -> Some Thoughts Concerning Education",
    "cite_wikipedia": "[W:2883641:1344476102]",
@@ -1872,6 +2363,21 @@
    "quotes_kept": 25
   },
   {
+   "entry_id": "P:247",
+   "label": "ETN -> Mount Etna",
+   "cite_wikipedia": "[W:169351:1348791979]",
+   "claims_checked": 8,
+   "orthographic_per_100w": 0.73,
+   "enduring": 4,
+   "renamed": 1,
+   "superseded": 1,
+   "dropped": 2,
+   "term_pairs": 3,
+   "wiki_only_topics": 5,
+   "quotes_rejected": 0,
+   "quotes_kept": 26
+  },
+  {
    "entry_id": "P:2479",
    "label": "LAW -> Diligence (Scots law)",
    "cite_wikipedia": "[W:16147726:1311430907]",
@@ -1903,7 +2409,7 @@
   },
   {
    "entry_id": "P:258",
-   "label": "['WILLIN', 'WILLLAMSBURG', 'WILLINS'] -> Thomas Willis",
+   "label": "P:258 WILLIN.. -> Thomas Willis",
    "cite_wikipedia": "[W:7634016:1351664577]",
    "claims_checked": 8,
    "orthographic_per_100w": 0.77,
@@ -1915,6 +2421,21 @@
    "wiki_only_topics": 5,
    "quotes_rejected": 0,
    "quotes_kept": 26
+  },
+  {
+   "entry_id": "P:268",
+   "label": "LAU -> Laurus",
+   "cite_wikipedia": "[W:1467913:1343771027]",
+   "claims_checked": 8,
+   "orthographic_per_100w": 1.17,
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 5,
+   "term_pairs": 3,
+   "wiki_only_topics": 5,
+   "quotes_rejected": 2,
+   "quotes_kept": 24
   },
   {
    "entry_id": "P:403",
@@ -1948,7 +2469,7 @@
   },
   {
    "entry_id": "P:523",
-   "label": "['ENDLESS', 'ENDORSE', 'ENDORSED', 'ENDOWWERT', 'ENDYMON', 'ENERGUMENS', 'ENERGY', 'ENFANS RADS', 'ENTILADE', 'ENGASTRIMYTHI', 'ENGENDERING', 'ENGINE', 'ENGINEEN'] -> Engine",
+   "label": "P:523 ENDLESS.. -> Engine",
    "cite_wikipedia": "[W:9640:1353267162]",
    "claims_checked": 7,
    "orthographic_per_100w": 1.85,

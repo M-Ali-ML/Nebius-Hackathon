@@ -133,7 +133,21 @@
    "claim": "He died in 1695",
    "tag": "superseded",
    "quote_britannica": "He died in 1695",
-   "quote_wikipedia": "10 September 1624 – 29 December 1689"
+   "quote_wikipedia": "10 September 1624 – 29 December 1689",
+   "scan_check": {
+    "scan_reading": "He died in 1689",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 1689, so the OCR quote of 1695 is a misreading and the historical date is unchanged.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   }
  ],
  "term_pairs": [
@@ -147,19 +161,61 @@
    "old": "backache",
    "new": "MD",
    "quote_britannica": "created backache of his faculty",
-   "quote_wikipedia": "graduated as MD"
+   "quote_wikipedia": "graduated as MD",
+   "scan_check": {
+    "scan_reading": "bachelor of his faculty",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints \"bachelor of his faculty\", not \"backache\", so the OCR misread the word and the pair is not a genuine historical shift.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Wanilor Eagle",
    "new": "Wynford Eagle",
    "quote_britannica": "of Wanilor Eagle in Dorforth",
-   "quote_wikipedia": "born at Wynford Eagle in Dorset"
+   "quote_wikipedia": "born at Wynford Eagle in Dorset",
+   "scan_check": {
+    "scan_reading": "Winford Eagle",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Winford Eagle, so the OCR's Wanilor is a misreading and not a historical name change.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Dorforth",
    "new": "Dorset",
    "quote_britannica": "of Wanilor Eagle in Dorforth",
-   "quote_wikipedia": "born at Wynford Eagle in Dorset"
+   "quote_wikipedia": "born at Wynford Eagle in Dorset",
+   "scan_check": {
+    "scan_reading": "Dorsetshire",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.",
+    "scan_entry_id": "B:251:5",
+    "bbox": [
+     0.5026,
+     0.6491,
+     0.9349,
+     0.947
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
   },
   {
    "old": "Magdalach-ball",
@@ -211,15 +267,57 @@
    "term_pairs": [
     {
      "old": "backache",
-     "new": "MD"
+     "new": "MD",
+     "scan_check": {
+      "scan_reading": "bachelor of his faculty",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints \"bachelor of his faculty\", not \"backache\", so the OCR misread the word and the pair is not a genuine historical shift.",
+      "scan_entry_id": "B:251:5",
+      "bbox": [
+       0.5026,
+       0.6491,
+       0.9349,
+       0.947
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Wanilor Eagle",
-     "new": "Wynford Eagle"
+     "new": "Wynford Eagle",
+     "scan_check": {
+      "scan_reading": "Winford Eagle",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints Winford Eagle, so the OCR's Wanilor is a misreading and not a historical name change.",
+      "scan_entry_id": "B:251:5",
+      "bbox": [
+       0.5026,
+       0.6491,
+       0.9349,
+       0.947
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     },
     {
      "old": "Dorforth",
-     "new": "Dorset"
+     "new": "Dorset",
+     "scan_check": {
+      "scan_reading": "Dorsetshire",
+      "is_ocr_error": true,
+      "status": "ocr_error",
+      "explanation": "The scan prints Dorsetshire, not Dorforth, so the OCR misread the word and the apparent rename is false.",
+      "scan_entry_id": "B:251:5",
+      "bbox": [
+       0.5026,
+       0.6491,
+       0.9349,
+       0.947
+      ],
+      "model": "nvidia/Nemotron-3.5-Super-VL"
+     }
     }
    ],
    "likely_ocr_or_spelling": [

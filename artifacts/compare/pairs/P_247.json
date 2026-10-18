@@ -1,0 +1,301 @@
+{
+ "entry_id": "P:247",
+ "level": "page",
+ "entry_ids": [
+  "B:247:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:247:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:247",
+ "row_index": 247,
+ "image_sha256": "cb5b8fd3e311a9bed8b2fe35f9cf9ede4c3a49a0b0e651afa8f9c811fd0e0534",
+ "headword": null,
+ "topic_hint": "ETN",
+ "wiki_page_id": "169351",
+ "wiki_revision_id": "1348791979",
+ "wiki_title": "Mount Etna",
+ "wiki_url": "https://en.wikipedia.org/wiki/Mount_Etna",
+ "text_sha256": "81b7c4eadf9b4f8fd5376c683423a526cce18fe441af55f25a5511ae5ca06a5d",
+ "cite_wikipedia": "[W:169351:1348791979]",
+ "rerank_logit": -4.748843,
+ "rerank_margin": 0.182832,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2757,
+  "prompt_tokens": 4565,
+  "total_tokens": 7322,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6968,
+ "article_chars_used": 10000,
+ "article_chars_total": 24132,
+ "similarities": [
+  {
+   "point": "Both describe Etna as a volcano with a crater and summit features.",
+   "quote_britannica": "Fig. 2 exhibits a view of the crater of Eta taken No 121, on the brick of the raft ride.",
+   "quote_wikipedia": "Most occur at the summit, where there are five distinct craters: the Northeast Crater, the Voragine, the Bocca Nuova, and two at the Southeast Crater Complex.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Both mention eruptions and volcanic activity at Etna.",
+   "quote_britannica": "This deadline note our author, with very great probability, fuppaid to be occasioned by the esplofons of the internal fire, or, as he calls is, the focus of the volume,",
+   "quote_wikipedia": "Mount Etna is one of the world's most active volcanoes and is in an almost constant state of activity.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Both refer to the mountain being located in Sicily.",
+   "quote_britannica": "which refon the Siciliana have termed the mountain allowing me double-horred.",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Both discuss the height or elevation of the mountain.",
+   "quote_britannica": "Its diameter, when one matter visited this mountain, was about the foot, and in filled with finde that pothing remarkable could be discovered.",
+   "quote_wikipedia": "It is one of the tallest active volcanoes in Europe, and the tallest peak in Italy south of the Alps with a current height (September 2024) of 3,403 m (11,165 ft), though this varies with summit eruptions.",
+   "cite_britannica": "[B:247:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the crater as filled with sand/ashes with nothing remarkable, while Wikipedia describes multiple distinct summit craters.",
+   "quote_britannica": "Its diameter, when one matter visited this mountain, was about the foot, and in filled with finde that pothing remarkable could be discovered.",
+   "quote_wikipedia": "Most occur at the summit, where there are five distinct craters: the Northeast Crater, the Voragine, the Bocca Nuova, and two at the Southeast Crater Complex.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Britannica mentions a great eruption of water in 1755, while Wikipedia does not mention this event.",
+   "quote_britannica": "In the mainte he accounts for the great eruption of water in 1755, which he fuppoder to have been oc-water in colored only by an unusual quantity of water falling into 1733, asthe burned fears of the mountains, here needed more for, foam, and afterwards condensed by the coldness of the atmosphere.",
+   "quote_wikipedia": "Since 2000, Etna has had four flank eruptions – in 2001, 2002–2003, 2004–2005, and 2008–2009.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Britannica describes the mountain as composed of materials thrown up by the volcano at different times, while Wikipedia describes it as a stratovolcano built by alternating explosive and effusive eruptions over hundreds of thousands of years.",
+   "quote_britannica": "This cone (the little mountain mentioned by Sir William Flamman) is composed of the very hand, and postsecondary throw up a different times by the volcano.",
+   "quote_wikipedia": "Eruptions at this time built up the first major volcanic edifice, forming a stratovolcano in alternating explosive and effusive eruptions.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "point": "Britannica includes mythological or anecdotal traveler accounts, while Wikipedia provides geological and historical eruption records.",
+   "quote_britannica": "Several travelleys who blindsifted into come before him, were to er-ified by their, dreadful friends, that they fled with the stmad hate till they arrived at the foot of the mountain.",
+   "quote_wikipedia": "The first known record of eruption at Etna is that of Diodorus Siculus.",
+   "cite_britannica": "[B:247:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Etna has a crater at its summit.",
+   "tag": "enduring",
+   "quote_britannica": "Fig. 2 exhibits a view of the crater of Eta taken No 121, on the brick of the raft ride.",
+   "quote_wikipedia": "Most occur at the summit, where there are five distinct craters: the Northeast Crater, the Voragine, the Bocca Nuova, and two at the Southeast Crater Complex.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "Etna is an active volcano with internal fire causing explosions.",
+   "tag": "enduring",
+   "quote_britannica": "This deadline note our author, with very great probability, fuppaid to be occasioned by the esplofons of the internal fire, or, as he calls is, the focus of the volume,",
+   "quote_wikipedia": "Mount Etna is one of the world's most active volcanoes and is in an almost constant state of activity.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "Etna is located in Sicily.",
+   "tag": "enduring",
+   "quote_britannica": "which refon the Siciliana have termed the mountain allowing me double-horred.",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "There was a great eruption of water in 1755.",
+   "tag": "dropped",
+   "quote_britannica": "In the mainte he accounts for the great eruption of water in 1755, which he fuppoder to have been oc-water in colored only by an unusual quantity of water falling into 1733, asthe burned fears of the mountains, here needed more for, foam, and afterwards condensed by the coldness of the atmosphere.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "The cone is composed of materials thrown up by the volcano at different times.",
+   "tag": "superseded",
+   "quote_britannica": "This cone (the little mountain mentioned by Sir William Flamman) is composed of the very hand, and postsecondary throw up a different times by the volcano.",
+   "quote_wikipedia": "Eruptions at this time built up the first major volcanic edifice, forming a stratovolcano in alternating explosive and effusive eruptions.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "The crater diameter was about a foot when one author visited.",
+   "tag": "dropped",
+   "quote_britannica": "Its diameter, when one matter visited this mountain, was about the foot, and in filled with finde that pothing remarkable could be discovered.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "claim": "The mountain is called Etna or Etaa by travelers.",
+   "tag": "renamed",
+   "quote_britannica": "Like other travellers to mount Etaa, this gentleman South wind found the wind blowing from the fourth ;",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "cite_britannica": "[B:247:0]",
+   "scan_check": {
+    "scan_reading": "Etna",
+    "is_ocr_error": true,
+    "status": "ocr_error",
+    "explanation": "The scan clearly prints 'mount Etna' and 'top of Etna', so the OCR's 'Etaa' is a misreading of the long-s or italic type.",
+    "scan_entry_id": "B:247:0",
+    "bbox": [
+     0.5132,
+     0.5573,
+     0.935,
+     0.863
+    ],
+    "model": "nvidia/Nemotron-3.5-Super-VL"
+   }
+  },
+  {
+   "claim": "Sulfurous vapors issue from the crater and surrounding ground.",
+   "tag": "enduring",
+   "quote_britannica": "The black spots on the foreground repetfest a number of hillsides about the rise of mole-hills, from which a fulphumous yearn confronts flyer, and by which the adjacent ground is tinged of an ochery color.",
+   "quote_wikipedia": "Other eruptions occur on the flanks, which have more than 300 vents ranging in size from small holes in the ground to large craters hundreds of metres across.",
+   "cite_britannica": "[B:247:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Etaa",
+   "new": "Etna",
+   "quote_britannica": "Like other travellers to mount Etaa, this gentleman South wind found the wind blowing from the fourth ;",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "old": "Eta",
+   "new": "Etna",
+   "quote_britannica": "Fig. 2 exhibits a view of the crater of Eta taken No 121, on the brick of the raft ride.",
+   "quote_wikipedia": "Mount Etna, or simply Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "old": "internal fire",
+   "new": "magma",
+   "quote_britannica": "This deadline note our author, with very great probability, fuppaid to be occasioned by the esplofons of the internal fire, or, as he calls is, the focus of the volume,",
+   "quote_wikipedia": "Volcanic activity first took place at Etna about 500,000 years ago, with eruptions occurring beneath the sea off the ancient coastline of Sicily.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "old": "sulphureous exalations",
+   "new": "volcanic gases",
+   "quote_britannica": "Ask had, when the funumis is reached, the sulphureous exalations, which are contivirtually entirely due the pores of the mountains, bravaten fluctuation, and irritate the forces and lungs in such a manner as to produce a very troublesome and inci-fant onego.",
+   "quote_wikipedia": "Other eruptions occur on the flanks, which have more than 300 vents ranging in size from small holes in the ground to large craters hundreds of metres across.",
+   "cite_britannica": "[B:247:0]"
+  },
+  {
+   "old": "focus of the volume",
+   "new": "magma chamber",
+   "quote_britannica": "This deadline note our author, with very great probability, fuppaid to be occasioned by the esplofons of the internal fire, or, as he calls is, the focus of the volume,",
+   "quote_wikipedia": "The growth of the mountain was occasionally interrupted by major eruptions, leading to the collapse of the summit to form calderas.",
+   "cite_britannica": "[B:247:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "UNESCO World Heritage Site designation",
+   "quote_wikipedia": "In June 2013, it was added to the list of UNESCO World Heritage Sites."
+  },
+  {
+   "topic": "Plate tectonics setting",
+   "quote_wikipedia": "It is located above the convergent plate margin between the African Plate and the Eurasian Plate."
+  },
+  {
+   "topic": "Etymology of the name Etna",
+   "quote_wikipedia": "One view is that the word Etna is from the Greek αἴθω (aíthō), meaning \"to burn\", through monophthongization of the Ancient Greek pronunciation as seen in Koine Greek phonology, or possibly from a Siculian (or Sicanian ?) dialect word (*aith-na, \"the fiery one\"?) of the same Indo-European origin, namely the root *h₂eydʰ- \"to burn; fire\"."
+  },
+  {
+   "topic": "Mythological associations (Typhon, Vulcan/Hephaestus)",
+   "quote_wikipedia": "In Greek mythology, the deadly monster Typhon was trapped under this mountain by Zeus, the god of the sky and thunder and king of gods, and the forges of Hephaestus were said also to be underneath it."
+  },
+  {
+   "topic": "Historical eruptions timeline",
+   "quote_wikipedia": "A particularly violent explosive (Plinian) summit eruption occurred in 122 BCE, and caused heavy tephra falls to the southeast, including the town of Catania, where many roofs collapsed."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 9,
+   "words": 1230,
+   "edits_per_100_words": 0.73
+  },
+  "lexical": {
+   "renamed_share": 0.125,
+   "term_pairs": [
+    {
+     "old": "internal fire",
+     "new": "magma"
+    },
+    {
+     "old": "sulphureous exalations",
+     "new": "volcanic gases"
+    },
+    {
+     "old": "focus of the volume",
+     "new": "magma chamber"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Etaa",
+     "new": "Etna"
+    },
+    {
+     "old": "Eta",
+     "new": "Etna"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.125
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "UNESCO World Heritage Site designation",
+    "Plate tectonics setting",
+    "Etymology of the name Etna",
+    "Mythological associations (Typhon, Vulcan/Hephaestus)",
+    "Historical eruptions timeline"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 1,
+   "superseded": 1,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok",
+ "rescued_threshold_miss": true,
+ "rescue_metadata": {
+  "candidate_source": "match/vision_expand/247.json",
+  "method": "vision_expand",
+  "tau": -4.0,
+  "rerank_logit": -4.748843,
+  "rerank_margin": 0.182832,
+  "runner_up_title": "Etna, Wisconsin",
+  "runner_up_logit": -4.931675,
+  "rationale": "Top-1 vision-expanded reranked candidate is Mount Etna (rerank logit -4.75, margin 0.18 over Etna, Wisconsin). The 18th-century entry uses the Latin spelling AETNA (running head ETN); vision query expansion recovered Mount Etna at rank 1 just below TAU = -4.0."
+ }
+}

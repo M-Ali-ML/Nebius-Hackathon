@@ -6,6 +6,12 @@ A Hermes agent on Nemotron 3.5 Super VL answers comparison questions with eviden
 
 Every stage uses a Nemotron model. Every answer cites `[B:<row>:<n>]` (Britannica entry) and `[W:<page_id>:<revision_id>]` (Wikipedia revision).
 
+## Try it
+
+- Demo (static archive on Hugging Face Spaces): https://huggingface.co/spaces/nebius-build-week/britannica-across-time
+- Dataset (entries, matches, candidates, claims, term pairs, labels, agent runs): https://huggingface.co/datasets/nebius-build-week/britannica-wikipedia-drift
+- Republish both: `uv run python scripts/publish_hf.py publish` (see `docs/hf/`)
+
 ## Results at a glance
 
 | Stage | Result |

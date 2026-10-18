@@ -1,6 +1,17 @@
 <section class="isec plate">
   <div class="isec-h"><h2>Plate · visual match</h2></div>
-  <div class="src-box">
+  {% set s = plate.super_vl or {} %}
+  <div class="matchline">
+    {% if plate.status == "matched" %}<span class="pill matched">matched</span>
+    {% elif plate.status == "error" %}<span class="pill bad">error at {{ plate.failed_stage }}</span> <span class="small">{{ plate.error }}</span>
+    {% else %}<span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>{% endif %}
+    {% if plate.wiki_title %}<a class="link ext title" href="{{ plate.wiki_url }}" target="_blank" rel="noopener">{{ plate.wiki_title }}</a> <span class="cite">rev {{ plate.wiki_revision_id }}</span>{% endif %}
+  </div>
+  {% if plate.reason %}<p class="why">{{ plate.reason }}</p>{% endif %}
+  {% if s.subject %}<div class="topic">Super VL subject <b>{{ s.subject }}</b>{% if s.is_blank %} <span class="pill uncertain">reports a blank page</span>{% endif %}</div>{% endif %}
+  <details class="more">
+    <summary>Neighbor scans <span class="meta">{{ plate.neighbors|length }}</span></summary>
+    <div class="src-box">
     <div class="lbl">Source · neighbor scans in the dataset (same volume id). They are not always the next printed pages.</div>
     <div class="nstrip">
     {% for n in plate.neighbors %}
@@ -12,7 +23,9 @@
     {% else %}<span class="small muted">No neighbor scans in this volume.</span>{% endfor %}
     </div>
   </div>
-  {% set s = plate.super_vl or {} %}
+  </details>
+  <details class="more">
+    <summary>Super VL description</summary>
   <div class="gen-box">
     <div class="gen-note"><span class="pill gen mono">{{ s.model or "Super VL" }}</span> description from the plate image and neighbor text</div>
     {% if s.description %}<p class="desc">{{ s.description }}</p>{% endif %}
@@ -22,13 +35,9 @@
       <div class="evid"><span class="cite b">row {{ e.neighbor_row }}</span> <q>{{ e.quote }}</q> <span class="pill {{ 'ok' if e.verified else 'bad' }}">{{ 'found in source' if e.verified else 'not found in source' }}</span></div>
     {% endfor %}
   </div>
-  <div class="matchline">
-    {% if plate.status == "matched" %}<span class="pill matched">matched</span>
-    {% elif plate.status == "error" %}<span class="pill bad">error at {{ plate.failed_stage }}</span> <span class="small">{{ plate.error }}</span>
-    {% else %}<span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>{% endif %}
-    {% if plate.wiki_title %}<a class="link ext title" href="{{ plate.wiki_url }}" target="_blank" rel="noopener">{{ plate.wiki_title }}</a> <span class="cite">rev {{ plate.wiki_revision_id }}</span>{% endif %}
-  </div>
-  {% if plate.reason %}<p class="why">{{ plate.reason }}</p>{% endif %}
+  </details>
+  <details class="more">
+    <summary>Ranking per stage{% if plate.reranked %} <span class="meta">{{ plate.reranked|length }} candidates</span>{% endif %}</summary>
   {% if plate.top1 %}
   <dl class="stage-top">
     <dt>BM25</dt><dd>{{ plate.top1.bm25 }}</dd>
@@ -48,4 +57,5 @@
   </table>
   <p class="why">{{ plate.candidates|length }} BM25 candidates, top 10 by Embed VL cosine sent to Rerank VL. Cosine is document-to-document (plate image vs article text).</p>
   {% endif %}
+  </details>
 </section>

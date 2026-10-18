@@ -1,14 +1,17 @@
-{% from "_macros.html" import scores, cause, wcite %}
+{% from "_macros.html" import scores, wcite %}
 <section class="isec pmatch">
   <div class="isec-h"><h2>Page match</h2><span class="aside">{{ page_match.page_kind }} page</span></div>
   <div class="matchline">
     {% if page_match.status == "matched" %}<span class="pill matched">matched</span>
-    {% else %}<span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>{% endif %}
+    {% else %}<span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>{% if page_match.uncertainty %}<span class="pill cause" title="uncertainty cause: {{ page_match.uncertainty.cause }}">{{ page_match.uncertainty.label }}</span>{% endif %}{% endif %}
     {% if page_match.wiki_title %}<a class="link ext title" href="{{ page_match.wiki_url }}" target="_blank" rel="noopener">{{ page_match.wiki_title }}</a>{% endif %}
   </div>
-  {% if page_match.status != "matched" and page_match.uncertainty %}<div class="matchline" style="margin-top: var(--s2)">{{ cause(page_match.uncertainty) }}</div>{% endif %}
-  {% if page_match.wiki_title %}<div class="subline">{{ wcite(page_match.wiki_page_id, page_match.wiki_revision_id) }}</div>{% endif %}
-  {% if page_match.page_topic is string %}<div class="topic">Running head topic <b>{{ page_match.page_topic }}</b>{% if page_match.page_topic_raw %} <span class="muted">(Parse: {{ page_match.page_topic_raw }})</span>{% endif %}</div>{% endif %}
-  {{ scores(page_match, cos=False) }}
-  {% if page_match.why %}<p class="why">{{ page_match.why }}</p>{% endif %}
+  {% if page_match.status != "matched" and page_match.uncertainty and page_match.uncertainty.note %}<p class="cause-note" style="margin-top: var(--s2)">{{ page_match.uncertainty.note }}</p>{% endif %}
+  <details class="more">
+    <summary>Scores and reasoning</summary>
+    {% if page_match.wiki_title %}<div class="subline">{{ wcite(page_match.wiki_page_id, page_match.wiki_revision_id) }}</div>{% endif %}
+    {% if page_match.page_topic is string %}<div class="topic">Running head topic <b>{{ page_match.page_topic }}</b>{% if page_match.page_topic_raw %} <span class="muted">(Parse: {{ page_match.page_topic_raw }})</span>{% endif %}</div>{% endif %}
+    {{ scores(page_match, cos=False) }}
+    {% if page_match.why %}<p class="why">{{ page_match.why }}</p>{% endif %}
+  </details>
 </section>

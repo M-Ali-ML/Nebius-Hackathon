@@ -25,9 +25,11 @@
       <button type="button" class="chip" data-filter="matched" aria-pressed="false" style="--c: var(--emerald-400)">Matched <span class="count">{{ rows|selectattr("page_match")|selectattr("page_match.status", "equalto", "matched")|list|length }}</span></button>
       <button type="button" class="chip" data-filter="uncertain" aria-pressed="false" style="--c: var(--amber-400)">Uncertain <span class="count">{{ rows|selectattr("page_match")|rejectattr("page_match.status", "equalto", "matched")|list|length }}</span></button>
       <button type="button" class="chip" data-filter="plate" aria-pressed="false">Plates <span class="count">{{ rows|selectattr("plate_status")|list|length }}</span></button>
+      <span id="cause-chips" role="group" aria-label="Uncertainty cause">
       {% for c, label in causes.items() %}{% if cause_counts[c] %}
       <button type="button" class="chip" data-filter="cause-{{ c }}" aria-pressed="false" style="--c: var(--amber-300)" title="uncertainty cause">{{ label }} <span class="count">{{ cause_counts[c] }}</span></button>
       {% endif %}{% endfor %}
+      </span>
     </div>
     <span class="count-label" id="n-shown"></span>
   </div>
@@ -41,7 +43,7 @@
         <td><a href="pages/{{ r.row }}.html" aria-label="row {{ r.row }}">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}<span class="small muted">no scan</span>{% endif %}</a></td>
         <td class="rowid"><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
         <td class="head">{{ r.head or "(no running head)" }}{% if r.plate_status %}<span class="pill {{ 'ok' if r.plate_status == 'matched' else ('bad' if r.plate_status == 'error' else 'uncertain') }}">plate: {{ r.plate_status }}</span>{% endif %}</td>
-        <td class="pm">{% if pm %}{% if pm.status == "matched" %}<span class="pill matched">matched</span><a class="link ext" href="{{ pm.wiki_url }}" target="_blank" rel="noopener">{{ pm.wiki_title }}</a>{% else %}<span class="pill uncertain" title="{{ pm.reason }}">uncertain</span>{% if u %}<span class="pill cause" title="uncertainty cause: {{ u.cause }}">{{ u.label }}</span>{% if u.note %}<span class="cause-note" title="{{ u.note }}">{{ u.note }}</span>{% endif %}{% else %}<span class="small muted">{{ pm.wiki_title }}</span>{% endif %}{% endif %}{% else %}<span class="small muted">n/a</span>{% endif %}</td>
+        <td class="pm">{% if pm %}{% if pm.status == "matched" %}<span class="pill matched">matched</span><a class="link ext" href="{{ pm.wiki_url }}" target="_blank" rel="noopener">{{ pm.wiki_title }}</a>{% else %}<span class="pill uncertain" title="{{ pm.reason }}">uncertain</span>{% if u %}<span class="pill cause" title="{{ u.note or u.cause }}">{{ u.label }}</span>{% if u.note %}<span class="cause-note" title="{{ u.note }}">{{ u.note }}</span>{% endif %}{% else %}<span class="small muted">{{ pm.wiki_title }}</span>{% endif %}{% endif %}{% else %}<span class="small muted">n/a</span>{% endif %}</td>
         <td class="n">{{ r.n_blocks }}</td>
         <td class="n{{ ' zero' if not r.n_entries }}">{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
         <td class="n{{ ' zero' if not r.n_matched }}">{{ r.n_matched if inputs.has_matches else "n/a" }}</td>

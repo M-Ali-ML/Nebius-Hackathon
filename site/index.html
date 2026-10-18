@@ -50,6 +50,7 @@
       <button type="button" class="chip" data-filter="matched" aria-pressed="false" style="--c: var(--emerald-400)">Matched <span class="count">52</span></button>
       <button type="button" class="chip" data-filter="uncertain" aria-pressed="false" style="--c: var(--amber-400)">Uncertain <span class="count">48</span></button>
       <button type="button" class="chip" data-filter="plate" aria-pressed="false">Plates <span class="count">10</span></button>
+      <span id="cause-chips" role="group" aria-label="Uncertainty cause">
       
       <button type="button" class="chip" data-filter="cause-no_text" aria-pressed="false" style="--c: var(--amber-300)" title="uncertainty cause">no usable text <span class="count">6</span></button>
       
@@ -63,6 +64,7 @@
       
       <button type="button" class="chip" data-filter="cause-other" aria-pressed="false" style="--c: var(--amber-300)" title="uncertainty cause">other <span class="count">5</span></button>
       
+      </span>
     </div>
     <span class="count-label" id="n-shown"></span>
   </div>
@@ -76,7 +78,7 @@
         <td><a href="pages/13.html" aria-label="row 13"><img class="thumb" src="thumbs/13.jpg" alt="scan row 13" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/13.html">13</a></td>
         <td class="head">292 SHIP-BUILDING.</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.67 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.27 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 Shipbuilding (logit -6.27, margin 0.37) (likely article: Shipbuilding)">vision top 1 Shipbuilding (logit -6.27, margin 0.37) (likely article: Shipbuilding)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.67 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.27 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 Shipbuilding (logit -6.27, margin 0.37) (likely article: Shipbuilding)">threshold miss</span><span class="cause-note" title="vision top 1 Shipbuilding (logit -6.27, margin 0.37) (likely article: Shipbuilding)">vision top 1 Shipbuilding (logit -6.27, margin 0.37) (likely article: Shipbuilding)</span></td>
         <td class="n">19</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -89,7 +91,7 @@
         <td><a href="pages/104.html" aria-label="row 104"><img class="thumb" src="thumbs/104.jpg" alt="scan row 104" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/104.html">104</a></td>
         <td class="head">WEIGHTS AND MEASURES.</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.34 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.23 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="only Acts of Parliament retrieved (likely article: Weights and measures)">only Acts of Parliament retrieved (likely article: Weights and measures)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.34 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.23 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="only Acts of Parliament retrieved (likely article: Weights and measures)">candidate pool miss</span><span class="cause-note" title="only Acts of Parliament retrieved (likely article: Weights and measures)">only Acts of Parliament retrieved (likely article: Weights and measures)</span></td>
         <td class="n">20</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -102,7 +104,7 @@
         <td><a href="pages/115.html" aria-label="row 115"><img class="thumb" src="thumbs/115.jpg" alt="scan row 115" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/115.html">115</a></td>
         <td class="head">6goa BLEACHING. Part II.</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.60 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.60 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="top 1 Bleach, flat margin (likely article: Bleach)">top 1 Bleach, flat margin (likely article: Bleach)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.60 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.60 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="top 1 Bleach, flat margin (likely article: Bleach)">threshold miss</span><span class="cause-note" title="top 1 Bleach, flat margin (likely article: Bleach)">top 1 Bleach, flat margin (likely article: Bleach)</span></td>
         <td class="n">17</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -128,7 +130,7 @@
         <td><a href="pages/220.html" aria-label="row 220"><img class="thumb" src="thumbs/220.jpg" alt="scan row 220" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/220.html">220</a></td>
         <td class="head">FUR TST FUR</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.81 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.69 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1, logit -6.69 (likely article: Maritime fur trade)">vision top 1, logit -6.69 (likely article: Maritime fur trade)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.81 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.69 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1, logit -6.69 (likely article: Maritime fur trade)">threshold miss</span><span class="cause-note" title="vision top 1, logit -6.69 (likely article: Maritime fur trade)">vision top 1, logit -6.69 (likely article: Maritime fur trade)</span></td>
         <td class="n">10</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -141,7 +143,7 @@
         <td><a href="pages/247.html" aria-label="row 247"><img class="thumb" src="thumbs/247.jpg" alt="scan row 247" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/247.html">247</a></td>
         <td class="head">ET N [ 8 ] E T N</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.47 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.75 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 (logit -4.75, margin 0.18) (likely article: Mount Etna)">vision top 1 (logit -4.75, margin 0.18) (likely article: Mount Etna)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.47 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.75 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 (logit -4.75, margin 0.18) (likely article: Mount Etna)">threshold miss</span><span class="cause-note" title="vision top 1 (logit -4.75, margin 0.18) (likely article: Mount Etna)">vision top 1 (logit -4.75, margin 0.18) (likely article: Mount Etna)</span></td>
         <td class="n">13</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -206,7 +208,7 @@
         <td><a href="pages/266.html" aria-label="row 266"><img class="thumb" src="thumbs/266.jpg" alt="scan row 266" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/266.html">266</a></td>
         <td class="head">(no running head)</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.61 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.38 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 (logit -4.38, margin 0.01) (likely article: Marriage law)">vision top 1 (logit -4.38, margin 0.01) (likely article: Marriage law)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.61 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.38 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 (logit -4.38, margin 0.01) (likely article: Marriage law)">threshold miss</span><span class="cause-note" title="vision top 1 (logit -4.38, margin 0.01) (likely article: Marriage law)">vision top 1 (logit -4.38, margin 0.01) (likely article: Marriage law)</span></td>
         <td class="n">11</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -219,7 +221,7 @@
         <td><a href="pages/268.html" aria-label="row 268"><img class="thumb" src="thumbs/268.jpg" alt="scan row 268" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/268.html">268</a></td>
         <td class="head">LA U [ 6oz ] L AU</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.60 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.32 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 (logit -7.32, margin 0.11) (likely article: Laurus)">vision top 1 (logit -7.32, margin 0.11) (likely article: Laurus)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.60 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.32 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 (logit -7.32, margin 0.11) (likely article: Laurus)">threshold miss</span><span class="cause-note" title="vision top 1 (logit -7.32, margin 0.11) (likely article: Laurus)">vision top 1 (logit -7.32, margin 0.11) (likely article: Laurus)</span></td>
         <td class="n">10</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -245,7 +247,7 @@
         <td><a href="pages/318.html" aria-label="row 318"><img class="thumb" src="thumbs/318.jpg" alt="scan row 318" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/318.html">318</a></td>
         <td class="head">N I L 75 J N I L</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.41 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.57 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 White Nile (close) (likely article: Nile)">vision top 1 White Nile (close) (likely article: Nile)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.41 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.57 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 White Nile (close) (likely article: Nile)">threshold miss</span><span class="cause-note" title="vision top 1 White Nile (close) (likely article: Nile)">vision top 1 White Nile (close) (likely article: Nile)</span></td>
         <td class="n">10</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -258,7 +260,7 @@
         <td><a href="pages/374.html" aria-label="row 374"><img class="thumb" src="thumbs/374.jpg" alt="scan row 374" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/374.html">374</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
+        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="blank scan">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -323,7 +325,7 @@
         <td><a href="pages/493.html" aria-label="row 493"><img class="thumb" src="thumbs/493.jpg" alt="scan row 493" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/493.html">493</a></td>
         <td class="head">L A [ 159] T L A</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.48 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.66 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 Jufureh; page has several minor entries (likely article: Juffureh)">vision top 1 Jufureh; page has several minor entries (likely article: Juffureh)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.48 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.66 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 Jufureh; page has several minor entries (likely article: Juffureh)">threshold miss</span><span class="cause-note" title="vision top 1 Jufureh; page has several minor entries (likely article: Juffureh)">vision top 1 Jufureh; page has several minor entries (likely article: Juffureh)</span></td>
         <td class="n">10</td>
         <td class="n">5</td>
         <td class="n zero">0</td>
@@ -349,7 +351,7 @@
         <td><a href="pages/513.html" aria-label="row 513"><img class="thumb" src="thumbs/513.jpg" alt="scan row 513" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/513.html">513</a></td>
         <td class="head">(no running head)</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.40 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.15 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="Norman history; England in the High Middle Ages at top (likely article: William II of England)">Norman history; England in the High Middle Ages at top (likely article: William II of England)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.40 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.15 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="Norman history; England in the High Middle Ages at top (likely article: William II of England)">threshold miss</span><span class="cause-note" title="Norman history; England in the High Middle Ages at top (likely article: William II of England)">Norman history; England in the High Middle Ages at top (likely article: William II of England)</span></td>
         <td class="n">9</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -375,7 +377,7 @@
         <td><a href="pages/546.html" aria-label="row 546"><img class="thumb" src="thumbs/546.jpg" alt="scan row 546" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/546.html">546</a></td>
         <td class="head">(no running head)</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.03 below the acceptance rules; best candidate kept for review; vision_expand failed: ValueError: Super VL reply has no search phrases; reply: &#39;{\n  &#34;subject&#34;: &#34;Blank page&#34;,\n  &#34;phrases&#34;: []\n}&#39;">uncertain</span><span class="pill cause" title="uncertainty cause: ocr_failure">Parse/OCR failure</span><span class="cause-note" title="Super VL reports a blank page; Parse text invented">Super VL reports a blank page; Parse text invented</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.03 below the acceptance rules; best candidate kept for review; vision_expand failed: ValueError: Super VL reply has no search phrases; reply: &#39;{\n  &#34;subject&#34;: &#34;Blank page&#34;,\n  &#34;phrases&#34;: []\n}&#39;">uncertain</span><span class="pill cause" title="Super VL reports a blank page; Parse text invented">Parse/OCR failure</span><span class="cause-note" title="Super VL reports a blank page; Parse text invented">Super VL reports a blank page; Parse text invented</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -401,7 +403,7 @@
         <td><a href="pages/563.html" aria-label="row 563"><img class="thumb" src="thumbs/563.jpg" alt="scan row 563" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/563.html">563</a></td>
         <td class="head">ACT [ 97] ACT</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.99 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -9.17 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: obsolete_or_minor">obsolete or minor subject</span><span class="cause-note" title="dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)">dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.99 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -9.17 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)">obsolete or minor subject</span><span class="cause-note" title="dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)">dictionary page of obsolete terms (ACROTELEUTIC, AGROTHYMON, ACT)</span></td>
         <td class="n">12</td>
         <td class="n">3</td>
         <td class="n zero">0</td>
@@ -427,7 +429,7 @@
         <td><a href="pages/611.html" aria-label="row 611"><img class="thumb" src="thumbs/611.jpg" alt="scan row 611" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/611.html">611</a></td>
         <td class="head">R E S 752 T RES</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.00 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.59 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="resistance of fluids (likely article: Drag (physics))">resistance of fluids (likely article: Drag (physics))</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.00 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.59 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="resistance of fluids (likely article: Drag (physics))">candidate pool miss</span><span class="cause-note" title="resistance of fluids (likely article: Drag (physics))">resistance of fluids (likely article: Drag (physics))</span></td>
         <td class="n">11</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -440,7 +442,7 @@
         <td><a href="pages/651.html" aria-label="row 651"><img class="thumb" src="thumbs/651.jpg" alt="scan row 651" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/651.html">651</a></td>
         <td class="head">HELMINTHOLOGY. Plate CCLI<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="plate worker: Embed VL top 1 Helminthology, rerank chose the journal (likely article: Helminthology)">plate worker: Embed VL top 1 Helminthology, rerank chose the journal (likely article: Helminthology)</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="plate worker: Embed VL top 1 Helminthology, rerank chose the journal (likely article: Helminthology)">threshold miss</span><span class="cause-note" title="plate worker: Embed VL top 1 Helminthology, rerank chose the journal (likely article: Helminthology)">plate worker: Embed VL top 1 Helminthology, rerank chose the journal (likely article: Helminthology)</span></td>
         <td class="n">12</td>
         <td class="n">1</td>
         <td class="n">1</td>
@@ -531,7 +533,7 @@
         <td><a href="pages/948.html" aria-label="row 948"><img class="thumb" src="thumbs/948.jpg" alt="scan row 948" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/948.html">948</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="caption &#34;Lava&#34;; Lava article not retrieved by the plate pass (likely article: Lava)">caption &#34;Lava&#34;; Lava article not retrieved by the plate pass (likely article: Lava)</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="caption &#34;Lava&#34;; Lava article not retrieved by the plate pass (likely article: Lava)">candidate pool miss</span><span class="cause-note" title="caption &#34;Lava&#34;; Lava article not retrieved by the plate pass (likely article: Lava)">caption &#34;Lava&#34;; Lava article not retrieved by the plate pass (likely article: Lava)</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -557,7 +559,7 @@
         <td><a href="pages/1032.html" aria-label="row 1032"><img class="thumb" src="thumbs/1032.jpg" alt="scan row 1032" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1032.html">1032</a></td>
         <td class="head">HE A ( 776 )</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.72 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.20 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="HEAT; main article not retrieved (likely article: Heat)">HEAT; main article not retrieved (likely article: Heat)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.72 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.20 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="HEAT; main article not retrieved (likely article: Heat)">candidate pool miss</span><span class="cause-note" title="HEAT; main article not retrieved (likely article: Heat)">HEAT; main article not retrieved (likely article: Heat)</span></td>
         <td class="n">11</td>
         <td class="n">2</td>
         <td class="n zero">0</td>
@@ -570,7 +572,7 @@
         <td><a href="pages/1102.html" aria-label="row 1102"><img class="thumb" src="thumbs/1102.jpg" alt="scan row 1102" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1102.html">1102</a></td>
         <td class="head">182 COM COM</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.80 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.85 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="page mixes COMINES and COMITIA (likely article: Philippe de Commines)">page mixes COMINES and COMITIA (likely article: Philippe de Commines)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.80 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.85 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="page mixes COMINES and COMITIA (likely article: Philippe de Commines)">threshold miss</span><span class="cause-note" title="page mixes COMINES and COMITIA (likely article: Philippe de Commines)">page mixes COMINES and COMITIA (likely article: Philippe de Commines)</span></td>
         <td class="n">12</td>
         <td class="n">3</td>
         <td class="n zero">0</td>
@@ -648,7 +650,7 @@
         <td><a href="pages/1298.html" aria-label="row 1298"><img class="thumb" src="thumbs/1298.jpg" alt="scan row 1298" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1298.html">1298</a></td>
         <td class="head">452 EdWARDS</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.59 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.28 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="top 1 correct (logit -4.28 in vision pass) (likely article: Bryan Edwards (politician))">top 1 correct (logit -4.28 in vision pass) (likely article: Bryan Edwards (politician))</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.59 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.28 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="top 1 correct (logit -4.28 in vision pass) (likely article: Bryan Edwards (politician))">threshold miss</span><span class="cause-note" title="top 1 correct (logit -4.28 in vision pass) (likely article: Bryan Edwards (politician))">top 1 correct (logit -4.28 in vision pass) (likely article: Bryan Edwards (politician))</span></td>
         <td class="n">7</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -687,7 +689,7 @@
         <td><a href="pages/1344.html" aria-label="row 1344"><img class="thumb" src="thumbs/1344.jpg" alt="scan row 1344" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1344.html">1344</a></td>
         <td class="head">H O R [ 664 ] H O R</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.70 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.69 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="veterinary text (likely article: Horse)">veterinary text (likely article: Horse)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.70 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -8.69 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="veterinary text (likely article: Horse)">candidate pool miss</span><span class="cause-note" title="veterinary text (likely article: Horse)">veterinary text (likely article: Horse)</span></td>
         <td class="n">23</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -700,7 +702,7 @@
         <td><a href="pages/1400.html" aria-label="row 1400"><img class="thumb" src="thumbs/1400.jpg" alt="scan row 1400" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1400.html">1400</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="plate worker top 1 Midwife; general article not retrieved (likely article: Midwifery)">plate worker top 1 Midwife; general article not retrieved (likely article: Midwifery)</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="plate worker top 1 Midwife; general article not retrieved (likely article: Midwifery)">candidate pool miss</span><span class="cause-note" title="plate worker top 1 Midwife; general article not retrieved (likely article: Midwifery)">plate worker top 1 Midwife; general article not retrieved (likely article: Midwifery)</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -713,7 +715,7 @@
         <td><a href="pages/1415.html" aria-label="row 1415"><img class="thumb" src="thumbs/1415.jpg" alt="scan row 1415" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1415.html">1415</a></td>
         <td class="head">ET H  [ 797 ] E T H</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.98 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.62 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="main article not retrieved (likely article: Ethiopia)">main article not retrieved (likely article: Ethiopia)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.98 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.62 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="main article not retrieved (likely article: Ethiopia)">candidate pool miss</span><span class="cause-note" title="main article not retrieved (likely article: Ethiopia)">main article not retrieved (likely article: Ethiopia)</span></td>
         <td class="n">7</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -752,7 +754,7 @@
         <td><a href="pages/1466.html" aria-label="row 1466"><img class="thumb" src="thumbs/1466.jpg" alt="scan row 1466" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1466.html">1466</a></td>
         <td class="head">E S S [ 729 ] E S S</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.74 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.00 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 (likely article: Metallurgical assay)">vision top 1 (likely article: Metallurgical assay)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.74 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.00 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 (likely article: Metallurgical assay)">threshold miss</span><span class="cause-note" title="vision top 1 (likely article: Metallurgical assay)">vision top 1 (likely article: Metallurgical assay)</span></td>
         <td class="n">12</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -804,7 +806,7 @@
         <td><a href="pages/1615.html" aria-label="row 1615"><img class="thumb" src="thumbs/1615.jpg" alt="scan row 1615" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1615.html">1615</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
+        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="blank scan">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -830,7 +832,7 @@
         <td><a href="pages/1670.html" aria-label="row 1670"><img class="thumb" src="thumbs/1670.jpg" alt="scan row 1670" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1670.html">1670</a></td>
         <td class="head">G-AP [ 141] C A P</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.26 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.04 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="Cappadocia articles at top, flat margin (likely article: Kingdom of Cappadocia)">Cappadocia articles at top, flat margin (likely article: Kingdom of Cappadocia)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.26 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.04 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="Cappadocia articles at top, flat margin (likely article: Kingdom of Cappadocia)">threshold miss</span><span class="cause-note" title="Cappadocia articles at top, flat margin (likely article: Kingdom of Cappadocia)">Cappadocia articles at top, flat margin (likely article: Kingdom of Cappadocia)</span></td>
         <td class="n">15</td>
         <td class="n">3</td>
         <td class="n zero">0</td>
@@ -882,7 +884,7 @@
         <td><a href="pages/1765.html" aria-label="row 1765"><img class="thumb" src="thumbs/1765.jpg" alt="scan row 1765" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1765.html">1765</a></td>
         <td class="head">KAL [ 421]</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.23 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.71 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="vision subject read only &#34;Kal&#34; (likely article: Kalmyks)">vision subject read only &#34;Kal&#34; (likely article: Kalmyks)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.23 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.71 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision subject read only &#34;Kal&#34; (likely article: Kalmyks)">candidate pool miss</span><span class="cause-note" title="vision subject read only &#34;Kal&#34; (likely article: Kalmyks)">vision subject read only &#34;Kal&#34; (likely article: Kalmyks)</span></td>
         <td class="n">11</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -895,7 +897,7 @@
         <td><a href="pages/1803.html" aria-label="row 1803"><img class="thumb" src="thumbs/1803.jpg" alt="scan row 1803" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1803.html">1803</a></td>
         <td class="head">EN G E 141 T E N G</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.20 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.12 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="engraver lists retrieved, not Engraving (likely article: Engraving)">engraver lists retrieved, not Engraving (likely article: Engraving)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.20 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.12 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="engraver lists retrieved, not Engraving (likely article: Engraving)">candidate pool miss</span><span class="cause-note" title="engraver lists retrieved, not Engraving (likely article: Engraving)">engraver lists retrieved, not Engraving (likely article: Engraving)</span></td>
         <td class="n">17</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -947,7 +949,7 @@
         <td><a href="pages/1845.html" aria-label="row 1845"><img class="thumb" src="thumbs/1845.jpg" alt="scan row 1845" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1845.html">1845</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="caption &#34;XVII.&#34; only">caption &#34;XVII.&#34; only</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="caption &#34;XVII.&#34; only">no usable text</span><span class="cause-note" title="caption &#34;XVII.&#34; only">caption &#34;XVII.&#34; only</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -986,7 +988,7 @@
         <td><a href="pages/1933.html" aria-label="row 1933"><img class="thumb" src="thumbs/1933.jpg" alt="scan row 1933" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1933.html">1933</a></td>
         <td class="head">5706 / Part III.</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.42 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.25 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="ORATORY (likely article: Rhetoric)">ORATORY (likely article: Rhetoric)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.42 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.25 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="ORATORY (likely article: Rhetoric)">candidate pool miss</span><span class="cause-note" title="ORATORY (likely article: Rhetoric)">ORATORY (likely article: Rhetoric)</span></td>
         <td class="n">15</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -999,7 +1001,7 @@
         <td><a href="pages/1939.html" aria-label="row 1939"><img class="thumb" src="thumbs/1939.jpg" alt="scan row 1939" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1939.html">1939</a></td>
         <td class="head">6056</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.73 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.54 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="PHARMACY essential oils (likely article: Essential oil)">PHARMACY essential oils (likely article: Essential oil)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.73 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.54 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="PHARMACY essential oils (likely article: Essential oil)">candidate pool miss</span><span class="cause-note" title="PHARMACY essential oils (likely article: Essential oil)">PHARMACY essential oils (likely article: Essential oil)</span></td>
         <td class="n">25</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1012,7 +1014,7 @@
         <td><a href="pages/1942.html" aria-label="row 1942"><img class="thumb" src="thumbs/1942.jpg" alt="scan row 1942" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1942.html">1942</a></td>
         <td class="head">6046</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.14 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.63 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="PHARMACY conserves; Confectionery / Fruit preserves at top (likely article: Fruit preserves)">PHARMACY conserves; Confectionery / Fruit preserves at top (likely article: Fruit preserves)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.14 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.63 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="PHARMACY conserves; Confectionery / Fruit preserves at top (likely article: Fruit preserves)">threshold miss</span><span class="cause-note" title="PHARMACY conserves; Confectionery / Fruit preserves at top (likely article: Fruit preserves)">PHARMACY conserves; Confectionery / Fruit preserves at top (likely article: Fruit preserves)</span></td>
         <td class="n">29</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1025,7 +1027,7 @@
         <td><a href="pages/1945.html" aria-label="row 1945"><img class="thumb" src="thumbs/1945.jpg" alt="scan row 1945" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/1945.html">1945</a></td>
         <td class="head">Part III. U P T I C S. 5605</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.33 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.33 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note" title="astronomical instruments under an OPTICS head; index pages win">astronomical instruments under an OPTICS head; index pages win</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.33 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.33 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="astronomical instruments under an OPTICS head; index pages win">other</span><span class="cause-note" title="astronomical instruments under an OPTICS head; index pages win">astronomical instruments under an OPTICS head; index pages win</span></td>
         <td class="n">9</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1064,7 +1066,7 @@
         <td><a href="pages/2077.html" aria-label="row 2077"><img class="thumb" src="thumbs/2077.jpg" alt="scan row 2077" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2077.html">2077</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
+        <td class="pm"><span class="pill uncertain" title="Super VL reports a blank page">uncertain</span><span class="pill cause" title="blank scan">no usable text</span><span class="cause-note" title="blank scan">blank scan</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1077,7 +1079,7 @@
         <td><a href="pages/2087.html" aria-label="row 2087"><img class="thumb" src="thumbs/2087.jpg" alt="scan row 2087" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2087.html">2087</a></td>
         <td class="head">BRITAIN. 571</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.35 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.35 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="Napoleonic-era history (likely article: History of the United Kingdom)">Napoleonic-era history (likely article: History of the United Kingdom)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.35 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.35 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="Napoleonic-era history (likely article: History of the United Kingdom)">candidate pool miss</span><span class="cause-note" title="Napoleonic-era history (likely article: History of the United Kingdom)">Napoleonic-era history (likely article: History of the United Kingdom)</span></td>
         <td class="n">3</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1090,7 +1092,7 @@
         <td><a href="pages/2093.html" aria-label="row 2093"><img class="thumb" src="thumbs/2093.jpg" alt="scan row 2093" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2093.html">2093</a></td>
         <td class="head">S E N T I ST J SEN</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.67 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.81 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="SENTIMENT (likely article: Moral sense theory)">SENTIMENT (likely article: Moral sense theory)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.67 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.81 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="SENTIMENT (likely article: Moral sense theory)">candidate pool miss</span><span class="cause-note" title="SENTIMENT (likely article: Moral sense theory)">SENTIMENT (likely article: Moral sense theory)</span></td>
         <td class="n">12</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1103,7 +1105,7 @@
         <td><a href="pages/2108.html" aria-label="row 2108"><img class="thumb" src="thumbs/2108.jpg" alt="scan row 2108" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2108.html">2108</a></td>
         <td class="head">B R I  [ 645 J B R F</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.84 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.64 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79) (likely article: Hecatoncheires)">BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79) (likely article: Hecatoncheires)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.84 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.64 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79) (likely article: Hecatoncheires)">threshold miss</span><span class="cause-note" title="BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79) (likely article: Hecatoncheires)">BRIAREUS; Hecatoncheires top 1 (logit -5.64, margin 0.79) (likely article: Hecatoncheires)</span></td>
         <td class="n">5</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1116,7 +1118,7 @@
         <td><a href="pages/2131.html" aria-label="row 2131"><img class="thumb" src="thumbs/2131.jpg" alt="scan row 2131" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2131.html">2131</a></td>
         <td class="head">BOM [ 353 BOM</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.06 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.86 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note" title="weather table for Bombay">weather table for Bombay</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.06 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.86 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="weather table for Bombay">other</span><span class="cause-note" title="weather table for Bombay">weather table for Bombay</span></td>
         <td class="n">11</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1129,7 +1131,7 @@
         <td><a href="pages/2155.html" aria-label="row 2155"><img class="thumb" src="thumbs/2155.jpg" alt="scan row 2155" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2155.html">2155</a></td>
         <td class="head">B L I [ 301] B LI</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.58 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.84 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note" title="writing and music aids for the blind; no single article">writing and music aids for the blind; no single article</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.58 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.84 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="writing and music aids for the blind; no single article">other</span><span class="cause-note" title="writing and music aids for the blind; no single article">writing and music aids for the blind; no single article</span></td>
         <td class="n">25</td>
         <td class="n">2</td>
         <td class="n zero">0</td>
@@ -1155,7 +1157,7 @@
         <td><a href="pages/2209.html" aria-label="row 2209"><img class="thumb" src="thumbs/2209.jpg" alt="scan row 2209" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2209.html">2209</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="caption &#34;Plate. XLVI&#34; only, no subject">caption &#34;Plate. XLVI&#34; only, no subject</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="caption &#34;Plate. XLVI&#34; only, no subject">no usable text</span><span class="cause-note" title="caption &#34;Plate. XLVI&#34; only, no subject">caption &#34;Plate. XLVI&#34; only, no subject</span></td>
         <td class="n">1</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1168,7 +1170,7 @@
         <td><a href="pages/2243.html" aria-label="row 2243"><img class="thumb" src="thumbs/2243.jpg" alt="scan row 2243" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2243.html">2243</a></td>
         <td class="head">(no running head)<span class="pill uncertain">plate: no_clear_counterpart</span></td>
-        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="uncertainty cause: no_text">no usable text</span><span class="cause-note" title="caption letters only, no subject">caption letters only, no subject</span></td>
+        <td class="pm"><span class="pill uncertain" title="Rerank VL and Embed VL disagree and the logit is below tau">uncertain</span><span class="pill cause" title="caption letters only, no subject">no usable text</span><span class="cause-note" title="caption letters only, no subject">caption letters only, no subject</span></td>
         <td class="n">2</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1194,7 +1196,7 @@
         <td><a href="pages/2277.html" aria-label="row 2277"><img class="thumb" src="thumbs/2277.jpg" alt="scan row 2277" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2277.html">2277</a></td>
         <td class="head">Chap. VI. / 271</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.41 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.27 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="vision top 1 close (likely article: Head and neck anatomy)">vision top 1 close (likely article: Head and neck anatomy)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -4.41 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -4.27 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="vision top 1 close (likely article: Head and neck anatomy)">threshold miss</span><span class="cause-note" title="vision top 1 close (likely article: Head and neck anatomy)">vision top 1 close (likely article: Head and neck anatomy)</span></td>
         <td class="n">16</td>
         <td class="n">2</td>
         <td class="n zero">0</td>
@@ -1207,7 +1209,7 @@
         <td><a href="pages/2296.html" aria-label="row 2296"><img class="thumb" src="thumbs/2296.jpg" alt="scan row 2296" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2296.html">2296</a></td>
         <td class="head">**POL [ 93 ]**</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.64 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.03 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="polar voyages (likely article: Arctic exploration)">polar voyages (likely article: Arctic exploration)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.64 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.03 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="polar voyages (likely article: Arctic exploration)">candidate pool miss</span><span class="cause-note" title="polar voyages (likely article: Arctic exploration)">polar voyages (likely article: Arctic exploration)</span></td>
         <td class="n">12</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1233,7 +1235,7 @@
         <td><a href="pages/2402.html" aria-label="row 2402"><img class="thumb" src="thumbs/2402.jpg" alt="scan row 2402" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2402.html">2402</a></td>
         <td class="head">A N A T O M Y. 3</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.35 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.35 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="Coccyx retrieved instead (likely article: Vertebral column)">Coccyx retrieved instead (likely article: Vertebral column)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.35 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.35 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="Coccyx retrieved instead (likely article: Vertebral column)">candidate pool miss</span><span class="cause-note" title="Coccyx retrieved instead (likely article: Vertebral column)">Coccyx retrieved instead (likely article: Vertebral column)</span></td>
         <td class="n">15</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1246,7 +1248,7 @@
         <td><a href="pages/2424.html" aria-label="row 2424"><img class="thumb" src="thumbs/2424.jpg" alt="scan row 2424" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2424.html">2424</a></td>
         <td class="head">AGRICULTURE. 245</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.75 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.75 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="top 1 correct (likely article: Livestock)">top 1 correct (likely article: Livestock)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.75 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.75 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="top 1 correct (likely article: Livestock)">threshold miss</span><span class="cause-note" title="top 1 correct (likely article: Livestock)">top 1 correct (likely article: Livestock)</span></td>
         <td class="n">20</td>
         <td class="n">2</td>
         <td class="n zero">0</td>
@@ -1259,7 +1261,7 @@
         <td><a href="pages/2446.html" aria-label="row 2446"><img class="thumb" src="thumbs/2446.jpg" alt="scan row 2446" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2446.html">2446</a></td>
         <td class="head">C H E M I S SI T R Y. 17</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.28 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.28 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: pool_miss">candidate pool miss</span><span class="cause-note" title="main article not retrieved (likely article: Chemistry)">main article not retrieved (likely article: Chemistry)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -7.28 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -7.28 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="main article not retrieved (likely article: Chemistry)">candidate pool miss</span><span class="cause-note" title="main article not retrieved (likely article: Chemistry)">main article not retrieved (likely article: Chemistry)</span></td>
         <td class="n">11</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1272,7 +1274,7 @@
         <td><a href="pages/2448.html" aria-label="row 2448"><img class="thumb" src="thumbs/2448.jpg" alt="scan row 2448" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2448.html">2448</a></td>
         <td class="head">**C O M ( 255 ) C O M**</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.00 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.52 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note" title="reflective prose; subject unclear">reflective prose; subject unclear</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.00 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -5.52 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="reflective prose; subject unclear">other</span><span class="cause-note" title="reflective prose; subject unclear">reflective prose; subject unclear</span></td>
         <td class="n">19</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1324,7 +1326,7 @@
         <td><a href="pages/2493.html" aria-label="row 2493"><img class="thumb" src="thumbs/2493.jpg" alt="scan row 2493" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2493.html">2493</a></td>
         <td class="head">598</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.52 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.09 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note" title="CHEMISTRY index table">CHEMISTRY index table</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -5.52 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.09 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="CHEMISTRY index table">other</span><span class="cause-note" title="CHEMISTRY index table">CHEMISTRY index table</span></td>
         <td class="n">49</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1363,7 +1365,7 @@
         <td><a href="pages/2570.html" aria-label="row 2570"><img class="thumb" src="thumbs/2570.jpg" alt="scan row 2570" loading="lazy"></a></td>
         <td class="rowid"><a href="pages/2570.html">2570</a></td>
         <td class="head">88 ABYSSINIA.</td>
-        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.94 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.94 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="uncertainty cause: threshold_miss">threshold miss</span><span class="cause-note" title="long pass top 1; vision chose a musical (likely article: Ethiopian Empire)">long pass top 1; vision chose a musical (likely article: Ethiopian Empire)</span></td>
+        <td class="pm"><span class="pill uncertain" title="top rerank logit -6.94 below the acceptance rules; best candidate kept for review; vision_expand rejected: top rerank logit -6.94 below the acceptance rules; best candidate kept for review">uncertain</span><span class="pill cause" title="long pass top 1; vision chose a musical (likely article: Ethiopian Empire)">threshold miss</span><span class="cause-note" title="long pass top 1; vision chose a musical (likely article: Ethiopian Empire)">long pass top 1; vision chose a musical (likely article: Ethiopian Empire)</span></td>
         <td class="n">10</td>
         <td class="n">1</td>
         <td class="n zero">0</td>
@@ -1376,7 +1378,7 @@
   </div>
 </main>
 
-<footer class="bottom">Built 2026-10-18 14:44. Britannica scans: public domain (CC0). Wikipedia text: CC BY-SA 4.0, linked by page and revision. OCR text is Parse 3.5 output without correction.</footer>
+<footer class="bottom">Built 2026-10-18 14:57. Britannica scans: public domain (CC0). Wikipedia text: CC BY-SA 4.0, linked by page and revision. OCR text is Parse 3.5 output without correction.</footer>
 <script src="app.js"></script>
 </body>
 </html>

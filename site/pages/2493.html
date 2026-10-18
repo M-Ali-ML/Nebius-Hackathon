@@ -43,27 +43,32 @@
   <section class="pane source" aria-label="Source: scan and Parse blocks">
     <div class="pane-head">
       <span class="pane-title">Source · scan and Parse blocks</span>
-      <div class="chips" id="toggles">
+      <div class="chips end" id="toggles">
         <button type="button" class="chip" id="toggle-all" aria-pressed="true">Boxes</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Caption" aria-pressed="true" style="--c: #b7791f"><span class="sw"></span>Caption</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="List-item" aria-pressed="true" style="--c: #2f855a"><span class="sw"></span>List-item</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Page-footer" aria-pressed="true" style="--c: #a0aec0"><span class="sw"></span>Page-footer</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Page-header" aria-pressed="true" style="--c: #718096"><span class="sw"></span>Page-header</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Picture" aria-pressed="true" style="--c: #d53f8c"><span class="sw"></span>Picture</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Section-header" aria-pressed="true" style="--c: #c05621"><span class="sw"></span>Section-header</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Table" aria-pressed="true" style="--c: #00838f"><span class="sw"></span>Table</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Text" aria-pressed="true" style="--c: #2b6cb0"><span class="sw"></span>Text</button>
-        
-        <button type="button" class="chip cls-toggle" data-cls="Title" aria-pressed="true" style="--c: #9b2c2c"><span class="sw"></span>Title</button>
-        
+        <details class="popover">
+          <summary class="chip">Layers <span class="count">9</span></summary>
+          <div class="popover-body chips" role="group" aria-label="Block classes">
+            
+            <button type="button" class="chip cls-toggle" data-cls="Caption" aria-pressed="true" style="--c: #b7791f"><span class="sw"></span>Caption</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="List-item" aria-pressed="true" style="--c: #2f855a"><span class="sw"></span>List-item</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Page-footer" aria-pressed="true" style="--c: #a0aec0"><span class="sw"></span>Page-footer</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Page-header" aria-pressed="true" style="--c: #718096"><span class="sw"></span>Page-header</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Picture" aria-pressed="true" style="--c: #d53f8c"><span class="sw"></span>Picture</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Section-header" aria-pressed="true" style="--c: #c05621"><span class="sw"></span>Section-header</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Table" aria-pressed="true" style="--c: #00838f"><span class="sw"></span>Table</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Text" aria-pressed="true" style="--c: #2b6cb0"><span class="sw"></span>Text</button>
+            
+            <button type="button" class="chip cls-toggle" data-cls="Title" aria-pressed="true" style="--c: #9b2c2c"><span class="sw"></span>Title</button>
+            
+          </div>
+        </details>
       </div>
     </div>
     <div class="pane-body">
@@ -332,11 +337,14 @@ Water &amp; 25\\
 \end{tabular}</div></li><li data-order="48"><span class="ord">48</span><div><span class="cls" style="color:#a0aec0">Page-footer</span>9. Muriate</div></li>
         </ol>
       </details>
-      <dl class="prov">
-        <dt>page_id</dt><dd>britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2493</dd>
-        <dt>sha256</dt><dd>84519542efceeb7511318fcd5cf2213ed3dc634dd20638613d3ba33a500c2393</dd>
-        <dt>Parse</dt><dd>nvidia/nemotron-3.5-parse · finish stop</dd>
-      </dl>
+      <details class="blocktext">
+        <summary>Provenance <span class="muted">page_id, checksum, Parse model</span></summary>
+        <dl class="prov">
+          <dt>page_id</dt><dd>britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2493</dd>
+          <dt>sha256</dt><dd>84519542efceeb7511318fcd5cf2213ed3dc634dd20638613d3ba33a500c2393</dd>
+          <dt>Parse</dt><dd>nvidia/nemotron-3.5-parse · finish stop</dd>
+        </dl>
+      </details>
     </div>
   </section>
 
@@ -356,25 +364,28 @@ Water &amp; 25\\
   </section>
 
   <aside class="pane inspector" aria-label="Generated: matches and comparison">
-    <div class="pane-head"><span class="pane-title">Inspector · generated</span><span class="end"><span class="meta">1 entries</span></span></div>
+    <div class="pane-head"><span class="pane-title">Inspector · generated</span><span class="end"><button type="button" class="btn sm" id="expand-all" aria-pressed="false">Expand all</button></span></div>
     
 <section class="isec pmatch">
   <div class="isec-h"><h2>Page match</h2><span class="aside">dictionary page</span></div>
   <div class="matchline">
-    <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>
+    <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span><span class="pill cause" title="uncertainty cause: other">other</span>
     <a class="link ext title" href="https://en.wikipedia.org/wiki/Salt_(chemistry)" target="_blank" rel="noopener">Salt (chemistry)</a>
   </div>
-  <div class="matchline" style="margin-top: var(--s2)"><span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note">CHEMISTRY index table</span></div>
-  <div class="subline"><span class="cite">[W:27558:1353440347]</span></div>
-  
-  
+  <p class="cause-note" style="margin-top: var(--s2)">CHEMISTRY index table</p>
+  <details class="more">
+    <summary>Scores and reasoning</summary>
+    <div class="subline"><span class="cite">[W:27558:1353440347]</span></div>
+    
+    
 <dl class="kv" title="rerank -5.52 · margin 0.02 · BM25 rank 4">
   <div><dt>Rerank</dt><dd>-5.52</dd></div>
   <div><dt>Margin</dt><dd>0.02</dd></div>
   
   <div><dt>BM25 rank</dt><dd>4</dd></div>
 </dl><div class="subline"><span class="meta" title="method">bm25+embed+rerank</span></div>
-  <p class="why">Rejected: low top rerank logit -5.52 &lt;= tau -4.0; flat margin 0.02 between &#39;Salt (chemistry)&#39; and &#39;Mellitic acid&#39;; top candidates have unrelated titles: Salt (chemistry); Mellitic acid; Germanium compounds. Best candidate scores: BM25 rank 4, embed cos 0.168, rerank logit -5.52, margin 0.02 over &#39;Mellitic acid&#39;. Vision expansion: Super VL subject &#39;Chemistry&#39;, phrases [&#39;Sulphate of magnesia&#39;, &#39;Sulphate of ammonia and magnesia&#39;, &#39;Nitrate of magnesia&#39;, &#39;Muritate of ammonia and magnesia&#39;, &#39;Nitrate of ammonia&#39;]. Rejected: low top rerank logit -6.09 &lt;= tau -4.0; flat margin 0.35 between &#39;Magnesium compounds&#39; and &#39;Potassium sulfate&#39;; top candidates have unrelated titles: Magnesium compounds; Potassium sulfate; Mellitic acid. Best candidate scores: BM25 rank 29, embed cos 0.307, rerank logit -6.09, margin 0.35 over &#39;Potassium sulfate&#39;.</p>
+    <p class="why">Rejected: low top rerank logit -5.52 &lt;= tau -4.0; flat margin 0.02 between &#39;Salt (chemistry)&#39; and &#39;Mellitic acid&#39;; top candidates have unrelated titles: Salt (chemistry); Mellitic acid; Germanium compounds. Best candidate scores: BM25 rank 4, embed cos 0.168, rerank logit -5.52, margin 0.02 over &#39;Mellitic acid&#39;. Vision expansion: Super VL subject &#39;Chemistry&#39;, phrases [&#39;Sulphate of magnesia&#39;, &#39;Sulphate of ammonia and magnesia&#39;, &#39;Nitrate of magnesia&#39;, &#39;Muritate of ammonia and magnesia&#39;, &#39;Nitrate of ammonia&#39;]. Rejected: low top rerank logit -6.09 &lt;= tau -4.0; flat margin 0.35 between &#39;Magnesium compounds&#39; and &#39;Potassium sulfate&#39;; top candidates have unrelated titles: Magnesium compounds; Potassium sulfate; Mellitic acid. Best candidate scores: BM25 rank 29, embed cos 0.307, rerank logit -6.09, margin 0.35 over &#39;Potassium sulfate&#39;.</p>
+  </details>
 </section>
     
     
@@ -386,35 +397,39 @@ Water &amp; 25\\
         
           
           <li class="entry no_clear_counterpart" data-orders="1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,39,40,41,42,43,44,45,46,47">
-            <div class="ehead">
-              <span class="meta">B:2493:0</span>
-              <b>CH E M I S T R Y</b>
-            </div>
-            <p class="snippet" title="Parse text">CH E M I S T R Y. Magnella, Sc. 334 Prepris-tion. 1553 Properties 1354 Achon of air, Sc. 3. It effectes in the air, and is flowed converted into fulphate of magenae. It is soluble in 20 parts of cold water. Boiling water…</p>
-            
-              
-                <div class="match">
-                  <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>
-                  <span class="pill cause" title="uncertainty cause: other">other</span><span class="cause-note">CHEMISTRY index table</span>
-                </div>
-                <div class="topic">Best candidate: <a class="link ext" href="https://en.wikipedia.org/wiki/Salt_(chemistry)" target="_blank" rel="noopener">Salt (chemistry)</a></div>
-              
-              
+            <details>
+              <summary class="erow">
+                <span class="ehead"><b>CH E M I S T R Y</b><span class="meta">B:2493:0</span></span>
+                <span class="match">
+                <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span><span class="pill cause" title="CHEMISTRY index table">other</span>
+                
+                </span>
+              </summary>
+              <div class="edetail">
+                <p class="snippet" title="Parse text">CH E M I S T R Y. Magnella, Sc. 334 Prepris-tion. 1553 Properties 1354 Achon of air, Sc. 3. It effectes in the air, and is flowed converted into fulphate of magenae. It is soluble in 20 parts of cold water. Boiling water…</p>
+                
+                  
+                    <p class="cause-note">CHEMISTRY index table</p>
+                    <div class="topic">Best candidate: <a class="link ext" href="https://en.wikipedia.org/wiki/Salt_(chemistry)" target="_blank" rel="noopener">Salt (chemistry)</a></div>
+                  
+                  
 <dl class="kv" title="rerank -5.52 · margin 0.02 · cos 0.168 · BM25 rank 4">
   <div><dt>Rerank</dt><dd>-5.52</dd></div>
   <div><dt>Margin</dt><dd>0.02</dd></div>
   <div><dt>Cosine</dt><dd>0.168</dd></div>
   <div><dt>BM25 rank</dt><dd>4</dd></div>
 </dl><div class="subline"><span class="meta" title="method">bm25+embed+rerank</span></div>
-              <div class="reason">top rerank logit -5.52 below the acceptance rules; best candidate kept for review</div>
-            
-            
+                  <div class="reason">top rerank logit -5.52 below the acceptance rules; best candidate kept for review</div>
+                
+                
+              </div>
+            </details>
           </li>
         
         </ul>
       
     </section>
-    <div class="page-foot">Built 2026-10-18 14:44. Britannica scans: public domain (CC0). Wikipedia text: CC BY-SA 4.0, linked by page and revision. OCR text is Parse 3.5 output without correction.</div>
+    <div class="page-foot">Built 2026-10-18 14:57. Britannica scans: public domain (CC0). Wikipedia text: CC BY-SA 4.0, linked by page and revision. OCR text is Parse 3.5 output without correction.</div>
   </aside>
 </main>
 

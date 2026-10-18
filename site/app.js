@@ -22,6 +22,8 @@
       c.addEventListener("click", function () {
         current = c.dataset.filter;
         chips.forEach(function (x) { x.setAttribute("aria-pressed", x === c ? "true" : "false"); });
+        var group = document.getElementById("index-filters");
+        group.classList.toggle("show-causes", current === "uncertain" || current.indexOf("cause-") === 0);
         applyFilter();
       });
     });
@@ -33,6 +35,28 @@
       });
     });
     applyFilter();
+  }
+
+  // Inspector: open or close every disclosure at once.
+  var expand = document.getElementById("expand-all");
+  if (expand) {
+    expand.addEventListener("click", function () {
+      var open = !pressed(expand);
+      expand.setAttribute("aria-pressed", open ? "true" : "false");
+      expand.textContent = open ? "Collapse all" : "Expand all";
+      document.querySelectorAll(".inspector details").forEach(function (d) { d.open = open; });
+    });
+  }
+  // Claim quotes: clamped to 4 lines; a click shows the full quote.
+  document.querySelectorAll(".claim .q").forEach(function (q) {
+    q.title = "Click to show the full quote";
+    q.addEventListener("click", function (ev) { if (!ev.target.closest("a")) q.classList.toggle("open"); });
+  });
+  // Close the layer popover on an outside click or Escape.
+  var pop = document.querySelector("details.popover");
+  if (pop) {
+    document.addEventListener("click", function (ev) { if (pop.open && !pop.contains(ev.target)) pop.open = false; });
+    document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") pop.open = false; });
   }
 
   var overlay = document.getElementById("overlay");

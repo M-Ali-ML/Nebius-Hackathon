@@ -1,7 +1,7 @@
 {
- "time": "2026-10-18T14:14:55",
- "code_revision": "f324728858de56d56967eec8fea253d0f1da81e7",
- "code_dirty": true,
+ "time": "2026-10-18T14:25:45",
+ "code_revision": "3528cd38d6c4c10af4852e5d191c1c19701027b8",
+ "code_dirty": false,
  "branch": "M-Ali-ML/mvp-agent",
  "models": {
   "parse": "nvidia/nemotron-3.5-parse",
@@ -35,18 +35,18 @@
    "no_clear_counterpart": 195,
    "matched": 67
   },
-  "compare_pairs": 67,
+  "compare_pairs": 83,
   "drift": {
-   "pairs": 67,
-   "claims_checked": 355,
+   "pairs": 83,
+   "claims_checked": 476,
    "claim_shares": {
-    "enduring": 0.468,
-    "renamed": 0.039,
-    "superseded": 0.135,
-    "dropped": 0.358
+    "enduring": 0.441,
+    "renamed": 0.048,
+    "superseded": 0.132,
+    "dropped": 0.378
    },
-   "quotes_kept": 1193,
-   "quotes_rejected": 50
+   "quotes_kept": 1567,
+   "quotes_rejected": 64
   }
  },
  "agent_transcripts": {

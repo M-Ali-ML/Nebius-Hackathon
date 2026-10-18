@@ -12,7 +12,7 @@
   const TOOL_ICON = { search_sources: "search", get_pair: "file", view_scan: "image", find_drift: "search", view_neighbors: "image" };
   const fmt = (n) => (n == null ? "?" : n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n));
 
-  let d = 0, shown = 0, playing = false, speed = 1, SPEEDS = [0.25, 0.5, 0.75, 1, 1.5, 2], timer = null, token = 0;
+  let d = 0, shown = 0, playing = false, speed = 1, SPEEDS = [0.25, 0.5, 0.75, 1, 1.5, 2, 4], timer = null, token = 0;
 
   function debate() { return DATA.debates[d]; }
 

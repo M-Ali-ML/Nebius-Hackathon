@@ -1,41 +1,50 @@
 # Video script (3:00)
 
-Record the screen at 1080p. Keep `site/` open in a browser and Hermes in a terminal.
-Each block lists what to show and what to say. Times are targets.
+Record each block as a separate clip, then join them. Speed up model waits in the edit (2x to 4x) and say so with a small "sped up" label.
+Use the live Space for the browser parts: https://nebius-build-week-britannica-across-time.static.hf.space
+Hermes runs in a terminal from the main checkout (see [demo-commands.md](demo-commands.md)).
 
-## 0:00 to 0:20 Hook
+## 0:00 to 0:15 Hook (home page)
 
-Show: `site/index.html`, then one scan page.
-Say: "The 18th-century Britannica explains lightning as 'electric fire' from a charged 'electrical atmosphere'. Wikipedia measures it in gigajoules and return strokes. We built a pipeline that finds out what changed: the spelling, the words, the facts, or the coverage. Every step runs on Nemotron."
+Show: the home page intro and the five "What you will see" cards. Slow scroll.
+Say: "The 18th-century Britannica calls lightning 'electric fire' from a charged 'electrical atmosphere'. Wikipedia measures it in gigajoules. We read 100 Britannica pages with NVIDIA Nemotron and measured what changed: the spelling, the words, the facts, or the coverage."
 
-## 0:20 to 0:50 Parse 3.5 and the LaTeX archive
+## 0:15 to 0:35 Parse 3.5 and the LaTeX archive (card 01, page 1250)
 
-Show: a two-column page. Toggle the bbox overlay by class. Open the compiled PDF next to it. Point at a red marker for an invented character.
-Say: "Parse 3.5 reads all 100 scans into ordered blocks with classes and boxes. We keep reading order and headings in a LaTeX archive. Two dense pages looped past the token limit, so we parse each column. We show OCR errors, we do not hide them."
+Show: page 1250. Toggle the Parse class chips on the scan, hover a block, scroll the compiled PDF next to it.
+Say: "Parse 3.5 reads every scan into ordered blocks with classes and boxes. Each page becomes a LaTeX document with its columns and headings. Two dense pages looped past the token limit, so we parse each column. We show OCR errors, we do not hide them."
 
-## 0:50 to 1:25 Matching with Embed VL and Rerank VL
+## 0:35 to 1:00 Matching with Embed VL and Rerank VL (card 02)
 
-Show: a page with matches, scores, and one `no_clear_counterpart` badge. Then `docs/retrieval-ablation.md` chart. Then the Hydrostatics plate page.
-Say: "For each entry, BM25 gives 30 Wikipedia candidates, Embed VL keeps 10, Rerank VL decides. On 40 entries we labeled, top-1 accuracy goes from 0.30 with BM25 to 0.56 with the embedder to 0.70 with the reranker. When no candidate is good enough, we say so. Plates have no text: Super VL describes the engraving, and both vision models compare the image itself. BM25 picks 'Hydrostatic skeleton'. The image picks 'Hydrostatics'."
+Show: page 1910 inspector (match, scores grid, uncertain pill), then the ablation chart in `analysis.html`.
+Say: "Keyword search gives 30 Wikipedia candidates, Embed VL keeps 10, Rerank VL decides. On 40 entries we labeled, top-1 accuracy goes from 0.30 to 0.56 to 0.70. When nothing is good enough, the page says uncertain and gives the cause."
 
-## 1:25 to 1:55 Drift decomposition, scan verification, and shared topic space
+## 1:00 to 1:30 The Atlas (card 03)
 
-Show: the drift panel on a page, then `analysis.html` (the Super VL Scan Check card, the 14 Super VL topic clusters, `shared_space_umap.png`, and `drift.png`).
-Say: "To separate language from knowledge across 87 pairs, Super VL tags each historical claim with quotes from both sides: enduring, renamed, superseded, or dropped. We reject any quote that is not in the source. Because 18th-century OCR misreads the long-s, 84 percent of naive text drift is actually OCR noise, like 'fitteenth' for 'sixteenth' of a pound. So Super VL inspects the scan crop to filter out 79 OCR illusions and keep verified shifts. In our shared Embed VL space, 76 percent of matched pairs land in the same c-TF-IDF cluster, with topic labels refined by Super VL."
+Show: `atlas.html`. Click tour 1, then tour 2 (plate 270). Zoom in so scan thumbnails grow. Hover a Wikipedia point.
+Say: "This is one Embed VL space. 1790s engravings, OCR text and modern Wikipedia sit on the same map. For 92.8 percent of scans, the nearest text is the page's own entry; chance is 1 percent. Plate 270 has no usable text, and its picture lands next to the Hydrostatics article by itself."
 
-## 1:55 to 2:35 Hermes agent: one success
+## 1:30 to 1:55 What changed (card 05, Explore)
 
-Show: Hermes terminal, lightning question (`runs/agent/20261018-140114-...`). Show the tool calls, the `view_scan` image read, and the cited answer.
-Say: "The Hermes agent runs on Super VL with our five tools. It runs hybrid search across LanceDB and live Wikipedia BM25, reads the pair and the drift, and looks at the original scan to check the OCR. Every claim cites a Britannica entry and a Wikipedia revision, and it reports when a match is uncertain."
+Show: the drift panel on a page, then `explore.html` filtered to "superseded", then the scan check card on `analysis.html`.
+Say: "Super VL tags each historical claim with quotes from both sides: enduring, renamed, superseded, or dropped. Across 87 pairs, 43 percent still hold and 39 percent are gone from Wikipedia. Long-s OCR creates fake changes, like 'fitteenth' for 'sixteenth', so Super VL checks the scan crop and filters them out."
 
-## 2:35 to 2:55 Failures and repairs
+## 1:55 to 2:20 Hermes agent live (terminal)
 
-Show: plate 2077 with `view_neighbors` (cut the search part), then failure-1 next to success-3 (`find_drift` with scan-verified term pairs or topics), then failure-3 (page 452).
-Say: "Plate 2077 is blank. Our view_neighbors tool shows Super VL the next scan, which is the real microscope plate. Three failures taught us the most. A corpus-wide question failed after 35 tool calls, but the agent invented nothing. We added the find_drift tool with scan-verified filtering and topic cluster lookup, and the same question worked with 86 percent fewer tokens. Page 452 is a blank cover: Parse invented text, and the error passed through every stage until view_scan caught the blank page. The case files explain each one."
+Show: Hermes banner (Super VL, 5 tools), Question 1 (lightning): tool calls, `view_scan`, the cited answer. Speed up the waits.
+Say: "The Hermes agent runs on Super VL with five tools of ours. It searches both sources, reads the saved comparison, and looks at the original scan to fix the OCR. Every claim cites a Britannica entry and a Wikipedia revision."
 
-Commands, timings, and runs not to use: [docs/demo-commands.md](demo-commands.md).
+## 2:20 to 2:40 The Time-Travel Debate (card 04)
+
+Show: `debate.html`, lightning tab at 1.5x, then press `E` to jump to the verdict stamp and confetti. Hover one citation pill.
+Say: "Three Hermes agents on Super VL: a scholar of 1790 who may cite only the Britannica, a Wikipedian, and a judge who rules whether the language or the knowledge changed. Quotes we cannot verify are marked, not hidden."
+
+## 2:40 to 2:55 Failures and repairs
+
+Show: Question 2 (plate 2077 with `view_neighbors`), then `docs/cases/failure-1.md` next to `success-3.md`.
+Say: "Plate 2077 is a blank leaf; view_neighbors shows Super VL the next scan, the real microscope plate. A corpus-wide question once failed after 35 tool calls without inventing anything. Our find_drift tool fixed it with 86 percent fewer tokens."
 
 ## 2:55 to 3:00 Close
 
-Show: README model table and Hugging Face Space (`nebius-build-week/britannica-across-time`).
-Say: "Parse, Embed VL, Rerank VL, and Super VL, each with a job. Code, static archive, Hugging Face dataset, and all six cases are in the repo."
+Show: the home page "Built with" row and the Hugging Face Space header.
+Say: "Parse, Embed VL, Rerank VL and Super VL, each with a job. Try it on Hugging Face."

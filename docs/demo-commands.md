@@ -1,5 +1,27 @@
 # Demo commands (screen recording)
 
+The video script is [video-script.md](video-script.md). This page has the browser tabs, the page controls, and the Hermes commands.
+
+## Browser tabs to open before you record
+
+Use the live Space and hard-refresh each tab once (Cmd+Shift+R). Base URL: https://nebius-build-week-britannica-across-time.static.hf.space
+
+| Tab | URL path | Use in the video |
+| --- | --- | --- |
+| Home | `/index.html` | Hook: intro and the five cards |
+| Page 1250 | `/pages/1250.html` | Parse chips on the scan, compiled PDF |
+| Page 1910 | `/pages/1910.html` | Lightning match, scores grid, drift panel |
+| Atlas | `/atlas.html` | Tours 1 and 2, zoom on thumbnails |
+| Explore | `/explore.html` | Filter claims to "superseded" |
+| Analysis | `/analysis.html` | Ablation chart, scan check card |
+| Debate | `/debate.html#lightning` | Replay at 1.5x, verdict stamp |
+
+Page controls:
+- Atlas: scroll to zoom, drag to pan, click a point twice to open it, `?` for shortcuts, tours in the left panel.
+- Debate: `Space` play or pause, `←` `→` step, `1` to `4` switch debate, `E` jump to the verdict, `R` restart, `S` faster, `Shift+S` slower (0.25x to 2x), share button copies the exact step.
+
+## Hermes questions
+
 Three questions, about 40 s of screen time each. Each one has a saved rehearsal transcript in `runs/agent/demo/`.
 
 ## Recommended run for the video

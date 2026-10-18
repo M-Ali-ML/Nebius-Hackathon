@@ -8,7 +8,7 @@
 <main class="wide generated-page">
   <header class="pagehead">
     <h1>Analysis</h1>
-    <p class="lead">What changed between the 1842 Encyclopaedia Britannica and today's Wikipedia, measured on our 100 scans. All numbers on this page come from saved pipeline outputs.</p>
+    <p class="lead">What changed between the Encyclopaedia Britannica (editions from 1768 to 1860) and today's Wikipedia, measured on our 100 scans. All numbers on this page come from saved pipeline outputs.</p>
   </header>
 
   <h2>Coverage</h2>
@@ -44,7 +44,7 @@
   </div>
   {% if drift.all_term_pairs %}
   <details class="disclose"><summary>Old to new term pairs <span class="meta">{{ drift.all_term_pairs|length }}</span></summary>
-    <div class="tablewrap"><table class="data"><thead><tr><th>Britannica 1842</th><th>Wikipedia</th><th>Entry</th></tr></thead><tbody>
+    <div class="tablewrap"><table class="data"><thead><tr><th>Britannica (1768-1860)</th><th>Wikipedia</th><th>Entry</th></tr></thead><tbody>
     {% for t in drift.all_term_pairs %}<tr><td class="head">{{ t.old }}</td><td>{{ t.new }}</td><td><a class="cite" href="pages/{{ t.entry_id.split(':')[1] }}.html">{{ t.entry_id }}</a></td></tr>{% endfor %}
     </tbody></table></div></details>
   {% endif %}
@@ -58,7 +58,7 @@
   {% if wordfreq and wordfreq.top_britannica is defined %}
   <p class="small muted">{{ wordfreq.britannica_docs }} Britannica entries ({{ wordfreq.britannica_tokens }} tokens) vs {{ wordfreq.wikipedia_docs }} matched Wikipedia articles ({{ wordfreq.wikipedia_tokens }} tokens). Method: {{ wordfreq.method }}.</p>
   <div class="two">
-    {% for key, title, side in [("distinctive_britannica", "More typical of Britannica 1842", "britannica"), ("distinctive_wikipedia", "More typical of Wikipedia", "wikipedia")] %}
+    {% for key, title, side in [("distinctive_britannica", "More typical of Britannica (1768-1860)", "britannica"), ("distinctive_wikipedia", "More typical of Wikipedia", "wikipedia")] %}
     <div class="frame">
       <h3>{{ title }}</h3>
       {% set items = wordfreq[key][:15] %}{% set mx = (items[0].z|abs if items else 1) or 1 %}

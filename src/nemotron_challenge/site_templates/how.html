@@ -4,7 +4,7 @@
 <main class="wide">
   <header class="pagehead">
     <h1>How it works</h1>
-    <p class="lead">We read 100 scanned pages of the Encyclopaedia Britannica (6th and 7th editions, about 1820 to 1842), find the matching Wikipedia articles, and compare what each side says. Green steps use a Nemotron model.</p>
+    <p class="lead">We read 100 scanned pages of the Encyclopaedia Britannica (editions from 1768 to 1860), find the matching Wikipedia articles, and compare what each side says. Green steps use a Nemotron model.</p>
   </header>
   <ol class="pipeline">
     <li class="model"><div><div class="step-h"><b>Parse 3.5</b><span class="meta">nvidia/nemotron-3.5-parse</span></div><p>Reads each scan. Returns text blocks with class (Text, Section-header, Picture, Caption, ...), bounding box, and reading order. We keep the raw reply and build a LaTeX document per page from the blocks.</p></div></li>

@@ -13,7 +13,7 @@ metadata:
 
 # Britannica vs Wikipedia comparison
 
-Use the `nemotron_challenge` tools: `search_sources`, `get_pair`, `find_drift`, `view_scan`.
+Use the `nemotron_challenge` tools: `search_sources`, `get_pair`, `find_drift`, `view_scan`, `view_neighbors`.
 
 ## Work steps
 
@@ -22,11 +22,13 @@ Use the `nemotron_challenge` tools: `search_sources`, `get_pair`, `find_drift`, 
 2. For a Britannica entry, call `get_pair` with its entry id. It gives the matched article, the scores, the saved comparison, and the drift signals.
 3. For questions across the whole corpus (which terms changed, which facts were overturned), call `find_drift` first.
 4. If a quote looks like an OCR error (for example `f` for the long s, broken words), call `view_scan` with the page and the entry bbox. Read the image before you quote.
-5. Stop when you have evidence from both sides, or when two searches find nothing useful.
+5. For a plate page, a page with little text, or a continuation entry (no headword), call `view_neighbors` to see the scans before and after it in the same volume. A plate is often explained on another page. Neighbors are the next scans in the dataset, not always the next printed page: check the running heads before you link pages.
+6. If the content looks impossible for an 18th-century page (modern words, repeated sentences, a blank image), call `view_scan` before you answer.
+7. Stop when you have evidence from both sides, or when two searches find nothing useful.
 
 ## Answer rules
 
-- Cite every factual statement. Use `[B:<row>:<n>]` for Britannica and `[W:<page_id>:<revision_id>]` for Wikipedia. Copy the ids from tool results. Never make up an id.
+- Cite every factual statement. Use `[B:<row>:<n>]` for Britannica entries, `[R:<row>]` for a neighbor scan from `view_neighbors`, and `[W:<page_id>:<revision_id>]` for Wikipedia. Copy the ids from tool results. Never make up an id.
 - Cite both sides in a comparison. If one side has no evidence, write "No evidence found in <side>" and do not fill the gap from memory.
 - Quote the source text for key points, in quotation marks, with its citation id.
 - Label your own reasoning with "Inference:". Keep it separate from cited facts.

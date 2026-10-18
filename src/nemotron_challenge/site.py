@@ -21,6 +21,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from .latex import latest_status, resolve_scan
 
 TEMPLATES = Path(__file__).parent / "site_templates"
+DRIFT_TAGS = ("enduring", "renamed", "superseded", "dropped")
 CLASS_COLORS = {
     "Text": "#2b6cb0", "Section-header": "#c05621", "Title": "#9b2c2c", "Page-header": "#718096",
     "Page-footer": "#a0aec0", "List-item": "#2f855a", "Caption": "#b7791f", "Footnote": "#6b46c1",
@@ -75,11 +76,74 @@ def load_inputs(work_dir: Path) -> dict[str, Any]:
     by_row: dict[int, list[dict[str, Any]]] = {}
     for entry in entries:
         item = {**entry, "match": matches.get(entry.get("entry_id"))}
-        pair = work_dir / "compare" / "pairs" / f"{entry.get('entry_id')}.json"
-        item["has_pair"] = pair.is_file()
+        item["pair"] = load_pair(work_dir, entry.get("entry_id", ""))
+        item["has_pair"] = item["pair"] is not None
         by_row.setdefault(entry.get("row_index"), []).append(item)
-    return {"entries": entries, "matches": matches, "by_row": by_row,
-            "has_entries": bool(entries), "has_matches": bool(matches)}
+    page_matches = {m["row_index"]: m for m in read_jsonl(work_dir / "match" / "page_matches.jsonl") if "row_index" in m}
+    return {"entries": entries, "matches": matches, "by_row": by_row, "page_matches": page_matches,
+            "has_entries": bool(entries), "has_matches": bool(matches), "has_page_matches": bool(page_matches)}
+
+
+def load_pair(work_dir: Path, entry_id: str) -> dict[str, Any] | None:
+    path = work_dir / "compare" / "pairs" / f"{entry_id.replace(':', '_')}.json"
+    if not path.is_file():
+        return None
+    try:
+        pair = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return None
+    return pair if pair.get("claims") is not None else None
+
+
+def page_drift(entries: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Claim tag counts, 3 example claims (different tags first), and term pairs for one page."""
+    pairs = [e["pair"] for e in entries if e.get("pair")]
+    if not pairs:
+        return None
+    counts = {tag: 0 for tag in DRIFT_TAGS}
+    claims = []
+    for pair in pairs:
+        for claim in pair.get("claims") or []:
+            if claim.get("tag") in counts:
+                counts[claim["tag"]] += 1
+                claims.append({**claim, "cite_b": pair.get("cite_britannica"), "cite_w": pair.get("cite_wikipedia"),
+                               "wiki_title": pair.get("wiki_title"), "wiki_url": pair.get("wiki_url")})
+    examples, seen = [], set()
+    for tag in ("superseded", "renamed", "dropped", "enduring"):
+        for claim in claims:
+            if claim["tag"] == tag and tag not in seen:
+                examples.append(claim)
+                seen.add(tag)
+    examples += [c for c in claims if c not in examples]
+    terms = [{**t, "cite_b": p.get("cite_britannica"), "cite_w": p.get("cite_wikipedia")}
+             for p in pairs for t in p.get("term_pairs") or []]
+    total = sum(counts.values())
+    return {"pairs": [{"cite_b": p.get("cite_britannica"), "cite_w": p.get("cite_wikipedia"), "headword": p.get("headword"),
+                       "wiki_title": p.get("wiki_title"), "wiki_url": p.get("wiki_url"),
+                       "quote_check": p.get("quote_check") or {}} for p in pairs],
+            "counts": counts, "total": total,
+            "shares": {t: (counts[t] / total if total else 0) for t in DRIFT_TAGS},
+            "examples": examples[:3], "terms": terms[:8], "model": pairs[0].get("model")}
+
+
+def reason_group(reason: str | None) -> str:
+    text = (reason or "").lower()
+    for key, label in (("blank", "blank page (Super VL)"), ("disagree", "plate: vision rankers disagree"),
+                       ("no searchable", "entry has no searchable text"), ("too short", "entry too short to judge (< 40 chars)"), ("flat margin", "flat rerank margin"),
+                       ("below the acceptance", "rerank logit below the acceptance rules"),
+                       ("below tau", "rerank logit below tau")):
+        if key in text:
+            return label
+    return reason[:60] if reason else "no reason recorded"
+
+
+def group_counts(rows: list[dict[str, Any]]) -> list[tuple[str, int]]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        if row.get("status") != "matched":
+            label = reason_group(row.get("reason"))
+            counts[label] = counts.get(label, 0) + 1
+    return sorted(counts.items(), key=lambda kv: -kv[1])
 
 
 def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
@@ -109,6 +173,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         build = status.get(row, {})
         plate = load_plate(work_dir, site_dir, row)
         entries = inputs["by_row"].get(row, [])
+        page_match = inputs["page_matches"].get(row)
         info = {
             "row": row, "page_id": record["page_id"], "filename": record["filename"],
             "image_sha256": record["image_sha256"], "parse_model": record.get("parse_model"),
@@ -120,6 +185,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
             "two_column": build.get("two_column"), "has_pdf": has_pdf, "has_scan": has_scan,
             "classes": sorted({b["cls"] for b in record["blocks"]}),
             "plate_status": plate["status"] if plate else None,
+            "page_match": page_match,
         }
         rows.append(info)
         neighbours = {"prev": records[i - 1]["row_index"] if i > 0 else None,
@@ -127,7 +193,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         blocks = [{**b, "color": CLASS_COLORS.get(b["cls"], "#4a5568")}
                   for b in sorted(record["blocks"], key=lambda b: b["order"])]
         html = env.get_template("page.html").render(
-            page=info, blocks=blocks, plate=plate, entries=entries, inputs=inputs, nav=neighbours, built=built,
+            page=info, blocks=blocks, plate=plate, entries=entries, drift=page_drift(entries), page_match=page_match, inputs=inputs, nav=neighbours, built=built,
             colors={c: CLASS_COLORS.get(c, "#4a5568") for c in info["classes"]},
             aspect=record["height"] / record["width"] if record.get("width") else 1.4)
         (site_dir / "pages").mkdir(exist_ok=True)
@@ -139,10 +205,12 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         "matched": sum(m.get("status") == "matched" for m in inputs["matches"].values()),
         "uncertain": sum(m.get("status") == "no_clear_counterpart" for m in inputs["matches"].values()),
         "errors": sum(m.get("status") == "error" for m in inputs["matches"].values()),
+        "pages_matched": sum(m.get("status") == "matched" for m in inputs["page_matches"].values()),
     }
     (site_dir / "index.html").write_text(env.get_template("index.html").render(
         rows=rows, totals=totals, inputs=inputs, built=built))
-    analysis = build_analysis(env, work_dir, site_dir, built)
+    analysis = build_analysis(env, work_dir, site_dir, built, inputs, rows, totals)
+    (site_dir / "how.html").write_text(env.get_template("how.html").render(built=built))
     return {"site_dir": str(site_dir), **totals, "missing_scans": missing_scans, "analysis": analysis}
 
 
@@ -164,7 +232,15 @@ def load_plate(work_dir: Path, site_dir: Path, row: int) -> dict[str, Any] | Non
     return plate
 
 
-def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str) -> dict[str, Any]:
+def _read_json(path: Path) -> Any:
+    try:
+        return json.loads(path.read_text()) if path.is_file() else None
+    except json.JSONDecodeError:
+        return None
+
+
+def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str, inputs: dict[str, Any],
+                   rows: list[dict[str, Any]], totals: dict[str, Any]) -> dict[str, Any]:
     compare = work_dir / "compare"
     plots = []
     for png in sorted(compare.glob("*.png")) if compare.is_dir() else []:
@@ -177,9 +253,25 @@ def build_analysis(env: Environment, work_dir: Path, site_dir: Path, built: str)
             wordfreq = json.loads(wf_path.read_text())
         except json.JSONDecodeError as exc:
             wordfreq = {"error": f"could not read wordfreq.json: {exc}"}
-    pairs = len(list((compare / "pairs").glob("*.json"))) if (compare / "pairs").is_dir() else 0
+    pair_files = sorted((compare / "pairs").glob("*.json")) if (compare / "pairs").is_dir() else []
+    pairs = sum(1 for f in pair_files if (_read_json(f) or {}).get("claims") is not None)
+    drift = _read_json(compare / "drift_summary.json")
+    plates = [p for p in (_read_json(f) for f in sorted((work_dir / "plates").glob("[0-9]*.json"),
+                                                       key=lambda f: int(f.stem))) if p] \
+        if (work_dir / "plates").is_dir() else []
+    coverage = {
+        "pages": totals["pages"], "latex_ok": totals["latex_ok"],
+        "parse_failures": len(read_jsonl(work_dir / "extract" / "failures.jsonl")),
+        "extract": _read_json(work_dir / "extract" / "coverage.json") or {},
+        "match": _read_json(work_dir / "match" / "summary.json") or {},
+        "pages_summary": _read_json(work_dir / "match" / "summary_pages.json") or {},
+        "entry_reasons": group_counts(list(inputs["matches"].values())),
+        "page_reasons": group_counts(list(inputs["page_matches"].values())),
+        "compare_failures": len(read_jsonl(compare / "failures.jsonl")),
+    }
     (site_dir / "analysis.html").write_text(env.get_template("analysis.html").render(
-        plots=plots, wordfreq=wordfreq, sections=_wordfreq_sections(wordfreq), pairs=pairs, built=built))
+        plots=plots, wordfreq=wordfreq, sections=_wordfreq_sections(wordfreq), pairs=pairs, built=built, drift=drift, tags=DRIFT_TAGS,
+        plates=plates, coverage=coverage, totals=totals))
     return {"plots": len(plots), "wordfreq": wordfreq is not None, "pairs": pairs}
 
 

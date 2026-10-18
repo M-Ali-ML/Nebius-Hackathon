@@ -48,3 +48,18 @@ def test_site_marks_no_clear_counterpart_as_uncertain(tmp_path):
     page = (tmp_path / "site" / "pages" / "7.html").read_text()
     assert "uncertain: no clear counterpart" in page
     assert "rerank -1.20" in page and 'data-orders="1"' in page
+
+
+def test_page_drift_counts_tags_and_picks_varied_examples():
+    from nemotron_challenge.site import page_drift, reason_group
+    pair = {"cite_britannica": "[B:7:0]", "cite_wikipedia": "[W:1:9]", "model": "m", "claims": [
+        {"claim": "a", "tag": "enduring", "quote_britannica": "x", "quote_wikipedia": "y"},
+        {"claim": "b", "tag": "enduring", "quote_britannica": "x", "quote_wikipedia": "y"},
+        {"claim": "c", "tag": "superseded", "quote_britannica": "x", "quote_wikipedia": "y"}],
+        "term_pairs": [{"old": "gulph", "new": "gulf"}]}
+    drift = page_drift([{"pair": pair}, {"pair": None}])
+    assert drift["counts"] == {"enduring": 2, "renamed": 0, "superseded": 1, "dropped": 0}
+    assert [c["claim"] for c in drift["examples"]] == ["c", "a", "b"]
+    assert drift["terms"][0]["cite_b"] == "[B:7:0]"
+    assert page_drift([{"pair": None}]) is None
+    assert reason_group("top rerank logit -6.67 below the acceptance rules") == "rerank logit below the acceptance rules"

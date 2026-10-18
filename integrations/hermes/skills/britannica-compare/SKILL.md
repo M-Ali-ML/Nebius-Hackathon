@@ -18,6 +18,7 @@ Use the `nemotron_challenge` tools: `search_sources`, `get_pair`, `find_drift`, 
 ## Work steps
 
 1. Call `search_sources` to find evidence. Use `side: both` first, then search one side if a side is missing.
+   Hits with `source: bm25` come from the full Wikipedia corpus. They can fill a gap when no saved pair exists. Quote only their passage text. Check `side_confidence` for each side.
 2. For a Britannica entry, call `get_pair` with its entry id. It gives the matched article, the scores, the saved comparison, and the drift signals.
 3. For questions across the whole corpus (which terms changed, which facts were overturned), call `find_drift` first.
 4. If a quote looks like an OCR error (for example `f` for the long s, broken words), call `view_scan` with the page and the entry bbox. Read the image before you quote.

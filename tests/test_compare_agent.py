@@ -211,3 +211,8 @@ def test_resolves_entries_and_saved_articles(work):
 
     assert resolves("B:7:0", work) and not resolves("B:7:9", work)
     assert resolves("W:123:456", work) and not resolves("W:123:999", work)
+
+
+def test_hybrid_is_the_default_mode(monkeypatch):
+    monkeypatch.delenv("NEMOTRON_RETRIEVAL_MODE", raising=False)
+    assert agent_tools.retrieval_mode() == "hybrid"

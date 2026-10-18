@@ -115,3 +115,9 @@ Candidate 6 cases (lead decides): successes lightning, firedamp, old-terms rerun
 - docs/demo-commands.md: setup, start command, 3 questions (lightning, plate 2077, old terms with find_drift), alternate (B:452 blank cover), expected tool calls, lines to point at, runs NOT to use.
 - First rehearsal on main c533508 ran in `full` mode (runner default bug) and plate 2077 failed with the provider limit "At most 8 image(s) may be provided in one prompt". Fixed in 3402ab4: runner default hybrid, view_neighbors returns one contact-sheet image, skill states the 8-image budget. Main needs this commit before recording.
 - New findings: "superseded facts" demo run took an OCR error as a fact change (ounce "fitteenth" = "ſixteenth" on the scan). A scan-checked "renamed" run kept only 2 of 20 candidates. Lexical drift is dominated by OCR noise.
+
+## Live agent Space: dropped
+
+- Tried to publish nebius-build-week/britannica-agent; HF returned 402 (Docker/Gradio Spaces need a paid org plan). Nothing was created and no key was uploaded.
+- The user chose not to publish, then asked to remove the Space code. Removed in commit 7aa6cec (space/, scripts/publish_agent_space.py, scripts/run_agent_space_local.sh). Kept from that work: lazy LanceDB import in search_sources, cached-plate fallback in view_neighbors, NEMOTRON_TOOL_CMD in the plugin.
+- Run the agent locally: see docs/demo-commands.md ("Start Hermes").

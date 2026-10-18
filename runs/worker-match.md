@@ -1,5 +1,7 @@
 # Worker "match": segmentation, matching, LanceDB index
 
+Work log from the build day. Rerun steps are in `README.md`. The maps are in `docs/diagrams/`.
+
 Branch: `M-Ali-ML/mvp-match` (commits 7bea120, 32f4f2d, 83feaad). Not merged.
 
 ## What I built

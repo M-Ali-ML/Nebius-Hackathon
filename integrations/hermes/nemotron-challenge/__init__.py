@@ -2,14 +2,25 @@
 
 Each handler runs `uv run python -m nemotron_challenge.agent_tools <tool> <json>` in the project repo.
 The Hermes runtime then needs no project dependencies (LanceDB, httpx, Pillow).
-Set NEMOTRON_REPO to the checkout that holds the code (default: the main checkout).
+Set NEMOTRON_REPO to this checkout. If it is unset, the plugin uses the current directory when that directory is the checkout.
 """
 import json
 import os
+from pathlib import Path
 import subprocess
 from typing import Any
 
-REPO = os.environ.get("NEMOTRON_REPO", "/Users/aly/repos/Nebius-Hackathon")
+
+def _repo() -> str:
+    """Checkout that holds the pipeline. Set NEMOTRON_REPO when Hermes is not started from that directory."""
+    env = os.environ.get("NEMOTRON_REPO", "").strip()
+    if env:
+        return env
+    here = Path.cwd()
+    for candidate in (here, *here.parents):
+        if (candidate / "pyproject.toml").is_file() and (candidate / "src" / "nemotron_challenge").is_dir():
+            return str(candidate)
+    return ""
 TIMEOUT = 180
 # command that runs the project Python; override with NEMOTRON_TOOL_CMD (for example a venv python path)
 TOOL_CMD = os.environ.get("NEMOTRON_TOOL_CMD", "uv run --quiet python").split()
@@ -57,15 +68,17 @@ PAIR_SCHEMA = {
 DRIFT_SCHEMA = {
     "name": "find_drift",
     "description": (
-        "List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and "
-        "citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), "
-        "enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. "
-        "Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'."
+        "List checked comparison items or topic clusters across ALL matched pairs, with quotes from both sides and "
+        "citation ids. kind: renamed (same fact, new words, scan-verified), superseded (fact changed, scan-verified), "
+        "dropped (not in Wikipedia), enduring, term_pairs (old Britannica term -> modern Wikipedia term, scan-verified), "
+        "wiki_only_topics, topics (BERTopic / shared-embedding document clusters with Super VL labels and entry lists), "
+        "or ocr_errors (apparent drift items caught as OCR misreadings on the scan by Super VL). "
+        "Use it for corpus-wide questions such as 'which terms changed', 'which facts were overturned', or 'what topics or clusters do you have'."
     ),
     "parameters": {
         "type": "object",
         "properties": {
-            "kind": {"type": "string", "enum": ["renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics"]},
+            "kind": {"type": "string", "enum": ["renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics", "topics", "ocr_errors"]},
             "k": {"type": "integer", "minimum": 1, "maximum": 20, "default": 5},
         },
         "required": ["kind"],
@@ -136,10 +149,13 @@ def _call(tool: str, params: dict[str, Any]) -> dict[str, Any]:
 
 
 def _run(tool: str, params: dict[str, Any]) -> dict[str, Any]:
+    repo = _repo()
+    if not repo:
+        return {"error": "Set NEMOTRON_REPO to the repository root, then restart Hermes."}
     try:
         proc = subprocess.run(
             [*TOOL_CMD, "-m", "nemotron_challenge.agent_tools", tool, json.dumps(params)],
-            cwd=REPO, env=_clean_env(), capture_output=True, text=True, timeout=TIMEOUT)
+            cwd=repo, env=_clean_env(), capture_output=True, text=True, timeout=TIMEOUT)
     except (OSError, subprocess.TimeoutExpired) as exc:
         return {"error": f"tool process failed: {exc}"}
     lines = [line for line in proc.stdout.splitlines() if line.strip()]

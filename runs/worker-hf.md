@@ -1,5 +1,7 @@
 # Worker hf: Hugging Face publish
 
+Work log from the build day. Rerun steps are in `README.md`. The maps are in `docs/diagrams/`.
+
 ## Status 15:20: DONE (both repos public in the org, verified)
 
 | Repo | URL | Size | Hub commit |

@@ -49,21 +49,24 @@ def doctor(settings: Settings, *, live: bool) -> tuple[dict[str, Any], int]:
     failed = any(check["status"] in {"failed", "missing"} for check in checks)
     return {
         "mode": "live" if live else "offline", "checks": checks,
-        "challenge_stages": "not implemented", "inference": "not tested",
+        "challenge_stages": "implemented", "inference": "not tested",
     }, int(failed)
 
 
 def parser() -> argparse.ArgumentParser:
-    result = argparse.ArgumentParser(prog="nemotron-challenge", description="Nemotron Agentic AI Challenge scaffold")
+    result = argparse.ArgumentParser(prog="nemotron-challenge", description="Britannica to Wikipedia pipeline")
     sub = result.add_subparsers(dest="command", required=True)
     check = sub.add_parser("doctor", help="check local setup or remote catalogs")
     mode = check.add_mutually_exclusive_group()
     mode.add_argument("--offline", action="store_true", help="check packages without network access")
     mode.add_argument("--live", action="store_true", help="check resource catalogs and readiness; does not run inference")
-    sub.add_parser("stages", help="list unfinished challenge milestones")
-    run = sub.add_parser("run", help="run a team milestone")
+    sub.add_parser("stages", help="list pipeline stages")
+    run = sub.add_parser("run", help="run one pipeline stage")
     run.add_argument("stage", choices=tasks.STAGES)
     run.add_argument("--work-dir", type=Path, default=Path("artifacts"))
+    parse = sub.add_parser("parse", help="run Parse 3.5 on the fetched scans and write page records")
+    parse.add_argument("--work-dir", type=Path, default=Path("artifacts"))
+    parse.add_argument("--scan-dir", type=Path, default=Path("data/raw/britannica"))
     plates = sub.add_parser("plates", help="visual matching for picture-only plate pages (Super VL, Embed VL, Rerank VL)")
     plates.add_argument("--work-dir", type=Path, default=Path("artifacts"))
     plates.add_argument("--cache-dir", type=Path, default=Path("data/cache"))
@@ -81,7 +84,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     try:
         if args.command == "stages":
-            result = [{"stage": stage, "status": "TODO", "guide": f"docs/milestones.md#{stage}"} for stage in tasks.STAGES]
+            result = [{"stage": stage, "status": "implemented", "guide": "docs/technical.md"} for stage in tasks.STAGES]
         elif args.command == "data":
             from .data import fetch_sample, load_manifest
 
@@ -92,7 +95,15 @@ def main(argv: list[str] | None = None) -> int:
                 result, status = doctor(settings, live=args.live)
                 print(json.dumps(result, indent=2))
                 return status
-            if args.command == "plates":
+            if args.command == "parse":
+                from .extract import build_pages, run_parse
+
+                if not args.scan_dir.is_dir() or not any(args.scan_dir.glob("page-*")):
+                    raise FileNotFoundError(
+                        f"no scans in {args.scan_dir}. Run: uv run nemotron-challenge data fetch")
+                result = {"parse": run_parse(settings, args.work_dir, args.scan_dir),
+                          "pages": build_pages(args.work_dir, args.scan_dir)}
+            elif args.command == "plates":
                 from .plates import run_plates
 
                 result = run_plates(settings, args.work_dir, args.cache_dir, args.rows or None)

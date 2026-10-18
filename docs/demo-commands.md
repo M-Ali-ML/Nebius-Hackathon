@@ -9,7 +9,7 @@ Three questions, about 40 s of screen time each. Each one has a saved rehearsal 
 3. Install the current plugin and skill into the Hermes profile. Run from the repository root:
 
 ```bash
-export HERMES_HOME=/Users/aly/repos/Nebius-Hackathon/data/hermes
+export HERMES_HOME="$PWD/data/hermes"
 rm -rf "$HERMES_HOME/plugins/nemotron-challenge"
 cp -R integrations/hermes/nemotron-challenge "$HERMES_HOME/plugins/"
 cp -R integrations/hermes/skills/britannica-compare "$HERMES_HOME/skills/research/"
@@ -20,8 +20,8 @@ hermes plugins list | grep nemotron                                # expect: ena
 ## Start Hermes
 
 ```bash
-cd /Users/aly/repos/Nebius-Hackathon
-export HERMES_HOME=$PWD/data/hermes
+cd "$(git rev-parse --show-toplevel)"
+export HERMES_HOME="$PWD/data/hermes"
 set -a; source .env; set +a                 # loads SUPER_API_KEY and the service URLs
 export NEMOTRON_REPO=$PWD                    # tool code runs from this checkout
 export NEMOTRON_RETRIEVAL_MODE=hybrid        # the default; set it so the screen shows it

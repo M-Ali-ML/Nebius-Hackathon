@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 760" role="img" aria-labelledby="title desc">
+  <title id="title">How the Hermes agent answers</title>
+  <desc id="desc">Super VL chooses among five tools. Each tool reads saved evidence or a scan. The answer cites Britannica and Wikipedia.</desc>
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#0f2744" flood-opacity="0.08"/>
+    </filter>
+    <marker id="orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c2410c"/>
+    </marker>
+    <marker id="slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1480" height="760" fill="#eef3f8"/>
+  <text x="40" y="48" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="28" font-weight="700">How Hermes answers</text>
+  <text x="40" y="76" fill="#5c6b7a" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15">Super VL on Token Factory chooses a tool, reads the tool result as data, and cites both sources. Profile: data/hermes. Code: this checkout.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="108" width="400" height="176" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="50" y="138" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">QUESTION</text>
+  <text x="50" y="170" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">One question, empty context</text>
+  <text x="50" y="196" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">runs/agent/questions.json</text>
+  <text x="50" y="218" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">or hermes chat for a live session</text>
+  <text x="50" y="248" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12">run agent</text>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="108" width="520" height="176" rx="14" fill="#fff6ee" stroke="#fdba74"/>
+  </g>
+  <text x="518" y="138" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">REASONING  |  TOKEN FACTORY</text>
+  <text x="518" y="170" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Nemotron 3.5 Super VL</text>
+  <text x="518" y="196" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Picks the next tool. Reads images from view_scan.</text>
+  <text x="518" y="218" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Skill: cite both sides, label inference, report a weak match.</text>
+  <text x="518" y="248" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12">nvidia/Nemotron-3.5-Super-VL</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1088" y="108" width="360" height="176" rx="14" fill="#12263a"/>
+  </g>
+  <text x="1106" y="138" fill="#fdba74" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STOPPING RULES</text>
+  <text x="1106" y="168" fill="#ffffff" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Cite [B:row:n] and [W:page:rev]</text>
+  <text x="1106" y="192" fill="#d6deea" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Say when the scan and the OCR disagree</text>
+  <text x="1106" y="216" fill="#d6deea" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Do not fill a gap from memory</text>
+  <text x="1106" y="240" fill="#d6deea" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">At most 8 images in one prompt</text>
+
+  <path d="M432 180 H 500" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#orange)"/>
+  <path d="M1020 210 H 1088" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#orange)"/>
+
+  <text x="40" y="328" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Five tools. Plugin nemotron-challenge 0.4.0. Each tool returns JSON.</text>
+
+  <!-- tools -->
+  <g filter="url(#shadow)">
+    <rect x="32" y="348" width="268" height="230" rx="14" fill="#eef4fc" stroke="#93c5fd"/>
+  </g>
+  <text x="48" y="376" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">SEARCH</text>
+  <text x="48" y="404" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">search_sources</text>
+  <text x="48" y="430" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Britannica: LanceDB vectors</text>
+  <text x="48" y="450" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Wikipedia: LanceDB + live BM25</text>
+  <text x="48" y="470" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Then Rerank VL on your GPU</text>
+  <text x="48" y="500" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">Default mode: hybrid</text>
+  <text x="48" y="524" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">query, side, k</text>
+  <text x="48" y="552" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Needs the GPU service</text>
+
+  <g filter="url(#shadow)">
+    <rect x="316" y="348" width="268" height="230" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="332" y="376" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ONE PAIR</text>
+  <text x="332" y="404" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">get_pair</text>
+  <text x="332" y="430" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Entry text, raw and normalized</text>
+  <text x="332" y="450" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Match scores and status</text>
+  <text x="332" y="470" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Saved comparison and drift</text>
+  <text x="332" y="500" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Accepts B:row:n or P:row</text>
+  <text x="332" y="524" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">artifacts/compare/pairs</text>
+  <text x="332" y="552" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">No model call</text>
+
+  <g filter="url(#shadow)">
+    <rect x="600" y="348" width="268" height="230" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="616" y="376" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ALL PAIRS</text>
+  <text x="616" y="404" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">find_drift</text>
+  <text x="616" y="430" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">renamed, superseded, dropped,</text>
+  <text x="616" y="450" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">enduring, term pairs</text>
+  <text x="616" y="470" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">One call over 83 comparisons</text>
+  <text x="616" y="500" fill="#15803d" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="700">436k tokens  to  62k tokens</text>
+  <text x="616" y="524" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">kind, k</text>
+  <text x="616" y="552" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Added after a failed run</text>
+
+  <g filter="url(#shadow)">
+    <rect x="884" y="348" width="268" height="230" rx="14" fill="#fff6ee" stroke="#fdba74"/>
+  </g>
+  <text x="900" y="376" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">VISION</text>
+  <text x="900" y="404" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">view_scan</text>
+  <text x="900" y="430" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Sends the page image</text>
+  <text x="900" y="450" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Optional bbox crop</text>
+  <text x="900" y="470" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Super VL reads the scan</text>
+  <text x="900" y="500" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Used to check OCR</text>
+  <text x="900" y="524" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">data/raw/britannica</text>
+  <text x="900" y="552" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Needs the fetched scans</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1168" y="348" width="280" height="230" rx="14" fill="#fff6ee" stroke="#fdba74"/>
+  </g>
+  <text x="1184" y="376" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">NEIGHBORS</text>
+  <text x="1184" y="404" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">view_neighbors</text>
+  <text x="1184" y="430" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Scans beside a page</text>
+  <text x="1184" y="450" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">before 0 to 2, after 0 to 2</text>
+  <text x="1184" y="470" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">One combined image</text>
+  <text x="1184" y="500" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Cite neighbors as [R:row]</text>
+  <text x="1184" y="524" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">plates and continuations</text>
+  <text x="1184" y="552" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Same volume only</text>
+
+  <path d="M740 308 V 348" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#slate)"/>
+  <text x="728" y="330" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" text-anchor="end">tool call</text>
+
+  <rect x="32" y="604" width="1416" height="120" rx="14" fill="#12263a"/>
+  <text x="52" y="638" fill="#ffffff" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Saved answer</text>
+  <text x="52" y="664" fill="#d6deea" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Transcript: runs/agent/&lt;time&gt;-&lt;slug&gt;.json  |  model id checked  |  tool log kept in full</text>
+  <text x="52" y="692" fill="#ffffff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">[B:1910:0]  [W:61344:1353843790]</text>
+  <text x="520" y="692" fill="#b6c3d4" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Cases: docs/cases  |  check links with run evaluate</text>
+</svg>

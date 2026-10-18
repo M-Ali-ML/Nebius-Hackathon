@@ -1,4 +1,4 @@
-"""Offline setup and storage contracts do not implement challenge stages."""
+"""Offline setup and storage contracts. Doctor does not call a model."""
 from dataclasses import replace
 import json
 
@@ -6,7 +6,7 @@ import httpx
 import pytest
 
 from nemotron_challenge.cli import doctor, main
-from nemotron_challenge.config import ConfigurationError, Settings
+from nemotron_challenge.config import ConfigurationError, Settings, repo_root
 from nemotron_challenge.contracts import ArtifactRecord, SourceReference
 from nemotron_challenge.storage import LanceArtifactStore
 
@@ -18,7 +18,7 @@ def test_offline_doctor_needs_no_secrets_or_network(monkeypatch, capsys):
     assert main(["doctor", "--offline"]) == 0
     data = json.loads(capsys.readouterr().out)
     assert data["inference"] == "not tested"
-    assert data["challenge_stages"] == "not implemented"
+    assert data["challenge_stages"] == "implemented"
     assert all(row["status"] == "not_tested" for row in data["checks"] if "configured" in row)
 
 
@@ -31,10 +31,23 @@ def test_live_doctor_reports_missing_resources(monkeypatch):
     assert report["inference"] == "not tested"
 
 
-def test_stages_list_has_todos(capsys):
+def test_repo_root_is_this_checkout(monkeypatch):
+    monkeypatch.delenv("NEMOTRON_REPO", raising=False)
+    monkeypatch.delenv("NEMOTRON_MAIN", raising=False)
+    root = repo_root()
+    assert (root / "src" / "nemotron_challenge" / "cli.py").is_file()
+
+
+def test_parse_without_scans_fails(tmp_path, capsys):
+    assert main(["parse", "--work-dir", str(tmp_path / "w"), "--scan-dir", str(tmp_path / "scans")]) == 1
+    assert "data fetch" in capsys.readouterr().err
+
+
+def test_stages_list_is_implemented(capsys):
     assert main(["stages"]) == 0
     rows = json.loads(capsys.readouterr().out)
-    assert len(rows) == 6 and all(row["status"] == "TODO" for row in rows)
+    assert len(rows) == 6 and all(row["status"] == "implemented" for row in rows)
+    assert {row["stage"] for row in rows} == {"extract", "match", "compare", "agent", "site", "evaluate"}
 
 
 def test_keys_are_not_exposed_by_settings_repr():

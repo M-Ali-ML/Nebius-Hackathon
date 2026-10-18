@@ -1,5 +1,7 @@
 # Worker "site": LaTeX documents and static website
 
+Work log from the build day. Rerun steps are in `README.md`. The maps are in `docs/diagrams/`.
+
 Branch: `M-Ali-ML/mvp-site` (3 commits, not pushed). Stage: `tasks.site`.
 
 ## What it builds

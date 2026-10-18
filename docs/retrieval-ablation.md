@@ -126,7 +126,7 @@ Inference: candidate recall improved more than the decision rules can show. A so
 ## Rerun
 
 ```sh
-uv run python -c "from pathlib import Path; from nemotron_challenge.ablation_eval import evaluate; evaluate(Path('/Users/aly/repos/Nebius-Hackathon/artifacts'))"
+uv run python -c "from pathlib import Path; from nemotron_challenge.ablation_eval import evaluate; evaluate(Path('artifacts'))"
 ```
 
 To change labels, edit `artifacts/match/labels.jsonl` (keep `gold_titles`, `gold_page_ids`, and `note`) and rerun.

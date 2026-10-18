@@ -1,5 +1,7 @@
 # Worker "agent": summary
 
+Work log from the build day. Rerun steps are in `README.md`. The maps are in `docs/diagrams/`.
+
 Branch `M-Ali-ML/mvp-agent` (worktree `mvp-agent`). Owner of Hermes setup, agent tools, compare stage.
 
 ## Hermes

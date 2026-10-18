@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 820" role="img" aria-labelledby="title desc">
+  <title id="title">Britannica across time: who runs what</title>
+  <desc id="desc">Your PC runs the pipeline and Hermes. Shared tunnels serve Parse and Wikipedia. Your GPU embeds and reranks. Token Factory runs Super VL.</desc>
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#0f2744" flood-opacity="0.08"/>
+    </filter>
+    <marker id="teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c2410c"/>
+    </marker>
+    <marker id="slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1480" height="820" fill="#eef3f8"/>
+  <text x="40" y="48" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="28" font-weight="700">Britannica across time: who runs what</text>
+  <text x="40" y="76" fill="#5c6b7a" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15">Your PC runs the pipeline and Hermes. Shared tunnels serve Parse and Wikipedia. Your GPU embeds and reranks. Token Factory runs Super VL.</text>
+
+  <!-- Source -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="108" width="320" height="118" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="54" y="134" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">SOURCE DATASET</text>
+  <text x="54" y="160" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Encyclopaedia Britannica</text>
+  <text x="54" y="182" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">100 scans of 2,573  |  seed 20261016</text>
+  <text x="54" y="202" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Hugging Face  |  NLS  |  CC0</text>
+
+  <!-- Shared services -->
+  <rect x="36" y="246" width="320" height="438" rx="16" fill="#e7f6f4" stroke="#7dcec4"/>
+  <text x="54" y="276" fill="#0f6e68" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Shared Nebius services</text>
+  <text x="54" y="296" fill="#3f7f78" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Provided. No participant key.</text>
+  <g filter="url(#shadow)">
+    <rect x="52" y="316" width="288" height="148" rx="12" fill="#ffffff" stroke="#c9ebe6"/>
+  </g>
+  <text x="68" y="344" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Nemotron Parse 3.5</text>
+  <text x="68" y="366" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">OCR, reading order, class, bbox</text>
+  <text x="68" y="388" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">nvidia/nemotron-3.5-parse</text>
+  <text x="68" y="412" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">POST /v1/chat/completions</text>
+  <text x="68" y="432" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Image in. Blocks out. Cached in artifacts.</text>
+  <g filter="url(#shadow)">
+    <rect x="52" y="480" width="288" height="156" rx="12" fill="#ffffff" stroke="#c9ebe6"/>
+  </g>
+  <text x="68" y="508" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Wikipedia BM25 API</text>
+  <text x="68" y="530" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">7,182,883 English articles</text>
+  <text x="68" y="552" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">POST /v1/search  |  GET /v1/articles</text>
+  <text x="68" y="574" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Each hit keeps page id, revision, sha256</text>
+  <text x="68" y="596" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">CC BY-SA 4.0</text>
+  <text x="54" y="660" fill="#0f6e68" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">uk-south2 tunnel routes</text>
+
+  <!-- Your PC -->
+  <rect x="436" y="108" width="520" height="576" rx="16" fill="#f8fafc" stroke="#d5dee8"/>
+  <text x="456" y="140" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Your PC</text>
+  <text x="456" y="162" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">This repository. Python 3.12  |  uv  |  tectonic</text>
+  <g filter="url(#shadow)">
+    <rect x="456" y="180" width="480" height="92" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+  <text x="472" y="208" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">LanceDB</text>
+  <text x="472" y="230" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">data/team.lancedb</text>
+  <text x="472" y="250" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">entries + wiki_chunks  |  2048-d vectors</text>
+  <g filter="url(#shadow)">
+    <rect x="456" y="288" width="480" height="188" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+  <text x="472" y="316" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Pipeline</text>
+  <text x="472" y="340" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">parse  |  segment  |  match  |  compare  |  site</text>
+  <text x="472" y="362" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Raw model output stays in artifacts/extract/raw</text>
+  <text x="472" y="384" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Quotes must be substrings of the source</text>
+  <text x="472" y="406" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">LaTeX PDFs via tectonic  |  static site in site/</text>
+  <text x="472" y="432" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12">uv run nemotron-challenge</text>
+  <g filter="url(#shadow)">
+    <rect x="456" y="492" width="480" height="168" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+  <text x="472" y="520" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Hermes Agent v0.22.2</text>
+  <text x="472" y="544" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Plugin 0.4.0  |  skill britannica-compare</text>
+  <text x="472" y="566" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">search_sources  |  get_pair  |  find_drift</text>
+  <text x="472" y="588" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">view_scan  |  view_neighbors</text>
+  <text x="472" y="614" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Tools run in this checkout. Answers cite both sides.</text>
+  <text x="472" y="638" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12">HERMES_HOME=data/hermes</text>
+
+  <!-- GPU -->
+  <rect x="1036" y="108" width="408" height="300" rx="16" fill="#eef4fc" stroke="#93c5fd"/>
+  <text x="1054" y="140" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Your GPU</text>
+  <text x="1054" y="162" fill="#3b5ea8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Docker  |  one GPU  |  127.0.0.1:8000</text>
+  <g filter="url(#shadow)">
+    <rect x="1052" y="180" width="376" height="100" rx="12" fill="#ffffff" stroke="#dbe7f8"/>
+  </g>
+  <text x="1068" y="206" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Nemotron Embed VL 1B</text>
+  <text x="1068" y="228" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Text or plate image to a 2048-d vector</text>
+  <text x="1068" y="250" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">POST /v1/embeddings  |  rev 582e3bf7</text>
+  <g filter="url(#shadow)">
+    <rect x="1052" y="292" width="376" height="96" rx="12" fill="#ffffff" stroke="#dbe7f8"/>
+  </g>
+  <text x="1068" y="318" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Nemotron Rerank VL 1B</text>
+  <text x="1068" y="340" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Query + hits to a raw logit</text>
+  <text x="1068" y="362" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">POST /v1/rerank  |  rev b8a9987b</text>
+
+  <!-- Token Factory -->
+  <rect x="1036" y="428" width="408" height="256" rx="16" fill="#fff6ee" stroke="#fdba74"/>
+  <text x="1054" y="460" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Nebius Token Factory</text>
+  <text x="1054" y="482" fill="#9a3412" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">Your account. SUPER_API_KEY.</text>
+  <g filter="url(#shadow)">
+    <rect x="1052" y="500" width="376" height="160" rx="12" fill="#ffffff" stroke="#fde0c4"/>
+  </g>
+  <text x="1068" y="528" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Nemotron 3.5 Super VL</text>
+  <text x="1068" y="552" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Pair comparison, plate description</text>
+  <text x="1068" y="574" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Hermes reasoning and scan vision</text>
+  <text x="1068" y="596" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Pipeline calls: thinking off, temperature 0.2</text>
+  <text x="1068" y="622" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">POST /v1/chat/completions</text>
+  <text x="1068" y="642" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">api.tokenfactory.nebius.com</text>
+
+  <!-- Arrows -->
+  <path d="M356 168 C 400 168, 400 360, 456 360" fill="none" stroke="#0f766e" stroke-width="1.6" marker-end="url(#teal)"/>
+  <text x="390" y="250" fill="#0f766e" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">100 scans</text>
+
+  <path d="M340 370 H 456" fill="none" stroke="#0f766e" stroke-width="1.6" marker-end="url(#teal)"/>
+  <text x="398" y="362" fill="#0f766e" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">blocks + bbox</text>
+  <path d="M456 396 H 340" fill="none" stroke="#0f766e" stroke-width="1.6" marker-end="url(#teal)"/>
+  <text x="398" y="412" fill="#0f766e" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">page image</text>
+
+  <path d="M340 530 H 456" fill="none" stroke="#0f766e" stroke-width="1.6" marker-end="url(#teal)"/>
+  <text x="398" y="522" fill="#0f766e" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">hits + revision</text>
+  <path d="M456 556 H 340" fill="none" stroke="#0f766e" stroke-width="1.6" marker-end="url(#teal)"/>
+  <text x="398" y="572" fill="#0f766e" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">BM25 query</text>
+
+  <path d="M936 250 H 1052" fill="none" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#blue)"/>
+  <text x="994" y="242" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">vectors + logits</text>
+  <path d="M1052 276 H 936" fill="none" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#blue)"/>
+  <text x="994" y="294" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">query + passages</text>
+
+  <path d="M936 560 H 1052" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#orange)"/>
+  <text x="994" y="552" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">answer + tool calls</text>
+  <path d="M1052 586 H 936" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#orange)"/>
+  <text x="994" y="604" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" text-anchor="middle">question + scan images</text>
+
+  <path d="M696 272 V 288" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#slate)"/>
+  <path d="M720 288 V 272" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#slate)"/>
+  <text x="760" y="282" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11">write / search</text>
+
+  <path d="M696 476 V 492" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#slate)"/>
+  <path d="M720 492 V 476" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#slate)"/>
+  <text x="736" y="488" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11">tools / evidence</text>
+
+  <!-- Footer -->
+  <rect x="36" y="708" width="1408" height="76" rx="14" fill="#12263a"/>
+  <text x="56" y="740" fill="#ffffff" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">Open on this PC</text>
+  <text x="56" y="762" fill="#b6c3d4" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Browser or PDF viewer</text>
+  <text x="280" y="740" fill="#ffffff" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15" font-weight="700">site/index.html  |  100 LaTeX PDFs  |  docs/cases  |  runs/agent</text>
+  <text x="280" y="762" fill="#b6c3d4" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Scans, matches, checked quotes, and agent answers are already in this checkout.</text>
+</svg>

@@ -7,7 +7,7 @@ All paths are under `artifacts/` unless stated. JSON uses UTF-8. Bboxes are page
 
 - `.env`: service URLs and keys. Never commit.
 - `data/raw/britannica/*.jpg`: the 100 scans.
-- Worktrees: symlink `.env`, `data`, and `artifacts` from the main checkout `/Users/aly/repos/Nebius-Hackathon`.
+- Worktrees: symlink `.env`, `data`, and `artifacts` from the main checkout.
 
 ## Extract (owner: lead, done)
 

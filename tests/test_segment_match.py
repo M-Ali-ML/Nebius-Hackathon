@@ -51,8 +51,9 @@ def test_long_s_fixes_go_to_text_norm_only():
     assert segment.normalize("ﬁsh")[0] == "fish"
 
 
-def test_extract_without_pages_fails_cleanly(tmp_path):
+def test_extract_without_pages_fails_cleanly(tmp_path, capsys):
     assert main(["run", "extract", "--work-dir", str(tmp_path / "w")]) == 1
+    assert "page records" in capsys.readouterr().err
 
 
 def hit(pid, bm25_rank, cos=None, logit=None):

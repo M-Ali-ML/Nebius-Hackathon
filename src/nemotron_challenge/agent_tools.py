@@ -16,10 +16,10 @@ import time
 from typing import Any, Callable
 
 from .clients import RetrievalClient, ServiceError
-from .config import Settings
+from .config import Settings, repo_root
 
-MAIN = Path(os.environ.get("NEMOTRON_MAIN", "/Users/aly/repos/Nebius-Hackathon"))
-ARTIFACTS = Path(os.environ.get("NEMOTRON_ARTIFACTS", str(MAIN / "artifacts")))
+MAIN = repo_root()
+ARTIFACTS = Path(os.environ["NEMOTRON_ARTIFACTS"]) if os.environ.get("NEMOTRON_ARTIFACTS") else MAIN / "artifacts"
 LOW_LOGIT = -2.0     # top rerank logit below this: low confidence (heuristic; logits here run negative)
 LOW_MARGIN = 1.0     # top1 - top2 logit below this: low confidence
 PASSAGE_CHARS = 1200
@@ -309,11 +309,28 @@ def get_pair(entry_id: str, work_dir: Path = ARTIFACTS, max_chars: int = 3000) -
 
 def find_drift(kind: str, k: int = 5, work_dir: Path = ARTIFACTS) -> dict[str, Any]:
     """List checked comparison items of one kind across all pairs, with quotes and both citation ids."""
-    kinds = {"renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics"}
+    kinds = {"renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics", "topics", "ocr_errors"}
     if kind not in kinds:
         raise ValueError(f"kind must be one of {sorted(kinds)}")
     k = max(1, min(int(k), 20))
+    if kind == "topics":
+        topics_path = work_dir / "compare" / "topics.json"
+        if not topics_path.is_file():
+            return {"kind": "topics", "total": 0, "items": [], "note": "No topics.json found."}
+        data = json.loads(topics_path.read_text())
+        clusters = data.get("clusters", [])
+        return {
+            "kind": "topics",
+            "total": len(clusters),
+            "model_embed": data.get("model_embed"),
+            "model_refine": data.get("model_refine"),
+            "britannica_count": data.get("britannica_count"),
+            "wikipedia_count": data.get("wikipedia_count"),
+            "items": clusters[:k],
+            "note": "Shared embedding topic clusters (Embed VL 1B v2 + c-TF-IDF + Super VL topic refinement).",
+        }
     items = []
+    ocr_filtered = 0
     for path in sorted((work_dir / "compare" / "pairs").glob("*.json")):
         pair = json.loads(path.read_text())
         if pair.get("status") != "ok":
@@ -321,18 +338,42 @@ def find_drift(kind: str, k: int = 5, work_dir: Path = ARTIFACTS) -> dict[str, A
         cites = {"entry_id": pair["entry_id"], "cite_britannica": pair["cite_britannica"],
                  "cite_wikipedia": pair["cite_wikipedia"], "wiki_title": pair.get("wiki_title"),
                  "rerank_margin": pair.get("rerank_margin")}
-        if kind == "term_pairs":
+        if kind == "ocr_errors":
+            found = []
+            for c in pair.get("claims", []):
+                if (c.get("scan_check") or {}).get("status") == "ocr_error":
+                    found.append({"item_type": f"claim:{c.get('tag')}", **c})
+            for t in pair.get("term_pairs", []):
+                if (t.get("scan_check") or {}).get("status") == "ocr_error":
+                    found.append({"item_type": "term_pair", **t})
+        elif kind == "term_pairs":
             lexical = {(t["old"], t["new"]) for t in pair["drift"]["lexical"]["term_pairs"]}
-            found = [t for t in pair.get("term_pairs", []) if (t["old"], t["new"]) in lexical]
+            raw_found = [t for t in pair.get("term_pairs", []) if (t["old"], t["new"]) in lexical]
+            found = []
+            for t in raw_found:
+                if (t.get("scan_check") or {}).get("status") == "ocr_error":
+                    ocr_filtered += 1
+                else:
+                    found.append(t)
         elif kind == "wiki_only_topics":
             found = pair.get("wiki_only_topics", [])
         else:
-            found = [c for c in pair.get("claims", []) if c.get("tag") == kind]
+            raw_found = [c for c in pair.get("claims", []) if c.get("tag") == kind]
+            found = []
+            for c in raw_found:
+                if (c.get("scan_check") or {}).get("status") == "ocr_error":
+                    ocr_filtered += 1
+                else:
+                    found.append(c)
         items += [{**cites, **item} for item in found]
-    # pairs with a confident match first
-    items.sort(key=lambda x: -(x.get("rerank_margin") or 0))
-    return {"kind": kind, "total": len(items), "items": items[:k],
-            "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."}
+    # Prioritize items visually confirmed on the scan by Super VL, then by rerank_margin
+    items.sort(key=lambda x: (
+        0 if (x.get("scan_check") or {}).get("status") == "confirmed" else 1,
+        -(x.get("rerank_margin") or 0),
+    ))
+    return {"kind": kind, "total": len(items), "ocr_errors_filtered": ocr_filtered, "items": items[:k],
+            "note": ("Items passed the quote substring check. Items where Super VL scan verification found an OCR error "
+                     "are filtered out (query kind='ocr_errors' to inspect caught OCR illusions). Scan-confirmed items rank first.")}
 
 
 def _page_record(page: str, work_dir: Path) -> dict[str, Any]:
@@ -353,7 +394,7 @@ def view_scan(page: str, bbox: list[float] | None = None, work_dir: Path = ARTIF
 
     rec = _page_record(page, work_dir)
     scan = Path(rec["scan_path"])
-    scan = scan if scan.is_absolute() else MAIN / scan
+    scan = scan if scan.is_absolute() else repo_root() / scan
     img = Image.open(scan).convert("RGB")
     w, h = img.size
     if bbox:
@@ -405,7 +446,7 @@ def view_neighbors(page: str, before: int = 1, after: int = 1, settings: Setting
 
     row = _row_of(page)
     before, after = max(0, min(int(before), 2)), max(0, min(int(after), 2))
-    cache_dir = cache_dir or MAIN / "data" / "cache"
+    cache_dir = cache_dir or repo_root() / "data" / "cache"
     out_dir = work_dir / "plates" / "neighbors" / str(row)
     pages, images = [], []
     try:
@@ -475,7 +516,7 @@ def run_tool(name: str, args: dict[str, Any]) -> dict[str, Any]:
     if name == "view_scan":
         import base64
 
-        out_dir = Path(os.environ.get("NEMOTRON_SCAN_CACHE", str(MAIN / "data" / "hermes" / "scan_cache")))
+        out_dir = Path(os.environ.get("NEMOTRON_SCAN_CACHE", str(repo_root() / "data" / "hermes" / "scan_cache")))
         out_dir.mkdir(parents=True, exist_ok=True)
         meta, data = view_scan(str(args["page"]), args.get("bbox"))
         tag = "full" if not args.get("bbox") else "_".join(f"{v:.3f}" for v in args["bbox"])

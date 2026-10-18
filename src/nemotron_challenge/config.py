@@ -21,6 +21,17 @@ DEFAULT_WIKIPEDIA_URL = "https://port8000-rks0xavparpzq59.tunnel.applications.uk
 DEFAULT_PARSE_URL = "https://port8000-kh2kceraevwe0k1.tunnel.applications.uk-south2.nebius.cloud/v1"
 
 
+def repo_root() -> Path:
+    """Checkout that holds this pipeline. Honors NEMOTRON_REPO, then walks up from this file."""
+    env = os.environ.get("NEMOTRON_REPO") or os.environ.get("NEMOTRON_MAIN")
+    if env:
+        return Path(env).expanduser().resolve()
+    for parent in Path(__file__).resolve().parents:
+        if (parent / "pyproject.toml").is_file() and (parent / "src" / "nemotron_challenge").is_dir():
+            return parent
+    return Path.cwd()
+
+
 class ConfigurationError(ValueError):
     """A required setting is missing or invalid."""
 

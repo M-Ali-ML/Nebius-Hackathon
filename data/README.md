@@ -1,7 +1,8 @@
 # Shared source scans
 
 All teams use the same 100 raw scans.
-The starter supplies no transcriptions, entry boundaries, matches, or comparison results.
+The images are not in git. Fetch them with the command below.
+Derived text, matches, and comparisons are in `artifacts/`.
 
 The packaged manifest is at `src/nemotron_challenge/resources/britannica-manifest.json`.
 It selects 100 rows without replacement from 2,573 source scans, with seed `20261016`.

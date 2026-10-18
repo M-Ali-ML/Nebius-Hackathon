@@ -15,12 +15,11 @@ import subprocess
 import time
 from typing import Any
 
-from .config import SUPER_MODEL
+from .config import SUPER_MODEL, repo_root
 
-MAIN = Path(os.environ.get("NEMOTRON_MAIN", "/Users/aly/repos/Nebius-Hackathon"))
-ARTIFACTS = Path(os.environ.get("NEMOTRON_ARTIFACTS", str(MAIN / "artifacts")))
-RUNS = Path(os.environ.get("NEMOTRON_RUNS", str(MAIN / "runs" / "agent")))
-HERMES_HOME = os.environ.get("HERMES_HOME", str(MAIN / "data" / "hermes"))
+MAIN = repo_root()
+ARTIFACTS = Path(os.environ["NEMOTRON_ARTIFACTS"]) if os.environ.get("NEMOTRON_ARTIFACTS") else MAIN / "artifacts"
+RUNS = Path(os.environ["NEMOTRON_RUNS"]) if os.environ.get("NEMOTRON_RUNS") else MAIN / "runs" / "agent"
 SKILL = "britannica-compare"
 DATA_URL = re.compile(r"data:image/[a-z]+;base64,[A-Za-z0-9+/=]+")
 
@@ -73,13 +72,14 @@ def ask(question: str, *, repo: Path, max_turns: int = 12, timeout: int = 900, r
 
     secrets = {k: v for k, v in dotenv_values(repo / ".env").items() if v is not None}
     tool_log = Path(tempfile.mkstemp(prefix="tool-log-", suffix=".jsonl")[1])
-    env = {**secrets, **os.environ, "HERMES_HOME": HERMES_HOME, "NEMOTRON_REPO": str(repo),
+    hermes_home = os.environ.get("HERMES_HOME", str(repo / "data" / "hermes"))
+    env = {**secrets, **os.environ, "HERMES_HOME": hermes_home, "NEMOTRON_REPO": str(repo),
            "NEMOTRON_RETRIEVAL_MODE": retrieval_mode, "NEMOTRON_TOOL_LOG": str(tool_log)}
     cmd = [_hermes(), "chat", "-q", question, "--format", "stream-json", "-t", "nemotron_challenge",
            "-s", SKILL, "--max-turns", str(max_turns)]
     started = datetime.now()
     record: dict[str, Any] = {"question": question, "started": started.isoformat(timespec="seconds"),
-                              "command": cmd[1:], "hermes_home": HERMES_HOME, "tool_repo": str(repo),
+                              "command": cmd[1:], "hermes_home": hermes_home, "tool_repo": str(repo),
                               "retrieval_mode": retrieval_mode}
     t0 = time.time()
     try:

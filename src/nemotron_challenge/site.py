@@ -231,6 +231,11 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         cause_counts={c: sum(((r["page_match"] or {}).get("uncertainty") or {}).get("cause") == c for r in rows)
                       for c in CAUSE_LABELS}))
     analysis = build_analysis(env, work_dir, site_dir, built, inputs, rows, totals)
+    diagrams = Path(__file__).resolve().parents[2] / "docs" / "diagrams"
+    if diagrams.is_dir():
+        (site_dir / "diagrams").mkdir(exist_ok=True)
+        for svg in diagrams.glob("*.svg"):
+            shutil.copy2(svg, site_dir / "diagrams" / svg.name)
     (site_dir / "how.html").write_text(env.get_template("how.html").render(built=built))
     explore = build_explore(env, work_dir, site_dir, built)
     return {"site_dir": str(site_dir), **totals, "missing_scans": missing_scans, "analysis": analysis,

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 720" role="img" aria-labelledby="title desc">
+  <title id="title">Steps on the 100 Britannica pages</title>
+  <desc id="desc">Parse, segment, BM25, embed, rerank, compare, drift, site, and Hermes. Counts are from the saved run.</desc>
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#0f2744" flood-opacity="0.08"/>
+    </filter>
+    <marker id="slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1480" height="720" fill="#eef3f8"/>
+  <text x="40" y="48" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="28" font-weight="700">Steps on the 100 pages</text>
+  <text x="40" y="76" fill="#5c6b7a" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="15">Each box is one saved stage. Green, blue, and orange boxes call a Nemotron model. Counts are from this run.</text>
+
+  <!-- Row 1 -->
+  <g filter="url(#shadow)">
+    <rect x="32" y="108" width="200" height="150" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="48" y="136" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">1  |  SOURCE</text>
+  <text x="48" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">100 scans</text>
+  <text x="48" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Fixed sample</text>
+  <text x="48" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">seed 20261016</text>
+  <text x="48" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">data fetch</text>
+
+  <g filter="url(#shadow)">
+    <rect x="268" y="108" width="210" height="150" rx="14" fill="#e7f6f4" stroke="#7dcec4"/>
+  </g>
+  <text x="284" y="136" fill="#0f6e68" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">2  |  PARSE 3.5</text>
+  <text x="284" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">100 / 100</text>
+  <text x="284" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Blocks, class, bbox</text>
+  <text x="284" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">2 pages: column split</text>
+  <text x="284" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">nemotron-challenge parse</text>
+
+  <g filter="url(#shadow)">
+    <rect x="514" y="108" width="210" height="150" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="530" y="136" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">3  |  ENTRIES</text>
+  <text x="530" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">262 entries</text>
+  <text x="530" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">176 headwords</text>
+  <text x="530" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">723 long-s repairs</text>
+  <text x="530" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">run extract</text>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="108" width="210" height="150" rx="14" fill="#e7f6f4" stroke="#7dcec4"/>
+  </g>
+  <text x="776" y="136" fill="#0f6e68" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">4  |  BM25</text>
+  <text x="776" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Top 30</text>
+  <text x="776" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">7.18M articles</text>
+  <text x="776" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">P@1 0.30</text>
+  <text x="776" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">Wikipedia API</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1006" y="108" width="200" height="150" rx="14" fill="#eef4fc" stroke="#93c5fd"/>
+  </g>
+  <text x="1022" y="136" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">5  |  EMBED VL</text>
+  <text x="1022" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Top 10</text>
+  <text x="1022" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">2048-d cosine</text>
+  <text x="1022" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">P@1 0.56</text>
+  <text x="1022" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">your GPU</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1242" y="108" width="200" height="150" rx="14" fill="#eef4fc" stroke="#93c5fd"/>
+  </g>
+  <text x="1258" y="136" fill="#1d4ed8" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">6  |  RERANK VL</text>
+  <text x="1258" y="166" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Logit</text>
+  <text x="1258" y="190" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">+ margin + title</text>
+  <text x="1258" y="210" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">P@1 0.70</text>
+  <text x="1258" y="234" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">your GPU</text>
+
+  <path d="M232 183 H 268" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M478 183 H 514" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M724 183 H 760" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M970 183 H 1006" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M1206 183 H 1242" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+
+  <!-- Row 2 -->
+  <g filter="url(#shadow)">
+    <rect x="32" y="360" width="250" height="168" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="48" y="388" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">7  |  DECISION</text>
+  <text x="48" y="418" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">Match or stop</text>
+  <text x="48" y="442" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">73 entries matched</text>
+  <text x="48" y="462" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">52 of 100 pages matched</text>
+  <text x="48" y="486" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Else: no clear counterpart</text>
+  <text x="48" y="508" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">run match</text>
+
+  <g filter="url(#shadow)">
+    <rect x="318" y="360" width="250" height="168" rx="14" fill="#fff6ee" stroke="#fdba74"/>
+  </g>
+  <text x="334" y="388" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">8  |  SUPER VL</text>
+  <text x="334" y="418" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">83 pairs</text>
+  <text x="334" y="442" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">1,567 quotes kept</text>
+  <text x="334" y="462" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">64 quotes rejected</text>
+  <text x="334" y="486" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Plates described from the image</text>
+  <text x="334" y="508" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">run compare</text>
+
+  <g filter="url(#shadow)">
+    <rect x="604" y="360" width="360" height="168" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="620" y="388" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">9  |  DRIFT  |  476 CLAIMS</text>
+  <text x="620" y="416" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">What kind of change</text>
+  <rect x="620" y="436" width="328" height="22" rx="6" fill="#e5e7eb"/>
+  <rect x="620" y="436" width="145" height="22" rx="6" fill="#4ade80"/>
+  <rect x="765" y="436" width="16" height="22" fill="#38bdf8"/>
+  <rect x="781" y="436" width="43" height="22" fill="#fbbf24"/>
+  <rect x="824" y="436" width="124" height="22" rx="6" fill="#9ca3af"/>
+  <text x="620" y="480" fill="#15803d" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">enduring 44%</text>
+  <text x="720" y="480" fill="#0369a1" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">renamed 5%</text>
+  <text x="812" y="480" fill="#b45309" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">superseded 13%</text>
+  <text x="620" y="504" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="600">dropped 38%  |  about 1 spelling edit per 100 words</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1000" y="360" width="212" height="168" rx="14" fill="#ffffff" stroke="#d7e0ea"/>
+  </g>
+  <text x="1016" y="388" fill="#64748b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">10  |  ARCHIVE</text>
+  <text x="1016" y="418" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">100 PDFs</text>
+  <text x="1016" y="442" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">89 two-column</text>
+  <text x="1016" y="462" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Static site</text>
+  <text x="1016" y="486" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">site/index.html</text>
+  <text x="1016" y="508" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">run site</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1248" y="360" width="196" height="168" rx="14" fill="#fff6ee" stroke="#fdba74"/>
+  </g>
+  <text x="1264" y="388" fill="#c2410c" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1">11  |  HERMES</text>
+  <text x="1264" y="418" fill="#1e293b" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="18" font-weight="700">6 cases</text>
+  <text x="1264" y="442" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">3 success</text>
+  <text x="1264" y="462" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">3 failure</text>
+  <text x="1264" y="486" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Saved transcripts</text>
+  <text x="1264" y="508" fill="#64748b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">run agent</text>
+
+  <!-- Card 11 ends at 1444. Canvas 1480. Row 2 card widths: 
+       32+250=282, gap 36 to 318. 318+250=568, gap 36 to 604. 604+360=964, gap 36 to 1000.
+       1000+212=1212, gap 36 to 1248. 1248+196=1444. OK. -->
+
+  <path d="M282 444 H 318" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M568 444 H 604" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M964 444 H 1000" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+  <path d="M1212 444 H 1248" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#slate)"/>
+
+  <text x="40" y="580" fill="#16324f" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">Citation on every factual sentence</text>
+  <g>
+    <rect x="40" y="596" width="150" height="32" rx="8" fill="#ffffff" stroke="#d7e0ea"/>
+    <text x="115" y="617" fill="#1e293b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" text-anchor="middle">[B:1910:0]</text>
+    <rect x="202" y="596" width="230" height="32" rx="8" fill="#ffffff" stroke="#d7e0ea"/>
+    <text x="317" y="617" fill="#1e293b" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" text-anchor="middle">[W:61344:1353843790]</text>
+  </g>
+  <text x="450" y="617" fill="#475569" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">Britannica entry row:index, and Wikipedia page id:revision id.</text>
+
+  <rect x="32" y="652" width="1416" height="48" rx="12" fill="#12263a"/>
+  <text x="52" y="682" fill="#ffffff" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14">P@1 is on 27 gold-in-pool labels, one reader. Drift shares count only quotes that passed the substring check. OCR noise still inflates renamed and superseded.</text>
+</svg>

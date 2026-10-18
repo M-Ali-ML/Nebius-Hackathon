@@ -4,7 +4,7 @@ Three questions, about 40 s of screen time each. Each one has a saved rehearsal 
 
 ## Recommended run for the video
 
-Record these four, in this order, with `/new` between them. Together they show every tool and both kinds of honesty.
+Record these four, in this order, with `/new` between them. Together they show four of the five tools (all but `find_drift`), a caught pipeline error, and a refusal to answer without evidence.
 
 | # | Question | Shows | Screen time |
 | --- | --- | --- | --- |

@@ -11,7 +11,7 @@ from typing import Any
 
 REPO = os.environ.get("NEMOTRON_REPO", "/Users/aly/repos/Nebius-Hackathon")
 TIMEOUT = 180
-# command that runs the project's Python; the Space sets NEMOTRON_TOOL_CMD="python"
+# command that runs the project Python; override with NEMOTRON_TOOL_CMD (for example a venv python path)
 TOOL_CMD = os.environ.get("NEMOTRON_TOOL_CMD", "uv run --quiet python").split()
 
 SEARCH_SCHEMA = {

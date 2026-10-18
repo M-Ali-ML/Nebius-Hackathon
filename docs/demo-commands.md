@@ -2,9 +2,22 @@
 
 Three questions, about 40 s of screen time each. Each one has a saved rehearsal transcript in `runs/agent/demo/`.
 
+## Recommended run for the video
+
+Record these four, in this order, with `/new` between them. Together they show every tool and both kinds of honesty.
+
+| # | Question | Shows | Screen time |
+| --- | --- | --- | --- |
+| 1 | Lightning (Question 1 below) | Hybrid search, `get_pair` drift split (language vs knowledge), `view_scan` reading the page, citations on both sides, uncertain match reported | about 35 s |
+| 2 | Plate B:2077 (Question 2) | `view_neighbors`: a blank plate leaf, explained by the next scan (MICROSCOPE Plate CCC) | about 40 s after cutting the searches |
+| 3 | Blank cover B:452:0 (alternate Question 3) | `view_scan` catches a Parse hallucination that passed every pipeline stage | about 25 s |
+| 4 | Neptune: `What does the Britannica say about the planet Neptune?` | Says "No evidence found in Britannica" and labels the 1846 discovery as inference | about 15 s |
+
+If you have time for a fifth, use the old-terms question (Question 3) to show `find_drift`. Point only at "Botnhic gulph" to "Gulf of Bothnia"; other pairs in that answer are often OCR noise.
+
 ## Before you record
 
-1. Use code that includes commit `3402ab4` (hybrid default in the runner, one combined image from `view_neighbors`, 8-image rule in the skill). Main at `c533508` does not have it. Without it, the plate question can fail with "At most 8 image(s) may be provided in one prompt".
+1. Work in the main checkout, not in a worktree. The Hermes profile lives in the main checkout's `data/hermes`; a worktree has none, and Hermes then starts an empty profile ("Unknown toolsets", 0 tools, model unknown).
 2. Check that the retrieval service tunnel is up (`RETRIEVAL_BASE_URL`, http://127.0.0.1:8000/v1).
 3. Install the current plugin and skill into the Hermes profile. Run from the repository root:
 
@@ -20,7 +33,7 @@ hermes plugins list | grep nemotron                                # expect: ena
 ## Start Hermes
 
 ```bash
-cd "$(git rev-parse --show-toplevel)"
+cd /path/to/Nebius-Hackathon                # the main checkout, not a worktree
 export HERMES_HOME="$PWD/data/hermes"
 set -a; source .env; set +a                 # loads SUPER_API_KEY and the service URLs
 export NEMOTRON_REPO=$PWD                    # tool code runs from this checkout
@@ -28,7 +41,16 @@ export NEMOTRON_RETRIEVAL_MODE=hybrid        # the default; set it so the screen
 hermes chat --toolsets nemotron_challenge --skills britannica-compare
 ```
 
-The banner must show model `nvidia/Nemotron-3.5-Super-VL`. Type `/new` between questions so that each question starts with an empty context (images from an earlier question count toward the 8-image limit).
+The banner must show model `nvidia/Nemotron-3.5-Super-VL`, provider `custom:tokenfactory-super`, and 5 tools.
+If it shows 3 tools, Hermes Tool Search is on: the 5 tools hide behind `tool_search` / `tool_describe` / `tool_call`. They still work, but the trace is noisier. For the video, turn it off in `data/hermes/config.yaml`:
+
+```yaml
+tools:
+  tool_search:
+    enabled: off
+```
+
+The saved rehearsals below ran with Tool Search on, so live runs can show fewer calls than listed. Type `/new` between questions so that each question starts with an empty context (images from an earlier question count toward the 8-image limit).
 
 ## Question 1: language vs knowledge (drift split + scan)
 

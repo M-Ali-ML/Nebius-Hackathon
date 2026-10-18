@@ -90,3 +90,19 @@ def test_chunks_cover_text():
     text = "Sentence one is here. " * 300
     chunks = chunk_text(text)
     assert all(len(c) <= 1500 for _, c in chunks) and chunks[0][0] == 0
+
+
+def test_why_explains_match_and_rejection():
+    from nemotron_challenge.match import explain, title_relation
+    assert title_relation("THOMAS SYDENHAM", "Thomas Sydenham") == "exact"
+    assert title_relation("SWIVELS", "Swivel gun") == "partial"
+    assert title_relation("HELM", "Rudder", "A rudder, or helm, is") == "alias"
+    entry = {"headword": "FARM", "text_norm": "FARM, land for tillage with fields and tillage tools", "is_continuation": False}
+    record = {"entry_id": "B:1:0", "hits": [hit("2", 2, 0.5, 3.0), hit("3", 3, 0.4, 2.5)]}
+    tfidf = TfIdf([entry["text_norm"], "other"])
+    d = decide(record, tau=2.0)
+    explain(d, record, entry, tfidf, "Farm land used for tillage and fields", 2.0)
+    assert "tillage" in d["shared_terms"] and "rerank logit 3.00" in d["why"]
+    d = decide(record, tau=5.0)
+    explain(d, record, entry, tfidf, None, 5.0)
+    assert d["why"].startswith("Rejected:") and "flat margin" in d["why"] and "unrelated titles" in d["why"]

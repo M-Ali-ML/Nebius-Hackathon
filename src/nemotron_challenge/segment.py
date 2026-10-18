@@ -64,6 +64,21 @@ def running_head_word(blocks: list[dict[str, Any]]) -> str | None:
     return None
 
 
+def topic_hint(head: str | None) -> str | None:
+    """A running head with a full word ("BLOW-PIPE", "A N A T O M Y") names the topic of a continuation.
+    Short guide words ("FAR", "SWI") do not."""
+    if not head:
+        return None
+    text = re.sub(r"^[IVXL]+\.\s*", "", head)
+    if re.fullmatch(r"(?:[A-Z]\s+)+[A-Z]\.?", text):
+        text = text.replace(" ", "")
+    text = text.split(".")[0].strip()
+    half = len(text) // 2
+    if len(text) % 2 == 0 and text[:half] == text[half:]:  # "COMCOM"
+        text = text[:half]
+    return text if len(re.sub(r"[^A-Z]", "", text)) >= 5 else None
+
+
 def headword_of(block: dict[str, Any]) -> str | None:
     text = strip_markup(block["text"])
     if block["cls"] in {"Section-header", "Title"}:
@@ -74,6 +89,9 @@ def headword_of(block: dict[str, Any]) -> str | None:
             return re.sub(r"\s+", " ", text).rstrip(".")
     match = HEADWORD.match(block["text"])
     if match and sum(c.isupper() for c in match[1]) >= 2 and not ROMAN.fullmatch(match[1]):
+        words = match[1].split()
+        if len(words) >= 2 and words[0] == words[-1]:  # running head like "FUR TST FUR"
+            return None
         return match[1].strip(" -")
     return None
 
@@ -143,7 +161,9 @@ def _finish(entry: dict[str, Any]) -> dict[str, Any]:
 def segment_page(page: dict[str, Any]) -> list[dict[str, Any]]:
     row, blocks = page["row_index"], sorted(page["blocks"], key=lambda b: b["order"])
     head = running_head_word(blocks)
-    base = {"page_id": page["page_id"], "row_index": row, "image_sha256": page.get("image_sha256"), "running_head": head}
+    # A running head with a full word ("BLOW-PIPE", "LIBERTY OF THE PRESS") names the topic of a continuation.
+    base = {"page_id": page["page_id"], "row_index": row, "image_sha256": page.get("image_sha256"),
+            "running_head": head, "topic_hint": topic_hint(head)}
     body = [b for b in blocks if b["cls"] in BODY_CLASSES and b["text"].strip()
             and not (b["cls"] in {"Section-header", "Title"} and is_running_head(b["text"]))
             and not re.fullmatch(r"[\W\d]{0,10}", strip_markup(b["text"]))]

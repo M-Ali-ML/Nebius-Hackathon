@@ -64,8 +64,13 @@ class TfIdf:
         return sorted(score, key=lambda w: (-score[w], w))[:k]
 
 
+def head_of(entry: dict[str, Any]) -> str:
+    """Headword, or for a continuation the running-head topic (e.g. "BLOW-PIPE")."""
+    return entry.get("headword") or (entry.get("topic_hint") if entry.get("is_continuation") else None) or ""
+
+
 def bm25_query(entry: dict[str, Any], tfidf: TfIdf) -> str:
-    head = (entry.get("headword") or "").title()
+    head = head_of(entry).title()
     words = head.split() * 2 + [w for w in tfidf.top_terms(entry["text_norm"], 64) if w not in head.lower().split()]
     query = ""
     for word in words[:64]:
@@ -76,7 +81,7 @@ def bm25_query(entry: dict[str, Any], tfidf: TfIdf) -> str:
 
 
 def entry_query_text(entry: dict[str, Any]) -> str:
-    head = entry.get("headword") or ""
+    head = head_of(entry)
     text = entry["text_norm"]
     if head and not text.upper().startswith(head.upper()):
         text = f"{head}. {text}"
@@ -103,7 +108,8 @@ def select_entries(entries: list[dict[str, Any]], cap: int | None) -> list[dict[
 def match_entry(entry: dict[str, Any], tfidf: TfIdf, wiki: WikiClient, retr: RetrievalClient) -> dict[str, Any]:
     timing: dict[str, float] = {}
     record: dict[str, Any] = {"entry_id": entry["entry_id"], "page_id": entry["page_id"], "row_index": entry["row_index"],
-                              "headword": entry["headword"], "plate": entry["plate"]}
+                              "headword": entry["headword"], "topic_hint": entry.get("topic_hint"),
+                              "plate": entry["plate"]}
     query = bm25_query(entry, tfidf)
     record["bm25_query"] = query
     if not query:
@@ -115,8 +121,8 @@ def match_entry(entry: dict[str, Any], tfidf: TfIdf, wiki: WikiClient, retr: Ret
              "text_sha256": h.provenance.text_sha256, "bm25_rank": h.rank, "bm25_score": h.bm25_score,
              "excerpt": h.excerpt, "excerpt_offset": h.excerpt_offset, "total_chars": h.total_chars} for h in result.hits]
     # Headword-only search adds the obvious title candidate when long queries drift.
-    if entry.get("headword"):
-        extra = call(lambda: wiki.search(entry["headword"].title(), top_k=5, excerpt_chars=1000), "wiki.search headword")
+    if head_of(entry):
+        extra = call(lambda: wiki.search(head_of(entry).title(), top_k=5, excerpt_chars=1000), "wiki.search headword")
         seen = {h["page_id"] for h in hits}
         for h in extra.hits:
             if h.page_id not in seen:
@@ -185,6 +191,68 @@ def decide(record: dict[str, Any], tau: float = TAU) -> dict[str, Any]:
     else:
         out.update(reason=f"top rerank logit {best['rerank_logit']:.2f} <= tau {tau}; best candidate kept for review")
     return out
+
+
+def _norm_title(text: str) -> str:
+    return re.sub(r"[^a-z ]", "", re.sub(r"\(.*?\)", "", text.lower()).replace("-", " ")).strip()
+
+
+def title_relation(head: str, title: str, article_lead: str = "") -> str:
+    """exact: same name; alias: headword named in the article lead; partial: shared word; none."""
+    h, t = _norm_title(head), _norm_title(title)
+    if not h:
+        return "none"
+    if h == t or h.rstrip("s") == t.rstrip("s"):
+        return "exact"
+    if re.search(rf"\b{re.escape(h)}\b", article_lead.lower()):
+        return "alias"
+    if set(h.split()) & set(t.split()) or (len(h) >= 5 and (h[:5] == t[:5])):
+        return "partial"
+    return "none"
+
+
+def shared_terms(entry_text: str, article_text: str, tfidf: TfIdf, k: int = 5) -> list[str]:
+    """Top-k terms in both texts, scored by entry TF-IDF times article term count (log)."""
+    art = Counter(tokens(article_text))
+    ent = Counter(tokens(entry_text))
+    score = {w: c * math.log((1 + tfidf.n) / (1 + tfidf.df[w])) * math.log(1 + art[w]) for w, c in ent.items() if w in art}
+    return sorted(score, key=lambda w: (-score[w], w))[:k]
+
+
+def explain(decision: dict[str, Any], record: dict[str, Any], entry: dict[str, Any], tfidf: TfIdf,
+            article_text: str | None, tau: float) -> None:
+    """Add "why" and "shared_terms" from evidence only (no LLM)."""
+    ranked = rank(record, "bm25+embed+rerank")
+    head = head_of(entry)
+    if not ranked:
+        decision.update(why=decision["reason"] or "no candidates to compare", shared_terms=[], title_relation="none")
+        return
+    best = ranked[0]
+    source = article_text or best["excerpt"]
+    terms = shared_terms(entry["text_norm"], source, tfidf)
+    relation = title_relation(head, best["title"], source[:400])
+    margin = decision.get("rerank_margin")
+    scores = (f"BM25 rank {best['bm25_rank'] if best['bm25_rank'] is not None else 'headword search'}, "
+              f"embed cos {best['embed_cos']:.3f}, rerank logit {best['rerank_logit']:.2f}"
+              + (f", margin {margin:.2f} over '{ranked[1]['title']}'" if margin is not None else ""))
+    decision.update(shared_terms=terms, title_relation=relation)
+    head_text = f"headword '{head}'" if head else "no headword"
+    if decision["status"] == "matched":
+        decision["why"] = (f"{head_text} vs title '{best['title']}': {relation}. "
+                           f"Shared distinctive terms ({'full article' if article_text else 'excerpt'}): "
+                           f"{', '.join(terms) or 'none'}. Scores: {scores}.")
+        return
+    problems = []
+    if best["rerank_logit"] <= tau:
+        problems.append(f"low top rerank logit {best['rerank_logit']:.2f} <= tau {tau}")
+    if margin is not None and margin < 1.0:
+        problems.append(f"flat margin {margin:.2f} between '{best['title']}' and '{ranked[1]['title']}'")
+    top3 = ranked[:3]
+    if head and all(title_relation(head, h["title"]) == "none" for h in top3):
+        problems.append("top candidates have unrelated titles: " + "; ".join(h["title"] for h in top3))
+    elif not head:
+        problems.append("no headword to check titles against; top candidates: " + "; ".join(h["title"] for h in top3))
+    decision["why"] = "Rejected: " + "; ".join(problems) + f". Best candidate scores: {scores}."
 
 
 def fetch_article(wiki: WikiClient, page_id: str, expected_sha: str | None) -> dict[str, Any]:
@@ -270,6 +338,9 @@ def run_match(settings: Settings, work_dir: Path, cap: int | None = CAP_PER_PAGE
                 except (ServiceError, ValueError) as exc:
                     article_errors.append({"entry_id": entry["entry_id"], "page_id": decision["wiki_page_id"], "error": str(exc)})
                     decision["reason"] += f"; article fetch failed: {exc}"
+            article_path = art_dir / f"{decision['wiki_page_id']}.json"
+            article_text = json.loads(article_path.read_text())["text"] if decision["status"] == "matched" and article_path.is_file() else None
+            explain(decision, json.loads(path.read_text()), entry, tfidf, article_text, tau)
             decisions.append(decision)
     with (mdir / "matches.jsonl").open("w") as f:
         for d in decisions:

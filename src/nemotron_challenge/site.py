@@ -17,6 +17,7 @@ import time
 from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markupsafe import Markup
 
 from .latex import latest_status, resolve_scan
 
@@ -149,9 +150,10 @@ def group_counts(rows: list[dict[str, Any]]) -> list[tuple[str, int]]:
 def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
     site_dir = site_dir or work_dir.parent / "site"
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html"]))
-    env.filters["tojson_safe"] = lambda value: json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
+    # JSON for <script type="application/json">: "<" is escaped as \u003c so no tag can close the script early.
+    env.filters["tojson_safe"] = lambda value: Markup(json.dumps(value, ensure_ascii=False).replace("<", "\\u003c"))
     site_dir.mkdir(parents=True, exist_ok=True)
-    for asset in ("style.css", "app.js"):
+    for asset in ("style.css", "app.js", "explore.js"):
         shutil.copy2(TEMPLATES / asset, site_dir / asset)
 
     records = sorted((json.loads(p.read_text()) for p in (work_dir / "extract" / "pages").glob("*.json")),
@@ -193,7 +195,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         blocks = [{**b, "color": CLASS_COLORS.get(b["cls"], "#4a5568")}
                   for b in sorted(record["blocks"], key=lambda b: b["order"])]
         html = env.get_template("page.html").render(
-            page=info, blocks=blocks, plate=plate, entries=entries, drift=page_drift(entries), page_match=page_match, inputs=inputs, nav=neighbours, built=built,
+            page=info, blocks=blocks, plate=plate, entries=entries, drift=page_drift(entries + [{"pair": load_pair(work_dir, f"P:{row}")}]), page_match=page_match, inputs=inputs, nav=neighbours, built=built,
             colors={c: CLASS_COLORS.get(c, "#4a5568") for c in info["classes"]},
             aspect=record["height"] / record["width"] if record.get("width") else 1.4)
         (site_dir / "pages").mkdir(exist_ok=True)
@@ -211,7 +213,45 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         rows=rows, totals=totals, inputs=inputs, built=built))
     analysis = build_analysis(env, work_dir, site_dir, built, inputs, rows, totals)
     (site_dir / "how.html").write_text(env.get_template("how.html").render(built=built))
-    return {"site_dir": str(site_dir), **totals, "missing_scans": missing_scans, "analysis": analysis}
+    explore = build_explore(env, work_dir, site_dir, built)
+    return {"site_dir": str(site_dir), **totals, "missing_scans": missing_scans, "analysis": analysis,
+            "explore": explore}
+
+
+def revision_url(revision_id: Any) -> str | None:
+    return f"https://en.wikipedia.org/w/index.php?oldid={revision_id}" if revision_id else None
+
+
+def explore_rows(work_dir: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """All checked claims and all term pairs from compare/pairs, with links back to both sources."""
+    claims, terms = [], []
+    pair_dir = work_dir / "compare" / "pairs"
+    for path in sorted(pair_dir.glob("*.json")) if pair_dir.is_dir() else []:
+        pair = _read_json(path)
+        if not pair or pair.get("claims") is None:
+            continue
+        base = {"b": pair.get("cite_britannica"), "w": pair.get("cite_wikipedia"), "row": pair.get("row_index"),
+                "head": pair.get("headword") if isinstance(pair.get("headword"), str) else None,
+                "title": pair.get("wiki_title"), "rev": revision_url(pair.get("wiki_revision_id"))}
+        for claim in pair["claims"]:
+            if claim.get("tag") in DRIFT_TAGS:
+                claims.append({**base, "tag": claim["tag"], "claim": claim.get("claim"),
+                               "qb": claim.get("quote_britannica"), "qw": claim.get("quote_wikipedia")})
+        lexical = ((pair.get("drift") or {}).get("lexical") or {})
+        ocr = {(t.get("old"), t.get("new")) for t in lexical.get("likely_ocr_or_spelling") or []}
+        for term in pair.get("term_pairs") or []:
+            terms.append({**base, "old": term.get("old"), "new": term.get("new"),
+                          "qb": term.get("quote_britannica"), "qw": term.get("quote_wikipedia"),
+                          "ocr": (term.get("old"), term.get("new")) in ocr})
+    return claims, terms
+
+
+def build_explore(env: Environment, work_dir: Path, site_dir: Path, built: str) -> dict[str, Any]:
+    claims, terms = explore_rows(work_dir)
+    counts = {tag: sum(c["tag"] == tag for c in claims) for tag in DRIFT_TAGS}
+    (site_dir / "explore.html").write_text(env.get_template("explore.html").render(
+        claims=claims, terms=terms, counts=counts, tags=DRIFT_TAGS, built=built))
+    return {"claims": len(claims), "term_pairs": len(terms), "ocr_like_terms": sum(t["ocr"] for t in terms)}
 
 
 def load_plate(work_dir: Path, site_dir: Path, row: int) -> dict[str, Any] | None:

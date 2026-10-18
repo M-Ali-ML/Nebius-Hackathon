@@ -114,3 +114,16 @@ td.pm { font-size: 13px; max-width: 220px; }
 .pipeline li.model { border-left-color: #76b900; }
 .pipeline li + li::before { content: "↓"; display: block; margin: -8px 0 4px -2px; color: var(--muted); }
 .pipeline .mid { font: 12px ui-monospace, monospace; color: var(--muted); }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 12px 0 10px; }
+.tab { border: 1px solid var(--line); border-bottom: none; background: #f1f3f5; padding: 6px 14px; border-radius: 6px 6px 0 0; cursor: pointer; font: inherit; }
+.tab.active { background: #fff; font-weight: 600; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 8px; font-size: 13px; }
+.typefilter { display: flex; gap: 10px; flex-wrap: wrap; }
+table.explore td { vertical-align: top; font-size: 13px; }
+table.explore .claimtext { max-width: 280px; }
+.qcell { max-width: 360px; }
+.qt { font-family: Georgia, serif; margin-top: 2px; }
+table.explore td:nth-child(3) .qt { background: var(--src); padding: 2px 5px; border-radius: 3px; }
+table.explore tr.ocr td { color: #9aa0a6; }
+table.explore tr.ocr .badge { margin-left: 6px; }
+table.explore .new { font-weight: 600; }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LaTeX PDF</title>
+<!-- Hugging Face embeds Spaces in a sandboxed iframe, where Chrome blocks its PDF viewer.
+     This page draws the PDF with PDF.js instead. Added by scripts/publish_hf.py. -->
+<style>
+  :root { --muted: #f4f4f5; --fg: #64748b; }
+  html, body { margin: 0; background: var(--muted); font: 13px/1.4 system-ui, sans-serif; color: var(--fg); }
+  #pages { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 12px; }
+  canvas { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.15); max-width: 100%; height: auto; }
+  #msg { padding: 24px; text-align: center; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div id="msg">Loading PDF...</div>
+<div id="pages"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(async () => {
+  const msg = document.getElementById("msg");
+  const file = new URLSearchParams(location.search).get("f") || "";
+  if (!/^pdf\/[\w.-]+\.pdf$/.test(file)) { msg.textContent = "No PDF given."; return; }
+  try {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    const doc = await pdfjsLib.getDocument(file).promise;
+    const box = document.getElementById("pages");
+    const width = Math.min(document.documentElement.clientWidth - 24, 1000);
+    const dpr = window.devicePixelRatio || 1;
+    for (let n = 1; n <= doc.numPages; n++) {
+      const page = await doc.getPage(n);
+      const vp = page.getViewport({ scale: width / page.getViewport({ scale: 1 }).width });
+      const c = document.createElement("canvas");
+      c.width = vp.width * dpr; c.height = vp.height * dpr;
+      c.style.width = vp.width + "px";
+      box.appendChild(c);
+      await page.render({ canvasContext: c.getContext("2d"), viewport: vp, transform: [dpr, 0, 0, dpr, 0, 0] }).promise;
+    }
+    msg.remove();
+  } catch (e) {
+    msg.innerHTML = 'Could not draw the PDF. <a href="' + file + '" target="_blank" rel="noopener">Open it in a new tab</a>.';
+  }
+})();
+</script>
+</body>
+</html>

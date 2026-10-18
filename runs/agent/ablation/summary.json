@@ -1,5 +1,5 @@
 {
- "time": "2026-10-18T14:24:18",
+ "time": "2026-10-18T14:34:23",
  "by_mode": {
   "bm25_only": {
    "runs": 7,
@@ -38,6 +38,19 @@
    "expected_britannica_cited": "6/6",
    "expected_wikipedia_cited": "6/6",
    "citations": 15,
+   "unresolved_citations": 0
+  },
+  "hybrid": {
+   "runs": 7,
+   "ok": 7,
+   "mean_tool_calls": 2.7,
+   "mean_tokens": 40834.3,
+   "mean_seconds": 22.5,
+   "answered": 6,
+   "no_evidence": 1,
+   "expected_britannica_cited": "6/6",
+   "expected_wikipedia_cited": "6/6",
+   "citations": 18,
    "unresolved_citations": 0
   }
  },
@@ -463,6 +476,137 @@
    "expected_b_cited": null,
    "expected_w_cited": null,
    "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "What did the Britannica say about lightning, and how does Wikipedia explain lightning today?",
+   "path": "runs/agent/ablation/hybrid/20261018-143142-what-did-the-britannica-say-about-lightn.json",
+   "status": "ok",
+   "tool_calls": 2,
+   "calls": [
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 34150,
+   "seconds": 19.7,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "How does the Britannica explain why a magnet attracts iron, compared with Wikipedia?",
+   "path": "runs/agent/ablation/hybrid/20261018-143202-how-does-the-britannica-explain-why-a-ma.json",
+   "status": "ok",
+   "tool_calls": 4,
+   "calls": [
+    "search_sources",
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 75701,
+   "seconds": 31.4,
+   "no_evidence": false,
+   "citations": 4,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "Which Britannica claims about coining money in a mint still hold today according to Wikipedia?",
+   "path": "runs/agent/ablation/hybrid/20261018-143234-which-britannica-claims-about-coining-mo.json",
+   "status": "ok",
+   "tool_calls": 2,
+   "calls": [
+    "search_sources",
+    "get_pair"
+   ],
+   "tokens": 36600,
+   "seconds": 16.7,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "Compare the Britannica and Wikipedia accounts of the Huguenots. Cite both sides.",
+   "path": "runs/agent/ablation/hybrid/20261018-143251-compare-the-britannica-and-wikipedia-acc.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 35741,
+   "seconds": 20.5,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "How did the Britannica describe the city of Erfurt, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/hybrid/20261018-143312-how-did-the-britannica-describe-the-city.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 37141,
+   "seconds": 21.4,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "What did the Britannica say about inflammable air (firedamp) in coal mines, and what does Wikipedia say?",
+   "path": "runs/agent/ablation/hybrid/20261018-143333-what-did-the-britannica-say-about-inflam.json",
+   "status": "ok",
+   "tool_calls": 3,
+   "calls": [
+    "search_sources",
+    "get_pair",
+    "view_scan"
+   ],
+   "tokens": 46953,
+   "seconds": 33.5,
+   "no_evidence": false,
+   "citations": 2,
+   "expected_b_cited": true,
+   "expected_w_cited": true,
+   "unresolved_citations": []
+  },
+  {
+   "mode": "hybrid",
+   "question": "What does the Britannica say about the planet Neptune?",
+   "path": "runs/agent/ablation/hybrid/20261018-143407-what-does-the-britannica-say-about-the-p.json",
+   "status": "ok",
+   "tool_calls": 2,
+   "calls": [
+    "search_sources",
+    "search_sources"
+   ],
+   "tokens": 19554,
+   "seconds": 14.4,
+   "no_evidence": true,
+   "citations": 4,
+   "expected_b_cited": null,
+   "expected_w_cited": null,
+   "unresolved_citations": []
   }
  ],
  "metrics": {
@@ -476,14 +620,17 @@
    "bm25_only": "answered both sides: Wikipedia BM25 returned Firedamp at rank 1; 3 quoted fragments are verbatim in the article",
    "embed_only": "partial: cited [W:505455:1345728236] from get_pair but said it could not retrieve a quotable Wikipedia passage",
    "full": "partial: same as embed_only; declined to quote Wikipedia from memory",
-   "cause": "LanceDB wiki_chunks holds only matched articles; B:1214:0 -> Firedamp is below tau, so Firedamp is not indexed"
+   "cause": "LanceDB wiki_chunks holds only matched articles; B:1214:0 -> Firedamp is below tau, so Firedamp is not indexed",
+   "hybrid": "answered both sides: search_sources returned Firedamp as a bm25-source hit; 2 quoted fragments are verbatim in the article"
   },
-  "neptune": "all three modes: no evidence in Britannica (correct)",
+  "neptune": "all four modes: no evidence in Britannica (correct)",
   "other_5_questions": "all modes cited the expected B entry and W page; the Wikipedia side came from get_pair (saved pair), so retrieval mode did not change it",
   "grounded_both_sides": {
    "bm25_only": "6/6",
    "embed_only": "5/6",
-   "full": "5/6"
-  }
+   "full": "5/6",
+   "hybrid": "6/6"
+  },
+  "note_hybrid": "hybrid ran after the skill gained one line about bm25-source hits and side_confidence; other modes ran with the earlier skill"
  }
 }

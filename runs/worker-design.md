@@ -50,3 +50,8 @@ Branch `M-Ali-ML/mvp-design`. Scope: the visual design of the static site (`src/
 - Fonts: Source Sans 3 (UI, headings, brand) and IBM Plex Mono (IDs, scores, citations), as on huggingface.co. Newsreader stays for Britannica source text only.
 - Tailwind gray neutrals, green status pills, 8px radius, white-to-gray gradient buttons, underline nav tabs, sentence-case labels.
 - Screenshots: runs/design/hf-*.png.
+
+## HF look, final
+
+- Merged main (2951418). HF cards (12px, gray-50 to white gradient), HF tag pills, yellow/orange accent only on the brand mark and the primary button.
+- Real site rebuilt; links 0 broken; pytest passed. Screenshots: runs/design/hf-*.png. Branch head a82935a.

@@ -249,3 +249,22 @@ def test_contact_sheet_joins_pages():
         imgs.append(buf.getvalue())
     sheet = Image.open(_io.BytesIO(agent_tools.contact_sheet(imgs, ["[R:1] -1", "[R:3] +1"], height=100)))
     assert sheet.height == 140 and sheet.width == 75 + 10 + 75
+
+
+def test_view_neighbors_falls_back_to_bundled_plates(work, monkeypatch):
+    from nemotron_challenge import neighbors
+
+    out = work / "plates" / "neighbors" / "7"
+    out.mkdir(parents=True)
+    Image.new("RGB", (60, 80), "white").save(out / "8.jpg")
+    (out / "8.blocks.json").write_text(json.dumps([{"order": 0, "cls": "Text", "bbox": [0, 0, 1, 1], "text": "plate text"}]))
+    (work / "plates" / "7.json").write_text(json.dumps({"neighbors": [
+        {"row_index": 8, "offset": 1, "volume_id": "v", "image_sha256": "s", "page_id": "p8"},
+        {"row_index": 9, "offset": 2, "volume_id": "v", "image_sha256": "t", "page_id": "p9"}]}))
+
+    def no_parquet(*a, **k):
+        raise FileNotFoundError("no parquet")
+
+    monkeypatch.setattr(neighbors, "get_neighbors", no_parquet)
+    meta, images = agent_tools.view_neighbors("7", 1, 1, work_dir=work, cache_dir=work)
+    assert [n["cite"] for n in meta["neighbors"]] == ["[R:8]"] and len(images) == 1

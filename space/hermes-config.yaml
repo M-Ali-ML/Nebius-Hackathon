@@ -1,0 +1,19 @@
+# Hermes profile for the Space. Hermes talks to the local proxy in app.py, never to Token Factory directly.
+# INTERNAL_PROXY_KEY is a random per-process token, not the Token Factory key.
+providers:
+  tokenfactory-super:
+    api: http://127.0.0.1:7861/v1
+    key_env: INTERNAL_PROXY_KEY
+    transport: chat_completions
+    default_model: nvidia/Nemotron-3.5-Super-VL
+
+model:
+  provider: custom:tokenfactory-super
+  default: nvidia/Nemotron-3.5-Super-VL
+  supports_vision: true
+
+model_overrides:
+  "custom:tokenfactory-super":
+    "nvidia/Nemotron-3.5-Super-VL":
+      supports_tools: true
+      supports_vision: true

@@ -20,11 +20,16 @@
   <section class="pane source" aria-label="Source: scan and Parse blocks">
     <div class="pane-head">
       <span class="pane-title">Source · scan and Parse blocks</span>
-      <div class="chips" id="toggles">
+      <div class="chips end" id="toggles">
         <button type="button" class="chip" id="toggle-all" aria-pressed="true">Boxes</button>
-        {% for cls, color in colors.items() %}
-        <button type="button" class="chip cls-toggle" data-cls="{{ cls }}" aria-pressed="true" style="--c: {{ color }}"><span class="sw"></span>{{ cls }}</button>
-        {% endfor %}
+        <details class="popover">
+          <summary class="chip">Layers <span class="count">{{ colors|length }}</span></summary>
+          <div class="popover-body chips" role="group" aria-label="Block classes">
+            {% for cls, color in colors.items() %}
+            <button type="button" class="chip cls-toggle" data-cls="{{ cls }}" aria-pressed="true" style="--c: {{ color }}"><span class="sw"></span>{{ cls }}</button>
+            {% endfor %}
+          </div>
+        </details>
       </div>
     </div>
     <div class="pane-body">
@@ -45,11 +50,14 @@
           {% for b in blocks %}<li data-order="{{ b.order }}"><span class="ord">{{ b.order }}</span><div><span class="cls" style="color:{{ b.color }}">{{ b.cls }}</span>{{ b.text }}</div></li>{% endfor %}
         </ol>
       </details>
-      <dl class="prov">
-        <dt>page_id</dt><dd>{{ page.page_id }}</dd>
-        <dt>sha256</dt><dd>{{ page.image_sha256 }}</dd>
-        <dt>Parse</dt><dd>{{ page.parse_model }} · finish {{ page.finish_reason }}</dd>
-      </dl>
+      <details class="blocktext">
+        <summary>Provenance <span class="muted">page_id, checksum, Parse model</span></summary>
+        <dl class="prov">
+          <dt>page_id</dt><dd>{{ page.page_id }}</dd>
+          <dt>sha256</dt><dd>{{ page.image_sha256 }}</dd>
+          <dt>Parse</dt><dd>{{ page.parse_model }} · finish {{ page.finish_reason }}</dd>
+        </dl>
+      </details>
     </div>
   </section>
 
@@ -74,7 +82,7 @@
   </section>
 
   <aside class="pane inspector" aria-label="Generated: matches and comparison">
-    <div class="pane-head"><span class="pane-title">Inspector · generated</span><span class="end"><span class="meta">{{ page.n_entries }} entries</span></span></div>
+    <div class="pane-head"><span class="pane-title">Inspector · generated</span><span class="end"><button type="button" class="btn sm" id="expand-all" aria-pressed="false">Expand all</button></span></div>
     {% if page_match %}{% include "page_match.html" %}{% endif %}
     {% if plate %}{% include "plate.html" %}{% endif %}
     {% if drift %}{% include "drift.html" %}{% endif %}
@@ -90,33 +98,30 @@
         {% for e in entries %}
           {% set m = e.match %}
           <li class="entry {{ m.status if m else 'pending' }}" data-orders="{{ e.block_orders|join(',') }}">
-            <div class="ehead">
-              <span class="meta">{{ e.entry_id }}</span>
-              <b>{{ e.headword or "(continuation)" }}</b>
-            </div>
-            <p class="snippet" title="Parse text">{{ (e.text_raw or "")[:220] }}{% if (e.text_raw or "")|length > 220 %}…{% endif %}</p>
-            {% if m %}
-              {% if m.status == "matched" %}
-                <div class="match">
-                  <span class="pill matched">matched</span>
-                  <a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>
-                  <span class="cite">rev {{ m.wiki_revision_id }}</span>
-                </div>
-              {% elif m.status == "no_clear_counterpart" %}
-                <div class="match">
-                  <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>
-                  {{ cause(e.uncertainty) }}
-                </div>
-                {% if m.wiki_title %}<div class="topic">Best candidate: {% if m.wiki_url %}<a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>{% else %}{{ m.wiki_title }}{% endif %}</div>{% endif %}
-              {% else %}
-                <div class="match"><span class="pill bad">{{ m.status }}</span> <span class="small">{{ m.reason }}</span></div>
-              {% endif %}
-              {{ scores(m) }}
-              {% if m.reason and m.status != "error" %}<div class="reason">{{ m.reason }}</div>{% endif %}
-            {% else %}
-              <div class="match"><span class="pill">not processed</span></div>
-            {% endif %}
-            {% if e.has_pair %}<div class="saved">comparison saved: compare/pairs/{{ e.entry_id }}.json</div>{% endif %}
+            <details>
+              <summary class="erow">
+                <span class="ehead"><b>{{ e.headword or "(continuation)" }}</b><span class="meta">{{ e.entry_id }}</span></span>
+                <span class="match">
+                {% if not m %}<span class="pill">not processed</span>
+                {% elif m.status == "matched" %}<span class="pill matched">matched</span><a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>
+                {% elif m.status == "no_clear_counterpart" %}<span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>{% if e.uncertainty %}<span class="pill cause" title="{{ e.uncertainty.note or e.uncertainty.cause }}">{{ e.uncertainty.label }}</span>{% endif %}
+                {% else %}<span class="pill bad">{{ m.status }}</span>{% endif %}
+                </span>
+              </summary>
+              <div class="edetail">
+                <p class="snippet" title="Parse text">{{ (e.text_raw or "")[:220] }}{% if (e.text_raw or "")|length > 220 %}…{% endif %}</p>
+                {% if m %}
+                  {% if m.status == "matched" %}<div class="subline"><span class="cite">rev {{ m.wiki_revision_id }}</span></div>
+                  {% elif m.status == "no_clear_counterpart" %}
+                    {% if e.uncertainty and e.uncertainty.note %}<p class="cause-note">{{ e.uncertainty.note }}{% if e.uncertainty.right_article %} (likely article: {{ e.uncertainty.right_article }}){% endif %}</p>{% endif %}
+                    {% if m.wiki_title %}<div class="topic">Best candidate: {% if m.wiki_url %}<a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>{% else %}{{ m.wiki_title }}{% endif %}</div>{% endif %}
+                  {% else %}<p class="reason">{{ m.reason }}</p>{% endif %}
+                  {{ scores(m) }}
+                  {% if m.reason and m.status != "error" %}<div class="reason">{{ m.reason }}</div>{% endif %}
+                {% endif %}
+                {% if e.has_pair %}<div class="saved">comparison saved: compare/pairs/{{ e.entry_id }}.json</div>{% endif %}
+              </div>
+            </details>
           </li>
         {% endfor %}
         </ul>

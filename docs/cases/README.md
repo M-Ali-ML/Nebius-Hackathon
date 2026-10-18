@@ -80,3 +80,21 @@ What it shows:
 - Caveat: hybrid ran after the skill gained one line about `bm25` hits and per-side confidence. Part of the drop in tool calls may come from that line, not from retrieval alone.
 
 Limits: 7 questions, one run each. The questions name their topics, which favors keyword search. Hermes `stream-json` cuts tool output in transcripts at 5,000 chars; the runner now also saves full tool results in `tool_log` (runs after commit e322c45 plus this fix).
+
+## Feature: view_neighbors (multi-page vision)
+
+`view_neighbors(page, before=1, after=1)` returns the scans next to a page in the same volume as images, with their Parse text and running heads. It reuses `neighbors.py` (cached Parse blocks in `artifacts/plates/neighbors/`, live Parse for the rest, raw replies kept). Neighbor pages are cited as `[R:<row>]`.
+
+| Run | Question | Tools | Tokens | Result |
+| --- | --- | --- | --- | --- |
+| `runs/agent/20261018-143501-what-does-plate-b-2077-show-and-where-in.json` | Plate B:2077 | search x3, view_scan, view_neighbors | 63,089 | Success. Row 2077 is a blank leaf; the agent linked it to the MICROSCOPE Plate CCC on [R:2078] and described the figures from that image. |
+| `runs/agent/20261018-143544-britannica-page-651-is-a-plate-what-does.json` | Plate 651 (first run) | view_neighbors x2, view_scan, search x9, find_drift, get_pair | 172,839 | Failure. It asked for `before=1` (R:650, GREECE) and `after=2` (none: 651 is the last scan of its volume), never `before=2`. It named HELMINTHOLOGY from the running head but could not find the page. |
+| `runs/agent/20261018-143919-britannica-page-651-is-a-plate-what-does.json` | Plate 651 (rerun) | view_neighbors x2, view_scan | 46,219 | Repaired after one skill line ("if no neighbor at distance 1 matches, try before 2, after 2"). Found [R:649] "HELMINTHOLOGY. Chap. II." One error: it read the plate number as CCCLI; the header says CCLI. |
+| `runs/agent/20261018-143807-britannica-entry-b-13-0-is-a-continuatio.json` | Continuation B:13:0 (SHIP-BUILDING) | get_pair, view_neighbors | 24,863 | Correct negative. Neighbors are a plate [R:12] and SURGERY [R:14]; the agent said they do not show where the article starts and did not guess. |
+| `runs/agent/20261018-143836-what-does-britannica-entry-b-452-0-say-a.json` | Blank cover B:452:0 (rerun of failure-3) | get_pair, view_scan, view_neighbors | 40,065 | Repaired after skill rule 6 ("if content looks impossible, view the scan"). The agent saw the blank page, said the stored text matches nothing on it, and confirmed the context with [R:451] and [R:453]. failure-3 stays as the first run. |
+
+What it shows:
+- Neighbors help most for plates. The plate and its text are often 1 to 2 scans apart.
+- For continuation entries the neighbors rarely help. The dataset has about 13 scans per volume, so the scan before a page is usually not the printed page before it (B:13:0, B:756:0, B:1910:0 all had unrelated neighbors when we checked).
+- Search strategy matters as much as the tool: the same tool cost 173k tokens without the widening rule and 46k with it.
+- Inference: we did not check that row 649 explains each figure of plate 651. It is the HELMINTHOLOGY chapter of the same volume.

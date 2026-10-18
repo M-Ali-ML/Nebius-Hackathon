@@ -1,6 +1,6 @@
 # Retrieval ablation: BM25, embedder, reranker
 
-This page shows what each retrieval step adds when we match Britannica entries (1771 to 1797 scans) to Wikipedia articles.
+This page shows what each retrieval step adds when we match Britannica entries (scans from the 1768 to 1860 editions) to Wikipedia articles.
 All numbers come from saved candidates. The evaluation makes no new model calls.
 
 ## Method

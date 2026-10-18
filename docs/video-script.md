@@ -58,3 +58,50 @@ Say: "Parse, Embed VL, Rerank VL, and Super VL. Explore the live archive, the 10
 **2:20** Hermes has five tools. Hybrid search, LanceDB plus live BM25, used 39 percent fewer tokens than embed-and-rerank search, on seven questions. Three failures stand out. Page 452 is a blank cover. Parse invented text for it, and that text passed match and compare, until a later view_scan saw the blank page. A corpus question stopped after 35 calls and invented nothing. find_drift answered it with 86 percent fewer tokens. Two of the three examples hold. Plate 651 offered only the word "Fig", so it matched a restaurant.
 
 **2:50** Parse, Embed VL, Rerank VL, and Super VL. Explore the live archive, the 10-config dataset, and the six case studies.
+
+---
+
+## Simple version
+
+Read this a few times. Then say it in your own words. One idea per line.
+
+**0:00** Old Britannica calls lightning "electric fire."
+Wikipedia measures it in gigajoules.
+We read 100 scans with four Nemotron models.
+The question: did the words change, or did the knowledge change?
+
+**0:15** Parse reads every scan.
+We turn each page into a PDF.
+Search finds Wikipedia candidates.
+The embedder narrows them.
+The reranker picks the best.
+Accuracy goes 0.30, then 0.56, then 0.70.
+That is only when the right article is already in the list.
+
+**0:40** One map. Old pages, pictures, and Wikipedia.
+Most scans sit next to their own text.
+Most matches sit next to the right Wikipedia article.
+Plate 270 is a picture of hydrostatics.
+The keyword picks the wrong article.
+The picture picks the right one.
+HUGHILY is a bad reading of a town name, so it sits alone.
+
+**1:20** Each claim is still true, renamed, replaced, or gone.
+The quote has to be real words from the source.
+Most "changes" we checked on the scan were just OCR.
+"Sixteenth" was read as "fitteenth."
+
+**1:45** Three agents debate.
+A scholar from 1790. A Wikipedian. A judge.
+The scholar looks at the scan.
+OCR says "firele." The scan says "returning stroke."
+He gives up the modern energy numbers. He keeps that idea.
+Green means the quote is in the source. Red means it is not.
+
+**2:20** The agent has five tools.
+A blank page got made-up text, until we looked at the scan.
+A big question failed after 35 tries and made nothing up.
+A new tool answered it with far fewer tokens. Two of three examples hold.
+A worm plate matched a restaurant, because the only word was "Fig."
+
+**2:50** Four models. One archive. It is on Hugging Face.

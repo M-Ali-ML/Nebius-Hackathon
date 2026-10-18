@@ -43,3 +43,37 @@ Changes from the first pick: firedamp was replaced by coinage. In the real-data 
 - 6 cases from 14 real-data runs. One run per question. No repeated runs to measure variance.
 - Classification is our judgment from the evidence in each file. We checked a sample of quotes by hand against the sources, not all.
 - Runs before 14:10 used tool code at `9a48f18` or `5fa2fd1`; later runs used `f324728`. The match stage changed during the day (tau -4.0 at run time).
+
+## Agent economics: retrieval ablation
+
+We ran the same 7 questions through Hermes with three `search_sources` modes, set by `NEMOTRON_RETRIEVAL_MODE`:
+
+- `bm25_only`: Wikipedia BM25 API over the full 7.18M-article corpus, plus a BM25 keyword match over Britannica entries. No embed, no rerank.
+- `embed_only`: query embedding and LanceDB cosine search over `entries` and `wiki_chunks` (matched articles only). No rerank.
+- `full`: embedding, LanceDB search, then the reranker (the default).
+
+The other tools (`get_pair`, `find_drift`, `view_scan`) are the same in every mode.
+Questions: lightning, magnetism, coinage, Huguenots, Erfurt, firedamp, Neptune (expected: no evidence).
+Transcripts: `runs/agent/ablation/<mode>/`. Numbers: `runs/agent/ablation/summary.json`.
+
+| Mode | Runs ok | Mean tool calls | Mean tokens | Mean latency | Answered / no evidence | Right B entry cited | Right W page cited | Citations | Unresolved citations | Both sides grounded (hand check) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| bm25_only | 7/7 | 3.7 | 60,524 | 29.2 s | 6 / 1 | 6/6 | 6/6 | 15 | 0 | 6/6 |
+| embed_only | 7/7 | 4.3 | 71,035 | 38.3 s | 6 / 1 | 6/6 | 6/6 | 19 | 0 | 5/6 |
+| full | 7/7 | 4.3 | 66,688 | 38.6 s | 6 / 1 | 6/6 | 6/6 | 15 | 0 | 5/6 |
+
+How we measured:
+- Tool calls count our tools only, not Hermes meta tools (`tool_search`, `tool_call`, `tool_describe`).
+- "No evidence" means the answer opens with a no-evidence statement. In all modes that was only Neptune, which is correct.
+- "Right B entry / W page cited" means the final answer cites the entry and page we know are correct for the question.
+- "Unresolved" means a cited id names no real entry, or no Wikipedia page at that revision. We checked it against `extract/entries.jsonl`, `match/articles/`, and the Wikipedia API.
+- Hand check: we read all 21 answers. For firedamp we matched quoted Wikipedia fragments against the Firedamp article text.
+
+What it shows:
+- For questions about entries that have a saved pair, retrieval mode changed little. The agent only needs search to find the Britannica entry; `get_pair` then supplies the Wikipedia side from the match stage. In this setup the match stage, not `search_sources`, decides answer quality.
+- bm25_only was the cheapest (about 10% fewer tokens than full, 9 s faster).
+- Firedamp separated the modes. B:1214:0 -> Firedamp is below tau, so Firedamp is not in `wiki_chunks`. bm25_only searched the full Wikipedia corpus, found Firedamp at rank 1, and quoted it (3 fragments verbatim). embed_only and full could only cite the id from `get_pair`, and both said they could not quote Wikipedia. They did not fill the gap from memory. The limit is the index coverage, not embed or rerank.
+- Retrieval quality itself is measured on the match side (`artifacts/match/ablation_summary.json`, 40 hand-labeled entries by the match worker): P@1 is 0.22 for BM25, 0.42 for BM25+embed, 0.53 for BM25+embed+rerank. Embed and rerank pay off when they pick the article; once a pair is saved, the agent does not need them again.
+- Inference: the best agent setup is hybrid. Use the vector index for Britannica search, and fall back to the Wikipedia BM25 API when the saved pairs have no counterpart.
+
+Limits: 7 questions, one run each. The questions name their topics, which favors keyword search. Hermes `stream-json` cuts tool output in transcripts at 5,000 chars; the runner now also saves full tool results in `tool_log` (runs after commit e322c45 plus this fix).

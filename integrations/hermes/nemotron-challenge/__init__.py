@@ -93,7 +93,26 @@ def _clean_env() -> dict[str, str]:
     return {k: v for k, v in os.environ.items() if k not in drop and not k.startswith("PYTHON")}
 
 
+def _log(tool: str, params: dict[str, Any], result: dict[str, Any]) -> None:
+    """Append the full tool result to NEMOTRON_TOOL_LOG. Hermes stream-json cuts tool output at 5,000 chars."""
+    path = os.environ.get("NEMOTRON_TOOL_LOG")
+    if not path:
+        return
+    slim = {k: v for k, v in result.items() if k != "image_data_url"}
+    try:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"tool": tool, "params": params, "result": slim}, ensure_ascii=False) + "\n")
+    except OSError:
+        pass
+
+
 def _call(tool: str, params: dict[str, Any]) -> dict[str, Any]:
+    result = _run(tool, params)
+    _log(tool, params, result)
+    return result
+
+
+def _run(tool: str, params: dict[str, Any]) -> dict[str, Any]:
     try:
         proc = subprocess.run(
             ["uv", "run", "--quiet", "python", "-m", "nemotron_challenge.agent_tools", tool, json.dumps(params)],

@@ -88,3 +88,12 @@ Candidate 6 cases (lead decides): successes lightning, firedamp, old-terms rerun
 - Compare reads `match/page_matches.jsonl`. New pair = matched page whose article no entry on that page already matches. 16 new pairs `compare/pairs/P_<row>.json` (one page match had no article file). Britannica side = page entries joined; each kept Britannica quote is cited with the entry id that holds it (299/299 attributed).
 - Totals now: 83 pairs, 476 checked claims (enduring 44.1%, renamed 4.8%, superseded 13.2%, dropped 37.8%), 1,567 quotes kept, 64 rejected. Wordfreq now uses 82 articles.
 - `get_pair` accepts `P:<row>`.
+
+### 3. Agent retrieval ablation (commits e322c45, 3528cd3)
+
+- `search_sources` reads `NEMOTRON_RETRIEVAL_MODE` = `full` (default) | `embed_only` | `bm25_only`. The runner sets it per run.
+- Rerun: `uv run python -c "from pathlib import Path; from nemotron_challenge.agent_runner import run_ablation; run_ablation(repo=Path('.').resolve())"`. Rescore without model calls: `rescore_ablation()`.
+- 21 runs (7 questions x 3 modes), all ok. Table in `docs/cases/README.md`, data in `runs/agent/ablation/summary.json`.
+- Result: modes tie on the right sources cited (6/6) and on unresolved citations (0). bm25_only is cheapest (60.5k tokens, 29 s vs 66.7k, 39 s for full). On firedamp only bm25_only grounded the Wikipedia side, because LanceDB `wiki_chunks` only holds matched articles. Inference: use a hybrid (vector index for Britannica, Wikipedia BM25 fallback).
+- Found and fixed: Hermes stream-json cuts tool output at 5,000 chars in transcripts. The plugin now writes full results to `NEMOTRON_TOOL_LOG`; the runner saves them as `tool_log` in each transcript (checked). Earlier transcripts have only the cut output.
+- Plugin reinstalled in data/hermes (4 tools). After merge, the plugin default `NEMOTRON_REPO` (main checkout) must contain this code.

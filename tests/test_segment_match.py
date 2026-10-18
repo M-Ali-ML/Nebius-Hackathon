@@ -115,3 +115,27 @@ def test_why_explains_match_and_rejection():
     d = decide(record, tau=5.0)
     explain(d, record, entry, tfidf, None, 5.0)
     assert d["why"].startswith("Rejected:") and "flat margin" in d["why"] and "unrelated titles" in d["why"]
+
+
+def test_short_query_and_guide_word():
+    from nemotron_challenge.match import SHORT_CHARS, _guide, short_query
+    q = short_query("Optics", "x" * 2000)
+    assert q.startswith("Optics. ") and len(q) == len("Optics. ") + SHORT_CHARS
+    assert short_query("FARM", "FARM, land") == "FARM, land"
+    assert _guide("LYR") == "LYR" and _guide("COII") == "COI" and _guide("LIBERTY OF THE PRESS") is None
+
+
+def test_guide_decide_needs_prefix_and_logit(tmp_path):
+    from nemotron_challenge.match import _guide_decide
+    (tmp_path / "pages").mkdir()
+    record = {"entry_id": "P:5", "hits": [hit("1", 1, None, -5.0), {**hit("2", 2, None, -6.0), "title": "Lyre"}]}
+    (tmp_path / "pages" / "5.json").write_text(json.dumps(record))
+    d = _guide_decide(tmp_path, 5, {"entry_id": "B:5:0"}, "LYR")
+    assert d["wiki_title"] == "Lyre" and d["rule"] == "guide_word" and d["rerank_margin"] == -1.0
+    assert _guide_decide(tmp_path, 5, {"entry_id": "B:5:0"}, "ZZZ") is None
+
+
+def test_work_titles_are_not_exact():
+    from nemotron_challenge.match import title_relation
+    assert title_relation("ABYSSINIA", "Abyssinia (1906 musical)") != "exact"
+    assert title_relation("ERGOT", "Ergot (horse anatomy)") == "exact"

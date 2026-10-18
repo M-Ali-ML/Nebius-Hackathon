@@ -26,9 +26,10 @@ def extract(settings: Settings, work_dir: Path) -> dict[str, Any]:
 def match(settings: Settings, work_dir: Path) -> dict[str, Any]:
     """BM25 -> embed -> rerank per entry, then index entries and matched articles in LanceDB."""
     from .index import build_index
-    from .match import run_match
+    from .match import run_match, run_page_match
 
     result = run_match(settings, work_dir)
+    result["pages"] = run_page_match(settings, work_dir)
     result["index"] = build_index(settings, work_dir)
     return result
 

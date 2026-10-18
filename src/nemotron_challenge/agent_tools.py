@@ -175,6 +175,34 @@ def get_pair(entry_id: str, work_dir: Path = ARTIFACTS, max_chars: int = 3000) -
     return out
 
 
+def find_drift(kind: str, k: int = 5, work_dir: Path = ARTIFACTS) -> dict[str, Any]:
+    """List checked comparison items of one kind across all pairs, with quotes and both citation ids."""
+    kinds = {"renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics"}
+    if kind not in kinds:
+        raise ValueError(f"kind must be one of {sorted(kinds)}")
+    k = max(1, min(int(k), 20))
+    items = []
+    for path in sorted((work_dir / "compare" / "pairs").glob("*.json")):
+        pair = json.loads(path.read_text())
+        if pair.get("status") != "ok":
+            continue
+        cites = {"entry_id": pair["entry_id"], "cite_britannica": pair["cite_britannica"],
+                 "cite_wikipedia": pair["cite_wikipedia"], "wiki_title": pair.get("wiki_title"),
+                 "rerank_margin": pair.get("rerank_margin")}
+        if kind == "term_pairs":
+            lexical = {(t["old"], t["new"]) for t in pair["drift"]["lexical"]["term_pairs"]}
+            found = [t for t in pair.get("term_pairs", []) if (t["old"], t["new"]) in lexical]
+        elif kind == "wiki_only_topics":
+            found = pair.get("wiki_only_topics", [])
+        else:
+            found = [c for c in pair.get("claims", []) if c.get("tag") == kind]
+        items += [{**cites, **item} for item in found]
+    # pairs with a confident match first
+    items.sort(key=lambda x: -(x.get("rerank_margin") or 0))
+    return {"kind": kind, "total": len(items), "items": items[:k],
+            "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."}
+
+
 def _page_record(page: str, work_dir: Path) -> dict[str, Any]:
     page = str(page).strip()
     m = re.search(r"(\d+)$", page.split(":")[1] if page.startswith("B:") else page)
@@ -216,6 +244,8 @@ def run_tool(name: str, args: dict[str, Any]) -> dict[str, Any]:
         return search_sources(args["query"], args.get("side", "both"), args.get("k", 5))
     if name == "get_pair":
         return get_pair(args["entry_id"])
+    if name == "find_drift":
+        return find_drift(args["kind"], args.get("k", 5))
     if name == "view_scan":
         import base64
 

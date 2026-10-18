@@ -137,3 +137,19 @@ def test_spelling_like_separates_ocr_from_new_terms():
     assert compare.spelling_like("prisoners of var", "prisoners of war")
     assert not compare.spelling_like("electric fire", "electric charge")
     assert not compare.spelling_like("fixed air", "carbon dioxide")
+
+
+def test_find_drift_lists_items_with_both_citations(work):
+    reply = {"model": "m", "usage": {}, "choices": [{"finish_reason": "stop", "message": {"content": json.dumps({
+        "term_pairs": [{"old": "fixed air", "new": "carbon dioxide", "quote_britannica": "Fixed air is found",
+                        "quote_wikipedia": "Carbon dioxide is a chemical"}]})}}]}
+
+    class FakeChat:
+        def complete(self, *args, **kwargs):
+            return reply
+
+    compare.compare_pair(FakeChat(), ENTRY, MATCH, ARTICLE, work)
+    out = agent_tools.find_drift("term_pairs", 5, work)
+    assert out["total"] == 1 and out["items"][0]["cite_wikipedia"] == "[W:123:456]"
+    with pytest.raises(ValueError):
+        agent_tools.find_drift("other", 5, work)

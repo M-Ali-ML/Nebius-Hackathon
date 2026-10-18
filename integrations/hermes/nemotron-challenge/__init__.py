@@ -50,6 +50,25 @@ PAIR_SCHEMA = {
     },
 }
 
+DRIFT_SCHEMA = {
+    "name": "find_drift",
+    "description": (
+        "List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and "
+        "citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), "
+        "enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. "
+        "Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "kind": {"type": "string", "enum": ["renamed", "superseded", "dropped", "enduring", "term_pairs", "wiki_only_topics"]},
+            "k": {"type": "integer", "minimum": 1, "maximum": 20, "default": 5},
+        },
+        "required": ["kind"],
+        "additionalProperties": False,
+    },
+}
+
 SCAN_SCHEMA = {
     "name": "view_scan",
     "description": (
@@ -98,6 +117,10 @@ def handle_pair(params: dict[str, Any], **kwargs: Any) -> str:
     return json.dumps(_call("get_pair", params), ensure_ascii=False)
 
 
+def handle_drift(params: dict[str, Any], **kwargs: Any) -> str:
+    return json.dumps(_call("find_drift", params), ensure_ascii=False)
+
+
 def handle_scan(params: dict[str, Any], **kwargs: Any) -> Any:
     result = _call("view_scan", params)
     if "error" in result:
@@ -116,5 +139,6 @@ def handle_scan(params: dict[str, Any], **kwargs: Any) -> Any:
 def register(ctx: Any) -> None:
     for name, schema, handler in (("search_sources", SEARCH_SCHEMA, handle_search),
                                   ("get_pair", PAIR_SCHEMA, handle_pair),
+                                  ("find_drift", DRIFT_SCHEMA, handle_drift),
                                   ("view_scan", SCAN_SCHEMA, handle_scan)):
         ctx.register_tool(name=name, toolset="nemotron_challenge", schema=schema, handler=handler)

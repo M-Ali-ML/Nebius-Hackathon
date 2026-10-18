@@ -1,8 +1,9 @@
 name: nemotron-challenge
-version: "0.2.0"
-description: Evidence tools for Britannica (1771-1797) vs Wikipedia comparison. search_sources, get_pair, view_scan.
+version: "0.3.0"
+description: Evidence tools for Britannica (1771-1797) vs Wikipedia comparison. search_sources, get_pair, find_drift, view_scan.
 provides_tools:
   - search_sources
   - get_pair
+  - find_drift
   - view_scan
 capabilities: []

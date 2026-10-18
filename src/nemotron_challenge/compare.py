@@ -130,7 +130,8 @@ def log_odds(a: Counter, b: Counter, alpha_scale: float = 0.01) -> dict[str, flo
 
 def wordfreq(work_dir: Path, top: int = 30) -> dict[str, Any]:
     entries = [e for e in _jsonl(work_dir / "extract" / "entries.jsonl") if e.get("text_norm", "").strip()]
-    matches = [m for m in _jsonl(work_dir / "match" / "matches.jsonl") if m.get("status") == "matched"]
+    matches = [m for name in ("matches.jsonl", "page_matches.jsonl")
+               for m in _jsonl(work_dir / "match" / name) if m.get("status") == "matched"]
     article_ids = sorted({m["wiki_page_id"] for m in matches})
     arts = []
     for pid in article_ids:
@@ -329,10 +330,17 @@ def compare_pair(chat: ChatClient, entry: dict[str, Any], match: dict[str, Any],
     (raw_dir / f"{safe_id(eid)}.json").write_text(json.dumps({"entry_id": eid, "prompt_version": PROMPT_VERSION,
                                                                "reply": reply}, ensure_ascii=False, indent=1))
     kept, rejected = check(data, btext, wtext)
+    if entry.get("parts"):  # page pair: cite the entry that holds each Britannica quote
+        for items in kept.values():
+            for item in items:
+                if isinstance(item.get("quote_britannica"), str):
+                    item["cite_britannica"] = cite_entry(item["quote_britannica"], entry["parts"])
     for r in rejected:
         log_failure(work_dir, {"entry_id": eid, "stage": "quote_check", **r})
     record = {
-        "entry_id": eid, "cite_britannica": f"[{eid}]", "page_id": entry["page_id"], "row_index": entry["row_index"],
+        "entry_id": eid, "level": "page" if entry.get("parts") else "entry",
+        "entry_ids": entry.get("entry_ids", [eid]), "page_kind": entry.get("page_kind"),
+        "cite_britannica": "".join(f"[{e}]" for e in entry.get("entry_ids", [eid])), "page_id": entry["page_id"], "row_index": entry["row_index"],
         "image_sha256": entry.get("image_sha256"), "headword": entry.get("headword"), "topic_hint": entry.get("topic_hint"),
         "wiki_page_id": match["wiki_page_id"], "wiki_revision_id": match["wiki_revision_id"], "wiki_title": match.get("wiki_title"),
         "wiki_url": match.get("wiki_url"), "text_sha256": article.get("text_sha256"),
@@ -363,8 +371,42 @@ def select_pairs(work_dir: Path, limit: int) -> list[tuple[dict, dict, dict]]:
     return out[:limit]
 
 
+def select_page_pairs(work_dir: Path) -> list[tuple[dict, dict, dict]]:
+    """Matched pages (match/page_matches.jsonl) whose article no entry on that page is already matched to.
+
+    The Britannica side is the page's entries joined in reading order, as one synthetic entry P:<row>.
+    """
+    entries = {e["entry_id"]: e for e in _jsonl(work_dir / "extract" / "entries.jsonl")}
+    seen: dict[int, set] = {}
+    for m in _jsonl(work_dir / "match" / "matches.jsonl"):
+        if m.get("status") == "matched" and m["entry_id"] in entries:
+            seen.setdefault(entries[m["entry_id"]]["row_index"], set()).add(m["wiki_page_id"])
+    out = []
+    for m in _jsonl(work_dir / "match" / "page_matches.jsonl"):
+        path = work_dir / "match" / "articles" / f"{m.get('wiki_page_id')}.json"
+        if m.get("status") != "matched" or m["wiki_page_id"] in seen.get(m["row_index"], set()) or not path.exists():
+            continue
+        parts = [entries[e] for e in m["entry_ids"] if e in entries and entries[e]["text_norm"].strip()]
+        if not parts:
+            continue
+        page = {"entry_id": m["entry_id"], "page_id": m["page_id"], "row_index": m["row_index"],
+                "image_sha256": parts[0].get("image_sha256"), "headword": None,
+                "topic_hint": m.get("page_topic") or parts[0].get("topic_hint") or parts[0].get("running_head"),
+                "page_kind": m.get("page_kind"), "entry_ids": [e["entry_id"] for e in parts],
+                "text_raw": "\n\n".join(e["text_raw"] for e in parts), "text_norm": "\n\n".join(e["text_norm"] for e in parts),
+                "norm_edits": sum(e.get("norm_edits", 0) for e in parts), "parts": parts}
+        out.append((page, m, json.loads(path.read_text())))
+    return out
+
+
+def cite_entry(quote: str, parts: list[dict[str, Any]]) -> str | None:
+    """Citation id of the entry on a page that contains the quote."""
+    q = norm(quote).strip(" .,;:\"'")
+    return next((f"[{e['entry_id']}]" for e in parts if q in norm(e["text_norm"])), None)
+
+
 def run_pairs(settings: Settings, work_dir: Path, limit: int = MAX_PAIRS, redo: bool = False) -> dict[str, Any]:
-    todo = select_pairs(work_dir, limit)
+    todo = select_pairs(work_dir, limit) + select_page_pairs(work_dir)
     pairs_dir = work_dir / "compare" / "pairs"
     if not redo:
         todo = [t for t in todo if not (pairs_dir / f"{safe_id(t[0]['entry_id'])}.json").exists()]

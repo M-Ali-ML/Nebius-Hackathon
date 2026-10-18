@@ -133,8 +133,29 @@ def _find_entry(entry_id: str, work_dir: Path) -> dict[str, Any] | None:
     return None
 
 
+def _get_page_pair(page_key: str, work_dir: Path, max_chars: int) -> dict[str, Any]:
+    match = next((m for m in _jsonl(work_dir / "match" / "page_matches.jsonl") if m["entry_id"] == page_key), None)
+    if match is None:
+        return {"entry_id": page_key, "error": "unknown page id; page ids look like P:<row>"}
+    out = {"entry_id": page_key, "level": "page", "page_kind": match.get("page_kind"), "entry_ids": match["entry_ids"],
+           "status": match["status"], "note": "page-level match: cite the entry ids [B:row:n], not the page id",
+           "match": {k: match.get(k) for k in ("wiki_page_id", "wiki_title", "wiki_revision_id", "wiki_url",
+                                               "rerank_logit", "rerank_margin", "method", "reason")}}
+    if match["status"] == "matched":
+        out["cite_wikipedia"] = wiki_cite(match["wiki_page_id"], match["wiki_revision_id"])
+        out["uncertain_match"] = match.get("rerank_margin") is not None and match["rerank_margin"] < LOW_MARGIN
+    pair_path = work_dir / "compare" / "pairs" / f"{page_key.replace(':', '_')}.json"
+    if pair_path.exists():
+        pair = json.loads(pair_path.read_text())
+        out["comparison"] = {k: pair.get(k) for k in ("similarities", "differences", "claims", "term_pairs", "wiki_only_topics")}
+        out["drift"] = pair.get("drift")
+    return out
+
+
 def get_pair(entry_id: str, work_dir: Path = ARTIFACTS, max_chars: int = 3000) -> dict[str, Any]:
     entry_id = entry_id.strip().strip("[]")
+    if entry_id.startswith("P:"):
+        return _get_page_pair(entry_id, work_dir, max_chars)
     entry = _find_entry(entry_id, work_dir)
     if entry is None:
         return {"entry_id": entry_id, "error": "unknown entry_id; ids look like B:<row>:<n>"}

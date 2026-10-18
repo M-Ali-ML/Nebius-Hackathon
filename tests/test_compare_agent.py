@@ -169,3 +169,16 @@ def test_evaluate_case_links(tmp_path):
     assert ok["ok"] and ok["runs"][0]["tool_calls"] == ["get_pair"]
     fail = evaluate.check_case(evaluate.parse_case(bad), [tmp_path])
     assert not fail["ok"] and len(fail["problems"]) == 2
+
+
+def test_page_pair_cites_the_entry_holding_the_quote(work):
+    second = {**ENTRY, "entry_id": "B:7:1", "text_raw": "BRASS, a yellow metal.", "text_norm": "BRASS, a yellow metal."}
+    (work / "extract" / "entries.jsonl").write_text(json.dumps(ENTRY) + "\n" + json.dumps(second) + "\n")
+    (work / "match" / "matches.jsonl").write_text("")
+    (work / "match" / "page_matches.jsonl").write_text(json.dumps(
+        {**MATCH, "entry_id": "P:7", "row_index": 7, "page_id": ENTRY["page_id"], "entry_ids": ["B:7:0", "B:7:1"],
+         "page_kind": "dictionary"}) + "\n")
+    pages = compare.select_page_pairs(work)
+    assert len(pages) == 1 and pages[0][0]["entry_ids"] == ["B:7:0", "B:7:1"]
+    assert compare.cite_entry("a yellow metal", pages[0][0]["parts"]) == "[B:7:1]"
+    assert agent_tools.get_pair("P:7", work)["cite_wikipedia"] == "[W:123:456]"

@@ -43,8 +43,8 @@ PAIR_SCHEMA = {
     ),
     "parameters": {
         "type": "object",
-        "properties": {"entry_id": {"type": "string", "pattern": "^\\[?B:\\d+:\\d+\\]?$",
-                                    "description": "Britannica entry id, e.g. B:115:0"}},
+        "properties": {"entry_id": {"type": "string", "pattern": "^\\[?(B:\\d+:\\d+|P:\\d+)\\]?$",
+                                    "description": "Britannica entry id, e.g. B:115:0, or a page-level pair P:<row>"}},
         "required": ["entry_id"],
         "additionalProperties": False,
     },

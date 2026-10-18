@@ -75,11 +75,11 @@ def join_lines(text: str) -> str:
 
 
 def inline(text: str, unknown: list[str]) -> str:
-    """Escape text and keep Parse markdown emphasis (**bold**, *italic*)."""
-    parts = re.split(r"(\*\*.+?\*\*|(?<!\*)\*[^*\n]+?\*(?!\*))", text)
+    """Escape text and keep Parse markdown emphasis (**bold**, __bold__, *italic*)."""
+    parts = re.split(r"(\*\*.+?\*\*|__.+?__|(?<!\*)\*[^*\n]+?\*(?!\*))", text)
     out = []
     for part in parts:
-        if part.startswith("**") and part.endswith("**") and len(part) > 4:
+        if part[:2] in ("**", "__") and part[-2:] == part[:2] and len(part) > 4:
             out.append(r"\textbf{" + escape(part[2:-2], unknown) + "}")
         elif part.startswith("*") and part.endswith("*") and len(part) > 2:
             out.append(r"\textit{" + escape(part[1:-1], unknown) + "}")
@@ -127,6 +127,26 @@ def _is_running_head(block: dict[str, Any]) -> bool:
     return block["cls"] in {"Text", "Section-header", "Caption"} and block["bbox"][3] < 0.07 and len(block["text"]) <= 12
 
 
+def _inside(inner: list[float], outer: list[float]) -> bool:
+    cx, cy = (inner[0] + inner[2]) / 2, (inner[1] + inner[3]) / 2
+    return outer[0] <= cx <= outer[2] and outer[1] <= cy <= outer[3]
+
+
+def captions_after_pictures(body: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Move captions that Parse reads before their picture (and that lie inside it) to after the picture."""
+    out: list[dict[str, Any]] = []
+    for block in body:
+        if block["cls"] == "Picture":
+            moved = []
+            while out and out[-1]["cls"] == "Caption" and _inside(out[-1]["bbox"], block["bbox"]):
+                moved.insert(0, out.pop())
+            out.append(block)
+            out.extend(moved)
+        else:
+            out.append(block)
+    return out
+
+
 def resolve_scan(record: dict[str, Any], work_dir: Path) -> Path:
     path = Path(record["scan_path"])
     if path.is_absolute():
@@ -172,7 +192,7 @@ def page_tex(record: dict[str, Any], work_dir: Path, scan_href: str | None = Non
     unknown: list[str] = []
     head = [b for b in blocks if _is_running_head(b)]
     foot = [b for b in blocks if b["cls"] in FOOT_CLASSES]
-    body = [b for b in blocks if b not in head and b not in foot]
+    body = captions_after_pictures([b for b in blocks if b not in head and b not in foot])
     multi = two_columns(body)
     scan = resolve_scan(record, work_dir)
     pictures = 0
@@ -200,7 +220,7 @@ def page_tex(record: dict[str, Any], work_dir: Path, scan_href: str | None = Non
         if cls != "List-item" and pending_list:
             out.append("\\end{itemize}\n")
             pending_list = False
-        if multi and wide and cls in {"Title", "Picture", "Table", "Section-header", "Text", "Caption"}:
+        if multi and (cls == "Title" or wide and cls in {"Picture", "Table", "Section-header", "Text", "Caption"}):
             close_cols()
         else:
             open_cols()

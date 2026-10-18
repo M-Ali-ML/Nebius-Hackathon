@@ -47,3 +47,15 @@ def test_page_tex_keeps_reading_order_and_provenance(tmp_path):
     assert "britannica:x:1" in tex and "abc" in tex
     assert (tmp_path / "latex" / "img" / "1-3.jpg").is_file()
     json.dumps(stats)
+
+
+def test_inline_keeps_markdown_emphasis():
+    from nemotron_challenge.latex import inline
+    assert inline("__535: Oil__ and **x** and *y*", []) == r"\textbf{535: Oil} and \textbf{x} and \textit{y}"
+
+
+def test_caption_inside_picture_moves_after_it():
+    from nemotron_challenge.latex import captions_after_pictures
+    cap = {"cls": "Caption", "bbox": [0.4, 0.1, 0.5, 0.12]}
+    pic = {"cls": "Picture", "bbox": [0.1, 0.05, 0.9, 0.3]}
+    assert captions_after_pictures([cap, pic]) == [pic, cap]

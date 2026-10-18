@@ -1,0 +1,571 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:261",
+ "row_index": 261,
+ "volume_id": "192015836",
+ "filename": "page-0261-881563669b04.jpg",
+ "image_sha256": "881563669b04b487e86fd839d3c3ed37df89ebbf558afc819085fdba215bff61",
+ "image_bytes": 131171,
+ "scan_path": "data/raw/britannica/page-0261-881563669b04.jpg",
+ "width": 600,
+ "height": 776,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 2065,
+  "completion_tokens": 1567,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Page-header",
+   "bbox": [
+    0.0547,
+    0.0523,
+    0.0947,
+    0.0672
+   ],
+   "text": "222"
+  },
+  {
+   "order": 1,
+   "cls": "Title",
+   "bbox": [
+    0.3643,
+    0.0359,
+    0.6631,
+    0.0633
+   ],
+   "text": "ENTOMOLOGY."
+  },
+  {
+   "order": 2,
+   "cls": "Caption",
+   "bbox": [
+    0.9062,
+    0.0352,
+    0.9863,
+    0.0602
+   ],
+   "text": "Aptera"
+  },
+  {
+   "order": 3,
+   "cls": "Text",
+   "bbox": [
+    0.1309,
+    0.0641,
+    0.5146,
+    0.1234
+   ],
+   "text": "a great height; to accomplish which, they climb up some eminence, and are walked about by the winds, filling the air with their threads. They are destroyed by the spikes and ichneumon."
+  },
+  {
+   "order": 4,
+   "cls": "Text",
+   "bbox": [
+    0.1338,
+    0.1172,
+    0.5156,
+    0.1508
+   ],
+   "text": "Linnaeus has subdivided this genus according to the number and position of their eyes:"
+  },
+  {
+   "order": 5,
+   "cls": "Section-header",
+   "bbox": [
+    0.2705,
+    0.1531,
+    0.376,
+    0.1719
+   ],
+   "text": "**A.** _Eyes eight._"
+  },
+  {
+   "order": 6,
+   "cls": "Section-header",
+   "bbox": [
+    0.2402,
+    0.175,
+    0.4121,
+    0.1922
+   ],
+   "text": "_1. Eyes placed thus_, :"
+  },
+  {
+   "order": 7,
+   "cls": "List-item",
+   "bbox": [
+    0.0586,
+    0.1953,
+    0.5176,
+    0.2367
+   ],
+   "text": "fasnata. Of a silver color; the abdomen marked with yel- lowish bandes; the legs surrounded with brown rings. 49. A native of the island of Malachi"
+  },
+  {
+   "order": 8,
+   "cls": "List-item",
+   "bbox": [
+    0.0605,
+    0.2352,
+    0.5195,
+    0.2797
+   ],
+   "text": "* diadema Abdomen nearly globale and reddish; brown, mark- ed with a white cross composed of dots. 1. A native of Europe, on trees; it is a very beautiful insect."
+  },
+  {
+   "order": 9,
+   "cls": "List-item",
+   "bbox": [
+    0.0615,
+    0.2742,
+    0.5234,
+    0.3609
+   ],
+   "text": "_aquatica_ Browny abbonen ovat and of an ash colour; the back brown, marked with two dots. 30. A native of Europe, in stagnant waters, where it direct to the bottom in search of the area. It takes up to winter quar-ters in an empty snail shell, the aperture of which it closes up with a web; jaws black, claws red."
+  },
+  {
+   "order": 10,
+   "cls": "Section-header",
+   "bbox": [
+    0.2441,
+    0.3641,
+    0.4297,
+    0.3695
+   ],
+   "text": "## 2. Eyes placed thus, :"
+  },
+  {
+   "order": 11,
+   "cls": "Text",
+   "bbox": [
+    0.0625,
+    0.3836,
+    0.0859,
+    0.3828
+   ],
+   "text": "_latro._"
+  },
+  {
+   "order": 12,
+   "cls": "List-item",
+   "bbox": [
+    0.1348,
+    0.382,
+    0.5205,
+    0.4367
+   ],
+   "text": "Thorax hairy, and of an ash colour; the abdomen oval, black, and spotted with red. 95. A native of America; large, the thorax oval, legs black, thighs pale."
+  },
+  {
+   "order": 13,
+   "cls": "Text",
+   "bbox": [
+    0.0635,
+    0.4359,
+    0.2979,
+    0.4773
+   ],
+   "text": "_domestic._"
+  },
+  {
+   "order": 14,
+   "cls": "Text",
+   "bbox": [
+    0.0645,
+    0.4789,
+    0.5225,
+    0.4969
+   ],
+   "text": "_obs._"
+  },
+  {
+   "order": 15,
+   "cls": "Section-header",
+   "bbox": [
+    0.2295,
+    0.5023,
+    0.4053,
+    0.525
+   ],
+   "text": "## 3. Eyes placed thus,"
+  },
+  {
+   "order": 16,
+   "cls": "List-item",
+   "bbox": [
+    0.0654,
+    0.5289,
+    0.5215,
+    0.5477
+   ],
+   "text": "_globosa._ Black; sides of the abdomen of a blood-red colour."
+  },
+  {
+   "order": 17,
+   "cls": "List-item",
+   "bbox": [
+    0.1416,
+    0.5453,
+    0.4111,
+    0.5617
+   ],
+   "text": "99. A native of Europe, in meadows."
+  },
+  {
+   "order": 18,
+   "cls": "Section-header",
+   "bbox": [
+    0.2461,
+    0.5672,
+    0.4229,
+    0.5883
+   ],
+   "text": "## 4. Eyes placed thus,"
+  },
+  {
+   "order": 19,
+   "cls": "Text",
+   "bbox": [
+    0.0664,
+    0.5961,
+    0.1436,
+    0.5938
+   ],
+   "text": "_argentata._"
+  },
+  {
+   "order": 20,
+   "cls": "Text",
+   "bbox": [
+    0.1387,
+    0.5945,
+    0.5244,
+    0.6406
+   ],
+   "text": "Abdown white, and brown behind, and marked round the edge with six small projections. 70. A native of South America."
+  },
+  {
+   "order": 21,
+   "cls": "Section-header",
+   "bbox": [
+    0.251,
+    0.6438,
+    0.4209,
+    0.6609
+   ],
+   "text": "## 5. Eyes placed thus, :"
+  },
+  {
+   "order": 22,
+   "cls": "Text",
+   "bbox": [
+    0.0674,
+    0.6719,
+    0.1426,
+    0.6922
+   ],
+   "text": "fumigate."
+  },
+  {
+   "order": 23,
+   "cls": "List-item",
+   "bbox": [
+    0.1396,
+    0.668,
+    0.5254,
+    0.7398
+   ],
+   "text": "Abdenom oval and brown, marked at the base with two white dots. 16. A native of Europe, in meadows; it washes near the nest of the larva of different insects, and make their coming out, when it leaves on one after another, and sucks out their substance."
+  },
+  {
+   "order": 24,
+   "cls": "Text",
+   "bbox": [
+    0.0684,
+    0.7414,
+    0.1445,
+    0.7711
+   ],
+   "text": "_saccata._"
+  },
+  {
+   "order": 25,
+   "cls": "List-item",
+   "bbox": [
+    0.1406,
+    0.7383,
+    0.5293,
+    0.7969
+   ],
+   "text": "Abdomoval, of a brownial, colour, 40. A native of Europe, age gardens, and carries its eggs behind it enclosed in a bag; legs livid, marked with unequal brown rings set close together."
+  },
+  {
+   "order": 26,
+   "cls": "Section-header",
+   "bbox": [
+    0.2764,
+    0.7984,
+    0.4131,
+    0.8141
+   ],
+   "text": "_Eyes placed thus, :_"
+  },
+  {
+   "order": 27,
+   "cls": "Text",
+   "bbox": [
+    0.0703,
+    0.8211,
+    0.1318,
+    0.8352
+   ],
+   "text": "_extensa._"
+  },
+  {
+   "order": 28,
+   "cls": "List-item",
+   "bbox": [
+    0.1377,
+    0.8156,
+    0.5303,
+    0.8719
+   ],
+   "text": "Abdemon long, of a silver colour tinged with green, the legs extended longitudinally. 22. A native of Europe, in woods; its legs are applied closely to the branches."
+  },
+  {
+   "order": 29,
+   "cls": "Text",
+   "bbox": [
+    0.0723,
+    0.8727,
+    0.1328,
+    0.8859
+   ],
+   "text": "_ridulana._"
+  },
+  {
+   "order": 30,
+   "cls": "List-item",
+   "bbox": [
+    0.0752,
+    0.8742,
+    0.5283,
+    0.9437
+   ],
+   "text": "_Shining black; the abdomen hairy and black. 73._ A native of America; it forms a nest under ground, and spin as large cylindrical web, which is covered with a id; its bite is very painful, and frequently oc- casions fever and delirium, which is soon removed by a"
+  },
+  {
+   "order": 31,
+   "cls": "Text",
+   "bbox": [
+    0.5312,
+    0.057,
+    0.9131,
+    0.0883
+   ],
+   "text": "gentle suborfics, thorax marked with a large depressed circular spot; abdominal oval; legs equal."
+  },
+  {
+   "order": 32,
+   "cls": "Section-header",
+   "bbox": [
+    0.6426,
+    0.0898,
+    0.8096,
+    0.1094
+   ],
+   "text": "## 9. Eyes placed thus, :"
+  },
+  {
+   "order": 33,
+   "cls": "Text",
+   "bbox": [
+    0.5459,
+    0.1133,
+    0.9756,
+    0.1461
+   ],
+   "text": "Black, thorax marked with a white line on the back\\* density 79. A native of Britain."
+  },
+  {
+   "order": 34,
+   "cls": "Text",
+   "bbox": [
+    0.5332,
+    0.1422,
+    0.9746,
+    0.2391
+   ],
+   "text": "Marked with triangular black spots on the back of torantsis, the abdomen; the legs spotted with black. 34. A native of the south of Europe, particularly Italy and Barbary. It is found in screens in agriculture soil; its bite was formerly supposed to be combble by nothing but remains; though it occasions a great deal of pain, it is almost never fatal."
+  },
+  {
+   "order": 35,
+   "cls": "Section-header",
+   "bbox": [
+    0.6436,
+    0.2422,
+    0.8262,
+    0.2625
+   ],
+   "text": "## 8. Eyes placed thus,"
+  },
+  {
+   "order": 36,
+   "cls": "Text",
+   "bbox": [
+    0.5352,
+    0.2664,
+    0.9736,
+    0.3125
+   ],
+   "text": "Oval and oblong; thorax hair, white; abdomen and _pakkra_. legs black, marked with yellow bands. 32. A native of Europe."
+  },
+  {
+   "order": 37,
+   "cls": "Section-header",
+   "bbox": [
+    0.625,
+    0.3211,
+    0.8076,
+    0.3438
+   ],
+   "text": "## 9. Eyes placed thus,"
+  },
+  {
+   "order": 38,
+   "cls": "Text",
+   "bbox": [
+    0.5371,
+    0.3531,
+    0.9639,
+    0.4102
+   ],
+   "text": "Black, abdominal oval, forehead white, and leaps on gocuit, its prey. 84. It is to be found frequently in woods about Vienna; abdommed with two compressed dots."
+  },
+  {
+   "order": 39,
+   "cls": "Section-header",
+   "bbox": [
+    0.6406,
+    0.4109,
+    0.8213,
+    0.4281
+   ],
+   "text": "## 10. Eyes placed thus,"
+  },
+  {
+   "order": 40,
+   "cls": "Text",
+   "bbox": [
+    0.5381,
+    0.4344,
+    0.9766,
+    0.5352
+   ],
+   "text": "Thorax orbicular and convex, with a transverse cen-orientral tra excavation. 31. It is a native of South America, among others, where a preys upon the larger insects, and even small birds, dropping into their nests, and sucking their blood and legs; it is of so enormous a size, that its flag may be compared to the latons of a havk, and its eyes are very large."
+  },
+  {
+   "order": 41,
+   "cls": "Section-header",
+   "bbox": [
+    0.6445,
+    0.543,
+    0.8203,
+    0.5609
+   ],
+   "text": "## 11. Eyes placed thus,"
+  },
+  {
+   "order": 42,
+   "cls": "Text",
+   "bbox": [
+    0.54,
+    0.5742,
+    0.9785,
+    0.657
+   ],
+   "text": "Of a grayish rusty colour, and slightly clouded; tho-truncets, rax globular, and slightly heart-shaped; abdomen some-what irregular, and marked with a faint longitudinal cross. 85. A native of Europe, on oak and other trees; abdommed marked with four impressed dots on the back; papilla three."
+  },
+  {
+   "order": 43,
+   "cls": "Section-header",
+   "bbox": [
+    0.6455,
+    0.6703,
+    0.8271,
+    0.6914
+   ],
+   "text": "## 12. Eyes placed thus,"
+  },
+  {
+   "order": 44,
+   "cls": "Text",
+   "bbox": [
+    0.542,
+    0.6953,
+    0.9707,
+    0.8227
+   ],
+   "text": "Abdomen oval, ostusely conic behind, variegated comis. with brown and white; beneath black. 86. A native of Europe, among boshes; it spins and spreads out a web, to the surface of which it attaches the insects it has emanated, after it has stacked their joint. Tho-rax buck, slightly tinged with rusty colour, and nearly double behind; legs gravy, marked with brown rings; abdommed marked as a whilish spot; beneath resem- bhing a horse shoe; papilla four."
+  },
+  {
+   "order": 45,
+   "cls": "Section-header",
+   "bbox": [
+    0.626,
+    0.8289,
+    0.8369,
+    0.8492
+   ],
+   "text": "## 13. Eyes placed thus,"
+  },
+  {
+   "order": 46,
+   "cls": "Text",
+   "bbox": [
+    0.543,
+    0.8477,
+    0.9814,
+    0.882
+   ],
+   "text": "Hairy; body oval, black, variegated with brown, albfiform. 99. A native of Europe."
+  },
+  {
+   "order": 47,
+   "cls": "Section-header",
+   "bbox": [
+    0.6318,
+    0.8852,
+    0.8457,
+    0.9031
+   ],
+   "text": "B. Eyes six, placed thus, ..."
+  },
+  {
+   "order": 48,
+   "cls": "Text",
+   "bbox": [
+    0.5449,
+    0.9023,
+    0.999,
+    0.9367
+   ],
+   "text": "Abdomen greenish, the sides yellow. 30. A na- agents rive of Europe; in gardens."
+  },
+  {
+   "order": 49,
+   "cls": "Page-footer",
+   "bbox": [
+    0.8701,
+    0.9313,
+    0.9268,
+    0.9477
+   ],
+   "text": "C. Eye"
+  }
+ ]
+}

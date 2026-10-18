@@ -1,0 +1,119 @@
+{
+ "id": "chatcmpl-62101e3f-faa7-4789-aaa0-aa97c912ba19",
+ "object": "chat.completion",
+ "created": 1792323675,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.0000><y_0.0>to the same as we can use the same method. We have used the same methods for the case of the system and the system. The number of cells are not available in the case, but also the number of cells are not available in the case. In this case, we have used the same method to determine the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size.<x_0.4995><y_0.9992><class_Text>\n\n<x_0.5000><y_0.0>50<x_0.9995><y_0.9992><class_Page-footer>"
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 526,
+  "completion_tokens": 311,
+  "total_tokens": 837
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "strategy": "column_split",
+  "parts": [
+   {
+    "id": "chatcmpl-62101e3f-faa7-4789-aaa0-aa97c912ba19",
+    "object": "chat.completion",
+    "created": 1792323675,
+    "model": "nvidia/nemotron-3.5-parse",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": "<x_0.0><y_0.0>to the same as we can use the same method. We have used the same methods for the case of the system and the system. The number of cells are not available in the case, but also the number of cells are not available in the case. In this case, we have used the same method to determine the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size. We have used the same method to calculate the number of cells that are used to generate a single cell size.<x_0.999><y_0.9992><class_Text>",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.26.0-d51b4524",
+    "usage": {
+     "prompt_tokens": 263,
+     "total_tokens": 566,
+     "completion_tokens": 303,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   {
+    "id": "chatcmpl-d9decbbb-0ce1-4dbc-b667-473cbf51d53d",
+    "object": "chat.completion",
+    "created": 1792323676,
+    "model": "nvidia/nemotron-3.5-parse",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": "<x_0.0><y_0.0>50<x_0.999><y_0.9992><class_Page-footer>",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.26.0-d51b4524",
+    "usage": {
+     "prompt_tokens": 263,
+     "total_tokens": 271,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   }
+  ],
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:452",
+  "image_sha256": "233256cb3c3c25e03e847aa65e26f3e82cd05f8ef6e302c7ce69fe42a042f2cf",
+  "full_page_error": "ProtocolError: chat response is incomplete; inspect the token budget and finish_reason"
+ }
+}

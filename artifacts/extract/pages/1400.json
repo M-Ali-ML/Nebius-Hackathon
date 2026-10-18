@@ -1,0 +1,32 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1400",
+ "row_index": 1400,
+ "volume_id": "191689065",
+ "filename": "page-1400-2d754e996979.jpg",
+ "image_sha256": "2d754e996979c6641f694d6cedb375295f8581717f69010bf705075f8dd5de9a",
+ "image_bytes": 97400,
+ "scan_path": "data/raw/britannica/page-1400-2d754e996979.jpg",
+ "width": 600,
+ "height": 784,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 533,
+  "completion_tokens": 35,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0,
+    0.918,
+    0.9617
+   ],
+   "text": "MIDWIFERY PLATE CCCXLVII.\nFig. 1.\nFig. 2.\nFig. 3."
+  }
+ ]
+}

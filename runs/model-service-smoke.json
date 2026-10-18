@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-18T11:41:33.628113+00:00",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "runtime": {
+    "backend": "torch_cuda",
+    "production": true,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_memory_bytes": 101973819392,
+    "compute_capability": [
+      12,
+      0
+    ],
+    "compiled_arches": [
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "transformers": "4.56.2",
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "microbatch_size": 1,
+    "weights_verified": true,
+    "warmup_modalities": [
+      "query_text",
+      "document_text",
+      "image",
+      "image_text"
+    ]
+  },
+  "models": [
+    {
+      "id": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "revision": "582e3bf72aee355e3c59ed89de53543c5b0657ee",
+      "role": "embedder",
+      "dimensions": 2048
+    },
+    {
+      "id": "nvidia/llama-nemotron-rerank-vl-1b-v2",
+      "revision": "b8a9987b05b75db5ad949c825cbcbf6eb7c48b5a",
+      "role": "reranker"
+    }
+  ],
+  "embedding_shapes": [
+    {
+      "input_type": "query",
+      "rows": 1,
+      "dimensions": 2048
+    },
+    {
+      "input_type": "document",
+      "rows": 3,
+      "dimensions": 2048
+    }
+  ],
+  "rerank_count": 3,
+  "score_type": "raw_logit",
+  "checks": "setup transport and finite model outputs; no challenge quality assessment"
+}

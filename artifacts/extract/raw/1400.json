@@ -1,0 +1,45 @@
+{
+ "id": "chatcmpl-887f68d6-8ea2-4ee2-9e4e-6d7bbe87375b",
+ "object": "chat.completion",
+ "created": 1792322916,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.0><y_0.0>MIDWIFERY PLATE CCCXLVII.\nFig. 1.\nFig. 2.\nFig. 3.<x_0.918><y_0.9617><class_Picture>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 533,
+  "completion_tokens": 35,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 0.34,
+  "attempt": 0,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1400",
+  "image_sha256": "2d754e996979c6641f694d6cedb375295f8581717f69010bf705075f8dd5de9a"
+ }
+}

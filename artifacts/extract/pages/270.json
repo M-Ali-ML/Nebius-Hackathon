@@ -1,0 +1,32 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:270",
+ "row_index": 270,
+ "volume_id": "149982181",
+ "filename": "page-0270-6831cc1f149b.jpg",
+ "image_sha256": "6831cc1f149b50ecdf07b3af7ab3e4ef10572a486faafa06481061973c4100f8",
+ "image_bytes": 96684,
+ "scan_path": "data/raw/britannica/page-0270-6831cc1f149b.jpg",
+ "width": 600,
+ "height": 763,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 488,
+  "total_tokens": 505,
+  "completion_tokens": 17,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0,
+    0.998,
+    0.9984
+   ],
+   "text": "HYDROSTATICS. Plate CCXXXIX."
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "id": "chatcmpl-b42aa0ad-2511-431e-a7c4-e755ea2388dd",
+ "object": "chat.completion",
+ "created": 1792322900,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.3906><y_0.0836>HELMINTHOLOGY. Plate CCLI<x_0.9102><y_0.0945><class_Page-header>\n\n<x_0.4502><y_0.1078>Fig 1<x_0.5215><y_0.1391><class_Caption>\n\n<x_0.4492><y_0.2094>Fig.2.<x_0.542><y_0.2437><class_Caption>\n\n<x_0.0977><y_0.0773>Fig.2.<x_0.9004><y_0.3125><class_Picture>\n\n<x_0.4453><y_0.3359>Fig.1.<x_0.543><y_0.3695><class_Caption>\n\n<x_0.0879><y_0.4797>O<x_0.2939><y_0.643><class_Picture>\n\n<x_0.5928><y_0.4133>Fig.3. Fig.3.<x_0.9053><y_0.5406><class_Picture>\n\n<x_0.6094><y_0.5461>Fig.8.<x_0.8896><y_0.6523><class_Picture>\n\n<x_0.4336><y_0.6766>Fig.7.<x_0.5322><y_0.7141><class_Caption>\n\n<x_0.1045><y_0.7094>Fig.9.<x_0.9111><y_0.7781><class_Picture>\n\n<x_0.4375><y_0.7891>Fig.9.<x_0.5342><y_0.8273><class_Caption>\n\n<x_0.6602><y_0.9172>Sthold Owner Walls Instagram from<x_0.8838><y_0.9375><class_Page-footer>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 630,
+  "completion_tokens": 132,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 0.52,
+  "attempt": 0,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:651",
+  "image_sha256": "a4e89a900a4041b934828dcc5c677df6edf0de903ab97d097948b7b17427da7d"
+ }
+}

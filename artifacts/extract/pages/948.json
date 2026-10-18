@@ -1,0 +1,32 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:948",
+ "row_index": 948,
+ "volume_id": "149982692",
+ "filename": "page-0948-7daaf1d3d872.jpg",
+ "image_sha256": "7daaf1d3d872629a521dadf0381158556417d41f436b00ed4fbd44d78123473c",
+ "image_bytes": 83233,
+ "scan_path": "data/raw/britannica/page-0948-7daaf1d3d872.jpg",
+ "width": 600,
+ "height": 781,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 514,
+  "completion_tokens": 16,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0,
+    0.999,
+    0.9141
+   ],
+   "text": "Lava.\nPlate CCLXXIV."
+  }
+ ]
+}

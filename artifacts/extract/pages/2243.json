@@ -1,0 +1,42 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2243",
+ "row_index": 2243,
+ "volume_id": "144133901",
+ "filename": "page-2243-0bd9a3e05239.jpg",
+ "image_sha256": "0bd9a3e052398fa30c19e0b42ee28f70418b570cc1039ea2a454411dedb4972d",
+ "image_bytes": 97265,
+ "scan_path": "data/raw/britannica/page-2243-0bd9a3e05239.jpg",
+ "width": 600,
+ "height": 815,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 526,
+  "completion_tokens": 56,
+  "total_tokens": 582
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0063,
+    0.4995,
+    0.9984
+   ],
+   "text": "Ng. 1.\nV\nH M\nM\nX\nL\nB L\nD\nH\nI\nK\nC\nG\nX\nN\nN\nN"
+  },
+  {
+   "order": 1,
+   "cls": "Picture",
+   "bbox": [
+    0.5,
+    0.0,
+    0.9995,
+    0.9992
+   ],
+   "text": "Plate XLIII"
+  }
+ ]
+}

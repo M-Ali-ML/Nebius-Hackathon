@@ -1,0 +1,153 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:651",
+ "row_index": 651,
+ "volume_id": "192692192",
+ "filename": "page-0651-a4e89a900a40.jpg",
+ "image_sha256": "a4e89a900a4041b934828dcc5c677df6edf0de903ab97d097948b7b17427da7d",
+ "image_bytes": 72680,
+ "scan_path": "data/raw/britannica/page-0651-a4e89a900a40.jpg",
+ "width": 600,
+ "height": 769,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 498,
+  "total_tokens": 630,
+  "completion_tokens": 132,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Page-header",
+   "bbox": [
+    0.3906,
+    0.0836,
+    0.9102,
+    0.0945
+   ],
+   "text": "HELMINTHOLOGY. Plate CCLI"
+  },
+  {
+   "order": 1,
+   "cls": "Caption",
+   "bbox": [
+    0.4502,
+    0.1078,
+    0.5215,
+    0.1391
+   ],
+   "text": "Fig 1"
+  },
+  {
+   "order": 2,
+   "cls": "Caption",
+   "bbox": [
+    0.4492,
+    0.2094,
+    0.542,
+    0.2437
+   ],
+   "text": "Fig.2."
+  },
+  {
+   "order": 3,
+   "cls": "Picture",
+   "bbox": [
+    0.0977,
+    0.0773,
+    0.9004,
+    0.3125
+   ],
+   "text": "Fig.2."
+  },
+  {
+   "order": 4,
+   "cls": "Caption",
+   "bbox": [
+    0.4453,
+    0.3359,
+    0.543,
+    0.3695
+   ],
+   "text": "Fig.1."
+  },
+  {
+   "order": 5,
+   "cls": "Picture",
+   "bbox": [
+    0.0879,
+    0.4797,
+    0.2939,
+    0.643
+   ],
+   "text": "O"
+  },
+  {
+   "order": 6,
+   "cls": "Picture",
+   "bbox": [
+    0.5928,
+    0.4133,
+    0.9053,
+    0.5406
+   ],
+   "text": "Fig.3. Fig.3."
+  },
+  {
+   "order": 7,
+   "cls": "Picture",
+   "bbox": [
+    0.6094,
+    0.5461,
+    0.8896,
+    0.6523
+   ],
+   "text": "Fig.8."
+  },
+  {
+   "order": 8,
+   "cls": "Caption",
+   "bbox": [
+    0.4336,
+    0.6766,
+    0.5322,
+    0.7141
+   ],
+   "text": "Fig.7."
+  },
+  {
+   "order": 9,
+   "cls": "Picture",
+   "bbox": [
+    0.1045,
+    0.7094,
+    0.9111,
+    0.7781
+   ],
+   "text": "Fig.9."
+  },
+  {
+   "order": 10,
+   "cls": "Caption",
+   "bbox": [
+    0.4375,
+    0.7891,
+    0.5342,
+    0.8273
+   ],
+   "text": "Fig.9."
+  },
+  {
+   "order": 11,
+   "cls": "Page-footer",
+   "bbox": [
+    0.6602,
+    0.9172,
+    0.8838,
+    0.9375
+   ],
+   "text": "Sthold Owner Walls Instagram from"
+  }
+ ]
+}

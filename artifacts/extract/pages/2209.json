@@ -1,0 +1,32 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2209",
+ "row_index": 2209,
+ "volume_id": "144133901",
+ "filename": "page-2209-1ee9bc409f67.jpg",
+ "image_sha256": "1ee9bc409f6798b0e4f4e45d63d75caae5197059df72701387ee24385cbff28e",
+ "image_bytes": 86714,
+ "scan_path": "data/raw/britannica/page-2209-1ee9bc409f67.jpg",
+ "width": 600,
+ "height": 815,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 518,
+  "total_tokens": 529,
+  "completion_tokens": 11,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0,
+    0.999,
+    0.993
+   ],
+   "text": "Plate. XLVI"
+  }
+ ]
+}

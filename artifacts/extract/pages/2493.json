@@ -1,0 +1,560 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2493",
+ "row_index": 2493,
+ "volume_id": "192984254",
+ "filename": "page-2493-84519542efce.jpg",
+ "image_sha256": "84519542efceeb7511318fcd5cf2213ed3dc634dd20638613d3ba33a500c2393",
+ "image_bytes": 155102,
+ "scan_path": "data/raw/britannica/page-2493-84519542efce.jpg",
+ "width": 600,
+ "height": 839,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 538,
+  "total_tokens": 2516,
+  "completion_tokens": 1978,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Page-header",
+   "bbox": [
+    0.0449,
+    0.0437,
+    0.0869,
+    0.0625
+   ],
+   "text": "598"
+  },
+  {
+   "order": 1,
+   "cls": "Title",
+   "bbox": [
+    0.3984,
+    0.0414,
+    0.667,
+    0.0586
+   ],
+   "text": "CH E M I S T R Y."
+  },
+  {
+   "order": 2,
+   "cls": "Text",
+   "bbox": [
+    0.0498,
+    0.0633,
+    0.1182,
+    0.0805
+   ],
+   "text": "Magnella,\nSc."
+  },
+  {
+   "order": 3,
+   "cls": "Text",
+   "bbox": [
+    0.0508,
+    0.0875,
+    0.1035,
+    0.1273
+   ],
+   "text": "334\nPrepris-tion."
+  },
+  {
+   "order": 4,
+   "cls": "Section-header",
+   "bbox": [
+    0.0518,
+    0.1734,
+    0.1025,
+    0.1961
+   ],
+   "text": "1553\nProperties"
+  },
+  {
+   "order": 5,
+   "cls": "Section-header",
+   "bbox": [
+    0.0527,
+    0.2281,
+    0.1016,
+    0.2617
+   ],
+   "text": "1354\nAchon of\nair, Sc."
+  },
+  {
+   "order": 6,
+   "cls": "Text",
+   "bbox": [
+    0.0537,
+    0.2609,
+    0.5273,
+    0.3391
+   ],
+   "text": "3. It effectes in the air, and is flowed converted into fulphate of magenae. It is soluble in 20 parts of cold water. Boiling water didtics a greater proportion, and from this fit crystallizes on cooling. Exposed to heat, this felt becomes vicidé, and by calcination it lofea 0.4; of its weight. If the heat be increased, it is decomposed, the acid is driven off, and the pure earth remains behind."
+  },
+  {
+   "order": 7,
+   "cls": "Text",
+   "bbox": [
+    0.1426,
+    0.3406,
+    0.4121,
+    0.3539
+   ],
+   "text": "The component parts of this fall are,"
+  },
+  {
+   "order": 8,
+   "cls": "Picture",
+   "bbox": [
+    0.252,
+    0.3586,
+    0.3945,
+    0.4242
+   ],
+   "text": "Sulphurous acid 39\nMagnella 16\nWater 45"
+  },
+  {
+   "order": 9,
+   "cls": "Section-header",
+   "bbox": [
+    0.0547,
+    0.4555,
+    0.1045,
+    0.4875
+   ],
+   "text": "1355\nPrepras-tion."
+  },
+  {
+   "order": 10,
+   "cls": "Section-header",
+   "bbox": [
+    0.0557,
+    0.5031,
+    0.1055,
+    0.5352
+   ],
+   "text": "1359\nProperties"
+  },
+  {
+   "order": 11,
+   "cls": "Section-header",
+   "bbox": [
+    0.0547,
+    0.5555,
+    0.1006,
+    0.6023
+   ],
+   "text": "1357\nAchon:\nheat."
+  },
+  {
+   "order": 12,
+   "cls": "Section-header",
+   "bbox": [
+    0.0566,
+    0.6375,
+    0.1064,
+    0.6805
+   ],
+   "text": "1358\nHistory and preparation."
+  },
+  {
+   "order": 13,
+   "cls": "Section-header",
+   "bbox": [
+    0.0576,
+    0.7078,
+    0.1201,
+    0.725
+   ],
+   "text": "1359\nProperties"
+  },
+  {
+   "order": 14,
+   "cls": "Text",
+   "bbox": [
+    0.0547,
+    0.7758,
+    0.5293,
+    0.8008
+   ],
+   "text": "1360\nAction of\nwater."
+  },
+  {
+   "order": 15,
+   "cls": "Section-header",
+   "bbox": [
+    0.0547,
+    0.8281,
+    0.1074,
+    0.8539
+   ],
+   "text": "1356\nOf heat."
+  },
+  {
+   "order": 16,
+   "cls": "Section-header",
+   "bbox": [
+    0.0547,
+    0.8922,
+    0.1084,
+    0.925
+   ],
+   "text": "1354\nCompeti-tion."
+  },
+  {
+   "order": 17,
+   "cls": "Section-header",
+   "bbox": [
+    0.2285,
+    0.0695,
+    0.418,
+    0.0836
+   ],
+   "text": "3. Sulphite of Magnella."
+  },
+  {
+   "order": 18,
+   "cls": "List-item",
+   "bbox": [
+    0.1191,
+    0.0891,
+    0.5283,
+    0.1742
+   ],
+   "text": "1. The compound of fulphurous acid and magnella is formed by pataling fulphurous acid gas into two parts of water, with one of carbonate of magnella. A violent effervescent takes place, with the evolution of heat. The fulphite of magnella is formed, and precipitated to the bottom in the fate of powder / but with an excess of acid it is reaffilatively, and crytallizes."
+  },
+  {
+   "order": 19,
+   "cls": "List-item",
+   "bbox": [
+    0.1211,
+    0.1797,
+    0.5264,
+    0.2195
+   ],
+   "text": "2. The crythals of fulphirous magnella are in the form of depredited transparent tetrahedrons. It has a mild earthy tafe, which then becomes family fulphra round; it has no final. Its (pecic gravity is 1) 3/5oz."
+  },
+  {
+   "order": 20,
+   "cls": "List-item",
+   "bbox": [
+    0.1221,
+    0.2219,
+    0.5254,
+    0.3398
+   ],
+   "text": "3. It effectes in the air, and is flowed converted into fulphate of magenae. It is foluble in 20 parts of cold water. Boiling water didtics a greater proportion, and from this fit crystallizes on cooling. Exposed to heat, this felt becomes vicidé, and by calcination it lofea 0.4; of its weight. If the heat be increased, it is decomposed, the acid is driven off, and the pure earth remains behind."
+  },
+  {
+   "order": 21,
+   "cls": "Text",
+   "bbox": [
+    0.1416,
+    0.3414,
+    0.4131,
+    0.3547
+   ],
+   "text": "The component parts of this fall are,"
+  },
+  {
+   "order": 22,
+   "cls": "List-item",
+   "bbox": [
+    0.123,
+    0.4578,
+    0.5244,
+    0.5109
+   ],
+   "text": "1. This triple falls is formed by decomposing the fulphite of ammonia by magnella or the fulphite of magenae by ammonium. In foliation in the cold / or, by mixing together the folutions of the two falls."
+  },
+  {
+   "order": 23,
+   "cls": "List-item",
+   "bbox": [
+    0.124,
+    0.5117,
+    0.5234,
+    0.6031
+   ],
+   "text": "2. This falls is in nonfrentacyrdia, the form of which has had been determined. When it is propelled to the air, it is converted into fulphate of ammonia and magenails. It is leef fulphin in water than either of the two fulphite of which it is formed. By the action of heat, fulphurous acid is given on, aculusful fulphite of ammonia is fublimed, and there remains behind pure"
+  },
+  {
+   "order": 24,
+   "cls": "Section-header",
+   "bbox": [
+    0.2412,
+    0.6211,
+    0.417,
+    0.6352
+   ],
+   "text": "5. Nitrate of Magnella."
+  },
+  {
+   "order": 25,
+   "cls": "Section-header",
+   "bbox": [
+    0.0703,
+    0.6367,
+    0.125,
+    0.6523
+   ],
+   "text": "1358\nHistory and preparation."
+  },
+  {
+   "order": 26,
+   "cls": "List-item",
+   "bbox": [
+    0.127,
+    0.6531,
+    0.5303,
+    0.7055
+   ],
+   "text": "1. This compound of nitric acid and magnella was formerly called _nitre with belfs of magnella_, and magenina _lolpetere_. It is formed by the direct combination of the acid with the earth. By evaporation it is crytallized."
+  },
+  {
+   "order": 27,
+   "cls": "List-item",
+   "bbox": [
+    0.126,
+    0.707,
+    0.5312,
+    0.7734
+   ],
+   "text": "2. This fatty crytlinalizes in four-filled rhomboidal pyrite, whole fuminis are oblique or truncated. Some times it is in the form of small needles combined in groups. The tafte is penetrating and bitter. The pecitic gravity is 1.75."
+  },
+  {
+   "order": 28,
+   "cls": "List-item",
+   "bbox": [
+    0.1279,
+    0.775,
+    0.5322,
+    0.8352
+   ],
+   "text": "3. It is deliquent in the air, and is fsoluble in its own weight of cold water. It is more foluble in boiling water, in which it crytallizes on cooling ; but, it can only be obtained in regular crystals by flow evaporation from its foliation in cold water."
+  },
+  {
+   "order": 29,
+   "cls": "List-item",
+   "bbox": [
+    0.1289,
+    0.8367,
+    0.5332,
+    0.9016
+   ],
+   "text": "4. By the action of heat it undergoes the waters fufen, the water is driven off, and it becomes dry. It is decompiled in a throat, gives out a little oxygen gas, then nitrous gas, and at all the nitric acid. The pure earth remains behind."
+  },
+  {
+   "order": 30,
+   "cls": "Text",
+   "bbox": [
+    0.1514,
+    0.9039,
+    0.5166,
+    0.9203
+   ],
+   "text": "The component parts of this fall are, according to"
+  },
+  {
+   "order": 31,
+   "cls": "Table",
+   "bbox": [
+    0.625,
+    0.0617,
+    0.9863,
+    0.1414
+   ],
+   "text": "\\begin{tabular}{cccc}\n\\thead{\\mbox{}} & \\thead{Bergman.} & \\thead{Kirwan.} & \\thead{Magne}\\\\\nAcid & 43 & 46 & \\mbox{}\\\\\nMagnella & 27 & 22 & \\mbox{}\\\\\nWater & 30 & 32 & \\mbox{}\\\\\n100 & 100 & 100 & \\\\\n\\end{tabular}"
+  },
+  {
+   "order": 32,
+   "cls": "Section-header",
+   "bbox": [
+    0.6006,
+    0.1477,
+    0.8857,
+    0.1625
+   ],
+   "text": "6. Nitrate of Ammonia and Magnella."
+  },
+  {
+   "order": 33,
+   "cls": "Text",
+   "bbox": [
+    0.5439,
+    0.1641,
+    0.9873,
+    0.243
+   ],
+   "text": "1. This triple falls is formed, either by the dirediorgan combination of the folutions of nitrate of ammonia, and nitrate of magnella, by which the falls is obtained pure and crytallized , or, by partially decomposing the nitrate of ammonia by matguela, or the nitrate of magenia by ammonia."
+  },
+  {
+   "order": 34,
+   "cls": "Text",
+   "bbox": [
+    0.542,
+    0.2383,
+    0.9883,
+    0.3266
+   ],
+   "text": "2. The crythals of this fall are and the form of free frozen grains, it has a bitter, acids, and ammonated tafte. It is lefs deliquent in the air than either of the confluent fats, and lefs foluble in water. It requires 11 parts of cold water as differs it, but lefs of boiling water. It crytallizes on cooling."
+  },
+  {
+   "order": 35,
+   "cls": "Text",
+   "bbox": [
+    0.543,
+    0.3258,
+    0.9854,
+    0.418
+   ],
+   "text": "When it is rapidly heated, it inflamed spontaneously. After when lonly heated in cloke vells, it gives out very heat, gen, gas, and gas, a greater proportion of water than it contains, nitrous gas, and nitric acid, without the familiar trace of ammonia, which flows that it is de-completed, that the hydrogen combines with the oxygen of the acid, and forms water."
+  },
+  {
+   "order": 36,
+   "cls": "Text",
+   "bbox": [
+    0.5625,
+    0.4188,
+    0.8369,
+    0.4313
+   ],
+   "text": "The component parts of this fall are,"
+  },
+  {
+   "order": 37,
+   "cls": "Picture",
+   "bbox": [
+    0.6562,
+    0.4336,
+    0.8389,
+    0.4625
+   ],
+   "text": "Nitrate of magnella\nammonia 22"
+  },
+  {
+   "order": 38,
+   "cls": "Caption",
+   "bbox": [
+    0.8008,
+    0.4766,
+    0.8486,
+    0.4883
+   ],
+   "text": "100 *"
+  },
+  {
+   "order": 39,
+   "cls": "Section-header",
+   "bbox": [
+    0.6572,
+    0.4945,
+    0.8281,
+    0.5086
+   ],
+   "text": "7. Nitrite of Magnella."
+  },
+  {
+   "order": 40,
+   "cls": "Text",
+   "bbox": [
+    0.5635,
+    0.5133,
+    0.9043,
+    0.5258
+   ],
+   "text": "Nothing is known of the properties of this fall."
+  },
+  {
+   "order": 41,
+   "cls": "Section-header",
+   "bbox": [
+    0.5615,
+    0.5391,
+    0.8359,
+    0.5484
+   ],
+   "text": "8. Muriate of Magnella."
+  },
+  {
+   "order": 42,
+   "cls": "Text",
+   "bbox": [
+    0.5605,
+    0.5477,
+    0.9844,
+    0.7039
+   ],
+   "text": "1. This compound of miruric acid and magnella found was formerly called _mirice, left of magnella_, and was not confounded with the muriate of lime, with which it is frequently recommended. The difference between thefe two falls was flat printed and by Dr Blacks, and Bergman afterwards examined the nature and proper ties of muriate of magnella. The falls is obtained by differing magnella in muricate acid till they are fatuated, and then evaporating the solution. Small irregular crystals are obtained. This falls exists in the waters of the ocean, and in mineral waters, along with the marinate of folds and lime."
+  },
+  {
+   "order": 43,
+   "cls": "Text",
+   "bbox": [
+    0.5449,
+    0.7063,
+    0.9834,
+    0.7727
+   ],
+   "text": "2. It is extremely difficult to obtain the muriate of proper magnetic in any regular form. It is either in the late or powder, or very small regular needles or in a kind of jelly. It has a diligenceable bitter tafte. The specific gravity is 1.601."
+  },
+  {
+   "order": 44,
+   "cls": "Text",
+   "bbox": [
+    0.5459,
+    0.7719,
+    0.9482,
+    0.8047
+   ],
+   "text": "3. It is very deliquent in the air. Cold water readily dilduces its own weight, and it is fill more lo-ble in boiling water."
+  },
+  {
+   "order": 45,
+   "cls": "Text",
+   "bbox": [
+    0.5469,
+    0.8039,
+    0.9502,
+    0.8547
+   ],
+   "text": "4. It is completely decoupled by heat ; the acid is often driven off, and the pure earth remains behind **.*"
+  },
+  {
+   "order": 46,
+   "cls": "Text",
+   "bbox": [
+    0.5479,
+    0.8555,
+    0.9512,
+    0.8836
+   ],
+   "text": "Let it completely downed by heat ; the acid is often driven off, and the pure earth remains behind **.*"
+  },
+  {
+   "order": 47,
+   "cls": "Table",
+   "bbox": [
+    0.7002,
+    0.8844,
+    0.749,
+    0.9195
+   ],
+   "text": "\\begin{tabular}{cc}\nAcid & 34-19\\\\\nMagnella & 41\\\\\nWater & 25\\\\\n\\end{tabular}"
+  },
+  {
+   "order": 48,
+   "cls": "Page-footer",
+   "bbox": [
+    0.8672,
+    0.9164,
+    0.9893,
+    0.9297
+   ],
+   "text": "9. Muriate"
+  }
+ ]
+}

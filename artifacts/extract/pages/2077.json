@@ -1,0 +1,32 @@
+{
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2077",
+ "row_index": 2077,
+ "volume_id": "149983206",
+ "filename": "page-2077-b2d54e4a68a4.jpg",
+ "image_sha256": "b2d54e4a68a40bc5fcab441f145cad23b492703c1a2875add967517dceaaefbd",
+ "image_bytes": 46302,
+ "scan_path": "data/raw/britannica/page-2077-b2d54e4a68a4.jpg",
+ "width": 600,
+ "height": 789,
+ "parse_model": "nvidia/nemotron-3.5-parse",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 508,
+  "total_tokens": 514,
+  "completion_tokens": 6,
+  "prompt_tokens_details": null
+ },
+ "blocks": [
+  {
+   "order": 0,
+   "cls": "Picture",
+   "bbox": [
+    0.0,
+    0.0,
+    0.998,
+    0.9992
+   ],
+   "text": ""
+  }
+ ]
+}

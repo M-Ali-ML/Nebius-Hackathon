@@ -1,0 +1,119 @@
+{
+ "id": "chatcmpl-40c5afe3-e865-487e-907a-e2c7fafbce5c",
+ "object": "chat.completion",
+ "created": 1792323675,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.0000><y_0.0063>Ng. 1.\nV\nH M\nM\nX\nL\nB L\nD\nH\nI\nK\nC\nG\nX\nN\nN\nN<x_0.4995><y_0.9984><class_Picture>\n\n<x_0.5000><y_0.0>Plate XLIII<x_0.9995><y_0.9992><class_Picture>"
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 526,
+  "completion_tokens": 56,
+  "total_tokens": 582
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "strategy": "column_split",
+  "parts": [
+   {
+    "id": "chatcmpl-40c5afe3-e865-487e-907a-e2c7fafbce5c",
+    "object": "chat.completion",
+    "created": 1792323675,
+    "model": "nvidia/nemotron-3.5-parse",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": "<x_0.0><y_0.0063>Ng. 1.\nV\nH M\nM\nX\nL\nB L\nD\nH\nI\nK\nC\nG\nX\nN\nN\nN<x_0.999><y_0.9984><class_Picture>",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.26.0-d51b4524",
+    "usage": {
+     "prompt_tokens": 263,
+     "total_tokens": 309,
+     "completion_tokens": 46,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   {
+    "id": "chatcmpl-26947c50-7771-4279-83d8-1bf5ddebd87e",
+    "object": "chat.completion",
+    "created": 1792323676,
+    "model": "nvidia/nemotron-3.5-parse",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": "<x_0.0><y_0.0>Plate XLIII<x_0.999><y_0.9992><class_Picture>",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.26.0-d51b4524",
+    "usage": {
+     "prompt_tokens": 263,
+     "total_tokens": 273,
+     "completion_tokens": 10,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   }
+  ],
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2243",
+  "image_sha256": "0bd9a3e052398fa30c19e0b42ee28f70418b570cc1039ea2a454411dedb4972d",
+  "full_page_error": "ProtocolError: chat response is incomplete; inspect the token budget and finish_reason"
+ }
+}

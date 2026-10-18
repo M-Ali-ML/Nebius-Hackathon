@@ -139,3 +139,26 @@ def test_work_titles_are_not_exact():
     from nemotron_challenge.match import title_relation
     assert title_relation("ABYSSINIA", "Abyssinia (1906 musical)") != "exact"
     assert title_relation("ERGOT", "Ergot (horse anatomy)") == "exact"
+
+
+def test_ablation_eval_scores_saved_candidates(tmp_path):
+    from nemotron_challenge.ablation_eval import build_labels, evaluate
+    m = tmp_path / "match"
+    (m / "candidates").mkdir(parents=True)
+    (m / "candidates_short").mkdir()
+    long = {"entry_id": "B:1:0", "hits": [hit("1", 1, 0.9, -5.0), hit("2", 2, 0.1, -1.0)]}
+    neg = {"entry_id": "B:1:1", "hits": [hit("3", 1, 0.5, -9.0)]}
+    for rec in (long, neg):
+        for folder in ("candidates", "candidates_short"):
+            (m / folder / f"{rec['entry_id'].replace(':', '_')}.json").write_text(json.dumps(rec))
+    (m / "matches.jsonl").write_text(json.dumps({"entry_id": "B:1:0", "status": "matched", "wiki_page_id": "2"}) + "\n"
+                                     + json.dumps({"entry_id": "B:1:1", "status": "no_clear_counterpart"}) + "\n")
+    (m / "matches_short.jsonl").write_text((m / "matches.jsonl").read_text())
+    rows = build_labels([["B:1:0", ["T2"], True, "n", "t"], ["B:1:1", [], False, "n", "t"]], tmp_path)
+    assert rows[0]["gold_page_ids"] == ["2"] and rows[0]["gold_in_pool"]
+    s = evaluate(tmp_path)
+    assert s["methods"]["bm25"]["p_at_1_gold_in_pool"] == 0.0
+    assert s["methods"]["bm25+embed"]["p_at_1_gold_in_pool"] == 0.0
+    assert s["methods"]["bm25+embed+rerank (long query)"]["p_at_1_gold_in_pool"] == 1.0
+    assert s["methods"]["bm25+embed+rerank (long query)"]["no_match_accuracy"] == 1.0
+    assert (m / "ablation.png").is_file() and s["examples"]["rerank_fixed"][0]["entry_id"] == "B:1:0"

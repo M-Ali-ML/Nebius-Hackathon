@@ -59,5 +59,8 @@ def site(settings: Settings, work_dir: Path) -> dict[str, Any]:
 
 
 def evaluate(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: review your results and document successes and failures."""
-    _unfinished("evaluate")
+    """Collect run metadata and check that each case study in docs/cases links to a saved transcript."""
+    from .evaluate import run
+
+    del settings
+    return run(work_dir)

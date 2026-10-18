@@ -153,3 +153,19 @@ def test_find_drift_lists_items_with_both_citations(work):
     assert out["total"] == 1 and out["items"][0]["cite_wikipedia"] == "[W:123:456]"
     with pytest.raises(ValueError):
         agent_tools.find_drift("other", 5, work)
+
+
+def test_evaluate_case_links(tmp_path):
+    from nemotron_challenge import evaluate
+
+    (tmp_path / "runs" / "agent").mkdir(parents=True)
+    (tmp_path / "runs" / "agent" / "r1.json").write_text(json.dumps(
+        {"status": "ok", "model": "nvidia/Nemotron-3.5-Super-VL", "tool_calls": [{"name": "get_pair"}], "tokens": {"total": 5}}))
+    good = tmp_path / "success-1.md"
+    good.write_text("Case ID: s1\nClassification: success\nRun record: `runs/agent/r1.json`\n")
+    bad = tmp_path / "failure-1.md"
+    bad.write_text("Case ID: f1\nClassification: TODO\nRun record: `runs/agent/missing.json`\n")
+    ok = evaluate.check_case(evaluate.parse_case(good), [tmp_path])
+    assert ok["ok"] and ok["runs"][0]["tool_calls"] == ["get_pair"]
+    fail = evaluate.check_case(evaluate.parse_case(bad), [tmp_path])
+    assert not fail["ok"] and len(fail["problems"]) == 2

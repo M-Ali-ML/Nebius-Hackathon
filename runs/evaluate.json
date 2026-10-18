@@ -1,0 +1,257 @@
+{
+ "time": "2026-10-18T14:14:55",
+ "code_revision": "f324728858de56d56967eec8fea253d0f1da81e7",
+ "code_dirty": true,
+ "branch": "M-Ali-ML/mvp-agent",
+ "models": {
+  "parse": "nvidia/nemotron-3.5-parse",
+  "embed": {
+   "id": "nvidia/llama-nemotron-embed-vl-1b-v2",
+   "revision": "582e3bf72aee355e3c59ed89de53543c5b0657ee"
+  },
+  "rerank": {
+   "id": "nvidia/llama-nemotron-rerank-vl-1b-v2",
+   "revision": "b8a9987b05b75db5ad949c825cbcbf6eb7c48b5a"
+  },
+  "agent_and_compare": "nvidia/Nemotron-3.5-Super-VL"
+ },
+ "hermes": "Hermes Agent v0.22.2 (2026.9.24) · stable · local d923a5eb487a",
+ "data": {
+  "dataset": "NationalLibraryOfScotland/encyclopaedia_britannica_illustrated",
+  "dataset_revision": "309f765b1ecc83e0a7f7762e44b4a927a7555443",
+  "manifest_sha256": "779542e078756874f23fa6971d7d8a2d8635ad6d9d9484e1deb607d94a28e396",
+  "sample_size": 100,
+  "selection": {
+   "method": "random_without_replacement",
+   "seed": 20261016,
+   "sort": "source_row_index"
+  },
+  "wikipedia_corpus_revision": "417c267bb457fa645c22eb3b5c77764963194c70"
+ },
+ "artifacts": {
+  "pages": 100,
+  "entries": 262,
+  "match_status": {
+   "no_clear_counterpart": 195,
+   "matched": 67
+  },
+  "compare_pairs": 67,
+  "drift": {
+   "pairs": 67,
+   "claims_checked": 355,
+   "claim_shares": {
+    "enduring": 0.468,
+    "renamed": 0.039,
+    "superseded": 0.135,
+    "dropped": 0.358
+   },
+   "quotes_kept": 1193,
+   "quotes_rejected": 50
+  }
+ },
+ "agent_transcripts": {
+  "total": 14,
+  "by_status": {
+   "ok": 13,
+   "failed": 1
+  }
+ },
+ "cases": [
+  {
+   "case": "failure-1",
+   "case_id": "failure-1 (old terms: no corpus-wide tool, agent gives up)",
+   "classification": "failure",
+   "run_records": [
+    "runs/agent/20261018-140517-which-old-terms-in-the-britannica-have-d.json"
+   ],
+   "code_revision": "9a48f18 (agent tools, before `find_drift`); Hermes session 20261018_140518_e0915e",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-140517-which-old-terms-in-the-britannica-have-d.json",
+     "status": "failed",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_140518_e0915e",
+     "tool_calls": [
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "get_pair",
+      "search_sources",
+      "search_sources",
+      "search_sources"
+     ],
+     "tokens": 435766,
+     "seconds": 109.9
+    }
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "failure-2",
+   "case_id": "failure-2 (plate page matched to \"Fig (restaurant)\")",
+   "classification": "failure",
+   "run_records": [
+    "runs/agent/20261018-141132-what-is-britannica-entry-b-651-0-about-a.json"
+   ],
+   "code_revision": "f324728; Hermes session 20261018_141134_ef5566",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-141132-what-is-britannica-entry-b-651-0-about-a.json",
+     "status": "ok",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_141134_ef5566",
+     "tool_calls": [
+      "get_pair"
+     ],
+     "tokens": 16154,
+     "seconds": 11.9
+    }
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "failure-3",
+   "case_id": "failure-3 (blank cover: Parse invents text, the error cascades to match and compare)",
+   "classification": "failure",
+   "run_records": [
+    "runs/agent/20261018-141143-what-does-britannica-entry-b-452-0-say-a.json"
+   ],
+   "code_revision": "f324728; Hermes session 20261018_141145_d718e0",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-141143-what-does-britannica-entry-b-452-0-say-a.json",
+     "status": "ok",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_141145_d718e0",
+     "tool_calls": [
+      "get_pair"
+     ],
+     "tokens": 18151,
+     "seconds": 13.5
+    }
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "success-1",
+   "case_id": "success-1 (lightning: language and knowledge change, uncertain match flagged)",
+   "classification": "success",
+   "run_records": [
+    "runs/agent/20261018-140114-what-did-the-britannica-say-about-lightn.json"
+   ],
+   "code_revision": "9a48f18 (agent tools); Hermes session 20261018_140116_090b7b",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-140114-what-did-the-britannica-say-about-lightn.json",
+     "status": "ok",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_140116_090b7b",
+     "tool_calls": [
+      "search_sources",
+      "search_sources",
+      "search_sources",
+      "get_pair",
+      "view_scan"
+     ],
+     "tokens": 62764,
+     "seconds": 25.9
+    }
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "success-2",
+   "case_id": "success-2 (coinage: enduring vs superseded claims with quotes from both sides)",
+   "classification": "success",
+   "run_records": [
+    "runs/agent/20261018-140224-which-britannica-claims-about-coining-mo.json"
+   ],
+   "code_revision": "9a48f18 (agent tools); Hermes session 20261018_140226_8f720c",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-140224-which-britannica-claims-about-coining-mo.json",
+     "status": "ok",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_140226_8f720c",
+     "tool_calls": [
+      "search_sources",
+      "search_sources",
+      "get_pair",
+      "view_scan"
+     ],
+     "tokens": 63314,
+     "seconds": 19.9
+    }
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "success-3",
+   "case_id": "success-3 (old terms with find_drift: the repaired run)",
+   "classification": "success",
+   "run_records": [
+    "runs/agent/20261018-140740-which-old-terms-in-the-britannica-have-d.json"
+   ],
+   "code_revision": "5fa2fd1 (adds `find_drift`); Hermes session 20261018_140742_f7bb7d",
+   "runs": [
+    {
+     "path": "runs/agent/20261018-140740-which-old-terms-in-the-britannica-have-d.json",
+     "status": "ok",
+     "model": "nvidia/Nemotron-3.5-Super-VL",
+     "session_id": "20261018_140742_f7bb7d",
+     "tool_calls": [
+      "find_drift",
+      "find_drift",
+      "find_drift",
+      "view_scan",
+      "view_scan",
+      "view_scan",
+      "view_scan"
+     ],
+     "tokens": 62455,
+     "seconds": 83.9
+    }
+   ],
+   "ok": true,
+   "problems": []
+  }
+ ],
+ "cases_ok": 6,
+ "cases_by_class": {
+  "failure": 3,
+  "success": 3
+ }
+}

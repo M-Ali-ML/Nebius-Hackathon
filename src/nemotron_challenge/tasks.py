@@ -15,13 +15,22 @@ def _unfinished(stage: str) -> None:
 
 
 def extract(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: define your extraction and entry segmentation process."""
-    _unfinished("extract")
+    """Segment existing page records into entries. Parse output in extract/pages/ comes from extract.py."""
+    from .segment import run_segment
+
+    if not any((work_dir / "extract" / "pages").glob("*.json")):
+        raise FileNotFoundError(f"no page records in {work_dir / 'extract' / 'pages'}; run Parse first")
+    return run_segment(work_dir)
 
 
 def match(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: define how your team finds and verifies article matches."""
-    _unfinished("match")
+    """BM25 -> embed -> rerank per entry, then index entries and matched articles in LanceDB."""
+    from .index import build_index
+    from .match import run_match
+
+    result = run_match(settings, work_dir)
+    result["index"] = build_index(settings, work_dir)
+    return result
 
 
 def compare(settings: Settings, work_dir: Path) -> dict[str, Any]:

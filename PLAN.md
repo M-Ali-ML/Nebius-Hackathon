@@ -33,6 +33,13 @@ Claims in the research about launch dates, CharXiv scores, and native video inpu
 
 The MVP must touch every row at "working" level (2 to 3 of 5). Increments then push single rows to 5.
 
+## 2b. Status (14:00)
+
+- Done: starter in repo root, all 100 scans parsed (98 direct, 2 by column split, 3 picture-only plates), page records in `artifacts/extract/pages/`.
+- Embed/rerank: no organizer image existed, so we use one GPU VM (`nemotron-models-gpu`, RTX PRO 6000, 81.85.4.210) instead of a Serverless Endpoint. Image built on the VM in about 8 min. Container listens on VM loopback. Laptop reaches it through `ssh -N -L 8000:127.0.0.1:8000 aly@81.85.4.210`. Smoke receipt: `runs/model-service-smoke.json`.
+- Super VL: works for vision and tool calls. Default reasoning is long; pipeline calls disable it. It invents text when asked to transcribe, so it does not rewrite OCR.
+- Parallel Orca workers: `mvp-match` (segment + match + LanceDB), `mvp-site` (LaTeX + site), `mvp-agent` (Hermes + compare). Contracts: `docs/team-contracts.md`.
+
 ## 3. MVP: thinnest end-to-end slice (target: done by about 15:30)
 
 Rule: every stage runs on all 100 pages, with simple logic. Quality comes later.

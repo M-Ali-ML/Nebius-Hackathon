@@ -14,7 +14,7 @@
   <a class="brand" href="{{ root }}index.html"><i class="mark" aria-hidden="true"></i>Britannica 1768-1860 <span>/</span> Wikipedia</a>
   {% block crumbs %}{% endblock %}
   <nav aria-label="Site">
-    {% for href, label in [("index.html", "Pages"), ("explore.html", "Explore changes"), ("analysis.html", "Analysis"), ("debate.html", "Debate"), ("how.html", "How it works")] %}
+    {% for href, label in [("index.html", "Pages"), ("explore.html", "Explore changes"), ("analysis.html", "Analysis"), ("atlas.html", "Atlas"), ("debate.html", "Debate"), ("how.html", "How it works")] %}
     <a class="btn" href="{{ root }}{{ href }}"{% if active == href %} aria-current="page"{% endif %}>{{ label }}</a>
     {% endfor %}
   </nav>

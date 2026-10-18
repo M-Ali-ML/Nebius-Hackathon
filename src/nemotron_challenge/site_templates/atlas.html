@@ -1,0 +1,737 @@
+{% extends "base.html" %}
+{% block title %}Multimodal atlas{% endblock %}
+{% block bodyclass %}atlas-body{% endblock %}
+{% block crumbs %}<div class="crumbs"><span class="sep">/</span><span class="here">Atlas</span></div>{% endblock %}
+{% block content %}
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h10M7 12h10M7 16h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-merge" viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M10.4 21.9a10 10 0 0 0 9.9-8.4M13.9 2.2a10 10 0 0 0-11.6 9.6"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 16h10"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></symbol>
+  </defs>
+</svg>
+
+<main class="atlas night" id="atlas">
+  <canvas id="map" aria-label="Map of one shared embedding space. Use the search box or the tours to move." tabindex="0"></canvas>
+
+  <aside class="panel" id="panel">
+    <div class="eyebrow"><svg class="ic"><use href="#i-sparkles"/></svg> Nemotron Embed VL atlas</div>
+    <h1>One space for pictures and words</h1>
+    <p class="lede">Nemotron Embed VL places 1790s engravings, OCR text and modern Wikipedia in the same 2048-d space.</p>
+    <div class="stats">
+      <div class="stat glowable" title="Scan images whose nearest Britannica entry (of {{ summary.agreement.scan_to_entry.entries }}) is one of its own page entries. Chance: {{ '%.1f' % (summary.agreement.scan_to_entry.chance * 100) }}%.">
+        <b class="num" data-count="{{ summary.agreement.scan_to_entry.share * 100 }}">{{ '%.1f' % (summary.agreement.scan_to_entry.share * 100) }}%</b>
+        <span>of scan images sit nearest their own entry <em>(chance {{ '%.1f' % (summary.agreement.scan_to_entry.chance * 100) }}%, n={{ summary.agreement.scan_to_entry.n }})</em></span>
+      </div>
+      <div class="stat" title="Matched entries whose nearest Wikipedia chunk belongs to the matched article.">
+        <b class="num" data-count="{{ summary.agreement.entry_to_wiki.share * 100 }}">{{ '%.1f' % (summary.agreement.entry_to_wiki.share * 100) }}%</b>
+        <span>of matched entries sit nearest their Wikipedia article <em>(n={{ summary.agreement.entry_to_wiki.n }})</em></span>
+      </div>
+    </div>
+    <div class="tours-h"><svg class="ic"><use href="#i-route"/></svg> Guided tours <span class="kbd-hint">1 to {{ data.tours|length }}</span></div>
+    <ol class="tours" id="tours"></ol>
+    <div class="legend" id="legend"></div>
+    <p class="fine">Every point is an <code>input_type=document</code> embedding from <code>{{ summary.model }}</code> at revision <code>{{ summary.model_revision[:7] }}</code>. UMAP, cosine, seed {{ summary.umap.seed }}. 2D distances are approximate; the numbers above use the full 2048-d cosine.</p>
+  </aside>
+
+  <div class="toolbar" id="toolbar">
+    <label class="search">
+      <svg class="ic"><use href="#i-search"/></svg>
+      <input id="q" type="search" placeholder="Fly to a headword, article or ID" autocomplete="off" spellcheck="false">
+      <span class="kbd">/</span>
+      <ul id="sugg" class="sugg" role="listbox" hidden></ul>
+    </label>
+    <div class="chips" id="kinds"></div>
+    <div class="seg" id="colorby" role="radiogroup" aria-label="Color by"></div>
+    <button class="tb" id="edges" aria-pressed="true" title="Edges (E)"><svg class="ic"><use href="#i-route"/></svg><span>Edges</span></button>
+    <button class="tb icon" id="theme" title="Night or paper (N)"><svg class="ic"><use href="#i-sun"/></svg></button>
+    <button class="tb icon" id="share" title="Copy a link to this view"><svg class="ic"><use href="#i-share"/></svg></button>
+    <button class="tb icon" id="reset" title="Reset view (R)"><svg class="ic"><use href="#i-reset"/></svg></button>
+  </div>
+
+  <div class="card" id="card" hidden></div>
+
+  <div class="caption" id="caption" hidden>
+    <div class="cap-step" id="capstep"></div>
+    <div class="cap-body"><b id="captitle"></b><p id="captext"></p></div>
+    <button class="tb icon" id="capclose" title="Close (Esc)"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+
+  <div class="timebar">
+    <span class="era"><svg class="ic"><use href="#i-book"/></svg>1797</span>
+    <input id="time" type="range" min="0" max="100" value="50" aria-label="Fade between Britannica and Wikipedia">
+    <span class="era"><svg class="ic"><use href="#i-globe"/></svg>2026</span>
+  </div>
+
+  <canvas id="mini" class="mini" width="180" height="130" aria-label="Mini-map"></canvas>
+
+  <button class="keys-chip" id="keyschip"><svg class="ic"><use href="#i-keyboard"/></svg> Shortcuts <span class="kbd">?</span></button>
+  <div class="keys" id="keys" hidden>
+    <div><span class="kbd">/</span> search</div><div><span class="kbd">1</span>-<span class="kbd">{{ data.tours|length }}</span> tours</div>
+    <div><span class="kbd">E</span> edges</div><div><span class="kbd">C</span> color by</div>
+    <div><span class="kbd">N</span> night or paper</div><div><span class="kbd">[</span> <span class="kbd">]</span> 1797 to 2026</div>
+    <div><span class="kbd">R</span> reset</div><div><span class="kbd">Esc</span> clear</div>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+</main>
+<script type="application/json" id="atlas-data">{{ data|tojson_safe }}</script>
+<style>
+.atlas-body { overflow: hidden; }
+.atlas [hidden] { display: none !important; }
+.atlas-body .bottom { display: none; }
+.atlas {
+  --bg: #fbfaf8; --ink: var(--foreground); --glass: rgba(255,255,255,.86); --glass-border: var(--border);
+  --dot-b: #b8955a; --dot-w: #6b7280; --edge: rgba(31,41,55,.18); --glow: #ff9d00; --grid: rgba(31,41,55,.05);
+  position: relative; height: calc(100vh - 49px); height: calc(100dvh - 49px); background: var(--bg); color: var(--ink);
+  overflow: hidden; transition: background .4s;
+}
+.atlas.night {
+  --bg: #0b0f19; --ink: #e5e7eb; --glass: rgba(17,24,39,.78); --glass-border: rgba(255,255,255,.09);
+  --dot-b: #f0c674; --dot-w: #a5b4fc; --edge: rgba(255,255,255,.14); --glow: #ffd21e; --grid: rgba(255,255,255,.035);
+  --muted-foreground: #9ca3af; --border: rgba(255,255,255,.1);
+}
+.atlas canvas#map { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; outline: none; }
+.atlas canvas#map.dragging { cursor: grabbing; }
+.atlas canvas#map.pointing { cursor: pointer; }
+.ic { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+.panel, .toolbar, .card, .caption, .timebar, .mini, .keys-chip, .keys, .toast {
+  position: absolute; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px;
+  backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: 0 10px 30px -12px rgba(0,0,0,.35);
+}
+.panel { top: 16px; left: 16px; width: 320px; max-height: calc(100% - 32px); overflow: auto; padding: 18px; animation: rise .6s cubic-bezier(.2,.8,.2,1) both; }
+.eyebrow { display: flex; align-items: center; gap: 6px; font: 500 var(--t11)/1 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--glow); }
+.panel h1 { font-size: 24px; margin: 10px 0 6px; color: var(--ink); }
+.lede { color: var(--muted-foreground); font-size: var(--t13); }
+.stats { display: grid; gap: 8px; margin: 14px 0; }
+.stat { display: flex; gap: 10px; align-items: baseline; padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--glass-border); background: linear-gradient(135deg, rgba(255,210,30,.10), transparent 60%); }
+.stat b { font-size: 22px; font-weight: 600; color: var(--ink); min-width: 70px; }
+.stat span { font-size: var(--t12); color: var(--muted-foreground); line-height: 1.35; }
+.stat em { font-style: normal; opacity: .75; }
+.tours-h { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: var(--t13); margin: 6px 0 8px; }
+.kbd-hint { margin-left: auto; font: var(--t11) var(--font-mono); color: var(--muted-foreground); }
+.tours { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.tour { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: center; width: 100%; text-align: left; padding: 8px 10px;
+  border-radius: var(--radius); border: 1px solid var(--glass-border); background: transparent; color: var(--ink); font: inherit; cursor: pointer;
+  transition: transform .18s, border-color .18s, box-shadow .18s, background .18s; animation: rise .5s cubic-bezier(.2,.8,.2,1) both; }
+.tour:hover { transform: translateY(-2px); border-color: var(--glow); box-shadow: 0 6px 18px -8px var(--glow); }
+.tour.on { border-color: var(--glow); box-shadow: 0 0 0 1px var(--glow), 0 0 22px -4px var(--glow); background: rgba(255,210,30,.08); }
+.tour .badge { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,210,30,.16); color: var(--glow); position: relative; }
+.tour .badge i { position: absolute; right: -4px; bottom: -4px; font: 600 10px/14px var(--font-mono); font-style: normal; width: 14px; height: 14px; border-radius: 4px; background: var(--ink); color: var(--bg); text-align: center; }
+.tour b { display: block; font-size: var(--t13); font-weight: 600; line-height: 1.25; }
+.tour small { color: var(--muted-foreground); font-size: var(--t11); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 14px 0 10px; font-size: var(--t11); color: var(--muted-foreground); }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.fine { font-size: var(--t11); color: var(--muted-foreground); line-height: 1.4; }
+.atlas.night code { background: rgba(255,255,255,.08); color: #d1d5db; }
+
+.toolbar { top: 16px; left: 352px; right: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 8px; animation: rise .6s .08s cubic-bezier(.2,.8,.2,1) both; }
+.search { position: relative; display: flex; align-items: center; gap: 6px; flex: 1 1 220px; min-width: 180px; height: 34px; padding: 0 10px; border-radius: var(--radius); border: 1px solid var(--glass-border); background: rgba(127,127,127,.06); color: var(--muted-foreground); }
+.search:focus-within { border-color: var(--glow); box-shadow: 0 0 0 3px rgba(255,210,30,.18); }
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; font-size: var(--t13); }
+.kbd { font: 500 11px/1 var(--font-mono); padding: 3px 6px; border-radius: 5px; border: 1px solid var(--glass-border); border-bottom-width: 2px; color: var(--muted-foreground); }
+.sugg { position: absolute; top: 40px; left: 0; right: 0; list-style: none; margin: 0; padding: 4px; z-index: 5; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 10px; backdrop-filter: blur(14px); max-height: 320px; overflow: auto; box-shadow: 0 12px 30px -10px rgba(0,0,0,.4); }
+.sugg li { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; cursor: pointer; color: var(--ink); font-size: var(--t13); }
+.sugg li[aria-selected="true"], .sugg li:hover { background: rgba(255,210,30,.14); }
+.sugg li img, .card img.av { width: 22px; height: 22px; border-radius: 5px; object-fit: cover; flex: none; }
+.sugg li .dot, .card .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; margin: 0 6px; }
+.sugg li small { margin-left: auto; color: var(--muted-foreground); font: var(--t11) var(--font-mono); }
+.chips, .seg { display: flex; gap: 4px; flex-wrap: wrap; }
+.chip-k, .seg button, .tb { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border-radius: var(--radius); border: 1px solid var(--glass-border); background: transparent; color: var(--ink); font: 500 var(--t12) var(--font-ui); cursor: pointer; transition: background .15s, border-color .15s, transform .15s, opacity .15s; }
+.chip-k:hover, .seg button:hover, .tb:hover { transform: translateY(-1px); border-color: var(--glow); }
+.chip-k[aria-pressed="false"] { opacity: .4; }
+.chip-k .sw { width: 10px; height: 10px; border-radius: 50%; }
+.chip-k .sw.sq { border-radius: 2px; }
+.chip-k small { color: var(--muted-foreground); font-family: var(--font-mono); }
+.seg { padding: 2px; border-radius: 10px; border: 1px solid var(--glass-border); }
+.seg button { border-color: transparent; height: 28px; }
+.seg button[aria-checked="true"] { background: var(--ink); color: var(--bg); }
+.tb[aria-pressed="false"] { opacity: .45; }
+.tb.icon { width: 34px; padding: 0; justify-content: center; }
+
+.card { width: 300px; padding: 12px; pointer-events: none; animation: pop .16s ease-out both; z-index: 4; }
+.card.pinned { pointer-events: auto; box-shadow: 0 0 0 1px var(--glow), 0 16px 40px -12px rgba(0,0,0,.5); }
+.card .hd { display: flex; gap: 10px; align-items: flex-start; }
+.card .thumb { width: 72px; height: 92px; border-radius: 6px; object-fit: cover; border: 1px solid var(--glass-border); background: #fff; flex: none; }
+.card .kind { font: 500 var(--t11) var(--font-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted-foreground); display: flex; align-items: center; gap: 5px; }
+.card h3 { font-family: var(--font-source); font-size: 18px; font-weight: 500; line-height: 1.2; margin: 3px 0; word-break: break-word; }
+.card .cite { font: var(--t11) var(--font-mono); color: var(--muted-foreground); word-break: break-all; background: none; padding: 0; white-space: normal; }
+.card .ex { font-family: var(--font-source); font-size: var(--t13); color: var(--muted-foreground); margin-top: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.card .row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
+.card .pill { font-size: var(--t11); }
+.card .drift { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin-top: 8px; background: rgba(127,127,127,.2); }
+.card .drift i { display: block; height: 100%; }
+.card .dl { display: flex; gap: 8px; flex-wrap: wrap; font-size: var(--t11); color: var(--muted-foreground); margin-top: 4px; }
+.card .dl b { font-weight: 600; color: var(--ink); }
+.card a.go { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 10px; border-radius: var(--radius-sm); background: var(--ink); color: var(--bg); font-weight: 600; font-size: var(--t12); }
+.card .hint { font-size: var(--t11); color: var(--muted-foreground); margin-top: 6px; }
+
+.caption { left: 50%; bottom: 72px; transform: translateX(-50%); width: min(620px, calc(100% - 380px)); display: flex; gap: 12px; align-items: flex-start; padding: 12px 12px 12px 14px;
+  box-shadow: 0 0 0 1px var(--glow), 0 0 40px -6px var(--glow); animation: capin .45s cubic-bezier(.2,.8,.2,1) both; }
+.cap-step { font: 600 var(--t12) var(--font-mono); color: var(--bg); background: var(--glow); border-radius: 6px; padding: 3px 7px; flex: none; margin-top: 1px; }
+.cap-body { flex: 1; } .cap-body b { font-size: var(--t14); } .cap-body p { font-size: var(--t13); color: var(--muted-foreground); margin-top: 2px; }
+
+.timebar { left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 8px 14px; animation: rise .6s .16s cubic-bezier(.2,.8,.2,1) both; }
+.era { display: inline-flex; gap: 5px; align-items: center; font: 500 var(--t12) var(--font-mono); color: var(--muted-foreground); }
+.era:first-child { color: var(--dot-b); } .era:last-child { color: var(--dot-w); }
+#time { width: 220px; accent-color: var(--glow); }
+.mini { right: 16px; bottom: 16px; width: 180px; height: 130px; padding: 0; cursor: crosshair; }
+.keys-chip { left: 352px; bottom: 16px; display: inline-flex; gap: 6px; align-items: center; height: 34px; padding: 0 10px; color: var(--muted-foreground); font: 500 var(--t12) var(--font-ui); cursor: pointer; }
+.keys { left: 352px; bottom: 58px; display: grid; grid-template-columns: auto auto; gap: 6px 16px; padding: 12px 14px; font-size: var(--t12); color: var(--ink); animation: pop .16s ease-out both; }
+.toast { left: 50%; top: 70px; transform: translateX(-50%); padding: 8px 14px; font-size: var(--t13); animation: pop .2s ease-out both; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+@keyframes pop { from { opacity: 0; transform: scale(.96); } }
+@keyframes capin { from { opacity: 0; transform: translate(-50%, 14px); } }
+@media (prefers-reduced-motion: reduce) { .atlas *, .atlas *::before { animation: none !important; transition: none !important; } }
+@media (max-width: 900px) {
+  .panel { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 38%; border-radius: 12px 12px 0 0; }
+  .toolbar { left: 16px; } .mini, .keys-chip, .timebar { display: none; }
+  .caption { width: calc(100% - 32px); bottom: 40%; }
+}
+</style>
+{% endblock %}
+{% block scripts %}
+<script>
+(() => {
+"use strict";
+const D = JSON.parse(document.getElementById("atlas-data").textContent);
+const P = D.points, E = D.edges, TOURS = D.tours;
+const $ = (id) => document.getElementById(id);
+const root = $("atlas"), cv = $("map"), ctx = cv.getContext("2d"), mini = $("mini"), mctx = mini.getContext("2d");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = (name) => getComputedStyle(root).getPropertyValue(name).trim();
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const KINDS = {
+  scan_image: { label: "Scan images", one: "Scan image", icon: "scan", sq: true },
+  plate_crop: { label: "Plate crops", one: "Plate crop", icon: "image", sq: true },
+  britannica_entry: { label: "Britannica entries", one: "Britannica entry", icon: "book" },
+  wikipedia_chunk: { label: "Wikipedia chunks", one: "Wikipedia chunk", icon: "globe" },
+};
+const STATUS = { matched: "#4ade80", no_clear_counterpart: "#fbbf24", error: "#fb7185", own_page: "#c9b48c" };
+const DRIFT = { enduring: "#4ade80", renamed: "#38bdf8", superseded: "#fbbf24", dropped: "#9ca3af" };
+const CLUSTER = ["#60a5fa", "#f472b6", "#34d399", "#fbbf24", "#a78bfa", "#fb923c", "#22d3ee", "#f87171", "#a3e635", "#e879f9", "#2dd4bf", "#facc15", "#818cf8", "#fca5a5", "#86efac", "#c4b5fd"];
+const COLORBY = [["kind", "Kind"], ["status", "Match"], ["drift", "Drift"], ["cluster", "Topic"]];
+
+// ---- state ----
+const S = { cx: 0, cy: 0, k: 1, color: "kind", edges: true, time: 0.5, night: true, kinds: new Set(Object.keys(KINDS)),
+            hover: -1, sel: -1, focus: new Set(), tour: -1, t0: performance.now() };
+let W = 0, H = 0, DPR = 1, BASE = 100, anim = null, intro = reduce ? 1 : 0;
+const byId = new Map(P.map((p, i) => [p.id, i]));
+const imgs = {};
+for (const [k, url] of Object.entries(D.thumbs)) { const im = new Image(); im.src = url; im.onload = () => draw(); imgs[k] = im; }
+const bounds = P.reduce((b, p) => [Math.min(b[0], p.x), Math.min(b[1], p.y), Math.max(b[2], p.x), Math.max(b[3], p.y)], [1e9, 1e9, -1e9, -1e9]);
+const dominant = (p) => p.drift ? Object.entries(p.drift).sort((a, b) => b[1] - a[1])[0][0] : null;
+const isOld = (p) => p.kind !== "wikipedia_chunk";
+// stable random phase per point for twinkle and intro
+P.forEach((p, i) => { p._ph = (Math.sin(i * 12.9898) * 43758.5453) % 1; p._lift = 0; });
+
+function resize() {
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = W * DPR; cv.height = H * DPR;
+  BASE = Math.min(W, H) / 6.2;
+  mini.width = 180 * DPR; mini.height = 130 * DPR;
+  draw();
+}
+const sx = (x) => (x - S.cx) * S.k * BASE + W / 2 + panelShift();
+const sy = (y) => -(y - S.cy) * S.k * BASE + H / 2;
+const wx = (px) => (px - W / 2 - panelShift()) / (S.k * BASE) + S.cx;
+const wy = (py) => -(py - H / 2) / (S.k * BASE) + S.cy;
+function panelShift() { return W > 900 ? 168 : 0; }
+
+function colorOf(p) {
+  if (S.color === "kind") return p.kind === "wikipedia_chunk" ? css("--dot-w") : css("--dot-b");
+  if (S.color === "status") return STATUS[p.status] || (S.night ? "#4b5563" : "#d1d5db");
+  if (S.color === "drift") { const d = dominant(p); return d ? DRIFT[d] : (S.night ? "#374151" : "#e5e7eb"); }
+  if (S.color === "cluster") return p.cluster != null ? CLUSTER[Number(p.cluster) % CLUSTER.length] : (S.night ? "#374151" : "#e5e7eb");
+}
+function alphaOf(p) {
+  if (!S.kinds.has(p.kind)) return 0;
+  const a = isOld(p) ? Math.min(1, 2 * (1 - S.time)) : Math.min(1, 2 * S.time);
+  let v = Math.max(0.06, a);
+  if (S.focus.size && !S.focus.has(p.id)) v *= 0.18;
+  if ((S.color === "drift" && !p.drift && p.kind === "britannica_entry") || (S.color === "cluster" && p.cluster == null && !p.thumb)) v *= 0.5;
+  return v;
+}
+const ease = (t) => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+function spriteSize(p) {
+  const z = Math.max(1, S.k);
+  const base = p.kind === "scan_image" ? 7 : 6;
+  return Math.min(110, base * Math.pow(z, 0.85)) * (1 + p._lift * 0.7);
+}
+
+// ---- drawing ----
+let raf = 0;
+// requestAnimationFrame can stall (hidden tab, headless capture); a timer keeps the loop alive.
+let rafT = 0;
+function draw() {
+  if (raf) return;
+  raf = requestAnimationFrame(frame);
+  clearTimeout(rafT); rafT = setTimeout(() => { if (raf) { cancelAnimationFrame(raf); frame(); } }, 120);
+}
+function frame() {
+  raf = 0;
+  const now = performance.now();
+  const t = (now - S.t0) / 1000;
+  if (anim) {
+    const u = Math.min(1, (now - anim.start) / anim.dur), e = ease(u);
+    S.cx = anim.a.cx + (anim.b.cx - anim.a.cx) * e; S.cy = anim.a.cy + (anim.b.cy - anim.a.cy) * e;
+    // zoom out a little mid-flight for a camera feel
+    const kz = Math.exp(Math.log(anim.a.k) + (Math.log(anim.b.k) - Math.log(anim.a.k)) * e) * (1 - 0.35 * Math.sin(Math.PI * e) * anim.hop);
+    S.k = kz;
+    if (u >= 1) { anim = null; saveHash(); }
+  }
+  if (intro < 1) intro = Math.min(1, t / 1.1);
+  let busy = !!anim || intro < 1;
+  P.forEach((p, i) => { const target = i === S.hover ? 1 : 0; if (Math.abs(p._lift - target) > .01) { p._lift += (target - p._lift) * (reduce ? 1 : 0.25); busy = true; } else p._lift = target; });
+
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  ctx.clearRect(0, 0, W, H);
+  drawBackdrop(t);
+  const ip = easeOut(intro);
+  const pos = P.map((p, i) => {
+    const d = Math.min(1, Math.max(0, ip * 1.6 - p._ph * 0.6 - 0.0));
+    return [sx(p.x * d), sy(p.y * d), d];
+  });
+  if (S.edges) busy = drawEdges(pos, t) || busy;
+  // text dots first, then image sprites on top
+  ctx.globalCompositeOperation = "source-over";
+  P.forEach((p, i) => {
+    if (p.thumb) return;
+    const a = alphaOf(p) * pos[i][2]; if (a <= 0.01) return;
+    const [x, y] = pos[i]; if (x < -20 || y < -20 || x > W + 20 || y > H + 20) return;
+    const tw = S.night ? 0.75 + 0.25 * Math.sin(t * 1.7 + p._ph * 40) : 1;
+    const r = (p.kind === "britannica_entry" ? 3.0 : 1.7) * Math.min(2.6, Math.pow(S.k, 0.4)) * (1 + p._lift * 1.4);
+    ctx.globalAlpha = a * (reduce ? 1 : tw);
+    ctx.fillStyle = colorOf(p);
+    if (S.night && p.kind === "britannica_entry") { ctx.beginPath(); ctx.arc(x, y, r * 2.6, 0, 7); ctx.globalAlpha = a * (p.kind === "wikipedia_chunk" ? 0.035 : 0.08); ctx.fill(); ctx.globalAlpha = a * (reduce ? 1 : tw); }
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill();
+  });
+  ctx.globalCompositeOperation = "source-over";
+  const order = P.map((p, i) => i).filter((i) => P[i].thumb).sort((a, b) => (a === S.hover) - (b === S.hover) || P[a]._lift - P[b]._lift);
+  for (const i of order) drawSprite(P[i], pos[i], i);
+  drawLabels(pos);
+  busy = drawHighlights(pos, t) || busy;
+  if (S.edges || S.focus.size || S.night) busy = busy || !reduce;
+  drawMini();
+  if (busy) draw();
+}
+
+function drawBackdrop(t) {
+  ctx.fillStyle = css("--bg"); ctx.fillRect(0, 0, W, H);
+  if (S.night) {
+    const g = ctx.createRadialGradient(W * .6, H * .45, 10, W * .6, H * .45, Math.max(W, H) * .7);
+    g.addColorStop(0, "rgba(99,102,241,.10)"); g.addColorStop(.5, "rgba(255,157,0,.03)"); g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
+  // world grid
+  const step = Math.pow(2, Math.round(Math.log2(1 / S.k))) * 0.5;
+  ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1; ctx.beginPath();
+  for (let x = Math.floor(wx(0) / step) * step; x < wx(W); x += step) { ctx.moveTo(sx(x), 0); ctx.lineTo(sx(x), H); }
+  for (let y = Math.floor(wy(H) / step) * step; y < wy(0); y += step) { ctx.moveTo(0, sy(y)); ctx.lineTo(W, sy(y)); }
+  ctx.stroke();
+}
+
+function edgeColor(e) {
+  if (e.type === "scan_entry") return css("--dot-b");
+  if (S.color === "drift" && e.drift) return DRIFT[e.drift];
+  return STATUS[e.status] || "#9ca3af";
+}
+function drawEdges(pos, t) {
+  let moving = false;
+  ctx.lineWidth = 1;
+  for (const e of E) {
+    const pa = P[e.a], pb = P[e.b];
+    const a = Math.min(alphaOf(pa), alphaOf(pb)); if (a < 0.03) continue;
+    const focused = S.focus.size && S.focus.has(pa.id) && S.focus.has(pb.id);
+    const sel = S.sel === e.a || S.sel === e.b || S.hover === e.a || S.hover === e.b;
+    const [x1, y1] = pos[e.a], [x2, y2] = pos[e.b];
+    const col = edgeColor(e);
+    ctx.strokeStyle = col;
+    ctx.globalAlpha = a * (sel || focused ? 0.9 : e.type === "scan_entry" ? 0.10 : 0.22);
+    ctx.lineWidth = sel || focused ? 1.6 : 0.8;
+    // gentle arc
+    const mx = (x1 + x2) / 2 - (y2 - y1) * 0.12, my = (y1 + y2) / 2 + (x2 - x1) * 0.12;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.quadraticCurveTo(mx, my, x2, y2); ctx.stroke();
+    if (!reduce && e.status === "matched" && (e.type !== "scan_entry")) {
+      const u = ((t * 0.35 + P[e.a]._ph) % 1), v = 1 - u;
+      const px = v * v * x1 + 2 * u * v * mx + u * u * x2, py = v * v * y1 + 2 * u * v * my + u * u * y2;
+      ctx.globalAlpha = a * (sel || focused ? 1 : 0.6); ctx.fillStyle = col;
+      ctx.beginPath(); ctx.arc(px, py, sel || focused ? 2.6 : 1.6, 0, 7); ctx.fill();
+      moving = true;
+    }
+  }
+  ctx.globalAlpha = 1;
+  return moving;
+}
+
+function drawSprite(p, pp, i) {
+  const a = alphaOf(p) * pp[2]; if (a <= 0.01) return;
+  const [x, y] = pp; const s = spriteSize(p);
+  if (x < -s || y < -s || x > W + s || y > H + s) return;
+  const im = imgs[p.thumb];
+  const ar = im && im.naturalWidth ? im.naturalHeight / im.naturalWidth : 1.27;
+  const w = ar > 1 ? s / ar : s, h = ar > 1 ? s : s * ar;
+  ctx.globalAlpha = a;
+  ctx.save();
+  ctx.shadowColor = p._lift > .05 || S.focus.has(p.id) ? css("--glow") : "rgba(0,0,0,.45)";
+  ctx.shadowBlur = 6 + p._lift * 18;
+  const ring = S.color === "kind" ? (p.kind === "plate_crop" ? "#ff9d00" : "#ffffff") : colorOf(p);
+  ctx.fillStyle = ring;
+  const b = s > 16 ? 2 : 1;
+  ctx.fillRect(x - w / 2 - b, y - h / 2 - b, w + 2 * b, h + 2 * b);
+  ctx.restore();
+  ctx.globalAlpha = a;
+  if (im && im.complete && im.naturalWidth) ctx.drawImage(im, x - w / 2, y - h / 2, w, h);
+  ctx.globalAlpha = 1;
+}
+
+// headwords and article titles appear as you zoom in; focused points always get a label
+function drawLabels(pos) {
+  const show = S.k > 3.2;
+  ctx.font = `500 12px ${css("--font-ui") || "sans-serif"}`;
+  ctx.textBaseline = "middle";
+  const taken = [];
+  const seenTitle = new Set();
+  const order = P.map((p, i) => i).sort((a, b) => S.focus.has(P[b].id) - S.focus.has(P[a].id));
+  for (const i of order) {
+    const p = P[i], focused = S.focus.has(p.id) || i === S.sel;
+    if (!show && !focused) continue;
+    if (p.kind === "scan_image" || p.kind === "plate_crop") continue;
+    const a = alphaOf(p); if (a < 0.3 && !focused) continue;
+    const [x, y] = pos[i]; if (x < 0 || y < 0 || x > W || y > H) continue;
+    const text = p.kind === "wikipedia_chunk" ? p.label : p.label.slice(0, 28);
+    const key = p.kind === "wikipedia_chunk" ? "W" + p.wiki_page_id : p.id;
+    if (seenTitle.has(key)) continue;
+    const w = ctx.measureText(text).width, bx = x + (focused ? 14 : 7), by = y - 8;
+    if (taken.some((r) => bx < r[0] + r[2] && bx + w > r[0] && by < r[1] + 16 && by + 16 > r[1])) continue;
+    taken.push([bx, by, w + 8]); seenTitle.add(key);
+    ctx.globalAlpha = focused ? 1 : Math.min(1, (S.k - 3.2) / 2) * 0.9;
+    ctx.fillStyle = S.night ? "rgba(11,15,25,.72)" : "rgba(255,255,255,.8)";
+    ctx.fillRect(bx - 3, by + 1, w + 6, 15);
+    ctx.fillStyle = p.kind === "wikipedia_chunk" ? css("--dot-w") : css("--dot-b");
+    ctx.fillText(text, bx, by + 9);
+    if (taken.length > 60) break;
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawHighlights(pos, t) {
+  const ids = new Set(S.focus);
+  if (S.sel >= 0) ids.add(P[S.sel].id);
+  if (!ids.size) return false;
+  const pulse = reduce ? 0.5 : (Math.sin(t * 3) + 1) / 2;
+  ctx.strokeStyle = css("--glow");
+  for (const id of ids) {
+    const i = byId.get(id); if (i == null || !S.kinds.has(P[i].kind)) continue;
+    const [x, y] = pos[i];
+    const r = (P[i].thumb ? spriteSize(P[i]) * 0.7 : 7) + 3 + pulse * 5;
+    ctx.globalAlpha = 0.85 - pulse * 0.4; ctx.lineWidth = i === S.sel ? 2.2 : 1.4;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  return true;
+}
+
+function drawMini() {
+  const mw = 180, mh = 130, pad = 8;
+  const bw = bounds[2] - bounds[0], bh = bounds[3] - bounds[1];
+  const sc = Math.min((mw - 2 * pad) / bw, (mh - 2 * pad) / bh);
+  const mx = (x) => pad + (x - bounds[0]) * sc + (mw - 2 * pad - bw * sc) / 2, my = (y) => mh - pad - (y - bounds[1]) * sc - (mh - 2 * pad - bh * sc) / 2;
+  mctx.setTransform(DPR, 0, 0, DPR, 0, 0); mctx.clearRect(0, 0, mw, mh);
+  for (const p of P) {
+    if (!S.kinds.has(p.kind)) continue;
+    mctx.globalAlpha = p.thumb ? 0.9 : 0.5; mctx.fillStyle = p.thumb ? "#ff9d00" : colorOf(p);
+    mctx.fillRect(mx(p.x), my(p.y), p.thumb ? 2 : 1.2, p.thumb ? 2 : 1.2);
+  }
+  mctx.globalAlpha = 1; mctx.strokeStyle = css("--glow"); mctx.lineWidth = 1.2;
+  const x0 = mx(wx(0)), x1 = mx(wx(W)), y0 = my(wy(0)), y1 = my(wy(H));
+  mctx.strokeRect(Math.max(1, x0), Math.max(1, y0), Math.min(mw - 2, x1) - Math.max(1, x0), Math.min(mh - 2, y1) - Math.max(1, y0));
+  mini._map = { mx, my, sc, pad, bw, bh, mw, mh };
+}
+
+// ---- camera ----
+function flyTo(cx, cy, k, dur = 1400) {
+  k = Math.max(0.5, Math.min(40, k));
+  if (reduce) { Object.assign(S, { cx, cy, k }); anim = null; draw(); saveHash(); return; }
+  const dist = Math.hypot(cx - S.cx, cy - S.cy);
+  anim = { start: performance.now(), dur, a: { cx: S.cx, cy: S.cy, k: S.k }, b: { cx, cy, k }, hop: Math.min(1, dist * S.k / 2) };
+  draw();
+}
+function fitIds(ids, maxK = 7) {
+  const pts = ids.map((id) => P[byId.get(id)]).filter(Boolean);
+  if (!pts.length) return;
+  const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const availW = W - (W > 900 ? 380 : 40), availH = H - 260;
+  const k = Math.min(maxK, availW / (BASE * Math.max(0.05, x1 - x0)) * 0.8, availH / (BASE * Math.max(0.05, y1 - y0)) * 0.8);
+  flyTo((x0 + x1) / 2, (y0 + y1) / 2, k);
+}
+function resetView() { S.focus.clear(); S.sel = -1; S.tour = -1; hideCaption(); hideCard(); fitIds(P.map((p) => p.id), 1.1); markTours(); }
+
+// ---- interaction ----
+let drag = null, moved = false;
+cv.addEventListener("pointerdown", (ev) => { cv.setPointerCapture(ev.pointerId); drag = { x: ev.clientX, y: ev.clientY, cx: S.cx, cy: S.cy }; moved = false; anim = null; });
+cv.addEventListener("pointermove", (ev) => {
+  const r = cv.getBoundingClientRect(), px = ev.clientX - r.left, py = ev.clientY - r.top;
+  if (drag) {
+    const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    if (Math.hypot(dx, dy) > 3) { moved = true; cv.classList.add("dragging"); }
+    S.cx = drag.cx - dx / (S.k * BASE); S.cy = drag.cy + dy / (S.k * BASE); draw(); return;
+  }
+  const i = pick(px, py);
+  if (i !== S.hover) { S.hover = i; draw(); }
+  cv.classList.toggle("pointing", i >= 0);
+  if (i >= 0 && S.sel < 0) showCard(i, px, py, false); else if (S.sel < 0) hideCard();
+});
+cv.addEventListener("pointerup", (ev) => {
+  cv.classList.remove("dragging");
+  const r = cv.getBoundingClientRect(), px = ev.clientX - r.left, py = ev.clientY - r.top;
+  if (drag && !moved) {
+    const i = pick(px, py);
+    if (i >= 0 && i === S.sel) { const u = linkOf(P[i]); if (u) window.open(u.href, u.ext ? "_blank" : "_self", "noopener"); }
+    else if (i >= 0) select(i, px, py);
+    else { S.sel = -1; hideCard(); }
+  }
+  drag = null; saveHash(); draw();
+});
+cv.addEventListener("pointerleave", () => { S.hover = -1; if (S.sel < 0) hideCard(); draw(); });
+cv.addEventListener("wheel", (ev) => {
+  ev.preventDefault(); anim = null;
+  const r = cv.getBoundingClientRect(), px = ev.clientX - r.left, py = ev.clientY - r.top;
+  const bx = wx(px), by = wy(py);
+  S.k = Math.max(0.5, Math.min(40, S.k * Math.exp(-ev.deltaY * (ev.ctrlKey ? 0.01 : 0.0015))));
+  S.cx = bx - (px - W / 2 - panelShift()) / (S.k * BASE); S.cy = by + (py - H / 2) / (S.k * BASE);
+  draw(); saveHashSoon();
+}, { passive: false });
+cv.addEventListener("dblclick", (ev) => { const r = cv.getBoundingClientRect(); flyTo(wx(ev.clientX - r.left), wy(ev.clientY - r.top), S.k * 2.2, 600); });
+mini.addEventListener("click", (ev) => {
+  const m = mini._map, r = mini.getBoundingClientRect(); if (!m) return;
+  const x = bounds[0] + (ev.clientX - r.left - m.pad - (m.mw - 2 * m.pad - m.bw * m.sc) / 2) / m.sc;
+  const y = bounds[1] + (m.mh - m.pad - (ev.clientY - r.top) - (m.mh - 2 * m.pad - m.bh * m.sc) / 2) / m.sc;
+  flyTo(x, y, S.k, 700);
+});
+
+function pick(px, py) {
+  let best = -1, bd = 1e9;
+  for (let i = 0; i < P.length; i++) {
+    const p = P[i]; if (alphaOf(p) < 0.1) continue;
+    const d = Math.hypot(sx(p.x) - px, sy(p.y) - py);
+    const lim = p.thumb ? Math.max(8, spriteSize(p) * 0.6) : 7;
+    const score = d - (p.thumb ? 4 : 0);
+    if (d < lim && score < bd) { bd = score; best = i; }
+  }
+  return best;
+}
+function select(i, px, py) { S.sel = i; showCard(i, px ?? sx(P[i].x), py ?? sy(P[i].y), true); draw(); saveHash(); }
+
+const revUrl = (p) => p.wiki_revision_id ? `https://en.wikipedia.org/w/index.php?oldid=${p.wiki_revision_id}` : null;
+function linkOf(p) {
+  if (p.kind === "wikipedia_chunk") return { href: revUrl(p), ext: true, label: "Open revision" };
+  if (p.row != null) return { href: `pages/${p.row}.html`, ext: false, label: "Open page view" };
+  return null;
+}
+function citeOf(p) {
+  if (p.kind === "wikipedia_chunk") return `[W:${p.wiki_page_id}:${p.wiki_revision_id}] chunk ${p.chunk}`;
+  if (p.kind === "britannica_entry") return `[${p.id}]`;
+  if (p.kind === "plate_crop") return `${p.id} on page ${p.row}`;
+  return `${p.id}, page ${p.row}`;
+}
+const STATUS_LABEL = { matched: ["matched", "Matched"], no_clear_counterpart: ["uncertain", "No clear counterpart"], error: ["bad", "Error"] };
+function showCard(i, px, py, pinned) {
+  const p = P[i], c = $("card"), K = KINDS[p.kind];
+  const thumb = p.thumb ? `<img class="thumb" src="${D.thumbs[p.thumb]}" alt="">` : "";
+  const st = STATUS_LABEL[p.status];
+  let drift = "";
+  if (p.drift) {
+    drift = `<div class="drift">${Object.entries(p.drift).map(([k, v]) => `<i style="width:${v * 100}%;background:${DRIFT[k]}" title="${k} ${Math.round(v * 100)}%"></i>`).join("")}</div>
+      <div class="dl">${Object.entries(p.drift).filter(([, v]) => v > 0).map(([k, v]) => `<span><b>${Math.round(v * 100)}%</b> ${k}</span>`).join("")}</div>`;
+  }
+  const scores = [p.rerank_logit != null ? `rerank ${Number(p.rerank_logit).toFixed(2)}` : "", p.embed_cos != null ? `cos ${Number(p.embed_cos).toFixed(3)}` : ""].filter(Boolean).join(" · ");
+  const wiki = p.kind !== "wikipedia_chunk" && p.wiki_title ? `<span class="small">→ ${esc(p.wiki_title)}</span>` : "";
+  const cl = p.cluster != null && D.clusters[p.cluster] ? `<div class="dl"><span class="dot" style="background:${CLUSTER[Number(p.cluster) % CLUSTER.length]};margin:0"></span>${esc(D.clusters[p.cluster])}</div>` : "";
+  const ln = linkOf(p);
+  c.innerHTML = `<div class="hd">${thumb}<div style="min-width:0">
+      <div class="kind"><svg class="ic" style="width:12px;height:12px"><use href="#i-${K.icon}"/></svg>${K.one}</div>
+      <h3>${esc(p.label)}</h3><div class="cite">${esc(citeOf(p))}</div></div></div>
+    ${p.excerpt ? `<div class="ex">${esc(p.excerpt)}</div>` : ""}
+    <div class="row">${st ? `<span class="pill ${st[0]}">${st[1]}</span>` : ""}${wiki}${scores ? `<span class="cite">${scores}</span>` : ""}</div>
+    ${drift}${cl}
+    ${pinned && ln && ln.href ? `<div class="row"><a class="go" href="${ln.href}" ${ln.ext ? 'target="_blank" rel="noopener"' : ""}><svg class="ic" style="width:13px;height:13px"><use href="#i-link"/></svg>${ln.label}</a></div>` : ""}
+    ${!pinned ? `<div class="hint">Click to pin. Click again to open.</div>` : ""}`;
+  c.hidden = false; c.classList.toggle("pinned", pinned);
+  const cw = 300, ch = c.offsetHeight;
+  let x = px + 18, y = py + 18;
+  if (x + cw > W - 12) x = px - cw - 18;
+  if (y + ch > H - 12) y = Math.max(12, H - ch - 12);
+  c.style.left = x + "px"; c.style.top = y + "px";
+}
+function hideCard() { $("card").hidden = true; }
+
+// ---- tours ----
+function runTour(n) {
+  const t = TOURS[n]; if (!t) return;
+  S.tour = n; S.focus = new Set(t.focus); S.sel = -1; hideCard();
+  if (t.color) setColor(t.color);
+  S.time = 0.5; $("time").value = 50;
+  if (t.zoom) { const p = P[byId.get(t.focus[0])]; flyTo(p.x, p.y, t.zoom * 2); } else fitIds(t.focus);
+  $("capstep").textContent = `${n + 1}/${TOURS.length}`; $("captitle").textContent = t.title; $("captext").textContent = t.caption;
+  const cap = $("caption"); cap.hidden = true; void cap.offsetWidth; cap.hidden = false;
+  markTours();
+  if (t.select) setTimeout(() => { if (S.tour === n) { const i = byId.get(t.select); S.sel = i; showCard(i, sx(P[i].x), sy(P[i].y), true); draw(); } }, reduce ? 0 : 1450);
+  saveHash();
+}
+function hideCaption() { $("caption").hidden = true; }
+function markTours() { document.querySelectorAll(".tour").forEach((b, i) => b.classList.toggle("on", i === S.tour)); }
+$("capclose").onclick = () => { S.tour = -1; S.focus.clear(); hideCaption(); markTours(); draw(); saveHash(); };
+$("tours").innerHTML = TOURS.map((t, i) => `<li><button class="tour" data-n="${i}" style="animation-delay:${.15 + i * .07}s">
+  <span class="badge"><svg class="ic"><use href="#i-${t.icon}"/></svg><i>${i + 1}</i></span>
+  <span><b>${esc(t.title)}</b><small>${t.key === "scan" ? "image to text" : t.key === "plate" ? "engraving to Wikipedia" : t.key === "mix" ? "topic cluster" : "outlier"}</small></span></button></li>`).join("");
+document.querySelectorAll(".tour").forEach((b) => b.onclick = () => runTour(+b.dataset.n));
+
+// ---- controls ----
+const counts = P.reduce((c, p) => (c[p.kind] = (c[p.kind] || 0) + 1, c), {});
+$("kinds").innerHTML = Object.entries(KINDS).map(([k, v]) => `<button class="chip-k" data-k="${k}" aria-pressed="true" title="${v.label}">
+  <svg class="ic"><use href="#i-${v.icon}"/></svg><span class="sw ${v.sq ? "sq" : ""}" data-sw="${k}"></span><small>${counts[k] || 0}</small></button>`).join("");
+document.querySelectorAll(".chip-k").forEach((b) => b.onclick = () => {
+  const k = b.dataset.k; S.kinds.has(k) ? S.kinds.delete(k) : S.kinds.add(k);
+  b.setAttribute("aria-pressed", S.kinds.has(k)); draw(); saveHash();
+});
+$("colorby").innerHTML = COLORBY.map(([k, l]) => `<button role="radio" data-c="${k}" aria-checked="${k === S.color}">${l}</button>`).join("");
+document.querySelectorAll("#colorby button").forEach((b) => b.onclick = () => setColor(b.dataset.c));
+function setColor(c) {
+  S.color = c; document.querySelectorAll("#colorby button").forEach((b) => b.setAttribute("aria-checked", b.dataset.c === c));
+  legend(); draw(); saveHash();
+}
+function legend() {
+  let items;
+  if (S.color === "kind") items = [["Scan or plate image", "#ffffff", true], ["Britannica entry", css("--dot-b")], ["Wikipedia chunk", css("--dot-w")]];
+  else if (S.color === "status") items = [["Matched", STATUS.matched], ["No clear counterpart", STATUS.no_clear_counterpart], ["Error", STATUS.error], ["Wikipedia (no status)", "#6b7280"]];
+  else if (S.color === "drift") items = Object.entries(DRIFT).map(([k, v]) => [`${k} dominant`, v]);
+  else items = Object.entries(D.clusters).slice(0, 16).map(([k, v]) => [v, CLUSTER[Number(k) % CLUSTER.length]]);
+  $("legend").innerHTML = items.map(([l, c, sq]) => `<span><i style="background:${c};${sq ? "border-radius:2px;outline:1px solid #ff9d00" : ""}"></i>${esc(l)}</span>`).join("");
+  document.querySelectorAll("[data-sw]").forEach((s) => { const k = s.dataset.sw; s.style.background = k === "plate_crop" ? "#ff9d00" : k === "scan_image" ? "#ffffff" : k === "wikipedia_chunk" ? css("--dot-w") : css("--dot-b"); s.style.outline = k === "scan_image" ? "1px solid #9ca3af" : ""; });
+}
+$("edges").onclick = () => { S.edges = !S.edges; $("edges").setAttribute("aria-pressed", S.edges); draw(); saveHash(); };
+function setNight(n) {
+  S.night = n; root.classList.toggle("night", n);
+  $("theme").innerHTML = `<svg class="ic"><use href="#i-${n ? "sun" : "moon"}"/></svg>`; legend(); draw(); saveHash();
+}
+$("theme").onclick = () => setNight(!S.night);
+$("reset").onclick = resetView;
+$("time").oninput = (e) => { S.time = e.target.value / 100; draw(); saveHashSoon(); };
+$("share").onclick = () => { saveHash(); navigator.clipboard?.writeText(location.href).then(() => toast("Link to this view copied"), () => toast("Copy the address bar to share this view")); };
+$("keyschip").onclick = () => { $("keys").hidden = !$("keys").hidden; };
+function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(t._h); t._h = setTimeout(() => t.hidden = true, 1800); }
+
+// ---- search ----
+const q = $("q"), sugg = $("sugg");
+let hits = [], hi = 0;
+const searchable = P.map((p, i) => ({ i, s: `${p.label} ${p.id} ${p.wiki_title || ""}`.toLowerCase() }));
+q.addEventListener("input", () => {
+  const v = q.value.trim().toLowerCase();
+  if (!v) { sugg.hidden = true; return; }
+  const seen = new Set();
+  hits = searchable.filter((r) => r.s.includes(v)).sort((a, b) => P[a.i].label.toLowerCase().startsWith(v) ? -1 : P[b.i].label.toLowerCase().startsWith(v) ? 1 : 0)
+    .filter((r) => { const p = P[r.i], key = p.kind === "wikipedia_chunk" ? "W" + p.wiki_page_id : p.id; if (seen.has(key)) return false; seen.add(key); return true; }).slice(0, 9);
+  hi = 0; renderSugg();
+});
+function renderSugg() {
+  sugg.innerHTML = hits.map((r, n) => { const p = P[r.i];
+    const av = p.thumb ? `<img src="${D.thumbs[p.thumb]}" alt="">` : `<span class="dot" style="background:${p.kind === "wikipedia_chunk" ? css("--dot-w") : css("--dot-b")}"></span>`;
+    return `<li role="option" data-i="${r.i}" aria-selected="${n === hi}">${av}<span>${esc(p.label.slice(0, 48))}</span><small>${esc(p.kind === "wikipedia_chunk" ? "Wikipedia" : p.id)}</small></li>`; }).join("") || `<li>No match</li>`;
+  sugg.hidden = false;
+  sugg.querySelectorAll("li[data-i]").forEach((li) => li.onmousedown = (e) => { e.preventDefault(); go(+li.dataset.i); });
+}
+function go(i) {
+  sugg.hidden = true; q.blur(); S.focus = new Set([P[i].id]); S.tour = -1; hideCaption(); markTours();
+  if (!S.kinds.has(P[i].kind)) { S.kinds.add(P[i].kind); document.querySelector(`.chip-k[data-k="${P[i].kind}"]`).setAttribute("aria-pressed", true); }
+  flyTo(P[i].x, P[i].y, Math.max(S.k, 6));
+  setTimeout(() => select(i), reduce ? 0 : 1400);
+}
+q.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown") { hi = Math.min(hits.length - 1, hi + 1); renderSugg(); e.preventDefault(); }
+  else if (e.key === "ArrowUp") { hi = Math.max(0, hi - 1); renderSugg(); e.preventDefault(); }
+  else if (e.key === "Enter" && hits[hi]) go(hits[hi].i);
+  else if (e.key === "Escape") { q.value = ""; sugg.hidden = true; q.blur(); }
+});
+q.addEventListener("blur", () => setTimeout(() => sugg.hidden = true, 120));
+
+// ---- keyboard ----
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" && e.target.type !== "range") return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key;
+  if (k === "/") { e.preventDefault(); q.focus(); }
+  else if (/^[1-9]$/.test(k) && TOURS[+k - 1]) runTour(+k - 1);
+  else if (k === "e" || k === "E") $("edges").click();
+  else if (k === "c" || k === "C") { const n = COLORBY.findIndex(([c]) => c === S.color); setColor(COLORBY[(n + 1) % COLORBY.length][0]); }
+  else if (k === "n" || k === "N") setNight(!S.night);
+  else if (k === "r" || k === "R") resetView();
+  else if (k === "[" || k === "]") { S.time = Math.max(0, Math.min(1, S.time + (k === "]" ? .1 : -.1))); $("time").value = S.time * 100; draw(); }
+  else if (k === "?") $("keyschip").click();
+  else if (k === "Escape") { S.sel = -1; S.focus.clear(); S.tour = -1; hideCard(); hideCaption(); markTours(); $("keys").hidden = true; draw(); saveHash(); }
+});
+
+// ---- URL hash: shareable state ----
+let hashT = 0;
+function saveHashSoon() { clearTimeout(hashT); hashT = setTimeout(saveHash, 250); }
+function saveHash() {
+  const f = (v) => +v.toFixed(3);
+  const parts = [`v=${f(S.cx)},${f(S.cy)},${f(S.k)}`, `c=${S.color}`, `t=${Math.round(S.time * 100)}`];
+  if (!S.night) parts.push("paper");
+  if (!S.edges) parts.push("noedges");
+  if (S.kinds.size < 4) parts.push(`k=${[...S.kinds].join(",")}`);
+  if (S.tour >= 0) parts.push(`tour=${S.tour + 1}`);
+  if (S.sel >= 0) parts.push(`s=${encodeURIComponent(P[S.sel].id)}`);
+  try { history.replaceState(null, "", "#" + parts.join("&")); } catch (_) { /* file:// in some browsers */ }
+}
+function loadHash() {
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (!location.hash) return false;
+  if (h.has("paper")) setNight(false);
+  if (h.has("noedges")) { S.edges = false; $("edges").setAttribute("aria-pressed", false); }
+  if (h.get("c")) setColor(h.get("c"));
+  if (h.get("t")) { S.time = +h.get("t") / 100; $("time").value = +h.get("t"); }
+  if (h.get("k")) { S.kinds = new Set(h.get("k").split(",")); document.querySelectorAll(".chip-k").forEach((b) => b.setAttribute("aria-pressed", S.kinds.has(b.dataset.k))); }
+  if (h.get("tour")) { runTour(+h.get("tour") - 1); return true; }
+  if (h.get("v")) { const [cx, cy, k] = h.get("v").split(",").map(Number); Object.assign(S, { cx, cy, k }); intro = 1; }
+  if (h.get("s") && byId.has(h.get("s"))) { const i = byId.get(h.get("s")); S.focus = new Set([P[i].id]); setTimeout(() => select(i), 50); }
+  return !!h.get("v");
+}
+
+// ---- count-up stats ----
+document.querySelectorAll("[data-count]").forEach((el) => {
+  const target = +el.dataset.count; if (reduce) return;
+  const t0 = performance.now();
+  const step = () => { const now = performance.now(); const u = Math.min(1, (now - t0) / 1200); el.textContent = (target * easeOut(u)).toFixed(1) + "%"; if (u < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+});
+
+window.addEventListener("resize", resize);
+resize(); legend();
+if (!loadHash()) { const cx = (bounds[0] + bounds[2]) / 2, cy = (bounds[1] + bounds[3]) / 2; Object.assign(S, { cx, cy, k: 1.25 }); }
+draw();
+window.__atlas = { S, P, runTour, select, flyTo };
+})();
+</script>
+{% endblock %}

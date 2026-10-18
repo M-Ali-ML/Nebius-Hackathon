@@ -182,3 +182,25 @@ def test_page_pair_cites_the_entry_holding_the_quote(work):
     assert len(pages) == 1 and pages[0][0]["entry_ids"] == ["B:7:0", "B:7:1"]
     assert compare.cite_entry("a yellow metal", pages[0][0]["parts"]) == "[B:7:1]"
     assert agent_tools.get_pair("P:7", work)["cite_wikipedia"] == "[W:123:456]"
+
+
+def test_bm25_entries_and_mode_switch(work, monkeypatch):
+    hits = agent_tools._bm25_entries("fixed air chalk", work, 3)
+    assert hits and hits[0][1]["entry_id"] == "B:7:0"
+    monkeypatch.setenv("NEMOTRON_RETRIEVAL_MODE", "nope")
+    with pytest.raises(ValueError):
+        agent_tools.retrieval_mode()
+    monkeypatch.setenv("NEMOTRON_RETRIEVAL_MODE", "bm25_only")
+    assert agent_tools.retrieval_mode() == "bm25_only"
+
+
+def test_score_run_checks_citations_against_tool_output():
+    from nemotron_challenge.agent_runner import score_run
+
+    rec = {"status": "ok", "tokens": {"total": 9}, "seconds": 1.0,
+           "tool_calls": [{"name": "get_pair", "output": '{"cite": "[B:7:0]", "w": "[W:123:456]"}'}],
+           "final_text": "Air [B:7:0] vs CO2 [W:123:456] and [W:999:1]."}
+    s = score_run(rec, "B:7:0", "123")
+    assert s["expected_b_cited"] and s["expected_w_cited"] and s["unsupported_citations"] == ["W:999:1"]
+    assert not s["no_evidence"]
+    assert score_run({**rec, "final_text": "No evidence found in Britannica."}, None, None)["no_evidence"]

@@ -110,3 +110,8 @@ Candidate 6 cases (lead decides): successes lightning, firedamp, old-terms rerun
 - Runs: plate 2077 success ([R:2078] MICROSCOPE Plate CCC); plate 651 first run failed (173k tokens, never tried before=2), rerun after a skill rule found [R:649] (46k tokens); continuation B:13:0 correct negative; B:452 rerun repaired by skill rule 6 (view_scan shows blank cover).
 - Finding: neighbors help plates; for continuations the scan before is rarely the printed page before (about 13 scans per volume).
 - Plugin and skill reinstalled in data/hermes.
+
+## Demo prep (from 14:41)
+- docs/demo-commands.md: setup, start command, 3 questions (lightning, plate 2077, old terms with find_drift), alternate (B:452 blank cover), expected tool calls, lines to point at, runs NOT to use.
+- First rehearsal on main c533508 ran in `full` mode (runner default bug) and plate 2077 failed with the provider limit "At most 8 image(s) may be provided in one prompt". Fixed in 3402ab4: runner default hybrid, view_neighbors returns one contact-sheet image, skill states the 8-image budget. Main needs this commit before recording.
+- New findings: "superseded facts" demo run took an OCR error as a fact change (ounce "fitteenth" = "ſixteenth" on the scan). A scan-checked "renamed" run kept only 2 of 20 candidates. Lexical drift is dominated by OCR noise.

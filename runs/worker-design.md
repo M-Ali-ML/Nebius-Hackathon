@@ -35,3 +35,12 @@ Branch `M-Ali-ML/mvp-design`. Scope: the visual design of the static site (`src/
 
 - Replaced every "1842" label in the templates with the collection range 1768-1860 (brand, drift header, table headers, how and analysis leads).
 - One "1842" stays on pages/374.html. It is in the Super VL search phrases (model output), so it is not changed.
+
+## Less clutter (progressive disclosure)
+
+- Inspector shows the key fact per section; scores, reasoning, extra claims, terms, model checks, and plate details open on click. "Expand all" opens everything.
+- Entries are one compact row (headword, status, article or cause); click to see snippet, scores, reason.
+- Block-class chips moved into a "Layers" popover; provenance is collapsed.
+- Index: cause notes on hover; cause chips appear only with the Uncertain filter.
+- Claim quotes clamp to 4 lines; click to show the full quote.
+- Screenshots: runs/design/calm-*.png.

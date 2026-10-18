@@ -32,3 +32,5 @@ What it reveals:
 - Agent: it reasoned well from text alone, but the skill only asks it to view the scan when OCR looks wrong, not when the content looks impossible.
 
 Limits: one page. Only 2 of 100 pages used the column-split fallback (rows 452 and 2243); we did not inspect row 2243.
+
+Repair (separate run, not part of this case): after we added skill rule 6 ("if the content looks impossible for an 18th-century page, call `view_scan`"), the same question was asked again in `runs/agent/20261018-143836-what-does-britannica-entry-b-452-0-say-a.json`. The agent called `view_scan`, saw the blank cover, and said the stored text does not match the page. Parse, match, and compare still hold the bad record; the fix is only on the agent side.

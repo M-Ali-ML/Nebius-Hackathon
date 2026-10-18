@@ -211,3 +211,29 @@ def test_resolves_entries_and_saved_articles(work):
 
     assert resolves("B:7:0", work) and not resolves("B:7:9", work)
     assert resolves("W:123:456", work) and not resolves("W:123:999", work)
+
+
+def test_hybrid_is_the_default_mode(monkeypatch):
+    monkeypatch.delenv("NEMOTRON_RETRIEVAL_MODE", raising=False)
+    assert agent_tools.retrieval_mode() == "hybrid"
+
+
+def test_view_neighbors_uses_cached_blocks(work, monkeypatch):
+    from nemotron_challenge import neighbors
+
+    img = work / "n8.jpg"
+    Image.new("RGB", (60, 80), "white").save(img)
+    out = work / "plates" / "neighbors" / "7"
+    out.mkdir(parents=True)
+    (out / "8.blocks.json").write_text(json.dumps(
+        [{"order": 0, "cls": "Page-header", "bbox": [0.1, 0.01, 0.9, 0.05], "text": "MICROSCOPE. Plate CCC."},
+         {"order": 1, "cls": "Text", "bbox": [0.1, 0.1, 0.9, 0.9], "text": "Fig. 1 shows the lens."}]))
+    monkeypatch.setattr(neighbors, "get_neighbors", lambda row, before, after, **kw: [
+        {"row_index": 8, "offset": 1, "page_id": "britannica:x:train:8", "volume_id": "v", "image_sha256": "s",
+         "image_path": str(img)}])
+    monkeypatch.setattr(neighbors, "parse_neighbor", lambda *a, **k: pytest.fail("cached page was parsed again"))
+    meta, images = agent_tools.view_neighbors("B:7:0", 1, 1, work_dir=work, cache_dir=work)
+    page = meta["neighbors"][0]
+    assert page["cite"] == "[R:8]" and "MICROSCOPE" in page["running_head"] and "lens" in page["text"]
+    assert images[0][:2] == b"\xff\xd8" and page["in_sample"] is False
+    assert agent_tools._row_of("P:651") == 651 and agent_tools._row_of("britannica:x:train:2077") == 2077

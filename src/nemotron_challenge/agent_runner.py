@@ -65,7 +65,10 @@ def summarize(events: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def ask(question: str, *, repo: Path, max_turns: int = 12, timeout: int = 900, runs: Path = RUNS) -> Path:
-    env = {**os.environ, "HERMES_HOME": HERMES_HOME, "NEMOTRON_REPO": str(repo)}
+    from dotenv import dotenv_values
+
+    secrets = {k: v for k, v in dotenv_values(repo / ".env").items() if v is not None}
+    env = {**secrets, **os.environ, "HERMES_HOME": HERMES_HOME, "NEMOTRON_REPO": str(repo)}
     cmd = [_hermes(), "chat", "-q", question, "--format", "stream-json", "-t", "nemotron_challenge",
            "-s", SKILL, "--max-turns", str(max_turns)]
     started = datetime.now()

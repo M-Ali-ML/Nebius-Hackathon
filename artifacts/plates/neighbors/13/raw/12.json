@@ -1,0 +1,46 @@
+{
+ "id": "chatcmpl-7478ffde-07b8-4ab1-90b6-d96a9418ac96",
+ "object": "chat.completion",
+ "created": 1792326758,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.9707><y_0.0453>درازه کوکه در انگانگی دکتگاه کمک<x_0.9863><y_0.6055><class_Text>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 488,
+  "total_tokens": 521,
+  "completion_tokens": 33,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 0.34,
+  "attempt": 0,
+  "max_tokens": 8744,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:12",
+  "image_sha256": "6dd72de516f9d1628186af706f879b54ff07a4f15aead577c11d9642c953f7ed"
+ }
+}

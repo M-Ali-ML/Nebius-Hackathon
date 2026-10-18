@@ -1,5 +1,6 @@
 """Segmentation and match-decision behavior on small fixtures. These do not measure OCR or retrieval quality."""
 import json
+import re
 
 import pytest
 
@@ -172,3 +173,11 @@ def test_vision_reply_parsing_and_subject():
         parse_reply('{"subject": "Blank page", "phrases": []}')
     assert subject_head("Swift, Jonathan") == "Jonathan Swift"
     assert subject_head("Conserves (sweets)") == "Conserves"
+
+
+def test_uncertainty_causes_file_is_valid():
+    from nemotron_challenge.uncertainty import CAUSES, load_causes
+    causes = load_causes()
+    assert len(causes) >= 200 and {c["cause"] for c in causes.values()} <= set(CAUSES)
+    assert causes["P:546"]["cause"] == "ocr_failure" and causes["B:374:0"]["cause"] == "no_text"
+    assert all(re.fullmatch(r"(B:\d+:\d+|P:\d+)", k) for k in causes)

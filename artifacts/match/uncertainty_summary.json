@@ -1,0 +1,30 @@
+{
+ "entries": {
+  "pool_miss": 47,
+  "threshold_miss": 43,
+  "other": 18,
+  "no_text": 20,
+  "ocr_failure": 37,
+  "obsolete_or_minor": 24
+ },
+ "pages": {
+  "threshold_miss": 19,
+  "pool_miss": 16,
+  "no_text": 6,
+  "ocr_failure": 1,
+  "obsolete_or_minor": 1,
+  "other": 5
+ },
+ "entries_total": 189,
+ "pages_total": 48,
+ "right_article_named": 169,
+ "unclassified": [],
+ "causes": {
+  "no_text": "No usable text (blank scan, caption only, bare cross-reference)",
+  "ocr_failure": "Parse/OCR failure (garbled headword or text, invented text)",
+  "obsolete_or_minor": "Obsolete or historical concept, or a subject too minor for its own Wikipedia article",
+  "pool_miss": "Candidate pool miss: the right article exists but retrieval never returned it",
+  "threshold_miss": "Threshold miss: the right article is top 1 but the scores are below the accept rules",
+  "other": "Other (ranking miss, segmentation error, tables, unclear subject)"
+ }
+}

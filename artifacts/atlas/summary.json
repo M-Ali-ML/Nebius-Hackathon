@@ -1,0 +1,39 @@
+{
+ "model": "nvidia/llama-nemotron-embed-vl-1b-v2",
+ "model_revision": "582e3bf72aee355e3c59ed89de53543c5b0657ee",
+ "dimensions": 2048,
+ "input_type": "document (all kinds)",
+ "umap": {
+  "metric": "cosine",
+  "n_neighbors": 15,
+  "min_dist": 0.12,
+  "seed": 20261018
+ },
+ "counts": {
+  "britannica_entry": 259,
+  "plate_crop": 17,
+  "scan_image": 100,
+  "wikipedia_chunk": 1058
+ },
+ "edges": 336,
+ "clusters_from": "compare/topics.json",
+ "agreement": {
+  "entry_to_wiki": {
+   "n": 67,
+   "share": 0.8806
+  },
+  "scan_to_text": {
+   "n": 97,
+   "share": 0.9175
+  },
+  "scan_to_entry": {
+   "n": 97,
+   "share": 0.9278,
+   "chance": 0.0103,
+   "median_rank_of_own_entry": 1.0,
+   "top5_share": 0.9278,
+   "entries": 259
+  }
+ },
+ "created": "2026-10-18T16:32:50"
+}

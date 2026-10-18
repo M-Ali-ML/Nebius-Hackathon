@@ -381,8 +381,11 @@ def _row_of(page: str) -> int:
 
 def view_neighbors(page: str, before: int = 1, after: int = 1, settings: Settings | None = None,
                    work_dir: Path = ARTIFACTS, cache_dir: Path | None = None,
-                   max_side: int = 1200) -> tuple[dict[str, Any], list[bytes]]:
-    """Adjacent scans of the same volume with their Parse text. Uses cached Parse blocks; parses the rest live."""
+                   max_side: int = 1000) -> tuple[dict[str, Any], list[bytes]]:
+    """Adjacent scans of the same volume with their Parse text. Uses cached Parse blocks; parses the rest live.
+
+    Returns one JPEG per neighbor; run_tool joins them into one labeled image (the provider allows 8 images per prompt).
+    """
     from PIL import Image
 
     from .neighbors import get_neighbors, page_text, parse_neighbor, running_head
@@ -417,6 +420,24 @@ def view_neighbors(page: str, before: int = 1, after: int = 1, settings: Setting
     return meta, images
 
 
+def contact_sheet(images: list[bytes], labels: list[str], height: int = 1000) -> bytes:
+    """Join page images side by side into one labeled JPEG."""
+    from PIL import Image, ImageDraw
+
+    pages = [Image.open(io.BytesIO(b)).convert("RGB") for b in images]
+    pages = [p.resize((int(p.width * height / p.height), height)) for p in pages]
+    band = 40
+    sheet = Image.new("RGB", (sum(p.width for p in pages) + 10 * (len(pages) - 1), height + band), "white")
+    draw, x = ImageDraw.Draw(sheet), 0
+    for page, label in zip(pages, labels):
+        sheet.paste(page, (x, band))
+        draw.text((x + 8, 10), label, fill="black")
+        x += page.width + 10
+    buf = io.BytesIO()
+    sheet.save(buf, "JPEG", quality=85)
+    return buf.getvalue()
+
+
 def run_tool(name: str, args: dict[str, Any]) -> dict[str, Any]:
     if name == "search_sources":
         return search_sources(args["query"], args.get("side", "both"), args.get("k", 5))
@@ -426,8 +447,10 @@ def run_tool(name: str, args: dict[str, Any]) -> dict[str, Any]:
         import base64
 
         meta, images = view_neighbors(str(args["page"]), args.get("before", 1), args.get("after", 1))
-        for item, data in zip(meta["neighbors"], images):
-            item["image_data_url"] = "data:image/jpeg;base64," + base64.b64encode(data).decode()
+        if images:
+            sheet = contact_sheet(images, [f"{n['cite']} offset {n['offset']:+d}" for n in meta["neighbors"]])
+            meta["image_data_url"] = "data:image/jpeg;base64," + base64.b64encode(sheet).decode()
+            meta["image_layout"] = "one image, neighbors left to right in the order of the neighbors list, each labeled"
         return meta
     if name == "find_drift":
         return find_drift(args["kind"], args.get("k", 5))

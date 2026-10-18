@@ -24,7 +24,8 @@ Use the `nemotron_challenge` tools: `search_sources`, `get_pair`, `find_drift`, 
 4. If a quote looks like an OCR error (for example `f` for the long s, broken words), call `view_scan` with the page and the entry bbox. Read the image before you quote.
 5. For a plate page, a page with little text, or a continuation entry (no headword), call `view_neighbors` to see the scans before and after it in the same volume. A plate is often explained on another page. Neighbors are the next scans in the dataset, not always the next printed page: check the running heads before you link pages. If no neighbor at distance 1 has a matching running head, call it again with `before: 2, after: 2` before you search elsewhere.
 6. If the content looks impossible for an 18th-century page (modern words, repeated sentences, a blank image), call `view_scan` before you answer.
-7. Stop when you have evidence from both sides, or when two searches find nothing useful.
+7. Image budget: the model accepts at most 8 images in one conversation. `view_scan` adds 1 image, `view_neighbors` adds 1 image (all neighbors side by side). Do not view the same page twice; reuse what you saw.
+8. Stop when you have evidence from both sides, or when two searches find nothing useful.
 
 ## Answer rules
 

@@ -237,3 +237,15 @@ def test_view_neighbors_uses_cached_blocks(work, monkeypatch):
     assert page["cite"] == "[R:8]" and "MICROSCOPE" in page["running_head"] and "lens" in page["text"]
     assert images[0][:2] == b"\xff\xd8" and page["in_sample"] is False
     assert agent_tools._row_of("P:651") == 651 and agent_tools._row_of("britannica:x:train:2077") == 2077
+
+
+def test_contact_sheet_joins_pages():
+    import io as _io
+
+    imgs = []
+    for color in ("white", "black"):
+        buf = _io.BytesIO()
+        Image.new("RGB", (60, 80), color).save(buf, "JPEG")
+        imgs.append(buf.getvalue())
+    sheet = Image.open(_io.BytesIO(agent_tools.contact_sheet(imgs, ["[R:1] -1", "[R:3] +1"], height=100)))
+    assert sheet.height == 140 and sheet.width == 75 + 10 + 75

@@ -165,19 +165,19 @@ def handle_neighbors(params: dict[str, Any], **kwargs: Any) -> Any:
     result = _call("view_neighbors", params)
     if "error" in result:
         return json.dumps(result)
-    content = []
-    for page in result["neighbors"]:
-        data_url = page.pop("image_data_url")
-        content.append({"type": "text", "text": f"Neighbor scan {page['cite']} (offset {page['offset']}): "
-                        + json.dumps({k: v for k, v in page.items() if k != "text"}) + "\nParse text:\n" + page["text"]})
-        content.append({"type": "image_url", "image_url": {"url": data_url}})
-    head = {k: v for k, v in result.items() if k != "neighbors"}
-    content.insert(0, {"type": "text", "text": "Neighbor pages attached. " + json.dumps(head)})
+    data_url = result.pop("image_data_url", None)
+    pages = result.get("neighbors", [])
+    text = "Neighbor pages. " + json.dumps({k: v for k, v in result.items() if k != "neighbors"})
+    for page in pages:
+        text += (f"\n\nNeighbor scan {page['cite']} (offset {page['offset']}): "
+                 + json.dumps({k: v for k, v in page.items() if k != "text"}) + "\nParse text:\n" + page["text"])
+    if data_url is None:
+        return text
     return {
         "_multimodal": True,
-        "content": content,
-        "text_summary": "Neighbor scans: " + ", ".join(f"{p['cite']} {p['running_head']}" for p in result["neighbors"]),
-        "meta": head,
+        "content": [{"type": "text", "text": text}, {"type": "image_url", "image_url": {"url": data_url}}],
+        "text_summary": "Neighbor scans: " + ", ".join(f"{p['cite']} {p['running_head']}" for p in pages),
+        "meta": {k: v for k, v in result.items() if k != "neighbors"},
     }
 
 

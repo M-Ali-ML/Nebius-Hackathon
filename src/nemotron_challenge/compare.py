@@ -34,7 +34,7 @@ from .config import Settings
 TAGS = ("enduring", "renamed", "superseded", "dropped")
 ENTRY_CHARS, ARTICLE_CHARS = 8000, 10000
 MIN_QUOTE_CHARS = 8
-MAX_PAIRS = 40
+MAX_PAIRS = 100
 WORKERS = 4
 PROMPT_VERSION = "compare-v2"
 STOP = set("""a about above after again against all also am an and any are as at be because been before being below
@@ -404,26 +404,30 @@ def _plot_drift(rows: list[dict[str, Any]], out: Path) -> None:
 
     rows = sorted(rows, key=lambda r: -(r["superseded"] + r["renamed"]) / max(1, r["claims_checked"]))
     labels = [r["label"][:38] for r in rows]
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(12, 0.32 * len(rows) + 1.8), sharey=True,
-                                  gridspec_kw={"width_ratios": [3, 1]})
+    ys = list(range(len(rows)))
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(12, 0.3 * len(rows) + 1.6), sharey=True,
+                                  gridspec_kw={"width_ratios": [3, 1]}, layout="constrained")
     left = [0.0] * len(rows)
     colors = {"enduring": AQUA, "renamed": YELLOW, "superseded": ORANGE, "dropped": BLUE}
     names = {"enduring": "enduring", "renamed": "renamed (language)", "superseded": "superseded (knowledge)",
              "dropped": "dropped (coverage)"}
     for t in TAGS:
         vals = [r[t] / r["claims_checked"] if r["claims_checked"] else 0 for r in rows]
-        ax.barh(labels, vals, left=left, color=colors[t], label=names[t], height=0.7, edgecolor="white", linewidth=1)
+        ax.barh(ys, vals, left=left, color=colors[t], label=names[t], height=0.7, edgecolor="white", linewidth=1)
         left = [a + b for a, b in zip(left, vals)]
+    for i, r in enumerate(rows):
+        if not r["claims_checked"]:
+            ax.text(0.01, i, "no checked claims", va="center", fontsize=8, color=INK2)
+    ax.set_yticks(ys, labels)
+    ax.set_ylim(len(rows) - 0.5, -0.5)
     ax.set_xlim(0, 1)
     ax.set_xlabel("share of checked Britannica claims", color=INK2, fontsize=9)
-    ax.invert_yaxis()
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=4, frameon=False, fontsize=9)
+    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=4, frameon=False, fontsize=9)
     _style(ax)
-    ax2.barh(labels, [r["orthographic_per_100w"] for r in rows], color=INK2, height=0.7)
+    ax2.barh(ys, [r["orthographic_per_100w"] for r in rows], color=INK2, height=0.7)
     ax2.set_xlabel("spelling edits per 100 words\n(orthographic)", color=INK2, fontsize=9)
     _style(ax2)
-    fig.suptitle("Drift decomposition per matched pair", color=INK, fontsize=12, x=0.01, ha="left")
-    fig.tight_layout()
+    fig.suptitle(f"Drift decomposition per matched pair ({len(rows)} pairs)", color=INK, fontsize=12, x=0.01, ha="left")
     fig.savefig(out, dpi=150)
     plt.close(fig)
 

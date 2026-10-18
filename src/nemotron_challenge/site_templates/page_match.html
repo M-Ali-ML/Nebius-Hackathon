@@ -1,0 +1,17 @@
+<div class="pmatch">
+  <h2>Page match <span class="small muted">({{ page_match.page_kind }} page)</span></h2>
+  <div class="match">
+    {% if page_match.status == "matched" %}<span class="badge ok">matched</span>
+    {% else %}<span class="badge warn">uncertain: no clear counterpart</span>{% endif %}
+    {% if page_match.wiki_title %}<a href="{{ page_match.wiki_url }}" target="_blank" rel="noopener">{{ page_match.wiki_title }}</a>
+    <span class="small">[W:{{ page_match.wiki_page_id }}:{{ page_match.wiki_revision_id }}]</span>{% endif %}
+  </div>
+  {% if page_match.page_topic is string %}<div class="small">Page topic from the running head: <b>{{ page_match.page_topic }}</b>{% if page_match.page_topic_raw %} <span class="muted">(Parse: {{ page_match.page_topic_raw }})</span>{% endif %}</div>{% endif %}
+  <div class="scores small">
+    {% if page_match.rerank_logit is not none %}rerank {{ '%.2f'|format(page_match.rerank_logit) }}{% endif %}
+    {% if page_match.rerank_margin is not none %} · margin {{ '%.2f'|format(page_match.rerank_margin) }}{% endif %}
+    {% if page_match.bm25_rank is not none %} · BM25 rank {{ page_match.bm25_rank }}{% endif %}
+    {% if page_match.method %} · {{ page_match.method }}{% endif %}
+  </div>
+  {% if page_match.why %}<div class="small muted why">{{ page_match.why }}</div>{% endif %}
+</div>

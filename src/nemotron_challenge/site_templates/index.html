@@ -8,7 +8,8 @@
     <li><b>{{ totals.pages }}</b> pages</li>
     <li><b>{{ totals.latex_ok }}</b> LaTeX builds ok</li>
     <li><b>{{ totals.entries if inputs.has_entries else "n/a" }}</b> entries</li>
-    <li><b>{{ totals.matched if inputs.has_matches else "n/a" }}</b> matched</li>
+    <li><b>{{ totals.pages_matched if inputs.has_page_matches else "n/a" }}</b> pages matched</li>
+    <li><b>{{ totals.matched if inputs.has_matches else "n/a" }}</b> entries matched</li>
     <li><b>{{ totals.uncertain if inputs.has_matches else "n/a" }}</b> no clear counterpart</li>
     {% if totals.errors %}<li><b>{{ totals.errors }}</b> match errors</li>{% endif %}
   </ul>
@@ -16,13 +17,14 @@
   {% if not inputs.has_matches %}<p class="note">Match output (match/matches.jsonl) is not available yet.</p>{% endif %}
   <input id="filter" class="filter" type="search" placeholder="Filter by row or running head">
   <table class="pages" id="pages">
-    <thead><tr><th>Scan</th><th>Row</th><th>Running head</th><th>Blocks</th><th>Entries</th><th>Matched</th><th>Uncertain</th><th>LaTeX</th></tr></thead>
+    <thead><tr><th>Scan</th><th>Row</th><th>Running head</th><th>Page match</th><th>Blocks</th><th>Entries</th><th>Matched</th><th>Uncertain</th><th>LaTeX</th></tr></thead>
     <tbody>
     {% for r in rows %}
       <tr data-search="{{ r.row }} {{ r.head|lower }}">
         <td><a href="pages/{{ r.row }}.html">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}no scan{% endif %}</a></td>
         <td><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
         <td class="head">{{ r.head or "(no running head)" }}{% if r.plate_status %} <span class="badge {{ 'ok' if r.plate_status == 'matched' else ('bad' if r.plate_status == 'error' else 'warn') }}">plate: {{ r.plate_status }}</span>{% endif %}</td>
+        <td class="pm">{% set pm = r.page_match %}{% if pm %}{% if pm.status == "matched" %}<span class="badge ok">matched</span> <a href="{{ pm.wiki_url }}" target="_blank" rel="noopener">{{ pm.wiki_title }}</a>{% else %}<span class="badge warn" title="{{ pm.reason }}">uncertain</span> <span class="small muted">{{ pm.wiki_title }}</span>{% endif %}{% else %}<span class="small muted">n/a</span>{% endif %}</td>
         <td>{{ r.n_blocks }}</td>
         <td>{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
         <td>{{ r.n_matched if inputs.has_matches else "n/a" }}</td>

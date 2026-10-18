@@ -322,3 +322,131 @@ def project(work: Path) -> dict[str, Any]:
     (out / "points.json").write_text(json.dumps({"points": points, "edges": edges, "clusters": cluster_labels}))
     (out / "summary.json").write_text(json.dumps(summary, indent=1))
     return summary
+
+
+def tours(work: Path, points: list[dict[str, Any]], clusters: dict[str, str]) -> list[dict[str, Any]]:
+    """Four guided views chosen from the data. Every number in a caption is computed here."""
+    out = work / "atlas"
+    meta = json.loads((out / "ids.json").read_text())
+    ids, kinds = meta["ids"], np.asarray(meta["kinds"])
+    unit = _unit(np.load(out / "vectors.npz")["vectors"])
+    index = {i: n for n, i in enumerate(ids)}
+    wiki, ents = np.where(kinds == "wikipedia_chunk")[0], np.where(kinds == "britannica_entry")[0]
+    by_id = {p["id"]: p for p in points}
+    result = []
+
+    # 1) a text scan whose nearest entry is its own OCR entry, with the tightest group of own entries
+    best = None
+    for p in points:
+        if p["kind"] != "scan_image":
+            continue
+        own = [q for q in points if q["kind"] == "britannica_entry" and q.get("row") == p["row"] and q.get("excerpt")]
+        if len(own) < 4:
+            continue
+        top = ids[ents[int(np.argmax(unit[ents] @ unit[index[p["id"]]]))]]
+        if not top.startswith(f"B:{p['row']}:"):
+            continue
+        spread = float(np.mean([np.hypot(q["x"] - p["x"], q["y"] - p["y"]) for q in own]))
+        if best is None or spread < best[0]:
+            best = (spread, p, own, top)
+    if best:
+        _, p, own, top = best
+        result.append({"key": "scan", "icon": "scan", "title": "A page finds its own words",
+                       "caption": f"The scan image of page {p['row']} goes in as pixels only, with no OCR text. Of all "
+                                  f"{len(ents)} Britannica entries, its nearest is {top}, one of the {len(own)} entries Parse read "
+                                  f"from this page. Edges link the scan to those entries.",
+                       "focus": [p["id"]] + [q["id"] for q in own], "select": p["id"]})
+
+    # 2) the matched plate and its Wikipedia article
+    plates = [p for p in points if p["kind"] == "plate_crop" and p.get("plate_match")]
+    for p in plates[:1]:
+        sims = unit[wiki] @ unit[index[p["id"]]]
+        order = [ids[wiki[j]] for j in np.argsort(-sims)]
+        rank = next(r for r, x in enumerate(order, 1) if x.split(":")[1] == p["wiki_page_id"])
+        chunks = [q["id"] for q in points if q["kind"] == "wikipedia_chunk" and q.get("wiki_page_id") == p["wiki_page_id"]]
+        result.append({"key": "plate", "icon": "image", "title": f"Plate {p['row']} meets {p['wiki_title']}",
+                       "caption": f"The engraving “{p['label'][:40]}”, embedded as an image, has the {p['wiki_title']} "
+                                  f"article as nearest of {len(wiki)} Wikipedia chunks (rank {rank}). Plate match "
+                                  f"[W:{p['wiki_page_id']}:{p['wiki_revision_id']}].",
+                       "focus": [p["id"], f"S:{p['row']}"] + chunks, "select": p["id"]})
+
+    # 3) a topic cluster where Britannica entries and Wikipedia chunks share ground on the map
+    groups: dict[Any, dict[str, list[str]]] = {}
+    for p in points:
+        if p.get("cluster") is not None and p["kind"] in {"britannica_entry", "wikipedia_chunk"}:
+            groups.setdefault(p["cluster"], {"britannica_entry": [], "wikipedia_chunk": []})[p["kind"]].append(p["id"])
+    by_xy = {p["id"]: (p["x"], p["y"]) for p in points}
+
+    def spread(members: list[str]) -> float:
+        xy = np.asarray([by_xy[m] for m in members])
+        return float(np.mean(np.linalg.norm(xy - xy.mean(0), axis=1)))
+
+    scored = [(spread(g["britannica_entry"] + g["wikipedia_chunk"]), cid, g) for cid, g in groups.items()
+              if len(g["britannica_entry"]) >= 5 and len(g["wikipedia_chunk"]) >= 5]
+    if scored:
+        tight, cid, g = min(scored, key=lambda s: s[0])
+        overall = spread([p["id"] for p in points])
+        result.append({"key": "mix", "icon": "merge", "title": f"Two eras, one topic: {clusters.get(str(cid), cid)}",
+                       "caption": f"Topic cluster {cid} (from compare/topics.json) holds {len(g['britannica_entry'])} "
+                                  f"Britannica entries and {len(g['wikipedia_chunk'])} Wikipedia chunks. It is the most "
+                                  f"compact mixed cluster on this map: mean spread {tight:.2f} against {overall:.2f} for all points.",
+                       "focus": g["britannica_entry"] + g["wikipedia_chunk"], "color": "cluster"})
+
+    # 4) an outlier: a real entry with no counterpart and the lowest best cosine to any Wikipedia chunk
+    cands = [p for p in points if p["kind"] == "britannica_entry" and p.get("status") == "no_clear_counterpart"
+             and p["label"] and "(cont.)" not in p["label"] and len(p.get("excerpt") or "") >= 200]
+    if cands:
+        wxy = np.asarray([by_xy[ids[j]] for j in wiki])
+        far = lambda p: float(np.min(np.linalg.norm(wxy - np.asarray(by_xy[p["id"]]), axis=1)))
+        gaps = sorted(far(p) for p in cands)
+        lonely = [p for p in cands if far(p) >= gaps[int(len(gaps) * 0.75)]]
+        scored = [(float(np.max(unit[wiki] @ unit[index[p["id"]]])), p) for p in lonely]
+        cos, p = min(scored, key=lambda s: s[0])
+        result.append({"key": "outlier", "icon": "orbit", "title": f"Alone in the space: {p['label']}",
+                       "caption": f"{p['id']} has no clear Wikipedia counterpart. Its best cosine to any Wikipedia chunk "
+                                  f"is {cos:.3f}, the lowest among the {len(lonely)} unmatched headword entries that also sit far from "
+                                  f"every Wikipedia point on this map.",
+                       "focus": [p["id"]], "select": p["id"], "zoom": 3.0})
+    for t in result:
+        assert all(f in by_id for f in t["focus"]), t["key"]
+    return result
+
+
+def build_page(work: Path, site_dir: Path) -> dict[str, Any]:
+    """Render site/atlas.html with points, edges, tours and thumbnails inlined (works from file://)."""
+    import time
+
+    from jinja2 import Environment, FileSystemLoader, select_autoescape
+    from markupsafe import Markup
+
+    from .site import TEMPLATES
+
+    out = work / "atlas"
+    data = json.loads((out / "points.json").read_text())
+    summary = json.loads((out / "summary.json").read_text())
+    thumbs = {}
+    for p in data["points"]:
+        if p.get("thumb") and p["thumb"] not in thumbs:
+            thumbs[p["thumb"]] = "data:image/jpeg;base64," + base64.b64encode((out / p["thumb"]).read_bytes()).decode()
+    payload = {"points": data["points"], "edges": data["edges"], "clusters": data["clusters"], "thumbs": thumbs,
+               "tours": tours(work, data["points"], data["clusters"]), "summary": summary}
+    env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html"]))
+    env.filters["tojson_safe"] = lambda value: Markup(json.dumps(value, ensure_ascii=False).replace("<", "\\u003c"))
+    html = env.get_template("atlas.html").render(root="", active="atlas.html", built=time.strftime("%Y-%m-%d %H:%M"),
+                                                 data=payload, summary=summary)
+    site_dir.mkdir(parents=True, exist_ok=True)
+    (site_dir / "atlas.html").write_text(html)
+    return {"page": str(site_dir / "atlas.html"), "bytes": len(html), "tours": [t["key"] for t in payload["tours"]]}
+
+
+def run(settings: Settings, work: Path, site_dir: Path, *, offline: bool = False) -> dict[str, Any]:
+    """Full rebuild. With offline=True only cached vectors are used (no service calls)."""
+    root = work.parent
+    result: dict[str, Any] = {}
+    if not offline:
+        result["embed"] = embed(settings, work, root)
+        result["plate_articles"] = embed_plate_articles(settings, work)
+    result["pack"] = pack_vectors(work)
+    result["agreement"] = project(work)["agreement"]
+    result["page"] = build_page(work, site_dir)
+    return result

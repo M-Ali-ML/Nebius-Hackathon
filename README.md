@@ -7,6 +7,8 @@ Public repository: https://github.com/M-Ali-ML/Nebius-Hackathon
 - Archive: https://huggingface.co/spaces/nebius-build-week/britannica-across-time
 - Dataset: https://huggingface.co/datasets/nebius-build-week/britannica-wikipedia-drift
 - Local archive: open `site/index.html` (maps on `site/how.html`)
+- Atlas: open `site/atlas.html`. Method: [docs/atlas.md](docs/atlas.md)
+- Debate: open `site/debate.html`. Three Hermes agents. Method: [docs/debate.md](docs/debate.md)
 - APIs, packages, and file layout: [docs/technical.md](docs/technical.md)
 
 ## Who runs what
@@ -30,10 +32,57 @@ The saved run is already in this checkout: `site/`, `artifacts/`, `docs/cases/`,
 | Scan check | Super VL read the scan for 94 drift items: 79 were OCR errors, 15 confirmed. `find_drift` leaves out the OCR errors. |
 | Topics | 14 shared topic clusters over Britannica and Wikipedia vectors. [Details](docs/topics.md) |
 | Agent | 5 tools. 3 success and 3 failure cases. [Cases](docs/cases/README.md) |
+| Atlas | One Embed VL space: 100 scans, 17 plate crops, 259 entries, 1,058 Wikipedia chunks. 92.8% of text scans have their own entry as nearest Britannica entry (chance 1.0%). [Details](docs/atlas.md) |
+| Debate | 4 debates, 20 of 20 turns. Three Hermes agents on Super VL. [Details](docs/debate.md) |
 
 `find_drift` is the tool added after a corpus question failed (35 calls, 435,766 tokens, no invented answer). The same question then used 62,455 tokens.
 
 Every factual sentence cites `[B:<row>:<n>]` and `[W:<page_id>:<revision_id>]`.
+
+## Atlas
+
+The atlas puts scan images, plate crops, Britannica entries, and Wikipedia chunks in one Embed VL space (`nvidia/llama-nemotron-embed-vl-1b-v2`). Open `site/atlas.html`.
+
+| Point | Count | What Embed VL receives |
+| --- | --- | --- |
+| Scan image | 100 | the scan JPEG only |
+| Plate crop | 17 | each Parse picture block of at least 48 x 48 px |
+| Britannica entry | 259 | normalized entry text |
+| Wikipedia chunk | 1,058 | about 1,500-character chunks of matched articles |
+
+92.8% of scan images that have entries (90 of 97) have one of their own page entries as the nearest Britannica entry. Chance is 1.0%. 88.1% of matched entries (59 of 67) have a chunk of the matched article as the nearest Wikipedia chunk. Plate 270 is the only matched plate. Its nearest Wikipedia chunk belongs to the Hydrostatics article.
+
+The page has four guided tours. You can color points by kind, match, drift, or topic. A slider fades Britannica (1797) and Wikipedia (2026). Agreement numbers use full 2048-d cosine. Positions on the map are a UMAP approximation.
+
+Rebuild from cached vectors:
+
+```sh
+uv run python scripts/build_atlas.py --work-dir artifacts --offline
+```
+
+A run that embeds missing images calls the GPU service. Drop `--offline` for that run.
+
+## Debate
+
+Three Hermes agents on `nvidia/Nemotron-3.5-Super-VL` argue one question. The Scholar of 1790 uses only Britannica. The Wikipedian uses only Wikipedia. The Judge rules each point. Open `site/debate.html`. The page replays the saved runs.
+
+| Debate | Entry | Grounded share | Judge |
+| --- | --- | --- | --- |
+| Lightning | B:1910:0 | 86% | Wikipedian 4, draws 2 |
+| Magnetism | B:756:0 | 33% | Wikipedian 2, draws 2 |
+| Inflammable air | B:1214:0 | 100% | Wikipedian 1, draws 2 |
+| Coining | B:1250:1 | 82% | overall draw |
+
+Grounded share is verified plus cited sentences, divided by all checked sentences. A red dashed underline marks an unverified quote. We leave those sentences on the page.
+
+Each turn is one Hermes process. The two openings run in parallel. A rebuttal resumes that speaker's session. The judge is a new session. Code: `src/nemotron_challenge/debate.py`. Record: [docs/debate.md](docs/debate.md).
+
+```sh
+uv run python scripts/debate.py verify
+uv run python scripts/debate.py site
+```
+
+`verify` checks citations and quotes again. It does not call a model. `site` writes `site/debate.html`. A new model run is `uv run python scripts/debate.py run`. It skips a debate that already has a file. Add `--redo` to run it again.
 
 ## Setup and installation
 
@@ -161,6 +210,10 @@ uv run nemotron-challenge run evaluate
 | `run site` | tectonic, then `site/` |
 | `run agent` | Hermes, Super VL, and the GPU service for `search_sources` |
 | `run evaluate` | checks that each case links to a saved transcript |
+| `build_atlas.py` | Embed VL for missing images, then `site/atlas.html` |
+| `build_atlas.py --offline` | cached vectors only |
+| `debate.py run` | three Hermes agents and Super VL |
+| `debate.py site` | saved transcripts, then `site/debate.html` |
 
 Plate pages: `uv run nemotron-challenge plates`.
 
@@ -170,7 +223,7 @@ Open the site:
 python -m http.server 8080 -d site
 ```
 
-Then open http://127.0.0.1:8080/how.html .
+Then open http://127.0.0.1:8080/how.html . The atlas is http://127.0.0.1:8080/atlas.html . The debate is http://127.0.0.1:8080/debate.html .
 
 Live questions and the three demo prompts: [docs/demo-commands.md](docs/demo-commands.md).
 
@@ -194,10 +247,14 @@ The sample is the organizer's fixed draw: 100 of 2,573 scans, seed `20261016`, s
 | `src/nemotron_challenge/` | Pipeline |
 | `integrations/hermes/` | Plugin and skill |
 | `artifacts/` | Raw Parse output, entries, scores, matches, comparisons, LaTeX |
-| `site/` | Static archive |
+| `site/` | Static archive, including `atlas.html` and `debate.html` |
 | `docs/diagrams/` | The three maps |
 | `docs/technical.md` | APIs, packages, commands |
+| `docs/atlas.md` | Atlas method and numbers |
+| `docs/debate.md` | Debate method and citation checks |
 | `docs/cases/` | Six case studies |
+| `artifacts/atlas/` | Atlas vectors, points, and summary |
+| `artifacts/debate/` | Debate transcripts |
 | `runs/` | Transcripts, smoke receipt, evaluation record |
 
 ## Limits
@@ -208,6 +265,8 @@ The sample is the organizer's fixed draw: 100 of 2,573 scans, seed `20261016`, s
 - Page 452 is a blank cover. Parse invented text for it, and that text passed through later stages. [failure-3](docs/cases/failure-3.md)
 - A quote check shows that the quote is in the source. It does not show that the quote supports the claim.
 - The plate prompt names a date range. The collection covers 1768 to 1860, and a page row has no edition date.
+- Atlas positions are a 2D approximation. Image-to-text agreement measures how well Embed VL reads 18th-century print.
+- In the four debates the judge gave no point to the Scholar. Some Scholar quotes are not in the OCR. The page marks those sentences unverified.
 
 ## Licenses
 

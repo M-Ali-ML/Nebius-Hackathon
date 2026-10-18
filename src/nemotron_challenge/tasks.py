@@ -35,8 +35,13 @@ def agent(settings: Settings, work_dir: Path) -> dict[str, Any]:
 
 
 def site(settings: Settings, work_dir: Path) -> dict[str, Any]:
-    """TODO: build your LaTeX documents and static website."""
-    _unfinished("site")
+    """Compile one LaTeX document per page record, then build the static site next to the work dir."""
+    from .latex import build_all
+    from .site import build_site
+
+    if not (work_dir / "extract" / "pages").is_dir():
+        raise ValueError(f"no page records in {work_dir / 'extract' / 'pages'}; run extract first")
+    return {"latex": build_all(work_dir), "site": build_site(work_dir)}
 
 
 def evaluate(settings: Settings, work_dir: Path) -> dict[str, Any]:

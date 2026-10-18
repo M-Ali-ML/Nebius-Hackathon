@@ -1,0 +1,280 @@
+{
+ "entry_id": "P:1430",
+ "level": "page",
+ "entry_ids": [
+  "B:1430:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:1430:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1430",
+ "row_index": 1430,
+ "image_sha256": "4405fefdf7b68a3c6472787e25922ed5125f57c753e650518ecdaaf630f59566",
+ "headword": null,
+ "topic_hint": "EGY",
+ "wiki_page_id": "65811",
+ "wiki_revision_id": "1351403338",
+ "wiki_title": "Thebes, Egypt",
+ "wiki_url": "https://en.wikipedia.org/wiki/Thebes,_Egypt",
+ "text_sha256": "a12a7a09edac25faaadb62f7bb4534daf796408dde8537e228137d4586c75d48",
+ "cite_wikipedia": "[W:65811:1351403338]",
+ "rerank_logit": -5.578979,
+ "rerank_margin": 0.11308,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2780,
+  "prompt_tokens": 4592,
+  "total_tokens": 7372,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6669,
+ "article_chars_used": 10000,
+ "article_chars_total": 20781,
+ "similarities": [
+  {
+   "point": "Both describe Thebes as a celebrated ancient Egyptian city.",
+   "quote_britannica": "whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "It was a religious center and the most venerated city during many periods of ancient Egyptian history.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Both mention Thebes being conquered or taken by force.",
+   "quote_britannica": "and displayed Thebes: the second was that of Sabasco or So 2",
+   "quote_wikipedia": "took the Herakleopolitans by force and reunited Egypt once again under one ruler",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Both associate Thebes with ancient Egyptian kings and dynasties.",
+   "quote_britannica": "overtheve the first dynasty of Egyptian bags from Mexico, and displayed Thebes",
+   "quote_wikipedia": "Thebes was the main city of the fourth Upper Egyptian nome (Sceptre nome) and was the capital of Egypt for long periods during the Middle Kingdom and New Kingdom eras.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Both reference ancient sources or authors regarding Thebes.",
+   "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated",
+   "quote_wikipedia": "The Greek poet Homer extolled the wealth of Thebes in the Iliad, Book 9 (c. 8th Century BC)",
+   "cite_britannica": "[B:1430:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica text is heavily OCR-corrupted and nearly incoherent, while Wikipedia is clear and structured.",
+   "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+   "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Britannica discusses mythical global conquests by Seefitsi, whereas Wikipedia gives verified archaeological and historical details.",
+   "quote_britannica": "It was free for the website, and conquered generate part of Africa, you could be he slopped in his career till he arrived at the Atlantic ocean.",
+   "quote_wikipedia": "The site of Thebes includes areas on both the eastern bank of the Nile, where the temples of Karnak and Luxor stand and where the city was situated; and the western bank, where a necropolis of large private and royal cemeteries and funerary complexes can be found.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Britannica mentions fleets on the Mediterranean and Red Sea for world conquest, while Wikipedia discusses trade routes and temples.",
+   "quote_britannica": "Besides thefand-forces, he had us fat too mighty fleets, ones according to Dio-downs, oil go full.",
+   "quote_wikipedia": "It was used as an overland trade route going to the Red Sea coast. Wadi Hammamat was the primary trade route linking Egypt to the Red Sea since Pre-Dynastic times.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "point": "Britannica references biblical figures and events, while Wikipedia focuses on Egyptian dynasties and archaeology.",
+   "quote_britannica": "and Mr Whition will have him to be the Pharash who refuted to part with the IF realches, and was at fall drowned in the Kč Sea.",
+   "quote_wikipedia": "By 2160 BC, a new line of pharaohs (the Ninth and Tenth Dynasties) consolidated control over Lower Egypt and northern parts of Upper Egypt from their capital in Herakleopolis Magna.",
+   "cite_britannica": "[B:1430:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Thebes in Upper Egypt is celebrated for its magnificence.",
+   "tag": "enduring",
+   "quote_britannica": "whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "It was a religious center and the most venerated city during many periods of ancient Egyptian history.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "Thebes was the capital of Egypt during the Middle Kingdom and New Kingdom.",
+   "tag": "enduring",
+   "quote_britannica": "overtheve the first dynasty of Egyptian bags from Mexico, and displayed Thebes: the second was that of Sabasco or So 2",
+   "quote_wikipedia": "Thebes was the main city of the fourth Upper Egyptian nome (Sceptre nome) and was the capital of Egypt for long periods during the Middle Kingdom and New Kingdom eras.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "Thebes was inhabited from around 3200 BC.",
+   "tag": "enduring",
+   "quote_britannica": "In their early ages, however, it would seem that the kingdom of Egypt had been very powerful",
+   "quote_wikipedia": "Thebes was inhabited from around 3200 BC. It was the eponymous capital of Waset, the fourth Upper Egyptian nome.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "Thebes was located along the Nile about 800 kilometers south of the Mediterranean.",
+   "tag": "enduring",
+   "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+   "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "Thebes had temples of Karnak and Luxor on the east bank and a necropolis on the west bank.",
+   "tag": "enduring",
+   "quote_britannica": "the second was that of Sabasco or So 2 for according to him this was not the name as single prices, but of a people against fas, Ephohele and the third, after the building of Memphis",
+   "quote_wikipedia": "The site of Thebes includes areas on both the eastern bank of the Nile, where the temples of Karnak and Luxor stand and where the city was situated; and the western bank, where a necropolis of large private and royal cemeteries and funerary complexes can be found.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "The ancient Egyptian name for Thebes was Waset.",
+   "tag": "renamed",
+   "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+   "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "claim": "Thebes was known as the City of Amun or njw.t-jmn.",
+   "tag": "renamed",
+   "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "From the end of the New Kingdom, Thebes was known in Egyptian as njw.t-jmn, the \"City of Amun \", the chief of the Theban Triad of deities whose other members were Mut and Khonsu.",
+   "cite_britannica": "[B:1430:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Thebes",
+   "new": "Waset",
+   "quote_britannica": "whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "Thebes (Egyptian Arabic: طيبه), known to the ancient Egyptians as Waset, was an ancient Egyptian city located along the Nile about 800 kilometers (500 mi) south of the Mediterranean.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "old": "City of Amun",
+   "new": "njw.t-jmn",
+   "quote_britannica": "To me Salaris our author whether the definition of Thebes in Upper Egypt, is most celebrated by Horror for its magnificence.",
+   "quote_wikipedia": "From the end of the New Kingdom, Thebes was known in Egyptian as njw.t-jmn, the \"City of Amun \", the chief of the Theban Triad of deities whose other members were Mut and Khonsu.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "old": "Hundred-Gated Thebes",
+   "new": "Thebes of the Hundred Gates",
+   "quote_britannica": "and displayed Thebes: the second was that of Sabasco or So 2 for according to him this was not the name as single prices, but of a people against fas, Ephohele and the third, after the building of Memphis",
+   "quote_wikipedia": "As early as Homer 's Iliad, the Greeks distinguished the Egyptian Thebes as \"Thebes of the Hundred Gates\" (Θῆβαι ἑκατόμπυλοι, Thēbai hekatómpyloi) or \"Hundred-Gated Thebes\", as opposed to the \" Thebes of the Seven Gates \" (Θῆβαι ἑπτάπυλοι, Thēbai heptápyloi) in Boeotia, Greece.",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "old": "Diospolis",
+   "new": "Great Diospolis",
+   "quote_britannica": "Egypt. over the continent, they had become a great and powerful people and from their opposite dispositions and manners, became very frequently enemies to the Egyptians.",
+   "quote_wikipedia": "To distinguish it from the numerous other cities by this name, it was known as the \"Great Diospolis\" (Διόσπολις Μεγάλη, Diospolis Megálē; Latin: Diospolis Magna).",
+   "cite_britannica": "[B:1430:0]"
+  },
+  {
+   "old": "Sceptre nome",
+   "new": "fourth Upper Egyptian nome",
+   "quote_britannica": "overtheve the first dynasty of Egyptian bags from Mexico, and displayed Thebes: the second was that of Sabasco or So 2",
+   "quote_wikipedia": "Thebes was the main city of the fourth Upper Egyptian nome (Sceptre nome) and was the capital of Egypt for long periods during the Middle Kingdom and New Kingdom eras.",
+   "cite_britannica": "[B:1430:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "UNESCO World Heritage Site designation",
+   "quote_wikipedia": "In 1979, the ruins of ancient Thebes were classified by UNESCO as a World Heritage Site."
+  },
+  {
+   "topic": "Population estimates by George Modelski and Ian Morris",
+   "quote_wikipedia": "According to George Modelski, Thebes had about 40,000 inhabitants in 2000 BC (compared to 60,000 in Memphis, the largest city in the world at the time). By 1800 BC, the population of Memphis was down to about 30,000, making Thebes the largest city in Egypt at the time."
+  },
+  {
+   "topic": "Hyksos conflict and Ahmose I's expulsion of the Hyksos",
+   "quote_wikipedia": "Ahmose I drove the Hyksos out of Egypt and the Levant and reclaimed the lands formerly ruled by them."
+  },
+  {
+   "topic": "Annual festivals such as the Beautiful Feast of Opet",
+   "quote_wikipedia": "More than sixty annual festivals were celebrated in Thebes. The major festivals among these, according to the Edfu Geographical Text, were: the Beautiful Feast of Opet, the Khoiak (Festival), Festival of I Shemu, and Festival of II Shemu."
+  },
+  {
+   "topic": "Geographic details including Theban Hills and al-Qurn",
+   "quote_wikipedia": "Thebes had an area of 93 km 2 (36 sq mi), which included parts of the Theban Hills in the west that culminates at the sacred 420-meter (1,380-foot) al-Qurn."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Seefitsi conquered the whole world with fleets and land forces.",
+    "tag": "superseded",
+    "quote_britannica": "While he was on this expedition, his father died and then Seefitsi evolved to fulfill the expedition of Vulcan, by actually conquering the whole world.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 25,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 11,
+   "words": 1177,
+   "edits_per_100_words": 0.93
+  },
+  "lexical": {
+   "renamed_share": 0.286,
+   "term_pairs": [
+    {
+     "old": "Thebes",
+     "new": "Waset"
+    },
+    {
+     "old": "City of Amun",
+     "new": "njw.t-jmn"
+    },
+    {
+     "old": "Sceptre nome",
+     "new": "fourth Upper Egyptian nome"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Hundred-Gated Thebes",
+     "new": "Thebes of the Hundred Gates"
+    },
+    {
+     "old": "Diospolis",
+     "new": "Great Diospolis"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "UNESCO World Heritage Site designation",
+    "Population estimates by George Modelski and Ian Morris",
+    "Hyksos conflict and Ahmose I's expulsion of the Hyksos",
+    "Annual festivals such as the Beautiful Feast of Opet",
+    "Geographic details including Theban Hills and al-Qurn"
+   ]
+  },
+  "enduring_share": 0.714,
+  "claim_counts": {
+   "enduring": 5,
+   "renamed": 2,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

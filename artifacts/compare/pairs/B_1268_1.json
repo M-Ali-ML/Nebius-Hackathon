@@ -1,0 +1,140 @@
+{
+ "entry_id": "B:1268:1",
+ "cite_britannica": "[B:1268:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1268",
+ "row_index": 1268,
+ "image_sha256": "e5ec9e5b4086576d908e749cf55ee5aa6db8079444bb0961627c9475b434ca7e",
+ "headword": "NAXIA",
+ "topic_hint": null,
+ "wiki_page_id": "60721222",
+ "wiki_revision_id": "1345060513",
+ "wiki_title": "Naxia (Caria)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Naxia_(Caria)",
+ "text_sha256": "860f4d171e25f2fe15a75417d518ddcf359d3edc9c7eace155380aa4f389fc78",
+ "cite_wikipedia": "[W:60721222:1345060513]",
+ "rerank_logit": -6.742186,
+ "rerank_margin": 0.508667,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 679,
+  "prompt_tokens": 757,
+  "total_tokens": 1436,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 708,
+ "article_chars_used": 192,
+ "article_chars_total": 192,
+ "similarities": [
+  {
+   "point": "Both identify the place as an ancient settlement.",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes Naxia as a large Cycladic island; Wikipedia describes it as a town in Caria.",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest and most fertile of the islands in the Archeology, known as the Cyclades.",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Naxia is the ancient Nazos.",
+   "tag": "renamed",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+  },
+  {
+   "claim": "Naxia is one of the largest and most fertile islands in the Cyclades.",
+   "tag": "superseded",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest and most fertile of the islands in the Archeology, known as the Cyclades.",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+  },
+  {
+   "claim": "The island contains thirty-five villages and a population of about 17,000 persons.",
+   "tag": "dropped",
+   "quote_britannica": "Besides the city of the name, it contains thirtyfive villages, and a population of about 17,000 persons.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "There is no port on the island.",
+   "tag": "dropped",
+   "quote_britannica": "There is no port on the island for July later.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Nazos",
+   "new": "Ναξία",
+   "quote_britannica": "NAXIA, the ancient Nazos, is one of the largest",
+   "quote_wikipedia": "Naxia (Ancient Greek: Ναξία) was a town of ancient Caria."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Membership in the Delian League",
+   "quote_wikipedia": "It was a polis (city-state) and a member of the Delian League."
+  },
+  {
+   "topic": "Tentative modern location",
+   "quote_wikipedia": "Its site is tentatively located near Bağarcık, Aydın Province, Turkey."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 9,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 122,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.25,
+   "term_pairs": [
+    {
+     "old": "Nazos",
+     "new": "Ναξία"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.25
+  },
+  "coverage": {
+   "dropped_share": 0.5,
+   "wiki_only_topics": [
+    "Membership in the Delian League",
+    "Tentative modern location"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 1,
+   "superseded": 1,
+   "dropped": 2
+  },
+  "claims_checked": 4,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

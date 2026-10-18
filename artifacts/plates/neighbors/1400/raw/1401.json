@@ -1,0 +1,46 @@
+{
+ "id": "chatcmpl-dc453600-35f2-4dd0-977b-8463c226272c",
+ "object": "chat.completion",
+ "created": 1792324397,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.166><y_0.0312>MOR F<x_0.75><y_0.0586><class_Title>\n\n<x_0.4395><y_0.0617>material parts of them may be found in an essay by Morality. Dr Price on the Different between the Duration of Human Life in Towns and in Country Parishes, printed in the 65th volume of the Philosophy. Trans. Part II.<x_0.8545><y_0.1289><class_Text>\n\n<x_0.4404><y_0.1297>In the fourth essay in Dr Price’s Prestio on Re- vertionary Payments and Life Annuities, the following second to given of the principles on which tables of observation are formed from registers or mortality and of the proper method of forming them, so as to render them just representations of the number of inhabitants, and the possibilities of the duration of the man life in a town or country.<x_0.8535><y_0.2391><class_Text>\n\n<x_0.4414><y_0.2398>In every place which just supports itself in the number of its inhabitants, without any recruits from other places or where, for a course of years, there has been an increase decrease; the number of persons dying every year at our particular way, and above it, must be equal to the number of the living at that age. The number, no example, dying every year at all ages from the beginning to the ultimate extremity of life, must, in such a situation, be just equal to the whole number born every year. And for the same reason, the number they every year at one year of age and upwards, at two years of age and upwards, at three and upward, and so on, must be equal to the numbers that attain those ages every year's on which is the same, to the numbers of the living at those ages. It is obvious, that unless this happens, the number of inhabitants cannot remain the same. If the former number is greater than the latter, the inhabitants must decrease; if less, they must increase. Then the observation is follows that in a town or country where there is no increase or decreases, kills of mortality which give the ages at which all did, will show the case number of inhabitants, and also the exact law according to which human life wastes in that town on country.<x_0.8525><y_0.5781><class_Text>\n\n<x_0.0508><y_0.3875>\\begin{tabular}{ccc}\nUnder the age of one year, & \\thead{1000 to 1090} & \\thead{1090—1023}\\\\\nFrom 1 to 3 years of age, & 1000—1023 & \\\\\n3--5 - & — & 1042\\\\\n5–10 & — & 1070\\\\\n10—15 & — & 1080\\\\\n15—20 & — & 1097\\\\\n20—25 & — & 1283\\\\\n25—30 & — & 1101\\\\\n20—35 & — & 993\\\\\n30–54 & — & 1119\\\\\n40—45 & — & 1115\\\\\n45—50 & — & 1340\\\\\n50—55 & — & 1339\\\\\n55—60 & — & 1392\\\\\n60—65 & — & 1115\\\\\n65—70 & — & 1080\\\\\n70—80 & — & 1032\\\\\n80—90 & — & 1046\\\\\nAbove 90 & — & 1044\\\\\n\\end{tabular}<x_0.4297><y_0.6602><class_Table>\n\n<x_0.0488><y_0.6672>Registers of mortality on the improved plan before mentioned, were established in 1772 at Chester, and also in 1773 at Washington to Laurealires, and they are so comprehensive and correct, that there is reason to expect they will afford much instruction on the subject of human mortality, and the values of literature.<x_0.4277><y_0.7492><class_Text>\n\n<x_0.0479><y_0.75>But the country most distinguished in this respect is Sweden for in that kingdom exact accounts are taken of the birds, marriage, and hustles, and the numbers of both sexes that die at all ages in every town and district, and also at the end of every period of five years, or the numbers living at every age: and at Stockholm a society is established, whose busi host it is to supersed and regulate the enterations, and to collect from the different party of the kingdom the registers, in order to digest them into tables of observation. These regulations were begun in Sweden in 17555 and tables, containing the results of them from 1755 to 1755; have been published in Mr Wargenin’s memoir just referred to; and the most<x_0.4287><y_0.9414><class_Text>\n\n<x_0.0498><y_0.9391>Vol., XIV, Part II.<x_0.1953><y_0.9547><class_Page-footer>\n\n<x_0.6172><y_0.9422>3H<x_0.6514><y_0.9539><class_Page-footer>\n\n<x_0.0518><y_0.3906>\\begin{tabular}{cc}\nUnder the age of one year, & 1000 to 1090\\\\\nFrom 1 to 3 years of age, & 1000—1023\\\\\n3--5 - & — & 1042\\\\\n5-10 - & — & 1072\\\\\n10—15 - & — & 1080\\\\\n15—20 - & — & 1097\\\\\n20—25 - & — & 1283\\\\\n25—30 - & — & 1101\\\\\n20—35 - & — & 993\\\\\n30—5-40 - & — & 1119\\\\\n40—45 - & — & 1115\\\\\n45—50 - & — & 1340\\\\\n50—55 - & — & 1339\\\\\n55—60 - & — & 1392\\\\\n60—65 - & — & 1115\\\\\n65—70 - & — & 1080\\\\\n70—80 - & — & 1032\\\\\n80—90 - & — & 1046\\\\\nAbove 90 - & — & 1044\\\\\n\\end{tabular}<x_0.4307><y_0.6586><class_Table>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 508,
+  "total_tokens": 1870,
+  "completion_tokens": 1362,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 2.63,
+  "attempt": 0,
+  "max_tokens": 8744,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1401",
+  "image_sha256": "76801a4909cc5a42f0ff11a41eb7575a5b39405b1bff5bec7371fc3b535ab67b"
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "entry_id": "B:560:6",
+ "cite_britannica": "[B:560:6]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560",
+ "row_index": 560,
+ "image_sha256": "c458f594fc79392e42082ac7a8c338082e8d5e2c2c79dd2f49f1940b91144300",
+ "headword": "AMIDA",
+ "topic_hint": null,
+ "wiki_page_id": "548706",
+ "wiki_revision_id": "1295162729",
+ "wiki_title": "Amida",
+ "wiki_url": "https://en.wikipedia.org/wiki/Amida",
+ "text_sha256": "e30722c233c25141b2faf4da4928b22ef88ac9757d4eb4f5211dc836244b38e2",
+ "cite_wikipedia": "[W:548706:1295162729]",
+ "rerank_logit": -5.234242,
+ "rerank_margin": 0.260137,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1051,
+  "prompt_tokens": 991,
+  "total_tokens": 2042,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 1154,
+ "article_chars_used": 574,
+ "article_chars_total": 574,
+ "similarities": [
+  {
+   "point": "Both identify Amida as a city in Mesopotamia.",
+   "quote_britannica": "Amida (une groge), a principal city of Méopomisnia",
+   "quote_wikipedia": "Amida (Mesopotamia), now Diyarbakır, an ancient city in Asian Turkey"
+  },
+  {
+   "point": "Both associate Amida with Japan.",
+   "quote_britannica": "AMIDA, a god worshipped by the japané",
+   "quote_wikipedia": "Amitābha Buddha, in Japanese"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes Amida as a Japanese god, while Wikipedia identifies it as a Japanese Buddha.",
+   "quote_britannica": "AMIDA, a god worshipped by the japané",
+   "quote_wikipedia": "Amitābha Buddha, in Japanese"
+  },
+  {
+   "point": "Britannica places the principal temple at Jedo, whereas Wikipedia locates Mount Amida in Hiroshima.",
+   "quote_britannica": "of which the principal is at Jedo",
+   "quote_wikipedia": "Mount Amida, mountain in Saeki-ku, Hiroshima, Japan"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Amida is a god worshipped by the Japanese.",
+   "tag": "renamed",
+   "quote_britannica": "AMIDA, a god worshipped by the japané",
+   "quote_wikipedia": "Amitābha Buddha, in Japanese"
+  },
+  {
+   "claim": "Amida has many temples credited to him in Japan.",
+   "tag": "dropped",
+   "quote_britannica": "who has many temple credited to him in the island of Japan",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The principal temple of Amida is at Jedo.",
+   "tag": "dropped",
+   "quote_britannica": "of which the principal is at Jedo",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Amida is a principal city of Mesopotamia.",
+   "tag": "enduring",
+   "quote_britannica": "Amida (une groge), a principal city of Méopomisnia",
+   "quote_wikipedia": "Amida (Mesopotamia), now Diyarbakır, an ancient city in Asian Turkey"
+  },
+  {
+   "claim": "Amida is situated on a high mountain on the banks of a river.",
+   "quote_britannica": "frutated on a high mountain, on the beaches of Afyrits, on the Yrys",
+   "tag": "superseded",
+   "quote_wikipedia": "now Diyarbakır, an ancient city in Asian Turkey"
+  },
+  {
+   "claim": "Amida was taken from the Romans in the time of the emperor Conflars by Scarye Ring of Perita.",
+   "tag": "dropped",
+   "quote_britannica": "It was taken from the Romans in the time of the emperor Conflars, by Scarye Ring of Perita",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "japané",
+   "new": "Japanese",
+   "quote_britannica": "AMIDA, a god worshipped by the japané",
+   "quote_wikipedia": "Amitābha Buddha, in Japanese"
+  },
+  {
+   "old": "Jedo",
+   "new": "Tokyo",
+   "quote_britannica": "of which the principal is at Jedo",
+   "quote_wikipedia": "Mount Amida, mountain in Saeki-ku, Hiroshima, Japan"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Chaldean Catholic Archeparchy of Amida",
+   "quote_wikipedia": "The Chaldean Catholic Archeparchy of Amida"
+  },
+  {
+   "topic": "Latin titular Metropolitan see of Amida of the Romans",
+   "quote_wikipedia": "The Latin titular Metropolitan see of Amida of the Romans"
+  },
+  {
+   "topic": "Armenian Catholic titular see Amida of the Armenians",
+   "quote_wikipedia": "The Armenian Catholic titular see Amida of the Armenians"
+  },
+  {
+   "topic": "Syrian Catholic titular Metropolitan see Amida of the Syriacs",
+   "quote_wikipedia": "The Syrian Catholic (Antiochian Rite) titular Metropolitan see Amida of the Syriacs"
+  },
+  {
+   "topic": "Amida beetle genus",
+   "quote_wikipedia": "Amida (beetle), a beetle genus"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 2,
+   "words": 204,
+   "edits_per_100_words": 0.98
+  },
+  "lexical": {
+   "renamed_share": 0.167,
+   "term_pairs": [
+    {
+     "old": "Jedo",
+     "new": "Tokyo"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "japané",
+     "new": "Japanese"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.167
+  },
+  "coverage": {
+   "dropped_share": 0.5,
+   "wiki_only_topics": [
+    "Chaldean Catholic Archeparchy of Amida",
+    "Latin titular Metropolitan see of Amida of the Romans",
+    "Armenian Catholic titular see Amida of the Armenians",
+    "Syrian Catholic titular Metropolitan see Amida of the Syriacs",
+    "Amida beetle genus"
+   ]
+  },
+  "enduring_share": 0.167,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 1,
+   "superseded": 1,
+   "dropped": 3
+  },
+  "claims_checked": 6,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

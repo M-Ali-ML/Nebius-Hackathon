@@ -1,0 +1,143 @@
+{
+ "entry_id": "B:1473:3",
+ "cite_britannica": "[B:1473:3]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1473",
+ "row_index": 1473,
+ "image_sha256": "b3b602ef6a3d4961fd1926a15d634a40ec929c15b00e2f7cc5109b3f7180daac",
+ "headword": "ESCAPE",
+ "topic_hint": null,
+ "wiki_page_id": "797344",
+ "wiki_revision_id": "1341493141",
+ "wiki_title": "Escape",
+ "wiki_url": "https://en.wikipedia.org/wiki/Escape",
+ "text_sha256": "8874cd5326f4863f2fed2c502dc7ae837346da551be2a58b76fa8e081ebb3d56",
+ "cite_wikipedia": "[W:797344:1341493141]",
+ "rerank_logit": -6.857706,
+ "rerank_margin": 0.948442,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 691,
+  "prompt_tokens": 1992,
+  "total_tokens": 2683,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 775,
+ "article_chars_used": 4616,
+ "article_chars_total": 4616,
+ "similarities": [],
+ "differences": [
+  {
+   "point": "Subject matter",
+   "quote_britannica": "ESCAPE, in how a violent or privyvation out of home lawful reflrant,",
+   "quote_wikipedia": "Escape or Escaping may refer to:"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "There are two lots of escape, valent bay and negligent.",
+   "tag": "dropped",
+   "quote_britannica": "There are two lots of escape, valent bay and negligent.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Voluntary, when a amreth another for folony, or other crime, and afterwards lets him go freely by conting,",
+   "tag": "dropped",
+   "quote_britannica": "Voluntary, when a amreth another for folony, or other crime, and afterwards lets him go freely by conting,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Negligent eleceps, on the contrany, in where one is arrested, and afterwards deepas against the will of the perform that arred him,",
+   "tag": "dropped",
+   "quote_britannica": "Negligent eleceps, on the contrany, in where one is arrested, and afterwards deepas against the will of the perform that arred him,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "By fast, it oy Will. III: C. 26., the keepers of priform conviving at efecapes final (forter) crois;",
+   "tag": "dropped",
+   "quote_britannica": "By fast, it oy Will. III: C. 26., the keepers of priform conviving at efecapes final (forter) crois;",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "and in civil cases the flee rifi's a preferable for the debt.",
+   "tag": "dropped",
+   "quote_britannica": "and in civil cases the flee rifi's a preferable for the debt.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Film",
+   "quote_wikipedia": "Escape (1928 film), a German silent drama film"
+  },
+  {
+   "topic": "Book",
+   "quote_wikipedia": "Escape! The Story of the Great Houdini, a 2006 book by Sid Fleischman"
+  },
+  {
+   "topic": "Music",
+   "quote_wikipedia": "Escape (Enrique Iglesias album), or the title song (see below), 2001"
+  },
+  {
+   "topic": "Computing",
+   "quote_wikipedia": "Escape character, a character that signifies that what follows takes an alternative interpretation"
+  },
+  {
+   "topic": "Prison escape",
+   "quote_wikipedia": "Prison escape, the act of breaking out of prison"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 11,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 135,
+   "edits_per_100_words": 0.74
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Film",
+    "Book",
+    "Music",
+    "Computing",
+    "Prison escape"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 5
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -1,0 +1,136 @@
+{
+ "entry_id": "B:523:1",
+ "cite_britannica": "[B:523:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:523",
+ "row_index": 523,
+ "image_sha256": "a583606e375ad92d79af8ad8b4fabc4fa22632e6ccbeea6e20f0fa47a27e2858",
+ "headword": "ENDLESS",
+ "topic_hint": null,
+ "wiki_page_id": "42982630",
+ "wiki_revision_id": "1314926708",
+ "wiki_title": "Endless",
+ "wiki_url": "https://en.wikipedia.org/wiki/Endless",
+ "text_sha256": "b460cedd642bc612853cd95475ac29a356bcbdaab3f4cc6badd18655f2ab450f",
+ "cite_wikipedia": "[W:42982630:1314926708]",
+ "rerank_logit": -6.038557,
+ "rerank_margin": 0.789086,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 516,
+  "prompt_tokens": 926,
+  "total_tokens": 1442,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 91,
+ "article_chars_used": 1138,
+ "article_chars_total": 1138,
+ "similarities": [],
+ "differences": [
+  {
+   "point": "Britannica defines endless as something without an end and gives historical examples, while Wikipedia lists modern disambiguation senses for the word Endless.",
+   "quote_britannica": "ENDLESS, something without an end: thus authors mention endless rolls, the endless frewy &.",
+   "quote_wikipedia": "Endless or The Endless may refer to:"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Authors mention endless rolls.",
+   "tag": "dropped",
+   "quote_britannica": "ENDLESS, something without an end: thus authors mention endless rolls, the endless frewy &.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Authors mention the endless frewy.",
+   "tag": "dropped",
+   "quote_britannica": "ENDLESS, something without an end: thus authors mention endless rolls, the endless frewy &.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Endless (private equity), a British firm",
+   "quote_wikipedia": "Endless (private equity), a British firm"
+  },
+  {
+   "topic": "Endless.com, an e-commerce website selling shoes and accessories",
+   "quote_wikipedia": "Endless.com, an e-commerce website selling shoes and accessories"
+  },
+  {
+   "topic": "Endless Computers, an American operating system company",
+   "quote_wikipedia": "Endless Computers, an American operating system company"
+  },
+  {
+   "topic": "The Endless (film), a 2017 American film",
+   "quote_wikipedia": "The Endless (film), a 2017 American film"
+  },
+  {
+   "topic": "Endless (Frank Ocean album), 2016",
+   "quote_wikipedia": "Endless (Frank Ocean album), 2016"
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Endless means something without an end.",
+    "tag": "enduring",
+    "quote_britannica": "ENDLESS, something without an end: thus authors mention endless rolls, the endless frewy &.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 8,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 3,
+   "words": 14,
+   "edits_per_100_words": 21.43
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Endless (private equity), a British firm",
+    "Endless.com, an e-commerce website selling shoes and accessories",
+    "Endless Computers, an American operating system company",
+    "The Endless (film), a 2017 American film",
+    "Endless (Frank Ocean album), 2016"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 2,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

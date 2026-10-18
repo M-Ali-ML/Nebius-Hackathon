@@ -1,0 +1,46 @@
+{
+ "id": "chatcmpl-a895addc-66cc-4365-9c5c-255bd6831b2a",
+ "object": "chat.completion",
+ "created": 1792324424,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.041><y_0.043>vi P R E F A C E.<x_0.7168><y_0.0625><class_Page-header>\n\n<x_0.04><y_0.0836>THE Editors, though fully fenfible of the propriety of adopting the prefent plan, were not aware of the length of time necellary for the ex- ecution, but engaged to begin the publication too early. However, by the remonfitrances of the Compilers, the publication was delayed for twelve months. Still time was wanted. But the fulbcribers pufhed the Editors, and they at left perfuaded the Compilers to confent to the publication. If time had been allowed, the Compilers defigned to have complicated the feiences before proceeding to the technical terms; and by that means to have guarded against omiflions, and made all the references from the terms to the feiences more particular. The consequence was unavoidable. All the references to any feience that occur in the alphabet previous to the name of the feience itelf; are general: thofe that follow are particular; pointing out, not only the name of the feience, but the number of the page.<x_0.9014><y_0.3766><class_Text>\n\n<x_0.042><y_0.3867>We muit further acknowledge, that, in fome inflances, we have de- viated from the general plan; but, we hope, not without realon. For ex- ample, under the words BOTANY and NATURAL HISTORY, it would have been an endlefs, and perhaps an ufelefs talk, to have given the generic distinctions of every plant, and of every animal. There are to be found under the names of the plants and animals themselves. The fame obfervation may be made with respect to _Miseralogy, Materia Medica, Pa- biology, Physiology_, and _Therapeutics_. There are lo interwoven with _Anatony, Botany, Chemifry, and Medicine,_ that, in a work of this kind, it was almost impotible, without many unnecessary repetitions, to treat them as difine! Feiences. Indeed, properly speaking, they are not feiences, but parts or accesffories of fiences, which, by the dexterity of teachers and authors, have been long exhibited under that form.<x_0.9023><y_0.6609><class_Text>\n\n<x_0.0498><y_0.6695>WITH regard to errors in general, whether falling under the denomi- nation of mental, typographical, or accidental, we are conscious of being able to point out a greater number than any critic what ever. Men who are acquainted with the immerable difficulties attending the execution of a work of fuch an extenfive nature will make proper allowances. To theffe we appeal, and fhall reit falsified with the judgment they pronounce.<x_0.9033><y_0.7969><class_Text>\n\n<x_0.0518><y_0.8055>In order to give fome idea of the materials of which this Dictionary is compoiled, we fhall conclude the preface with a lift of the principal au- thorns made ufc of in the compilation.<x_0.9043><y_0.8727><class_Text>\n\n<x_0.793><y_0.8688>LIST<x_0.9053><y_0.8875><class_Page-footer>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 528,
+  "total_tokens": 1172,
+  "completion_tokens": 644,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 1.25,
+  "attempt": 0,
+  "max_tokens": 8744,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2244",
+  "image_sha256": "a3efa8f8324bfa17a844d00105de0e2ff9242fdc9ccd93eeaf44bd2b2649cc0d"
+ }
+}

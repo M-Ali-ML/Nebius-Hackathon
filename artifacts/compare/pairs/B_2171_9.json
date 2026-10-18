@@ -1,0 +1,186 @@
+{
+ "entry_id": "B:2171:9",
+ "cite_britannica": "[B:2171:9]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2171",
+ "row_index": 2171,
+ "image_sha256": "f8869fa95f190d0e556bf8d2397c0c36da436ea1b23405995f0aac0f398f26d5",
+ "headword": "ATERNUM",
+ "topic_hint": null,
+ "wiki_page_id": "13770710",
+ "wiki_revision_id": "1352684512",
+ "wiki_title": "Aternum",
+ "wiki_url": "https://en.wikipedia.org/wiki/Aternum",
+ "text_sha256": "764747463786c80008bc543be4073285daea0455116d3b13a50202999df59b94",
+ "cite_wikipedia": "[W:13770710:1352684512]",
+ "rerank_logit": -5.184751,
+ "rerank_margin": 2.267812,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1320,
+  "prompt_tokens": 799,
+  "total_tokens": 2119,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 200,
+ "article_chars_used": 758,
+ "article_chars_total": 758,
+ "similarities": [
+  {
+   "point": "Both identify Aternum as a town in Italy.",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "point": "Both give the latitude as approximately 42 degrees 50 minutes.",
+   "quote_britannica": "V.Lav. 42.50.",
+   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica places it in Lucerna and says it is now Alteris; Wikipedia places it on the site of Pescara.",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "point": "Britannica gives longitude 15.25 E; Wikipedia gives 14.2100 E.",
+   "quote_britannica": "E. Long 15.25. V.Lav. 42.50.",
+   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Aternum is a town in Italy.",
+   "tag": "enduring",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "claim": "Aternum is now called Alteris.",
+   "tag": "superseded",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "claim": "Aternum is in the territory of the Piceni and is now Pescara, a port-town of Naples.",
+   "tag": "superseded",
+   "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "claim": "Aternum is at East Longitude 15.25 and Latitude 42.50.",
+   "tag": "superseded",
+   "quote_britannica": "E. Long 15.25. V.Lav. 42.50.",
+   "quote_wikipedia": "42°27′36″N 14°12′36″E / 42.4601°N 14.2100°E"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Lucerna",
+   "new": "Roman",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "old": "Alteris",
+   "new": "Pescara",
+   "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  },
+  {
+   "old": "Pofcara",
+   "new": "Pescara",
+   "quote_britannica": "Also a town in the territory of the Piceni, now Pofcara, a port-town of Naples, fitu-ated and the infinite.",
+   "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Connection to Rome via the Via Tiburtina and Via Valeria and role linking capital to Eastern provinces.",
+   "quote_wikipedia": "Being connected to Rome through the Via Tiburtina and its extension the Via Valeria, Aternum played a crucial role in connecting the capital to the Eastern provinces of the Empire."
+  },
+  {
+   "topic": "Use of the harbour by commercial, fishing, and supposedly military ships.",
+   "quote_wikipedia": "Its harbour, largely occupied by commercial and fishing ships, was supposedly also used for military purposes."
+  },
+  {
+   "topic": "The temple of Jovis Aternium and other temples to Roman and Egyptian divinities.",
+   "quote_wikipedia": "The main building was the temple of Jovis Aternium but there are traces of other temples dedicated to Roman and even Egyptian divinities."
+  },
+  {
+   "topic": "Construction of a monumental bridge by the emperor Tiberius.",
+   "quote_wikipedia": "Moreover, there are reports about the construction of a monumental bridge by the emperor Tiberius."
+  },
+  {
+   "topic": "Alternative name Ostia Aterni due to location at the mouth of the river Aternus.",
+   "quote_wikipedia": "Some historians also refer to Aternum with the name of Ostia Aterni, due to its location at the mouth of the river Aternus."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 16,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 35,
+   "edits_per_100_words": 2.86
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Lucerna",
+     "new": "Roman"
+    },
+    {
+     "old": "Alteris",
+     "new": "Pescara"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Pofcara",
+     "new": "Pescara"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.75
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Connection to Rome via the Via Tiburtina and Via Valeria and role linking capital to Eastern provinces.",
+    "Use of the harbour by commercial, fishing, and supposedly military ships.",
+    "The temple of Jovis Aternium and other temples to Roman and Egyptian divinities.",
+    "Construction of a monumental bridge by the emperor Tiberius.",
+    "Alternative name Ostia Aterni due to location at the mouth of the river Aternus."
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 0
+  },
+  "claims_checked": 4,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

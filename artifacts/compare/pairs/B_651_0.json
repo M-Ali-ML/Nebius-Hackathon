@@ -1,0 +1,92 @@
+{
+ "entry_id": "B:651:0",
+ "cite_britannica": "[B:651:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:651",
+ "row_index": 651,
+ "image_sha256": "a4e89a900a4041b934828dcc5c677df6edf0de903ab97d097948b7b17427da7d",
+ "headword": null,
+ "topic_hint": "HELMINTHOLOGY",
+ "wiki_page_id": "76464128",
+ "wiki_revision_id": "1346779193",
+ "wiki_title": "Fig (restaurant)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Fig_(restaurant)",
+ "text_sha256": "ac8fbee31ccba4362b0d28564070a037f4f575a4cba06eb428dc4b29a7f5708b",
+ "cite_wikipedia": "[W:76464128:1346779193]",
+ "rerank_logit": -3.929723,
+ "rerank_margin": 0.433052,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 176,
+  "prompt_tokens": 865,
+  "total_tokens": 1041,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 70,
+ "article_chars_used": 1171,
+ "article_chars_total": 1171,
+ "similarities": [],
+ "differences": [
+  {
+   "point": "Subject matter",
+   "quote_britannica": "Fig 1 Fig.2. Fig.2. Fig.1. O Fig.3. Fig.3. Fig.8. Fig.7. Fig.9. Fig.9.",
+   "quote_wikipedia": "Fig, stylized as FIG, is a modern American restaurant located in Charleston, South Carolina."
+  }
+ ],
+ "claims": [],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Restaurant history and awards",
+   "quote_wikipedia": "Established in April 2003 by Mike Lata and partner Adam Nemirow, the restaurant is situated in downtown Charleston."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 2,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 12,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": null,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": null
+  },
+  "coverage": {
+   "dropped_share": null,
+   "wiki_only_topics": [
+    "Restaurant history and awards"
+   ]
+  },
+  "enduring_share": null,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 0,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

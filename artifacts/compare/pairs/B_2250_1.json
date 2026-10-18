@@ -1,0 +1,181 @@
+{
+ "entry_id": "B:2250:1",
+ "cite_britannica": "[B:2250:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2250",
+ "row_index": 2250,
+ "image_sha256": "75315f45500988daa37cc73e58bee8b227772229b576475ee23ddb584172baee",
+ "headword": "BUTTRESS",
+ "topic_hint": null,
+ "wiki_page_id": "663464",
+ "wiki_revision_id": "1346148586",
+ "wiki_title": "Buttress",
+ "wiki_url": "https://en.wikipedia.org/wiki/Buttress",
+ "text_sha256": "35f72776f05611d6187310d3c5d0d669f58d763bc8354b8e758a440e3dcecfd2",
+ "cite_wikipedia": "[W:663464:1346148586]",
+ "rerank_logit": -3.730118,
+ "rerank_margin": 1.62362,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1697,
+  "prompt_tokens": 970,
+  "total_tokens": 2667,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 685,
+ "article_chars_used": 1231,
+ "article_chars_total": 1231,
+ "similarities": [
+  {
+   "point": "Both describe a buttress as a structure built against a wall to support it.",
+   "quote_britannica": "BUTTRESS, a kind of batment built archwise, or a mals of flouse or birds, serving to prop of flapper the fides of a building, wall, 6e, on the outside",
+   "quote_wikipedia": "A buttress is an architectural structure built against or projecting from a wall which serves to support or reinforce the wall."
+  },
+  {
+   "point": "Both mention that buttresses are used to support walls bearing heavy loads such as roofs.",
+   "quote_britannica": "along the walls of such buildings at have great and heavy roofs, which would be subject to shrull the walls once, unless very thick, if no butteffes were placed against them.",
+   "quote_wikipedia": "as a means of providing support to act against the lateral (sideways) forces arising out of inadequately braced roof structures."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes buttresses as being used against the angles of steeples and old palaces, while Wikipedia mentions ancient temples and classifies buttresses by ground plan.",
+   "quote_britannica": "Butteflies are used against the angles of fleeples and other buildings of slone, 6e, on the confiile, and along the walls of such buildings at have great and heavy roofs",
+   "quote_wikipedia": "Early examples of buttresses are found on the Eanna Temple (ancient Uruk), dating to as early as the 4th millennium BC."
+  },
+  {
+   "point": "Britannica mentions buttresses supporting the feet of fine arches in old palaces and abbeys, while Wikipedia discusses types such as clasping, angled, setback, and diagonal buttresses.",
+   "quote_britannica": "They are also placed for a lupport and bammer against the feet of fine arches, that are turned around great halls in old palaces, abbys, cz.",
+   "quote_wikipedia": "A clasping or clamped buttress has an L-shaped ground plan surrounding the corner, an angled buttress has two buttresses meeting at the corner, a setback buttress is similar to an angled buttress but the buttresses are set back from the corner, and a diagonal (or 'French') buttress bisects the angle between the walls where they meet."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A buttress is a kind of batment built archwise.",
+   "tag": "dropped",
+   "quote_britannica": "BUTTRESS, a kind of batment built archwise, or a mals of flouse or birds, serving to prop of flapper the fides of a building, wall, 6e, on the outside",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Buttresses serve to prop up the sides of a building or wall on the outside where it is very high or has a considerable load to sustain on the other side, such as a bank of earth.",
+   "tag": "enduring",
+   "quote_britannica": "serving to prop of flapper the fides of a building, wall, 6e, on the outside, where it is either very high, or has any considerable load to fultain on the other fide, as a bank of earth, eC",
+   "quote_wikipedia": "The term counterfort can be synonymous with buttress and is often used when referring to dams, retaining walls and other structures holding back earth."
+  },
+  {
+   "claim": "Buttresses are used against the angles of steeples and other stone buildings on the continent.",
+   "tag": "dropped",
+   "quote_britannica": "Butteflies are used against the angles of fleeples and other buildings of slone, 6e, on the confiile,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Buttresses are placed along the walls of buildings with great and heavy roofs that would otherwise crush the walls unless they are very thick.",
+   "tag": "enduring",
+   "quote_britannica": "and along the walls of such buildings at have great and heavy roofs, which would be subject to shrull the walls once, unless very thick, if no butteffes were placed against them.",
+   "quote_wikipedia": "as a means of providing support to act against the lateral (sideways) forces arising out of inadequately braced roof structures."
+  },
+  {
+   "claim": "Buttresses are placed for support and bammer against the feet of fine arches turned around great halls in old palaces and abbeys.",
+   "tag": "dropped",
+   "quote_britannica": "They are also placed for a lupport and bammer against the feet of fine arches, that are turned around great halls in old palaces, abbys, cz.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "batment",
+   "new": "architectural structure",
+   "quote_britannica": "BUTTRESS, a kind of batment built archwise, or a mals of flouse or birds, serving to prop of flapper the fides of a building, wall, 6e, on the outside",
+   "quote_wikipedia": "A buttress is an architectural structure built against or projecting from a wall which serves to support or reinforce the wall."
+  },
+  {
+   "old": "fleeples",
+   "new": "Gothic buildings",
+   "quote_britannica": "Butteflies are used against the angles of fleeples and other buildings of slone, 6e, on the confiile,",
+   "quote_wikipedia": "Buttresses are fairly common on more ancient (typically Gothic) buildings, as a means of providing support to act against the lateral (sideways) forces arising out of inadequately braced roof structures."
+  },
+  {
+   "old": "abbys",
+   "new": "ancient (typically Gothic) buildings",
+   "quote_britannica": "They are also placed for a lupport and bammer against the feet of fine arches, that are turned around great halls in old palaces, abbys, cz.",
+   "quote_wikipedia": "Buttresses are fairly common on more ancient (typically Gothic) buildings, as a means of providing support to act against the lateral (sideways) forces arising out of inadequately braced roof structures."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Early examples of buttresses on the Eanna Temple in ancient Uruk dating to the 4th millennium BC.",
+   "quote_wikipedia": "Early examples of buttresses are found on the Eanna Temple (ancient Uruk), dating to as early as the 4th millennium BC."
+  },
+  {
+   "topic": "Classification of buttresses by ground plan including clasping, angled, setback, and diagonal buttresses.",
+   "quote_wikipedia": "A clasping or clamped buttress has an L-shaped ground plan surrounding the corner, an angled buttress has two buttresses meeting at the corner, a setback buttress is similar to an angled buttress but the buttresses are set back from the corner, and a diagonal (or 'French') buttress bisects the angle between the walls where they meet."
+  },
+  {
+   "topic": "The term counterfort as synonymous with buttress for dams and retaining walls.",
+   "quote_wikipedia": "The term counterfort can be synonymous with buttress and is often used when referring to dams, retaining walls and other structures holding back earth."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 15,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 5,
+   "words": 127,
+   "edits_per_100_words": 3.94
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "batment",
+     "new": "architectural structure"
+    },
+    {
+     "old": "fleeples",
+     "new": "Gothic buildings"
+    },
+    {
+     "old": "abbys",
+     "new": "ancient (typically Gothic) buildings"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.6,
+   "wiki_only_topics": [
+    "Early examples of buttresses on the Eanna Temple in ancient Uruk dating to the 4th millennium BC.",
+    "Classification of buttresses by ground plan including clasping, angled, setback, and diagonal buttresses.",
+    "The term counterfort as synonymous with buttress for dams and retaining walls."
+   ]
+  },
+  "enduring_share": 0.4,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

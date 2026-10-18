@@ -1,0 +1,259 @@
+{
+ "entry_id": "B:1250:1",
+ "cite_britannica": "[B:1250:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1250",
+ "row_index": 1250,
+ "image_sha256": "2e0c75f854185185ace0f165eea2b904222208282d93a1c66b97c9b5c42f5c95",
+ "headword": "COINAGE",
+ "topic_hint": null,
+ "wiki_page_id": "24057311",
+ "wiki_revision_id": "1345146028",
+ "wiki_title": "Coining (mint)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Coining_(mint)",
+ "text_sha256": "b06e625baf77dc0e3dafa7e7b4c00c0a3a0f7a39042bd101bcef8d7b270f43f9",
+ "cite_wikipedia": "[W:24057311:1345146028]",
+ "rerank_logit": -3.223526,
+ "rerank_margin": 1.352541,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 3035,
+  "prompt_tokens": 4027,
+  "total_tokens": 7062,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 5609,
+ "article_chars_used": 10000,
+ "article_chars_total": 13000,
+ "similarities": [
+  {
+   "point": "Both describe coining as a stamping process using dies to impress designs onto metal blanks.",
+   "quote_britannica": "COINAGE, or Coining, the art of making ma-ery, as performed either by the hammer or mill.",
+   "quote_wikipedia": "Minting, coining or coinage is the process of manufacturing coins using a kind of stamping, the process used in both hammered coinage and milled coinage."
+  },
+  {
+   "point": "Both mention that dies are hardened to withstand repeated striking blows.",
+   "quote_britannica": "The strong tem-pening was wasd is still given to the two dyes, rendering them capable of bearing those expected blows.",
+   "quote_wikipedia": "Modern dies made out of hardened steel are capable of producing hundreds of thousands of coins before they are retired and defaced."
+  },
+  {
+   "point": "Both refer to the metal blank that receives the coin impression as a planchet.",
+   "quote_britannica": "The planet of metal has horizontally had upon this inferior mals, to receive the thamp of it on one file, and that of the new dye, wherewith it was covered, on the other.",
+   "quote_wikipedia": "Striking a coin refers to pressing an image into the blank metal disc, or planchet, and is a term descended from the days when the dies were struck with hammers to deform the metal into the image of the dies."
+  },
+  {
+   "point": "Both note that engravers create the coin designs on the dies.",
+   "quote_britannica": "Then engravers pre-panda, if they fill do, a couple of fleer fits in form of dyes, cut and terminated by flat surface, rounded off at the edges.",
+   "quote_wikipedia": "Prior to the modern era, coin dies were manufactured individually by hand by artisans known as engravers."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes heating planchets before striking, while Wikipedia states modern planchets are not heated.",
+   "quote_britannica": "After theft glances have been prepared and weighed with witharded pieces, slid or forged to get of the greythours part of the metal, and then boiled and made clear, they arrive, at half, at the maschine (fig. r.), which marks them when the edge's and flaming the mail (fig. z).",
+   "quote_wikipedia": "When a coin is struck, the planchet is not heated."
+  },
+  {
+   "point": "Britannica describes edge lettering via two laminates with half the legend on each, while Wikipedia describes a collar die or edge incusing machine.",
+   "quote_britannica": "The principal pieces of the machine (fig. x.), to damp coins on the edges, are two fiecl laminae, about a fine thick. One half of the legends, of the ring, is engraved on the thickness of one of the laminain, and the other half on the thickelsof the other; and their two laminar and freightly, although the phanchet marked with them he circular.",
+   "quote_wikipedia": "In more recent history, these kinds of designs are imparted into the coin through a multisectioned third die called a collar die or collar, whose inner edge diameter is the same as that of the edge of the coin."
+  },
+  {
+   "point": "Britannica describes cutting round blanks from a metal plate with a trepan, while Wikipedia describes punching blanks from a continuous strip producing scissel.",
+   "quote_britannica": "Indeed of dividing the lamina can final figures, they at once even clean out of it as many plantaches as it can contain, by means of a sharp fleet trepan, of a roundill figure, hollow within, and of a properizationable diameter, to shape and cut of the pieces at one unit the fames times.",
+   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Coining can be performed either by the hammer or by the mill.",
+   "tag": "enduring",
+   "quote_britannica": "COINAGE, or Coining, the art of making ma-ery, as performed either by the hammer or mill.",
+   "quote_wikipedia": "Minting, coining or coinage is the process of manufacturing coins using a kind of stamping, the process used in both hammered coinage and milled coinage."
+  },
+  {
+   "claim": "Engravers cut designs into dies for striking coins.",
+   "tag": "enduring",
+   "quote_britannica": "Then engravers pre-panda, if they fill do, a couple of fleer fits in form of dyes, cut and terminated by flat surface, rounded off at the edges.",
+   "quote_wikipedia": "Prior to the modern era, coin dies were manufactured individually by hand by artisans known as engravers."
+  },
+  {
+   "claim": "Dies are tempered to bear repeated blows.",
+   "tag": "enduring",
+   "quote_britannica": "The strong tem-pening was wasd is still given to the two dyes, rendering them capable of bearing those expected blows.",
+   "quote_wikipedia": "Modern dies made out of hardened steel are capable of producing hundreds of thousands of coins before they are retired and defaced."
+  },
+  {
+   "claim": "One die remains fixed while the other is movable during striking.",
+   "tag": "enduring",
+   "quote_britannica": "As one of these dyas was to remain dormant, and the other movable, the former cold in a future prints, this it might be intended into the square hole of the blocks, which, bring fixed very fall, kept the eyes in theory as any vice could have done.",
+   "quote_wikipedia": "A coin die (archaically spelt dye) is one of the two metallic pieces that are used to strike a coin, one per each side of the coin."
+  },
+  {
+   "claim": "Round blanks are cut from a metal plate using a trepan.",
+   "tag": "superseded",
+   "quote_britannica": "Indeed of dividing the lamina can final figures, they at once even clean out of it as many plantaches as it can contain, by means of a sharp fleet trepan, of a roundill figure, hollow within, and of a properizationable diameter, to shape and cut of the pieces at one unit the fames times.",
+   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal."
+  },
+  {
+   "claim": "Planchets are boiled and made clear before striking.",
+   "tag": "dropped",
+   "quote_britannica": "After theft glances have been prepared and weighed with witharded pieces, slid or forged to get of the greythours part of the metal, and then boiled and made clear, they arrive, at half, at the maschine (fig. r.), which marks them when the edge's and flaming the mail (fig. z). which, squeezing each of them flying between the two dyes, brought near each other with one blow, forces the two surfaces or fields of the piece to fill exactly all the vacations of the two figures engraved hollow.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Only crown and half-crown pieces can receive edge lettering.",
+   "tag": "dropped",
+   "quote_britannica": "Only crown and half-croony pieces can lay the imprefinion of letters on the thickets of their edges.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "dye",
+   "new": "die",
+   "quote_britannica": "Then engravers pre-panda, if they fill do, a couple of fleer fits in form of dyes, cut and terminated by flat surface, rounded off at the edges.",
+   "quote_wikipedia": "A coin die (archaically spelt dye) is one of the two metallic pieces that are used to strike a coin, one per each side of the coin."
+  },
+  {
+   "old": "planet of metal",
+   "new": "planchet",
+   "quote_britannica": "The planet of metal has horizontally had upon this inferior mals, to receive the thamp of it on one file, and that of the new dye, wherewith it was covered, on the other.",
+   "quote_wikipedia": "Striking a coin refers to pressing an image into the blank metal disc, or planchet, and is a term descended from the days when the dies were struck with hammers to deform the metal into the image of the dies."
+  },
+  {
+   "old": "plantaches",
+   "new": "planchets",
+   "quote_britannica": "Indeed of dividing the lamina can final figures, they at once even clean out of it as many plantaches as it can contain, by means of a sharp fleet trepan, of a roundill figure, hollow within, and of a properizationable diameter, to shape and cut of the pieces at one unit the fames times.",
+   "quote_wikipedia": "Striking a coin refers to pressing an image into the blank metal disc, or planchet, and is a term descended from the days when the dies were struck with hammers to deform the metal into the image of the dies."
+  },
+  {
+   "old": "laminating engine",
+   "new": "rolling mill",
+   "quote_britannica": "The three finest influences the white-man uses, are the laminating engines: the machine for making the imperfections on the edges of coins, and that null.",
+   "quote_wikipedia": "Scissel is the scrap produced in the punching of coin blanks from a continuous strip of metal."
+  },
+  {
+   "old": "fleer fits",
+   "new": "dies",
+   "quote_britannica": "Then engravers pre-panda, if they fill do, a couple of fleer fits in form of dyes, cut and terminated by flat surface, rounded off at the edges.",
+   "quote_wikipedia": "A coin die (archaically spelt dye) is one of the two metallic pieces that are used to strike a coin, one per each side of the coin."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Modern coin design and hubbing process",
+   "quote_wikipedia": "First, an artist creates a large plaster model of the coin. The plaster model is then coated with rubber. The rubber mold is then used to make an epoxy galvano. All of this takes place on a scale of around eight inches. Next, a reducing machine takes several days to reduce the image onto a steel master hub."
+  },
+  {
+   "topic": "Die doubling and error coins",
+   "quote_wikipedia": "If, when the die is subjected to another hubbing, it is not lined up exactly with the hub, the result is a secondary image, or doubling. This is called die doubling, and results in such spectacular coins as the famous 1955 doubled die cent."
+  },
+  {
+   "topic": "Coin edge reeding and collar dies",
+   "quote_wikipedia": "On the edge of the US dime, quarter and half dollar, and a number of world coins there are ridges, similar to knurling, called reeds. Some older US coins, and multiple world coins have other designs on the edge of the coin."
+  },
+  {
+   "topic": "Die marriage and coin alignment",
+   "quote_wikipedia": "In the United States, coins are typically minted head to tail; that means the \"top\" of one side of the coin is on the exact opposite side of the coin as the \"bottom\" of the other, resulting in the coin's features being presented right side up when the coin is rotated on a horizontal axis."
+  },
+  {
+   "topic": "Historical die life in ancient and medieval mints",
+   "quote_wikipedia": "Experimental archeology suggests that a lower die could be expected to last for up to 10,000 strikes depending on the level of wear deemed acceptable. Upper dies seem to have a far greater range of lives with usable lives ranging from just over 100 strikes to nearly 8000 being reported."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "differences",
+   "item": {
+    "point": "Britannica claims a mill can produce twenty thousand coins per day, while Wikipedia states modern presses strike about 120 coins per minute.",
+    "quote_britannica": "The cooling engine or mill is for handy (fig. z.), tuna a fragile man may many twenty thousand plants in one day; golg filters and copper planchets, are all of them cooked with a milk, which the coating liquures (fig. z.), commonly called dyes, are flattened; that of the face under, in a figure box garnified with male and female flowers, to fix and keep it flexily and the other above, in a little box garnified with the fame foresew, to fatten the coming liquare.",
+    "quote_wikipedia": "In modern presses, a die strikes approximately 120 coins a minute."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "A milling engine can produce twenty thousand planchets in one day.",
+    "tag": "dropped",
+    "quote_britannica": "The cooling engine or mill is for handy (fig. z.), tuna a fragile man may many twenty thousand plants in one day; golg filters and copper planchets, are all of them cooked with a milk, which the coating liquures (fig. z.), commonly called dyes, are flattened; that of the face under, in a figure box garnified with male and female flowers, to fix and keep it flexily and the other above, in a little box garnified with the fame foresew, to fatten the coming liquare.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_britannica not found in entry text"
+  }
+ ],
+ "quote_check": {
+  "kept": 24,
+  "rejected": 2
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 8,
+   "words": 1003,
+   "edits_per_100_words": 0.8
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "planet of metal",
+     "new": "planchet"
+    },
+    {
+     "old": "laminating engine",
+     "new": "rolling mill"
+    },
+    {
+     "old": "fleer fits",
+     "new": "dies"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "dye",
+     "new": "die"
+    },
+    {
+     "old": "plantaches",
+     "new": "planchets"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.143
+  },
+  "coverage": {
+   "dropped_share": 0.286,
+   "wiki_only_topics": [
+    "Modern coin design and hubbing process",
+    "Die doubling and error coins",
+    "Coin edge reeding and collar dies",
+    "Die marriage and coin alignment",
+    "Historical die life in ancient and medieval mints"
+   ]
+  },
+  "enduring_share": 0.571,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 2
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

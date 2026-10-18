@@ -1,0 +1,112 @@
+{
+ "entry_id": "B:452:0",
+ "cite_britannica": "[B:452:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:452",
+ "row_index": 452,
+ "image_sha256": "233256cb3c3c25e03e847aa65e26f3e82cd05f8ef6e302c7ce69fe42a042f2cf",
+ "headword": null,
+ "topic_hint": null,
+ "wiki_page_id": "32690554",
+ "wiki_revision_id": "1340592923",
+ "wiki_title": "Cell counting",
+ "wiki_url": "https://en.wikipedia.org/wiki/Cell_counting",
+ "text_sha256": "032fb565cd31993d3c50b62a16f3f02b2f1a985befaf1bb70d550ef999387a7f",
+ "cite_wikipedia": "[W:32690554:1340592923]",
+ "rerank_logit": -3.660816,
+ "rerank_margin": 0.080129,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 454,
+  "prompt_tokens": 2405,
+  "total_tokens": 2859,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 1428,
+ "article_chars_used": 8399,
+ "article_chars_total": 8399,
+ "similarities": [],
+ "differences": [
+  {
+   "point": "Britannica text is repetitive and lacks substantive content, while Wikipedia provides detailed methods for cell counting.",
+   "quote_britannica": "We have used the same method to calculate the number of cells that are used to generate a single cell size.",
+   "quote_wikipedia": "Cell counting is any of various methods for the counting or similar quantification of cells in the life sciences, including medical diagnosis and treatment."
+  }
+ ],
+ "claims": [],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Counting chambers and hemocytometers",
+   "quote_wikipedia": "A counting chamber, is a microscope slide that is especially designed to enable cell counting. Hemocytometers and Sedgewick Rafter counting chambers are two types of counting chambers."
+  },
+  {
+   "topic": "Colony forming units and plating",
+   "quote_wikipedia": "To quantify the number of cells in a culture, the cells can be simply plated on a petri dish with growth medium. If the cells are efficiently distributed on the plate, it can be generally assumed that each cell will give rise to a single colony or Colony Forming Unit (CFU)."
+  },
+  {
+   "topic": "Coulter and CASY counters",
+   "quote_wikipedia": "A Coulter counter is an appliance that can count cells as well as measure their volume. It is based on the fact that cells show great electrical resistance; in other words, they conduct almost no electricity."
+  },
+  {
+   "topic": "Flow cytometry",
+   "quote_wikipedia": "Flow cytometry is by far the most sophisticated and expensive method for cell counting. In a flow cytometer the cells flow in a narrow stream in front of a laser beam."
+  },
+  {
+   "topic": "Spectrophotometry and turbidometry",
+   "quote_wikipedia": "Cell suspensions are turbid. Cells absorb and scatter the light. The higher the cell concentration, the higher the turbidity. Spectrophotometers can measure intensity of light very accurately."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 6,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 281,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": null,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": null
+  },
+  "coverage": {
+   "dropped_share": null,
+   "wiki_only_topics": [
+    "Counting chambers and hemocytometers",
+    "Colony forming units and plating",
+    "Coulter and CASY counters",
+    "Flow cytometry",
+    "Spectrophotometry and turbidometry"
+   ]
+  },
+  "enduring_share": null,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 0,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

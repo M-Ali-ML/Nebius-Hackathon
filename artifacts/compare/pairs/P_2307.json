@@ -1,0 +1,276 @@
+{
+ "entry_id": "P:2307",
+ "level": "page",
+ "entry_ids": [
+  "B:2307:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:2307:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2307",
+ "row_index": 2307,
+ "image_sha256": "4ce2ea50e9d2f4035fe1405b86ee2d40131a8b739a494cc64b0c0fab124fe2a5",
+ "headword": null,
+ "topic_hint": "ALG",
+ "wiki_page_id": "28565818",
+ "wiki_revision_id": "1351791811",
+ "wiki_title": "Invasion of Algiers (1775)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Invasion_of_Algiers_(1775)",
+ "text_sha256": "3265ad6d8c626c57aaa007a94dc034ad562bcc7f9bbf20bb41ca2d9ac82cfcb2",
+ "cite_wikipedia": "[W:28565818:1351791811]",
+ "rerank_logit": -6.07703,
+ "rerank_margin": 0.038183,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2251,
+  "prompt_tokens": 3912,
+  "total_tokens": 6163,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 5789,
+ "article_chars_used": 10000,
+ "article_chars_total": 10443,
+ "similarities": [
+  {
+   "point": "Both describe the expedition as a Spanish attempt to capture Algiers.",
+   "quote_britannica": "All trade meeting with a favorable wind, footop appeared before Algeria;",
+   "quote_wikipedia": "The invasion of Algiers was a massive and disastrous amphibious attempt in July 1775 by a combined Spanish and Tuscan force to capture the city of Algiers,",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "Both state that the Spanish forces landed on the coast near the city.",
+   "quote_britannica": "The Spaniards landed with out oppositions and immediately built a fort,",
+   "quote_wikipedia": "On the coast, near the city, O'Reilly ordered the Spanish forces to land on the shores and capture the city,",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "Both describe the expedition as a failure for the Spanish.",
+   "quote_britannica": "The anthampy Spaniards had force reached their frh calmits of the Spaniards.",
+   "quote_wikipedia": "Forced to retreat back to their boats waiting offshore, the assault ended in a spectacular failure and the campaign proved to be a humiliating blow to the Spanish military reorganisation.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "Both mention that the Spanish forces withdrew or retreated.",
+   "quote_britannica": "he marched at the head of his Army, though in no fault diforer, towards Cape Middos, in order to embark in those few vehicles which had outweathered the forms.",
+   "quote_wikipedia": "O'Reilly and the Spanish fleet withdrew to Alicante with his reputation now in tatters.",
+   "cite_britannica": "[B:2307:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "The dates of the expeditions differ (1541 vs 1775).",
+   "quote_britannica": "for, on the 39% of October 1541s a deadful from of wind, rain, and hail,",
+   "quote_wikipedia": "The invasion of Algiers was a massive and disastrous amphibious attempt in July 1775 by a combined Spanish and Tuscan force to capture the city of Algiers,",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "The Spanish monarchs differ (Charles V vs Charles III).",
+   "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
+   "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "The causes of failure differ (storm vs ambush/tactical error).",
+   "quote_britannica": "a deadful from of wind, rain, and hail, arole from the north, accompanied with white flocks of earthquakes,",
+   "quote_wikipedia": "The Spanish chose to pursue, but walked into a carefully set trap and suffered massive casualties, losing a quarter of their total force compared with light casualties on the Algerian side.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "point": "The presence of a prophet is mentioned in Britannica but not Wikipedia.",
+   "quote_britannica": "Soon after this, the prophet Tuf/f/j who had fortotold the deflection of the Spaniards, was not only declared the delivery of his country,",
+   "quote_wikipedia": "The Spanish forces departed Cartagena in 1775 and sailed towards Algiers.",
+   "cite_britannica": "[B:2307:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The expedition was ordered by Charles.",
+   "tag": "renamed",
+   "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
+   "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "The Spanish landed without opposition.",
+   "tag": "enduring",
+   "quote_britannica": "The Spaniards landed with out oppositions and immediately built a fort,",
+   "quote_wikipedia": "Once ashore, the Spanish were met initially with light Algerian resistance, mainly because a feigned retreat by the forces advancing from Algiers.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "The Spanish built a fort upon landing.",
+   "tag": "dropped",
+   "quote_britannica": "The Spaniards landed with out oppositions and immediately built a fort, under the unions of which they exempted,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "A storm caused the destruction of the Spanish fleet.",
+   "tag": "superseded",
+   "quote_britannica": "for, on the 39% of October 1541s a deadful from of wind, rain, and hail, arole from the north, accompanied with white flocks of earthquakes,",
+   "quote_wikipedia": "The Spanish chose to pursue, but walked into a carefully set trap and suffered massive casualties, losing a quarter of their total force compared with light casualties on the Algerian side.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "The Spanish abandoned artillery and baggage during retreat.",
+   "tag": "enduring",
+   "quote_britannica": "abandoning his tests, artillery, and all his heavy bagages, to see enemy, he marched at the head of his Army,",
+   "quote_wikipedia": "and abandoning to the Algerians no fewer than 15 artillery pieces and some 9000 other weapons.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "Many Spaniards were captured by the enemy.",
+   "tag": "enduring",
+   "quote_britannica": "killing great numbers, and bringing away a full greater number of capitars;",
+   "quote_wikipedia": "2,000 Spaniards were captured as many were cut off from the boats that would have allowed them to return to their ships.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "The Algerian leader was named Hassan.",
+   "tag": "renamed",
+   "quote_britannica": "Being now reduced to the utmost difrets, Haffan received a immune to formative art direction,",
+   "quote_wikipedia": "The defending Algerian forces were led by Baba Mohammed ben-Osman.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "claim": "The expedition was a disastrous failure for Spain.",
+   "tag": "enduring",
+   "quote_britannica": "The anthampy Spaniards had force reached their frh calmits of the Spaniards.",
+   "quote_wikipedia": "Forced to retreat back to their boats waiting offshore, the assault ended in a spectacular failure and the campaign proved to be a humiliating blow to the Spanish military reorganisation.",
+   "cite_britannica": "[B:2307:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Haffan",
+   "new": "Baba Mohammed ben-Osman",
+   "quote_britannica": "Being now reduced to the utmost difrets, Haffan received a immune to formative art direction,",
+   "quote_wikipedia": "The defending Algerian forces were led by Baba Mohammed ben-Osman.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "old": "Algerines",
+   "new": "Algerian forces",
+   "quote_britannica": "By this proudgism armament, the Algerines were thrown into the utmost confianeration.",
+   "quote_wikipedia": "The defending Algerian forces were led by Baba Mohammed ben-Osman.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "old": "capitars",
+   "new": "captives",
+   "quote_britannica": "killing great numbers, and bringing away a full greater number of capitars;",
+   "quote_wikipedia": "2,000 Spaniards were captured as many were cut off from the boats that would have allowed them to return to their ships.",
+   "cite_britannica": "[B:2307:0]"
+  },
+  {
+   "old": "bashy",
+   "new": "Deylik",
+   "quote_britannica": "remostfritating to the bashy, how ridiculous and Canadian it was to their nation,",
+   "quote_wikipedia": "The invasion of Algiers was a massive and disastrous amphibious attempt in July 1775 by a combined Spanish and Tuscan force to capture the city of Algiers, the capital of the Deylik of Algeria.",
+   "cite_britannica": "[B:2307:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Commanders Alexander O'Reilly and John Acton",
+   "quote_wikipedia": "The amphibious assault was led by Spanish general Alexander O'Reilly and Tuscan admiral Sir John Acton, commanding a total of 20,000 men along with 74 warships of various sizes and 230 transport ships carrying the troops for the invasion."
+  },
+  {
+   "topic": "Specific fleet composition and troop numbers",
+   "quote_wikipedia": "By June the task force that had been assembled was enormous, with seven ships of the line, twelve frigates, twenty-seven gunboats, five hulks, nine feluccas, four mortar boats, seven galleys and three smaller warships, along with two hundred and thirty transport ships."
+  },
+  {
+   "topic": "Tactical details of the landing and artillery loss",
+   "quote_wikipedia": "Most of the guns became stuck in the wet sand resulting in their absence from the ensuing fight."
+  },
+  {
+   "topic": "Casualty figures and captured weapons",
+   "quote_wikipedia": "The losses were huge; suffering more than 5,000 casualties, including five generals killed and fifteen wounded (with one of these being Bernado de Galvez), and abandoning to the Algerians no fewer than 15 artillery pieces and some 9000 other weapons."
+  },
+  {
+   "topic": "Aftermath and diplomacy with Morocco",
+   "quote_wikipedia": "Despite the failed invasion attempt, in 1780 Spain and Morocco signed a treaty of friendship at the Peace of Aranjuez."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "term_pairs",
+   "item": {
+    "point": "Charles",
+    "new": "Charles III",
+    "quote_britannica": "Even ladies of birth and character attended Charles in his expedition,",
+    "quote_wikipedia": "The assault was ordered by the King of Spain, Charles III, who was attempting to demonstrate to the Barbary States the power of the revitalized Spanish military"
+   },
+   "reason": "missing old"
+  }
+ ],
+ "quote_check": {
+  "kept": 25,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 8,
+   "words": 991,
+   "edits_per_100_words": 0.81
+  },
+  "lexical": {
+   "renamed_share": 0.25,
+   "term_pairs": [
+    {
+     "old": "Haffan",
+     "new": "Baba Mohammed ben-Osman"
+    },
+    {
+     "old": "bashy",
+     "new": "Deylik"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Algerines",
+     "new": "Algerian forces"
+    },
+    {
+     "old": "capitars",
+     "new": "captives"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.125
+  },
+  "coverage": {
+   "dropped_share": 0.125,
+   "wiki_only_topics": [
+    "Commanders Alexander O'Reilly and John Acton",
+    "Specific fleet composition and troop numbers",
+    "Tactical details of the landing and artillery loss",
+    "Casualty figures and captured weapons",
+    "Aftermath and diplomacy with Morocco"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 2,
+   "superseded": 1,
+   "dropped": 1
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

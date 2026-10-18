@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:1473:1",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-8aec0470d5c385cf",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Definition as scaling walls with ladders\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart; carnivore with ladders, to pass the ditch or mount the rampart\",\n      \"quote_wikipedia\": \"Escalade is the act of scaling defensive walls or ramparts with the aid of ladders.\"\n    },\n    {\n      \"point\": \"Use in sieges\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": \"Escalade was a prominent feature of sieges in ancient and medieval warfare.\"\n    },\n    {\n      \"point\": \"Danger from defenders\",\n      \"quote_britannica\": \"a party must be placed on the counterfeary opposite for the loading-place, ready to fire at the garden if they are alarmed, and good the mounting on the rampart.\",\n      \"quote_wikipedia\": \"escalade would generally be conducted in the face of arrow fire from the battlements, and the defenders would naturally attempt to push ladders away from the wall.\"\n    },\n    {\n      \"point\": \"Obsolete in modern warfare\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": \"Escalade is no longer common in modern warfare, as new technologies and tactics have essentially made escalade obsolete\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Etymology\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart\",\n      \"quote_wikipedia\": \"It is a borrowed French word, the noun-equivalent form of the verb escalader, meaning \\\"to climb\\\" or \\\"to scale\\\".\"\n    },\n    {\n      \"point\": \"Modern police use\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": \"However, escalade still exists as a viable (albeit niche) combat tactic, and is occasionally used by police tactical, counterterrorist, and special forces units to raid a structure through its upper levels\"\n    },\n    {\n      \"point\": \"Specific countermeasures\",\n      \"quote_britannica\": \"If lifted this is wet, the rampart high, and provided with a reverentes, it will he difficult to impute the town in the way\",\n      \"quote_wikipedia\": \"Countermeasures to escalade included moats (which prevented ladder-bearing soldiers from reaching the base of a wall), machicolations (which facilitated attacks on enemy soldiers while they climbed), and talus walls\"\n    },\n    {\n      \"point\": \"Tactical factors\",\n      \"quote_britannica\": \"It the ditch is dry, the ladders so fixed in Some place fartheit diflant from the century and a four as they get upon the rampart they put themforce in order to reverse the enemy\",\n      \"quote_wikipedia\": \"Two critical factors in determining the success or failure of escalade were the number of ladders and the speed with which they could be arranged.\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Escalade is an attack of a wall on a rampart with ladders\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart; carnivore with ladders, to pass the ditch or mount the rampart\",\n      \"quote_wikipedia\": \"Escalade is the act of scaling defensive walls or ramparts with the aid of ladders.\"\n    },\n    {\n      \"claim\": \"Escalade was prominent in ancient and medieval sieges\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": \"Escalade was a prominent feature of sieges in ancient and medieval warfare.\"\n    },\n    {\n      \"claim\": \"Escalade is no longer common in modern warfare\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": \"Escalade is no longer common in modern warfare, as new technologies and tactics have essentially made escalade obsolete\"\n    },\n    {\n      \"claim\": \"Escalade is still used by police and special forces\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Escalade is a borrowed French word from escalader\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Defenders pour heated or incendiary substances on attackers\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"a party must be placed on the counterfeary opposite for the loading-place, ready to fire at the garden if they are alarmed\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Escalade attempts to overwhelm defenders in a direct assault\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart; carnivore with ladders, to pass the ditch or mount the rampart\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Escalade is costly for attackers\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Since the invention and use of gunpowder, and the walls of cities have been linked, they are foldom taken by escalade.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"ESCAMADE\",\n      \"new\": \"Escalade\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart\",\n      \"quote_wikipedia\": \"Escalade is the act of scaling defensive walls or ramparts with the aid of ladders.\"\n    },\n    {\n      \"old\": \"Sealana\",\n      \"new\": \"Escalade\",\n      \"quote_britannica\": \"ESCAMADE, or Sealana a farism attack of a wall on a rampart\",\n      \"quote_wikipedia\": \"Escalade is the act of scaling defensive walls or ramparts with the aid of ladders.\"\n    },\n    {\n      \"old\": \"counterfeary\",\n      \"new\": \"battlements\",\n      \"quote_britannica\": \"a party must be placed on the counterfeary opposite for the loading-place, ready to fire at the garden if they are alarmed\",\n      \"quote_wikipedia\": \"escalade would generally be conducted in the face of arrow fire from the battlements\"\n    },\n    {\n      \"old\": \"reverentes\",\n      \"new\": \"talus walls\",\n      \"quote_britannica\": \"If lifted this is wet, the rampart high, and provided with a reverentes, it will he difficult to impute the town in the way\",\n      \"quote_wikipedia\": \"Countermeasures to escalade included moats (which prevented ladder-bearing soldiers from reaching the base of a wall), machicolations (which facilitated attacks on enemy soldiers while they climbed), and talus walls\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Etymology of escalade\",\n      \"quote_wikipedia\": \"It is a borrowed French word, the noun-equivalent form of the verb escalader, meaning \\\"to climb\\\" or \\\"to scale\\\".\"\n    },\n    {\n      \"point\": \"Defensive countermeasures\",\n      \"topic\": \"Defensive countermeasures to escalade\",\n      \"quote_wikipedia\": \"Countermeasures to escalade included moats (which prevented ladder-bearing soldiers from reaching the base of a wall), machicolations (which facilitated attacks on enemy soldiers while they climbed), and talus walls (which could weaken ladders or were too tall for ladders to reach the top of).\"\n    },\n    {\n      \"topic\": \"Tactical factors for success\",\n      \"quote_wikipedia\": \"Two critical factors in determining the success or failure of escalade were the number of ladders and the speed with which they could be arranged.\"\n    },\n    {\n      \"topic\": \"Modern police and special forces use\",\n      \"quote_wikipedia\": \"However, escalade still exists as a viable (albeit niche) combat tactic, and is occasionally used by police tactical, counterterrorist, and special forces units to raid a structure through its upper levels\"\n    },\n    {\n      \"topic\": \"Mechanical assault ladders\",\n      \"quote_wikipedia\": \"Mechanical assault ladders, typically installed on the roof of vehicles and featuring ramps that can extend or angle themselves to reach an entry point such as a window sill or balcony, are often used in this capacity.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324769,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 2115,
+   "prompt_tokens": 1584,
+   "total_tokens": 3699,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 5.7
+ }
+}

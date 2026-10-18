@@ -1,0 +1,176 @@
+{
+ "entry_id": "B:2171:10",
+ "cite_britannica": "[B:2171:10]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2171",
+ "row_index": 2171,
+ "image_sha256": "f8869fa95f190d0e556bf8d2397c0c36da436ea1b23405995f0aac0f398f26d5",
+ "headword": "ATESTE",
+ "topic_hint": null,
+ "wiki_page_id": "2892406",
+ "wiki_revision_id": "1323191816",
+ "wiki_title": "Ateste",
+ "wiki_url": "https://en.wikipedia.org/wiki/Ateste",
+ "text_sha256": "5377c754783d0aef3a5b114bbe454e411e4859f01edfc1464b8ece4df985da96",
+ "cite_wikipedia": "[W:2892406:1323191816]",
+ "rerank_logit": -3.458379,
+ "rerank_margin": 0.891499,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 946,
+  "prompt_tokens": 999,
+  "total_tokens": 1945,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 96,
+ "article_chars_used": 1857,
+ "article_chars_total": 1857,
+ "similarities": [
+  {
+   "point": "Both identify Ateste as an ancient town in Venetia, Italy.",
+   "quote_britannica": "ATESTE, a town in the territory of Veneto in Italy",
+   "quote_wikipedia": "Ateste (Ancient Greek: Ἀτεστἐ) (modern Este, Italy) was an ancient town of Venetia"
+  },
+  {
+   "point": "Both state that the modern name of the town is Este.",
+   "quote_britannica": "now called Rje.",
+   "quote_wikipedia": "(modern Este, Italy)"
+  },
+  {
+   "point": "Both provide the latitude of the location.",
+   "quote_britannica": "N. Lat. 45.25.",
+   "quote_wikipedia": "43 feet above sea-level and 22 miles southwest of Patavium"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives only basic location data, while Wikipedia provides detailed archaeological and historical information.",
+   "quote_britannica": "ATESTE, a town in the territory of Veneto in Italy, now called Rje. E. Long 12.6. N. Lat. 45.25.",
+   "quote_wikipedia": "Large cemeteries have been excavated, which show three different periods from the 8th century BCE down to the Roman domination"
+  },
+  {
+   "point": "Britannica lists the longitude as 12.6, whereas Wikipedia describes the location relative to Patavium and the Euganean hills.",
+   "quote_britannica": "E. Long 12.6. N. Lat. 45.25.",
+   "quote_wikipedia": "at the southern foot of the Euganean hills, 43 feet above sea-level and 22 miles southwest of Patavium"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Ateste is a town in the territory of Veneto/Venetia in Italy.",
+   "tag": "enduring",
+   "quote_britannica": "ATESTE, a town in the territory of Veneto in Italy",
+   "quote_wikipedia": "Ateste (Ancient Greek: Ἀτεστἐ) (modern Este, Italy) was an ancient town of Venetia"
+  },
+  {
+   "claim": "The town is now called Este.",
+   "tag": "enduring",
+   "quote_britannica": "now called Rje.",
+   "quote_wikipedia": "(modern Este, Italy)"
+  },
+  {
+   "claim": "The town is located at 12.6 degrees East longitude.",
+   "tag": "dropped",
+   "quote_britannica": "E. Long 12.6.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Veneto",
+   "new": "Venetia",
+   "quote_britannica": "territory of Veneto in Italy",
+   "quote_wikipedia": "ancient town of Venetia"
+  },
+  {
+   "old": "Rje",
+   "new": "Este",
+   "quote_britannica": "now called Rje.",
+   "quote_wikipedia": "(modern Este, Italy)"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Archaeological periods and cemeteries of Ateste",
+   "quote_wikipedia": "Large cemeteries have been excavated, which show three different periods from the 8th century BCE down to the Roman domination"
+  },
+  {
+   "topic": "Roman colonization and veterans at Ateste",
+   "quote_wikipedia": "After the battle of Actium, Augustus settled veterans from several of his legions in this territory"
+  },
+  {
+   "topic": "The Venetic language and inscriptions",
+   "quote_wikipedia": "Inscriptions show that the Venetic language asserted its existence even after Ateste came into the hands of the Romans"
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "The town is located at 45.25 degrees North latitude.",
+    "tag": "enduring",
+    "quote_britannica": "N. Lat. 45.25.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 13,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 19,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Rje",
+     "new": "Este"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Veneto",
+     "new": "Venetia"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.333,
+   "wiki_only_topics": [
+    "Archaeological periods and cemeteries of Ateste",
+    "Roman colonization and veterans at Ateste",
+    "The Venetic language and inscriptions"
+   ]
+  },
+  "enduring_share": 0.667,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 1
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

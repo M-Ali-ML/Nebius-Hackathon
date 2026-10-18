@@ -1,0 +1,281 @@
+{
+ "entry_id": "P:1422",
+ "level": "page",
+ "entry_ids": [
+  "B:1422:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:1422:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1422",
+ "row_index": 1422,
+ "image_sha256": "8d39d99af99249708a75d8e526080ae109f37e42e0fecd3c25a81e10774f2f4e",
+ "headword": null,
+ "topic_hint": "EDU",
+ "wiki_page_id": "2883641",
+ "wiki_revision_id": "1344476102",
+ "wiki_title": "Some Thoughts Concerning Education",
+ "wiki_url": "https://en.wikipedia.org/wiki/Some_Thoughts_Concerning_Education",
+ "text_sha256": "852bf2be7ed1a0393d586003de870167ef21e01524a940668bcef833307d98a7",
+ "cite_wikipedia": "[W:2883641:1344476102]",
+ "rerank_logit": -6.727321,
+ "rerank_margin": 0.173451,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2172,
+  "prompt_tokens": 3950,
+  "total_tokens": 6122,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6421,
+ "article_chars_used": 10000,
+ "article_chars_total": 21930,
+ "similarities": [
+  {
+   "point": "Both texts discuss the education of young gentlemen or men of fortune.",
+   "quote_britannica": "highly worthy of engaging the attention of the young gentleman.",
+   "quote_wikipedia": "Some Thoughts Concerning Education is a 1693 treatise on the education of gentlemen",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "point": "Both texts address the role of parents in education.",
+   "quote_britannica": "fall, of the circumnation of the parents, or any other part radios, should render it inconvenient",
+   "quote_wikipedia": "In 1684, Mary Clarke and her husband Edward asked their friend John Locke for advice on raising their son Edward Jr.;",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "point": "Both texts discuss the value of reading and literature for education.",
+   "quote_britannica": "Some of the purest and molt elegant of our posts, the excellent periodicals works which have appeared in new languages,",
+   "quote_wikipedia": "Locke also offers specific advice on topics ranging from bed linens to diet to sleeping regimens.",
+   "cite_britannica": "[B:1422:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on physical activities like dancing and fencing, while Wikipedia focuses on health habits like diet and sleep.",
+   "quote_britannica": "Dancing, fencing, running, hortemanflip, the management of the mofics, and the motions of military glimphes,",
+   "quote_wikipedia": "Locke also offers specific advice on topics ranging from bed linens to diet to sleeping regimens.",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "point": "Britannica discusses mercantile education separately, while Wikipedia discusses the shift to practical education broadly.",
+   "quote_britannica": "VII. In the Education of People Affordford for a Mercantile deployments and join the number Occupations in Life is particularly controlled with Literatures.",
+   "quote_wikipedia": "Instead of demanding that their sons spend all of their time studying Greek and Latin texts, an increasing number of families began to demand a practical education for their sons;",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "point": "Britannica mentions mechanical arts as optional, while Wikipedia does not discuss mechanical arts.",
+   "quote_britannica": "We lay nothing of causing the young man of fortune to learn some mechanical art;",
+   "quote_wikipedia": "Western child-rearing manuals are still dominated by the topics of food and sleep.",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "point": "Britannica emphasizes moral and religious principles, while Wikipedia emphasizes virtue and rationality.",
+   "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
+   "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children.",
+   "cite_britannica": "[B:1422:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Dancing, fencing, running, and military exercises are worthy of a young gentleman's time.",
+   "tag": "dropped",
+   "quote_britannica": "Dancing, fencing, running, hortemanflip, the management of the mofics, and the motions of military glimphes, are more at them worthy of occupying his time,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "Natural philosophy is highly useful and entertaining and worthy of attention.",
+   "tag": "enduring",
+   "quote_britannica": "Natural philosophy, as being both highly useful and entertaining, as well worthy of the attention of all who can talked to appropriate anayment of their time to fictific purifuits;",
+   "quote_wikipedia": "by exposing them to the emerging sciences, mathematics, and the modern languages, these parents hoped to prepare their sons for the changing economy",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "History teaches virtue and provides examples of great men.",
+   "tag": "dropped",
+   "quote_britannica": "When history condelends to take notice of individuals, they see all making always flesh a have been embent for virtue, for abilities, or for the rank which, they held in life;",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "Young men of fortune should be instructed in the principles of morality and religion.",
+   "tag": "renamed",
+   "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
+   "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children.",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "Learning a mechanical art is not absolutely necessary for a man of fortune.",
+   "tag": "dropped",
+   "quote_britannica": "We lay nothing of causing the young man of fortune to learn some mechanical art; We think fell in a mechanical arm might now and then afford him an innovacant and plading amefiens; but we do one consider it is absolutely necessary,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "People of rank and fortune should ensure their children acquire more than superficial accomplishments.",
+   "tag": "dropped",
+   "quote_britannica": "It is peculiarly unfair toame for our age and country, that people of rank and forture are not to illudious that their children ac-quire there as the more superficial accomplillments.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "claim": "Ancient languages are not absolutely necessary for a boy designed for mercantile employment.",
+   "tag": "enduring",
+   "quote_britannica": "At present this does not appear absolutely necellary; yet we do not perform to forbid it as improperly.",
+   "quote_wikipedia": "Instead of demanding that their sons spend all of their time studying Greek and Latin texts, an increasing number of families began to demand a practical education for their sons;",
+   "cite_britannica": "[B:1422:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Natural philosophy",
+   "new": "sciences",
+   "quote_britannica": "Natural philosophy, as being both highly useful and entertaining, as well worthy of the attention of all who can talked to appropriate anayment of their time to fictific purifuits;",
+   "quote_wikipedia": "by exposing them to the emerging sciences, mathematics, and the modern languages, these parents hoped to prepare their sons for the changing economy",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "old": "monality",
+   "new": "virtue",
+   "quote_britannica": "Let them be carefully instructed to the principles of monality and religion.",
+   "quote_wikipedia": "Locke dedicates the bulk of Some Thoughts Concerning Education to explaining how to instill virtue in children.",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "old": "classical learning",
+   "new": "Greek and Latin texts",
+   "quote_britannica": "regular course of classical learning in a free (chool;",
+   "quote_wikipedia": "Instead of demanding that their sons spend all of their time studying Greek and Latin texts, an increasing number of families began to demand a practical education for their sons;",
+   "cite_britannica": "[B:1422:0]"
+  },
+  {
+   "old": "mechanical art",
+   "new": "practical education",
+   "quote_britannica": "We lay nothing of causing the young man of fortune to learn some mechanical art;",
+   "quote_wikipedia": "an increasing number of families began to demand a practical education for their sons;",
+   "cite_britannica": "[B:1422:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Tabula rasa theory of mind",
+   "quote_wikipedia": "Locke outlined a new theory of mind, contending that the mind is originally a tabula rasa or \"blank slate\"; that is, it did not contain any innate ideas at birth."
+  },
+  {
+   "topic": "Association of ideas",
+   "quote_wikipedia": "That is, the \" associations of ideas \" made when young are more significant than those made when mature because they are the foundation of the self—they mark the tabula rasa."
+  },
+  {
+   "topic": "Physical habits and hardiness",
+   "quote_wikipedia": "Locke firmly believed that children should be exposed to harsh conditions while young to inure them to, for example, cold temperatures when they were older: \"Children be not too warmly clad or covered, winter or summer\""
+  },
+  {
+   "topic": "Esteem and disgrace as discipline",
+   "quote_wikipedia": "His attempt to solve this problem is not only to treat children as rational beings but also to create a disciplinary system founded on esteem and disgrace rather than on rewards and punishments."
+  },
+  {
+   "topic": "Historical influence and translations",
+   "quote_wikipedia": "It was translated into almost all of the major written European languages during the eighteenth century, and nearly every European writer on education after Locke, including Jean-Jacques Rousseau, acknowledged its influence."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both texts mention the importance of classical languages and literature.",
+    "quote_britannica": "regular course of classical learning in a free (chool;",
+    "quote_wikipedia": "were the English and French language along with fewer tenents social, albidental, and philosophical compositions;"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Civil history and the principles of government should not be overlooked.",
+    "tag": "enduring",
+    "quote_britannica": "Neither do we fuppole civil history and the pria-ciples of animals to be overlooked.",
+    "quote_wikipedia": "Let them be carefully informed of the nature of the political constitution of their country, and of the ex-tent of their spirit and politick rights"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "civil history",
+    "new": "political constitution",
+    "quote_britannica": "Neither do we fuppole civil history and the pria-ciples of animals to be overlooked.",
+    "quote_wikipedia": "Let them be carefully informed of the nature of the political constitution of their country, and of the ex-tent of their spirit and politick rights"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 23,
+  "rejected": 3
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 11,
+   "words": 1096,
+   "edits_per_100_words": 1.0
+  },
+  "lexical": {
+   "renamed_share": 0.143,
+   "term_pairs": [
+    {
+     "old": "Natural philosophy",
+     "new": "sciences"
+    },
+    {
+     "old": "monality",
+     "new": "virtue"
+    },
+    {
+     "old": "classical learning",
+     "new": "Greek and Latin texts"
+    },
+    {
+     "old": "mechanical art",
+     "new": "practical education"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.571,
+   "wiki_only_topics": [
+    "Tabula rasa theory of mind",
+    "Association of ideas",
+    "Physical habits and hardiness",
+    "Esteem and disgrace as discipline",
+    "Historical influence and translations"
+   ]
+  },
+  "enduring_share": 0.286,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 1,
+   "superseded": 0,
+   "dropped": 4
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

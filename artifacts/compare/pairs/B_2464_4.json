@@ -1,0 +1,117 @@
+{
+ "entry_id": "B:2464:4",
+ "cite_britannica": "[B:2464:4]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2464",
+ "row_index": 2464,
+ "image_sha256": "24f450326eee13b008306d2b355bd49b295db96603186268db20b85552cf958e",
+ "headword": "CABIDOS",
+ "topic_hint": null,
+ "wiki_page_id": "16040029",
+ "wiki_revision_id": "1353624729",
+ "wiki_title": "Cabidos",
+ "wiki_url": "https://en.wikipedia.org/wiki/Cabidos",
+ "text_sha256": "2845a762d09e10e6f00952c5117139e97263721706d17373b8c4e8f4c8a8b792",
+ "cite_wikipedia": "[W:16040029:1353624729]",
+ "rerank_logit": -8.31238,
+ "rerank_margin": 1.896894,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 434,
+  "prompt_tokens": 621,
+  "total_tokens": 1055,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 177,
+ "article_chars_used": 126,
+ "article_chars_total": 126,
+ "similarities": [
+  {
+   "point": "Both texts identify the subject as Cabidos.",
+   "quote_britannica": "CABIDOS, or CAXIVOS, a long mesmer",
+   "quote_wikipedia": "Cabidos (French pronunciation:; Occitan: Cabidòs)"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes Cabidos as a unit of measure in Portuguese India, while Wikipedia describes it as a French commune.",
+   "quote_britannica": "a long mesmer called at Goa, and in other places of the Rall India belonging to the Portuguele",
+   "quote_wikipedia": "is a commune in the Pyrénées-Atlantiques department in south-western France."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Cabidos is also known as Caxivos.",
+   "tag": "dropped",
+   "quote_britannica": "CABIDOS, or CAXIVOS, a long mesmer",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Cabidos was a measure used at Goa and other places of Portuguese India.",
+   "tag": "dropped",
+   "quote_britannica": "called at Goa, and in other places of the Rall India belonging to the Portuguele",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Cabidos is equal to 40 Paris ells.",
+   "tag": "dropped",
+   "quote_britannica": "no mesure fluffs, linens, Gv, and equal to 40 the Paris elt.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Geographic and administrative classification of Cabidos as a commune in France.",
+   "quote_wikipedia": "is a commune in the Pyrénées-Atlantiques department in south-western France."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 6,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 33,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Geographic and administrative classification of Cabidos as a commune in France."
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

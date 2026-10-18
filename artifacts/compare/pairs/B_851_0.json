@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:851:0",
+ "cite_britannica": "[B:851:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:851",
+ "row_index": 851,
+ "image_sha256": "6e2a0b9993242da4f83259432110d6929e728a4c0e58a9e79a16ff80a6fd1861",
+ "headword": "OPTICS",
+ "topic_hint": null,
+ "wiki_page_id": "3364761",
+ "wiki_revision_id": "1333181992",
+ "wiki_title": "Ray (optics)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Ray_(optics)",
+ "text_sha256": "723bd4ccb57b02246068e6fd36b4667bec8229feeafeeb018d5718e492bca760",
+ "cite_wikipedia": "[W:3364761:1333181992]",
+ "rerank_logit": -3.853758,
+ "rerank_margin": 0.089722,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2439,
+  "prompt_tokens": 4023,
+  "total_tokens": 6462,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6257,
+ "article_chars_used": 10000,
+ "article_chars_total": 10417,
+ "similarities": [
+  {
+   "point": "Both describe the angle of reflection as equal to the angle of incidence.",
+   "quote_britannica": "the angle of incidence, as alterant to is; and therefore equal to HDD, the angle of reflections",
+   "quote_wikipedia": "The Law of Reflection says that for a specular (non-scattering) surface, the angle of reflection is always equal to the angle of incidence."
+  },
+  {
+   "point": "Both discuss rays striking a surface and the normal or perpendicular to that surface.",
+   "quote_britannica": "Through D draw the perpendicular CD, and produce it to H.",
+   "quote_wikipedia": "The angle between this ray and the perpendicular or normal to the surface is the angle of incidence."
+  },
+  {
+   "point": "Both treat rays as a model for the propagation of light.",
+   "quote_britannica": "That is the reason, that when rays are considered as esflected from a spherical surface, the dilatance of the oblique rays from the perpendicular one is taken to [all, that it may be loppold to vanish.",
+   "quote_wikipedia": "In optics, a ray is an idealized geometrical model of light or other electromagnetic radiation, obtained by choosing a curve that is perpendicular to the wavefronts of the actual light, and that points in the direction of energy flow."
+  },
+  {
+   "point": "Both mention that rays can be reflected by a surface.",
+   "quote_britannica": "and he DR be the refleth ray.",
+   "quote_wikipedia": "The reflected ray corresponding to a given incident ray, is the ray that represents the light reflected by the surface."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on mathematical proportions for reflection from spherical surfaces, while Wikipedia defines rays as idealized geometrical models of light.",
+   "quote_britannica": "that is, the distance of the focus from the surface is to the dilance of the imaginary focus of the incident rays, at the distance of the focus from the centre is to the dilance of the imaginary focus of the incident rays from the fame.",
+   "quote_wikipedia": "In optics, a ray is an idealized geometrical model of light or other electromagnetic radiation, obtained by choosing a curve that is perpendicular to the wavefronts of the actual light, and that points in the direction of energy flow."
+  },
+  {
+   "point": "Britannica uses OCR-corrupted 18th-century terminology and geometry, whereas Wikipedia uses modern optical terms like wavefronts and refractive index.",
+   "quote_britannica": "the complex DDC and RHD are similar; and therefore RH/ or RD, is to PD as CR on CF:",
+   "quote_wikipedia": "They bend at the interface between two dissimilar media and may be curved in a medium in which the refractive index changes."
+  },
+  {
+   "point": "Britannica discusses cases of converging and diverging rays relative to a center of curvature, while Wikipedia discusses ray types such as meridional, skew, and paraxial rays.",
+   "quote_britannica": "Of converging rays falling upon a convex surface, and including towards a point beyond the centro.",
+   "quote_wikipedia": "A meridional ray or tangential ray is a ray that is confined to the plane containing the system's optical axis and the object point from which the ray originated."
+  },
+  {
+   "point": "Britannica lacks any mention of wave optics or diffraction, which Wikipedia explicitly includes.",
+   "quote_britannica": "The fact is applicable to any of the other cases of diverging or converging rays incident upon a spherical surface.",
+   "quote_wikipedia": "Ray optics or geometrical optics does not describe phenomena such as diffraction, which require wave optics theory."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The angle of reflection is equal to the angle of incidence.",
+   "tag": "enduring",
+   "quote_britannica": "the angle of incidence, as alterant to is; and therefore equal to HDD, the angle of reflections",
+   "quote_wikipedia": "The Law of Reflection says that for a specular (non-scattering) surface, the angle of reflection is always equal to the angle of incidence."
+  },
+  {
+   "claim": "For a concave surface with diverging rays from a point between the focus and the surface, the reflected ray proceeds as from the radiant point.",
+   "tag": "enduring",
+   "quote_britannica": "lo that the refleted ray will proceed as from the point 3, but it cane demonflatred in the case manufacturing forceing, that RB is to FB as CR to CF;",
+   "quote_wikipedia": "The reflected ray corresponding to a given incident ray, is the ray that represents the light reflected by the surface."
+  },
+  {
+   "claim": "Converging rays falling upon a convex surface and tending to the focus of parallel rays become parallel after reflection.",
+   "tag": "enduring",
+   "quote_britannica": "Converging rays falling upon a convex surface, and tending to the surface of parallel rays, become parallel after reflection.",
+   "quote_wikipedia": "Light rays in homogeneous media are straight. They bend at the interface between two dissimilar media and may be curved in a medium in which the refractive index changes."
+  },
+  {
+   "claim": "Diverging rays falling upon a concave surface and proceeding from the focus of parallel rays become parallel after reflection.",
+   "tag": "enduring",
+   "quote_britannica": "Diverging rays falling upon a concave fur-ness and preceding from the focus of parallel rays, become parallel after reflection.",
+   "quote_wikipedia": "Light rays in homogeneous media are straight. They bend at the interface between two dissimilar media and may be curved in a medium in which the refractive index changes."
+  },
+  {
+   "claim": "For diverging rays falling upon a convex surface, as the radiant point moves further from the surface, the focus of the reflected rays approaches the surface.",
+   "tag": "enduring",
+   "quote_britannica": "the further the point It is taken from B, not never the point F, the focus of the refleted rays, approaches to B, while the radiant R remains the fame.",
+   "quote_wikipedia": "They bend at the interface between two dissimilar media and may be curved in a medium in which the refractive index changes."
+  },
+  {
+   "claim": "The distance of the focus from the surface is proportional to the distance of the radiant from the surface, as the distance of the focus from the center is to the distance of the radiant from the center.",
+   "tag": "superseded",
+   "quote_britannica": "that is, the distance of the fo-cus from the surface is to that of the radiant from the fame, as the distance of the former from the centre is to that of the latter from the fame.",
+   "quote_wikipedia": "In optics, a ray is an idealized geometrical model of light or other electromagnetic radiation, obtained by choosing a curve that is perpendicular to the wavefronts of the actual light, and that points in the direction of energy flow."
+  },
+  {
+   "claim": "The imaginary focus of incident rays is a point between the focus of parallel rays and the surface.",
+   "tag": "dropped",
+   "quote_britannica": "and let the imaginary focus of the incident rays be as F, a point between P and B, and he DR be the refleth ray.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The vertex of the triangle FDR is bisected by the line CD.",
+   "tag": "dropped",
+   "quote_britannica": "wherefore, RD is to DF, or (3 Elem d o) BD vanthing, RB is to DF as RC to CF;",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "refleth ray",
+   "new": "reflected ray",
+   "quote_britannica": "and he DR be the refleth ray.",
+   "quote_wikipedia": "The reflected ray corresponding to a given incident ray, is the ray that represents the light reflected by the surface."
+  },
+  {
+   "old": "radiant",
+   "new": "point source",
+   "quote_britannica": "flowing from the point 3 as a radiant, which was the imaginary focus of the incident rays in the forgoing case.",
+   "quote_wikipedia": "Objects to be imaged are treated as collections of independent point sources, each producing spherical wavefronts and corresponding outward rays."
+  },
+  {
+   "old": "imaginary focus of the incident rays",
+   "new": "virtual image",
+   "quote_britannica": "and let the imaginary focus of the incident rays be as F, a point between P and B, and he DR be the refleth ray.",
+   "quote_wikipedia": "or the backward extension of the ray path crosses the axis where a virtual image will be formed."
+  },
+  {
+   "old": "reflected rays",
+   "new": "reflected ray",
+   "quote_britannica": "that is, the dilatance of the focus of the refleted rays from the surface is to the dilatance of the radiant from the fame,",
+   "quote_wikipedia": "The reflected ray corresponding to a given incident ray, is the ray that represents the light reflected by the surface."
+  },
+  {
+   "old": "centre",
+   "new": "optical axis",
+   "quote_britannica": "at the distance of the focus from the centre is to the dilance of the imaginary focus of the incident rays from the fame.",
+   "quote_wikipedia": "A meridional ray or tangential ray is a ray that is confined to the plane containing the system's optical axis and the object point from which the ray originated."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Ray tracing and the Eikonal equation",
+   "quote_wikipedia": "In modern applied physics and engineering physics, the term also encompasses numerical solutions to the Eikonal equation."
+  },
+  {
+   "topic": "Special ray types in optical modelling",
+   "quote_wikipedia": "A skew ray is a ray that does not propagate in a plane that contains both the object point and the optical axis (meridional or tangential plane)."
+  },
+  {
+   "topic": "Marginal and chief rays",
+   "quote_wikipedia": "The marginal ray (sometimes known as an a ray or a marginal axial ray) in an optical system is the meridional ray that starts from an on-axis object point (the point where an object to be imaged crosses the optical axis) and touches an edge of the aperture stop of the system."
+  },
+  {
+   "topic": "Paraxial and finite rays",
+   "quote_wikipedia": "A paraxial ray is a ray that makes a small angle to the optical axis of the system and lies close to the axis throughout the system."
+  },
+  {
+   "topic": "Optical fiber ray types",
+   "quote_wikipedia": "A guided ray, bound ray, or trapped ray is a ray in a multi-mode optical fiber, which is confined by the core."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 14,
+   "words": 1220,
+   "edits_per_100_words": 1.15
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "radiant",
+     "new": "point source"
+    },
+    {
+     "old": "imaginary focus of the incident rays",
+     "new": "virtual image"
+    },
+    {
+     "old": "centre",
+     "new": "optical axis"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "refleth ray",
+     "new": "reflected ray"
+    },
+    {
+     "old": "reflected rays",
+     "new": "reflected ray"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.125
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Ray tracing and the Eikonal equation",
+    "Special ray types in optical modelling",
+    "Marginal and chief rays",
+    "Paraxial and finite rays",
+    "Optical fiber ray types"
+   ]
+  },
+  "enduring_share": 0.625,
+  "claim_counts": {
+   "enduring": 5,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

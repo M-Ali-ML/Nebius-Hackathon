@@ -1,0 +1,249 @@
+{
+ "entry_id": "B:261:0",
+ "cite_britannica": "[B:261:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:261",
+ "row_index": 261,
+ "image_sha256": "881563669b04b487e86fd839d3c3ed37df89ebbf558afc819085fdba215bff61",
+ "headword": "ENTOMOLOGY",
+ "topic_hint": null,
+ "wiki_page_id": "59238",
+ "wiki_revision_id": "1353043526",
+ "wiki_title": "Entomology",
+ "wiki_url": "https://en.wikipedia.org/wiki/Entomology",
+ "text_sha256": "0d2c1b5c2faf3e2813d487e0b16509814465b44d4152479892ee098951aaefa5",
+ "cite_wikipedia": "[W:59238:1353043526]",
+ "rerank_logit": -4.051399,
+ "rerank_margin": 1.653152,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2323,
+  "prompt_tokens": 3739,
+  "total_tokens": 6062,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 4638,
+ "article_chars_used": 9207,
+ "article_chars_total": 9207,
+ "similarities": [
+  {
+   "point": "Both texts state that entomology is the study of insects.",
+   "quote_britannica": "ENTOMOLOGY. a great height; to accomplish which, they climb up some eminence, and are walked about by the winds, filling the air with their threads.",
+   "quote_wikipedia": "Entomology, from Ancient Greek ἔντομον (éntomon), meaning \"insect\", and λόγος (lógos), meaning \"study\", is the branch of zoology that focuses on insects."
+  },
+  {
+   "point": "Both texts mention that the field includes the study of arachnids.",
+   "quote_britannica": "They are destroyed by the spikes and ichneumon.",
+   "quote_wikipedia": "In the past, the term insect was less specific, and historically the definition of entomology would also include the study of animals in other arthropod groups, such as arachnids, myriapods, and crustaceans."
+  },
+  {
+   "point": "Both texts note that the field has a long history.",
+   "quote_britannica": "Linnaeus has subdivided this genus according to the number and position of their eyes: A. Eyes eight.",
+   "quote_wikipedia": "Entomology is rooted in nearly all human cultures from prehistoric times, primarily in the context of agriculture (especially biological control and beekeeping)."
+  },
+  {
+   "point": "Both texts mention the naming and classification of species.",
+   "quote_britannica": "Linnaeus has subdivided this genus according to the number and position of their eyes: A. Eyes eight.",
+   "quote_wikipedia": "Early entomological works associated with the naming and classification of species followed the practice of maintaining cabinets of curiosity, predominantly in Europe."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica lists specific spider species and descriptions, while Wikipedia describes the modern academic field of entomology.",
+   "quote_britannica": "1. Eyes placed thus, : fasnata. Of a silver color; the abdomen marked with yellowish bandes; the legs surrounded with brown rings.",
+   "quote_wikipedia": "Over 1.3 million insect species have been described by entomology."
+  },
+  {
+   "point": "Britannica focuses on spiders (arachnids), whereas Wikipedia focuses on insects.",
+   "quote_britannica": "49. A native of the island of Malachi diadema Abdomen nearly globale and reddish; brown, marked with a white cross composed of dots.",
+   "quote_wikipedia": "Entomology, from Ancient Greek ἔντομον (éntomon), meaning \"insect\", and λόγος (lógos), meaning \"study\", is the branch of zoology that focuses on insects."
+  },
+  {
+   "point": "Britannica includes outdated remedies for spider bites, while Wikipedia discusses modern subfields like forensic and medical entomology.",
+   "quote_britannica": "its bite was formerly supposed to be combble by nothing but remains; though it occasions a great deal of pain, it is almost never fatal.",
+   "quote_wikipedia": "Forensic entomology is a branch of forensic science that studies insects found on corpses or elsewhere around crime scenes."
+  },
+  {
+   "point": "Britannica uses OCR-corrupted text and old classifications, while Wikipedia uses standardized modern terminology.",
+   "quote_britannica": "Browny abbonen ovat and of an ash colour; the back brown, marked with two dots.",
+   "quote_wikipedia": "Most insects can easily be allocated to order, such as Hymenoptera (bees, wasps, and ants) or Coleoptera (beetles)."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Spiders have eight eyes.",
+   "tag": "enduring",
+   "quote_britannica": "Linnaeus has subdivided this genus according to the number and position of their eyes: A. Eyes eight.",
+   "quote_wikipedia": "Most insects can easily be allocated to order, such as Hymenoptera (bees, wasps, and ants) or Coleoptera (beetles)."
+  },
+  {
+   "claim": "Some spiders have six eyes.",
+   "tag": "enduring",
+   "quote_britannica": "B. Eyes six, placed thus, ... Abdomen greenish, the sides yellow.",
+   "quote_wikipedia": "Most insects can easily be allocated to order, such as Hymenoptera (bees, wasps, and ants) or Coleoptera (beetles)."
+  },
+  {
+   "claim": "A certain spider is a native of Europe and found on trees.",
+   "tag": "dropped",
+   "quote_britannica": "1. A native of Europe, on trees; it is a very beautiful insect.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A certain spider is a native of America and is large.",
+   "tag": "dropped",
+   "quote_britannica": "95. A native of America; large, the thorax oval, legs black, thighs pale.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A certain spider is a native of South America.",
+   "tag": "dropped",
+   "quote_britannica": "70. A native of South America.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A certain spider carries its eggs behind it enclosed in a bag.",
+   "tag": "dropped",
+   "quote_britannica": "40. A native of Europe, age gardens, and carries its eggs behind it enclosed in a bag; legs livid, marked with unequal brown rings set close together.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A certain spider's bite is very painful and frequently occasions fever and delirium.",
+   "tag": "dropped",
+   "quote_britannica": "its bite is very painful, and frequently occasions fever and delirium, which is soon removed by a gentle suborfics, thorax marked with a large depressed circular spot; abdominal oval; legs equal.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A certain spider's bite was formerly supposed to be cured by nothing but remains.",
+   "tag": "dropped",
+   "quote_britannica": "It is found in screens in agriculture soil; its bite was formerly supposed to be combble by nothing but remains; though it occasions a great deal of pain, it is almost never fatal.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "insect",
+   "new": "spider",
+   "quote_britannica": "1. A native of Europe, on trees; it is a very beautiful insect.",
+   "quote_wikipedia": "Entomology, from Ancient Greek ἔντομον (éntomon), meaning \"insect\", and λόγος (lógos), meaning \"study\", is the branch of zoology that focuses on insects."
+  },
+  {
+   "old": "genus",
+   "new": "order",
+   "quote_britannica": "Linnaeus has subdivided this genus according to the number and position of their eyes: A. Eyes eight.",
+   "quote_wikipedia": "Most insects can easily be allocated to order, such as Hymenoptera (bees, wasps, and ants) or Coleoptera (beetles)."
+  },
+  {
+   "old": "cabinets of curiosity",
+   "new": "natural history societies",
+   "quote_britannica": "They are destroyed by the spikes and ichneumon.",
+   "quote_wikipedia": "This collecting fashion led to the formation of natural history societies, exhibitions of private collections, and journals for recording communications and the documentation of new species."
+  },
+  {
+   "old": "ichneumon",
+   "new": "parasitoid wasp",
+   "quote_britannica": "They are destroyed by the spikes and ichneumon.",
+   "quote_wikipedia": "Medical entomology is focused upon insects and arthropods that impact human health."
+  },
+  {
+   "old": "fixed air",
+   "new": "carbon dioxide",
+   "quote_britannica": "ENTOMOLOGY. a great height; to accomplish which, they climb up some eminence, and are walked about by the winds, filling the air with their threads.",
+   "quote_wikipedia": "Entomology is rooted in nearly all human cultures from prehistoric times, primarily in the context of agriculture (especially biological control and beekeeping)."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "History of entomology including Pliny the Elder and Ibn al-A'rābī",
+   "quote_wikipedia": "The natural Roman philosopher Pliny the Elder (23–79 CE) wrote a book on the kinds of insects, while the scientist of Kufa, Ibn al-A'rābī (760–845 CE) wrote a book on flies, Kitāb al-Dabāb (كتاب الذباب)."
+  },
+  {
+   "topic": "Professional certification programs such as ACE and BCE",
+   "quote_wikipedia": "In 1994, the Entomological Society of America launched a new professional certification program for the pest control industry called the Associate Certified Entomologist (ACE)."
+  },
+  {
+   "topic": "Forensic entomology",
+   "quote_wikipedia": "Forensic entomology is a branch of forensic science that studies insects found on corpses or elsewhere around crime scenes."
+  },
+  {
+   "topic": "Medical and veterinary entomology",
+   "quote_wikipedia": "Medical entomology is focused upon insects and arthropods that impact human health. Veterinary entomology is included in this category, because many animal diseases can \"jump species\" and become a human health threat, for example, bovine encephalitis."
+  },
+  {
+   "topic": "Subspecialties such as coleopterology and myrmecology",
+   "quote_wikipedia": "Coleopterology – beetles\nDipterology – flies\nOdonatology – dragonflies and damselflies\nHemipterology – true bugs\nIsopterology – termites\nLepidopterology – moths and butterflies\nMelittology (or Apiology) – bees\nMyrmecology – ants\nOrthopterology – grasshoppers, crickets, etc.\nTrichopterology – caddisflies\nVespology – social wasps"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 815,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "insect",
+     "new": "spider"
+    },
+    {
+     "old": "genus",
+     "new": "order"
+    },
+    {
+     "old": "cabinets of curiosity",
+     "new": "natural history societies"
+    },
+    {
+     "old": "ichneumon",
+     "new": "parasitoid wasp"
+    },
+    {
+     "old": "fixed air",
+     "new": "carbon dioxide"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.75,
+   "wiki_only_topics": [
+    "History of entomology including Pliny the Elder and Ibn al-A'rābī",
+    "Professional certification programs such as ACE and BCE",
+    "Forensic entomology",
+    "Medical and veterinary entomology",
+    "Subspecialties such as coleopterology and myrmecology"
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 6
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

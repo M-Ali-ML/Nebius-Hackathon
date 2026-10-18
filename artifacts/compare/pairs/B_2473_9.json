@@ -1,0 +1,201 @@
+{
+ "entry_id": "B:2473:9",
+ "cite_britannica": "[B:2473:9]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2473",
+ "row_index": 2473,
+ "image_sha256": "b849fb7f25f25b39685069d12c13b17d47169beeea958446bdff439c230a0f65",
+ "headword": "ERFURT",
+ "topic_hint": null,
+ "wiki_page_id": "9481",
+ "wiki_revision_id": "1352872890",
+ "wiki_title": "Erfurt",
+ "wiki_url": "https://en.wikipedia.org/wiki/Erfurt",
+ "text_sha256": "36a4a7fbb14669ba4b22edabce1e75e20fa225fdb04d59fa0afa7823a5a7a057",
+ "cite_wikipedia": "[W:9481:1352872890]",
+ "rerank_logit": -5.811252,
+ "rerank_margin": 1.50958,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1545,
+  "prompt_tokens": 2996,
+  "total_tokens": 4541,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 147,
+ "article_chars_used": 10000,
+ "article_chars_total": 62451,
+ "similarities": [
+  {
+   "point": "Both identify Erfurt as a city in Germany.",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
+   "quote_wikipedia": "Erfurt (German pronunciation:) is the capital and largest city of the Central German state of Thuringia"
+  },
+  {
+   "point": "Both state Erfurt is a capital city.",
+   "quote_britannica": "capital of Thailand, and subject to the elckor of Menus",
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia"
+  },
+  {
+   "point": "Both mention Erfurt's connection to the Electorate of Mainz.",
+   "quote_britannica": "subject to the elckor of Menus",
+   "quote_wikipedia": "It was part of the Electorate of Mainz during the Holy Roman Empire"
+  },
+  {
+   "point": "Both mention Erfurt's university.",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany, capital of Thailand, and subject to the elckor of Menus; E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "The University of Erfurt was founded in 1379, making it the first university to be established within the geographic area which constitutes modern Germany."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica calls Erfurt capital of Thailand; Wikipedia says capital of Thuringia.",
+   "quote_britannica": "capital of Thailand, and subject to the elckor of Menus",
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia"
+  },
+  {
+   "point": "Britannica gives longitude 117 degrees; Wikipedia places Erfurt in central Germany.",
+   "quote_britannica": "E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin"
+  },
+  {
+   "point": "Britannica describes Erfurt as subject to an elector; Wikipedia details Prussian rule from 1802.",
+   "quote_britannica": "subject to the elckor of Menus",
+   "quote_wikipedia": "and became part of the Kingdom of Prussia in 1802."
+  },
+  {
+   "point": "Britannica calls it a large and beautiful city; Wikipedia gives a population of around 216,000.",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
+   "quote_wikipedia": "with a population of around 216,000."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Erfurt is a large and beautiful city in Upper Saxony, Germany.",
+   "tag": "superseded",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
+   "quote_wikipedia": "Erfurt (German pronunciation:) is the capital and largest city of the Central German state of Thuringia"
+  },
+  {
+   "claim": "Erfurt is the capital of Thailand.",
+   "tag": "superseded",
+   "quote_britannica": "capital of Thailand, and subject to the elckor of Menus",
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia, with a population of around 216,000."
+  },
+  {
+   "claim": "Erfurt is subject to the Elector of Mainz.",
+   "tag": "dropped",
+   "quote_britannica": "subject to the elckor of Menus",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Erfurt is at East longitude 117 degrees.",
+   "tag": "superseded",
+   "quote_britannica": "E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "Erfurt is 100 km (62 mi) south-west of Leipzig, 250 km (155 mi) north-east of Frankfurt"
+  },
+  {
+   "claim": "Erfurt is at North latitude 910.",
+   "tag": "superseded",
+   "quote_britannica": "E. long.117 é', N.lax. 910.",
+   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Upper Saxony",
+   "new": "Thuringia",
+   "quote_britannica": "ERFURT, a large and beautiful city of Upper Saxony in Germany",
+   "quote_wikipedia": "is the capital and largest city of the Central German state of Thuringia"
+  },
+  {
+   "old": "elckor of Menus",
+   "new": "Electorate of Mainz",
+   "quote_britannica": "subject to the elckor of Menus",
+   "quote_wikipedia": "It was part of the Electorate of Mainz during the Holy Roman Empire"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Geography and location details",
+   "quote_wikipedia": "It lies in the wide valley of the River Gera, in the southern part of the Thuringian Basin, north of the Thuringian Forest"
+  },
+  {
+   "topic": "Medieval old town and landmarks",
+   "quote_wikipedia": "Erfurt's old town is one of the best preserved medieval city centres in Germany. The Gera is spanned by the Merchants' Bridge (Krämerbrücke)"
+  },
+  {
+   "topic": "UNESCO World Heritage Jewish-Medieval Heritage",
+   "quote_wikipedia": "Erfurt's Old Synagogue is the oldest synagogue in Europe, and together with the Erfurt Mikveh, which was only rediscovered in 2007, and the Stone House, forms the UNESCO World Heritage Site Jewish-Medieval Heritage of Erfurt."
+  },
+  {
+   "topic": "Modern economy and logistics",
+   "quote_wikipedia": "The city's economy is based on agriculture, horticulture and microelectronics. Its central location has made it a logistics hub for Germany and central Europe."
+  },
+  {
+   "topic": "University history and famous residents",
+   "quote_wikipedia": "The University of Erfurt was founded in 1379, making it the first university to be established within the geographic area which constitutes modern Germany. It closed in 1816 and was re-established in 1994. Martin Luther (1483–1546) was its most famous student"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 20,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 26,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Upper Saxony",
+     "new": "Thuringia"
+    },
+    {
+     "old": "elckor of Menus",
+     "new": "Electorate of Mainz"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.8
+  },
+  "coverage": {
+   "dropped_share": 0.2,
+   "wiki_only_topics": [
+    "Geography and location details",
+    "Medieval old town and landmarks",
+    "UNESCO World Heritage Jewish-Medieval Heritage",
+    "Modern economy and logistics",
+    "University history and famous residents"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 4,
+   "dropped": 1
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

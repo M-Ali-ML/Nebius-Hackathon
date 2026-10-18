@@ -1,0 +1,155 @@
+{
+ "entry_id": "B:1017:15",
+ "cite_britannica": "[B:1017:15]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+ "row_index": 1017,
+ "image_sha256": "5395deb0e1413694dd6a4e16890741c049681f5838d6fc92ef14a3019a1c87a4",
+ "headword": "HEMEROBIUS",
+ "topic_hint": null,
+ "wiki_page_id": "40938403",
+ "wiki_revision_id": "1012452389",
+ "wiki_title": "Hemerobius",
+ "wiki_url": "https://en.wikipedia.org/wiki/Hemerobius",
+ "text_sha256": "d083ffd5172ef58437ea233a54baccef83214ba37b9f20a638a7c1f38e9c67bf",
+ "cite_wikipedia": "[W:40938403:1012452389]",
+ "rerank_logit": -4.465263,
+ "rerank_margin": 0.373155,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 715,
+  "prompt_tokens": 712,
+  "total_tokens": 1427,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 206,
+ "article_chars_used": 453,
+ "article_chars_total": 453,
+ "similarities": [
+  {
+   "point": "Both identify Hemerobius as a zoological genus.",
+   "quote_britannica": "HEMEROBIUS, in zoology, a genus of deficits",
+   "quote_wikipedia": "Hemerobius is a genus of lacewings in the family Hemerobiidae."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the genus with anatomical traits, while Wikipedia describes it as lacewings in a family.",
+   "quote_britannica": "The mouth is furnished with two teeth; the pulpit are four; the wings are dellected",
+   "quote_wikipedia": "Hemerobius is a genus of lacewings in the family Hemerobiidae."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Hemerobius is a genus in zoology.",
+   "tag": "enduring",
+   "quote_britannica": "HEMEROBIUS, in zoology, a genus of deficits",
+   "quote_wikipedia": "Hemerobius is a genus of lacewings in the family Hemerobiidae."
+  },
+  {
+   "claim": "The mouth is furnished with two teeth.",
+   "tag": "dropped",
+   "quote_britannica": "The mouth is furnished with two teeth; the pulpit are four;",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The pulpit are four.",
+   "tag": "dropped",
+   "quote_britannica": "The mouth is furnished with two teeth; the pulpit are four;",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The wings are dellected, but not planted.",
+   "tag": "dropped",
+   "quote_britannica": "the wings are dellected, but not planted ; and:",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "deficits",
+   "new": "lacewings",
+   "quote_britannica": "HEMEROBIUS, in zoology, a genus of deficits of the temperature,",
+   "quote_wikipedia": "Hemerobius is a genus of lacewings in the family Hemerobiidae."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Geographic distribution",
+   "quote_wikipedia": "It is found throughout Europe and North America."
+  },
+  {
+   "topic": "Diet and predatory behavior",
+   "quote_wikipedia": "Like most lacewings, both the larvae and adults are predatory, primarily eating acarines, scale insects, psyllids, aphids, thrips, and the eggs of lepidopterans and whiteflies."
+  },
+  {
+   "topic": "Synonymized species names",
+   "quote_wikipedia": "Hemerobius elegans Stephens, 1836 (currently Sympherobius elegans)"
+  }
+ ],
+ "rejected": [
+  {
+   "section": "differences",
+   "item": {
+    "point": "Britannica gives no geographic range, while Wikipedia states it is found throughout Europe and North America.",
+    "quote_britannica": "and:",
+    "quote_wikipedia": "It is found throughout Europe and North America."
+   },
+   "reason": "quote_britannica not found in entry text"
+  }
+ ],
+ "quote_check": {
+  "kept": 10,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 36,
+   "edits_per_100_words": 2.78
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "deficits",
+     "new": "lacewings"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.75,
+   "wiki_only_topics": [
+    "Geographic distribution",
+    "Diet and predatory behavior",
+    "Synonymized species names"
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 4,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

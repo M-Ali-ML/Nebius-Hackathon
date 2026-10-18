@@ -1,0 +1,276 @@
+{
+ "entry_id": "P:2524",
+ "level": "page",
+ "entry_ids": [
+  "B:2524:0"
+ ],
+ "page_kind": "treatise",
+ "cite_britannica": "[B:2524:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2524",
+ "row_index": 2524,
+ "image_sha256": "beb66523a80a02350493c079931f33a6d09311680beafefe622c7f08c04a74c3",
+ "headword": null,
+ "topic_hint": "Hindustan",
+ "wiki_page_id": "489492",
+ "wiki_revision_id": "1352124195",
+ "wiki_title": "Hindustan",
+ "wiki_url": "https://en.wikipedia.org/wiki/Hindustan",
+ "text_sha256": "51a746f6391e57135dd2ff25dd41e3e6bcbe03d6b1e5105d17003faf875445e4",
+ "cite_wikipedia": "[W:489492:1352124195]",
+ "rerank_logit": -6.727967,
+ "rerank_margin": 0.20101,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2866,
+  "prompt_tokens": 4525,
+  "total_tokens": 7391,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7534,
+ "article_chars_used": 10000,
+ "article_chars_total": 10231,
+ "similarities": [
+  {
+   "point": "Both sources discuss the extent of the term Hindustan as referring to India or the Indian subcontinent.",
+   "quote_britannica": "The history of the people who were raised these structures presents a wide field for antiquarian research",
+   "quote_wikipedia": "Hindustan (/ˈhɪn.du.stæn/ or /ˈhɪn.du.stɑn/, HIN -doo-stan; pronunciation), along with its shortened form Hind, is the Persian -language name for India, broadly the Indian subcontinent",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Both sources mention the Mughal Empire in connection with Hindustan.",
+   "quote_britannica": "The space within a limited with trees, and divided into groups, where the recreation buildings, which is next of solid pyramid",
+   "quote_wikipedia": "In the time of the Delhi Sultanate (1206–1526) and the Mughal Empire (1526–1857), the ruling elite and its Persian historiographers made a further distinction between \"Hindustan\" and \"Hind\".",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Both sources reference historical European or colonial perspectives on the region.",
+   "quote_britannica": "For more full details on this subject, the reader is referred to Mill’s History of British Indias, vol. ii. p. 88, et seqg.",
+   "quote_wikipedia": "The dual meanings of the terms \"India,\" \"Hindustan,\" and the \"Mughal Empire\" persisted with the arrival of Europeans.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Both sources mention the use of the term in relation to the modern nation-state of India.",
+   "quote_britannica": "The brainimical accounts of the developments of temples, of their dilapidation and repairs, supply historii and and technological details",
+   "quote_wikipedia": "Since the partition of India in 1947, Hindustan continues to be used to the present day as a historic name for the Republic of India.",
+   "cite_britannica": "[B:2524:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on Hindu art, architecture, and literature, while Wikipedia focuses on the etymology and political history of the term Hindustan.",
+   "quote_britannica": "Archites: ture. 1 architecture, in the fine arts, in painting and music, the Hindus are greatly inferior to the Europe.",
+   "quote_wikipedia": "Hindustan is derived from the Persian word Hindū, which is cognate with the Sanskrit word Sindhu (meaning \" Indus River \").",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Britannica contains OCR-garbled text regarding architecture and crime, whereas Wikipedia provides a structured historical timeline of the term's usage.",
+   "quote_britannica": "Hindustan as the most shocking of crimes, by burning on a heated plate of iron; or against the lower tubes, in whom adultery with a Brahmann woman is considered as the climax of bitumen depetty",
+   "quote_wikipedia": "Historically, the term also referred to the northern Indian subcontinent (the superior part of the Indo-Gangetic Plain and the regions north of the Vindhya Range in distinction to Deccan in the south) and particularly the Doab region of northern India.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Britannica cites 18th-century scholars like Tennant and Bishop Heber, while Wikipedia cites modern historians like André Wink and B. N. Mukherjee.",
+   "quote_britannica": "The columns and pillars,\" says Tennant, \"which adorn their immense periods are destined if any fixed proportions",
+   "quote_wikipedia": "According to André Wink, it also did not acquire the distinction, which faded away, between Sind (roughly what is now western Pakistan) and Hind (the lands to the east of the Indus River)",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "point": "Britannica discusses the perceived inferiority of Hindu arts compared to Europe, while Wikipedia discusses the linguistic evolution of Hindustani.",
+   "quote_britannica": "Of the Hindu paintings the chief merit is brillany of Palm colony, rather than taste in the design on livesiness of sexpression.",
+   "quote_wikipedia": "The Hindustani language is the language of Hindustan and the lingua franca of the northern Indian subcontinent.",
+   "cite_britannica": "[B:2524:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Hindus are greatly inferior to Europeans in architecture, painting, and music.",
+   "tag": "superseded",
+   "quote_britannica": "Archites: ture. 1 architecture, in the fine arts, in painting and music, the Hindus are greatly inferior to the Europe.",
+   "quote_wikipedia": "The Hindi register itself derives its name from shortened form, Hind (India).",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Hindu paintings are excellent dragstones and imitate nature exactly but cannot advance beyond copying.",
+   "tag": "dropped",
+   "quote_britannica": "They imitate most exactly, and are excellent dragstones; and they draw specimens of natural history with main mediastinal and secretory.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Hindu literature consists of long desultory poems, inflated and extravagant in style.",
+   "tag": "dropped",
+   "quote_britannica": "The essence of the Hindus has been generally rated Literary, very few by European writers, and has been represented as consisting in long desultory poems, inflated and extrag gunt in their styly",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Hindu astronomy has no claims to antiquity and is in its infancy.",
+   "tag": "superseded",
+   "quote_britannica": "Nor has their astronomy theme claims to aniquity which were at how allowed. Accurate inquiry has proved the science to be in its infancy amongst them.",
+   "quote_wikipedia": "The 10th century text Hudud al-Alam defined Hindustan as roughly the Indian subcontinent, with its western limit formed by the river Indus, southern limit going up to the Great Sea and the eastern limit at Kamarupa, the present day Assam.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Very few spectacular Hindu temples have been erected within the last 700 years.",
+   "tag": "dropped",
+   "quote_britannica": "though it is mentioned by Colonel Todd, that very few years spectacular of the drs have been ecected within the last 700 years.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "The Taj Mahal (manundem at Agra) has little to boast in simplicity or elegance of design.",
+   "tag": "superseded",
+   "quote_britannica": "He afterwards adds, that the celebrated manundem at Agra has little to boost its effect in simplicity or elegance of design.",
+   "quote_wikipedia": "The Mughals called their lands 'Hindustan'. The term 'Mughal' itself was never used to refer to the land. As the empire expanded, so too did 'Hindustan'.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Hindustan is the Persian-language name for India, broadly the Indian subcontinent.",
+   "tag": "enduring",
+   "quote_britannica": "The history of the people who were raised these structures presents a wide field for antiquarian research",
+   "quote_wikipedia": "Hindustan (/ˈhɪn.du.stæn/ or /ˈhɪn.du.stɑn/, HIN -doo-stan; pronunciation), along with its shortened form Hind, is the Persian -language name for India, broadly the Indian subcontinent",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "claim": "Hindustan was commonly spelt as Hindostan or Hindoostan in English.",
+   "tag": "enduring",
+   "quote_britannica": "The combo and religious editions of Hinturas are, on the other hand, highly commended by Bishop Heber for delivery, beauty, and make.",
+   "quote_wikipedia": "Hindustan was also commonly spelt as Hindostan or Hindoostan in English.",
+   "cite_britannica": "[B:2524:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Hinturas",
+   "new": "Hindustan",
+   "quote_britannica": "The combo and religious editions of Hinturas are, on the other hand, highly commended by Bishop Heber for delivery, beauty, and make.",
+   "quote_wikipedia": "Hindustan (/ˈhɪn.du.stæn/ or /ˈhɪn.du.stɑn/, HIN -doo-stan; pronunciation), along with its shortened form Hind, is the Persian -language name for India, broadly the Indian subcontinent",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "old": "manundem",
+   "new": "Taj Mahal",
+   "quote_britannica": "He afterwards adds, that the celebrated manundem at Agra has little to boost its effect in simplicity or elegance of design.",
+   "quote_wikipedia": "In the time of the Delhi Sultanate (1206–1526) and the Mughal Empire (1526–1857), the ruling elite and its Persian historiographers made a further distinction between \"Hindustan\" and \"Hind\".",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "old": "Brahmann",
+   "new": "Brahmin",
+   "quote_britannica": "or against the lower tubes, in whom adultery with a Brahmann woman is considered as the climax of bitumen depetty",
+   "quote_wikipedia": "In Mughal sources, Hindustani commonly referred to Muslims in Hindustan, while non-Muslim Indians were referred to as Hindus.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "old": "Rajpoots",
+   "new": "Rajputs",
+   "quote_britannica": "who la him himself composed a history of the Rajpoots from native works, which he found to the libraries of their primers",
+   "quote_wikipedia": "The 1940 Lahore Resolution of the All-India Muslim League demanded sovereignty for the Muslim-majority areas in the northwest and northeast of British India, which came to be called ' Pakistan ' in popular parlance and the Dominion of India came to be called 'Hindustan'.",
+   "cite_britannica": "[B:2524:0]"
+  },
+  {
+   "old": "British Indias",
+   "new": "British India",
+   "quote_britannica": "For more full details on this subject, the reader is referred to Mill’s History of British Indias, vol. ii. p. 88, et seqg.",
+   "quote_wikipedia": "This 'Hindustan' of British reckoning was divided into British-ruled territories (more often referred to as 'British India') and the territories ruled by native rulers.",
+   "cite_britannica": "[B:2524:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology and linguistic derivation of Hindustan from Persian and Sanskrit.",
+   "quote_wikipedia": "Hindustan is derived from the Persian word Hindū, which is cognate with the Sanskrit word Sindhu (meaning \" Indus River \"). The Proto-Iranian sound change *s > h occurred between 850 and 600 BCE, according to Asko Parpola."
+  },
+  {
+   "topic": "Historical distinction between Hindustan and Hind during the Delhi Sultanate and Mughal Empire.",
+   "quote_wikipedia": "In the time of the Delhi Sultanate (1206–1526) and the Mughal Empire (1526–1857), the ruling elite and its Persian historiographers made a further distinction between \"Hindustan\" and \"Hind\". Hindustan referred to the territories of northern India in the Doab and adjacent regions under Muslim political control, while \"Hind\" referred to the rest of India."
+  },
+  {
+   "topic": "Usage of Hindustan during the Indian independence movement and partition of 1947.",
+   "quote_wikipedia": "The 1940 Lahore Resolution of the All-India Muslim League demanded sovereignty for the Muslim-majority areas in the northwest and northeast of British India, which came to be called ' Pakistan ' in popular parlance and the Dominion of India came to be called 'Hindustan'."
+  },
+  {
+   "topic": "The Hindustani language and its literary standards (Hindi and Urdu).",
+   "quote_wikipedia": "The Hindustani language is the language of Hindustan and the lingua franca of the northern Indian subcontinent. Hindustani derives from the Old Hindi language of Western Uttar Pradesh and Delhi areas. Its literary standard forms— Modern Standard Hindi and Modern Standard Urdu —use different scripts."
+  },
+  {
+   "topic": "Use of 'Jai Hind' by the Indian Armed Forces.",
+   "quote_wikipedia": "The Indian Armed Forces use the salutary version of the name, \" Jai Hind \", as a battle cry."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1246,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Hinturas",
+     "new": "Hindustan"
+    },
+    {
+     "old": "manundem",
+     "new": "Taj Mahal"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Brahmann",
+     "new": "Brahmin"
+    },
+    {
+     "old": "Rajpoots",
+     "new": "Rajputs"
+    },
+    {
+     "old": "British Indias",
+     "new": "British India"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.375
+  },
+  "coverage": {
+   "dropped_share": 0.375,
+   "wiki_only_topics": [
+    "Etymology and linguistic derivation of Hindustan from Persian and Sanskrit.",
+    "Historical distinction between Hindustan and Hind during the Delhi Sultanate and Mughal Empire.",
+    "Usage of Hindustan during the Indian independence movement and partition of 1947.",
+    "The Hindustani language and its literary standards (Hindi and Urdu).",
+    "Use of 'Jai Hind' by the Indian Armed Forces."
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 3
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

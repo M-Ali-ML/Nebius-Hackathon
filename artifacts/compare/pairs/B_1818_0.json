@@ -1,0 +1,254 @@
+{
+ "entry_id": "B:1818:0",
+ "cite_britannica": "[B:1818:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1818",
+ "row_index": 1818,
+ "image_sha256": "e6693d1961ef5657ea724a54f5c12cc8b62568f84a2ff587847275075a99e6a0",
+ "headword": null,
+ "topic_hint": "BLOW-PIPE",
+ "wiki_page_id": "2762233",
+ "wiki_revision_id": "1353619780",
+ "wiki_title": "Blowpipe (tool)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Blowpipe_(tool)",
+ "text_sha256": "1eae48c8f74595de4532918ed64a40e7a4335d3fa61c6317d183824cba70d399",
+ "cite_wikipedia": "[W:2762233:1353619780]",
+ "rerank_logit": -3.662448,
+ "rerank_margin": 1.324026,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 3324,
+  "prompt_tokens": 3493,
+  "total_tokens": 6817,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7800,
+ "article_chars_used": 5620,
+ "article_chars_total": 5620,
+ "similarities": [
+  {
+   "point": "Both describe the blowpipe as a tool for directing a stream of air or gas into a flame to heat a body or specimen.",
+   "quote_britannica": "The blow-pipe, by directing the manifestances particles of which the flame consistas so as a strike against and surround a small body, produces the effect of heating the body considerably.",
+   "quote_wikipedia": "If a stream or jet of air is directed through a flame, fuel air mixing is enhanced and the jet exiting the flame is intensely hot."
+  },
+  {
+   "point": "Both mention that the operator blows through the pipe using their lungs to create the blast.",
+   "quote_britannica": "an minister reputed blast: a kept up by the muscular action of the bloods, whilst the ordinary separation goes on through the nose; and a little practice is sufficient to enable the opmore to succeed.",
+   "quote_wikipedia": "Jewelers and glassblowers engaged in lampwork have used the blowpipe since ancient times, with the blast being powered by the user's lungs."
+  },
+  {
+   "point": "Both credit a Swedish metallurgist and Counsellor of the College of Mines with the first application of the blowpipe to analysis.",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": "One Andreas Swab, a Swedish metallurgist and Counsellor of the College of Mines is credited with the first use of the blowpipe for 'pyrognostic operations', of which no record remains."
+  },
+  {
+   "point": "Both mention Axel Fredrik Cronstedt as an important figure in the use of the blowpipe for mineralogy.",
+   "quote_britannica": "Its application to the science of mineralogy was afterwards further improved by Cronstedt, Rine, may Gabon, Schede, and Bergman, and by other men of science since their time.",
+   "quote_wikipedia": "The next person of eminence who used the blowpipe was Axel Fredrik Cronstedt, who put it to the purpose of the discrimination of minerals by means of fusible reagents."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the blowpipe as a simple mouth-blown tube, while Wikipedia describes modern powered versions and blowtorches.",
+   "quote_britannica": "To order to use the blow-pipe, the breath impelled through it is to be directed across the flame of a lamp or quantity, applying this orifice from which the dirt issues a little above on the upper end of the neck; and a jet of flame is thus formed as represented at fig. 8.",
+   "quote_wikipedia": "Starting in the late 18th Century, blowpipes have been powered by mechanisms, initially bladders and bellows, but now blowers, compressors and compressed gas cylinders are commonplace. While blowing air is effective, blowing oxygen produces higher temperatures, and it is also practical to invert the roles of the gasses and blow fuel through air. Contemporary blowtorches and oxy-fuel welding and cutting torches can be considered to be modern developments of the blowpipe."
+  },
+  {
+   "point": "Britannica focuses on mineralogical and chemical analysis, while Wikipedia includes glassblowing and fire-starting uses.",
+   "quote_britannica": "The blow-pipe is useful to the method is obtained as offering a ready method of knowing what the compourer parts of bodies are.",
+   "quote_wikipedia": "In glassblowing, the term blowpipe refers to a pipe used to blow a bubble of air into a gather of molten glass, as the first step in the creation of hand-blown glass bottles and bowls."
+  },
+  {
+   "point": "Britannica recommends charcoal as a support for reducing metallic oxides, while Wikipedia describes the use of oxygen and hydrogen for higher temperatures.",
+   "quote_britannica": "In ycluding fragments of metallic ones by the blow-pipe, charcoal should be used as a support, for the charcoal attracts the oxygen from the metallic oxides, and reduces it to a metallic form; and when thus reduced, the metal may be kept fused on the charcoal, which prevents overrated its again attracting oxygen.",
+   "quote_wikipedia": "Antoine Lavoisier is credited as the first to blow oxygen —of which he was co-discoverer—through a blowpipe to support the combustion of charcoal, in 1782. Others, such as Edward Daniel Clarke, employed hydrogen, and later mixed hydrogen and oxygen in the oxy-hydrogen blowpipe."
+  },
+  {
+   "point": "Britannica discusses platina vessels and their properties, while Wikipedia does not mention platina apparatus.",
+   "quote_britannica": "Platina, however, although infilab alone by the heat of the common blowpipe, will be dissolved and melted if heated along with some of the metals. Platina supports, therefore, should not be used where they are liable to be in constant with a fused metal.",
+   "quote_wikipedia": "Blowpipes are straight, tube-like tools primarily used to direct oxygen to boost a wooden fire. Blowpipes have been in use for hundreds of years, but were first documented by John Joseph Griffin in his 1827 book A Practical Treatise on the Use of the Blowpipe."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The first person to apply the blowpipe to the analysis of materials was a Swedish counselor of the college of mines in 1725.",
+   "tag": "renamed",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": "One Andreas Swab, a Swedish metallurgist and Counsellor of the College of Mines is credited with the first use of the blowpipe for 'pyrognostic operations', of which no record remains."
+  },
+  {
+   "claim": "Cronstedt improved the application of the blowpipe to the science of mineralogy.",
+   "tag": "enduring",
+   "quote_britannica": "Its application to the science of mineralogy was afterwards further improved by Cronstedt, Rine, may Gabon, Schede, and Bergman, and by other men of science since their time.",
+   "quote_wikipedia": "The next person of eminence who used the blowpipe was Axel Fredrik Cronstedt, who put it to the purpose of the discrimination of minerals by means of fusible reagents."
+  },
+  {
+   "claim": "Torbern Bergman published a work on the blowpipe in 1768.",
+   "tag": "enduring",
+   "quote_britannica": "Bergens, who published his creation on the blow-pipe in 1768, before the working of platan had come into use, employed a small gold spoon, as that metal has the quality of remaining pine and uncontaminated, whilst in counter with many of the chemical agents; but platitan is preferable; for, besides possessing the quality of treating the surface of many changing areas, it has likewise the advantage of difficult fruiting.",
+   "quote_wikipedia": "Bergman's use of the blowpipe outstripped all of his predecessors, and he widened its application from mineralogy to inorganic chemistry, giving rise to what may be regarded as a masterpiece of philosophical investigation, De Tubo Ferruminatorio, published in Vienna in 1779 (and translated into English in 1788)."
+  },
+  {
+   "claim": "Charcoal attracts oxygen from metallic oxides and reduces them to a metallic form.",
+   "tag": "enduring",
+   "quote_britannica": "In ycluding fragments of metallic ones by the blow-pipe, charcoal should be used as a support, for the charcoal attracts the oxygen from the metallic oxides, and reduces it to a metallic form; and when thus reduced, the metal may be kept fused on the charcoal, which prevents overrated its again attracting oxygen.",
+   "quote_wikipedia": "Antoine Lavoisier is credited as the first to blow oxygen —of which he was co-discoverer—through a blowpipe to support the combustion of charcoal, in 1782."
+  },
+  {
+   "claim": "Borax becomes a colorless and transparent bead when exposed to the flame after losing its water of crystallization.",
+   "tag": "dropped",
+   "quote_britannica": "When exposed to the flame it become opaque, wells and ramides much, in consequence of parting with its water of crystallisation, increases it rises into a colorless and transparent lead.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Platina is infusible alone by the heat of the common blowpipe.",
+   "tag": "dropped",
+   "quote_britannica": "Platina, however, although infilab alone by the heat of the common blowpipe, will be dissolved and melted if heated along with some of the metals.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The jet of flame produced by the blowpipe is conical, internal blue, and externally yellow.",
+   "tag": "dropped",
+   "quote_britannica": "The jet of flame is conodal, internal, blue, and externally yellow.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The blowpipe offers a ready method of knowing the component parts of bodies before proceeding to dry or humid analysis.",
+   "tag": "enduring",
+   "quote_britannica": "The blow-pipe is useful to the method is obtained as offering a ready method of knowing what the compourer parts of bodies are. Trials with the blow-pipe are generally made by the chemists in order to know the no rule of the constituent part, before to figure the need to the other steps of dry or humid analysis, which are requisite for ascertaining the quantities of the constituent rate.",
+   "quote_wikipedia": "In chemistry and mineralogy blowpipes have been used as scientific instruments for the analysis of small samples since about 1738, according to the accounts of Torbern Bergman."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "blow-pipe",
+   "new": "blowpipe",
+   "quote_britannica": "The blow-pipe, by directing the manifestances particles of which the flame consistas so as a strike against and surround a small body, produces the effect of heating the body considerably.",
+   "quote_wikipedia": "A blowpipe is one of several tools used to direct streams of gases into any of several working media."
+  },
+  {
+   "old": "platina",
+   "new": "platinum",
+   "quote_britannica": "Platina, however, although infilab alone by the heat of the common blowpipe, will be dissolved and melted if heated along with some of the metals.",
+   "quote_wikipedia": "Blowpipes are straight, tube-like tools primarily used to direct oxygen to boost a wooden fire. Blowpipes have been in use for hundreds of years, but were first documented by John Joseph Griffin in his 1827 book A Practical Treatise on the Use of the Blowpipe."
+  },
+  {
+   "old": "pyrognostic operations",
+   "new": "analysis of small samples",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": "One Andreas Swab, a Swedish metallurgist and Counsellor of the College of Mines is credited with the first use of the blowpipe for 'pyrognostic operations', of which no record remains."
+  },
+  {
+   "old": "carbonated hydrogen gas",
+   "new": "mixed hydrogen and oxygen",
+   "quote_britannica": "the flames of the carbonated hydrogen gas proceeding from the distillation of the pitcoal, is also found advantageous for this purpose.",
+   "quote_wikipedia": "Others, such as Edward Daniel Clarke, employed hydrogen, and later mixed hydrogen and oxygen in the oxy-hydrogen blowpipe."
+  },
+  {
+   "old": "water of crystallisation",
+   "new": "water of crystallization",
+   "quote_britannica": "When exposed to the flame it become opaque, wells and ramides much, in consequence of parting with its water of crystallisation, increases it rises into a colorless and transparent lead.",
+   "quote_wikipedia": "Blowpipes are straight, tube-like tools primarily used to direct oxygen to boost a wooden fire. Blowpipes have been in use for hundreds of years, but were first documented by John Joseph Griffin in his 1827 book A Practical Treatise on the Use of the Blowpipe."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Glassblowing",
+   "quote_wikipedia": "In glassblowing, the term blowpipe refers to a pipe used to blow a bubble of air into a gather of molten glass, as the first step in the creation of hand-blown glass bottles and bowls."
+  },
+  {
+   "topic": "Forge and blast furnace blowpipes",
+   "quote_wikipedia": "The term blowpipe is also used to refer to the pipe used to blow deliver air to the tuyeres of a forge or blast furnace. The blowpipe of a forge may be considered to be a large bellows operated version of a mouth-blown blowpipe, directing air through a coal or charcoal flame."
+  },
+  {
+   "topic": "Blow pokers",
+   "quote_wikipedia": "Blow pokers are multifunctional fire irons. Primarily they are used to arrange the embers or firewood in a wood fire (the poker), secondarily they are used as a blow pipe. The term \"BlowPoker\" was introduced in 2005 by the German company Red Anvil GmbH, a manufacturer of fire irons and fireside accessories."
+  },
+  {
+   "topic": "Oxy-hydrogen and gas blowpipes",
+   "quote_wikipedia": "Others, such as Edward Daniel Clarke, employed hydrogen, and later mixed hydrogen and oxygen in the oxy-hydrogen blowpipe. The vastly increased temperatures, and the volatility of hydrogen-oxygen mixes drove on the development of the so-called gas blowpipe as a tool, and at the same time brought many new materials into reach of the blowpipe as a tool for assay."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "wiki_only_topics",
+   "item": {
+    "topic": "Historical development by Lavoisier, Hare, and Gurney",
+    "quote_wikipedia": "Antoine Lavoisier is credited as the first to blow oxygen —of which he was co-discoverer—through a blowpipe to support the combustion of charcoal, in 1782. Others, such as Edward Daniel Clarke, employed hydrogen, and later mixed hydrogen and oxygen in the oxy-hydrogen blowpipe. Robert Hare was a noted exponent of the improved tool. Goldsworthy Gurney, whilst at the Surrey Institute, published in 1823 an account of a new blowpipe so constructed as to enable the operator to produce a flame of great size, power and brilliancy by burning large quantities of the mixed gases with the utmost safety."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 25,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1370,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.125,
+   "term_pairs": [
+    {
+     "old": "pyrognostic operations",
+     "new": "analysis of small samples"
+    },
+    {
+     "old": "carbonated hydrogen gas",
+     "new": "mixed hydrogen and oxygen"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "blow-pipe",
+     "new": "blowpipe"
+    },
+    {
+     "old": "platina",
+     "new": "platinum"
+    },
+    {
+     "old": "water of crystallisation",
+     "new": "water of crystallization"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.375,
+   "wiki_only_topics": [
+    "Glassblowing",
+    "Forge and blast furnace blowpipes",
+    "Blow pokers",
+    "Oxy-hydrogen and gas blowpipes"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 1,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -1,0 +1,232 @@
+{
+ "entry_id": "B:1017:9",
+ "cite_britannica": "[B:1017:9]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+ "row_index": 1017,
+ "image_sha256": "5395deb0e1413694dd6a4e16890741c049681f5838d6fc92ef14a3019a1c87a4",
+ "headword": "HELOTS",
+ "topic_hint": null,
+ "wiki_page_id": "236213",
+ "wiki_revision_id": "1340278468",
+ "wiki_title": "Helots",
+ "wiki_url": "https://en.wikipedia.org/wiki/Helots",
+ "text_sha256": "79c279b5dd8e2f0f821ba452e0a2d6a0d5743bd42e2ca1fa2698f030c079b3d0",
+ "cite_wikipedia": "[W:236213:1340278468]",
+ "rerank_logit": -7.621729,
+ "rerank_margin": 0.767898,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1644,
+  "prompt_tokens": 2866,
+  "total_tokens": 4510,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 357,
+ "article_chars_used": 10000,
+ "article_chars_total": 23786,
+ "similarities": [
+  {
+   "point": "Both identify helots as a subjugated population in Spartan-controlled Laconia.",
+   "quote_britannica": "the inhabitants of Helon, a town of Lacom, conquer by the Spartan",
+   "quote_wikipedia": "a subjugated group that constituted a majority of the population of Laconia"
+  },
+  {
+   "point": "Both state that helots were conquered and made prisoners by Sparta.",
+   "quote_britannica": "conquer by the Spartan; who made them all prisoners of var",
+   "quote_wikipedia": "those of the Lacedaemonians who did not take part in the expedition were adjudged slaves and were named helots"
+  },
+  {
+   "point": "Both describe helots as performing labor to support Spartan citizens.",
+   "quote_britannica": "the whole care of supplying the city with necefairs develop upon the filters",
+   "quote_wikipedia": "Tied to the land, they primarily worked in agriculture as a majority and economically supported the Spartan citizens"
+  },
+  {
+   "point": "Both associate helot status with servitude or slavery.",
+   "quote_britannica": "reduced them into the condition of flares",
+   "quote_wikipedia": "were adjudged slaves and were named helots"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica locates helots at a single town called Helon, while Wikipedia discusses Laconia and Messenia broadly.",
+   "quote_britannica": "the inhabitants of Helon, a town of Lacom",
+   "quote_wikipedia": "constituted a majority of the population of Laconia and Messenia"
+  },
+  {
+   "point": "Britannica says Spartan women were barred from manual or mechanical work, a claim absent from Wikipedia.",
+   "quote_britannica": "The femme of Sparta were forbidden the excerite of any mean on mechanical employment",
+   "quote_wikipedia": "Tied to the land, they primarily worked in agriculture as a majority and economically supported the Spartan citizens"
+  },
+  {
+   "point": "Britannica presents helot origins as a simple conquest of one town, whereas Wikipedia details multiple contested origin theories.",
+   "quote_britannica": "the inhabitants of Helon, a town of Lacom, conquer by the Spartan",
+   "quote_wikipedia": "Several theories exist regarding the origin of the name \"helot\""
+  },
+  {
+   "point": "Britannica omits the helots' eventual liberation, which Wikipedia describes.",
+   "quote_britannica": "reduced them into the condition of flares",
+   "quote_wikipedia": "The population was largely liberated by the Theban commander Epaminondas following the Theban-Spartan War"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Helots were inhabitants of a town called Helon in Laconia.",
+   "tag": "superseded",
+   "quote_britannica": "the inhabitants of Helon, a town of Lacom",
+   "quote_wikipedia": "constituted a majority of the population of Laconia and Messenia"
+  },
+  {
+   "claim": "The Spartans conquered the helots and made them prisoners of war.",
+   "tag": "enduring",
+   "quote_britannica": "conquer by the Spartan; who made them all prisoners of var",
+   "quote_wikipedia": "Messenians, who were conquered in the Messenian Wars of the 8th century BC, become synonymous in Herodotus with helots"
+  },
+  {
+   "claim": "Helots were reduced to the condition of serfs.",
+   "tag": "renamed",
+   "quote_britannica": "reduced them into the condition of flares",
+   "quote_wikipedia": "They are thus institutionally distinguished from the anonymous douloi (slaves)"
+  },
+  {
+   "claim": "Spartan women were forbidden from engaging in manual or mechanical employment.",
+   "tag": "dropped",
+   "quote_britannica": "The femme of Sparta were forbidden the excerite of any mean on mechanical employment",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Helots were responsible for supplying the city with necessaries.",
+   "tag": "enduring",
+   "quote_britannica": "the whole care of supplying the city with necefairs develop upon the filters",
+   "quote_wikipedia": "Tied to the land, they primarily worked in agriculture as a majority and economically supported the Spartan citizens"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "flares",
+   "new": "serfs",
+   "quote_britannica": "reduced them into the condition of flares",
+   "quote_wikipedia": "institutionally distinguished from the anonymous douloi (slaves)"
+  },
+  {
+   "old": "filters",
+   "new": "helots",
+   "quote_britannica": "the whole care of supplying the city with necefairs develop upon the filters",
+   "quote_wikipedia": "Tied to the land, they primarily worked in agriculture as a majority and economically supported the Spartan citizens"
+  },
+  {
+   "old": "Lacom",
+   "new": "Laconia",
+   "quote_britannica": "the inhabitants of Helon, a town of Lacom",
+   "quote_wikipedia": "constituted a majority of the population of Laconia and Messenia"
+  },
+  {
+   "old": "femme",
+   "new": "women",
+   "quote_britannica": "The femme of Sparta were forbidden the excerite of any mean on mechanical employment",
+   "quote_wikipedia": "Tied to the land, they primarily worked in agriculture as a majority and economically supported the Spartan citizens"
+  },
+  {
+   "old": "prisoners of var",
+   "new": "prisoners of war",
+   "quote_britannica": "conquer by the Spartan; who made them all prisoners of var",
+   "quote_wikipedia": "Messenians, who were conquered in the Messenian Wars of the 8th century BC, become synonymous in Herodotus with helots"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Controversy over helot characteristics and status",
+   "quote_wikipedia": "There has been controversy since antiquity as to their exact characteristics, such as whether they constituted an Ancient Greek tribe, a social class, or both"
+  },
+  {
+   "topic": "Etymological theories of the word helot",
+   "quote_wikipedia": "Several theories exist regarding the origin of the name \"helot\""
+  },
+  {
+   "topic": "Ritual mistreatment and the Crypteia",
+   "quote_wikipedia": "Every autumn the Spartan polis declared war on the helots, allowing them to be killed and abused by members of the Crypteia without fear of religious repercussion"
+  },
+  {
+   "topic": "Liberation by Epaminondas after the Theban-Spartan War",
+   "quote_wikipedia": "The population was largely liberated by the Theban commander Epaminondas following the Theban-Spartan War"
+  },
+  {
+   "topic": "Helot domestic service and the apophorá harvest contribution",
+   "quote_wikipedia": "Helots were assigned to citizens to carry out domestic work or to work on their klēroi, or portions"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 23,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 60,
+   "edits_per_100_words": 1.67
+  },
+  "lexical": {
+   "renamed_share": 0.2,
+   "term_pairs": [
+    {
+     "old": "flares",
+     "new": "serfs"
+    },
+    {
+     "old": "filters",
+     "new": "helots"
+    },
+    {
+     "old": "femme",
+     "new": "women"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Lacom",
+     "new": "Laconia"
+    },
+    {
+     "old": "prisoners of var",
+     "new": "prisoners of war"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.2
+  },
+  "coverage": {
+   "dropped_share": 0.2,
+   "wiki_only_topics": [
+    "Controversy over helot characteristics and status",
+    "Etymological theories of the word helot",
+    "Ritual mistreatment and the Crypteia",
+    "Liberation by Epaminondas after the Theban-Spartan War",
+    "Helot domestic service and the apophorá harvest contribution"
+   ]
+  },
+  "enduring_share": 0.4,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 1,
+   "superseded": 1,
+   "dropped": 1
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

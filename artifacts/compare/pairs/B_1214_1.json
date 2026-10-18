@@ -1,0 +1,137 @@
+{
+ "entry_id": "B:1214:1",
+ "cite_britannica": "[B:1214:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1214",
+ "row_index": 1214,
+ "image_sha256": "17d180a99e0a48546a555d98cd7fdf15bb8f8ea4b751c50e02536eba79c2473a",
+ "headword": "DAMSEL",
+ "topic_hint": null,
+ "wiki_page_id": "51545665",
+ "wiki_revision_id": "1322363950",
+ "wiki_title": "Damsel",
+ "wiki_url": "https://en.wikipedia.org/wiki/Damsel",
+ "text_sha256": "f53e2a28fe0b5fce2363349ac618119d675d7d77fb4bdcb6dade18c86ca88030",
+ "cite_wikipedia": "[W:51545665:1322363950]",
+ "rerank_logit": -7.382745,
+ "rerank_margin": 0.086627,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1295,
+  "prompt_tokens": 764,
+  "total_tokens": 2059,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 549,
+ "article_chars_used": 331,
+ "article_chars_total": 331,
+ "similarities": [],
+ "differences": [
+  {
+   "point": "Britannica defines damsel as a historical term for young noble people, while Wikipedia lists modern meanings including films and places.",
+   "quote_britannica": "DAMSEL, from the French damsels or demasifons, an application ancestri given to all young people of eitherys, that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons: thus we read of Daniel Prisin DaudiL Louis le Gros, David Richard spruce (My Wales. From the solos of Kings this appellation ftp piled to theife of great locals and barons, and a length to think of gestionome who were not yet lengths. At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "quote_wikipedia": "Damsel may refer to:\n\nDamsel in distress a female stock character\n\nUnmarried lady-in-waiting\n\nDamsel, Missouri, USA\n\nDamsel (2018 film), an American western black comedy film\n\nDamsel (2024 film), an American dark fantasy film\n\nDamsel, a young adult novel by Elana K. Arnold\n\nDamsel, a nickname for Santos-Dumont Demoiselle aircraft"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Damsel comes from the French damsels or demasifons.",
+   "tag": "dropped",
+   "quote_britannica": "DAMSEL, from the French damsels or demasifons, an application ancestri given to all young people of eitherys, that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons: thus we read of Daniel Prisin DaudiL Louis le Gros, David Richard spruce (My Wales. From the solos of Kings this appellation ftp piled to theife of great locals and barons, and a length to think of gestionome who were not yet lengths. At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Damsel was an application ancestri given to all young people of eitherys that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons.",
+   "tag": "dropped",
+   "quote_britannica": "DAMSEL, from the French damsels or demasifons, an application ancestri given to all young people of eitherys, that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons: thus we read of Daniel Prisin DaudiL Louis le Gros, David Richard spruce (My Wales. From the solos of Kings this appellation ftp piled to theife of great locals and barons, and a length to think of gestionome who were not yet lengths. At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The appellation was applied from the solos of Kings to theife of great locals and barons, and a length to think of gestionome who were not yet lengths.",
+   "tag": "dropped",
+   "quote_britannica": "DAMSEL, from the French damsels or demasifons, an application ancestri given to all young people of eitherys, that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons: thus we read of Daniel Prisin DaudiL Louis le Gros, David Richard spruce (My Wales. From the solos of Kings this appellation ftp piled to theife of great locals and barons, and a length to think of gestionome who were not yet lengths. At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "tag": "dropped",
+   "quote_britannica": "DAMSEL, from the French damsels or demasifons, an application ancestri given to all young people of eitherys, that were of endular or genest extraction, as the fons and daughters of princes, knights, and barons: thus we read of Daniel Prisin DaudiL Louis le Gros, David Richard spruce (My Wales. From the solos of Kings this appellation ftp piled to theife of great locals and barons, and a length to think of gestionome who were not yet lengths. At present damful is applied to all meals or girls not yet material, provided by be not of the vulgar.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Damsel in distress",
+   "quote_wikipedia": "Damsel may refer to:\n\nDamsel in distress a female stock character"
+  },
+  {
+   "topic": "Unmarried lady-in-waiting",
+   "quote_wikipedia": "Unmarried lady-in-waiting"
+  },
+  {
+   "topic": "Damsel, Missouri, USA",
+   "quote_wikipedia": "Damsel, Missouri, USA"
+  },
+  {
+   "topic": "Damsel (2018 film)",
+   "quote_wikipedia": "Damsel (2018 film), an American western black comedy film"
+  },
+  {
+   "topic": "Damsel (2024 film)",
+   "quote_wikipedia": "Damsel (2024 film), an American dark fantasy film"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 10,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 2,
+   "words": 97,
+   "edits_per_100_words": 2.06
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Damsel in distress",
+    "Unmarried lady-in-waiting",
+    "Damsel, Missouri, USA",
+    "Damsel (2018 film)",
+    "Damsel (2024 film)"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 4
+  },
+  "claims_checked": 4,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

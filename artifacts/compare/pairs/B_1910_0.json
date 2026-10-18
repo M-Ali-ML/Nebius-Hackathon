@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:1910:0",
+ "cite_britannica": "[B:1910:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910",
+ "row_index": 1910,
+ "image_sha256": "f4723acc17718590625f337a0d5ddeef3e257ff963f793fe287f0f0cb81834ee",
+ "headword": null,
+ "topic_hint": null,
+ "wiki_page_id": "61344",
+ "wiki_revision_id": "1353843790",
+ "wiki_title": "Lightning",
+ "wiki_url": "https://en.wikipedia.org/wiki/Lightning",
+ "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+ "cite_wikipedia": "[W:61344:1353843790]",
+ "rerank_logit": -3.747562,
+ "rerank_margin": 0.724155,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 3117,
+  "prompt_tokens": 3938,
+  "total_tokens": 7055,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6853,
+ "article_chars_used": 10000,
+ "article_chars_total": 53399,
+ "similarities": [
+  {
+   "point": "Both describe lightning as an electrical discharge involving charged regions and neutralization.",
+   "quote_britannica": "Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions."
+  },
+  {
+   "point": "Both note that lightning can be fatal to people.",
+   "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
+   "quote_wikipedia": "The most direct effects of lightning on humans occur as a result of cloud-to-ground lightning, even though intra-cloud and cloud-to-cloud are more common."
+  },
+  {
+   "point": "Both mention that lightning can occur during volcanic eruptions.",
+   "quote_britannica": "The author does indeed produce a living evidence, in the case of a person at Vienna, who, he has been credibly informed, received an electrical shock, by having held one hand accidentally in contact with an intercepted metallic coaching mind, at the infant that a thunder-cloud exploited at the influence, as was considered, or above half an English milk.",
+   "quote_wikipedia": "The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions."
+  },
+  {
+   "point": "Both discuss lightning occurring in thunderstorms and clouds.",
+   "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous.",
+   "quote_wikipedia": "The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica discusses a supposed returning electrical fire through a person's body, while Wikipedia describes modern stepped leader and return stroke processes.",
+   "quote_britannica": "the insulated perfor receives into his body, at the infant of the returning firele has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground."
+  },
+  {
+   "point": "Britannica speculates on injury from returning natural electricity, whereas Wikipedia gives measured energies and temperatures.",
+   "quote_britannica": "But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found delivery on even injury third",
+   "quote_wikipedia": "Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F)."
+  },
+  {
+   "point": "Britannica relies on anecdotal reports of shocks, while Wikipedia classifies lightning into intra-cloud, cloud-to-cloud, and cloud-to-ground forms.",
+   "quote_britannica": "The author does indeed produce a living evidence, in the case of a person at Vienna, who, he has been credibly informed, received an electrical shock, by having held one hand accidentally in contact with an intercepted metallic coaching mind,",
+   "quote_wikipedia": "Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC) or in-cloud – Within a single thundercloud Cloud-to-cloud (CC) or inter-cloud – Between two clouds Cloud-to-ground (CG) – Between a cloud and the ground, in which case it is referred to as a lightning strike."
+  },
+  {
+   "point": "Britannica mentions Mr Canton's balls to indicate electrical state, while Wikipedia discusses positive and negative cloud-to-ground flashes.",
+   "quote_britannica": "When a person standing on the ground holds a Lightning pair of Mr Canton's balls in his hand, while a highly charged thunder-cloud is suspended over his head; the angle made by the balla indicates the electrical fate of this portion or the quantity of natural electricity of which his body as at the time deprived, by the action of the (politively) charged cloud hanging over him.",
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is either positive or negative, as defined by the direction of the conventional electric current between cloud and ground. Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A returning firele is produced by the sudden removal of electrical pressure from a charged thunder-cloud.",
+   "tag": "superseded",
+   "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground."
+  },
+  {
+   "claim": "The strength of such a returning firele must be enormous.",
+   "tag": "superseded",
+   "quote_britannica": "the frength of such a retraining fireks mult be enormous.",
+   "quote_wikipedia": "An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+  },
+  {
+   "claim": "A person's body can transmit all the electric fire of which the large cloud could have been robbed through to a conductor.",
+   "tag": "superseded",
+   "quote_britannica": "but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+  },
+  {
+   "claim": "The quantity of natural electricity expelled from a person's body is not usually very large.",
+   "tag": "enduring",
+   "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations.",
+   "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+  },
+  {
+   "claim": "People have been killed by natural electricity with torn clothes and damaged feet but no other marks.",
+   "tag": "enduring",
+   "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line, but who have not bad, over their whole boo, any other apparent marks of having been stuck with lightning.",
+   "quote_wikipedia": "The most direct effects of lightning on humans occur as a result of cloud-to-ground lightning, even though intra-cloud and cloud-to-cloud are more common."
+  },
+  {
+   "claim": "A man walking outdoors could be killed by a returning firele at the instant of a distant explosion.",
+   "tag": "superseded",
+   "quote_britannica": "if a man walking out of doors were to be killed by a returning firele, the electrical line would rub into that each body into his feets, and his feet only ; which would not be the case, here he to be killed by any main fireke of exploding, either positive negative.",
+   "quote_wikipedia": "Positive lightning strikes tend to be much more intense than their negative counterparts. An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+  },
+  {
+   "claim": "The returning firele is not of alarming magnitude as the author suggests.",
+   "tag": "dropped",
+   "quote_britannica": "yet it is now of that alarming magnitude within the author afterhes to it.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Numerous observations of persons experiencing the returning firele would have occurred if it were common.",
+   "tag": "dropped",
+   "quote_britannica": "lureely numerous obferations of persons who had experienced the returning firele, in fighting degrees, would be families, and favors a great teacher-theme must have occurred, in which one perform or another mult not, at theinflated an explosion, have felt the effects of the returning firele, in soon degree or other from that of a violent sanctions, to that of a flight and almost impregnible pollution.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "returning firele",
+   "new": "return stroke",
+   "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+  },
+  {
+   "old": "electric fire",
+   "new": "electric charge",
+   "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion;",
+   "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+  },
+  {
+   "old": "natural electricity",
+   "new": "electrostatic discharges",
+   "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
+   "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions."
+  },
+  {
+   "old": "prime conductor",
+   "new": "lightning rod",
+   "quote_britannica": "the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted.",
+   "quote_wikipedia": "Positive lightning has also been shown to trigger the occurrence of upward lightning flashes from the tops of tall structures and is largely responsible for the initiation of sprites several tens of kilometers above ground level."
+  },
+  {
+   "old": "electrical atmosphere",
+   "new": "electric field",
+   "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged;",
+   "quote_wikipedia": "Establishment of an electric field"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Energy and temperature of lightning",
+   "quote_wikipedia": "Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F)."
+  },
+  {
+   "topic": "Classification of lightning types",
+   "quote_wikipedia": "Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC) or in-cloud – Within a single thundercloud Cloud-to-cloud (CC) or inter-cloud – Between two clouds Cloud-to-ground (CG) – Between a cloud and the ground, in which case it is referred to as a lightning strike."
+  },
+  {
+   "topic": "Positive and negative cloud-to-ground lightning",
+   "quote_wikipedia": "Cloud-to-ground (CG) lightning is either positive or negative, as defined by the direction of the conventional electric current between cloud and ground. Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+  },
+  {
+   "topic": "Lightning safety and danger",
+   "quote_wikipedia": "As a result of their greater power, positive lightning strikes are considerably more dangerous than negative strikes. Positive lightning produces both higher peak currents and longer continuing currents, making them capable of heating surfaces to much higher levels which increases the likelihood of a fire being ignited."
+  },
+  {
+   "topic": "Lightning formation and charge separation",
+   "quote_wikipedia": "Lightning primarily occurs when warm air is mixed with colder air masses, resulting in atmospheric disturbances necessary for polarizing the atmosphere. The disturbances result in storms, and when those storms also result in lightning and thunder, they are called a thunderstorm."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 19,
+   "words": 1181,
+   "edits_per_100_words": 1.61
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "electric fire",
+     "new": "electric charge"
+    },
+    {
+     "old": "natural electricity",
+     "new": "electrostatic discharges"
+    },
+    {
+     "old": "prime conductor",
+     "new": "lightning rod"
+    },
+    {
+     "old": "electrical atmosphere",
+     "new": "electric field"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "returning firele",
+     "new": "return stroke"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.5
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Energy and temperature of lightning",
+    "Classification of lightning types",
+    "Positive and negative cloud-to-ground lightning",
+    "Lightning safety and danger",
+    "Lightning formation and charge separation"
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 4,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:1473:3",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-a89d0e558a3999cb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [],\n  \"differences\": [\n    {\n      \"point\": \"Subject matter\",\n      \"quote_britannica\": \"ESCAPE, in how a violent or privyvation out of home lawful reflrant,\",\n      \"quote_wikipedia\": \"Escape or Escaping may refer to:\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"There are two lots of escape, valent bay and negligent.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"There are two lots of escape, valent bay and negligent.\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Voluntary, when a amreth another for folony, or other crime, and afterwards lets him go freely by conting,\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Voluntary, when a amreth another for folony, or other crime, and afterwards lets him go freely by conting,\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Negligent eleceps, on the contrany, in where one is arrested, and afterwards deepas against the will of the perform that arred him,\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Negligent eleceps, on the contrany, in where one is arrested, and afterwards deepas against the will of the perform that arred him,\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"By fast, it oy Will. III: C. 26., the keepers of priform conviving at efecapes final (forter) crois;\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"By fast, it oy Will. III: C. 26., the keepers of priform conviving at efecapes final (forter) crois;\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"and in civil cases the flee rifi's a preferable for the debt.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"and in civil cases the flee rifi's a preferable for the debt.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Film\",\n      \"quote_wikipedia\": \"Escape (1928 film), a German silent drama film\"\n    },\n    {\n      \"topic\": \"Book\",\n      \"quote_wikipedia\": \"Escape! The Story of the Great Houdini, a 2006 book by Sid Fleischman\"\n    },\n    {\n      \"topic\": \"Music\",\n      \"quote_wikipedia\": \"Escape (Enrique Iglesias album), or the title song (see below), 2001\"\n    },\n    {\n      \"topic\": \"Computing\",\n      \"quote_wikipedia\": \"Escape character, a character that signifies that what follows takes an alternative interpretation\"\n    },\n    {\n      \"topic\": \"Prison escape\",\n      \"quote_wikipedia\": \"Prison escape, the act of breaking out of prison\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324782,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 691,
+   "prompt_tokens": 1992,
+   "total_tokens": 2683,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 2.5
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "entry_id": "B:1327:8",
+ "cite_britannica": "[B:1327:8]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1327",
+ "row_index": 1327,
+ "image_sha256": "7d41b1db21d5e291f0cbf58aa92f8820d11602e700d5e337935c65b9d75b6211",
+ "headword": "HUGUENOTS",
+ "topic_hint": null,
+ "wiki_page_id": "75899",
+ "wiki_revision_id": "1352397655",
+ "wiki_title": "Huguenots",
+ "wiki_url": "https://en.wikipedia.org/wiki/Huguenots",
+ "text_sha256": "6fc195d107e2a4b62d6f12aebd20441aeb72eb83155178b0108222bd40b490e1",
+ "cite_wikipedia": "[W:75899:1352397655]",
+ "rerank_logit": -1.23139,
+ "rerank_margin": 4.13297,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2544,
+  "prompt_tokens": 2925,
+  "total_tokens": 5469,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 154,
+ "article_chars_used": 10000,
+ "article_chars_total": 70120,
+ "similarities": [
+  {
+   "point": "Both associate the origin of the name with events around 1560, including the Amboise plot.",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+  },
+  {
+   "point": "Both state that the name was originally used in derision or hatred.",
+   "quote_britannica": "an application given by way of concept to the referred or Protestant Calvinists of France.",
+   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+  },
+  {
+   "point": "Both note that the etymology of the name is uncertain and debated by authors.",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "A term used originally in derision, Huguenot has unclear origins. Various hypotheses have been promoted."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives only a brief definition and origin date, while Wikipedia provides a detailed history of persecution, wars, and decline.",
+   "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France. The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The Huguenots were concentrated in the southern and western parts of the Kingdom of France. As Huguenots gained influence and more openly displayed their faith, Catholic hostility grew. A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598."
+  },
+  {
+   "point": "Britannica does not mention the Edict of Nantes or its revocation, while Wikipedia treats them as central events.",
+   "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+   "quote_wikipedia": "The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy."
+  },
+  {
+   "point": "Britannica does not discuss etymological hypotheses, while Wikipedia offers multiple theories about the name's origin.",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The term may have been a combined reference to the Swiss politician Besançon Hugues (died 1532) and the religiously conflicted nature of Swiss republicanism in his time."
+  },
+  {
+   "point": "Britannica does not mention the Huguenot cross, while Wikipedia describes it as a distinctive emblem.",
+   "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+   "quote_wikipedia": "The Huguenot cross is the distinctive emblem of the Huguenots (croix huguenote)."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The name first arose in 1560.",
+   "tag": "enduring",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+  },
+  {
+   "claim": "The name was applied in hatred and derision.",
+   "tag": "enduring",
+   "quote_britannica": "an application given by way of concept to the referred or Protestant Calvinists of France.",
+   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+  },
+  {
+   "claim": "The name may derive from Besançon Hugues, a Genevan political leader.",
+   "tag": "renamed",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+  },
+  {
+   "claim": "The name may derive from spirits called le Roy Huguet in Tours.",
+   "tag": "enduring",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "at Tours, le Roy Huguet; and so on in other places."
+  },
+  {
+   "claim": "The name may derive from les guenon de Hus, meaning monkeys or apes of Jan Hus.",
+   "tag": "enduring",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "Some have suggested the name was derived, with intended scorn, from les guenon de Hus (the 'monkeys' or 'apes of Jan Hus ')."
+  },
+  {
+   "claim": "The Huguenot population reached as much as 10% of the French population on the eve of the St. Bartholomew's Day massacre in 1572.",
+   "tag": "enduring",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "In his Encyclopedia of Protestantism, Hans Hillerbrand wrote that on the eve of the St. Bartholomew's Day massacre in 1572, the Huguenot community made up as much as 10% of the French population."
+  },
+  {
+   "claim": "The Huguenot community declined to 7–8% by around 1600.",
+   "tag": "enduring",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "By 1600, it declined to 7–8%, and was reduced further late in the century after the return of persecution under Louis XIV"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "rife",
+   "new": "common use",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+  },
+  {
+   "old": "Amboyse",
+   "new": "Amboise",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+  },
+  {
+   "old": "Tourraine",
+   "new": "Touraine",
+   "quote_britannica": "The name had its first rife in 1560; but authors are",
+   "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Dragonnades and the Edict of Fontainebleau (1685)",
+   "quote_wikipedia": "who instituted the Dragonnades to forcibly convert Protestants, and then finally revoked all Protestant rights in his Edict of Fontainebleau of 1685."
+  },
+  {
+   "topic": "Huguenot rebellions of the 1620s and loss of political privileges",
+   "quote_wikipedia": "Huguenot rebellions in the 1620s resulted in the abolition of their political and military privileges."
+  },
+  {
+   "topic": "Edict of Versailles (1787) and Declaration of the Rights of Man (1789)",
+   "quote_wikipedia": "Persecution of Protestants officially ended with the Edict of Versailles, signed by Louis XVI in 1787. Two years later, with the Revolutionary Declaration of the Rights of Man and of the Citizen of 1789, Protestants gained equal rights as citizens."
+  },
+  {
+   "topic": "Huguenot cross as emblem and modern church symbol",
+   "quote_wikipedia": "The Huguenot cross is the distinctive emblem of the Huguenots (croix huguenote). It is now an official symbol of the Église des Protestants réformés (French Protestant church)."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both identify Huguenots as French Protestants of the Calvinist/Reformed tradition.",
+    "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+    "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Huguenots are Protestant Calvinists of France.",
+    "tag": "enduring",
+    "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+    "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "Protestant Calvinists",
+    "new": "Reformed (Calvinist) tradition",
+    "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+    "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "referred",
+    "new": "Reformed",
+    "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+    "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "wiki_only_topics",
+   "item": {
+    "topic": "French Wars of Religion and the Edict of Nantes",
+    "quote_wikipedia": "A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598. The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 21,
+  "rejected": 5
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 27,
+   "edits_per_100_words": 3.7
+  },
+  "lexical": {
+   "renamed_share": 0.143,
+   "term_pairs": [
+    {
+     "old": "rife",
+     "new": "common use"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Amboyse",
+     "new": "Amboise"
+    },
+    {
+     "old": "Tourraine",
+     "new": "Touraine"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Dragonnades and the Edict of Fontainebleau (1685)",
+    "Huguenot rebellions of the 1620s and loss of political privileges",
+    "Edict of Versailles (1787) and Declaration of the Rights of Man (1789)",
+    "Huguenot cross as emblem and modern church symbol"
+   ]
+  },
+  "enduring_share": 0.857,
+  "claim_counts": {
+   "enduring": 6,
+   "renamed": 1,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

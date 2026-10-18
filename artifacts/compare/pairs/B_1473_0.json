@@ -1,0 +1,232 @@
+{
+ "entry_id": "B:1473:0",
+ "cite_britannica": "[B:1473:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1473",
+ "row_index": 1473,
+ "image_sha256": "b3b602ef6a3d4961fd1926a15d634a40ec929c15b00e2f7cc5109b3f7180daac",
+ "headword": "ESARHADDON",
+ "topic_hint": null,
+ "wiki_page_id": "188740",
+ "wiki_revision_id": "1350091166",
+ "wiki_title": "Esarhaddon",
+ "wiki_url": "https://en.wikipedia.org/wiki/Esarhaddon",
+ "text_sha256": "b54bcaa84181918422f0a49af13e4eea8ef15aa711f84519590fa4464f13e6bf",
+ "cite_wikipedia": "[W:188740:1350091166]",
+ "rerank_logit": -8.861247,
+ "rerank_margin": 0.748923,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1902,
+  "prompt_tokens": 3122,
+  "total_tokens": 5024,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 482,
+ "article_chars_used": 10000,
+ "article_chars_total": 50705,
+ "similarities": [
+  {
+   "point": "Both identify Esarhaddon as the son of Sennacherib.",
+   "quote_britannica": "ESARHADDON, the fen of Sennacherib, and his favorite",
+   "quote_wikipedia": "murdered their father in 681 and planned to seize the Neo-Assyrian throne."
+  },
+  {
+   "point": "Both state that Esarhaddon was succeeded by a son named Ashurbanipal.",
+   "quote_britannica": "and was faceded by Sandoshina.",
+   "quote_wikipedia": "to his two sons and heirs Ashurbanipal as ruler of the empire"
+  },
+  {
+   "point": "Both mention that Esarhaddon's brothers were involved in the death of Sennacherib.",
+   "quote_britannica": "ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.",
+   "quote_wikipedia": "Arda-Mulissu and another brother, Nabû-šarru-uṣur, murdered their father in 681"
+  },
+  {
+   "point": "Both mention that Esarhaddon reigned as king.",
+   "quote_britannica": "He is said have reigned to 9 years at Church, from the year 1904 to 3322;",
+   "quote_wikipedia": "was the king of the Neo-Assyrian Empire from 681 to 669 BC."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Reign dates and length.",
+   "quote_britannica": "He is said have reigned to 9 years at Church, from the year 1904 to 3322;",
+   "quote_wikipedia": "was the king of the Neo-Assyrian Empire from 681 to 669 BC."
+  },
+  {
+   "point": "Successor's name.",
+   "quote_britannica": "and was faceded by Sandoshina.",
+   "quote_wikipedia": "to his two sons and heirs Ashurbanipal as ruler of the empire"
+  },
+  {
+   "point": "Place of death/year reference.",
+   "quote_britannica": "He died in the year of the week SSS, and was faceded by Sandoshina.",
+   "quote_wikipedia": "After his death."
+  },
+  {
+   "point": "Identity of the person described.",
+   "quote_britannica": "Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo, old way after the result of Syria, the name Bekriamo polar being derived from Afrhadon Pal.",
+   "quote_wikipedia": "Esarhaddon, also spelled Essarhaddon, Assarhaddon and Ashurhaddon (Neo-Assyrian Akkadian: 𒀭𒊹𒉽𒀸, also 𒀭𒊹𒉽𒋧𒈾 Aššur-aḫa-iddina, meaning \" Ashur has given me a brother\";"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Esarhaddon was the son of Sennacherib.",
+   "tag": "enduring",
+   "quote_britannica": "ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.",
+   "quote_wikipedia": "murdered their father in 681 and planned to seize the Neo-Assyrian throne."
+  },
+  {
+   "claim": "Esarhaddon reigned for 13 years at Babylon.",
+   "tag": "superseded",
+   "quote_britannica": "believe which he reigned 13 years at Babyton, in all 8 years.",
+   "quote_wikipedia": "was the king of the Neo-Assyrian Empire from 681 to 669 BC."
+  },
+  {
+   "claim": "Esarhaddon was succeeded by Sandoshina.",
+   "tag": "superseded",
+   "quote_britannica": "He died in the year of the week SSS, and was faceded by Sandoshina.",
+   "quote_wikipedia": "to his two sons and heirs Ashurbanipal as ruler of the empire and Šamaš-šuma-ukin as king of Babylonia after his death."
+  },
+  {
+   "claim": "Esarhaddon is identified as the Shanghai.",
+   "tag": "dropped",
+   "quote_britannica": "Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The name Bekriamo polar is derived from Afrhadon Pal.",
+   "tag": "dropped",
+   "quote_britannica": "old way after the result of Syria, the name Bekriamo polar being derived from Afrhadon Pal.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fen",
+   "new": "son",
+   "quote_britannica": "ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.",
+   "quote_wikipedia": "murdered their father in 681 and planned to seize the Neo-Assyrian throne."
+  },
+  {
+   "old": "Babyton",
+   "new": "Babylon",
+   "quote_britannica": "believe which he reigned 13 years at Babyton, in all 8 years.",
+   "quote_wikipedia": "which had been destroyed by his father."
+  },
+  {
+   "old": "faceded",
+   "new": "succeeded",
+   "quote_britannica": "He died in the year of the week SSS, and was faceded by Sandoshina.",
+   "quote_wikipedia": "to his two sons and heirs Ashurbanipal as ruler of the empire"
+  },
+  {
+   "old": "Sandoshina",
+   "new": "Ashurbanipal",
+   "quote_britannica": "He died in the year of the week SSS, and was faceded by Sandoshina.",
+   "quote_wikipedia": "to his two sons and heirs Ashurbanipal as ruler of the empire"
+  },
+  {
+   "old": "Shanghai",
+   "new": "king",
+   "quote_britannica": "Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo,",
+   "quote_wikipedia": "was the king of the Neo-Assyrian Empire from 681 to 669 BC."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Conquest of Egypt",
+   "quote_wikipedia": "Esarhaddon is most famous for his conquest of Egypt in 671 BC, which made his empire the largest the world had ever seen,"
+  },
+  {
+   "topic": "Civil war and ascent to the throne",
+   "quote_wikipedia": "The murder, and Arda-Mulissu's aspirations of becoming king himself, made Esarhaddon's rise to the throne difficult, and he first had to defeat his brothers in a six-week-long civil war."
+  },
+  {
+   "topic": "Paranoia and security measures",
+   "quote_wikipedia": "His brothers' attempted coup had been unexpected and troublesome for Esarhaddon, and he would be plagued by paranoia and mistrust for his officials, governors and male family members until the end of his reign."
+  },
+  {
+   "topic": "Influence of female relatives",
+   "quote_wikipedia": "Also perhaps resulting from his mistrust for his male relatives, Esarhaddon's female relatives, such as his mother Naqiʾa and his daughter Šērūʾa-ēṭirat, were allowed to wield considerably more influence and political power during his reign than women had been allowed in any previous period of Assyrian history,"
+  },
+  {
+   "topic": "Military campaigns in various regions",
+   "quote_wikipedia": "successfully campaigned in Media, Persia, Elam, the Arabian Peninsula, Anatolia, the Caucasus, and the Levant, defeated the Kushite Empire and conquered Egypt and Libya,"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 23,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 2,
+   "words": 89,
+   "edits_per_100_words": 2.25
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "fen",
+     "new": "son"
+    },
+    {
+     "old": "Sandoshina",
+     "new": "Ashurbanipal"
+    },
+    {
+     "old": "Shanghai",
+     "new": "king"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Babyton",
+     "new": "Babylon"
+    },
+    {
+     "old": "faceded",
+     "new": "succeeded"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.4
+  },
+  "coverage": {
+   "dropped_share": 0.4,
+   "wiki_only_topics": [
+    "Conquest of Egypt",
+    "Civil war and ascent to the throne",
+    "Paranoia and security measures",
+    "Influence of female relatives",
+    "Military campaigns in various regions"
+   ]
+  },
+  "enduring_share": 0.2,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 2,
+   "dropped": 2
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

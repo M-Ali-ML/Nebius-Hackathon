@@ -1,0 +1,276 @@
+{
+ "entry_id": "P:499",
+ "level": "page",
+ "entry_ids": [
+  "B:499:0"
+ ],
+ "page_kind": "treatise",
+ "cite_britannica": "[B:499:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:499",
+ "row_index": 499,
+ "image_sha256": "5eb663c6a072b065f93be154549eac3fbe59f6f6b4c12a392e8f406e32a3c528",
+ "headword": null,
+ "topic_hint": "India",
+ "wiki_page_id": "39849556",
+ "wiki_revision_id": "1351646178",
+ "wiki_title": "India (Herodotus)",
+ "wiki_url": "https://en.wikipedia.org/wiki/India_(Herodotus)",
+ "text_sha256": "517912e068bc4a4a1b7bff58cdc91f878970fd5c9e7c4c72722376bee0cf0e12",
+ "cite_wikipedia": "[W:39849556:1351646178]",
+ "rerank_logit": -6.683893,
+ "rerank_margin": 0.269985,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2589,
+  "prompt_tokens": 3476,
+  "total_tokens": 6065,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6788,
+ "article_chars_used": 6395,
+ "article_chars_total": 6395,
+ "similarities": [
+  {
+   "point": "Both note that Alexander's military operations in India were limited in extent.",
+   "quote_britannica": "The military operations, however, extended but a very little way into India projects are called;",
+   "quote_wikipedia": "By the time of Alexander the Great, at least northern India up to the Ganges delta was known,",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Both describe the diversity of Indian peoples and their customs.",
+   "quote_britannica": "Two descriptions of the inhabitants are equally particular; their living entirely upon vegetable food, theiriction and tribes or casts,",
+   "quote_wikipedia": "he describes them as being very diverse, and makes reference to their dietary habits, some eating raw fish, others eating raw meat, and yet others practising vegetarianism.",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Both mention the use of the term India for the region around the Indus.",
+   "quote_britannica": "All that has been questioned by Hendodus concerning this phenomenon is, thus \"in the Red sea there is a regular abu and low of the tide every day!\"",
+   "quote_wikipedia": "Herodotus in 4.40 uses the term \"India\" for the Indus basin, and describes it as being on the eastern fringe of the inhabitable world,",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Both discuss the extension of the name India to inner regions of the subcontinent.",
+   "quote_britannica": "As all this fertile provinces on the north-west of the Indus were incluently rekendent to be part of India, it is probable that what could travel from them is the sum mentioned in the ethnicized from which Hendreta drew his accounts of the annual revenue of the Persian empire,",
+   "quote_wikipedia": "As the western travellers went into the rest of the subcontinent through the original \"India\", the name was gradually extended to the inner regions.",
+   "cite_britannica": "[B:499:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica attributes the building of fortified cities in India to Alexander, while Wikipedia does not mention this.",
+   "quote_britannica": "In order to reverse the abolition of these countries he subsided, Alexander found in necessary to build a number of fortified cities;",
+   "quote_wikipedia": "By the time of Alexander the Great, at least northern India up to the Ganges delta was known, the regions being referred to as Gangaridai (Ganges country) and Prasii/Prasioi (from Sanskrit prācya, the east), all included in \"India\".",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Britannica discusses Seleucus's expedition into India, whereas Wikipedia focuses on Greek geographical knowledge before Alexander.",
+   "quote_britannica": "The latter was very sensible of the advantage to the derived from keeping India in its projection. With this the underside mix ex-of Selecuse pedilion into that country,",
+   "quote_wikipedia": "By the 3rd century BC, Eratosthenes recognised \"India\" as terminating in a peninsula (reflecting a first grasp of the geography of the Indian subcontinent).",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Britannica mentions tides in the Indian Ocean surprising Alexander, while Wikipedia does not discuss tides.",
+   "quote_britannica": "No wonder, therefore, the Macedonia should be surprised and terrified at the very high tides which presented themselves in the Indian ocean,",
+   "quote_wikipedia": "The term \"India\" (Indikē in Greek) was used by Herodotus and later Greek writers in three different senses: the Achaemenid Persian province Hindush which was at the lower Indus basin (Sindh),",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "point": "Britannica refers to the climate and productions of India corresponding with modern accounts, while Wikipedia details ancient Greek geographical concepts.",
+   "quote_britannica": "The climate, soil and production of India, as well as the manners and costumes of the inhabitants, are exactly described, and the descriptions found to correspond in a surprising manner wild modern accounts.",
+   "quote_wikipedia": "In ancient Greek geography the basin of the Indus River was on the extreme eastern fringe of the known world.",
+   "cite_britannica": "[B:499:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Alexander built fortified cities in India to keep adjacent countries in awe and promote commerce.",
+   "tag": "dropped",
+   "quote_britannica": "In order to reverse the abolition of these countries he subsided, Alexander found in necessary to build a number of fortified cities;",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "Seleucus led an expedition into India reaching as far as the mouth of the Ganges.",
+   "tag": "dropped",
+   "quote_britannica": "Bayern thinke they imply that Selecus managed from the Hyghacs, the boundary of Alexander’s congests, to the Hydration, from theme to Pali-bohra, and then to the mouth of the Ganges ;",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "Seleucus concluded a treaty with Sandrocuttos allowing him to remain in quiet possession of his territories.",
+   "tag": "dropped",
+   "quote_britannica": "The former washer to obliged to conclude a treaty with Sandrocuttos, whom he allowed to remain in quietness of his territories but Dr. Robertson is of opining,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "The country on each side the Indus was inferior in population to the Kingdom of Peter in Alexander's time.",
+   "tag": "dropped",
+   "quote_britannica": "The country on each side the Indus was found, in the time of Alexander, to be in an degree inferior in populination to the Kingdom of Peter already mentioned.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "The inhabitants of India lived entirely upon vegetable food and were divided into tribes or casts.",
+   "tag": "enduring",
+   "quote_britannica": "their living entirely upon vegetable food, theiriction and tribes or casts, with many of the authorities related under the settled Burrow are to be met with in the accounts of Alexander’s expolitions.",
+   "quote_wikipedia": "There is another set of Indians whose customs are very different. They refuse to put any live animal to death, they sow no corn, and have no dwelling-houses. Vegetables are their only food.",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "The periodical mines and inundations of rivers in India are described by ancient authors.",
+   "tag": "dropped",
+   "quote_britannica": "The stated change of seasons now known by the name of musosaurs, the periodical mines, the resulting and in-undations of the rivers, will the appearance of the country during the time they continue, are particularly described.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "Alexander surveyed the corner of the Diplomat and Parking and removed marates or dams built by Persian monarchs.",
+   "tag": "dropped",
+   "quote_britannica": "With view view, also, on the return to Sues, ha surveyed in person the corner of the Diplomat and Parking, causing the marates or dams to be removed which the Persian monarcha had built to distract the separation of those rivers,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "claim": "The death of Alexander ended his great designs and the eastern part of his dominions was devoted to Pyrde the son of Agence and afterwards to Seleucus.",
+   "tag": "dropped",
+   "quote_britannica": "The death of Alexander having put an end to all his great reference, the eastern part of his dominions devoted first on Pyde the son of Agence, and afterwards on Seleucus.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:499:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "musosaurs",
+   "new": "monsoons",
+   "quote_britannica": "The stated change of seasons now known by the name of musosaurs, the periodical mines,",
+   "quote_wikipedia": "By the time of Alexander the Great, at least northern India up to the Ganges delta was known,",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "old": "casts",
+   "new": "castes",
+   "quote_britannica": "theiriction and tribes or casts, with many of the authorities related under the settled Burrow are to be met with in the accounts of Alexander’s expolitions.",
+   "quote_wikipedia": "By the time of Alexander the Great, at least northern India up to the Ganges delta was known,",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "old": "Prasii",
+   "new": "Prasioi",
+   "quote_britannica": "against Sanderson King of the Prasti, who threatened to attack them.",
+   "quote_wikipedia": "the regions being referred to as Gangaridai (Ganges country) and Prasii/Prasioi (from Sanskrit prācya, the east), all included in \"India\".",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "old": "Hendreta",
+   "new": "Herodotus",
+   "quote_britannica": "from which Hendreta drew his accounts of the annual revenue of the Persian empire,",
+   "quote_wikipedia": "Herodotus in 4.40 uses the term \"India\" for the Indus basin, and describes it as being on the eastern fringe of the inhabitable world,",
+   "cite_britannica": "[B:499:0]"
+  },
+  {
+   "old": "Peruis",
+   "new": "Persia",
+   "quote_britannica": "and that none of the provinces to the south of the Indus were ever subject to the kings of Peruis.\"",
+   "quote_wikipedia": "The Persian Achaemenid emperor, Darius the Great, having conquered this country of Sindhu around 513 BC, called it by the Persian equivalent Hinduš (Hindush).",
+   "cite_britannica": "[B:499:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Herodotus's accounts of Indian tribes and their customs",
+   "quote_wikipedia": "In book 3 (3.89-97), Herodotus gives some account of the peoples of India; he describes them as being very diverse, and makes reference to their dietary habits, some eating raw fish, others eating raw meat, and yet others practising vegetarianism."
+  },
+  {
+   "topic": "The etymology of the term India from Persian Hinduš and Sanskrit Sindhu",
+   "quote_wikipedia": "The Persian Achaemenid emperor, Darius the Great, having conquered this country of Sindhu around 513 BC, called it by the Persian equivalent Hinduš (Hindush)."
+  },
+  {
+   "topic": "Eratosthenes' recognition of India as a peninsula and postulation of Taprobane",
+   "quote_wikipedia": "By the 3rd century BC, Eratosthenes recognised \"India\" as terminating in a peninsula (reflecting a first grasp of the geography of the Indian subcontinent). Eratosthenes was also the first Greek author to postulate an island Taprobane at the far south of India, later becoming a name of Sri Lanka."
+  },
+  {
+   "topic": "Indian troops in Xerxes' army",
+   "quote_wikipedia": "In book 7 (7.65,70,86,187) and in 8.113 Herodotus describes the Indian infantry and cavalry employed in Xerxes ' army."
+  },
+  {
+   "topic": "Scylax of Caryanda's voyage down the Indus for Darius",
+   "quote_wikipedia": "According to Herodotus 4.44 the Greek explorer Scylax of Caryanda sailed down the length of the Indus in the service of Darius."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1149,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "musosaurs",
+     "new": "monsoons"
+    },
+    {
+     "old": "Hendreta",
+     "new": "Herodotus"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "casts",
+     "new": "castes"
+    },
+    {
+     "old": "Prasii",
+     "new": "Prasioi"
+    },
+    {
+     "old": "Peruis",
+     "new": "Persia"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.875,
+   "wiki_only_topics": [
+    "Herodotus's accounts of Indian tribes and their customs",
+    "The etymology of the term India from Persian Hinduš and Sanskrit Sindhu",
+    "Eratosthenes' recognition of India as a peninsula and postulation of Taprobane",
+    "Indian troops in Xerxes' army",
+    "Scylax of Caryanda's voyage down the Indus for Darius"
+   ]
+  },
+  "enduring_share": 0.125,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 7
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

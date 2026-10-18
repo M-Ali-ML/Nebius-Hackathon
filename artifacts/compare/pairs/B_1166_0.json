@@ -1,0 +1,190 @@
+{
+ "entry_id": "B:1166:0",
+ "cite_britannica": "[B:1166:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1166",
+ "row_index": 1166,
+ "image_sha256": "ec9dc1d6c2c96661593803f1cde606a6c27b453bccb4803b9562db602f4c0c69",
+ "headword": null,
+ "topic_hint": "LIBERTY OF THE PRESS",
+ "wiki_page_id": "3955928",
+ "wiki_revision_id": "1353846972",
+ "wiki_title": "Press laws",
+ "wiki_url": "https://en.wikipedia.org/wiki/Press_laws",
+ "text_sha256": "c9d7975e16526ddb6a4afc5c8f76daa17370e3f0935f94880914a6621af63df3",
+ "cite_wikipedia": "[W:3955928:1353846972]",
+ "rerank_logit": -2.380649,
+ "rerank_margin": 0.954233,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1596,
+  "prompt_tokens": 2568,
+  "total_tokens": 4164,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7464,
+ "article_chars_used": 2310,
+ "article_chars_total": 2310,
+ "similarities": [
+  {
+   "point": "Both regard press liberty as of supreme importance",
+   "quote_britannica": "The very foundation of a good choice is knowledge.",
+   "quote_wikipedia": "The liberty of the press has always been regarded by political writers as of supreme importance."
+  },
+  {
+   "point": "Both connect press freedom to informed public choice",
+   "quote_britannica": "Without the knowledge, then, of what is done by their representatives, in the use of the powers intended to them, the people cannot profit by the power of choosing, them,",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica is a philosophical essay on representative government; Wikipedia is a historical survey of press laws",
+   "quote_britannica": "We may then ask, if there are any possible means by which the people can make a good choice, besides the liberty of the press?",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "point": "Britannica focuses on knowledge of representatives' conduct; Wikipedia covers censorship history and licensing",
+   "quote_britannica": "That an accurate report of what is done by each of the representatives, a transcript of his species, and a statement of his proportions and votes, is necessary to be laid before the people,",
+   "quote_wikipedia": "In 1496 Pope Alexander VI began to be restrictive, and in 1501 he issued a bull against unlicensed printing, which introduced the principle of censorship."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The foundation of a good choice is knowledge",
+   "tag": "enduring",
+   "quote_britannica": "The very foundation of a good choice is knowledge.",
+   "quote_wikipedia": "The liberty of the press has always been regarded by political writers as of supreme importance."
+  },
+  {
+   "claim": "People need knowledge of representatives' conduct to profit from choosing them",
+   "tag": "enduring",
+   "quote_britannica": "Without the knowledge, then, of what is done by their representatives, in the use of the powers intended to them, the people cannot profit by the power of choosing, them,",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "claim": "Accurate reports of representatives' actions, transcripts, and votes are necessary for the people to judge conduct",
+   "tag": "enduring",
+   "quote_britannica": "That an accurate report of what is done by each of the representatives, a transcript of his species, and a statement of his proportions and votes, is necessary to be laid before the people, to enable them to judge of his conduct,",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "claim": "Without press liberty, government will be inevitably vicious",
+   "tag": "enduring",
+   "quote_britannica": "unless the people hold in their own hands an official power of control to the act and of their governors the government will be inevitably vicicious.",
+   "quote_wikipedia": "The liberty of the press has always been regarded by political writers as of supreme importance."
+  },
+  {
+   "claim": "Liberty for everybody to publish reports of representatives' actions is necessary to judge correctly",
+   "tag": "enduring",
+   "quote_britannica": "one of the names necessary to enable them to judge correctly of the conduct of their representatives, is the liberty to every body of publishing reports of what they do.",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "claim": "Imposing restraint on press liberty is making a choice",
+   "tag": "enduring",
+   "quote_britannica": "To impose any restraint upon the liberty of the press, is undoubtedly to make a choice.",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "claim": "If government chooses the directors of the public mind, that government is depicted",
+   "tag": "dropped",
+   "quote_britannica": "If any government chooses the directors of the public mind, that government is depicted.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Without the second use of the press, requisite knowledge cannot be obtained",
+   "tag": "dropped",
+   "quote_britannica": "without the second musterratified use of the press, the requisite knowledge cannot be obtained.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "liberty of the press",
+   "new": "liberty of expression",
+   "quote_britannica": "We may then ask, if there are any possible means by which the people can make a good choice, besides the liberty of the press?",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  },
+  {
+   "old": "legislative assembly",
+   "new": "newspapers",
+   "quote_britannica": "Unless every man has the liberty of publishing the proceedings of the legisla-tive assembly, the people can have to are taxing published.",
+   "quote_wikipedia": "Press laws are the laws concerning the licensing of books and the liberty of expression in all products of the printing-press, especially newspapers."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "History of press regulation and censorship from the invention of printing through the 18th century",
+   "quote_wikipedia": "Before the invention of printing, the Church assumed the right to control the expression of all opinion distasteful to her. When the printing press was invented, German printers established themselves at various important centres of western Europe, where already numbers of copyists were employed in multiplying manuscripts."
+  },
+  {
+   "topic": "Specific historical censorship measures including papal bulls, Imperial Diet regulations, and the Stationers Company",
+   "quote_wikipedia": "In 1496 Pope Alexander VI began to be restrictive, and in 1501 he issued a bull against unlicensed printing, which introduced the principle of censorship. Between 1524 and 1548 the Imperial Diet in Germany drew up various stringent regulations; and in France, prohibited by edict, under penalty of death, the printing of books."
+  },
+  {
+   "topic": "Restrictive versus corrective censorship and post-publication penalties",
+   "quote_wikipedia": "Censorship was either restrictive or corrective, i.e., it interfered to restrict or prevent publication, or it enforced penalties after publication."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 1326,
+   "edits_per_100_words": 0.08
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "legislative assembly",
+     "new": "newspapers"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "liberty of the press",
+     "new": "liberty of expression"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "History of press regulation and censorship from the invention of printing through the 18th century",
+    "Specific historical censorship measures including papal bulls, Imperial Diet regulations, and the Stationers Company",
+    "Restrictive versus corrective censorship and post-publication penalties"
+   ]
+  },
+  "enduring_share": 0.75,
+  "claim_counts": {
+   "enduring": 6,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

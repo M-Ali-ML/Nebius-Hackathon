@@ -1,0 +1,57 @@
+{
+ "entry_id": "P:2051",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-b71a7eaf2dcb9c7b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Lombard kingdom was divided into duchies ruled by dukes\",\n      \"quote_britannica\": \"he could remove the duks at pleasure yet to deprives none of them of their decisions\",\n      \"quote_wikipedia\": \"The kingdom was subdivided into a varying number of duchies, ruled by semi-autonomous dukes\"\n    },\n    {\n      \"point\": \"Lombards were a Germanic people\",\n      \"quote_britannica\": \"Lembards, judging that a favorable opportunity now offered of making himself king of Italy by her means\",\n      \"quote_wikipedia\": \"established by the Lombards, a Germanic people, on the Italian Peninsula\"\n    },\n    {\n      \"point\": \"Pavia was the capital of the Lombard kingdom\",\n      \"quote_britannica\": \"Helmchild had not half capital the city\",\n      \"quote_wikipedia\": \"The capital of the kingdom and the center of its political life was Pavia in the modern northern Italian region of Lombardy\"\n    },\n    {\n      \"point\": \"Lombard law was written down\",\n      \"quote_britannica\": \"Written law written fall introalused. laws among theft people\",\n      \"quote_wikipedia\": \"The earliest Lombard law code, the Edictum Rothari, may allude to the use of seal rings\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Lombard religion\",\n      \"quote_britannica\": \"was the furli of the Lombard kings who embraced Chilliance\",\n      \"quote_wikipedia\": \"Initially the Lombards were Arian Christians or pagans\"\n    },\n    {\n      \"point\": \"End of the kingdom\",\n      \"quote_britannica\": \"That monarch died in 65:1 and the affairs of the Lombarda were in protagonly\",\n      \"quote_wikipedia\": \"who conquered the kingdom in 774\"\n    },\n    {\n      \"point\": \"Nature of royal power\",\n      \"quote_britannica\": \"reflecting than to diripted of the other, as they thought propre\",\n      \"quote_wikipedia\": \"The king was traditionally elected by the very highest-ranking aristocrats, the dukes\"\n    },\n    {\n      \"point\": \"Geographic extent\",\n      \"quote_britannica\": \"the controlled what it was , and with his friend pointed at the queen’s board\",\n      \"quote_wikipedia\": \"Some regions were never under Lombard domination, including Latium, Sardinia, Sicily, Calabria, Naples, Venice and southern Apulia\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"The Lombards were a Germanic people who established a kingdom in Italy\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"Lembards, judging that a favorable opportunity now offered of making himself king of Italy by her means\",\n      \"quote_wikipedia\": \"established by the Lombards, a Germanic people, on the Italian Peninsula in the latter part of the 6th century\"\n    },\n    {\n      \"claim\": \"The kingdom was divided into duchies ruled by dukes\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"he could remove the duks at pleasure yet to deprives none of them of their decisions\",\n      \"quote_wikipedia\": \"The kingdom was subdivided into a varying number of duchies, ruled by semi-autonomous dukes\"\n    },\n    {\n      \"claim\": \"The Lombard kings issued written laws\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"Written law written fall introalused. laws among theft people\",\n      \"quote_wikipedia\": \"The earliest Lombard law code, the Edictum Rothari, may allude to the use of seal rings\"\n    },\n    {\n      \"claim\": \"The Lombards were initially Arian Christians or pagans\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"was the furli of the Lombard kings who embraced Chilliance\",\n      \"quote_wikipedia\": \"Initially the Lombards were Arian Christians or pagans, which put them at odds with the Roman population\"\n    },\n    {\n      \"claim\": \"The kingdom ended with the Lombard defeat\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"That monarch died in 65:1 and the affairs of the Lombarda were in protagonly\",\n      \"quote_wikipedia\": \"who conquered the kingdom in 774\"\n    },\n    {\n      \"claim\": \"The king was elected by the dukes\",\n      \"tag\": \"renamed\",\n      \"quote_britannica\": \"chole Authars the four in Clephie for their king\",\n      \"quote_wikipedia\": \"The king was traditionally elected by the very highest-ranking aristocrats, the dukes\"\n    },\n    {\n      \"claim\": \"The kingdom was later known as the Kingdom of Italy\",\n      \"tag\": \"renamed\",\n      \"quote_britannica\": \"making himself king of Italy by her means\",\n      \"quote_wikipedia\": \"also known as the Lombard Kingdom and later as the Kingdom of all Italy (Latin: Regnum totius Italiae)\"\n    },\n    {\n      \"claim\": \"The Lombards converted to Catholicism by the end of the 7th century\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"they continued long infected with that barely, which emotional great diligence between them and the orthodox bihops\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"duks\",\n      \"new\": \"dukes\",\n      \"quote_britannica\": \"he could remove the duks at pleasure yet to deprives none of them of their decisions\",\n      \"quote_wikipedia\": \"The kingdom was subdivided into a varying number of duchies, ruled by semi-autonomous dukes\"\n    },\n    {\n      \"old\": \"Chilliance\",\n      \"new\": \"Catholicism\",\n      \"quote_britannica\": \"was the furli of the Lombard kings who embraced Chilliance\",\n      \"quote_wikipedia\": \"by the end of the 7th century, their conversion to Catholicism removed a major barrier\"\n    },\n    {\n      \"old\": \"Lembards\",\n      \"new\": \"Lombards\",\n      \"quote_britannica\": \"Lembards, judging that a favorable opportunity now offered of making himself king of Italy by her means\",\n      \"quote_wikipedia\": \"established by the Lombards, a Germanic people, on the Italian Peninsula\"\n    },\n    {\n      \"old\": \"Clephie\",\n      \"new\": \"Cleph\",\n      \"quote_britannica\": \"the Lombarda choic Clephie, one of the holiday for theology\",\n      \"quote_wikipedia\": \"Later in 572, the thirty-five dukes assembled in Pavia to hail king Cleph\"\n    },\n    {\n      \"old\": \"Authars\",\n      \"new\": \"Autari\",\n      \"quote_britannica\": \"chole Authars the four in Clephie for their king\",\n      \"quote_wikipedia\": \"In 584 the dukes agreed to crown King Cleph's son, Autari\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Byzantine-Gothic War and background to Lombard invasion\",\n      \"quote_wikipedia\": \"In the 6th century Byzantine Emperor Justinian attempted to reassert imperial authority in the territories of the Western Roman Empire. In the resulting Gothic War (535–554) waged against the Ostrogothic Kingdom\"\n    },\n    {\n      \"topic\": \"Langobardia Maior and Langobardia Minor division\",\n      \"quote_wikipedia\": \"the Byzantine-ruled Exarchate of Ravenna and Duchy of Rome separated the northern Lombard duchies, collectively known as Langobardia Maior, from the two large southern duchies of Spoleto and Benevento\"\n    },\n    {\n      \"topic\": \"Iron Crown of Lombardy\",\n      \"quote_wikipedia\": \"The so-called Iron Crown of Lombardy, one of the oldest surviving royal insignias of Christendom, may have originated in Lombard Italy as early as the 7th century\"\n    },\n    {\n      \"topic\": \"Seal rings in Lombard administration\",\n      \"quote_wikipedia\": \"The earliest Lombard law code, the Edictum Rothari, may allude to the use of seal rings, but it is not until the reign of Ratchis that they became an integral part of royal administration\"\n    },\n    {\n      \"topic\": \"Regions never under Lombard domination\",\n      \"quote_wikipedia\": \"Some regions were never under Lombard domination, including Latium, Sardinia, Sicily, Calabria, Naples, Venice and southern Apulia\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792325779,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 1897,
+   "prompt_tokens": 4123,
+   "total_tokens": 6020,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 6.7
+ }
+}

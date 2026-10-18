@@ -1,0 +1,171 @@
+{
+ "entry_id": "B:2250:8",
+ "cite_britannica": "[B:2250:8]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2250",
+ "row_index": 2250,
+ "image_sha256": "75315f45500988daa37cc73e58bee8b227772229b576475ee23ddb584172baee",
+ "headword": "BYLAWS",
+ "topic_hint": null,
+ "wiki_page_id": "521384",
+ "wiki_revision_id": "1340885393",
+ "wiki_title": "By-law",
+ "wiki_url": "https://en.wikipedia.org/wiki/By-law",
+ "text_sha256": "209c6ef1c68ff62c74bd3b9c38c29af90b1627d54beea30653833813468288ce",
+ "cite_wikipedia": "[W:521384:1340885393]",
+ "rerank_logit": -5.387307,
+ "rerank_margin": 2.56998,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1798,
+  "prompt_tokens": 2591,
+  "total_tokens": 4389,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 315,
+ "article_chars_used": 10000,
+ "article_chars_total": 12679,
+ "similarities": [
+  {
+   "point": "Both define by-laws as rules made by a community or organization to govern itself.",
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+  },
+  {
+   "point": "Both state that by-laws must agree with higher public laws.",
+   "quote_britannica": "All by-laws are to be reasonable, and for the com-mon benefit, not private advantage of any particular prefers, and mult be agreeable to the public laws in bang.",
+   "quote_wikipedia": "Within its jurisdiction and specific to those areas mandated by the higher body, a municipal by-law is no different from any other law of the land, and can be enforced with penalties, challenged in court, and must comply with other laws of the land, such as the country's constitution."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica limits by-laws to cities, courts, or communities made by general member consent, while Wikipedia includes corporations, neighborhoods, and municipalities under higher authority.",
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+  },
+  {
+   "point": "Britannica says by-laws must be for the common benefit and not private advantage, while Wikipedia does not state this requirement.",
+   "quote_britannica": "All by-laws are to be reasonable, and for the com-mon benefit, not private advantage of any particular prefers, and mult be agreeable to the public laws in bang.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "By-laws are private and peculiar laws for the good government of a city, court, or other community.",
+   "tag": "enduring",
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+  },
+  {
+   "claim": "By-laws are made by the general consent of the members.",
+   "tag": "dropped",
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "All by-laws are to be reasonable.",
+   "tag": "enduring",
+   "quote_britannica": "All by-laws are to be reasonable, and for the com-mon benefit, not private advantage of any particular prefers, and mult be agreeable to the public laws in bang.",
+   "quote_wikipedia": "The wording of the by-laws has to be precise. Otherwise, the meaning may be open to interpretation."
+  },
+  {
+   "claim": "By-laws must be for the common benefit, not private advantage of any particular person.",
+   "tag": "dropped",
+   "quote_britannica": "All by-laws are to be reasonable, and for the com-mon benefit, not private advantage of any particular prefers, and mult be agreeable to the public laws in bang.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "By-laws must be agreeable to the public laws.",
+   "tag": "enduring",
+   "quote_britannica": "All by-laws are to be reasonable, and for the com-mon benefit, not private advantage of any particular prefers, and mult be agreeable to the public laws in bang.",
+   "quote_wikipedia": "Within its jurisdiction and specific to those areas mandated by the higher body, a municipal by-law is no different from any other law of the land, and can be enforced with penalties, challenged in court, and must comply with other laws of the land, such as the country's constitution."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "BYLAWS, or ByrŁLAWS",
+   "new": "by-law (bye-law, by (e) law, by (e) law)",
+   "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+   "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology of the word by-law from Old Norse bȳlǫg and Danelaw town law",
+   "quote_wikipedia": "The Merriam-Webster Dictionary indicates that the origin of the word by-law is from the English word bilawe, probably from Old Norse *bȳlǫg, from Old Norse bȳr town + lag-, lǫg law. The earliest use of the term originates from the Viking town law in the Danelaw, wherein by is the Old Norse word for a larger settlement as in Whitby and Derby (compare with the modern Danish-Norwegian word by meaning town, or the modern Swedish word by, meaning village)."
+  },
+  {
+   "topic": "Municipal by-laws as delegated legislation enforceable with penalties",
+   "quote_wikipedia": "Municipal by-laws are public regulatory laws; which apply in a certain area. The main difference between a by-law and a law passed by a national/federal or regional/state body is that a by-law is made by a non-sovereign body, which derives its authority from another governing body, and can only be made on a limited range of matters."
+  },
+  {
+   "topic": "By-laws in Japan under Article 94 of the Constitution and the Local Autonomy Law",
+   "quote_wikipedia": "Under Article 94 of the Constitution of Japan, regional governments have limited autonomy and legislative powers to create by-laws. In practice, such powers are exercised in accordance with the Local Autonomy Law."
+  },
+  {
+   "topic": "By-laws in the United Kingdom as delegated legislation made by local councils under acts of Parliament",
+   "quote_wikipedia": "In the United Kingdom, by-laws are laws of local or limited application made by local councils or other bodies, using powers granted by an act of Parliament, and so are a form of delegated legislation."
+  },
+  {
+   "topic": "Corporate and organizational by-laws covering officers, meetings, and amendment procedures",
+   "quote_wikipedia": "By-laws widely vary from organization to organization, but generally cover topics such as the purpose of the organization, who are its members, how directors are elected, how meetings are conducted, and what officers the organization will have and a description of their duties."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 15,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 54,
+   "edits_per_100_words": 1.85
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "BYLAWS, or ByrŁLAWS",
+     "new": "by-law (bye-law, by (e) law, by (e) law)"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.4,
+   "wiki_only_topics": [
+    "Etymology of the word by-law from Old Norse bȳlǫg and Danelaw town law",
+    "Municipal by-laws as delegated legislation enforceable with penalties",
+    "By-laws in Japan under Article 94 of the Constitution and the Local Autonomy Law",
+    "By-laws in the United Kingdom as delegated legislation made by local councils under acts of Parliament",
+    "Corporate and organizational by-laws covering officers, meetings, and amendment procedures"
+   ]
+  },
+  "enduring_share": 0.6,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

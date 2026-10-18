@@ -1,0 +1,175 @@
+{
+ "entry_id": "B:1017:11",
+ "cite_britannica": "[B:1017:11]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+ "row_index": 1017,
+ "image_sha256": "5395deb0e1413694dd6a4e16890741c049681f5838d6fc92ef14a3019a1c87a4",
+ "headword": "HELSINGIA",
+ "topic_hint": null,
+ "wiki_page_id": "191032",
+ "wiki_revision_id": "1338024466",
+ "wiki_title": "Hälsingland",
+ "wiki_url": "https://en.wikipedia.org/wiki/H%C3%A4lsingland",
+ "text_sha256": "e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c",
+ "cite_wikipedia": "[W:191032:1338024466]",
+ "rerank_logit": -4.237162,
+ "rerank_margin": 5.712891,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1303,
+  "prompt_tokens": 2169,
+  "total_tokens": 3472,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 105,
+ "article_chars_used": 6276,
+ "article_chars_total": 6276,
+ "similarities": [
+  {
+   "point": "Both identify Helsingia as a province of Sweden.",
+   "quote_britannica": "HELSINGIA, a province of Sweden,",
+   "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+  },
+  {
+   "point": "Both state that the province borders the Gulf of Bothnia.",
+   "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  },
+  {
+   "point": "Both state that the province borders Dalarna.",
+   "quote_britannica": "and by Dalecarila on the well.",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives only two borders, while Wikipedia lists five bordering provinces and the gulf.",
+   "quote_britannica": "bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  },
+  {
+   "point": "Britannica describes it as a current province, while Wikipedia calls it a historical province with no administrative purpose.",
+   "quote_britannica": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl,",
+   "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Helsingia is a province of Sweden.",
+   "tag": "enduring",
+   "quote_britannica": "HELSINGIA, a province of Sweden,",
+   "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+  },
+  {
+   "claim": "Helsingia is bounded by the Botnian Gulf on the east.",
+   "tag": "enduring",
+   "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  },
+  {
+   "claim": "Helsingia is bounded by Dalecarlia on the west.",
+   "tag": "enduring",
+   "quote_britannica": "and by Dalecarila on the well.",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Botnhic gulph",
+   "new": "Gulf of Bothnia",
+   "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  },
+  {
+   "old": "Dalecarila",
+   "new": "Dalarna",
+   "quote_britannica": "and by Dalecarila on the well.",
+   "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Administrative status and counties",
+   "quote_wikipedia": "The traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County."
+  },
+  {
+   "topic": "Municipalities and settlements",
+   "quote_wikipedia": "The following municipalities have their seats in Hälsingland:\n\nBollnäs\n\nHudiksvall\n\nLjusdal\n\nNordanstig\n\nOvanåker\n\nSöderhamn"
+  },
+  {
+   "topic": "Coat of arms and heraldry",
+   "quote_wikipedia": "The coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules)."
+  },
+  {
+   "topic": "Geography, terrain, and geology",
+   "quote_wikipedia": "The terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income."
+  },
+  {
+   "topic": "History and earliest mentions",
+   "quote_wikipedia": "The earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 15,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 19,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Botnhic gulph",
+     "new": "Gulf of Bothnia"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Dalecarila",
+     "new": "Dalarna"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Administrative status and counties",
+    "Municipalities and settlements",
+    "Coat of arms and heraldry",
+    "Geography, terrain, and geology",
+    "History and earliest mentions"
+   ]
+  },
+  "enduring_share": 1.0,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

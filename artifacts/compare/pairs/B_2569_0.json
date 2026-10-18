@@ -1,0 +1,235 @@
+{
+ "entry_id": "B:2569:0",
+ "cite_britannica": "[B:2569:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2569",
+ "row_index": 2569,
+ "image_sha256": "e8e9334880f9e63008622bc2d1196536177dfc1b0a45b3abf304dbcf2a4e72e7",
+ "headword": null,
+ "topic_hint": "ABYSSINIA",
+ "wiki_page_id": "18495846",
+ "wiki_revision_id": "1340577514",
+ "wiki_title": "Abyssinia",
+ "wiki_url": "https://en.wikipedia.org/wiki/Abyssinia",
+ "text_sha256": "95b06988f5ded7b8b8fcd57d78428ba523abca27503c6138c46fad863c223e65",
+ "cite_wikipedia": "[W:18495846:1340577514]",
+ "rerank_logit": -3.232104,
+ "rerank_margin": 1.306269,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2347,
+  "prompt_tokens": 2651,
+  "total_tokens": 4998,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6214,
+ "article_chars_used": 2841,
+ "article_chars_total": 2841,
+ "similarities": [
+  {
+   "point": "Both texts mention that the region was associated with Christianity.",
+   "quote_britannica": "who made use of his influence to define the Christian religion throughout the country, and at last was appointed bishop of Axuma.",
+   "quote_wikipedia": "Al-Habash was known in Islamic literature as a Christian kingdom, guaranteeing its a historical exonym for the Aksumites of antiquity."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica narrates a legendary war of the elephant involving birds destroying an Ethiopian army, while Wikipedia does not mention this event.",
+   "quote_britannica": "having faces like lion; s each carrying in its class a small stone about the size of a pen, which they fell full name the Ethiopian army in such numbers, that every one of them was dettryed.",
+   "quote_wikipedia": "The term was widely used as an official international synonym for Ethiopia until the mid-20th century and primarily designates the Ethio-Semitic speaking inhabitants of the highlands of Ethiopia and Eritrea."
+  },
+  {
+   "point": "Britannica discusses ancient Ethiopian rulers and Jewish persecution narratives, whereas Wikipedia focuses on the etymology and historical usage of the term Abyssinia.",
+   "quote_britannica": "The Jewish expressed religion had now spread itself far since that penalists in Arabia. and in many places the professor of it were become absolute monsters of the country, insonish that several Jewish principlesit had been erected, the sovereigns of which commenced a severe personetion against the Christians.",
+   "quote_wikipedia": "The origin of the term might be found in Egyptian hieroglyphic as the designation of a southern region near the Red Sea that produced incense, known as ḫbś.tj.w, \"the bearded ones\" (i.e Punt)."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Frumentius was appointed bishop of Axuma.",
+   "tag": "dropped",
+   "quote_britannica": "who made use of his influence to define the Christian religion throughout the country, and at last was appointed bishop of Axuma.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The court and principal people relapsed into idolatry until converted by King Adal or Atlas in the year 231.",
+   "tag": "dropped",
+   "quote_britannica": "It is said, however, that the court and principal people. I don’t run nation in general, related into idolary, which continued to prevail till the year 231 when they were again converted by their king Adal or Atlas.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The War of the Elephant occurred around the year 60 and involved the miraculous destruction of an Ethiopian army.",
+   "tag": "dropped",
+   "quote_britannica": "The war of the elephant is supposed to have terminated in the manner above mentioned about the year $60, from which time to that of Elisbean, named also Clade, and probably the same with the Adal or Av. dag already mentioned, we meet with nothing re- Abyssinia. markable in the Ethiopia history.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "King Elisban (Caleb/Elesthan) established Persian rule after overthrowing the Himyarite or Babaani kingdom.",
+   "tag": "dropped",
+   "quote_britannica": "He engaged in work with the Homestor or Babaani in Anda Poliv, discover whom ho overthrow in battle, and put an end to their seen to kingdom, after which he established the Persian rule under Electionion to token of gratitude for the success he had metals with.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A Jewish ruler named Dhu Nuwas persecuted Christians in Arabia.",
+   "tag": "dropped",
+   "quote_britannica": "Alonging the rest, one Chinese distinguished Creety of ed himself by his cruelty, having prepared a great Chinese a number of formats or pist filled with fun, into which Polish phrase.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The Ethiopians possessed part of the Arabian peninsula during the time of King Elesbaan.",
+   "tag": "dropped",
+   "quote_britannica": "though it seems to be certain, that at the time we speak of, the Ethiopians possessed part of the Arabsian peninsula.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The Ethiopian governor of Yemen embraced Islam and was related to the royal family.",
+   "tag": "dropped",
+   "quote_britannica": "jung it is certain that the No- Julhi or Ethiopian governor of Yemen embraced Mahomestants, and that he was related to the royal family.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Jews fled to Ethiopia and became powerful, with one family preserving sovereignty on a mountain called Samus.",
+   "tag": "dropped",
+   "quote_britannica": "Ethiopia offered them an asylum \"Number or and in this country they became so powerful, that a Jew to address in honor of Judainn seemed ready to take objects\". One family had always preserved and indepoccreated. dess sovereignty, on a mountain called Sumus, the royal residence being on the top of a high rock;",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Abyssinie",
+   "new": "Abyssinia",
+   "quote_britannica": "Abyssinie her affairs entirely to Frumentis, who made use of his influence to define the Christian religion throughout the country, and at last was appointed bishop of Axuma.",
+   "quote_wikipedia": "Abyssinia (/ æ b ɪ ˈ s ɪ n i ə /; also known as Abyssinie, Abissinia, Habessinien, or Al-Habash) was an ancient region in the Horn of Africa situated in the northern highlands of modern-day Ethiopia and Eritrea."
+  },
+  {
+   "old": "Axuma",
+   "new": "Aksum",
+   "quote_britannica": "who made use of his influence to define the Christian religion throughout the country, and at last was appointed bishop of Axuma.",
+   "quote_wikipedia": "The Ezana Stone also names King Ezana as \"king of the Ethiopians\", which appears in other Sabaean texts as ḤBS²TM or \"Habessinien\"."
+  },
+  {
+   "old": "Elisban",
+   "new": "Kaleb",
+   "quote_britannica": "from which time to that of Elisbean, named also Clade, and probably the same with the Adal or Av. dag already mentioned, we meet with nothing re- Abyssinia. markable in the Ethiopia history.",
+   "quote_wikipedia": "The Turks created the province of Habesh when the Ottoman Empire conquered parts of the coastline of present-day Eritrea starting in 1557."
+  },
+  {
+   "old": "Mahomestants",
+   "new": "Muslims",
+   "quote_britannica": "jung it is certain that the No- Julhi or Ethiopian governor of Yemen embraced Mahomestants, and that he was related to the royal family.",
+   "quote_wikipedia": "Al-Habash was known in Islamic literature as a Christian kingdom, guaranteeing its a historical exonym for the Aksumites of antiquity."
+  },
+  {
+   "old": "Habessinien",
+   "new": "Habesha",
+   "quote_britannica": "The two things are these prineses it remarkable for an expedition into Arabic Policy, called by the Mohamar dan writers the war of the elephant, and which was undertaken on the following occasion:",
+   "quote_wikipedia": "In the modern day, variations of the term are used in Turkey, Iran, and the Arab World in reference to Ethiopia and as a pan-ethnic word in the west by the people of Eritrea and Ethiopia (see: Habesha peoples)."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology of the term Abyssinia from Egyptian hieroglyphs and South Arabian inscriptions.",
+   "quote_wikipedia": "The origin of the term might be found in Egyptian hieroglyphic as the designation of a southern region near the Red Sea that produced incense, known as ḫbś.tj.w, \"the bearded ones\" (i.e Punt). This etymological connection was first pointed out by Wilhelm Max Müller and Eduard Glaser in 1893."
+  },
+  {
+   "topic": "Attestation of the term in Aksumite coins and late Latin.",
+   "quote_wikipedia": "The Hellenized name of Habessinien, ABACIIN appears in an Aksumite coin of c.400 AD, and shortly after the first attestation in late Latin in the form Abissensis."
+  },
+  {
+   "topic": "Ottoman province of Habesh and Özdemir Pasha's conquest of Massawa and Arqiqo.",
+   "quote_wikipedia": "The Turks created the province of Habesh when the Ottoman Empire conquered parts of the coastline of present-day Eritrea starting in 1557. During this, Özdemir Pasha took the port city of Massawa and the adjacent city of Arqiqo."
+  },
+  {
+   "topic": "Modern usage of Habesha as a pan-ethnic term for Ethiopians and Eritreans.",
+   "quote_wikipedia": "In the modern day, variations of the term are used in Turkey, Iran, and the Arab World in reference to Ethiopia and as a pan-ethnic word in the west by the people of Eritrea and Ethiopia (see: Habesha peoples)."
+  },
+  {
+   "topic": "British Captain S.B. Hanes's 19th-century assertion about Harar and Al-Habash.",
+   "quote_wikipedia": "In the early 1800s British Capt. S.B. Hanes asserted that the city state of Harar lay within a couple days of Al-Habash."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both texts state that Abyssinia is located in the Horn of Africa / northern highlands of Ethiopia and Eritrea.",
+    "quote_britannica": "though it seems to be certain, that at the time we speak of, the Ethiopians possessed part of the Arabsian peninsula.",
+    "quote_wikipedia": "Abyssinia was an ancient region in the Horn of Africa situated in the northern highlands of modern-day Ethiopia and Eritrea."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 21,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1068,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Elisban",
+     "new": "Kaleb"
+    },
+    {
+     "old": "Mahomestants",
+     "new": "Muslims"
+    },
+    {
+     "old": "Habessinien",
+     "new": "Habesha"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Abyssinie",
+     "new": "Abyssinia"
+    },
+    {
+     "old": "Axuma",
+     "new": "Aksum"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Etymology of the term Abyssinia from Egyptian hieroglyphs and South Arabian inscriptions.",
+    "Attestation of the term in Aksumite coins and late Latin.",
+    "Ottoman province of Habesh and Özdemir Pasha's conquest of Massawa and Arqiqo.",
+    "Modern usage of Habesha as a pan-ethnic term for Ethiopians and Eritreans.",
+    "British Captain S.B. Hanes's 19th-century assertion about Harar and Al-Habash."
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 8
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

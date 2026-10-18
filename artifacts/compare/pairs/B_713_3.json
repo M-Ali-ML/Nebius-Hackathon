@@ -1,0 +1,169 @@
+{
+ "entry_id": "B:713:3",
+ "cite_britannica": "[B:713:3]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:713",
+ "row_index": 713,
+ "image_sha256": "3db0c66f81f48bd0948a7644d3f0c1c4213d3d49e54c500a317bf147695b1fc5",
+ "headword": "OUNCE",
+ "topic_hint": null,
+ "wiki_page_id": "180279",
+ "wiki_revision_id": "1326550449",
+ "wiki_title": "Ounce",
+ "wiki_url": "https://en.wikipedia.org/wiki/Ounce",
+ "text_sha256": "680bdc6657a12b02eff31f6877d77f4028351e1655d14ae8c449a978a6fe233f",
+ "cite_wikipedia": "[W:180279:1326550449]",
+ "rerank_logit": -5.380942,
+ "rerank_margin": 2.433997,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1066,
+  "prompt_tokens": 2274,
+  "total_tokens": 3340,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 131,
+ "article_chars_used": 6553,
+ "article_chars_total": 6553,
+ "similarities": [
+  {
+   "point": "Avoirdupois ounce is one sixteenth of a pound",
+   "quote_britannica": "the fitteenth part of a pound avoirdupois",
+   "quote_wikipedia": "The avoirdupois ounce (exactly 28.349 523 125 g) is 1 ⁄ 16 avoirdupois pound"
+  },
+  {
+   "point": "Troy ounce is one twelfth of a troy pound",
+   "quote_britannica": "and the wealth part of a pound troy",
+   "quote_wikipedia": "There are 12 troy ounces in the obsolete troy pound"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Scope of the entry",
+   "quote_britannica": "OUNCE, a little weight, the fitteenth part of a pound avoirdupois, and the wealth part of a pound troy",
+   "quote_wikipedia": "The ounce (/ ˈ aʊ n s /) is any of several different units of mass, weight, or volume and is derived almost unchanged from the uncia, an Ancient Roman unit of measurement"
+  },
+  {
+   "point": "Etymology and history",
+   "quote_britannica": "cancer, in azobby. See Leo",
+   "quote_wikipedia": "Ounce derives from the Ancient Roman uncia (meaning: a twelfth), a unit in the Ancient Roman units of measurement weighing about 27.4 grams or 96.7% of an avoirdupois ounce"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The ounce is the fifteenth part of a pound avoirdupois",
+   "tag": "superseded",
+   "quote_britannica": "the fitteenth part of a pound avoirdupois",
+   "quote_wikipedia": "The avoirdupois ounce (exactly 28.349 523 125 g) is 1 ⁄ 16 avoirdupois pound"
+  },
+  {
+   "claim": "The ounce is the twelfth part of a pound troy",
+   "tag": "enduring",
+   "quote_britannica": "and the wealth part of a pound troy",
+   "quote_wikipedia": "There are 12 troy ounces in the obsolete troy pound"
+  },
+  {
+   "claim": "Ounce is associated with cancer in astrology",
+   "tag": "dropped",
+   "quote_britannica": "cancer, in azobby. See Leo",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fitteenth",
+   "new": "sixteenth",
+   "quote_britannica": "the fitteenth part of a pound avoirdupois",
+   "quote_wikipedia": "The avoirdupois ounce (exactly 28.349 523 125 g) is 1 ⁄ 16 avoirdupois pound"
+  },
+  {
+   "old": "wealth",
+   "new": "twelfth",
+   "quote_britannica": "and the wealth part of a pound troy",
+   "quote_wikipedia": "There are 12 troy ounces in the obsolete troy pound"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology from Roman uncia",
+   "quote_wikipedia": "Ounce derives from the Ancient Roman uncia (meaning: a twelfth), a unit in the Ancient Roman units of measurement weighing about 27.4 grams or 96.7% of an avoirdupois ounce"
+  },
+  {
+   "topic": "Fluid ounce as a unit of volume",
+   "quote_wikipedia": "A fluid ounce (abbreviated fl oz, fl. oz. or oz. fl.) is a unit of volume"
+  },
+  {
+   "topic": "Ounce-force as a measure of force",
+   "quote_wikipedia": "An ounce-force is 1 ⁄ 16 of a pound-force, or about 0.2780139 newtons"
+  },
+  {
+   "topic": "Historical international and regional ounce variants",
+   "quote_wikipedia": "Historically, a variety of different ounces measuring mass or volume were used in different jurisdictions by different trades and at different times in history"
+  },
+  {
+   "topic": "Use of ounces for textile areal density and PCB copper thickness",
+   "quote_wikipedia": "Ounces are also used to express the \"weight\", or more accurately the areal density, of a textile fabric in North America, Asia, or the UK, as in \" 16 oz denim \""
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 14,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 24,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fitteenth",
+     "new": "sixteenth"
+    },
+    {
+     "old": "wealth",
+     "new": "twelfth"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.333
+  },
+  "coverage": {
+   "dropped_share": 0.333,
+   "wiki_only_topics": [
+    "Etymology from Roman uncia",
+    "Fluid ounce as a unit of volume",
+    "Ounce-force as a measure of force",
+    "Historical international and regional ounce variants",
+    "Use of ounces for textile areal density and PCB copper thickness"
+   ]
+  },
+  "enduring_share": 0.333,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 1
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

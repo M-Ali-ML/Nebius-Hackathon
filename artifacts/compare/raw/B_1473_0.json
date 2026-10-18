@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:1473:0",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-aeece0efb9b05fdd",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Both identify Esarhaddon as the son of Sennacherib.\",\n      \"quote_britannica\": \"ESARHADDON, the fen of Sennacherib, and his favorite\",\n      \"quote_wikipedia\": \"murdered their father in 681 and planned to seize the Neo-Assyrian throne.\"\n    },\n    {\n      \"point\": \"Both state that Esarhaddon was succeeded by a son named Ashurbanipal.\",\n      \"quote_britannica\": \"and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"to his two sons and heirs Ashurbanipal as ruler of the empire\"\n    },\n    {\n      \"point\": \"Both mention that Esarhaddon's brothers were involved in the death of Sennacherib.\",\n      \"quote_britannica\": \"ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.\",\n      \"quote_wikipedia\": \"Arda-Mulissu and another brother, Nabû-šarru-uṣur, murdered their father in 681\"\n    },\n    {\n      \"point\": \"Both mention that Esarhaddon reigned as king.\",\n      \"quote_britannica\": \"He is said have reigned to 9 years at Church, from the year 1904 to 3322;\",\n      \"quote_wikipedia\": \"was the king of the Neo-Assyrian Empire from 681 to 669 BC.\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Reign dates and length.\",\n      \"quote_britannica\": \"He is said have reigned to 9 years at Church, from the year 1904 to 3322;\",\n      \"quote_wikipedia\": \"was the king of the Neo-Assyrian Empire from 681 to 669 BC.\"\n    },\n    {\n      \"point\": \"Successor's name.\",\n      \"quote_britannica\": \"and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"to his two sons and heirs Ashurbanipal as ruler of the empire\"\n    },\n    {\n      \"point\": \"Place of death/year reference.\",\n      \"quote_britannica\": \"He died in the year of the week SSS, and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"After his death.\"\n    },\n    {\n      \"point\": \"Identity of the person described.\",\n      \"quote_britannica\": \"Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo, old way after the result of Syria, the name Bekriamo polar being derived from Afrhadon Pal.\",\n      \"quote_wikipedia\": \"Esarhaddon, also spelled Essarhaddon, Assarhaddon and Ashurhaddon (Neo-Assyrian Akkadian: 𒀭𒊹𒉽𒀸, also 𒀭𒊹𒉽𒋧𒈾 Aššur-aḫa-iddina, meaning \\\" Ashur has given me a brother\\\";\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Esarhaddon was the son of Sennacherib.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.\",\n      \"quote_wikipedia\": \"murdered their father in 681 and planned to seize the Neo-Assyrian throne.\"\n    },\n    {\n      \"claim\": \"Esarhaddon reigned for 13 years at Babylon.\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"believe which he reigned 13 years at Babyton, in all 8 years.\",\n      \"quote_wikipedia\": \"was the king of the Neo-Assyrian Empire from 681 to 669 BC.\"\n    },\n    {\n      \"claim\": \"Esarhaddon was succeeded by Sandoshina.\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"He died in the year of the week SSS, and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"to his two sons and heirs Ashurbanipal as ruler of the empire and Šamaš-šuma-ukin as king of Babylonia after his death.\"\n    },\n    {\n      \"claim\": \"Esarhaddon is identified as the Shanghai.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo,\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"The name Bekriamo polar is derived from Afrhadon Pal.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"old way after the result of Syria, the name Bekriamo polar being derived from Afrhadon Pal.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"fen\",\n      \"new\": \"son\",\n      \"quote_britannica\": \"ESARHADDON, the fen of Sennacherib, and his favorite in the Baylorion of Alfryen.\",\n      \"quote_wikipedia\": \"murdered their father in 681 and planned to seize the Neo-Assyrian throne.\"\n    },\n    {\n      \"old\": \"Babyton\",\n      \"new\": \"Babylon\",\n      \"quote_britannica\": \"believe which he reigned 13 years at Babyton, in all 8 years.\",\n      \"quote_wikipedia\": \"which had been destroyed by his father.\"\n    },\n    {\n      \"old\": \"faceded\",\n      \"new\": \"succeeded\",\n      \"quote_britannica\": \"He died in the year of the week SSS, and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"to his two sons and heirs Ashurbanipal as ruler of the empire\"\n    },\n    {\n      \"old\": \"Sandoshina\",\n      \"new\": \"Ashurbanipal\",\n      \"quote_britannica\": \"He died in the year of the week SSS, and was faceded by Sandoshina.\",\n      \"quote_wikipedia\": \"to his two sons and heirs Ashurbanipal as ruler of the empire\"\n    },\n    {\n      \"old\": \"Shanghai\",\n      \"new\": \"king\",\n      \"quote_britannica\": \"Elarhaddon, in the opinion of Sir Ilane Newton, seems to be the Shanghai who often, as Catecharina fayo,\",\n      \"quote_wikipedia\": \"was the king of the Neo-Assyrian Empire from 681 to 669 BC.\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Conquest of Egypt\",\n      \"quote_wikipedia\": \"Esarhaddon is most famous for his conquest of Egypt in 671 BC, which made his empire the largest the world had ever seen,\"\n    },\n    {\n      \"topic\": \"Civil war and ascent to the throne\",\n      \"quote_wikipedia\": \"The murder, and Arda-Mulissu's aspirations of becoming king himself, made Esarhaddon's rise to the throne difficult, and he first had to defeat his brothers in a six-week-long civil war.\"\n    },\n    {\n      \"topic\": \"Paranoia and security measures\",\n      \"quote_wikipedia\": \"His brothers' attempted coup had been unexpected and troublesome for Esarhaddon, and he would be plagued by paranoia and mistrust for his officials, governors and male family members until the end of his reign.\"\n    },\n    {\n      \"topic\": \"Influence of female relatives\",\n      \"quote_wikipedia\": \"Also perhaps resulting from his mistrust for his male relatives, Esarhaddon's female relatives, such as his mother Naqiʾa and his daughter Šērūʾa-ēṭirat, were allowed to wield considerably more influence and political power during his reign than women had been allowed in any previous period of Assyrian history,\"\n    },\n    {\n      \"topic\": \"Military campaigns in various regions\",\n      \"quote_wikipedia\": \"successfully campaigned in Media, Persia, Elam, the Arabian Peninsula, Anatolia, the Caucasus, and the Levant, defeated the Kushite Empire and conquered Egypt and Libya,\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324800,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 1902,
+   "prompt_tokens": 3122,
+   "total_tokens": 5024,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 6.1
+ }
+}

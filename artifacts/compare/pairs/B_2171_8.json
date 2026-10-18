@@ -1,0 +1,223 @@
+{
+ "entry_id": "B:2171:8",
+ "cite_britannica": "[B:2171:8]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2171",
+ "row_index": 2171,
+ "image_sha256": "f8869fa95f190d0e556bf8d2397c0c36da436ea1b23405995f0aac0f398f26d5",
+ "headword": "ATELLA",
+ "topic_hint": null,
+ "wiki_page_id": "1190944",
+ "wiki_revision_id": "1325601124",
+ "wiki_title": "Atella",
+ "wiki_url": "https://en.wikipedia.org/wiki/Atella",
+ "text_sha256": "252b5ed5516afd342ec2736b9af13d6924422f3a9eb6628577943056752ac1b5",
+ "cite_wikipedia": "[W:1190944:1325601124]",
+ "rerank_logit": -8.035214,
+ "rerank_margin": 0.988095,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1869,
+  "prompt_tokens": 1973,
+  "total_tokens": 3842,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 803,
+ "article_chars_used": 4878,
+ "article_chars_total": 4878,
+ "similarities": [
+  {
+   "point": "Both identify Atella as an ancient Italian town located between Capua and Nola.",
+   "quote_britannica": "ATELLA, an ancient town of Gargania in Italy, between Capua and Nespolis.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  },
+  {
+   "point": "Both state that the ruins of Atella are still visible.",
+   "quote_britannica": "The ruins of this town are full to be seen about 11 miles from the modern Averfa,",
+   "quote_wikipedia": "The ruins of the city walls, private houses, the so-called garden of Virgil and many tombs remain,"
+  },
+  {
+   "point": "Both connect Atella to the Atellan farce.",
+   "quote_britannica": "From this town the Atlana fabule, or Atelani Inda, took their name.",
+   "quote_wikipedia": "The Atellan farce was one of the forms of entertainment of local origin that influenced the Latin theatre."
+  },
+  {
+   "point": "Both mention that the modern town of Aversa was built from the materials of ancient Atella.",
+   "quote_britannica": "which was built out of its materials.",
+   "quote_wikipedia": "The diocese of Atella continued to exist until it became one of those incorporated into the new see of Aversa, which was founded in 1053."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes Atella as being in Gargania, while Wikipedia identifies it as an Oscan city of Campania.",
+   "quote_britannica": "ATELLA, an ancient town of Gargania in Italy, between Capua and Nespolis.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  },
+  {
+   "point": "Britannica claims the town's inhabitants were not deemed infamous and retained tribal rights, whereas Wikipedia does not mention this social status.",
+   "quote_britannica": "The authors thank these forces were not reckoned among the common players, nor deemed infamous , but retained the rights of their tribe,",
+   "quote_wikipedia": "The Atellan farce was one of the forms of entertainment of local origin that influenced the Latin theatre."
+  },
+  {
+   "point": "Britannica places the ruins 11 miles from Aversa, while Wikipedia details the ruins across several comuni.",
+   "quote_britannica": "The ruins of this town are full to be seen about 11 miles from the modern Averfa,",
+   "quote_wikipedia": "The ruins of the city walls, private houses, the so-called garden of Virgil and many tombs remain, on sites in the comuni of Frattaminore, Orta di Atella, Sant'Arpino and Succivo,"
+  },
+  {
+   "point": "Britannica includes a definition of 'tempo giusto' unrelated to Atella, while Wikipedia focuses entirely on the city's history.",
+   "quote_britannica": "A TEMO GUISTO, in multic, figurities to flag or play in an equal, true, and just time.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Atella is an ancient town in Italy between Capua and Nola.",
+   "tag": "enduring",
+   "quote_britannica": "ATELLA, an ancient town of Gargania in Italy, between Capua and Nespolis.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  },
+  {
+   "claim": "The Atellan farce took its name from the town of Atella.",
+   "tag": "enduring",
+   "quote_britannica": "From this town the Atlana fabule, or Atelani Inda, took their name.",
+   "quote_wikipedia": "The Atellan farce was one of the forms of entertainment of local origin that influenced the Latin theatre."
+  },
+  {
+   "claim": "The ruins of Atella are visible about 11 miles from modern Aversa.",
+   "tag": "enduring",
+   "quote_britannica": "The ruins of this town are full to be seen about 11 miles from the modern Averfa,",
+   "quote_wikipedia": "The ruins of the city walls, private houses, the so-called garden of Virgil and many tombs remain,"
+  },
+  {
+   "claim": "Aversa was built out of the materials of Atella.",
+   "tag": "enduring",
+   "quote_britannica": "which was built out of its materials.",
+   "quote_wikipedia": "The diocese of Atella continued to exist until it became one of those incorporated into the new see of Aversa, which was founded in 1053."
+  },
+  {
+   "claim": "The performers of Atellan farces were not deemed infamous and retained the rights of their tribe.",
+   "tag": "dropped",
+   "quote_britannica": "The authors thank these forces were not reckoned among the common players, nor deemed infamous , but retained the rights of their tribe,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The performers could be listed for the military, a privilege only of free men.",
+   "tag": "dropped",
+   "quote_britannica": "and might be listed for folders, the privilege only of free men.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Atlana fabule, or Atelani Inda",
+   "new": "Atellan farce",
+   "quote_britannica": "From this town the Atlana fabule, or Atelani Inda, took their name.",
+   "quote_wikipedia": "The Atellan farce was one of the forms of entertainment of local origin that influenced the Latin theatre."
+  },
+  {
+   "old": "Gargania",
+   "new": "Campania",
+   "quote_britannica": "ATELLA, an ancient town of Gargania in Italy, between Capua and Nespolis.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  },
+  {
+   "old": "Nespolis",
+   "new": "Nola",
+   "quote_britannica": "ATELLA, an ancient town of Gargania in Italy, between Capua and Nespolis.",
+   "quote_wikipedia": "Atella was an ancient Oscan city of Campania, located 20km directly north of Naples."
+  },
+  {
+   "old": "Averfa",
+   "new": "Aversa",
+   "quote_britannica": "The ruins of this town are full to be seen about 11 miles from the modern Averfa,",
+   "quote_wikipedia": "The diocese of Atella continued to exist until it became one of those incorporated into the new see of Aversa, which was founded in 1053."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Detailed history of Atella during the Roman period and the Second Punic War.",
+   "quote_wikipedia": "Atella was a city of Oscan origin, one of the oldest in Campania and one of the first to have obtained the Roman civitas."
+  },
+  {
+   "topic": "The role of Atella in the slave revolt of Spartacus.",
+   "quote_wikipedia": "In the slave revolt of Spartacus, the slave army was brought to the city after they defeated Lucius Furius and Lucius Cossinius in Nuceria."
+  },
+  {
+   "topic": "The history of the Christian bishopric and diocese of Atella.",
+   "quote_wikipedia": "The Christian bishopric with see at Atella (or rather modern Orta di Atella) dates back, according to recent hagiography, to a bishop named Canio,"
+  },
+  {
+   "topic": "The status of Atella as a titular see in the modern Catholic Church.",
+   "quote_wikipedia": "The title of the former diocese of Atella, without any diocesan organization or territory, is currently used by the Catholic Church as a titular see."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 22,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 139,
+   "edits_per_100_words": 0.72
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Atlana fabule, or Atelani Inda",
+     "new": "Atellan farce"
+    },
+    {
+     "old": "Nespolis",
+     "new": "Nola"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Gargania",
+     "new": "Campania"
+    },
+    {
+     "old": "Averfa",
+     "new": "Aversa"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.333,
+   "wiki_only_topics": [
+    "Detailed history of Atella during the Roman period and the Second Punic War.",
+    "The role of Atella in the slave revolt of Spartacus.",
+    "The history of the Christian bishopric and diocese of Atella.",
+    "The status of Atella as a titular see in the modern Catholic Church."
+   ]
+  },
+  "enduring_share": 0.667,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 6,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

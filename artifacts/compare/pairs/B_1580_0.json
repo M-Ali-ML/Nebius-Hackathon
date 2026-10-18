@@ -1,0 +1,278 @@
+{
+ "entry_id": "B:1580:0",
+ "cite_britannica": "[B:1580:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1580",
+ "row_index": 1580,
+ "image_sha256": "e0bdcd3f241e27ff8e01ab1d9d2d473bc5373e9ac54cdbd1887cf0407fbf0eaa",
+ "headword": "TRIGONOMETRY",
+ "topic_hint": "THROXEN",
+ "wiki_page_id": "18717261",
+ "wiki_revision_id": "1353191576",
+ "wiki_title": "Trigonometry",
+ "wiki_url": "https://en.wikipedia.org/wiki/Trigonometry",
+ "text_sha256": "616054f415d1a3a2f5bfa12b6753ee2b52b1e8c79124367dfe9f10f07179e43a",
+ "cite_wikipedia": "[W:18717261:1353191576]",
+ "rerank_logit": -3.698899,
+ "rerank_margin": 0.384714,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2760,
+  "prompt_tokens": 4551,
+  "total_tokens": 7311,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 5162,
+ "article_chars_used": 10000,
+ "article_chars_total": 17239,
+ "similarities": [
+  {
+   "point": "Both cover spherical trigonometry as a distinct area.",
+   "quote_britannica": "SPHERICAL TRIGONOMETRY is the art whereby, from three given parts of a spherical triangle, we discover the refl;",
+   "quote_wikipedia": "and used them to solve problems in trigonometry and spherical trigonometry."
+  },
+  {
+   "point": "Both mention the law of sines for triangles.",
+   "quote_britannica": "Hence is follows: that the first of the angles of any ex-blique spherical triangle ACD (this, o^2), letto one anothey, directly, as the fins of the opposite fides.",
+   "quote_wikipedia": "With these functions, one can answer virtually all questions about arbitrary triangles by using the law of sines and the law of cosines."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica presents worked numerical examples with logarithmic tables, while Wikipedia gives a general historical and conceptual overview.",
+   "quote_britannica": "Examle: In the triangle A B C ((bit a 9) ) fuppfe AB=13, AC=185 7, and BC=B4 y required the angles",
+   "quote_wikipedia": "Trigonometry (from Ancient Greek τρίγωνον (trígōnon) ' triangle ' and μέτρον (métron) ' measure ') is a branch of mathematics concerned with relationships between angles and side lengths of triangles."
+  },
+  {
+   "point": "Britannica describes using a sector and compasses for calculation, whereas Wikipedia discusses modern functions and the unit circle.",
+   "quote_britannica": "And the way of working a proportion by these is this, viz., extend your compaifles from the frit term of your pro portion, found on the feale, to the second;",
+   "quote_wikipedia": "Trigonometric ratios can also be represented using the unit circle, which is the circle of radius 1 centered at the origin in the plane."
+  },
+  {
+   "point": "Britannica uses archaic long-s OCR spellings such as \"fum\" and \"fine\", while Wikipedia uses modern terminology.",
+   "quote_britannica": "To hold the fun of the angles I D and C",
+   "quote_wikipedia": "Sine (denoted sin), defined as the ratio of the side opposite the angle to the hypotenuse."
+  },
+  {
+   "point": "Britannica frames trigonometry as practical analogies and theorems for solving cases, while Wikipedia defines trigonometric functions as ratios in a right triangle.",
+   "quote_britannica": "All the proportions ufd for the foliations of the fever et cases in plain trigonometry, may be performed by the final and compd.",
+   "quote_wikipedia": "Trigonometric ratios are the ratios between edges of a right triangle. These ratios depend only on one acute angle of the right triangle, since any two right triangles with the same acute angle are similar."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "In right-angled spherical triangles, the sine of the hypotenuse to radius is as the sine of a leg to the sine of its opposite angle.",
+   "tag": "enduring",
+   "quote_britannica": "Taraxad. I. In all right-angled, spherical triangles, the fino of the hypothecial’s radius : fine of a leg - fine of its opposite angle.",
+   "quote_wikipedia": "He listed the six distinct cases of a right-angled triangle in spherical trigonometry, and in his On the Sector Figure, he stated the law of sines for plane and spherical triangles,"
+  },
+  {
+   "claim": "In right-angled spherical triangles, the sine of a leg to radius is as the tangent of the other leg to the tangent of its opposite angle.",
+   "tag": "enduring",
+   "quote_britannica": "And the fine of a leg: radius : tangent of the other the tangent of its opposite angle.",
+   "quote_wikipedia": "and in his On the Sector Figure, he stated the law of sines for plane and spherical triangles, discovered the law of tangents for spherical triangles, and provided proofs for both these laws."
+  },
+  {
+   "claim": "In any oblique spherical triangle, the sines of the angles are directly as the sines of the opposite sides.",
+   "tag": "enduring",
+   "quote_britannica": "Hence is follows: that the first of the angles of any ex-blique spherical triangle ACD (this, o^2), letto one anothey, directly, as the fins of the opposite fides.",
+   "quote_wikipedia": "With these functions, one can answer virtually all questions about arbitrary triangles by using the law of sines and the law of cosines."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fine",
+   "new": "sine",
+   "quote_britannica": "the fino of the hypothecial’s radius : fine of a leg - fine of its opposite angle.",
+   "quote_wikipedia": "Sine (denoted sin), defined as the ratio of the side opposite the angle to the hypotenuse."
+  },
+  {
+   "old": "co-fine",
+   "new": "cosine",
+   "quote_britannica": "To the co-fise of the angle A & 26° 40° & 9.95083\\",
+   "quote_wikipedia": "Cosine (denoted cos), defined as the ratio of the adjacent leg (the side of the triangle joining the angle to the right angle) to the hypotenuse."
+  },
+  {
+   "old": "co-fise",
+   "new": "cosine",
+   "quote_britannica": "To the co-fise of the angle A & 26° 40° & 9.95083\\",
+   "quote_wikipedia": "Cosine (denoted cos), defined as the ratio of the adjacent leg (the side of the triangle joining the angle to the right angle) to the hypotenuse."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology from Ancient Greek trigōnon and metron",
+   "quote_wikipedia": "Trigonometry (from Ancient Greek τρίγωνον (trígōnon) ' triangle ' and μέτρον (métron) ' measure ') is a branch of mathematics concerned with relationships between angles and side lengths of triangles."
+  },
+  {
+   "topic": "Sumerian and Babylonian study of angle measure and 360-degree division",
+   "quote_wikipedia": "Sumerian astronomers studied angle measure, using a division of circles into 360 degrees. They, and later the Babylonians, studied the ratios of the sides of similar triangles and discovered some properties of these ratios but did not turn that into a systematic method for finding sides and angles of triangles."
+  },
+  {
+   "topic": "Indian sine tables and the Surya Siddhanta",
+   "quote_wikipedia": "The modern definition of the sine is first attested in the Surya Siddhanta, and its properties were further documented in the 5th century (AD) by Indian mathematician and astronomer Aryabhata."
+  },
+  {
+   "topic": "Medieval Islamic mathematicians and Habash al-Hasib al-Marwazi's cotangent table",
+   "quote_wikipedia": "These Greek and Indian works were translated and expanded by medieval Islamic mathematicians. In 830 AD, Persian mathematician Habash al-Hasib al-Marwazi produced the first table of cotangents."
+  },
+  {
+   "topic": "Euler's incorporation of complex numbers and Taylor series",
+   "quote_wikipedia": "It was Leonhard Euler who fully incorporated complex numbers into trigonometry. The works of the Scottish mathematicians James Gregory in the 17th century and Colin Maclaurin in the 18th century were influential in the development of trigonometric series. Also in the 18th century, Brook Taylor defined the general Taylor series."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both define trigonometry as concerning relationships between angles and side lengths of triangles.",
+    "quote_britannica": "TRIGONOMETRY is the art whereby, from three given parts of a spherical triangle, we discover the refl;",
+    "quote_wikipedia": "Trigonometry ... is a branch of mathematics concerned with relationships between angles and side lengths of triangles."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both state that the sum of the angles in a triangle is 180 degrees.",
+    "quote_britannica": "The fum of all the three angles is 180°",
+    "quote_wikipedia": "The sum of all the three angles is 180°"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "The sum of all three angles in a triangle is 180 degrees.",
+    "tag": "enduring",
+    "quote_britannica": "The fum of all the three angles is 180°",
+    "quote_wikipedia": "The sum of all the three angles is 180°"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Hipparchus gave the first tables of chords in 140 BC.",
+    "tag": "enduring",
+    "quote_britannica": "In 140 BC, Hipparchus (from Nicaea, Asia Minor) gave the first tables of chords, analogous to modern tables of sine values, and used them to solve problems in trigonometry and spherical trigonometry.",
+    "quote_wikipedia": "In 140 BC, Hipparchus (from Nicaea, Asia Minor) gave the first tables of chords, analogous to modern tables of sine values, and used them to solve problems in trigonometry and spherical trigonometry."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Ptolemy constructed detailed trigonometric tables in his Almagest.",
+    "tag": "enduring",
+    "quote_britannica": "In the 2nd century AD, the Greco-Egyptian astronomer Ptolemy (from Alexandria, Egypt) constructed detailed trigonometric tables (Ptolemy's table of chords) in Book 1, chapter 11 of his Almagest.",
+    "quote_wikipedia": "In the 2nd century AD, the Greco-Egyptian astronomer Ptolemy (from Alexandria, Egypt) constructed detailed trigonometric tables (Ptolemy's table of chords) in Book 1, chapter 11 of his Almagest."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Nasir al-Din al-Tusi developed spherical trigonometry into its present form.",
+    "tag": "enduring",
+    "quote_britannica": "The Persian polymath Nasir al-Din al-Tusi has been described as the creator of trigonometry as a mathematical discipline in its own right. He was the first to treat trigonometry as a mathematical discipline independent from astronomy, and he developed spherical trigonometry into its present form.",
+    "quote_wikipedia": "The Persian polymath Nasir al-Din al-Tusi has been described as the creator of trigonometry as a mathematical discipline in its own right. He was the first to treat trigonometry as a mathematical discipline independent from astronomy, and he developed spherical trigonometry into its present form."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Bartholomaeus Pitiscus was the first to use the word trigonometry, publishing his Trigonometria in 1595.",
+    "tag": "enduring",
+    "quote_britannica": "Bartholomaeus Pitiscus was the first to use the word, publishing his Trigonometria in 1595.",
+    "quote_wikipedia": "Bartholomaeus Pitiscus was the first to use the word, publishing his Trigonometria in 1595."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "fum",
+    "new": "sum",
+    "quote_britannica": "The fum of all the three angles is 180°",
+    "quote_wikipedia": "The sum of all the three angles is 180°"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "files",
+    "new": "sides",
+    "quote_britannica": "To the form of the sides AB and BC 240 & 2.8034\\ So is the difference of the files 72 & 1.85733\\",
+    "quote_wikipedia": "Trigonometric ratios are the ratios between edges of a right triangle."
+   },
+   "reason": "quote_britannica not found in entry text"
+  }
+ ],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 9
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 16,
+   "words": 1020,
+   "edits_per_100_words": 1.57
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fine",
+     "new": "sine"
+    },
+    {
+     "old": "co-fine",
+     "new": "cosine"
+    },
+    {
+     "old": "co-fise",
+     "new": "cosine"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Etymology from Ancient Greek trigōnon and metron",
+    "Sumerian and Babylonian study of angle measure and 360-degree division",
+    "Indian sine tables and the Surya Siddhanta",
+    "Medieval Islamic mathematicians and Habash al-Hasib al-Marwazi's cotangent table",
+    "Euler's incorporation of complex numbers and Taylor series"
+   ]
+  },
+  "enduring_share": 1.0,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

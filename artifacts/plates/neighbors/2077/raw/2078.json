@@ -1,0 +1,46 @@
+{
+ "id": "chatcmpl-84d5a2da-32b7-4a1b-a4d6-6bb685c3a57e",
+ "object": "chat.completion",
+ "created": 1792324415,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.3867><y_0.0633>MICROSCOPE.<x_0.5938><y_0.0789><class_Page-header>\n\n<x_0.7637><y_0.0617>Plate CCC.<x_0.8916><y_0.0766><class_Page-header>\n\n<x_0.043><y_0.0875>Tiy.23.\nX\nD C\nR\nFy.29.\nN\nI\nX\nA\nC\nMOL A X\nL\nB\nC\n0\nQ\nU\nX\nO\nX\nY\nZ\nX\nY.24.\nH\nX\nV\nK\nC\nS\nT\nL\nX\nS<x_0.9043><y_0.9383><class_Picture>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 508,
+  "total_tokens": 621,
+  "completion_tokens": 113,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 0.61,
+  "attempt": 0,
+  "max_tokens": 8744,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2078",
+  "image_sha256": "dd32097bd08bbdfec40fa244fb5d81b286ac5087e2c21bcac4c6b189bd82ca4f"
+ }
+}

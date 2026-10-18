@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:2250:15",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-9617c2ae4bef02a2",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [],\n  \"differences\": [\n    {\n      \"point\": \"Geographic identity\",\n      \"quote_britannica\": \"BZO, a town of Africa, in the kingdom of Morocco.\",\n      \"quote_wikipedia\": \"BZO may refer to:\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"BZO is a town in Africa\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"BZO, a town of Africa, in the kingdom of Morocco.\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"BZO is in the kingdom of Morocco\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"BZO, a town of Africa, in the kingdom of Morocco.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Bolzano Airport\",\n      \"quote_wikipedia\": \"Bolzano Airport, with IATA code BZO\"\n    },\n    {\n      \"topic\": \"Alliance for the Future of Austria\",\n      \"quote_wikipedia\": \"Alliance for the Future of Austria, abbreviated BZÖ\"\n    },\n    {\n      \"topic\": \"Bozaba language\",\n      \"quote_wikipedia\": \"Bozaba language, a Bantu language of the Democratic Republic of the Congo\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324743,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 315,
+   "prompt_tokens": 599,
+   "total_tokens": 914,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.1
+ }
+}

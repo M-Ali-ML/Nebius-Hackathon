@@ -167,7 +167,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs/Zensical documentation
-/site
+# /site (mkdocs) disabled: site/ is our static archive deliverable
 
 # mypy
 .mypy_cache/
@@ -231,3 +231,8 @@ data/*.lancedb/
 pre-docs/*.mov
 .env.*
 !.env.example
+
+# Local progress tracker
+.tracker/
+TRACKER.md
+artifacts/match/vectors/

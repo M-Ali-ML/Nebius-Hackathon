@@ -1,0 +1,280 @@
+{
+ "entry_id": "P:403",
+ "level": "page",
+ "entry_ids": [
+  "B:403:0"
+ ],
+ "page_kind": "treatise",
+ "cite_britannica": "[B:403:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:403",
+ "row_index": 403,
+ "image_sha256": "44f912e1c3237b35750b6e188e94f3a20f2af3f1dba0a4bdb630dff640ddbf3c",
+ "headword": null,
+ "topic_hint": "Philology",
+ "wiki_page_id": "23193",
+ "wiki_revision_id": "1349939971",
+ "wiki_title": "Philology",
+ "wiki_url": "https://en.wikipedia.org/wiki/Philology",
+ "text_sha256": "44d2da7537cfa1fe1e0525b702337ec51b476f18cfb29fc0878cbeb2657b7218",
+ "cite_wikipedia": "[W:23193:1349939971]",
+ "rerank_logit": -5.077536,
+ "rerank_margin": 1.516692,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2722,
+  "prompt_tokens": 4299,
+  "total_tokens": 7021,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7908,
+ "article_chars_used": 10000,
+ "article_chars_total": 11266,
+ "similarities": [
+  {
+   "point": "Both texts state that Sanskrit is related to European languages.",
+   "quote_britannica": "Six Villan Jones seems to have paved, by very plausible arguments, that the Sanscrit character were deduced from the Chahida.",
+   "quote_wikipedia": "Similarities between Sanskrit and European languages were first noted in the early 19th century.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Both texts discuss the relationship between language and ancient writing systems.",
+   "quote_britannica": "The writer letters of the Ethiopians, according to Dio-dorus Sicula, were the same with the sacred characters of the Egyptians.",
+   "quote_wikipedia": "In the case of Bronze Age literature, philology includes the prior decipherment of the language under study.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Both texts mention the study of ancient languages and their historical connections.",
+   "quote_britannica": "The learned there, and Baby Walton in his Prolegemaa, are clearly of the same opinion.",
+   "quote_wikipedia": "Classical philology principally originated from the Library of Pergamum and the Library of Alexandria around the fourth century BC.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Both texts refer to the study of language origins and connections between peoples.",
+   "quote_britannica": "The Sciland produces a number of very speakers arguments to prove that those two nations equally sprung from the same stock.",
+   "quote_wikipedia": "The comparative linguistics branch of philology studies the relationship between languages.",
+   "cite_britannica": "[B:403:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on Ethiopian and Chaldean language origins, while Wikipedia defines philology as a modern academic discipline.",
+   "quote_britannica": "Cushim was the same. We may therefore rest assured, that whatever changes the Ethiopian dialect may have un-dergone in the course of three thousand years, it was originally either Chahidae, or at least a branch of that language.",
+   "quote_wikipedia": "Philology (from Ancient Greek φιλολογία (philología) ' love of word ') is the study of language in oral and written historical sources.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Britannica describes Ethiopian letters as sacred Egyptian characters, while Wikipedia discusses decipherment of specific ancient scripts.",
+   "quote_britannica": "The writer letters of the Ethiopians, according to Dio-dorus Sicula, were the same with the sacred characters of the Egyptians.",
+   "quote_wikipedia": "Beginning with the famous decipherment and translation of the Rosetta Stone by Jean-François Champollion in 1822, some individuals attempted to decipher the writing systems of the Ancient Near East and Aegean.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Britannica presents uncritical ancient authorities, while Wikipedia mentions modern critical methods and debates.",
+   "quote_britannica": "The learned there, and Baby Walton in his Prolegemaa, are clearly of the same opinion.",
+   "quote_wikipedia": "Some scholars avoid all critical methods of textual philology, especially in historical linguistics, where it is important to study the actual recorded materials.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "point": "Britannica treats language history as conjecture about ancient nations, while Wikipedia describes philology as intersection of textual criticism, literary criticism, history, and linguistics.",
+   "quote_britannica": "This circumcments affords a presumption that the Ethiopian Cushin were likewise concerned with the Egyptians; who, as is remarked in the section concerning the Snowsic, probably introduced the religion of the Brahman into Hisolution.",
+   "quote_wikipedia": "It is the intersection of textual criticism, literary criticism, history, and linguistics with strong ties to etymology.",
+   "cite_britannica": "[B:403:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The Ethiopian language was originally Chahidae or a branch of that language.",
+   "tag": "superseded",
+   "quote_britannica": "whatever changes the Ethiopian dialect may have un-dergone in the course of three thousand years, it was originally either Chahidae, or at least a branch of that language.",
+   "quote_wikipedia": "Philology (from Ancient Greek φιλολογία (philología) ' love of word ') is the study of language in oral and written historical sources.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The Ethiopians call themselves Chadleans.",
+   "tag": "dropped",
+   "quote_britannica": "Sadger informs us, that the Ethiopian call themselves Chadleans; and this, says he, not without reason, because of the largest secret and prende books which are extant amongst them,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The sacred letters of the Ethiopians were the same as the sacred characters of the Egyptians.",
+   "tag": "enduring",
+   "quote_britannica": "The writer letters of the Ethiopians, according to Dio-dorus Sicula, were the same with the sacred characters of the Egyptians.",
+   "quote_wikipedia": "In the case of Bronze Age literature, philology includes the prior decipherment of the language under study. This has notably been the case with the Egyptian, Sumerian, Assyrian, Hittite, Ugaritic, and Luwian languages.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The Sanscrit character were deduced from the Chahida.",
+   "tag": "superseded",
+   "quote_britannica": "Six Villan Jones seems to have paved, by very plausible arguments, that the Sanscrit character were deduced from the Chahida.",
+   "quote_wikipedia": "Similarities between Sanskrit and European languages were first noted in the early 19th century.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The Ethiopians were a highly civilized people whose laws, institutions, and religion were celebrated far and wide.",
+   "tag": "dropped",
+   "quote_britannica": "The original Ethiopians were a highly civilized people; and their laws, their institutions, and especially their religion, and celebrated far and wide.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The ancient Ethiopians were a colony of Cushines and the Cushies were originally sovereigns of Ethiopie.",
+   "tag": "dropped",
+   "quote_britannica": "We knew now down that the Ethiopians were a colony Modern of Cushines; that the Cushies were originally sovereigns of Ethiopie Shame and Charles,",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "claim": "The rare ancient language of Ethiopians, called Abyssian, was the Geest spoken by the ancient Chinese shopdesks.",
+   "tag": "superseded",
+   "quote_britannica": "The rare ancient language of Ethiopians, which we shall now call by its modern name of Abyssian, was according to that gentleman, the Geest, which was spoken by the ancient Chinese shopdesks.",
+   "quote_wikipedia": "Work on the ancient languages of the Near East progressed rapidly. In the mid-19th century, Henry Rawlinson and others deciphered the Behistun Inscription, which records the same text in Old Persian, Elamite, and Akkadian, using a variation of cuneiform for each language.",
+   "cite_britannica": "[B:403:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Chahidae",
+   "new": "Chaldean",
+   "quote_britannica": "it was originally either Chahidae, or at least a branch of that language.",
+   "quote_wikipedia": "Classical philology studies classical languages. Classical philology principally originated from the Library of Pergamum and the Library of Alexandria around the fourth century BC, and was continued by the Ancient Greeks and then the Romans throughout the Roman and Byzantine Empire.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "old": "Sanscrit",
+   "new": "Sanskrit",
+   "quote_britannica": "Six Villan Jones seems to have paved, by very plausible arguments, that the Sanscrit character were deduced from the Chahida.",
+   "quote_wikipedia": "Similarities between Sanskrit and European languages were first noted in the early 19th century.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "old": "Abyssian",
+   "new": "Ge'ez",
+   "quote_britannica": "The rare ancient language of Ethiopians, which we shall now call by its modern name of Abyssian, was according to that gentleman, the Geest, which was spoken by the ancient Chinese shopdesks.",
+   "quote_wikipedia": "Beginning with the famous decipherment and translation of the Rosetta Stone by Jean-François Champollion in 1822, some individuals attempted to decipher the writing systems of the Ancient Near East and Aegean.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "old": "Chaldaic",
+   "new": "Aramaic",
+   "quote_britannica": "consequently spoke other Chaldaic, burgues - or a dialect of the tongue that their colonies must have used the same languages;",
+   "quote_wikipedia": "Work on the ancient languages of the Near East progressed rapidly. In the mid-19th century, Henry Rawlinson and others deciphered the Behistun Inscription, which records the same text in Old Persian, Elamite, and Akkadian, using a variation of cuneiform for each language.",
+   "cite_britannica": "[B:403:0]"
+  },
+  {
+   "old": "Cushim",
+   "new": "Cushitic",
+   "quote_britannica": "Cushim was the same. We may therefore rest assured, that whatever changes the Ethiopian dialect may have un-dergone in the course of three thousand years, it was originally either Chahidae, or at least a branch of that language.",
+   "quote_wikipedia": "African (Egyptian, etc.), and American (Mayan, etc.) languages. Indo-European studies involve the comparative philology of all Indo-European languages.",
+   "cite_britannica": "[B:403:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Textual criticism and critical editions",
+   "quote_wikipedia": "It includes elements of textual criticism, trying to reconstruct an author's original text based on variant copies of manuscripts. This branch of research arose among ancient scholars in the Greek-speaking world of the 4th century BC, who desired to establish a standard text of popular authors for both sound interpretation and secure transmission."
+  },
+  {
+   "topic": "Higher criticism and hermeneutics",
+   "quote_wikipedia": "A related study method known as higher criticism studies the authorship, date, and provenance of text to place such text in a historical context. As these philological issues are often inseparable from issues of interpretation, there is no clear-cut boundary between philology and hermeneutics."
+  },
+  {
+   "topic": "New philology and diplomatic approach",
+   "quote_wikipedia": "The movement known as new philology has rejected textual criticism because it injects editorial interpretations into the text and destroys the integrity of the individual manuscript, hence damaging the reliability of the data. Supporters of new philology insist on a strict \"diplomatic\" approach: a faithful rendering of the text exactly as found in the manuscript, without emendations."
+  },
+  {
+   "topic": "Cognitive philology",
+   "quote_wikipedia": "Another branch of philology, cognitive philology, studies written and oral texts. Cognitive philology considers these oral texts as the results of human mental processes. This science compares the results of textual science with the results of experimental research of both psychology and artificial intelligence production systems."
+  },
+  {
+   "topic": "Decipherment of ancient scripts (Rosetta Stone, Behistun, Linear B, Maya)",
+   "quote_wikipedia": "Beginning with the famous decipherment and translation of the Rosetta Stone by Jean-François Champollion in 1822, some individuals attempted to decipher the writing systems of the Ancient Near East and Aegean. In the case of Old Persian and Mycenaean Greek, decipherment yielded older records of languages already known from slightly more recent traditions (Middle Persian and Alphabetic Greek)."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "The Ethiopian language springs from the Babylonian and is like Hebrew, Syriac, and Arabic.",
+    "tag": "superseded",
+    "quote_britannica": "tells an in his Procommon, that the Ethiopia can tell their tongue Chadlars, that it springs from the Babylonian, and is very like the Hebrew, Syria, and Arabic;",
+    "quote_wikipedia": "Considering the small town of sea which divides this countr try from Arabia, we need not wonder that it has great affinity with the Arabic."
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 25,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1328,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Abyssian",
+     "new": "Ge'ez"
+    },
+    {
+     "old": "Chaldaic",
+     "new": "Aramaic"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Chahidae",
+     "new": "Chaldean"
+    },
+    {
+     "old": "Sanscrit",
+     "new": "Sanskrit"
+    },
+    {
+     "old": "Cushim",
+     "new": "Cushitic"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.429
+  },
+  "coverage": {
+   "dropped_share": 0.429,
+   "wiki_only_topics": [
+    "Textual criticism and critical editions",
+    "Higher criticism and hermeneutics",
+    "New philology and diplomatic approach",
+    "Cognitive philology",
+    "Decipherment of ancient scripts (Rosetta Stone, Behistun, Linear B, Maya)"
+   ]
+  },
+  "enduring_share": 0.143,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 3
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

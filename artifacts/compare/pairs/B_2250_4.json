@@ -1,0 +1,251 @@
+{
+ "entry_id": "B:2250:4",
+ "cite_britannica": "[B:2250:4]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2250",
+ "row_index": 2250,
+ "image_sha256": "75315f45500988daa37cc73e58bee8b227772229b576475ee23ddb584172baee",
+ "headword": "BUXUS",
+ "topic_hint": null,
+ "wiki_page_id": "334850",
+ "wiki_revision_id": "1344855476",
+ "wiki_title": "Buxus",
+ "wiki_url": "https://en.wikipedia.org/wiki/Buxus",
+ "text_sha256": "317f66157c4ac0f8c1b9c4f93b61438bc702a80b2ea79279f0a649893a3a331f",
+ "cite_wikipedia": "[W:334850:1344855476]",
+ "rerank_logit": -5.150844,
+ "rerank_margin": 0.688446,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2236,
+  "prompt_tokens": 2722,
+  "total_tokens": 4958,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 592,
+ "article_chars_used": 7721,
+ "article_chars_total": 7721,
+ "similarities": [
+  {
+   "point": "Buxus is a botanical genus",
+   "quote_britannica": "BUXUS, in botany, a genus of the monocina terrandia elids.",
+   "quote_wikipedia": "Buxus is a genus of about seventy species in the family Buxaceae."
+  },
+  {
+   "point": "Box wood is hard and used by mechanics for tools",
+   "quote_britannica": "The wood is of a hard clole texture, and is greatly used by mechanics for toßls of various kinds.",
+   "quote_wikipedia": "Owing to its fine grain it is a good wood for fine wood carving, although this is limited by the small sizes available."
+  },
+  {
+   "point": "The plant is native to Britain",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "Buxus sempervirens (common box or European box; western and southern Europe, except far southwest)"
+  },
+  {
+   "point": "The plant is used for hedges and topiary",
+   "quote_britannica": "The wood is of a hard clole texture, and is greatly used by mechanics for toßls of various kinds.",
+   "quote_wikipedia": "Box plants are commonly grown as hedges and for topiary."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Number of species recognized",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "Buxus is a genus of about seventy species in the family Buxaceae."
+  },
+  {
+   "point": "Geographic range of the genus",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "The boxes are native to western and southern Europe, southwest, southern and eastern Asia, Africa, Madagascar, northernmost South America, Central America, Mexico and the Caribbean,"
+  },
+  {
+   "point": "Sexual system of the flowers",
+   "quote_britannica": "The calix of the male coaffins of three leaves; and the crotilla has two petals: The calix of the fomale has four leaves; the petals are three; it has three flyily, and the copfila has three cells containing two feeds.",
+   "quote_wikipedia": "The flowers are small and yellow-green, monoecious with both sexes present on a plant."
+  },
+  {
+   "point": "Medicinal use of leaves and wood",
+   "quote_britannica": "A decdition Vol. 1. No 29. of the leaves and wood has been recommended as a powerful fiducifie; but is not now used by prestitioners.",
+   "quote_wikipedia": "Box plants are commonly grown as hedges and for topiary."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Buxus is a genus in botany",
+   "tag": "enduring",
+   "quote_britannica": "BUXUS, in botany, a genus of the monocina terrandia elids.",
+   "quote_wikipedia": "Buxus is a genus of about seventy species in the family Buxaceae."
+  },
+  {
+   "claim": "There is only one species of Buxus",
+   "tag": "superseded",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "Buxus is a genus of about seventy species in the family Buxaceae."
+  },
+  {
+   "claim": "The box-tree is native to Britain",
+   "tag": "enduring",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "Buxus sempervirens (common box or European box; western and southern Europe, except far southwest)"
+  },
+  {
+   "claim": "The wood has a hard close texture",
+   "tag": "enduring",
+   "quote_britannica": "The wood is of a hard clole texture, and is greatly used by mechanics for toßls of various kinds.",
+   "quote_wikipedia": "Owing to its fine grain it is a good wood for fine wood carving, although this is limited by the small sizes available."
+  },
+  {
+   "claim": "The wood is greatly used by mechanics for tools of various kinds",
+   "tag": "enduring",
+   "quote_britannica": "The wood is of a hard clole texture, and is greatly used by mechanics for toßls of various kinds.",
+   "quote_wikipedia": "Devices made of boxwood included set squares, scale rulers, yardsticks, folding rulers, slide rules, Marquois scales, T-squares, protractors, and a wide range of other measuring, metering, and straight-edge devices and tools, as well as general functional items such as combs, weaving shuttles, etc."
+  },
+  {
+   "claim": "A decoction of the leaves and wood was recommended as a powerful fiducifie but is not now used by practitioners",
+   "tag": "dropped",
+   "quote_britannica": "A decdition Vol. 1. No 29. of the leaves and wood has been recommended as a powerful fiducifie; but is not now used by prestitioners.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The male calix consists of three leaves",
+   "tag": "superseded",
+   "quote_britannica": "The calix of the male coaffins of three leaves; and the crotilla has two petals:",
+   "quote_wikipedia": "The flowers are small and yellow-green, monoecious with both sexes present on a plant."
+  },
+  {
+   "claim": "The female calix has four leaves and three petals",
+   "tag": "superseded",
+   "quote_britannica": "The calix of the fomale has four leaves; the petals are three; it has three flyily, and the copfila has three cells containing two feeds.",
+   "quote_wikipedia": "The flowers are small and yellow-green, monoecious with both sexes present on a plant."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "monocina terrandia elids",
+   "new": "family Buxaceae",
+   "quote_britannica": "BUXUS, in botany, a genus of the monocina terrandia elids.",
+   "quote_wikipedia": "Buxus is a genus of about seventy species in the family Buxaceae."
+  },
+  {
+   "old": "fampevi-rens",
+   "new": "Buxus sempervirens",
+   "quote_britannica": "There is but one species, viz, the fampevi-rens, or box-tree, a native of Britain.",
+   "quote_wikipedia": "Buxus sempervirens (common box or European box; western and southern Europe, except far southwest)"
+  },
+  {
+   "old": "toßls",
+   "new": "tools",
+   "quote_britannica": "The wood is of a hard clole texture, and is greatly used by mechanics for toßls of various kinds.",
+   "quote_wikipedia": "Devices made of boxwood included set squares, scale rulers, yardsticks, folding rulers, slide rules, Marquois scales, T-squares, protractors, and a wide range of other measuring, metering, and straight-edge devices and tools, as well as general functional items such as combs, weaving shuttles, etc."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Genetic sections and geographic distribution of Buxus species",
+   "quote_wikipedia": "The genus splits into three genetically distinct sections, each section in a different region, with the Eurasian species in one section, the African (except northwest Africa) and Madagascan species in the second, and the American species in the third."
+  },
+  {
+   "topic": "Genome sequencing of Buxus species",
+   "quote_wikipedia": "The genomes of Buxus austro-yunnanensis and Buxus sinica have been sequenced."
+  },
+  {
+   "topic": "List of Buxus species and their native regions",
+   "quote_wikipedia": "Buxus sempervirens (common box or European box; western and southern Europe, except far southwest)"
+  },
+  {
+   "topic": "Box tree moth damage in Britain and Europe",
+   "quote_wikipedia": "In Britain and mainland Europe, box is subject to damage from caterpillars of Cydalima perspectalis which can devastate a box hedge within a short time."
+  },
+  {
+   "topic": "Use of boxwood for chess pieces and woodblock printing",
+   "quote_wikipedia": "Owing to the relatively high density of the wood, boxwood is often used for chess pieces; unstained boxwood for the white pieces, and stained (' ebonized ') boxwood for the black pieces in lieu of ebony."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "fiducifie",
+    "new": "medicinal use",
+    "quote_britannica": "A decdition Vol. 1. No 29. of the leaves and wood has been recommended as a powerful fiducifie; but is not now used by prestitioners.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "prestitioners",
+    "new": "practitioners",
+    "quote_britannica": "A decdition Vol. 1. No 29. of the leaves and wood has been recommended as a powerful fiducifie; but is not now used by prestitioners.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 24,
+  "rejected": 2
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 108,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "monocina terrandia elids",
+     "new": "family Buxaceae"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fampevi-rens",
+     "new": "Buxus sempervirens"
+    },
+    {
+     "old": "toßls",
+     "new": "tools"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.375
+  },
+  "coverage": {
+   "dropped_share": 0.125,
+   "wiki_only_topics": [
+    "Genetic sections and geographic distribution of Buxus species",
+    "Genome sequencing of Buxus species",
+    "List of Buxus species and their native regions",
+    "Box tree moth damage in Britain and Europe",
+    "Use of boxwood for chess pieces and woodblock printing"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 1
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

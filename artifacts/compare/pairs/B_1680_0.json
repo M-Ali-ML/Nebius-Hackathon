@@ -1,0 +1,249 @@
+{
+ "entry_id": "B:1680:0",
+ "cite_britannica": "[B:1680:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1680",
+ "row_index": 1680,
+ "image_sha256": "fbb4a5fde0c2b233b6df827e5998ef2fc15cd2bc73b4eb99b93d91db83199d1b",
+ "headword": null,
+ "topic_hint": "CARPENTRY",
+ "wiki_page_id": "189274",
+ "wiki_revision_id": "1352816782",
+ "wiki_title": "Carpentry",
+ "wiki_url": "https://en.wikipedia.org/wiki/Carpentry",
+ "text_sha256": "a946acca83b14e46f1c57e939ba2c4e5c28eaf8d41e220202b4f6912976eb3bf",
+ "cite_wikipedia": "[W:189274:1352816782]",
+ "rerank_logit": -4.140989,
+ "rerank_margin": 1.504766,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2276,
+  "prompt_tokens": 3858,
+  "total_tokens": 6134,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 5319,
+ "article_chars_used": 10000,
+ "article_chars_total": 17671,
+ "similarities": [
+  {
+   "point": "Both describe carpentry as involving the construction of buildings and structures.",
+   "quote_britannica": "The weights of the roof is equal to its vertical pressure on the wall.",
+   "quote_wikipedia": "Carpentry is a skilled trade and a craft in which the primary work performed is the cutting, shaping and installation of building materials during the construction of buildings, ships, timber bridges, concrete formwork, etc."
+  },
+  {
+   "point": "Both mention the use of wood as a primary material.",
+   "quote_britannica": "The cohesion of the beam does nothing but supply the balance to the extending forces.",
+   "quote_wikipedia": "Carpenters traditionally worked with natural wood and did rougher work such as framing, but today many other materials are also used and sometimes the finer trades of cabinetmaking and furniture building are considered carpentry."
+  },
+  {
+   "point": "Both discuss the structural role of beams and frames.",
+   "quote_britannica": "Therefore Ac is the compression of the beam AD, or the force pressing it on the beam HD.",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "point": "Both reference the historical development of the trade.",
+   "quote_britannica": "This remark is important: for many carpenters think the form and direction of the hitting joint of greater importance;",
+   "quote_wikipedia": "The founding of America was partly based on a desire to extract resources from the new continent including wood for use in ships and buildings in Europe."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica focuses on mathematical analysis of forces in frames, while Wikipedia defines carpentry as a modern skilled trade.",
+   "quote_britannica": "Therefore Ac is the compression of the beam AD, or the force pressing it on the beam HD.",
+   "quote_wikipedia": "Carpentry is a skilled trade and a craft in which the primary work performed is the cutting, shaping and installation of building materials during the construction of buildings, ships, timber bridges, concrete formwork, etc."
+  },
+  {
+   "point": "Britannica uses OCR-garbled 18th-century technical notation, whereas Wikipedia uses clear contemporary language.",
+   "quote_britannica": "Currently, As, and Ag. But because A/and-2B are equal and parallel, and Ex and f/ are also parallel;",
+   "quote_wikipedia": "Carpenters learn this trade by being employed through an apprenticeship training—normally four years—and qualify by successfully completing that country's competence test in places such as the United Kingdom, the United States, Canada, Switzerland, Australia and South Africa."
+  },
+  {
+   "point": "Britannica discusses theoretical mechanics of roof pressure, while Wikipedia covers modern materials and tools.",
+   "quote_britannica": "The weights of the roof is equal to its vertical pressure on the wall.",
+   "quote_wikipedia": "Plywood, engineered lumber, and chemically treated lumber also came into use."
+  },
+  {
+   "point": "Britannica lacks demographic information, while Wikipedia includes gender statistics.",
+   "quote_britannica": "The form of the joint is of no importance, in as far as it affects the strains in the direction of the beams,",
+   "quote_wikipedia": "In the United States, 98.5% of carpenters are male, and it was the fourth most male-dominated occupation in the country in 1999."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The form of the joint does not affect strains in the direction of the beams.",
+   "tag": "enduring",
+   "quote_britannica": "The form of the joint is of no importance, in as far as it affects the strains in the direction of the beams,",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "claim": "The roof's weight equals its vertical pressure on the wall.",
+   "tag": "enduring",
+   "quote_britannica": "The weights of the roof is equal to its vertical pressure on the wall.",
+   "quote_wikipedia": "Carpentry is also used to construct the formwork into which concrete is poured during the building of structures such as roads and highway overpasses."
+  },
+  {
+   "claim": "The cohesion of the beam supplies balance to extending forces.",
+   "tag": "enduring",
+   "quote_britannica": "the cohesion of the beam does nothing but supply the balance to the extending forces.",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "claim": "A frame derives its efficacy from triangles.",
+   "tag": "enduring",
+   "quote_britannica": "for all derive their efficacy from the triangles of which they are composed, as will ape your more clearly as we proceed.",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "claim": "The form of the joint is important for its own firmness.",
+   "tag": "enduring",
+   "quote_britannica": "but it is often of pure consequence, in respect to its own firmness, and the effect it may have to brushing the piece on which it acts,",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "claim": "Transverse strains are not in the directions of the beams.",
+   "tag": "enduring",
+   "quote_britannica": "These strains or pressure AB, DO, and CK, not being in the directions of the beams, may be called transverse.",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "claim": "A cord made fast parallel to AE compresses the beam AD equally.",
+   "tag": "dropped",
+   "quote_britannica": "Thus, supporting that a cord is made fast at all, and parallel in the direction AE, and with the same force, the beam AD will be equally compressed,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Oblique pressure on AD stretches the beam instead of compressing it.",
+   "tag": "dropped",
+   "quote_britannica": "But, it often happens to the obliquity of the pressure on AD, instead of expressing it, stretches it; and we desire to know what tension it sustains.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "carpentry",
+   "new": "timber framing",
+   "quote_britannica": "And this completes the mechanism of a frame; for all derive their efficacy from the triangles of which they are composed,",
+   "quote_wikipedia": "Carpenters normally framed post-and-beam buildings until the end of the 19th century; now this old-fashioned carpentry is called timber framing."
+  },
+  {
+   "old": "wright",
+   "new": "carpenter",
+   "quote_britannica": "The points C and D are supported on the walls.",
+   "quote_wikipedia": "The Middle English and Scots word (in the sense of \"builder\") was wright (from the Old English wryhta, cognate with work),"
+  },
+  {
+   "old": "housewright",
+   "new": "carpenter",
+   "quote_britannica": "The points C and D are supported on the walls.",
+   "quote_wikipedia": "The terms housewright and barnwright were used historically and are now occasionally used by carpenters who work using traditional methods and materials."
+  },
+  {
+   "old": "barnwright",
+   "new": "carpenter",
+   "quote_britannica": "The points C and D are supported on the walls.",
+   "quote_wikipedia": "The terms housewright and barnwright were used historically and are now occasionally used by carpenters who work using traditional methods and materials."
+  },
+  {
+   "old": "joiner",
+   "new": "finish carpenter",
+   "quote_britannica": "The points C and D are supported on the walls.",
+   "quote_wikipedia": "Joiner is less common than the terms finish carpenter or cabinetmaker."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Gender demographics of carpenters",
+   "quote_wikipedia": "In the United States, 98.5% of carpenters are male, and it was the fourth most male-dominated occupation in the country in 1999."
+  },
+  {
+   "topic": "Apprenticeship training and certification",
+   "quote_wikipedia": "Carpenters learn this trade by being employed through an apprenticeship training—normally four years—and qualify by successfully completing that country's competence test in places such as the United Kingdom, the United States, Canada, Switzerland, Australia and South Africa."
+  },
+  {
+   "topic": "Etymology of the word carpenter",
+   "quote_wikipedia": "The word \"carpenter\" is the English rendering of the Old French word carpentier (later, charpentier) which is derived from the Latin carpentarius, \"(maker) of a carriage.\""
+  },
+  {
+   "topic": "History of carpentry from ancient to modern times",
+   "quote_wikipedia": "Along with stone, wood is among the oldest building materials. The ability to shape it into tools, shelter, and weapons improved with technological advances from the Stone Age to the Bronze Age to the Iron Age."
+  },
+  {
+   "topic": "Modern tools and materials in carpentry",
+   "quote_wikipedia": "Plywood, engineered lumber, and chemically treated lumber also came into use."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 3,
+   "words": 1053,
+   "edits_per_100_words": 0.28
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "carpentry",
+     "new": "timber framing"
+    },
+    {
+     "old": "wright",
+     "new": "carpenter"
+    },
+    {
+     "old": "housewright",
+     "new": "carpenter"
+    },
+    {
+     "old": "barnwright",
+     "new": "carpenter"
+    },
+    {
+     "old": "joiner",
+     "new": "finish carpenter"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Gender demographics of carpenters",
+    "Apprenticeship training and certification",
+    "Etymology of the word carpenter",
+    "History of carpentry from ancient to modern times",
+    "Modern tools and materials in carpentry"
+   ]
+  },
+  "enduring_share": 0.75,
+  "claim_counts": {
+   "enduring": 6,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

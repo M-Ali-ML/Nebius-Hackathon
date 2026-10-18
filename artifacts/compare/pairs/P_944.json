@@ -1,0 +1,230 @@
+{
+ "entry_id": "P:944",
+ "level": "page",
+ "entry_ids": [
+  "B:944:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:944:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:944",
+ "row_index": 944,
+ "image_sha256": "3e9ba80e36062b293c841f4da56710baedc83a81a59be0002f2bacd2223eb2e4",
+ "headword": null,
+ "topic_hint": "MEA",
+ "wiki_page_id": "23546891",
+ "wiki_revision_id": "1333625199",
+ "wiki_title": "List of human-based units of measurement",
+ "wiki_url": "https://en.wikipedia.org/wiki/List_of_human-based_units_of_measurement",
+ "text_sha256": "cfd6b6224b6f267a69d34be88f1e82c20f43e1786d3d9c665e917561e5eccc81",
+ "cite_wikipedia": "[W:23546891:1333625199]",
+ "rerank_logit": -7.019614,
+ "rerank_margin": -0.684593,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1404,
+  "prompt_tokens": 2308,
+  "total_tokens": 3712,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 2241,
+ "article_chars_used": 3073,
+ "article_chars_total": 3073,
+ "similarities": [
+  {
+   "point": "Both texts discuss measurement units derived from the human body.",
+   "quote_britannica": "Barley-corn & 3 Inch & \\multicolumn{4}{c}{1 ENGLISH.}",
+   "quote_wikipedia": "This is a list of units of measurement based on human body parts or the attributes and abilities of humans",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "point": "Both texts include the cubit as a unit of measurement.",
+   "quote_britannica": "54 & 18 & 6 & 2 & Cubit & \\\\",
+   "quote_wikipedia": "Cubit - length of the human forearm",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "point": "Both texts include the span as a unit of measurement.",
+   "quote_britannica": "27 & 9 & 9 & Span & & \\\\",
+   "quote_wikipedia": "Span - width of a human hand, from the tip of the thumb to the tip of the little finger",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "point": "Both texts include the palm as a unit of measurement.",
+   "quote_britannica": "9 & 9 & 3 & Palm & & \\\\",
+   "quote_wikipedia": "Palm - breadth of four fingers",
+   "cite_britannica": "[B:944:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica provides conversion tables for ancient units into English feet, while Wikipedia provides a descriptive list of units.",
+   "quote_britannica": "23760 & 7920 & 2640 & 880 & 660 & 440\\\\",
+   "quote_wikipedia": "Morgen - the area that one man could plow from morning to noon",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "point": "Britannica focuses on specific regional measures like the Paris ell, while Wikipedia lists globally diverse anthropometric units.",
+   "quote_britannica": "cobres ten wherever are equal to three Paris ella.",
+   "quote_wikipedia": "A cross-cultural review of body-based measurement systems has found such units to be ubiquitous worldwide.",
+   "cite_britannica": "[B:944:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The cubit is equal to 2 feet.",
+   "tag": "enduring",
+   "quote_britannica": "54 & 18 & 6 & 2 & Cubit & \\\\",
+   "quote_wikipedia": "Cubit - length of the human forearm",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The span is equal to 9 inches.",
+   "tag": "enduring",
+   "quote_britannica": "27 & 9 & 9 & Span & & \\\\",
+   "quote_wikipedia": "Span - width of a human hand, from the tip of the thumb to the tip of the little finger",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The palm is equal to 3 inches.",
+   "tag": "enduring",
+   "quote_britannica": "9 & 9 & 3 & Palm & & \\\\",
+   "quote_wikipedia": "Palm - breadth of four fingers",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The fathom is equal to 6 feet.",
+   "tag": "enduring",
+   "quote_britannica": "216 & 72 & 24 & 8 & 6 & 3 Fathora\\\\",
+   "quote_wikipedia": "Fathom - the distance between the fingertips of a human's outstretched arms",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The yard is equal to 3 feet.",
+   "tag": "enduring",
+   "quote_britannica": "108 & 36 & 12 & 4 & 3 & Yard\\\\",
+   "quote_wikipedia": "Ell (Scots) - length of an average person's arm",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The pace is equal to 3 feet.",
+   "tag": "enduring",
+   "quote_britannica": "180 & 60 & 20 & 63 & 31 & Pace\\\\",
+   "quote_wikipedia": "Pace - a full stride, from heel to heel",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The digit is a unit of measurement.",
+   "tag": "enduring",
+   "quote_britannica": "Digit & & & & & Eng-feet & Dec\\\\",
+   "quote_wikipedia": "Digit - length of a human finger",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "claim": "The Arabian pole is a unit of measurement.",
+   "tag": "dropped",
+   "quote_britannica": "192 48 16 8 2 13 Arabian pole & & & & & 14 & 7.104\\\\",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:944:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Fathora",
+   "new": "Fathom",
+   "quote_britannica": "216 & 72 & 24 & 8 & 6 & 3 Fathora\\\\",
+   "quote_wikipedia": "Fathom - the distance between the fingertips of a human's outstretched arms",
+   "cite_britannica": "[B:944:0]"
+  },
+  {
+   "old": "ella",
+   "new": "Ell",
+   "quote_britannica": "cobres ten wherever are equal to three Paris ella.",
+   "quote_wikipedia": "Ell (Scots) - length of an average person's arm",
+   "cite_britannica": "[B:944:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Land area units based on human labor",
+   "quote_wikipedia": "Morgen - the area that one man could plow from morning to noon"
+  },
+  {
+   "topic": "Humorous modern units",
+   "quote_wikipedia": "Smoot - a humorous unit of length created as part of an MIT fraternity pledge"
+  },
+  {
+   "topic": "Units based on carrying capacity",
+   "quote_wikipedia": "Picul - the weight a person can carry"
+  },
+  {
+   "topic": "Units based on time perception",
+   "quote_wikipedia": "Nimesha - the time it takes for a person to blink"
+  },
+  {
+   "topic": "Units based on food rations",
+   "quote_wikipedia": "Choenix - a man's daily grain ration"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 21,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 3,
+   "words": 518,
+   "edits_per_100_words": 0.58
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Fathora",
+     "new": "Fathom"
+    },
+    {
+     "old": "ella",
+     "new": "Ell"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.125,
+   "wiki_only_topics": [
+    "Land area units based on human labor",
+    "Humorous modern units",
+    "Units based on carrying capacity",
+    "Units based on time perception",
+    "Units based on food rations"
+   ]
+  },
+  "enduring_share": 0.875,
+  "claim_counts": {
+   "enduring": 7,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 1
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

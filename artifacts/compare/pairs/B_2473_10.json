@@ -1,0 +1,174 @@
+{
+ "entry_id": "B:2473:10",
+ "cite_britannica": "[B:2473:10]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2473",
+ "row_index": 2473,
+ "image_sha256": "b849fb7f25f25b39685069d12c13b17d47169beeea958446bdff439c230a0f65",
+ "headword": "ERGOT",
+ "topic_hint": null,
+ "wiki_page_id": "21445971",
+ "wiki_revision_id": "1324376018",
+ "wiki_title": "Ergot (horse anatomy)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Ergot_(horse_anatomy)",
+ "text_sha256": "fe19e57447d09cb8eb57b11521a0b2a57191c6b5a6fdef2c4c988548c89c996e",
+ "cite_wikipedia": "[W:21445971:1324376018]",
+ "rerank_logit": -7.567389,
+ "rerank_margin": 2.355466,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 793,
+  "prompt_tokens": 827,
+  "total_tokens": 1620,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 179,
+ "article_chars_used": 926,
+ "article_chars_total": 926,
+ "similarities": [
+  {
+   "point": "location on the horse",
+   "quote_britannica": "placed behind and be low the pattern join",
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+  },
+  {
+   "point": "association with the fetlock",
+   "quote_britannica": "hide under the tufi of the fetlock.",
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+  }
+ ],
+ "differences": [
+  {
+   "point": "physical description",
+   "quote_britannica": "a flub, like a piece of loft horn, about the biguns of a chefut",
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The ergot is located behind and below the pastern joint.",
+   "tag": "enduring",
+   "quote_britannica": "placed behind and be low the pattern join",
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+  },
+  {
+   "claim": "The ergot is hidden under the hair of the fetlock.",
+   "tag": "enduring",
+   "quote_britannica": "and commonly hide under the tufi of the fetlock.",
+   "quote_wikipedia": "larger ergots occurring in horses with \" feather \" – long hairs on the lower legs."
+  },
+  {
+   "claim": "The ergot is like a piece of horn.",
+   "tag": "renamed",
+   "quote_britannica": "like a piece of loft horn",
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "loft horn",
+   "new": "callosity",
+   "quote_britannica": "like a piece of loft horn",
+   "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+  },
+  {
+   "old": "pattern join",
+   "new": "fetlock",
+   "quote_britannica": "placed behind and be low the pattern join",
+   "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+  },
+  {
+   "old": "tufi",
+   "new": "feather",
+   "quote_britannica": "hide under the tufi of the fetlock.",
+   "quote_wikipedia": "long hairs on the lower legs."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology of the word ergot",
+   "quote_wikipedia": "The word ergot comes from French ergot 'rooster's spur'."
+  },
+  {
+   "topic": "Evolutionary origin as a vestige of the ancestral foot",
+   "quote_wikipedia": "the ergot is thought to be a vestige of some part of the ancestral foot of the multi-toed Equidae"
+  },
+  {
+   "topic": "Comparison of ergot size across all four legs",
+   "quote_wikipedia": "the ergot is of roughly equal size on all four legs."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "differences",
+   "item": {
+    "point": "etymology",
+    "quote_britannica": "",
+    "quote_wikipedia": "The word ergot comes from French ergot 'rooster's spur'."
+   },
+   "reason": "quote_britannica not found in entry text"
+  }
+ ],
+ "quote_check": {
+  "kept": 12,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 35,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.333,
+   "term_pairs": [
+    {
+     "old": "loft horn",
+     "new": "callosity"
+    },
+    {
+     "old": "pattern join",
+     "new": "fetlock"
+    },
+    {
+     "old": "tufi",
+     "new": "feather"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Etymology of the word ergot",
+    "Evolutionary origin as a vestige of the ancestral foot",
+    "Comparison of ergot size across all four legs"
+   ]
+  },
+  "enduring_share": 0.667,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 1,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

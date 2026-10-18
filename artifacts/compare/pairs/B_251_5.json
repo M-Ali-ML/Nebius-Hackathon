@@ -1,0 +1,259 @@
+{
+ "entry_id": "B:251:5",
+ "cite_britannica": "[B:251:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251",
+ "row_index": 251,
+ "image_sha256": "69952e7c4a0f40267d357d04308f674155b3ab206ce8f2f4887124ce481f8c1d",
+ "headword": "SYDINHAM",
+ "topic_hint": null,
+ "wiki_page_id": "564669",
+ "wiki_revision_id": "1341167433",
+ "wiki_title": "Thomas Sydenham",
+ "wiki_url": "https://en.wikipedia.org/wiki/Thomas_Sydenham",
+ "text_sha256": "e58eb94008793f51432d8c6dfb42e241589ed3f81907ed47805c9d2e4da839f4",
+ "cite_wikipedia": "[W:564669:1341167433]",
+ "rerank_logit": -3.545418,
+ "rerank_margin": 2.525945,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1516,
+  "prompt_tokens": 3129,
+  "total_tokens": 4645,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 1115,
+ "article_chars_used": 10000,
+ "article_chars_total": 16241,
+ "similarities": [
+  {
+   "point": "English physician",
+   "quote_britannica": "an excellent English physfusion",
+   "quote_wikipedia": "was an English physician"
+  },
+  {
+   "point": "born at Wynford Eagle in Dorset",
+   "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "born at Wynford Eagle in Dorset"
+  },
+  {
+   "point": "father was William Sydenham",
+   "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "where his father was a gentleman of property"
+  },
+  {
+   "point": "studied at Magdalen Hall, Oxford",
+   "quote_britannica": "He funded at Magdalach-ball, Oxford",
+   "quote_wikipedia": "Sydenham attended Magdalen Hall, Oxford"
+  },
+  {
+   "point": "fellow of All Souls College",
+   "quote_britannica": "When you made a fellow of All-Souls college",
+   "quote_wikipedia": "he was elected a fellow of All Souls College"
+  }
+ ],
+ "differences": [
+  {
+   "point": "birth year",
+   "quote_britannica": "and was born there about the year 1934",
+   "quote_wikipedia": "10 September 1624"
+  },
+  {
+   "point": "death year",
+   "quote_britannica": "He died in 1695",
+   "quote_wikipedia": "29 December 1689"
+  },
+  {
+   "point": "MD graduation",
+   "quote_britannica": "in 16% was created backache of his faculty at home",
+   "quote_wikipedia": "not until nearly thirty years later (1676) that he graduated as MD"
+  },
+  {
+   "point": "chief physician period",
+   "quote_britannica": "chief physician and London they ran 1660 to 16/20",
+   "quote_wikipedia": "settled in London for some time before that"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Thomas Sydenham was an English physician",
+   "tag": "enduring",
+   "quote_britannica": "an excellent English physfusion",
+   "quote_wikipedia": "was an English physician"
+  },
+  {
+   "claim": "He was born at Wynford Eagle in Dorset",
+   "tag": "enduring",
+   "quote_britannica": "the fan of William Sychham of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "Thomas Sydenham was born at Wynford Eagle in Dorset"
+  },
+  {
+   "claim": "He attended Magdalen Hall, Oxford",
+   "tag": "enduring",
+   "quote_britannica": "He funded at Magdalach-ball, Oxford",
+   "quote_wikipedia": "At the age of eighteen Sydenham attended Magdalen Hall, Oxford"
+  },
+  {
+   "claim": "He was elected a fellow of All Souls College",
+   "tag": "enduring",
+   "quote_britannica": "When you made a fellow of All-Souls college",
+   "quote_wikipedia": "about the same time he was elected a fellow of All Souls College"
+  },
+  {
+   "claim": "He graduated as bachelor of medicine in 1648",
+   "tag": "enduring",
+   "quote_britannica": "entered on the body of medicine",
+   "quote_wikipedia": "graduating as bachelor of medicine"
+  },
+  {
+   "claim": "He graduated as MD in 1676",
+   "tag": "enduring",
+   "quote_britannica": "in 16% was created backache of his faculty at home",
+   "quote_wikipedia": "not until nearly thirty years later (1676) that he graduated as MD"
+  },
+  {
+   "claim": "Thomas Coxe was an important influence on his medical studies",
+   "tag": "enduring",
+   "quote_britannica": "becoming acquainted with Dr Thomas Cox, an entirely physician",
+   "quote_wikipedia": "he cites the physician Thomas Coxe as an important influence"
+  },
+  {
+   "claim": "He died in 1695",
+   "tag": "superseded",
+   "quote_britannica": "He died in 1695",
+   "quote_wikipedia": "10 September 1624 – 29 December 1689"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "physfusion",
+   "new": "physician",
+   "quote_britannica": "an excellent English physfusion",
+   "quote_wikipedia": "was an English physician"
+  },
+  {
+   "old": "backache",
+   "new": "MD",
+   "quote_britannica": "created backache of his faculty",
+   "quote_wikipedia": "graduated as MD"
+  },
+  {
+   "old": "Wanilor Eagle",
+   "new": "Wynford Eagle",
+   "quote_britannica": "of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "born at Wynford Eagle in Dorset"
+  },
+  {
+   "old": "Dorforth",
+   "new": "Dorset",
+   "quote_britannica": "of Wanilor Eagle in Dorforth",
+   "quote_wikipedia": "born at Wynford Eagle in Dorset"
+  },
+  {
+   "old": "Magdalach-ball",
+   "new": "Magdalen Hall",
+   "quote_britannica": "He funded at Magdalach-ball, Oxford",
+   "quote_wikipedia": "Sydenham attended Magdalen Hall, Oxford"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Sydenham's chorea discovery",
+   "quote_wikipedia": "discovery of a disease, Sydenham's chorea, also known as St Vitus' Dance"
+  },
+  {
+   "topic": "marriage and children",
+   "quote_wikipedia": "married Mary Gee in his home village of Wynford Eagle"
+  },
+  {
+   "topic": "publications and medical works",
+   "quote_wikipedia": "Methodus curandi febres (The Method of Curing Fevers), was published in 1666"
+  },
+  {
+   "topic": "reputation as English Hippocrates",
+   "quote_wikipedia": "he became known as 'The English Hippocrates '"
+  }
+ ],
+ "rejected": [
+  {
+   "section": "wiki_only_topics",
+   "item": {
+    "point": "military service in Parliamentarian army",
+    "quote_wikipedia": "served for a time as an officer in the Parliamentarian army during the Civil War"
+   },
+   "reason": "missing topic"
+  }
+ ],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 194,
+   "edits_per_100_words": 0.52
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "backache",
+     "new": "MD"
+    },
+    {
+     "old": "Wanilor Eagle",
+     "new": "Wynford Eagle"
+    },
+    {
+     "old": "Dorforth",
+     "new": "Dorset"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "physfusion",
+     "new": "physician"
+    },
+    {
+     "old": "Magdalach-ball",
+     "new": "Magdalen Hall"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.125
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Sydenham's chorea discovery",
+    "marriage and children",
+    "publications and medical works",
+    "reputation as English Hippocrates"
+   ]
+  },
+  "enduring_share": 0.875,
+  "claim_counts": {
+   "enduring": 7,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 0
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

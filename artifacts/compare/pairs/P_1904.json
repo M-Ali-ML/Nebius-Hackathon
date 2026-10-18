@@ -1,0 +1,276 @@
+{
+ "entry_id": "P:1904",
+ "level": "page",
+ "entry_ids": [
+  "B:1904:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:1904:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1904",
+ "row_index": 1904,
+ "image_sha256": "759854fd95bb63859232323bbddae58dd20122c44ba36e429b4243846268277d",
+ "headword": null,
+ "topic_hint": "LYR",
+ "wiki_page_id": "81774",
+ "wiki_revision_id": "1351626993",
+ "wiki_title": "Lyre",
+ "wiki_url": "https://en.wikipedia.org/wiki/Lyre",
+ "text_sha256": "caf654da99017bb455db41a3761db9d894dc2a8c46c7ea3b6df26fa104474ba7",
+ "cite_wikipedia": "[W:81774:1351626993]",
+ "rerank_logit": -6.591141,
+ "rerank_margin": 0.863995,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2321,
+  "prompt_tokens": 4537,
+  "total_tokens": 6858,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6708,
+ "article_chars_used": 10000,
+ "article_chars_total": 18741,
+ "similarities": [
+  {
+   "point": "Both state that the lyre is a stringed musical instrument.",
+   "quote_britannica": "This, considered only as an account of the first invention of the lyre, is not altogether for unsurals?",
+   "quote_wikipedia": "The lyre (/ ˈ l aɪər /) (from Greek λύρα and Latin lyra) is a stringed musical instrument",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Both associate the lyre with ancient Greek culture and mythology.",
+   "quote_britannica": "There are many clamans among the musicians of ancient Greece, to the things that were afterwards added to thefly",
+   "quote_wikipedia": "In Ancient Greece, recitations of lyric poetry were accompanied by lyre playing.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Both mention that the lyre has a soundbox or body.",
+   "quote_britannica": "The belt endurance concerning it are the representations of this inflamment in the hands of ancient flatues, bas-reliefs, etc.",
+   "quote_wikipedia": "A classical lyre has a hollow body or sound-chest (also known as soundbox or resonator)",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Both mention that the lyre has arms and a crossbar or yoke.",
+   "quote_britannica": "The need information a threshold was). With exact least full the platform readily, and fines.",
+   "quote_wikipedia": "Extending from this sound-chest are two raised arms, which are sometimes hollow, and are curved both outward and forward. They are connected near the top by a crossbar or yoke.",
+   "cite_britannica": "[B:1904:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives a mythological origin involving Mercury and a tortoise, while Wikipedia gives archaeological origins in Mesopotamia.",
+   "quote_britannica": "For though Mercury invented the thin instruments in the manner already related, it's fail for afterwards gave it to a position",
+   "quote_wikipedia": "The earliest known examples of the lyre have been recovered at archeological sites that date to c. 2700 BC in Mesopotamia.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Britannica discusses the number of strings and tetrachords at length, while Wikipedia classifies lyres by Hornbostel–Sachs and base shape.",
+   "quote_britannica": "Again, many ancient and repeticable authors tell us, that, before the time of Terpandan, the Grecian lyre had only four fingers and;",
+   "quote_wikipedia": "Hornbostel–Sachs divide lyres into two groups, Bowl lyres (321.21) and Box lyres (321.22).",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Britannica cites ancient statues and bas-reliefs as evidence, while Wikipedia cites specific archaeological sites and artifacts.",
+   "quote_britannica": "The most ancient representations of this instrument ages very well with the account of its uncertain the lyre, in particular on the old echelith globes",
+   "quote_wikipedia": "The earliest picture of a Greek lyre appears in the famous sarcophagus of Hagia Triada (a Minoan settlement in Crete).",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "point": "Britannica attributes the lyre to multiple mythological figures, while Wikipedia focuses on historical and regional types.",
+   "quote_britannica": "Thus the Eagle Rule we give to Minerva, and to Marfayas theynas, or filialty, to Pan, and to Cybele, and the lyre, or citura, to Mercury, Apollo, Amphioa, Lima and Opheus.",
+   "quote_wikipedia": "Eastern lyres are divided into four main types: bull lyres, thick lyres, thin lyres and giant lyres.",
+   "cite_britannica": "[B:1904:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Mercury invented the lyre from a tortoise shell.",
+   "tag": "superseded",
+   "quote_britannica": "For though Mercury invented the thin instruments in the manner already related, it's fail for afterwards gave it to a position",
+   "quote_wikipedia": "The earliest known examples of the lyre have been recovered at archeological sites that date to c. 2700 BC in Mesopotamia.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "The lyre was given by Mercury to Apollo as a peace offering for stolen oxen.",
+   "tag": "dropped",
+   "quote_britannica": "According to Moment ac scount of this transfections, in his hymn to Aftervery, it was given by that god to Apollo, as a peace offering and indemnification for the oxen which he had flolen from him",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "Before Terpandan, the Greek lyre had only four strings.",
+   "tag": "enduring",
+   "quote_britannica": "Again, many ancient and repeticable authors tell us, that, before the time of Terpandan, the Grecian lyre had only four fingers and;",
+   "quote_wikipedia": "Homer described two different western lyres in his writings, the phorminx and kitharis.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "Terpander added three new strings to extend the musical scale to an octave.",
+   "tag": "enduring",
+   "quote_britannica": "is remained in alien face 850 years, from the time of Amphio, till Terpander added to it three new fringes, which extended the mulleical feel to a hope, chord, or events",
+   "quote_wikipedia": "The lyre of classical antiquity was ordinarily played by being strummed like a guitar or a zither, rather than being plucked with the fingers as with a harp.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "Pythagoras added an eighth string to complete the octave.",
+   "tag": "superseded",
+   "quote_britannica": "It was about 150 years after this period, that Pythogorsa is fast to have added an eighth fringe to the lyre, in order to complete the ocrave",
+   "quote_wikipedia": "The strings were of gut (animal intestines).",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "The chelys or tortoise-shell lyre was invented by Mercury.",
+   "tag": "dropped",
+   "quote_britannica": "where the chelys, or reduce, the invention of which he earlier or than god, is fast to have had been fittings.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "The lyre was used to accompany lyric poetry in Ancient Greece.",
+   "tag": "enduring",
+   "quote_britannica": "and made it the confiant companion of pretty.",
+   "quote_wikipedia": "In Ancient Greece, recitations of lyric poetry were accompanied by lyre playing.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "claim": "The ancient lyre was made from a tortoise shell.",
+   "tag": "enduring",
+   "quote_britannica": "The most ancient representations of this instrument ages very well with the account of its uncertain the lyre, in particular on the old echelith globes, was reprefered as made of one entire shell of a tortorise",
+   "quote_wikipedia": "A classical lyre has a hollow body or sound-chest (also known as soundbox or resonator), which in Greek tradition was anciently made out of a turtle shell.",
+   "cite_britannica": "[B:1904:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "chelys",
+   "new": "turtle shell",
+   "quote_britannica": "where the chelys, or reduce, the invention of which he earlier or than god, is fast to have had been fittings.",
+   "quote_wikipedia": "which in Greek tradition was anciently made out of a turtle shell.",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "old": "citura",
+   "new": "cithara",
+   "quote_britannica": "and the lyre, or citura, to Mercury, Apollo, Amphioa, Lima and Opheus.",
+   "quote_wikipedia": "which is a smaller version of the professional cithara and eastern- Aegean barbiton",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "old": "fringes",
+   "new": "strings",
+   "quote_britannica": "till Terpander added to it three new fringes, which extended the mulleical feel",
+   "quote_wikipedia": "The strings were of gut (animal intestines).",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "old": "infrument",
+   "new": "instrument",
+   "quote_britannica": "who calls the infrument then in die the seven-tongued lyre.",
+   "quote_wikipedia": "is a stringed musical instrument that is classified by Hornbostel–Sachs",
+   "cite_britannica": "[B:1904:0]"
+  },
+  {
+   "old": "instruments",
+   "new": "instruments",
+   "quote_britannica": "For though Mercury invented the thin instruments in the manner already related",
+   "quote_wikipedia": "The lyre (/ ˈ l aɪər /) (from Greek λύρα and Latin lyra) is a stringed musical instrument",
+   "cite_britannica": "[B:1904:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Hornbostel–Sachs classification of lyres",
+   "quote_wikipedia": "Hornbostel–Sachs classifies the lyre as a member of the lute-family of instruments which is one of the families under the chordophone classification of instruments."
+  },
+  {
+   "topic": "Eastern lyres and their subtypes",
+   "quote_wikipedia": "Eastern lyres are divided into four main types: bull lyres, thick lyres, thin lyres and giant lyres."
+  },
+  {
+   "topic": "Western lyres and round-based lyres",
+   "quote_wikipedia": "Western lyres, sometimes referred to as round-based lyres, are lyres from the ancient history that were extant in the Aegean, mainland Greece, and southern Italy."
+  },
+  {
+   "topic": "The kinnor as an ancient Israelite lyre",
+   "quote_wikipedia": "The kinnor is an ancient Israelite musical instrument that is thought to be a type of thin lyre based on iconographic archaeological evidence."
+  },
+  {
+   "topic": "Use of plectrum to play the lyre",
+   "quote_wikipedia": "A pick called a plectrum was held in one hand, while the fingers of the free hand silenced the unwanted strings."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 11,
+   "words": 1189,
+   "edits_per_100_words": 0.93
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "chelys",
+     "new": "turtle shell"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "citura",
+     "new": "cithara"
+    },
+    {
+     "old": "fringes",
+     "new": "strings"
+    },
+    {
+     "old": "infrument",
+     "new": "instrument"
+    },
+    {
+     "old": "instruments",
+     "new": "instruments"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.25
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Hornbostel–Sachs classification of lyres",
+    "Eastern lyres and their subtypes",
+    "Western lyres and round-based lyres",
+    "The kinnor as an ancient Israelite lyre",
+    "Use of plectrum to play the lyre"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 0,
+   "superseded": 2,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

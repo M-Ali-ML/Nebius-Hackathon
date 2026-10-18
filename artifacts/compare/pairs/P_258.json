@@ -1,0 +1,283 @@
+{
+ "entry_id": "P:258",
+ "level": "page",
+ "entry_ids": [
+  "B:258:0",
+  "B:258:1",
+  "B:258:2",
+  "B:258:3"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:258:0][B:258:1][B:258:2][B:258:3]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:258",
+ "row_index": 258,
+ "image_sha256": "631a7ae7df340a64a33318be0161e911b328ec2b7354754da2dc37a1606ece4c",
+ "headword": null,
+ "topic_hint": [
+  "WILLIN",
+  "WILLLAMSBURG",
+  "WILLINS"
+ ],
+ "wiki_page_id": "7634016",
+ "wiki_revision_id": "1351664577",
+ "wiki_title": "Thomas Willis",
+ "wiki_url": "https://en.wikipedia.org/wiki/Thomas_Willis",
+ "text_sha256": "12562da59d2a619596c266ea13ca8cc466d045e04f48e9e0ee5ca77a640b6ca6",
+ "cite_wikipedia": "[W:7634016:1351664577]",
+ "rerank_logit": -6.458869,
+ "rerank_margin": 1.645722,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2582,
+  "prompt_tokens": 4551,
+  "total_tokens": 7133,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 2176,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7307,
+ "article_chars_used": 9443,
+ "article_chars_total": 9443,
+ "similarities": [
+  {
+   "point": "Both identify Thomas Willis as an English physician.",
+   "quote_britannica": "WILLINS (D Thomas), a celebrated English Myckling, was born at Great Bodwin, in WildHere, in 1611",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician who played an important part in the history of anatomy, neurology, and psychiatry, and was a founding member of the Royal Society.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Both state that Willis studied at Christ Church, Oxford.",
+   "quote_britannica": "and fludied at Christ-church college, Oxford.",
+   "quote_wikipedia": "He graduated M.A. from Christ Church, Oxford in 1642.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Both state that Willis was a founding member of the Royal Society.",
+   "quote_britannica": "He was one of the first members of the Royal Society, and from made his name illustrious by his excellent writings.",
+   "quote_wikipedia": "At the time of the formation of the Royal Society of London, he was on the 1660 list of priority candidates, and became a Fellow in 1661.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Both mention Willis's marriage to Mary Fell.",
+   "quote_britannica": "His wife allo boating under the frame different the areas of providing for his family, died in 1670.",
+   "quote_wikipedia": "Willis married Samuel Fell's daughter Mary, and his brother-in-law John Fell would later be his biographer.",
+   "cite_britannica": "[B:258:3]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Birth year and place differ between the sources.",
+   "quote_britannica": "was born at Great Bodwin, in WildHere, in 1611",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Death year and place differ between the sources.",
+   "quote_britannica": "He died at his house in So Bharti's in Oregon, and was buried near her in fifathmande abby.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Britannica claims Willis was offered knighthood and refused it, while Wikipedia does not mention this.",
+   "quote_britannica": "Dr Willis was extremely mournish and mannikians, and refrufed the honour of knightthood.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician who played an important part in the history of anatomy, neurology, and psychiatry, and was a founding member of the Royal Society.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "point": "Britannica describes Willis as remarkably proud, while Wikipedia does not mention this trait.",
+   "quote_britannica": "He was remarkably proust.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician who played an important part in the history of anatomy, neurology, and psychiatry, and was a founding member of the Royal Society.",
+   "cite_britannica": "[B:258:3]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Thomas Willis was born in Great Bedwyn, Wiltshire in 1611.",
+   "tag": "superseded",
+   "quote_britannica": "was born at Great Bodwin, in WildHere, in 1611",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis studied at Christ Church, Oxford.",
+   "tag": "enduring",
+   "quote_britannica": "and fludied at Christ-church college, Oxford.",
+   "quote_wikipedia": "He graduated M.A. from Christ Church, Oxford in 1642.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis was a Royalist physician to Charles I during the Civil War years.",
+   "tag": "enduring",
+   "quote_britannica": "When that city was parturient for the king, the among other scholars, bore must be his Majidity, and devoted his three hours to the flyt of phyfeic.",
+   "quote_wikipedia": "In the Civil War years he was a Royalist, dispossessed of the family farm at North Hinksey by Parliamentary forces. In the 1640s, Willis was one of the royal physicians to Charles I.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis became Sedleian Professor of Natural Philosophy in 1660.",
+   "tag": "renamed",
+   "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
+   "quote_wikipedia": "From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis was one of the first members of the Royal Society.",
+   "tag": "enduring",
+   "quote_britannica": "He was one of the first members of the Royal Society, and from made his name illustrious by his excellent writings.",
+   "quote_wikipedia": "At the time of the formation of the Royal Society of London, he was on the 1660 list of priority candidates, and became a Fellow in 1661.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis discovered medicinal springs at Allftrop near Brackley.",
+   "tag": "dropped",
+   "quote_britannica": "In 1604, he discovered the famonic medicinal prins at Allftrop, our Brackley.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis died in 1670.",
+   "tag": "superseded",
+   "quote_britannica": "His wife allo boating under the frame different the areas of providing for his family, died in 1670.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "claim": "Willis refused the honour of knighthood.",
+   "tag": "dropped",
+   "quote_britannica": "Dr Willis was extremely mournish and mannikians, and refrufed the honour of knightthood.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:258:3]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Myckling",
+   "new": "physician",
+   "quote_britannica": "WILLINS (D Thomas), a celebrated English Myckling, was born at Great Bodwin, in WildHere, in 1611",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician who played an important part in the history of anatomy, neurology, and psychiatry, and was a founding member of the Royal Society.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "old": "Seeldian profiler",
+   "new": "Sedleian Professor",
+   "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
+   "quote_wikipedia": "From 1660 until his death, he was Sedleian Professor of Natural Philosophy at Oxford.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "old": "dochor of phyfe",
+   "new": "Doctor of Physic",
+   "quote_britannica": "In 1604, he became Seeldian profiler of natural philosophy, and the fame year took the degree of dochor of phyfe.",
+   "quote_wikipedia": "Once qualified B. Med. in 1646, he began as an active physician by regularly attending the market at Abingdon, Oxfordshire.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "old": "flyt of phyfeic",
+   "new": "practice of medicine",
+   "quote_britannica": "When that city was parturient for the king, the among other scholars, bore must be his Majidity, and devoted his three hours to the flyt of phyfeic.",
+   "quote_wikipedia": "In the Civil War years he was a Royalist, dispossessed of the family farm at North Hinksey by Parliamentary forces. In the 1640s, Willis was one of the royal physicians to Charles I.",
+   "cite_britannica": "[B:258:3]"
+  },
+  {
+   "old": "fifathmande abby",
+   "new": "Westminster Abbey",
+   "quote_britannica": "He died at his house in So Bharti's in Oregon, and was buried near her in fifathmande abby.",
+   "quote_wikipedia": "Thomas Willis FRS (27 January 1621 – 11 November 1675) was an English physician who played an important part in the history of anatomy, neurology, and psychiatry, and was a founding member of the Royal Society.",
+   "cite_britannica": "[B:258:3]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Willis's work on the Circle of Willis and brain anatomy",
+   "quote_wikipedia": "Willis is mentioned in John Aubrey 's Brief Lives; their families became linked generations later through the marriage of Aubrey's distant cousin Sir John Aubrey, 6th Baronet of Llantrithyd to Martha Catherine Carter, the grand-niece of Sir William Willys, 6th Baronet of Fen Ditton."
+  },
+  {
+   "topic": "Willis's research into diabetes and glycosuria",
+   "quote_wikipedia": "He was one of the pioneers in diabetes research. An old name for the condition is \"Willis's disease\". He observed what had been known for many centuries in India, China and the Arab world, that the urine is sweet in patients (glycosuria), however he hadn't coined the term mellitus as it is commonly claimed."
+  },
+  {
+   "topic": "Willis's publications including Cerebri anatome and Pharmaceutice rationalis",
+   "quote_wikipedia": "In 1656 and 1659 he published two significant medical works, De Fermentatione and De Febribus. These were followed by the 1664 volume on the brain, which was a record of collaborative experimental work."
+  },
+  {
+   "topic": "Willis's later medical practice in Westminster, London",
+   "quote_wikipedia": "Willis later worked as a physician in Westminster, London, this coming about after he treated Gilbert Sheldon in 1666. He had a successful medical practice, in which he applied both his understanding of anatomy and known remedies, attempting to integrate the two; he mixed both iatrochemical and mechanical views."
+  },
+  {
+   "topic": "Willis's family and descendants including Browne Willis",
+   "quote_wikipedia": "By his wife, Mary Fell, Willis had five daughters and four sons, of whom four children survived early childhood. After Mary's death in 1670, he married the widow Elizabeth Calley, daughter of Matthew Nicholas in 1672; there were no children of this marriage."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 10,
+   "words": 1291,
+   "edits_per_100_words": 0.77
+  },
+  "lexical": {
+   "renamed_share": 0.125,
+   "term_pairs": [
+    {
+     "old": "Myckling",
+     "new": "physician"
+    },
+    {
+     "old": "flyt of phyfeic",
+     "new": "practice of medicine"
+    },
+    {
+     "old": "fifathmande abby",
+     "new": "Westminster Abbey"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Seeldian profiler",
+     "new": "Sedleian Professor"
+    },
+    {
+     "old": "dochor of phyfe",
+     "new": "Doctor of Physic"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.25
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Willis's work on the Circle of Willis and brain anatomy",
+    "Willis's research into diabetes and glycosuria",
+    "Willis's publications including Cerebri anatome and Pharmaceutice rationalis",
+    "Willis's later medical practice in Westminster, London",
+    "Willis's family and descendants including Browne Willis"
+   ]
+  },
+  "enduring_share": 0.375,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 1,
+   "superseded": 2,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

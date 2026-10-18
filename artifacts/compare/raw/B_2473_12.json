@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:2473:12",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-ab13627112adb815",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [],\n  \"differences\": [\n    {\n      \"point\": \"Britannica treats Eridanus as an astronomy entry, while Wikipedia lists multiple meanings including mythology, rivers, geology, ships, and a dinosaur\",\n      \"quote_britannica\": \"ERIDANUS, in altonomy. See Vol. I. p. 487.\",\n      \"quote_wikipedia\": \"Eridanus or Eridanos, can refer to:\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Eridanus is an astronomy topic\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"ERIDANUS, in altonomy. See Vol. I. p. 487.\",\n      \"quote_wikipedia\": \"Eridanus (constellation), a southern constellation abbreviated as \\\"Eri\\\"\"\n    },\n    {\n      \"claim\": \"The reader should see Volume I page 487 for more information\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"ERIDANUS, in altonomy. See Vol. I. p. 487.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"altonomy\",\n      \"new\": \"astronomy\",\n      \"quote_britannica\": \"ERIDANUS, in altonomy. See Vol. I. p. 487.\",\n      \"quote_wikipedia\": \"Eridanus (constellation), a southern constellation abbreviated as \\\"Eri\\\"\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Eridanos in Greek mythology\",\n      \"quote_wikipedia\": \"Eridanos (mythology) (or Eridanus), a river in Greek mythology, somewhere in Central Europe, which was territory that Ancient Greeks knew only vaguely\"\n    },\n    {\n      \"topic\": \"Eridanus as the Po River\",\n      \"quote_wikipedia\": \"Eridanus, the Po River, according to Roman word usage\"\n    },\n    {\n      \"topic\": \"Eridanos river near Athens\",\n      \"quote_wikipedia\": \"Eridanos (Athens), a former river near Athens, now subterranean\"\n    },\n    {\n      \"topic\": \"Eridanos geological river\",\n      \"quote_wikipedia\": \"Eridanos (geology), a former large river that flowed between forty million and seven hundred thousand years ago from Lapland to the North Sea through where the Baltic Sea is now\"\n    },\n    {\n      \"topic\": \"Eridanus Cluster of galaxies\",\n      \"quote_wikipedia\": \"Eridanus Cluster of galaxies in the constellation Eridanus\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324754,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 589,
+   "prompt_tokens": 769,
+   "total_tokens": 1358,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 1.9
+ }
+}

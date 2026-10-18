@@ -1,0 +1,153 @@
+{
+ "entry_id": "B:713:1",
+ "cite_britannica": "[B:713:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:713",
+ "row_index": 713,
+ "image_sha256": "3db0c66f81f48bd0948a7644d3f0c1c4213d3d49e54c500a317bf147695b1fc5",
+ "headword": "OULENEY",
+ "topic_hint": null,
+ "wiki_page_id": "381069",
+ "wiki_revision_id": "1353841714",
+ "wiki_title": "Olney, Buckinghamshire",
+ "wiki_url": "https://en.wikipedia.org/wiki/Olney,_Buckinghamshire",
+ "text_sha256": "8511dfa2233bd56c286897feb96dc9cf37eb44af7c6e70929650fdbadb74f029",
+ "cite_wikipedia": "[W:381069:1353841714]",
+ "rerank_logit": -3.314606,
+ "rerank_margin": 1.709785,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1159,
+  "prompt_tokens": 2850,
+  "total_tokens": 4009,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 89,
+ "article_chars_used": 9110,
+ "article_chars_total": 9110,
+ "similarities": [
+  {
+   "point": "Both describe Olney as a market town in Buckinghamshire.",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Olney (/ ˈ oʊ n i /, rarely / ˈ ɒ l n i / OW -nee, rarely OLL -nee, the \"L\" is not pronounced by local people) is a market town and civil parish in the unitary authority area of the City of Milton Keynes, Buckinghamshire, England."
+  },
+  {
+   "point": "Both mention the town's distance from Northampton.",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives the distance to Northampton as nine miles, while Wikipedia gives it as ten miles.",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough."
+  },
+  {
+   "point": "Britannica only gives the location, while Wikipedia provides a 2021 population figure.",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "At the 2021 census, it had a population of 6,598."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Olney is a market-town of Buckinghamshire.",
+   "tag": "enduring",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Olney (/ ˈ oʊ n i /, rarely / ˈ ɒ l n i / OW -nee, rarely OLL -nee, the \"L\" is not pronounced by local people) is a market town and civil parish in the unitary authority area of the City of Milton Keynes, Buckinghamshire, England."
+  },
+  {
+   "claim": "Olney is situated nine miles South-east of Northampton.",
+   "tag": "superseded",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Lying on the left bank of the River Great Ouse, the Town is located around 8 miles (13 km) from Milton Keynes, and 10 miles (16 km) from Bedford, Northampton and Wellingborough."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "market-town",
+   "new": "market town",
+   "quote_britannica": "OULENEY, a market-town of Buckinghamshire, situated nine miles South-east of Northampton.",
+   "quote_wikipedia": "Olney (/ ˈ oʊ n i /, rarely / ˈ ɒ l n i / OW -nee, rarely OLL -nee, the \"L\" is not pronounced by local people) is a market town and civil parish in the unitary authority area of the City of Milton Keynes, Buckinghamshire, England."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "History and archaeology of Olney",
+   "quote_wikipedia": "Late Jurassic dinosaur bones were unearthed at a quarry near Clifton Reynes. Evidence of Neolithic, Bronze and Iron Age activity has been found in and around Olney, much of it close to the River Ouse."
+  },
+  {
+   "topic": "The Olney Hymns and notable residents",
+   "quote_wikipedia": "Olney is best known for poet William Cowper, anti-slavery preacher John Newton, and their 1770's collaboration the Olney Hymns, including Amazing Grace (see History, below)."
+  },
+  {
+   "topic": "Local industries and economy",
+   "quote_wikipedia": "Olney was a centre of the Buckinghamshire lace-making industry, noted in 1769 for 'considerable Manufacture of Bone-lace'."
+  },
+  {
+   "topic": "The Olney pancake race tradition",
+   "quote_wikipedia": "Since 1445, a pancake race has been run in the Town on many Pancake Days, the day before the beginning of Lent."
+  },
+  {
+   "topic": "Modern local government and transport",
+   "quote_wikipedia": "Olney has been part of the Borough (now City) of Milton Keynes since 1974, which has been a unitary authority since 1997."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 12,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 11,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "market-town",
+     "new": "market town"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.5
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "History and archaeology of Olney",
+    "The Olney Hymns and notable residents",
+    "Local industries and economy",
+    "The Olney pancake race tradition",
+    "Modern local government and transport"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 0
+  },
+  "claims_checked": 2,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

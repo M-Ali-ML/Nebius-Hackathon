@@ -1,0 +1,123 @@
+{
+ "entry_id": "B:2250:6",
+ "cite_britannica": "[B:2250:6]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2250",
+ "row_index": 2250,
+ "image_sha256": "75315f45500988daa37cc73e58bee8b227772229b576475ee23ddb584172baee",
+ "headword": "BUZZARD",
+ "topic_hint": null,
+ "wiki_page_id": "220053",
+ "wiki_revision_id": "1349314537",
+ "wiki_title": "Buzzard",
+ "wiki_url": "https://en.wikipedia.org/wiki/Buzzard",
+ "text_sha256": "d46c96f406891e3932bed835d2d778471efa456449c5f354bdb619537ad100fd",
+ "cite_wikipedia": "[W:220053:1349314537]",
+ "rerank_logit": -5.165357,
+ "rerank_margin": 1.67643,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 442,
+  "prompt_tokens": 1205,
+  "total_tokens": 1647,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 88,
+ "article_chars_used": 1962,
+ "article_chars_total": 1962,
+ "similarities": [
+  {
+   "point": "Both describe buzzard as a name applied to multiple species of hawk-like birds.",
+   "quote_britannica": "BUZZARD, in anthology, the English name of fever-ral species of the hawk kind.",
+   "quote_wikipedia": "Buzzard is the common name of several species of birds of prey."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica is a one-line entry with a cross-reference, while Wikipedia is a long list of species.",
+   "quote_britannica": "BUZZARD, in anthology, the English name of fever-ral species of the hawk kind. See Paxo.",
+   "quote_wikipedia": "Buzzard is the common name of several species of birds of prey."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Buzzard is the English name of several species of the hawk kind.",
+   "tag": "enduring",
+   "quote_britannica": "BUZZARD, in anthology, the English name of fever-ral species of the hawk kind.",
+   "quote_wikipedia": "Buzzard is the common name of several species of birds of prey."
+  },
+  {
+   "claim": "The entry directs the reader to see Paxo.",
+   "tag": "dropped",
+   "quote_britannica": "See Paxo.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "hawk kind",
+   "new": "birds of prey",
+   "quote_britannica": "the English name of fever-ral species of the hawk kind.",
+   "quote_wikipedia": "Buzzard is the common name of several species of birds of prey."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "List of buzzard species",
+   "quote_wikipedia": "Archer's buzzard (Buteo archeri)"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 6,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 15,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "hawk kind",
+     "new": "birds of prey"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.5,
+   "wiki_only_topics": [
+    "List of buzzard species"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 1
+  },
+  "claims_checked": 2,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:651:0",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-a45a109eadf8f9c0",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [],\n  \"differences\": [\n    {\n      \"point\": \"Subject matter\",\n      \"quote_britannica\": \"Fig 1 Fig.2. Fig.2. Fig.1. O Fig.3. Fig.3. Fig.8. Fig.7. Fig.9. Fig.9.\",\n      \"quote_wikipedia\": \"Fig, stylized as FIG, is a modern American restaurant located in Charleston, South Carolina.\"\n    }\n  ],\n  \"claims\": [],\n  \"term_pairs\": [],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Restaurant history and awards\",\n      \"quote_wikipedia\": \"Established in April 2003 by Mike Lata and partner Adam Nemirow, the restaurant is situated in downtown Charleston.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324736,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 176,
+   "prompt_tokens": 865,
+   "total_tokens": 1041,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 0.9
+ }
+}

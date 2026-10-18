@@ -1,0 +1,208 @@
+{
+ "entry_id": "B:1268:2",
+ "cite_britannica": "[B:1268:2]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1268",
+ "row_index": 1268,
+ "image_sha256": "e5ec9e5b4086576d908e749cf55ee5aa6db8079444bb0961627c9475b434ca7e",
+ "headword": "NAXOS",
+ "topic_hint": null,
+ "wiki_page_id": "62278",
+ "wiki_revision_id": "1351880014",
+ "wiki_title": "Naxos",
+ "wiki_url": "https://en.wikipedia.org/wiki/Naxos",
+ "text_sha256": "4963d7ae605e5eb7f8faf249f5c8eaf52c257322bf1564a9cdb9a894732793a8",
+ "cite_wikipedia": "[W:62278:1351880014]",
+ "rerank_logit": -7.089185,
+ "rerank_margin": 0.170378,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1605,
+  "prompt_tokens": 3112,
+  "total_tokens": 4717,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 249,
+ "article_chars_used": 10000,
+ "article_chars_total": 10590,
+ "similarities": [
+  {
+   "point": "Both identify Naxos as Greek",
+   "quote_britannica": "The greater part of the inhabitants are Greek",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island"
+  },
+  {
+   "point": "Both give the latitude as approximately 37.6 degrees North",
+   "quote_britannica": "Lilly, 25.13. E., Lae 37.6.N.",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes Naxos as a town and capital of a lake, while Wikipedia describes it as an island",
+   "quote_britannica": "NAXOS, or NAXIA, a considerable town, and capital of the lake of Naoxe",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  },
+  {
+   "point": "Britannica places Naxos opposite the lake of Peru, while Wikipedia places it in the Cyclades",
+   "quote_britannica": "opposite the lake of Peru, with a cudal and two ambishaby’s seen",
+   "quote_wikipedia": "is a Greek island belonging to the Cyclades island group."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Naxos is also called Naxia",
+   "tag": "enduring",
+   "quote_britannica": "NAXOS, or NAXIA, a considerable town",
+   "quote_wikipedia": "The largest town and capital of the island is Chora or Naxos City"
+  },
+  {
+   "claim": "Naxos is a considerable town",
+   "tag": "superseded",
+   "quote_britannica": "NAXOS, or NAXIA, a considerable town, and capital of the lake of Naoxe",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  },
+  {
+   "claim": "Naxos is the capital of the lake of Naoxe",
+   "tag": "superseded",
+   "quote_britannica": "a considerable town, and capital of the lake of Naoxe, opposite the lake of Peru",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  },
+  {
+   "claim": "Naxos is opposite the lake of Peru",
+   "tag": "superseded",
+   "quote_britannica": "opposite the lake of Peru, with a cudal and two ambishaby’s seen",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  },
+  {
+   "claim": "The greater part of the inhabitants are Greek",
+   "tag": "enduring",
+   "quote_britannica": "The greater part of the inhabitants are Greek, Lilly, 25.13. E., Lae 37.6.N.",
+   "quote_wikipedia": "Naxos (/ ˈ n æ k s ɒ s, - s oʊ s /; Greek: Νάξος, pronounced) is a Greek island belonging to the Cyclades island group."
+  },
+  {
+   "claim": "Naxos has a cudal and two ambishaby’s seen",
+   "tag": "dropped",
+   "quote_britannica": "with a cudal and two ambishaby’s seen, the one check out the other Latin.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "NAXIA",
+   "new": "Naxos City",
+   "quote_britannica": "NAXOS, or NAXIA, a considerable town",
+   "quote_wikipedia": "The largest town and capital of the island is Chora or Naxos City"
+  },
+  {
+   "old": "lake of Naoxe",
+   "new": "Cyclades island group",
+   "quote_britannica": "capital of the lake of Naoxe, opposite the lake of Peru",
+   "quote_wikipedia": "is a Greek island belonging to the Cyclades island group."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Bronze Age Cycladic Culture and Ancient Greek Archaic Period",
+   "quote_wikipedia": "It was an important centre during the Bronze Age Cycladic Culture and in the Ancient Greek Archaic Period."
+  },
+  {
+   "topic": "emery as a source of corundum abrasive",
+   "quote_wikipedia": "The island is famous as a source of emery, a rock rich in corundum, which until modern times was one of the best abrasives available."
+  },
+  {
+   "topic": "Greek mythology involving Zeus, Ariadne, and Dionysus",
+   "quote_wikipedia": "According to Greek mythology, the young Zeus was raised in a cave on Mt. Zas (\" Zas \" meaning \" Zeus \")."
+  },
+  {
+   "topic": "Middle Paleolithic Neanderthal activity and dwarf elephant species",
+   "quote_wikipedia": "Stelida quarry, south-west of Chora, contains Mousterian tools dating back to the Middle Paleolithic era, which indicates that Neanderthal activity on the island spanned almost 200,000 years ago."
+  },
+  {
+   "topic": "Venetian Duchy of Naxos and Ottoman rule",
+   "quote_wikipedia": "Naxos became the seat of Sanudo's realm, known as the \"Duchy of Naxos\" or \"Duchy of the Archipelago\"."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Naxos is located at 25.13 degrees East",
+    "tag": "enduring",
+    "quote_britannica": "The greater part of the inhabitants are Greek, Lilly, 25.13. E., Lae 37.6.N.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Naxos is located at 37.6 degrees North",
+    "tag": "enduring",
+    "quote_britannica": "The greater part of the inhabitants are Greek, Lilly, 25.13. E., Lae 37.6.N.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 2
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 45,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "NAXIA",
+     "new": "Naxos City"
+    },
+    {
+     "old": "lake of Naoxe",
+     "new": "Cyclades island group"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.5
+  },
+  "coverage": {
+   "dropped_share": 0.167,
+   "wiki_only_topics": [
+    "Bronze Age Cycladic Culture and Ancient Greek Archaic Period",
+    "emery as a source of corundum abrasive",
+    "Greek mythology involving Zeus, Ariadne, and Dionysus",
+    "Middle Paleolithic Neanderthal activity and dwarf elephant species",
+    "Venetian Duchy of Naxos and Ottoman rule"
+   ]
+  },
+  "enduring_share": 0.333,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 1
+  },
+  "claims_checked": 6,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

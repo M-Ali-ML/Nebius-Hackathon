@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:2250:3",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-adcd647be796cbab",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Buxton is celebrated for medicinal waters\",\n      \"quote_britannica\": \"celebrated for medicinal waters\",\n      \"quote_wikipedia\": \"The many visitors to Buxton for its thermal waters\"\n    },\n    {\n      \"point\": \"St Ann's Well is a notable spring\",\n      \"quote_britannica\": \"St Am’s well, a hot and cold spring\",\n      \"quote_wikipedia\": \"The spring waters are piped to St Ann's Well\"\n    },\n    {\n      \"point\": \"Buxton is located in Derbyshire\",\n      \"quote_britannica\": \"a place in the peak of Derbyhires\",\n      \"quote_wikipedia\": \"Buxton is a spa town in the borough of High Peak, Derbyshire\"\n    },\n    {\n      \"point\": \"The waters are used for drinking and bathing\",\n      \"quote_britannica\": \"They advirle both drinking and bathing in the ule of thute waters\",\n      \"quote_wikipedia\": \"Visitors could \\\"take the waters\\\" at The Pump Room\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Bottling ranking\",\n      \"quote_britannica\": \"the bottelt in England, next to Bath\",\n      \"quote_wikipedia\": \"fed by a geothermal spring bottled by Buxton Natural Mineral Water\"\n    },\n    {\n      \"point\": \"Geological features\",\n      \"quote_britannica\": \"The frats of earth and minerals, in the parts adjacent to Buxton, are peat-mols, blue clay, iron, and coal\",\n      \"quote_wikipedia\": \"the Lower Carboniferous limestone of the White Peak to the east and the Upper Carboniferous shale, sandstone and gritstone of the Dark Peak to the west\"\n    },\n    {\n      \"point\": \"Elevation status\",\n      \"quote_britannica\": \"a place in the peak of Derbyhires\",\n      \"quote_wikipedia\": \"It is England's highest market town, sited at some 1,000 feet (300 m) above sea level\"\n    },\n    {\n      \"point\": \"Medical contraindications\",\n      \"quote_britannica\": \"the left is of bad consequence in the gout, inward inflammations, fevers, dysentery, large inward tumours, or in an outward preflure of the body\",\n      \"quote_wikipedia\": \"\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Buxton is celebrated for medicinal waters\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"celebrated for medicinal waters\",\n      \"quote_wikipedia\": \"The many visitors to Buxton for its thermal waters\"\n    },\n    {\n      \"claim\": \"St Ann's Well is a hot and cold spring\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"St Am’s well, a hot and cold spring\",\n      \"quote_wikipedia\": \"The spring waters are piped to St Ann's Well\"\n    },\n    {\n      \"claim\": \"The waters promote digestion\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"These waters greatly promote digestion\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"The waters are beneficial to cramps, convulsions, dry asthmas, and the bilous colic\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"it is figally beneficial to crampt, convilions, dry affthmas, the biluso colis\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"The waters are warm and highly impregnated with a mineral foam, vapour, or finite\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"As this water as warn, highly impregnated with a mineral foam, vapoon, or finite\",\n      \"quote_wikipedia\": \"Built on the River Wye, and overlooked by Axe Edge Moor, Buxton became a spa town for its geothermal spring, which gushes at a steady 28 °C\"\n    },\n    {\n      \"claim\": \"Drinking and bathing is bad in gout, inward inflammations, fevers, dysentery, large inward tumours, or outward pressure\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"is only the left is of bad consequence in the gout, inward inflammations, fevers, dysentery, large inward tumours, or in an outward preflure of the body\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"The adjacent earth and minerals include peat-mols, blue clay, iron, and coal\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"The frats of earth and minerals, in the parts adjacent to Buxton, are peat-mols, blue clay, iron, and coal\",\n      \"quote_wikipedia\": \"the Lower Carboniferous limestone of the White Peak to the east and the Upper Carboniferous shale, sandstone and gritstone of the Dark Peak to the west\"\n    },\n    {\n      \"claim\": \"The waters produce furgrilling effects in gouty, rheumatic, athrire, and feorbutic pains\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"they produce furgrilling effects in gouy, rheumatic, athrire, and feorbutic pains\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"medicinal waters\",\n      \"new\": \"thermal waters\",\n      \"quote_britannica\": \"celebrated for medicinal waters\",\n      \"quote_wikipedia\": \"The many visitors to Buxton for its thermal waters\"\n    },\n    {\n      \"old\": \"St Am’s well\",\n      \"new\": \"St Ann's Well\",\n      \"quote_britannica\": \"St Am’s well, a hot and cold spring\",\n      \"quote_wikipedia\": \"The spring waters are piped to St Ann's Well\"\n    },\n    {\n      \"old\": \"Derbyhires\",\n      \"new\": \"Derbyshire\",\n      \"quote_britannica\": \"a place in the peak of Derbyhires\",\n      \"quote_wikipedia\": \"Buxton is a spa town in the borough of High Peak, Derbyshire\"\n    },\n    {\n      \"old\": \"mineral foam, vapoon, or finite\",\n      \"new\": \"geothermal spring\",\n      \"quote_britannica\": \"highly impregnated with a mineral foam, vapoon, or finite\",\n      \"quote_wikipedia\": \"Buxton became a spa town for its geothermal spring\"\n    },\n    {\n      \"old\": \"dry affthmas\",\n      \"new\": \"asthma\",\n      \"quote_britannica\": \"dry affthmas\",\n      \"quote_wikipedia\": \"\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Roman settlement Aquae Arnemetiae\",\n      \"quote_wikipedia\": \"The Romans developed a settlement known as Aquae Arnemetiae (\\\"Baths of the grove goddess\\\").\"\n    },\n    {\n      \"topic\": \"Dukes of Devonshire development\",\n      \"quote_wikipedia\": \"The Dukes of Devonshire became involved in 1780, when William Cavendish, 5th Duke of Devonshire used profits from his copper mines to develop it as a spa\"\n    },\n    {\n      \"topic\": \"Buxton Crescent and Devonshire Dome\",\n      \"quote_wikipedia\": \"The Grade I listed Crescent was built in 1780–1784 for the 5th Duke of Devonshire\"\n    },\n    {\n      \"topic\": \"World War I and II military history\",\n      \"quote_wikipedia\": \"Buxton held a base for British and Canadian troops in the First World War.\"\n    },\n    {\n      \"topic\": \"Climate data and elevation\",\n      \"quote_wikipedia\": \"At about 1,000 feet (300 m) above sea level, Buxton is the highest market town in England.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324744,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 1770,
+   "prompt_tokens": 3334,
+   "total_tokens": 5104,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 6.2
+ }
+}

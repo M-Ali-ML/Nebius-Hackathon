@@ -1,0 +1,275 @@
+{
+ "entry_id": "B:681:0",
+ "cite_britannica": "[B:681:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:681",
+ "row_index": 681,
+ "image_sha256": "c2be06f2d6151658124b91589cab6163caa72e653bc6e1d62ecc30bbf9a202ee",
+ "headword": null,
+ "topic_hint": "OPTICS",
+ "wiki_page_id": "22483",
+ "wiki_revision_id": "1337176690",
+ "wiki_title": "Optics",
+ "wiki_url": "https://en.wikipedia.org/wiki/Optics",
+ "text_sha256": "ee7c41847c45efdfc3485aff4fb1d5be6a37cbcc9726aecdec3d4c77fdace5d8",
+ "cite_wikipedia": "[W:22483:1337176690]",
+ "rerank_logit": -4.82419,
+ "rerank_margin": 0.010543,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2219,
+  "prompt_tokens": 3614,
+  "total_tokens": 5833,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 4604,
+ "article_chars_used": 10000,
+ "article_chars_total": 62854,
+ "similarities": [
+  {
+   "point": "Both describe light as a collection of rays that travel in straight lines and bend at surfaces.",
+   "quote_britannica": "Rays of light are laid to be differently refrangible, when an the form or equal angles of incidence forms are more turned out of the way than others.",
+   "quote_wikipedia": "The most common of these, geometric optics, treats light as a collection of rays that travel in straight lines and bend when they pass through or reflect from surfaces."
+  },
+  {
+   "point": "Both state that white light can be separated into component colours by a prism.",
+   "quote_britannica": "The rays of the fun are not all equally refrangible: and thief rays, which have a different degree of re-fragibility, here likewise a different colors.",
+   "quote_wikipedia": "Isaac Newton expanded Descartes's ideas into a corpuscle theory of light, famously determining that white light was a mix of colours that can be separated into its component parts with a prism."
+  },
+  {
+   "point": "Both discuss the historical development of optics from ancient times.",
+   "quote_britannica": "We have hitherto toppofed that a particle of light, as it comes from the fun, is the leaf particular iron which light can be separated.",
+   "quote_wikipedia": "Optics began with the development of lenses by the ancient Egyptians and Mesopotamians."
+  },
+  {
+   "point": "Both mention that optics is applied to instruments and technology.",
+   "quote_britannica": "Of the MAGIC LANTERN.",
+   "quote_wikipedia": "Practical applications of optics are found in a variety of technologies and everyday objects, including mirrors, lenses, telescopes, microscopes, lasers, and fibre optics."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica treats light as separable particles/rays, while Wikipedia describes light as electromagnetic radiation with wave and particle properties.",
+   "quote_britannica": "But we mull now correct this top-polition, by thawing, that a particle of light, as it comes from the fun, is, properly speaking, a bundle of rays, which may be farated from one another.",
+   "quote_wikipedia": "Optics is the branch of physics that studies the behaviour, manipulation, and detection of electromagnetic radiation, including its interactions with matter and instruments that use or detect it."
+  },
+  {
+   "point": "Britannica defines homogeneous and heterogeneous light by refrangibility, whereas Wikipedia distinguishes geometric and physical optics models.",
+   "quote_britannica": "Light is called homogeneous, when all the rays are equality refrangible: i is treated heterogeneous, when time rays are other refrangible than others.",
+   "quote_wikipedia": "Physical optics is a more comprehensive model of light, which includes wave effects such as diffraction and interference that cannot be accounted for in geometric optics."
+  },
+  {
+   "point": "Britannica includes a magic lantern section, while Wikipedia covers modern applications such as fibre optics and lasers.",
+   "quote_britannica": "Of the MAGIC LANTERN.",
+   "quote_wikipedia": "Practical applications of optics are found in a variety of technologies and everyday objects, including mirrors, lenses, telescopes, microscopes, lasers, and fibre optics."
+  },
+  {
+   "point": "Britannica lacks the modern quantum and electromagnetic theory of light.",
+   "quote_britannica": "Therefore, for the future, by a ray of light we mull be understood to mean, not that collection of particles which we have hitherto called by this name, but the leaf particles into which light can be farated.",
+   "quote_wikipedia": "Some phenomena depend on light having both wave-like and particle-like properties. Explanation of these effects requires quantum mechanics."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The rays of the sun are not all equally refrangible and have different colours.",
+   "tag": "enduring",
+   "quote_britannica": "The rays of the fun are not all equally refrangible: and thief rays, which have a different degree of re-fragibility, here likewise a different colors.",
+   "quote_wikipedia": "Isaac Newton expanded Descartes's ideas into a corpuscle theory of light, famously determining that white light was a mix of colours that can be separated into its component parts with a prism."
+  },
+  {
+   "claim": "A convex lens can produce a magnified image when the object is nearer than its principal focus.",
+   "tag": "superseded",
+   "quote_britannica": "The lens A mull be very convex, fo that the object de may be very near to it, and yet not be nearorthan its principal focus; for by this means, as the object is near to the lens, the picture fg will be at a great distance from it , and consequently the picture will be much bigger than the object.",
+   "quote_wikipedia": "The most common of these, geometric optics, treats light as a collection of rays that travel in straight lines and bend when they pass through or reflect from surfaces."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fun",
+   "new": "sun",
+   "quote_britannica": "as it comes from the fun",
+   "quote_wikipedia": "lunar and solar eclipses"
+  },
+  {
+   "old": "re-flected",
+   "new": "reflected",
+   "quote_britannica": "is re-flected back to his eye",
+   "quote_wikipedia": "bend when they pass through or reflect from surfaces."
+  },
+  {
+   "old": "refrangible",
+   "new": "refraction",
+   "quote_britannica": "differently refrangible",
+   "quote_wikipedia": "describe a way to measure the angle of refraction"
+  },
+  {
+   "old": "homogeneous",
+   "new": "geometric optics",
+   "quote_britannica": "Light is called homogeneous, when all the rays are equality refrangible",
+   "quote_wikipedia": "geometric optics, treats light as a collection of rays that travel in straight lines"
+  },
+  {
+   "old": "MAGIC LANTERN",
+   "new": "projector",
+   "quote_britannica": "Of the MAGIC LANTERN.",
+   "quote_wikipedia": "Practical applications of optics are found in a variety of technologies and everyday objects"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Electromagnetic radiation and wave-particle duality",
+   "quote_wikipedia": "Optics is the branch of physics that studies the behaviour, manipulation, and detection of electromagnetic radiation, including its interactions with matter and instruments that use or detect it."
+  },
+  {
+   "topic": "History of optics in the Muslim world and medieval Europe",
+   "quote_wikipedia": "During the Middle Ages, Greek ideas about optics were resurrected and extended by writers in the Muslim world."
+  },
+  {
+   "topic": "Invention of eyeglasses, microscopes, and telescopes",
+   "quote_wikipedia": "The first wearable eyeglasses were invented in Italy around 1286."
+  },
+  {
+   "topic": "Newton, Huygens, and the wave theory of light",
+   "quote_wikipedia": "In 1690, Christiaan Huygens proposed a wave theory for light based on suggestions that had been made by Robert Hooke in 1664."
+  },
+  {
+   "topic": "Quantum optics and photons",
+   "quote_wikipedia": "When considering light's particle-like properties, the light is modelled as a collection of particles called \" photons \"."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "A person seeing their whole image in a plane mirror needs a mirror half as long and half as broad as themselves, regardless of distance.",
+    "tag": "enduring",
+    "quote_britannica": "if a man fees like whole image in a plane looking glats, the part of the glats that reflects his image melt be jull half as long and half as broad as himself, let him fland at any distance from it whatever",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "The image in a plane mirror appears as far behind the glass as the person is before it.",
+    "tag": "enduring",
+    "quote_britannica": "and that this image mull appear just as far behind the glass as he is before it.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "A ray falling perpendicularly on a glass surface is reflected back to the eye.",
+    "tag": "enduring",
+    "quote_britannica": "a ray AC, proceeding from his eye at A, and falling perpendicularly upon the surface of the glass at G, is re-flected back to his eye",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Rays of light are differently refrangible when they are turned out of the way by different amounts at equal angles of incidence.",
+    "tag": "enduring",
+    "quote_britannica": "Rays of light are laid to be differently refrangible, when an the form or equal angles of incidence forms are more turned out of the way than others.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "A beam of sunlight through a round hole makes a round picture of the sun on paper.",
+    "tag": "enduring",
+    "quote_britannica": "this beam proceeding straight forwards, and falling upon a paper as Y, would there make a round picture of the fun.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "A glass prism bends rays from their straight course and moves the picture of the sun upwards.",
+    "tag": "enduring",
+    "quote_britannica": "Now it a glass prism ABC is placed between the hole in the window-sluiter and the paper at Y, the rays of this term; by the refraction which they differ in the prism, will be bent from their fruit courte, and instead of going to io as to fall upon the paper at Y, they will be turned upwards",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 20,
+  "rejected": 6
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 14,
+   "words": 903,
+   "edits_per_100_words": 1.55
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "refrangible",
+     "new": "refraction"
+    },
+    {
+     "old": "homogeneous",
+     "new": "geometric optics"
+    },
+    {
+     "old": "MAGIC LANTERN",
+     "new": "projector"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fun",
+     "new": "sun"
+    },
+    {
+     "old": "re-flected",
+     "new": "reflected"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.5
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Electromagnetic radiation and wave-particle duality",
+    "History of optics in the Muslim world and medieval Europe",
+    "Invention of eyeglasses, microscopes, and telescopes",
+    "Newton, Huygens, and the wave theory of light",
+    "Quantum optics and photons"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 0
+  },
+  "claims_checked": 2,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

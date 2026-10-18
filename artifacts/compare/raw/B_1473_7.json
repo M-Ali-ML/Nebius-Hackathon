@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:1473:7",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-be92dff92a36746a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Both define escheat as land reverting to a lord or superior when a tenant dies without heirs.\",\n      \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\",\n      \"quote_wikipedia\": \"If a person had no heir to receive his lands under his will, or under the laws of intestacy, then any land he owned at death would escheat.\"\n    },\n    {\n      \"point\": \"Both state that escheat can occur when a tenant commits a serious crime.\",\n      \"quote_britannica\": \"the tenant, by perpetrating an atrocious crime, showed that he was no\",\n      \"quote_wikipedia\": \"Escheat could also take place if a tenant was outlawed or convicted of a felony, when the King could exercise the ancient right of wasting the criminal's land for a year and a day\"\n    },\n    {\n      \"point\": \"Both describe escheat as a feature of feudal tenure.\",\n      \"quote_britannica\": \"It is one of the confeugeures of tenure in divary\",\n      \"quote_wikipedia\": \"It originally applied to a number of situations where a legal interest in land was destroyed by operation of law, so that the ownership of the land reverted to the immediately superior feudal lord.\"\n    },\n    {\n      \"point\": \"Both note that escheat can apply to a tenant-in-chief whose land reverts to the king.\",\n      \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\",\n      \"quote_wikipedia\": \"In the case of such demise of a tenant-in-chief, the fee reverted to the King's demesne permanently\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Britannica describes escheat as lands failing to a lord within his manor, while Wikipedia defines it as transfer to the government or crown.\",\n      \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\",\n      \"quote_wikipedia\": \"Escheat / ɪ s ˈ tʃ iː t / (from Latin excidere ' fall away ') is a common law doctrine that transfers the real property of a person who has died without heirs to the government, or in the United Kingdom, crown.\"\n    },\n    {\n      \"point\": \"Britannica mentions escheat as one of the consequences of tenure, whereas Wikipedia explains it as ensuring property is not left in limbo.\",\n      \"quote_britannica\": \"It is one of the confeugeures of tenure in divary\",\n      \"quote_wikipedia\": \"It serves to ensure that property is not left in \\\"limbo\\\" without recognized ownership.\"\n    },\n    {\n      \"point\": \"Britannica does not mention modern unclaimed property, while Wikipedia covers escheat of dormant bank accounts.\",\n      \"quote_britannica\": \"In later once cats, there were no here inhibiting of the blood of the fork tettatory or puchader\",\n      \"quote_wikipedia\": \"In some jurisdictions, escheat can also occur when an entity, typically a bank, credit union or other financial institution, holds money or property which appears to be unclaimed\"\n    },\n    {\n      \"point\": \"Britannica does not discuss the abolition of feudal tenure, while Wikipedia details its abolition by the Administration of Estates Act 1925.\",\n      \"quote_britannica\": \"from the extinction of the blood of the latter by other anaural or crist means\",\n      \"quote_wikipedia\": \"In England and Wales, the possibility of escheat of a deceased person's property to the feudal overlord was abolished by the Administration of Estates Act 1925\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Escheat signifies lands that finally fail to a Lord within his manor.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\",\n      \"quote_wikipedia\": \"ownership of the land reverted to the immediately superior feudal lord.\"\n    },\n    {\n      \"claim\": \"Escheat is one of the consequences of tenure.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"It is one of the confeugeures of tenure in divary\",\n      \"quote_wikipedia\": \"It originally applied to a number of situations where a legal interest in land was destroyed by operation of law\"\n    },\n    {\n      \"claim\": \"Escheat occurs from the extinction of the blood of the tenant by natural or criminal means.\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"from the extinction of the blood of the latter by other anaural or crist means\",\n      \"quote_wikipedia\": \"If a person had no heir to receive his lands under his will, or under the laws of intestacy, then any land he owned at death would escheat.\"\n    },\n    {\n      \"claim\": \"Escheat occurs if the tenant dies without heirs of his blood.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"if the deck without hers of his blood\",\n      \"quote_wikipedia\": \"Where no legal heir existed, the logic of the situation was that the fief had ceased to exist as a legal entity\"\n    },\n    {\n      \"claim\": \"Escheat occurs if the tenant's blood is corrupted by attainder or felony.\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"or if his blood the company and named by comunition of coercion or fidory\",\n      \"quote_wikipedia\": \"In most common-law jurisdictions, this type of escheat has been abolished outright, for example in the United States under Article 3 § 3 of the United States Constitution\"\n    },\n    {\n      \"claim\": \"Escheat occurs when a tenant perpetrates an atrocious crime.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"the tenant, by perpetrating an atrocious crime, showed that he was no\",\n      \"quote_wikipedia\": \"Escheat could also take place if a tenant was outlawed or convicted of a felony\"\n    },\n    {\n      \"claim\": \"Escheated land falls back to the lord of the fee.\",\n      \"tag\": \"renamed\",\n      \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\",\n      \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"\n    },\n    {\n      \"claim\": \"The grant of the fee extended to heirs of the tenant.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"to which hers alone the grant of the feed extended\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"tenparts\",\n      \"new\": \"tenements\",\n      \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\",\n      \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"\n    },\n    {\n      \"old\": \"tenans\",\n      \"new\": \"tenant\",\n      \"quote_britannica\": \"from the extinction of the blood of the latter by other anaural or crist means\",\n      \"quote_wikipedia\": \"if a tenant was outlawed or convicted of a felony\"\n    },\n    {\n      \"old\": \"loud\",\n      \"new\": \"lord\",\n      \"quote_britannica\": \"from the extinction of the blood of the latter by other anaural or crist means\",\n      \"quote_wikipedia\": \"reverted to the immediately superior feudal lord.\"\n    },\n    {\n      \"old\": \"cry\",\n      \"new\": \"crown\",\n      \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\",\n      \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"\n    },\n    {\n      \"old\": \"feed\",\n      \"new\": \"fee\",\n      \"quote_britannica\": \"to which hers alone the grant of the feed extended\",\n      \"quote_wikipedia\": \"the tenant of a fee (or \\\"fief\\\") died without an heir\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Etymology of escheat from Latin ex-cadere and mediaeval French escheoir\",\n      \"quote_wikipedia\": \"The term \\\"escheat\\\" derives ultimately from the Latin ex-cadere, to \\\"fall-out\\\", via mediaeval French escheoir.\"\n    },\n    {\n      \"point\": \"Escheat as a source of royal revenue from Henry III onward\",\n      \"quote_wikipedia\": \"From the time of Henry III, the monarchy took particular interest in escheat as a source of revenue.\"\n    },\n    {\n      \"topic\": \"Role of escheators and inquisitions post mortem\",\n      \"quote_wikipedia\": \"From the 12th century onward, the Crown appointed escheators to manage escheats and report to the Exchequer\"\n    },\n    {\n      \"topic\": \"Modern escheat of unclaimed bank accounts and dormant financial property\",\n      \"quote_wikipedia\": \"In some jurisdictions, escheat can also occur when an entity, typically a bank, credit union or other financial institution, holds money or property which appears to be unclaimed\"\n    },\n    {\n      \"topic\": \"Escheat in bankruptcy and corporate liquidation in England and Wales\",\n      \"quote_wikipedia\": \"Escheat can still occur in England and Wales, if a person is made bankrupt or a corporation is liquidated.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324708,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 2153,
+   "prompt_tokens": 2995,
+   "total_tokens": 5148,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 7.1
+ }
+}

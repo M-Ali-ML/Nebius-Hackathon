@@ -1,0 +1,305 @@
+{
+ "entry_id": "P:523",
+ "level": "page",
+ "entry_ids": [
+  "B:523:0",
+  "B:523:1",
+  "B:523:2",
+  "B:523:3",
+  "B:523:4",
+  "B:523:5",
+  "B:523:6",
+  "B:523:7",
+  "B:523:8",
+  "B:523:9",
+  "B:523:10",
+  "B:523:11",
+  "B:523:12",
+  "B:523:13"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:523:0][B:523:1][B:523:2][B:523:3][B:523:4][B:523:5][B:523:6][B:523:7][B:523:8][B:523:9][B:523:10][B:523:11][B:523:12][B:523:13]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:523",
+ "row_index": 523,
+ "image_sha256": "a583606e375ad92d79af8ad8b4fabc4fa22632e6ccbeea6e20f0fa47a27e2858",
+ "headword": null,
+ "topic_hint": [
+  "ENDLESS",
+  "ENDORSE",
+  "ENDORSED",
+  "ENDOWWERT",
+  "ENDYMON",
+  "ENERGUMENS",
+  "ENERGY",
+  "ENFANS RADS",
+  "ENTILADE",
+  "ENGASTRIMYTHI",
+  "ENGENDERING",
+  "ENGINE",
+  "ENGINEEN"
+ ],
+ "wiki_page_id": "9640",
+ "wiki_revision_id": "1353267162",
+ "wiki_title": "Engine",
+ "wiki_url": "https://en.wikipedia.org/wiki/Engine",
+ "text_sha256": "c7c049de898d99e8d1e9a779e5712091fa8305ac6e84bfb8c7bce8c37131b307",
+ "cite_wikipedia": "[W:9640:1353267162]",
+ "rerank_logit": -4.054249,
+ "rerank_margin": 0.575366,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2587,
+  "prompt_tokens": 4179,
+  "total_tokens": 6766,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 6341,
+ "article_chars_used": 10000,
+ "article_chars_total": 26600,
+ "similarities": [
+  {
+   "point": "Both define an engine as a compound machine made of mechanical powers used to produce effects not easily achieved otherwise.",
+   "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
+   "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Both trace the word engine to French and Latin roots connected with ingenuity.",
+   "quote_britannica": "The word is formed of the French reign, from the Latin ingeniums witst by England reason of the ingenuity required in the contrivance of engines to augment the effect of moving powers.",
+   "quote_wikipedia": "The word engine derives from Old French engin, from the Latin ingenium –the root of the word ingenious.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Both mention steam engines as historically significant examples.",
+   "quote_britannica": "States Engins, a machine to raise water by fire, or rather by the force of water turned into fleam. See States Engine.",
+   "quote_wikipedia": "The Watt steam engine was the first type of steam engine to make use of steam at a pressure just above atmospheric to drive the piston helped by a partial vacuum.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Both associate engines with military applications and siege works.",
+   "quote_britannica": "ENGINEEN, in the military arts, an able expert man, who, by a perfect knowledge in mathematics, delineates upon paper, or marks upon the ground, all sorts of forms, and other works proper for officers and defence.",
+   "quote_wikipedia": "Pre-industrial weapons of war, such as catapults, trebuchets and battering rams, were called siege engines, and knowledge of how to construct them was often treated as a military secret.",
+   "cite_britannica": "[B:523:13]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica defines engine narrowly as a compound machine of mechanical powers, while Wikipedia defines it broadly as a machine converting energy into mechanical energy.",
+   "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
+   "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Britannica treats engine as a general mechanical contrivance, whereas Wikipedia distinguishes engines from motors in engineering jargon.",
+   "quote_britannica": "The word is formed of the French reign, from the Latin ingeniums witst by England reason of the ingenuity required in the contrivance of engines to augment the effect of moving powers.",
+   "quote_wikipedia": "In some engineering jargons, the two words have different meanings, in which engine is a device that burns or otherwise consumes fuel, changing its chemical composition, and a motor is a device driven by electricity, air, or hydraulic pressure, which does not change the chemical composition of its energy source.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Britannica lists specific engine types such as pile and fire engines, while Wikipedia covers internal combustion, electric, and rocket engines.",
+   "quote_britannica": "ENGINS for extingufliling Fires. See HYBROSTA- tics, n°3 Pile-EgGins, one convirted for driving piles. See Pix- Engine.",
+   "quote_wikipedia": "Unlike internal combustion engines, a reaction engine (such as a jet engine) produces thrust by expelling reaction mass, in accordance with Newton's third law of motion.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "point": "Britannica describes engineers as military experts designing fortifications, while Wikipedia focuses on the historical development of engines as machines.",
+   "quote_britannica": "ENGINEEN, in the military arts, an able expert man, who, by a perfect knowledge in mathematics, delineates upon paper, or marks upon the ground, all sorts of forms, and other works proper for officers and defence.",
+   "quote_wikipedia": "Simple machines, such as the club and oar (examples of the lever), are prehistoric. More complex engines using human power, animal power, water power, wind power and even steam power date back to antiquity.",
+   "cite_britannica": "[B:523:13]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "An engine is a compound machine made of one or more mechanical powers such as levers, pullies, and screws.",
+   "tag": "renamed",
+   "quote_britannica": "ENGINE, Sì mechanics, its a compound machine, made of one or more mechanical powers, as levers, pullies, ferws, &. in order to raise, cat, or fulanany any weight, or produce any effect which could not be easily effected otherwise.",
+   "quote_wikipedia": "An engine or motor is a machine designed to convert one or more forms of energy into mechanical energy.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "claim": "The word engine comes from the French and Latin ingenium, relating to ingenuity.",
+   "tag": "enduring",
+   "quote_britannica": "The word is formed of the French reign, from the Latin ingeniums witst by England reason of the ingenuity required in the contrivance of engines to augment the effect of moving powers.",
+   "quote_wikipedia": "The word engine derives from Old French engin, from the Latin ingenium –the root of the word ingenious.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "claim": "States engines raise water by fire or by the force of water turned into steam.",
+   "tag": "enduring",
+   "quote_britannica": "States Engins, a machine to raise water by fire, or rather by the force of water turned into fleam. See States Engine.",
+   "quote_wikipedia": "The Watt steam engine was the first type of steam engine to make use of steam at a pressure just above atmospheric to drive the piston helped by a partial vacuum.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "claim": "Fire engines are used for extinguishing fires.",
+   "tag": "enduring",
+   "quote_britannica": "ENGINS for extingufliling Fires. See HYBROSTA- tics, n°3 Pile-EgGins, one convirted for driving piles. See Pix- Engine.",
+   "quote_wikipedia": "In this manner, a fire engine in its original form was merely a water pump, with the engine being transported to the fire by horses.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "claim": "Engineers are military experts who delineate forms and works for offence and defence using mathematics.",
+   "tag": "dropped",
+   "quote_britannica": "ENGINEEN, in the military arts, an able expert man, who, by a perfect knowledge in mathematics, delineates upon paper, or marks upon the ground, all sorts of forms, and other works proper for officers and defence.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:523:13]"
+  },
+  {
+   "claim": "Engineers discover defects of a place and find remedies, and they know how to attack and defend it.",
+   "tag": "dropped",
+   "quote_britannica": "He should understand the art of artificition, lo as to be abb, not only to discover the defects of a place, but to find a remedy proper for them. as allow how to make an attack upon, as well as to defend, the place.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:523:13]"
+  },
+  {
+   "claim": "Engineers delineate lines of circumvallation and countervallation and lay out trenches, places of arms, batteries, and mines.",
+   "tag": "dropped",
+   "quote_britannica": "Their bulind is also to delineate the lines of circumval-lation and countervaltions, taking all the advantages of the ground, to mold out the treaches, places of arms, batteries, and Indigenous, taking care that none of their works be flanked or discovered from the place.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:523:13]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "fleam",
+   "new": "steam",
+   "quote_britannica": "or rather by the force of water turned into fleam.",
+   "quote_wikipedia": "steam at a pressure just above atmospheric to drive the piston",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "old": "States Engins",
+   "new": "steam engine",
+   "quote_britannica": "States Engins, a machine to raise water by fire, or rather by the force of water turned into fleam.",
+   "quote_wikipedia": "The Watt steam engine was the first type of steam engine to make use of steam at a pressure just above atmospheric to drive the piston helped by a partial vacuum.",
+   "cite_britannica": "[B:523:12]"
+  },
+  {
+   "old": "ENGINS for extingufliling Fires",
+   "new": "fire engine",
+   "quote_britannica": "ENGINS for extingufliling Fires. See HYBROSTA- tics, n°3",
+   "quote_wikipedia": "a fire engine in its original form was merely a water pump",
+   "cite_britannica": "[B:523:12]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Energy sources and heat engines",
+   "quote_wikipedia": "Available energy sources include potential energy (e.g. energy of the Earth's gravitational field as exploited in hydroelectric power generation), heat energy (e.g. geothermal), chemical energy, electric potential and nuclear energy (from nuclear fission or nuclear fusion)."
+  },
+  {
+   "topic": "Internal combustion engines",
+   "quote_wikipedia": "The internal combustion engine is perhaps the most common example of a mechanical heat engine in which heat from the combustion of a fuel causes rapid pressurisation of the gaseous combustion products in the combustion chamber, causing them to expand and drive a piston, which turns a crankshaft."
+  },
+  {
+   "topic": "Electric motors and other non-heat engines",
+   "quote_wikipedia": "Apart from heat engines, electric motors convert electrical energy into mechanical motion, pneumatic motors use compressed air, and clockwork motors in wind-up toys use elastic energy."
+  },
+  {
+   "topic": "Engine emissions and environmental impact",
+   "quote_wikipedia": "All chemically fueled heat engines emit exhaust gases. The cleanest engines emit only water. Strict zero-emissions generally means zero emissions other than water and water vapour."
+  },
+  {
+   "topic": "Historical development of engines from antiquity to the Industrial Revolution",
+   "quote_wikipedia": "Simple machines, such as the club and oar (examples of the lever), are prehistoric. More complex engines using human power, animal power, water power, wind power and even steam power date back to antiquity."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "claims",
+   "item": {
+    "claim": "Pile engines are used for driving piles.",
+    "tag": "enduring",
+    "quote_britannica": "ENGINS for extingufliling Fires. See HYBROSTA- tics, n°3 Pile-EgGins, one convirted for driving piles. See Pix- Engine.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "ferws",
+    "new": "screws",
+    "quote_britannica": "made of one or more mechanical powers, as levers, pullies, ferws, &.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  },
+  {
+   "section": "term_pairs",
+   "item": {
+    "old": "Pile-EgGins",
+    "new": "pile drivers",
+    "quote_britannica": "Pile-EgGins, one convirted for driving piles.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 23,
+  "rejected": 3
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 20,
+   "words": 1082,
+   "edits_per_100_words": 1.85
+  },
+  "lexical": {
+   "renamed_share": 0.143,
+   "term_pairs": [
+    {
+     "old": "ENGINS for extingufliling Fires",
+     "new": "fire engine"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "fleam",
+     "new": "steam"
+    },
+    {
+     "old": "States Engins",
+     "new": "steam engine"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.429,
+   "wiki_only_topics": [
+    "Energy sources and heat engines",
+    "Internal combustion engines",
+    "Electric motors and other non-heat engines",
+    "Engine emissions and environmental impact",
+    "Historical development of engines from antiquity to the Industrial Revolution"
+   ]
+  },
+  "enduring_share": 0.429,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 1,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 7,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

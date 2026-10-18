@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:2171:4",
+ "cite_britannica": "[B:2171:4]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2171",
+ "row_index": 2171,
+ "image_sha256": "f8869fa95f190d0e556bf8d2397c0c36da436ea1b23405995f0aac0f398f26d5",
+ "headword": "ATCHIEVEMENT",
+ "topic_hint": null,
+ "wiki_page_id": "28777761",
+ "wiki_revision_id": "1347832688",
+ "wiki_title": "Achievement (heraldry)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Achievement_(heraldry)",
+ "text_sha256": "4dff3f9a5a64b9c3ea6f2671460eacae3feed6eec4ee88899733d2375a8e7117",
+ "cite_wikipedia": "[W:28777761:1347832688]",
+ "rerank_logit": -4.235496,
+ "rerank_margin": 2.218275,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2894,
+  "prompt_tokens": 1177,
+  "total_tokens": 4071,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 262,
+ "article_chars_used": 2422,
+ "article_chars_total": 2422,
+ "similarities": [
+  {
+   "point": "Both define an achievement as the arms of a person or family together with exterior heraldic ornaments.",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid;",
+   "quote_wikipedia": "In heraldry, an achievement, armorial achievement or heraldic achievement (historical: hatchment) is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  },
+  {
+   "point": "Both list the motto as a component of an achievement.",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Motto, if possessed"
+  },
+  {
+   "point": "Both identify the helmet as part of the achievement.",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Helm of appropriate variety; if holder of higher rank than a baronet, issuing from a:"
+  },
+  {
+   "point": "Both describe the achievement as a complete or ordered display of heraldic elements.",
+   "quote_britannica": "all marhalled in order.",
+   "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica treats the term as ATCHIEVEMENT and defines it briefly, while Wikipedia uses achievement and traces the older term hatchment.",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid;",
+   "quote_wikipedia": "In heraldry, an achievement, armorial achievement or heraldic achievement (historical: hatchment) is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  },
+  {
+   "point": "Britannica lists credit and scrolls as exterior ornaments, whereas Wikipedia lists crest, torse, mantling, supporters, compartment, order, and badge.",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Crest placed atop a: Torse (or cap of maintenance as a special honour) Mantling Helm of appropriate variety; if holder of higher rank than a baronet, issuing from a: Coronet or crown (not used by baronets), of appropriate variety."
+  },
+  {
+   "point": "Britannica mentions quarterings acquired by alliances, while Wikipedia does not mention quarterings.",
+   "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Badge, if possessed"
+  },
+  {
+   "point": "Britannica gives a single-sentence definition, while Wikipedia provides a detailed ordered list of components and an etymology.",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "The ancient term used in place of \"achievement\" was \"hatchment\", deriving (through such historic forms as atcheament, achement, hathement, etc.) from the French achèvement, from the French verb achever, a contraction of à chef venir (\"to come to a head\"), ultimately from Latin ad caput venire, \"to come to a head\", thus: \"to reach a conclusion, accomplish, achieve\"."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "An achievement denotes the arms of a person or family.",
+   "tag": "enduring",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid;",
+   "quote_wikipedia": "In heraldry, an achievement, armorial achievement or heraldic achievement (historical: hatchment) is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  },
+  {
+   "claim": "An achievement includes all the exterior ornament of the shield.",
+   "tag": "enduring",
+   "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):"
+  },
+  {
+   "claim": "The helmet is an exterior ornament of the achievement.",
+   "tag": "enduring",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Helm of appropriate variety; if holder of higher rank than a baronet, issuing from a:"
+  },
+  {
+   "claim": "The mantle is an exterior ornament of the achievement.",
+   "tag": "enduring",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Mantle and pavilion"
+  },
+  {
+   "claim": "The motto is an exterior ornament of the achievement.",
+   "tag": "enduring",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Motto, if possessed"
+  },
+  {
+   "claim": "Quarterings may have been acquired by alliances.",
+   "tag": "dropped",
+   "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Credit is an exterior ornament of the achievement.",
+   "tag": "dropped",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Scrolls are exterior ornaments of the achievement.",
+   "tag": "dropped",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "ATCHIEVEMENT",
+   "new": "achievement",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid;",
+   "quote_wikipedia": "In heraldry, an achievement, armorial achievement or heraldic achievement (historical: hatchment) is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  },
+  {
+   "old": "fluid",
+   "new": "escutcheon",
+   "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):"
+  },
+  {
+   "old": "credit",
+   "new": "crest",
+   "quote_britannica": "as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "Crest placed atop a: Torse (or cap of maintenance as a special honour)"
+  },
+  {
+   "old": "hatchment",
+   "new": "achievement",
+   "quote_britannica": "ATCHIEVEMENT, in heralyly denotes the arms of a person, or family, together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "The ancient term used in place of \"achievement\" was \"hatchment\", deriving (through such historic forms as atcheament, achement, hathement, etc.) from the French achèvement, from the French verb achever, a contraction of à chef venir (\"to come to a head\"), ultimately from Latin ad caput venire, \"to come to a head\", thus: \"to reach a conclusion, accomplish, achieve\"."
+  },
+  {
+   "old": "marhalled",
+   "new": "depiction",
+   "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+   "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology of achievement and hatchment",
+   "quote_wikipedia": "The ancient term used in place of \"achievement\" was \"hatchment\", deriving (through such historic forms as atcheament, achement, hathement, etc.) from the French achèvement, from the French verb achever, a contraction of à chef venir (\"to come to a head\"), ultimately from Latin ad caput venire, \"to come to a head\", thus: \"to reach a conclusion, accomplish, achieve\"."
+  },
+  {
+   "topic": "Detailed component list including slogan, pavilion, torse, mantling, coronet, console, supporters, compartment, order, and badge",
+   "quote_wikipedia": "Slogan or war-cry, if possessed Mantle and pavilion Crest placed atop a: Torse (or cap of maintenance as a special honour) Mantling Helm of appropriate variety; if holder of higher rank than a baronet, issuing from a: Coronet or crown (not used by baronets), of appropriate variety. Console (decorative or aesthetic in purpose, and not officially part of the armorial grant) Supporters (if the bearer is entitled to them, generally in modern usage not baronets), which may stand on a compartment Motto, if possessed Order, if possessed Badge, if possessed"
+  },
+  {
+   "topic": "Distinction between achievement and coat of arms",
+   "quote_wikipedia": "Sometimes the term \" coat of arms \" is used to refer to the full achievement, but this usage is incorrect in the strict sense of heraldic terminology, as a coat of arms refers to a garment with the escutcheon or armorial achievement embroidered on it."
+  },
+  {
+   "topic": "Modern funerary usage of hatchment versus non-funereal achievement",
+   "quote_wikipedia": "In modern English, however, the term \"hatchment\" has come to be used almost exclusively to denote a funerary hatchment, while the word \"achievement\", now archaic in that sense, is used in place of \"hatchment\" in non-funereal contexts."
+  },
+  {
+   "topic": "Historical statute of the Order of the Garter under Henry VIII",
+   "quote_wikipedia": "An example of the historic use of \"hatchment\" in a non-funerary context to denote what is now termed \"achievement\" appears in the statute of the Order of the Garter laid down by King Henry VIII (r. 1509–1547) concerning the regulation of Garter stall plates: It is agreed that every knyght within the yere of his stallation shall cause to be made a scauchon of his armes and hachementis in a plate of metall suche as shall please him and that it shall be surely sett upon the back of his stall."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 2,
+   "words": 42,
+   "edits_per_100_words": 4.76
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "fluid",
+     "new": "escutcheon"
+    },
+    {
+     "old": "marhalled",
+     "new": "depiction"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "ATCHIEVEMENT",
+     "new": "achievement"
+    },
+    {
+     "old": "credit",
+     "new": "crest"
+    },
+    {
+     "old": "hatchment",
+     "new": "achievement"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.375,
+   "wiki_only_topics": [
+    "Etymology of achievement and hatchment",
+    "Detailed component list including slogan, pavilion, torse, mantling, coronet, console, supporters, compartment, order, and badge",
+    "Distinction between achievement and coat of arms",
+    "Modern funerary usage of hatchment versus non-funereal achievement",
+    "Historical statute of the Order of the Garter under Henry VIII"
+   ]
+  },
+  "enduring_share": 0.625,
+  "claim_counts": {
+   "enduring": 5,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

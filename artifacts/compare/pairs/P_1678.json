@@ -1,0 +1,157 @@
+{
+ "entry_id": "P:1678",
+ "level": "page",
+ "entry_ids": [
+  "B:1678:0"
+ ],
+ "page_kind": "dictionary",
+ "cite_britannica": "[B:1678:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1678",
+ "row_index": 1678,
+ "image_sha256": "75b494c1b4fb241bd9dcaba505dfb1732b3c54ff9f843f0d4a7c1c31110a6ec8",
+ "headword": null,
+ "topic_hint": "BIL",
+ "wiki_page_id": "70637159",
+ "wiki_revision_id": "1331628245",
+ "wiki_title": "Harry Billinge",
+ "wiki_url": "https://en.wikipedia.org/wiki/Harry_Billinge",
+ "text_sha256": "42c0fd44de2c32a83e991eb58731f9f452ee921c6bde9f80fa8f2d0c19c2ce05",
+ "cite_wikipedia": "[W:70637159:1331628245]",
+ "rerank_logit": -6.499314,
+ "rerank_margin": 0.297492,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 740,
+  "prompt_tokens": 1958,
+  "total_tokens": 2698,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 4356,
+ "article_chars_used": 968,
+ "article_chars_total": 968,
+ "similarities": [
+  {
+   "point": "Both texts identify the subject as an engineer.",
+   "quote_britannica": "Billinger who had long been known as an able Engineer",
+   "quote_wikipedia": "He served as a sapper with the 44 Royal Engineer Commandos",
+   "cite_britannica": "[B:1678:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "The texts describe different people, nationalities, and centuries.",
+   "quote_britannica": "He died at Settargar the 18th of February 1750",
+   "quote_wikipedia": "Harry Billinge MBE (15 September 1925 – 5 April 2022) was a British soldier",
+   "cite_britannica": "[B:1678:0]"
+  },
+  {
+   "point": "The Britannica subject held high political office, while the Wikipedia subject was a soldier and fundraiser.",
+   "quote_britannica": "appointed him, in 1735, Privy-Comseller",
+   "quote_wikipedia": "raising more than £25,000 towards the cost of construction of the British Normandy Memorial",
+   "cite_britannica": "[B:1678:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Billinger was an able Engineer who made improvements to the system of fortification.",
+   "tag": "dropped",
+   "quote_britannica": "Billinger who had long been known as an able Engineer, and had, indeed, made some improvements of value in the received system of Portification",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1678:0]"
+  },
+  {
+   "claim": "Billinger was appointed Privy-Counsellor in 1735.",
+   "tag": "dropped",
+   "quote_britannica": "appointed him, in 1735, Privy-Comseller",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1678:0]"
+  },
+  {
+   "claim": "Billinger died on 18 February 1750.",
+   "tag": "dropped",
+   "quote_britannica": "He died at Settargar the 18th of February 1750",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1678:0]"
+  },
+  {
+   "claim": "Billinger's works included Elementa Physics, published in Leipzig in 1742.",
+   "tag": "dropped",
+   "quote_britannica": "12. Elementa Physics, Leipzig, 1742, in 8vro",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1678:0]"
+  },
+  {
+   "claim": "Billinger was a member of the Royal Academy of Berlin.",
+   "tag": "dropped",
+   "quote_britannica": "member of the Royal Academy of Berlin",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1678:0]"
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Military service in World War II",
+   "quote_wikipedia": "He served as a sapper with the 44 Royal Engineer Commandos during the Normandy landings"
+  },
+  {
+   "topic": "Charitable fundraising and honours",
+   "quote_wikipedia": "raising more than £25,000 towards the cost of construction of the British Normandy Memorial"
+  },
+  {
+   "topic": "Train named after him",
+   "quote_wikipedia": "In 2020, train company GWR named one of their Class 802 trains after him"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 11,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 707,
+   "edits_per_100_words": 0.14
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Military service in World War II",
+    "Charitable fundraising and honours",
+    "Train named after him"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 5
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

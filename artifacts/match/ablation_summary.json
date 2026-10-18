@@ -1,0 +1,1697 @@
+{
+ "labels": 40,
+ "positives": 36,
+ "gold_in_pool": 27,
+ "negatives": 4,
+ "candidate_pool_recall": 0.75,
+ "pool_misses": [
+  {
+   "entry_id": "B:948:0",
+   "gold": [
+    "Lava"
+   ]
+  },
+  {
+   "entry_id": "B:2250:11",
+   "gold": [
+    "Byssus (alga)"
+   ]
+  },
+  {
+   "entry_id": "B:713:4",
+   "gold": [
+    "Oundle"
+   ]
+  },
+  {
+   "entry_id": "B:523:9",
+   "gold": [
+    "Enfilade and defilade"
+   ]
+  },
+  {
+   "entry_id": "B:1268:4",
+   "gold": [
+    "Nazareth"
+   ]
+  },
+  {
+   "entry_id": "B:258:0",
+   "gold": [
+    "Edward III of England"
+   ]
+  },
+  {
+   "entry_id": "B:268:0",
+   "gold": [
+    "Laurus"
+   ]
+  },
+  {
+   "entry_id": "B:493:0",
+   "gold": [
+    "Islay"
+   ]
+  },
+  {
+   "entry_id": "B:1327:5",
+   "gold": [
+    "John Hughes (poet)"
+   ]
+  }
+ ],
+ "methods": {
+  "bm25": {
+   "p_at_1_all_positives": 0.222,
+   "p_at_1_gold_in_pool": 0.296,
+   "mrr_at_10_gold_in_pool": 0.416,
+   "recall_at_10_all_positives": 0.528,
+   "ranked_list_size_median": 30,
+   "no_match_accuracy": 0.0,
+   "no_match_note": "no rejection step: top-1 is always returned"
+  },
+  "bm25+embed": {
+   "p_at_1_all_positives": 0.417,
+   "p_at_1_gold_in_pool": 0.556,
+   "mrr_at_10_gold_in_pool": 0.669,
+   "recall_at_10_all_positives": 0.694,
+   "ranked_list_size_median": 30,
+   "no_match_accuracy": 0.0,
+   "no_match_note": "no rejection step: top-1 is always returned"
+  },
+  "bm25+embed+rerank (long query)": {
+   "p_at_1_all_positives": 0.528,
+   "p_at_1_gold_in_pool": 0.704,
+   "mrr_at_10_gold_in_pool": 0.792,
+   "recall_at_10_all_positives": 0.694,
+   "ranked_list_size_median": 10,
+   "no_match_accuracy": 0.75,
+   "decision_accuracy_all_labels": 0.6,
+   "accepted": 13,
+   "accepted_correct": 12
+  },
+  "bm25+embed+rerank (short query)": {
+   "p_at_1_all_positives": 0.528,
+   "p_at_1_gold_in_pool": 0.704,
+   "mrr_at_10_gold_in_pool": 0.814,
+   "recall_at_10_all_positives": 0.722,
+   "ranked_list_size_median": 10,
+   "no_match_accuracy": 0.75,
+   "decision_accuracy_all_labels": 0.625,
+   "accepted": 14,
+   "accepted_correct": 13
+  }
+ },
+ "examples": {
+  "rerank_fixed": [
+   {
+    "entry_id": "B:2464:6",
+    "gold": [
+     "Cabinetry"
+    ],
+    "gold_page_ids": [
+     "37962744"
+    ],
+    "bm25": {
+     "rank": 4,
+     "top1": {
+      "page_id": "10542070",
+      "title": "Wardrobe"
+     }
+    },
+    "bm25+embed": {
+     "rank": 2,
+     "top1": {
+      "page_id": "7617772",
+      "title": "Cabinet painting"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "37962744",
+      "title": "Cabinetry"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": 3,
+     "top1": {
+      "page_id": "1198160",
+      "title": "Cabinet of curiosities"
+     }
+    }
+   },
+   {
+    "entry_id": "B:1910:0",
+    "gold": [
+     "Lightning"
+    ],
+    "gold_page_ids": [
+     "61344"
+    ],
+    "bm25": {
+     "rank": 2,
+     "top1": {
+      "page_id": "194422",
+      "title": "Ball lightning"
+     }
+    },
+    "bm25+embed": {
+     "rank": 5,
+     "top1": {
+      "page_id": "52093675",
+      "title": "Thunder house"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "61344",
+      "title": "Lightning"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "61344",
+      "title": "Lightning"
+     }
+    }
+   },
+   {
+    "entry_id": "B:1214:1",
+    "gold": [
+     "Damsel"
+    ],
+    "gold_page_ids": [
+     "51545665"
+    ],
+    "bm25": {
+     "rank": null,
+     "top1": {
+      "page_id": "63642434",
+      "title": "Damsel of Cyprus"
+     }
+    },
+    "bm25+embed": {
+     "rank": 3,
+     "top1": {
+      "page_id": "301517",
+      "title": "Damsel in distress"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "51545665",
+      "title": "Damsel"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "51545665",
+      "title": "Damsel"
+     }
+    }
+   },
+   {
+    "entry_id": "B:1680:0",
+    "gold": [
+     "Carpentry"
+    ],
+    "gold_page_ids": [
+     "189274"
+    ],
+    "bm25": {
+     "rank": null,
+     "top1": {
+      "page_id": "2930612",
+      "title": "Roberval balance"
+     }
+    },
+    "bm25+embed": {
+     "rank": 6,
+     "top1": {
+      "page_id": "397263",
+      "title": "Truss"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "189274",
+      "title": "Carpentry"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": 1,
+     "top1": {
+      "page_id": "189274",
+      "title": "Carpentry"
+     }
+    }
+   }
+  ],
+  "rerank_broke": [
+   {
+    "entry_id": "B:1614:1",
+    "gold": [
+     "Polydipsia"
+    ],
+    "gold_page_ids": [
+     "600451"
+    ],
+    "bm25": {
+     "rank": 2,
+     "top1": {
+      "page_id": "75108158",
+      "title": "Thirsty (The Black Skirts album)"
+     }
+    },
+    "bm25+embed": {
+     "rank": 1,
+     "top1": {
+      "page_id": "600451",
+      "title": "Polydipsia"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": 2,
+     "top1": {
+      "page_id": "17985120",
+      "title": "Thirsty (disambiguation)"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": 2,
+     "top1": {
+      "page_id": "17985120",
+      "title": "Thirsty (disambiguation)"
+     }
+    }
+   },
+   {
+    "entry_id": "B:1803:0",
+    "gold": [
+     "Line engraving"
+    ],
+    "gold_page_ids": [
+     "4148783"
+    ],
+    "bm25": {
+     "rank": 1,
+     "top1": {
+      "page_id": "4148783",
+      "title": "Line engraving"
+     }
+    },
+    "bm25+embed": {
+     "rank": null,
+     "top1": {
+      "page_id": "5236795",
+      "title": "Claude Mellan"
+     }
+    },
+    "bm25+embed+rerank (long query)": {
+     "rank": null,
+     "top1": {
+      "page_id": "3083357",
+      "title": "Etching revival"
+     }
+    },
+    "bm25+embed+rerank (short query)": {
+     "rank": null,
+     "top1": {
+      "page_id": "5236795",
+      "title": "Claude Mellan"
+     }
+    }
+   }
+  ]
+ },
+ "labeler": "match worker (Claude Opus 5.5), own judgment from entry text vs candidate excerpts",
+ "caveat": "40 items labeled by one reader; small sample, no inter-annotator check.",
+ "per_item": {
+  "B:1166:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "225550",
+     "title": "Virginia Declaration of Rights"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "3955928",
+     "title": "Press laws"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "3955928",
+     "title": "Press laws"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "3955928",
+     "title": "Press laws"
+    },
+    "pool_size": 19
+   }
+  },
+  "B:452:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "4026453",
+     "title": "Colony-forming unit"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "32690554",
+     "title": "Cell counting"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "32690554",
+     "title": "Cell counting"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "32690554",
+     "title": "Cell counting"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:948:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "12573370",
+     "title": "Galápagos hotspot"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "24421545",
+     "title": "Lava planet"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "37186386",
+     "title": "Russian monitor Lava"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "37186386",
+     "title": "Russian monitor Lava"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:251:5": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "564669",
+     "title": "Thomas Sydenham"
+    },
+    "pool_size": 31
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "564669",
+     "title": "Thomas Sydenham"
+    },
+    "pool_size": 31
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "564669",
+     "title": "Thomas Sydenham"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "564669",
+     "title": "Thomas Sydenham"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1473:1": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "2752238",
+     "title": "List of established military terms"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "768795",
+     "title": "Escalade"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "768795",
+     "title": "Escalade"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "768795",
+     "title": "Escalade"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2464:6": {
+   "bm25": {
+    "rank": 4,
+    "top1": {
+     "page_id": "10542070",
+     "title": "Wardrobe"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 2,
+    "top1": {
+     "page_id": "7617772",
+     "title": "Cabinet painting"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "37962744",
+     "title": "Cabinetry"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 3,
+    "top1": {
+     "page_id": "1198160",
+     "title": "Cabinet of curiosities"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1614:2": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "355679",
+     "title": "Order of the Thistle"
+    },
+    "pool_size": 34
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "355679",
+     "title": "Order of the Thistle"
+    },
+    "pool_size": 34
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "355679",
+     "title": "Order of the Thistle"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "355679",
+     "title": "Order of the Thistle"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2250:11": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "8379595",
+     "title": "Dragon Raja"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "5042942",
+     "title": "Sea silk"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "5042942",
+     "title": "Sea silk"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "5042942",
+     "title": "Sea silk"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1017:5": {
+   "bm25": {
+    "rank": 3,
+    "top1": {
+     "page_id": "17058192",
+     "title": "Close helmet"
+    },
+    "pool_size": 33
+   },
+   "bm25+embed": {
+    "rank": 10,
+    "top1": {
+     "page_id": "619485",
+     "title": "Bascinet"
+    },
+    "pool_size": 33
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 7,
+    "top1": {
+     "page_id": "2001989",
+     "title": "Corinthian helmet"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 7,
+    "top1": {
+     "page_id": "2001989",
+     "title": "Corinthian helmet"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1214:3": {
+   "bm25": {
+    "rank": 4,
+    "top1": {
+     "page_id": "323257",
+     "title": "Obol (coin)"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "19919977",
+     "title": "Charon's obol"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "19919977",
+     "title": "Charon's obol"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "19919977",
+     "title": "Charon's obol"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1910:0": {
+   "bm25": {
+    "rank": 2,
+    "top1": {
+     "page_id": "194422",
+     "title": "Ball lightning"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 5,
+    "top1": {
+     "page_id": "52093675",
+     "title": "Thunder house"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "61344",
+     "title": "Lightning"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "61344",
+     "title": "Lightning"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2473:10": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "21445971",
+     "title": "Ergot (horse anatomy)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "21445971",
+     "title": "Ergot (horse anatomy)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "21445971",
+     "title": "Ergot (horse anatomy)"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "21445971",
+     "title": "Ergot (horse anatomy)"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:713:4": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "13138455",
+     "title": "NEN (TV station)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "8688986",
+     "title": "North Tawton"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "4751894",
+     "title": "Nen River"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "4751894",
+     "title": "Nen River"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1805:5": {
+   "bm25": {
+    "rank": 8,
+    "top1": {
+     "page_id": "309208",
+     "title": "Aerobic exercise"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 2,
+    "top1": {
+     "page_id": "2144928",
+     "title": "Herodicus"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "4376965",
+     "title": "Exercise (disambiguation)"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "4376965",
+     "title": "Exercise (disambiguation)"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2001:5": {
+   "bm25": {
+    "rank": 3,
+    "top1": {
+     "page_id": "2669649",
+     "title": "Marcius Turbo"
+    },
+    "pool_size": 32
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "996527",
+     "title": "Silius Italicus"
+    },
+    "pool_size": 32
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "996527",
+     "title": "Silius Italicus"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "996527",
+     "title": "Silius Italicus"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1017:11": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "191032",
+     "title": "Hälsingland"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "191032",
+     "title": "Hälsingland"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "191032",
+     "title": "Hälsingland"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "191032",
+     "title": "Hälsingland"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:523:9": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "182255",
+     "title": "Trench"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "47385194",
+     "title": "Traverse (trench warfare)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "182259",
+     "title": "Trench warfare"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "182259",
+     "title": "Trench warfare"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1268:4": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "28023671",
+     "title": "Co-Cathedral of Saint Nicholas, Prešov"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "13124848",
+     "title": "Calera de León"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "72226242",
+     "title": "Nazarene Chapel"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "1415756",
+     "title": "Old Dongola"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2155:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "5550808",
+     "title": "Ragnhild Kåta"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "44267871",
+     "title": "Claude Montal"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "4459160",
+     "title": "Molyneux's problem"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "4459160",
+     "title": "Molyneux's problem"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:258:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "5626596",
+     "title": "Peregrine Cust, 6th Baron Brownlow"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "153671",
+     "title": "Robert Winchelsey"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "908169",
+     "title": "Henry of Grosmont, Duke of Lancaster"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "320657",
+     "title": "Clericis laicos"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:268:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "27506447",
+     "title": "Margaritaria discoidea"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "168033",
+     "title": "Sassafras"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "168033",
+     "title": "Sassafras"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "168033",
+     "title": "Sassafras"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:2464:4": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "16040029",
+     "title": "Cabidos"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 10,
+    "top1": {
+     "page_id": "1597223",
+     "title": "Portuguese Indian rupia"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "16040029",
+     "title": "Cabidos"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "16040029",
+     "title": "Cabidos"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1670:0": {
+   "bm25": {
+    "rank": 10,
+    "top1": {
+     "page_id": "30980260",
+     "title": "Archelaus (father of Archelaus of Cappadocia)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "41325600",
+     "title": "Kingdom of Cappadocia"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "41325600",
+     "title": "Kingdom of Cappadocia"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "41325600",
+     "title": "Kingdom of Cappadocia"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:493:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "19103357",
+     "title": "Agriculture in Sudan"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "1275984",
+     "title": "On the Principles of Political Economy and Taxation"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "16547029",
+     "title": "Agriculture in Madagascar"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "16547029",
+     "title": "Agriculture in Madagascar"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1214:1": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "63642434",
+     "title": "Damsel of Cyprus"
+    },
+    "pool_size": 32
+   },
+   "bm25+embed": {
+    "rank": 3,
+    "top1": {
+     "page_id": "301517",
+     "title": "Damsel in distress"
+    },
+    "pool_size": 32
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "51545665",
+     "title": "Damsel"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "51545665",
+     "title": "Damsel"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1805:4": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "69673495",
+     "title": "Nicholas de Snyterby"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "45629777",
+     "title": "Inquest of Sheriffs"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "604705",
+     "title": "History of the British peerage"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "604705",
+     "title": "History of the British peerage"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:258:2": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "14272325",
+     "title": "Queen's Creek"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "91234",
+     "title": "Williamsburg, Virginia"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "91234",
+     "title": "Williamsburg, Virginia"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "91234",
+     "title": "Williamsburg, Virginia"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1614:1": {
+   "bm25": {
+    "rank": 2,
+    "top1": {
+     "page_id": "75108158",
+     "title": "Thirsty (The Black Skirts album)"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "600451",
+     "title": "Polydipsia"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "17985120",
+     "title": "Thirsty (disambiguation)"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "17985120",
+     "title": "Thirsty (disambiguation)"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:604:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "11527567",
+     "title": "William Theed"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "11527567",
+     "title": "William Theed"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "70696882",
+     "title": "Italian Renaissance sculpture"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "12264843",
+     "title": "Rebracketing"
+    },
+    "pool_size": 20
+   }
+  },
+  "B:251:3": {
+   "bm25": {
+    "rank": 7,
+    "top1": {
+     "page_id": "2403206",
+     "title": "Oath More Judaico"
+    },
+    "pool_size": 34
+   },
+   "bm25+embed": {
+    "rank": 3,
+    "top1": {
+     "page_id": "82968558",
+     "title": "National Oath"
+    },
+    "pool_size": 34
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "82968558",
+     "title": "National Oath"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "82968558",
+     "title": "National Oath"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:403:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "69592688",
+     "title": "1922 regnal list of Ethiopia"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "50953",
+     "title": "Egyptian hieroglyphs"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "18880184",
+     "title": "Ancient Egyptian race controversy"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "23193",
+     "title": "Philology"
+    },
+    "pool_size": 20
+   }
+  },
+  "B:1327:5": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "30577046",
+     "title": "Arthur Clifford"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "162109",
+     "title": "William Cowper"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "31034",
+     "title": "Ted Hughes"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "31034",
+     "title": "Ted Hughes"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1327:1": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "68298",
+     "title": "Huesca"
+    },
+    "pool_size": 33
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "68298",
+     "title": "Huesca"
+    },
+    "pool_size": 33
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "68298",
+     "title": "Huesca"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "68298",
+     "title": "Huesca"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:266:0": {
+   "bm25": {
+    "rank": 5,
+    "top1": {
+     "page_id": "34928775",
+     "title": "Custom of Paris"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 2,
+    "top1": {
+     "page_id": "412395",
+     "title": "Consanguinity"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "19728",
+     "title": "Marriage"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "412395",
+     "title": "Consanguinity"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:681:1": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "18320",
+     "title": "Lens"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 3,
+    "top1": {
+     "page_id": "82269",
+     "title": "Focal length"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 4,
+    "top1": {
+     "page_id": "18320",
+     "title": "Lens"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 2,
+    "top1": {
+     "page_id": "18320",
+     "title": "Lens"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:473:0": {
+   "bm25": {
+    "rank": 2,
+    "top1": {
+     "page_id": "2781408",
+     "title": "Eggshell"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "18457910",
+     "title": "Mollusc shell"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "18457910",
+     "title": "Mollusc shell"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "18457910",
+     "title": "Mollusc shell"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1680:0": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "2930612",
+     "title": "Roberval balance"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed": {
+    "rank": 6,
+    "top1": {
+     "page_id": "397263",
+     "title": "Truss"
+    },
+    "pool_size": 35
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "189274",
+     "title": "Carpentry"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "189274",
+     "title": "Carpentry"
+    },
+    "pool_size": 19
+   }
+  },
+  "B:1327:2": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "5858997",
+     "title": "Huéscar"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "5858997",
+     "title": "Huéscar"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "5858997",
+     "title": "Huéscar"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "5858997",
+     "title": "Huéscar"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:258:3": {
+   "bm25": {
+    "rank": null,
+    "top1": {
+     "page_id": "33853596",
+     "title": "Willin Low"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": 1,
+    "top1": {
+     "page_id": "7634016",
+     "title": "Thomas Willis"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "7634016",
+     "title": "Thomas Willis"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": 1,
+    "top1": {
+     "page_id": "7634016",
+     "title": "Thomas Willis"
+    },
+    "pool_size": 10
+   }
+  },
+  "B:1803:0": {
+   "bm25": {
+    "rank": 1,
+    "top1": {
+     "page_id": "4148783",
+     "title": "Line engraving"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed": {
+    "rank": null,
+    "top1": {
+     "page_id": "5236795",
+     "title": "Claude Mellan"
+    },
+    "pool_size": 30
+   },
+   "bm25+embed+rerank (long query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "3083357",
+     "title": "Etching revival"
+    },
+    "pool_size": 10
+   },
+   "bm25+embed+rerank (short query)": {
+    "rank": null,
+    "top1": {
+     "page_id": "5236795",
+     "title": "Claude Mellan"
+    },
+    "pool_size": 10
+   }
+  }
+ }
+}

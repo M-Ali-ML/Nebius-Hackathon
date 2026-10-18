@@ -1,0 +1,182 @@
+{
+ "entry_id": "B:2464:10",
+ "cite_britannica": "[B:2464:10]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2464",
+ "row_index": 2464,
+ "image_sha256": "24f450326eee13b008306d2b355bd49b295db96603186268db20b85552cf958e",
+ "headword": "CABLE",
+ "topic_hint": null,
+ "wiki_page_id": "1488638",
+ "wiki_revision_id": "1331154799",
+ "wiki_title": "Cable",
+ "wiki_url": "https://en.wikipedia.org/wiki/Cable",
+ "text_sha256": "c2df1504d90b0f1b2edf8d9d2f0f7ec1166e744aaba1b065ff658947e4cf39cb",
+ "cite_wikipedia": "[W:1488638:1331154799]",
+ "rerank_logit": -4.269253,
+ "rerank_margin": 0.497607,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1254,
+  "prompt_tokens": 1408,
+  "total_tokens": 2662,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 1173,
+ "article_chars_used": 2565,
+ "article_chars_total": 2565,
+ "similarities": [
+  {
+   "point": "Both describe a cable as a thick rope used for anchoring a ship.",
+   "quote_britannica": "CABLE, a thick, large, frong rope, commonly of horn, which fever to keep a flap at anchor.",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  },
+  {
+   "point": "Both state that cables are composed of three strands.",
+   "quote_britannica": "Every cable, of what thickness forever it be, is com-poded of three friends, every friend of three ropes;",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the material as horn, while Wikipedia describes it as ropes.",
+   "quote_britannica": "CABLE, a thick, large, frong rope, commonly of horn, which fever to keep a flap at anchor.",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  },
+  {
+   "point": "Britannica focuses on nautical and heavy-load ropes, while Wikipedia lists many modern types of cables.",
+   "quote_britannica": "Cable is also fluid of ropes, which fever to nife heavy loads, by the help of Granatry pulling, and other engines.",
+   "quote_wikipedia": "Electrical cable, an assembly of one or more wires which may be insulated, used for transmission of electrical power or signals"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A cable is a thick, large rope used to keep a ship at anchor.",
+   "tag": "enduring",
+   "quote_britannica": "CABLE, a thick, large, frong rope, commonly of horn, which fever to keep a flap at anchor.",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  },
+  {
+   "claim": "Every cable is composed of three strands.",
+   "tag": "enduring",
+   "quote_britannica": "Every cable, of what thickness forever it be, is com-poded of three friends, every friend of three ropes;",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  },
+  {
+   "claim": "Cables are made of three friends, each of three ropes, and every rope of three twiffs.",
+   "tag": "dropped",
+   "quote_britannica": "Every cable, of what thickness forever it be, is com-poded of three friends, every friend of three ropes; and every rope of three twiffs - the twill is made of more or leds thread, according as the cable is to bo thicker or thinner.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Cables are used to lift heavy loads with the help of gravity pulling and other engines.",
+   "tag": "dropped",
+   "quote_britannica": "Cable is also fluid of ropes, which fever to nife heavy loads, by the help of Granatry pulling, and other engines.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The name cable is given to ropes with at least three inches in diameter.",
+   "tag": "dropped",
+   "quote_britannica": "The name of cable is finally given to dish as have, at leal, three inches in diameter; those that are left as one only called ropes of different names, according to their site.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "frong rope",
+   "new": "rope",
+   "quote_britannica": "CABLE, a thick, large, frong rope, commonly of horn, which fever to keep a flap at anchor.",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  },
+  {
+   "old": "friends",
+   "new": "strands",
+   "quote_britannica": "Every cable, of what thickness forever it be, is com-poded of three friends, every friend of three ropes;",
+   "quote_wikipedia": "Nautical cable, an assembly of three or more ropes woven against the weave of the ropes, rendering it virtually waterproof"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Electrical cable",
+   "quote_wikipedia": "Electrical cable, an assembly of one or more wires which may be insulated, used for transmission of electrical power or signals"
+  },
+  {
+   "topic": "Wire rope",
+   "quote_wikipedia": "Wire rope, a type of rope that consists of several strands of metal wire laid into a helix"
+  },
+  {
+   "topic": "Fiber-optic cable",
+   "quote_wikipedia": "Fiber-optic cable, a cable containing one or more optical fibers"
+  },
+  {
+   "topic": "Submarine communications cable",
+   "quote_wikipedia": "Submarine communications cable, a cable laid on the sea bed to carry telecommunication signals between land-based stations"
+  },
+  {
+   "topic": "Cable television",
+   "quote_wikipedia": "Cable television, a system of providing television programs to consumers via electrical cables"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 16,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 4,
+   "words": 207,
+   "edits_per_100_words": 1.93
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "friends",
+     "new": "strands"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "frong rope",
+     "new": "rope"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.6,
+   "wiki_only_topics": [
+    "Electrical cable",
+    "Wire rope",
+    "Fiber-optic cable",
+    "Submarine communications cable",
+    "Cable television"
+   ]
+  },
+  "enduring_share": 0.4,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 3
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

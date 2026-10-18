@@ -1,0 +1,57 @@
+{
+ "entry_id": "B:1327:1",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-9158e87bd4bafb24",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Huesca is a city in Spain\",\n      \"quote_britannica\": \"HUESCA, on ancient and considerable towns of Spain\",\n      \"quote_wikipedia\": \"Huesca (Spanish:; Aragonese: Uesca) is a city in north-eastern Spain\"\n    },\n    {\n      \"point\": \"Huesca is an ancient town\",\n      \"quote_britannica\": \"HUESCA, on ancient and considerable towns of Spain\",\n      \"quote_wikipedia\": \"Huesca dates from pre-Roman times\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Location and kingdom\",\n      \"quote_britannica\": \"in the kingdom of Granada, fieldsed on a plain in W. Long. 1..45, N. Lat. 32.\",\n      \"quote_wikipedia\": \"within the autonomous community of Aragon.\"\n    },\n    {\n      \"point\": \"Geographical coordinates\",\n      \"quote_britannica\": \"W. Long. 1..45, N. Lat. 32.\",\n      \"quote_wikipedia\": \"The geographical coordinates of the city are: 42° 08´ N, 0° 24´ W.\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Huesca is an ancient and considerable town of Spain\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"HUESCA, on ancient and considerable towns of Spain\",\n      \"quote_wikipedia\": \"Huesca dates from pre-Roman times\"\n    },\n    {\n      \"claim\": \"Huesca is located in the kingdom of Granada\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"in the kingdom of Granada, fieldsed on a plain\",\n      \"quote_wikipedia\": \"within the autonomous community of Aragon.\"\n    },\n    {\n      \"claim\": \"Huesca is situated on a plain\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"fieldsed on a plain in W. Long. 1..45, N. Lat. 32.\",\n      \"quote_wikipedia\": \"Huesca lies on a plateau in the northern region of Aragón\"\n    },\n    {\n      \"claim\": \"Huesca is at West Longitude 1..45 and North Latitude 32\",\n      \"tag\": \"superseded\",\n      \"quote_britannica\": \"W. Long. 1..45, N. Lat. 32.\",\n      \"quote_wikipedia\": \"The geographical coordinates of the city are: 42° 08´ N, 0° 24´ W.\"\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"kingdom of Granada\",\n      \"new\": \"autonomous community of Aragon\",\n      \"quote_britannica\": \"in the kingdom of Granada, fieldsed on a plain\",\n      \"quote_wikipedia\": \"within the autonomous community of Aragon.\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Fiestas de San Lorenzo festival\",\n      \"quote_wikipedia\": \"Huesca celebrates its main festival, the Fiestas de San Lorenzo, in honor of Saint Lawrence, from 9 to 15 August.\"\n    },\n    {\n      \"topic\": \"Roman history as Osca and Sertorius\",\n      \"quote_wikipedia\": \"During Roman times, the city was known as Osca, and was a Roman colony under the rule of Quintus Sertorius, who made Osca his base.\"\n    },\n    {\n      \"topic\": \"Islamic period as Washqah\",\n      \"quote_wikipedia\": \"The Arabs conquered the city in the late 8th century, and the city came to be called Washqah (وشقة in Arabic)\"\n    },\n    {\n      \"topic\": \"Medieval Kingdom of Aragon capital\",\n      \"quote_wikipedia\": \"It was the capital of the Kingdom of Aragon between 1096 and 1118.\"\n    },\n    {\n      \"topic\": \"University of Huesca history\",\n      \"quote_wikipedia\": \"In 1354, King Peter IV of Aragon founded the University of Huesca, which initially had a faculty of theology.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792324751,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 937,
+   "prompt_tokens": 3140,
+   "total_tokens": 4077,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 3.4
+ }
+}

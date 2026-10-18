@@ -1,0 +1,120 @@
+{
+ "entry_id": "B:1473:5",
+ "cite_britannica": "[B:1473:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1473",
+ "row_index": 1473,
+ "image_sha256": "b3b602ef6a3d4961fd1926a15d634a40ec929c15b00e2f7cc5109b3f7180daac",
+ "headword": "ESCHAR",
+ "topic_hint": null,
+ "wiki_page_id": "1028348",
+ "wiki_revision_id": "1331123757",
+ "wiki_title": "Eschar",
+ "wiki_url": "https://en.wikipedia.org/wiki/Eschar",
+ "text_sha256": "c46dbbf7dba63623c3d80ebbee81fec3fde123950bd133e5ce794853bda48571",
+ "cite_wikipedia": "[W:1028348:1331123757]",
+ "rerank_logit": -7.247307,
+ "rerank_margin": 2.506213,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 675,
+  "prompt_tokens": 1217,
+  "total_tokens": 1892,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 76,
+ "article_chars_used": 2988,
+ "article_chars_total": 2988,
+ "similarities": [
+  {
+   "point": "Both define eschar as dead tissue separated from the skin surface.",
+   "quote_britannica": "ESCHAR, in foregry, the craft or fish occationed by home or marine medicine.",
+   "quote_wikipedia": "Eschar (/ ˈ ɛ s k ɑːr /; Greek: ἐσχάρᾱ, romanized: eskhara; Latin: eschara; or an eschar) is a slough or piece of dead tissue that is cast off from the surface of the skin"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica's entry is a brief, garbled definition, while Wikipedia provides a detailed medical explanation.",
+   "quote_britannica": "ESCHAR, in foregry, the craft or fish occationed by home or marine medicine.",
+   "quote_wikipedia": "Eschar (/ ˈ ɛ s k ɑːr /; Greek: ἐσχάρᾱ, romanized: eskhara; Latin: eschara; or an eschar) is a slough or piece of dead tissue that is cast off from the surface of the skin, particularly after a burn injury"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Eschar is dead tissue cast off from the surface of the skin.",
+   "tag": "enduring",
+   "quote_britannica": "ESCHAR, in foregry, the craft or fish occationed by home or marine medicine.",
+   "quote_wikipedia": "Eschar (/ ˈ ɛ s k ɑːr /; Greek: ἐσχάρᾱ, romanized: eskhara; Latin: eschara; or an eschar) is a slough or piece of dead tissue that is cast off from the surface of the skin"
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Causes and associations of eschar (burns, gangrene, anthrax, spider bites)",
+   "quote_wikipedia": "particularly after a burn injury, but also seen in gangrene, ulcer, fungal infections, necrotizing spider bite wounds, tick bites associated with spotted fevers and exposure to cutaneous anthrax."
+  },
+  {
+   "topic": "Distinction between eschar and scab",
+   "quote_wikipedia": "The term ‘eschar’ is not interchangeable with ‘ scab ’. An eschar contains necrotic tissue whereas a scab is composed of dried blood and exudate."
+  },
+  {
+   "topic": "Medical management and escharotomy",
+   "quote_wikipedia": "If circulation is compromised, an escharotomy, or surgical incision through the eschar, may be indicated."
+  },
+  {
+   "topic": "Escharotics and their uses",
+   "quote_wikipedia": "An escharotic is a substance that kills unwanted or diseased tissue, usually skin or superficial growths like warts, leaving them to slough off."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 7,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 13,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Causes and associations of eschar (burns, gangrene, anthrax, spider bites)",
+    "Distinction between eschar and scab",
+    "Medical management and escharotomy",
+    "Escharotics and their uses"
+   ]
+  },
+  "enduring_share": 1.0,
+  "claim_counts": {
+   "enduring": 1,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 1,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

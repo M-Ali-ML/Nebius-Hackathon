@@ -1,0 +1,253 @@
+{
+ "entry_id": "B:251:4",
+ "cite_britannica": "[B:251:4]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251",
+ "row_index": 251,
+ "image_sha256": "69952e7c4a0f40267d357d04308f674155b3ab206ce8f2f4887124ce481f8c1d",
+ "headword": "SYCOPHANT",
+ "topic_hint": null,
+ "wiki_page_id": "25998383",
+ "wiki_revision_id": "1352212778",
+ "wiki_title": "Sycophancy",
+ "wiki_url": "https://en.wikipedia.org/wiki/Sycophancy",
+ "text_sha256": "bcc0e3d4b1dc86da2602885070cce99548ee3aed5f2c4191a28e6603d4b27b0b",
+ "cite_wikipedia": "[W:25998383:1352212778]",
+ "rerank_logit": -6.389544,
+ "rerank_margin": 3.078067,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2190,
+  "prompt_tokens": 2792,
+  "total_tokens": 4982,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 208,
+ "article_chars_used": 9897,
+ "article_chars_total": 9897,
+ "similarities": [
+  {
+   "point": "Both describe the term as applying to informers and flatterers.",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "In modern English, sycophant denotes an insincere flatterer and refers to someone practising sycophancy"
+  },
+  {
+   "point": "Both connect the word to ancient Athens.",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "The word has its origin in the legal system of Classical Athens"
+  },
+  {
+   "point": "Both link the term to the exportation of figs.",
+   "quote_britannica": "the exporation of figs contary to bay",
+   "quote_wikipedia": "Plutarch appears to be the first to have suggested that the source of the term was in laws forbidding the exportation of figs"
+  },
+  {
+   "point": "Both note the term was used for false accusers.",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "abuse by sycophants: litigants who brought unjustified prosecutions"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica defines the term primarily as informers and flatterers, while Wikipedia emphasizes the modern meaning as insincere flatterer.",
+   "quote_britannica": "SYCOPHANT, an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "In modern English, sycophant denotes an insincere flatterer and refers to someone practising sycophancy"
+  },
+  {
+   "point": "Britannica gives a single short definition, whereas Wikipedia provides extensive etymology and history.",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "The origin of the Ancient Greek word συκοφάντης (sykophántēs) is a matter of debate"
+  },
+  {
+   "point": "Britannica does not mention the shift in meaning over time, while Wikipedia details it.",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "The meaning in English has changed over time, however, and came to mean an insincere flatterer"
+  },
+  {
+   "point": "Britannica lacks any mention of AI sycophancy, which Wikipedia covers.",
+   "quote_britannica": "SYCOPHANT, an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "With the rise of large language models, the term sycophancy has entered discussions about artificial intelligence"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The term was given by ancient Athenians to those who informed on the exportation of figs contrary to law.",
+   "tag": "enduring",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed the exporation of figs contary to bay",
+   "quote_wikipedia": "Plutarch appears to be the first to have suggested that the source of the term was in laws forbidding the exportation of figs, and that those who leveled the accusation against another of illegally exporting figs were therefore called sycophants"
+  },
+  {
+   "claim": "The term came to be used generally for all informers, parasites, flatterers, and chests.",
+   "tag": "enduring",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "In modern English, sycophant denotes an insincere flatterer and refers to someone practising sycophancy"
+  },
+  {
+   "claim": "The word originates from the Greek words for fig and to show, meaning revealer of figs.",
+   "tag": "enduring",
+   "quote_britannica": "the exporation of figs contary to bay",
+   "quote_wikipedia": "The original etymology of the word (sykos / συκος ' fig ', and phanēs / φανης 'to show'; 'revealer of figs') has been the subject of extensive scholarly speculation"
+  },
+  {
+   "claim": "The word entered English and French in the mid-16th century with the original meaning of false accuser.",
+   "tag": "enduring",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "The word sycophant entered the English and French languages in the mid-16th century, and originally had the same meaning in English and French as in Greek, a false accuser"
+  },
+  {
+   "claim": "The meaning in English shifted to mean an insincere flatterer.",
+   "tag": "enduring",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "The meaning in English has changed over time, however, and came to mean an insincere flatterer"
+  },
+  {
+   "claim": "In Modern Greek, French, and Italian the word retains the meaning of slanderer or false accuser.",
+   "tag": "enduring",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "The word retains the same meaning ('slanderer') in Modern Greek, French (where sycophant means 'false accuser', or professional ' informer '), and Italian"
+  },
+  {
+   "claim": "Sycophants were viewed as uncontrolled and parasitic, lacking regard for truth or justice.",
+   "tag": "dropped",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Efforts were made to suppress sycophants including fines and statutes of limitation.",
+   "tag": "dropped",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Atheman",
+   "new": "Athenians",
+   "quote_britannica": "an appellation given by the ancient Atheman to thole who informed",
+   "quote_wikipedia": "The word has its origin in the legal system of Classical Athens"
+  },
+  {
+   "old": "inforners",
+   "new": "informers",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "The word retains the same meaning ('slanderer') in Modern Greek, French (where sycophant means 'false accuser', or professional ' informer '), and Italian"
+  },
+  {
+   "old": "parafities",
+   "new": "parasites",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "The common thread in the older and current meanings is that the sycophant is, in both instances, portrayed as a kind of parasite"
+  },
+  {
+   "old": "flattreets",
+   "new": "flatterers",
+   "quote_britannica": "and hence it is full field in general for all inforners, parafities, flattreets, chests, &c.",
+   "quote_wikipedia": "In modern English, sycophant denotes an insincere flatterer and refers to someone practising sycophancy"
+  },
+  {
+   "old": "exporation",
+   "new": "exportation",
+   "quote_britannica": "the exporation of figs contary to bay",
+   "quote_wikipedia": "laws forbidding the exportation of figs"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "AI sycophancy and large language models",
+   "quote_wikipedia": "With the rise of large language models, the term sycophancy has entered discussions about artificial intelligence (AI)"
+  },
+  {
+   "topic": "Greek legal definitions of defamation and slanderous defamation",
+   "quote_wikipedia": "In legal terms, Article 362 of the Greek Penal Code defines defamation (δυσφήμηση)"
+  },
+  {
+   "topic": "Sycophants in Aristophanes' comedies",
+   "quote_wikipedia": "Several of Aristophanes ' comedies feature sycophants as major characters"
+  },
+  {
+   "topic": "Alternative phrases for sycophancy",
+   "quote_wikipedia": "Alternative phrases are often used, such as: apple-polishing"
+  }
+ ],
+ "rejected": [
+  {
+   "section": "wiki_only_topics",
+   "item": {
+    "topic": "The devil as Sycophant in the Suda",
+    "quote_wikipedia": "Suda mention that one of the epithets of the devil is Sycophant (Συκοφάντης; 'false accuser')"
+   },
+   "reason": "quote_wikipedia not found in article text"
+  }
+ ],
+ "quote_check": {
+  "kept": 25,
+  "rejected": 1
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 34,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Atheman",
+     "new": "Athenians"
+    },
+    {
+     "old": "inforners",
+     "new": "informers"
+    },
+    {
+     "old": "parafities",
+     "new": "parasites"
+    },
+    {
+     "old": "flattreets",
+     "new": "flatterers"
+    },
+    {
+     "old": "exporation",
+     "new": "exportation"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "AI sycophancy and large language models",
+    "Greek legal definitions of defamation and slanderous defamation",
+    "Sycophants in Aristophanes' comedies",
+    "Alternative phrases for sycophancy"
+   ]
+  },
+  "enduring_share": 0.75,
+  "claim_counts": {
+   "enduring": 6,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

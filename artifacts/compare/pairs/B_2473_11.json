@@ -1,0 +1,249 @@
+{
+ "entry_id": "B:2473:11",
+ "cite_britannica": "[B:2473:11]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2473",
+ "row_index": 2473,
+ "image_sha256": "b849fb7f25f25b39685069d12c13b17d47169beeea958446bdff439c230a0f65",
+ "headword": "ERICA",
+ "topic_hint": null,
+ "wiki_page_id": "326115",
+ "wiki_revision_id": "1344604803",
+ "wiki_title": "Erica (plant)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Erica_(plant)",
+ "text_sha256": "06ee04d4e9583a30e512ae162b1cd4e17f5439405c6a543d5559ffb4526a2e47",
+ "cite_wikipedia": "[W:326115:1344604803]",
+ "rerank_logit": -7.753988,
+ "rerank_margin": 0.269486,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2245,
+  "prompt_tokens": 2046,
+  "total_tokens": 4291,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 491,
+ "article_chars_used": 5554,
+ "article_chars_total": 5554,
+ "similarities": [
+  {
+   "point": "Both state that Erica is a genus of plants.",
+   "quote_britannica": "ERICA, or Hearth, in benny, a genus of the otherdirina nonogona clade.",
+   "quote_wikipedia": "Erica is a genus of roughly 857 species of flowering plants in the family Ericaceae."
+  },
+  {
+   "point": "Both mention that some species are native to Britain/Europe.",
+   "quote_britannica": "Three thirty eight-species, one of which are native of Britain, viz. the vulgaris, or common health;",
+   "quote_wikipedia": "The remaining species are native to other parts of Africa, Madagascar, the Mediterranean, and Europe."
+  },
+  {
+   "point": "Both mention Erica arborea as a notable species.",
+   "quote_britannica": "the cillaray, or rough leaved heat; and the multidots, or firleaved heart.",
+   "quote_wikipedia": "The largest are the tree heather (Erica arborea) and the broom heather (Erica scoparia), which can reach 6–10 meters."
+  },
+  {
+   "point": "Both describe the plants as shrubs/heaths.",
+   "quote_britannica": "the cinerers, or fine-leaved hearts; the retraix, or cross-leaved heads;",
+   "quote_wikipedia": "Most European species are dwarf shrubs, growing 20–80 cm tall."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes floral parts as four leaves/fragments, while Wikipedia describes minute needle-like leaves and varied flower arrangements.",
+   "quote_britannica": "The calise conflict of four leaves, and the corolla of four fragments; the filaments are infected into the receptacle;",
+   "quote_wikipedia": "All are evergreen, with minute, needle-like leaves 2–15 millimetres (1 ⁄ 8 – 5 ⁄ 8 in) long. Flowers are sometimes axillary, and sometimes borne in terminal umbels or spikes,"
+  },
+  {
+   "point": "Britannica lists about 38 species, while Wikipedia states roughly 857 species.",
+   "quote_britannica": "Three thirty eight-species, one of which are native of Britain, viz. the vulgaris, or common health;",
+   "quote_wikipedia": "Erica is a genus of roughly 857 species of flowering plants in the family Ericaceae."
+  },
+  {
+   "point": "Britannica does not mention Ericaceae family, while Wikipedia places Erica in Ericaceae.",
+   "quote_britannica": "ERICA, or Hearth, in benny, a genus of the otherdirina nonogona clade.",
+   "quote_wikipedia": "Erica is a genus of roughly 857 species of flowering plants in the family Ericaceae."
+  },
+  {
+   "point": "Britannica mentions only British species, while Wikipedia details African, Madagascan, and Mediterranean species.",
+   "quote_britannica": "the cillaray, or rough leaved heat; and the multidots, or firleaved heart.",
+   "quote_wikipedia": "The majority of the more than 750 African heather species occur in the Cape fynbosse of South Africa growing alongside proteas and other shrubs."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Erica is a genus.",
+   "tag": "enduring",
+   "quote_britannica": "ERICA, or Hearth, in benny, a genus of the otherdirina nonogona clade.",
+   "quote_wikipedia": "Erica is a genus of roughly 857 species of flowering plants in the family Ericaceae."
+  },
+  {
+   "claim": "The calyx consists of four leaves.",
+   "tag": "superseded",
+   "quote_britannica": "The calise conflict of four leaves, and the corolla of four fragments;",
+   "quote_wikipedia": "All are evergreen, with minute, needle-like leaves 2–15 millimetres (1 ⁄ 8 – 5 ⁄ 8 in) long."
+  },
+  {
+   "claim": "The corolla consists of four fragments.",
+   "tag": "superseded",
+   "quote_britannica": "The calise conflict of four leaves, and the corolla of four fragments; the filaments are infected into the receptacle;",
+   "quote_wikipedia": "The genus Calluna was formerly included in Erica; it differs in having even smaller scale-leaves (less than 2–3 millimetres long), and the flower corolla consisting of separate petals."
+  },
+  {
+   "claim": "There are about 38 species.",
+   "tag": "superseded",
+   "quote_britannica": "Three thirty eight-species, one of which are native of Britain, viz. the vulgaris, or common health;",
+   "quote_wikipedia": "Erica is a genus of roughly 857 species of flowering plants in the family Ericaceae."
+  },
+  {
+   "claim": "One species is native of Britain, the vulgaris or common heath.",
+   "tag": "enduring",
+   "quote_britannica": "Three thirty eight-species, one of which are native of Britain, viz. the vulgaris, or common health;",
+   "quote_wikipedia": "The remaining species are native to other parts of Africa, Madagascar, the Mediterranean, and Europe."
+  },
+  {
+   "claim": "The filaments are infected into the receptacle.",
+   "tag": "dropped",
+   "quote_britannica": "the filaments are infected into the receptacle; the anthem are bid; and the copilole has four cells.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The anthers are awned.",
+   "tag": "dropped",
+   "quote_britannica": "the filaments are infected into the receptacle; the anthem are bid; and the copilole has four cells.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "The capsule has four cells.",
+   "tag": "dropped",
+   "quote_britannica": "the filaments are infected into the receptacle; the anthem are bid; and the copilole has four cells.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Hearth",
+   "new": "heath",
+   "quote_britannica": "ERICA, or Hearth, in benny, a genus of the otherdirina nonogona clade.",
+   "quote_wikipedia": "The English common names heath and heather are shared by some closely related genera of similar appearance."
+  },
+  {
+   "old": "common health",
+   "new": "common heath",
+   "quote_britannica": "Three thirty eight-species, one of which are native of Britain, viz. the vulgaris, or common health;",
+   "quote_wikipedia": "The English common names heath and heather are shared by some closely related genera of similar appearance."
+  },
+  {
+   "old": "fine-leaved hearts",
+   "new": "fine-leaved heaths",
+   "quote_britannica": "the cinerers, or fine-leaved hearts; the retraix, or cross-leaved heads;",
+   "quote_wikipedia": "The English common names heath and heather are shared by some closely related genera of similar appearance."
+  },
+  {
+   "old": "cross-leaved heads",
+   "new": "cross-leaved heaths",
+   "quote_britannica": "the cinerers, or fine-leaved hearts; the retraix, or cross-leaved heads; the cillaray, or rough leaved heat;",
+   "quote_wikipedia": "The English common names heath and heather are shared by some closely related genera of similar appearance."
+  },
+  {
+   "old": "rough leaved heat",
+   "new": "rough-leaved heath",
+   "quote_britannica": "the retraix, or cross-leaved heads; the cillaray, or rough leaved heat; and the multidots, or firleaved heart.",
+   "quote_wikipedia": "The English common names heath and heather are shared by some closely related genera of similar appearance."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Taxonomic history and former inclusion of Calluna",
+   "quote_wikipedia": "The genus Calluna was formerly included in Erica; it differs in having even smaller scale-leaves (less than 2–3 millimetres long), and the flower corolla consisting of separate petals."
+  },
+  {
+   "topic": "Species counts and revisions (Dulfer, 605 species, 83 from minor genera)",
+   "quote_wikipedia": "Dulfer published the last revision of the genus Erica in the 1960s, treating 605 species. Many new species have subsequently been described (particularly in South Africa) and a further 83 have been included in Erica from former \"minor genera\", such as Phillipia Klotzsch and Blaeria L."
+  },
+  {
+   "topic": "Phylogenetic hypotheses and closest relatives (Daboecia, Calluna, Ericeae)",
+   "quote_wikipedia": "The closest relatives of Erica are Daboecia (one or two species) and Calluna (monospecific), representing the oldest surviving lineages of a, by inference, ancestrally Palearctic tribe Ericeae."
+  },
+  {
+   "topic": "Etymology and pronunciation of Erica",
+   "quote_wikipedia": "The Latin word erica means \"heath\" or \"broom\". It is believed that Pliny adapted erica from Ancient Greek ἐρείκη ereíkē."
+  },
+  {
+   "topic": "Ecology: calcifuges, acidic soils, heathland habitats",
+   "quote_wikipedia": "Like most Ericaceae, Erica species are mainly calcifuges, being limited to acidic or very acidic soils. In fact, the term \"ericaceous\" is frequently applied to all calcifuges, and to the compost used in their cultivation."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 79,
+   "edits_per_100_words": 1.27
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Hearth",
+     "new": "heath"
+    },
+    {
+     "old": "common health",
+     "new": "common heath"
+    },
+    {
+     "old": "fine-leaved hearts",
+     "new": "fine-leaved heaths"
+    },
+    {
+     "old": "cross-leaved heads",
+     "new": "cross-leaved heaths"
+    },
+    {
+     "old": "rough leaved heat",
+     "new": "rough-leaved heath"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.375
+  },
+  "coverage": {
+   "dropped_share": 0.375,
+   "wiki_only_topics": [
+    "Taxonomic history and former inclusion of Calluna",
+    "Species counts and revisions (Dulfer, 605 species, 83 from minor genera)",
+    "Phylogenetic hypotheses and closest relatives (Daboecia, Calluna, Ericeae)",
+    "Etymology and pronunciation of Erica",
+    "Ecology: calcifuges, acidic soils, heathland habitats"
+   ]
+  },
+  "enduring_share": 0.25,
+  "claim_counts": {
+   "enduring": 2,
+   "renamed": 0,
+   "superseded": 3,
+   "dropped": 3
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

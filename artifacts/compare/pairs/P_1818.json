@@ -1,0 +1,220 @@
+{
+ "entry_id": "P:1818",
+ "level": "page",
+ "entry_ids": [
+  "B:1818:0"
+ ],
+ "page_kind": "treatise",
+ "cite_britannica": "[B:1818:0]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1818",
+ "row_index": 1818,
+ "image_sha256": "e6693d1961ef5657ea724a54f5c12cc8b62568f84a2ff587847275075a99e6a0",
+ "headword": null,
+ "topic_hint": "Blowpipe",
+ "wiki_page_id": "762334",
+ "wiki_revision_id": "988929980",
+ "wiki_title": "Blowpipe",
+ "wiki_url": "https://en.wikipedia.org/wiki/Blowpipe",
+ "text_sha256": "d12db0c7cdf235222130ab0057871404ec5c8b19d546472baf9687b7bc349c1d",
+ "cite_wikipedia": "[W:762334:988929980]",
+ "rerank_logit": -5.293296,
+ "rerank_margin": 0.260306,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1567,
+  "prompt_tokens": 2325,
+  "total_tokens": 3892,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 7800,
+ "article_chars_used": 349,
+ "article_chars_total": 349,
+ "similarities": [
+  {
+   "point": "Both sources describe the blowpipe as a tool used to direct a stream or jet of gas/flame onto a small body for heating.",
+   "quote_britannica": "The blow-pipe, by directing the manifestances particles of which the flame consistas so as a strike against and surround a small body, produces the effect of heating the body considerably.",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "point": "Both sources state that the blowpipe is used in the analysis of materials or mineralogy.",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the blowpipe as a chemical/mineralogical tool for analysis, while Wikipedia lists it as a disambiguation page including weapons and fictional characters.",
+   "quote_britannica": "The blow-pipe is useful to the method is obtained as offering a ready method of knowing what the compourer parts of bodies are.",
+   "quote_wikipedia": "Blowpipe may refer to: Blowpipe (missile), a man-portable surface-to-air missile",
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "point": "Britannica details the use of charcoal and platina supports for heating minerals, whereas Wikipedia provides no such procedural details.",
+   "quote_britannica": "It is placed in a functional activity, made with a knife, in a piece of well-being charcoal to wood, free from gracks, and not too porous, and of the length of four or five inches, so as to be held conveniently Blow-pipe.",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The first person to apply the blowpipe to the analysis of materials was a counselor of the college of mines in Sweden in 1725.",
+   "tag": "dropped",
+   "quote_britannica": "The first who applied the blow-pipe to the analysis of materials was weak, counselor of the college of mines in Sweden in 1725.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "The application of the blowpipe to mineralogy was improved by Cronstedt, Rinman, Gotz, Scheele, and Bergman.",
+   "tag": "dropped",
+   "quote_britannica": "Its application to the science of mineralogy was afterwards further improved by Cronstedt, Rine, may Gabon, Schede, and Bergman, and by other men of science since their time.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "The blowpipe is useful for knowing the component parts of bodies before proceeding to dry or humid analysis.",
+   "tag": "dropped",
+   "quote_britannica": "The blow-pipe is useful to the method is obtained as offering a ready method of knowing what the compourer parts of bodies are.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "Charcoal attracts oxygen from metallic oxides and reduces them to a metallic form.",
+   "tag": "dropped",
+   "quote_britannica": "In ycluding fragments of metallic ones by the blow-pipe, charcoal should be used as a support, for the charcoal attracts the oxygen from the metallic oxides, and reduces it to a metallic form;",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "Platina is infusible alone by the heat of the common blowpipe.",
+   "tag": "dropped",
+   "quote_britannica": "Platina, however, although infilab alone by the heat of the common blowpipe, will be dissolved and melted if heated along with some of the metals.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "Borax becomes a colorless and transparent bead when exposed to the flame after parting with its water of crystallization.",
+   "tag": "dropped",
+   "quote_britannica": "When exposed to the flame it become opaque, wells and ramides much, in consequence of parting with its water of crystallisation, increases it rises into a colorless and transparent lead.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "The operator can continue the blast for a considerable length of time using muscular action while breathing through the nose.",
+   "tag": "dropped",
+   "quote_britannica": "an minister reputed blast: a kept up by the muscular action of the bloods, whilst the ordinary separation goes on through the nose; and a little practice is sufficient to enable the opmore to succeed.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "claim": "The jet of flame produced by the blowpipe is conical, internal blue, and externally yellow.",
+   "tag": "dropped",
+   "quote_britannica": "The jet of flame is conodal, internal, blue, and externally yellow.",
+   "quote_wikipedia": null,
+   "cite_britannica": "[B:1818:0]"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "blow-pipe",
+   "new": "Blowpipe (tool)",
+   "quote_britannica": "The blow-pipe, by directing the manifestances particles of which the flame consistas so as a strike against and surround a small body, produces the effect of heating the body considerably.",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "old": "platina",
+   "new": "platinum",
+   "quote_britannica": "or on a thin lamina of plains, two or three inches long and half an inch broad, and of the thickness of common writing paper;",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  },
+  {
+   "old": "borate of soda",
+   "new": "borax",
+   "quote_britannica": "Borax (borate of soda) is used along with the fragment Fluxes of mineral in many cases.",
+   "quote_wikipedia": "Blowpipe (tool), used to direct streams of gases into any of several working media",
+   "cite_britannica": "[B:1818:0]"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Blowpipe (missile)",
+   "quote_wikipedia": "Blowpipe (missile), a man-portable surface-to-air missile"
+  },
+  {
+   "topic": "Blowgun",
+   "quote_wikipedia": "Blowgun (also called a blowpipe or blow tube) is a simple weapon in which a missile, such as a dart, is blown through a pipe"
+  },
+  {
+   "topic": "Blowpipe (Transformers)",
+   "quote_wikipedia": "Blowpipe (Transformers), several Transformers characters"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 18,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 1370,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "borate of soda",
+     "new": "borax"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "blow-pipe",
+     "new": "Blowpipe (tool)"
+    },
+    {
+     "old": "platina",
+     "new": "platinum"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 1.0,
+   "wiki_only_topics": [
+    "Blowpipe (missile)",
+    "Blowgun",
+    "Blowpipe (Transformers)"
+   ]
+  },
+  "enduring_share": 0.0,
+  "claim_counts": {
+   "enduring": 0,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 8
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

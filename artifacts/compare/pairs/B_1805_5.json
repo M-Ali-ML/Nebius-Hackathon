@@ -1,0 +1,249 @@
+{
+ "entry_id": "B:1805:5",
+ "cite_britannica": "[B:1805:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1805",
+ "row_index": 1805,
+ "image_sha256": "2268854083181b93f7bf134647f2e3214aacdd4ce0279092f4743cf113d32abd",
+ "headword": "EXERCISE",
+ "topic_hint": null,
+ "wiki_page_id": "189037",
+ "wiki_revision_id": "1348682182",
+ "wiki_title": "Exercise",
+ "wiki_url": "https://en.wikipedia.org/wiki/Exercise",
+ "text_sha256": "f32d24685598bc5414d6e5f4e7c15e0e8e087192cdfdf204b818bbbb94b453dd",
+ "cite_wikipedia": "[W:189037:1348682182]",
+ "rerank_logit": -3.752788,
+ "rerank_margin": 0.11997,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2117,
+  "prompt_tokens": 2877,
+  "total_tokens": 4994,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 2437,
+ "article_chars_used": 10000,
+ "article_chars_total": 31471,
+ "similarities": [
+  {
+   "point": "Both texts state that exercise increases appetite and aids digestion.",
+   "quote_britannica": "creates an appetite, and helps de-gellion.",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system,"
+  },
+  {
+   "point": "Both texts mention walking as a form of exercise.",
+   "quote_britannica": "The active is walking, hunting dancing, playing at bowls, and the living,",
+   "quote_wikipedia": "Examples of aerobic exercise include running, cycling, swimming, brisk walking, skipping rope, rowing, hiking, dancing, playing tennis,"
+  },
+  {
+   "point": "Both texts state that exercise benefits health.",
+   "quote_britannica": "and going into the country, contribute greatly by patients and to schillish health.",
+   "quote_wikipedia": "Exercise or working out is physical activity that enhances or maintains fitness and overall health."
+  },
+  {
+   "point": "Both texts mention dancing as a form of exercise.",
+   "quote_britannica": "The active is walking, hunting dancing, playing at bowls, and the living,",
+   "quote_wikipedia": "Examples of aerobic exercise include running, cycling, swimming, brisk walking, skipping rope, rowing, hiking, dancing, playing tennis,"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica classifies exercise into active and passive types, while Wikipedia classifies exercise into aerobic, anaerobic, and flexibility types.",
+   "quote_britannica": "Exercile may be fold to be either alive or palive. The active is walking, hunting dancing, playing at bowls, and the living,",
+   "quote_wikipedia": "Physical exercises are generally grouped into three types, depending on the overall effect they have on the human body:"
+  },
+  {
+   "point": "Britannica recommends exercise before dinner, while Wikipedia recommends 150 minutes per week.",
+   "quote_britannica": "and ought to be uifed before dinner in a pure light air; for what reason, journey, and going into the country,",
+   "quote_wikipedia": "In terms of health benefits, usually, 150 minutes (2 hours and 30 minutes) of moderate-intensity exercise per week is recommended for reducing the risk of health problems."
+  },
+  {
+   "point": "Britannica claims exercise promotes perspiration, while Wikipedia does not mention perspiration.",
+   "quote_britannica": "and promotes a regular prefieren, as well as due therefore of all the ha-murss for it accederces the animal fruits,",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system, building and maintaining healthy bone density,"
+  },
+  {
+   "point": "Britannica mentions riding in a coach as passive exercise, while Wikipedia does not mention riding in a coach.",
+   "quote_britannica": "The pultive is riding in a coach, on behalfbody, or in any other manner. Exdoes me by the continued to a beginning of wearants,",
+   "quote_wikipedia": "Physical exercises are generally grouped into three types, depending on the overall effect they have on the human body:"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Exercise increases the circulation of the blood.",
+   "tag": "enduring",
+   "quote_britannica": "Exercile increase the circulation of the blood, attte-mates and divides the fluids,",
+   "quote_wikipedia": "The beneficial effect of exercise on the cardiovascular system is well documented. There is a direct correlation between physical inactivity and cardiovascular disease,"
+  },
+  {
+   "claim": "Exercise creates an appetite.",
+   "tag": "enduring",
+   "quote_britannica": "therefore the parts, creates an appetite, and helps de-gellion.",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system,"
+  },
+  {
+   "claim": "Exercise helps digestion.",
+   "tag": "enduring",
+   "quote_britannica": "therefore the parts, creates an appetite, and helps de-gellion.",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system,"
+  },
+  {
+   "claim": "Exercise promotes perspiration.",
+   "tag": "dropped",
+   "quote_britannica": "and promotes a regular prefieren, as well as due therefore of all the ha-murss for it accederces the animal fruits,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Exercise facilitates the distribution of animal spirits through the body.",
+   "tag": "superseded",
+   "quote_britannica": "for it accederces the animal fruits, and facilitates their distribution into all the flavor of the body, therefore the parts,",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system, building and maintaining healthy bone density, muscle strength, and joint mobility,"
+  },
+  {
+   "claim": "People who excel in exercises are generally robust and seldom subject to diabetes.",
+   "tag": "dropped",
+   "quote_britannica": "Where is artists, the thief who asculmon thanhame to excels are generally very robust, and fell-dom subject to diabetes.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Boershave recommends bodily exercise in cases of a weak and lax habit.",
+   "tag": "dropped",
+   "quote_britannica": "Boershave recommends bodily exercise in diesides of a weak and less. By rings on hardducks, dyss his commentators,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "A weak man should ride with an empty stomach rather than a full one.",
+   "tag": "dropped",
+   "quote_britannica": "But it is folle to offered that a weak man shall not ride with a until lomach, but rather before dinner, or after the de-gellion is nearly finished,",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "animal economy",
+   "new": "overall health",
+   "quote_britannica": "EXERCISE, among physicians, such an agitation of the body as produces luxury effects in the animal economy.",
+   "quote_wikipedia": "Exercise or working out is physical activity that enhances or maintains fitness and overall health."
+  },
+  {
+   "old": "active exercise",
+   "new": "aerobic exercise",
+   "quote_britannica": "The active is walking, hunting dancing, playing at bowls, and the living, as also feelsking, and other le tour of the body and mind.",
+   "quote_wikipedia": "Aerobic exercise is any physical activity that uses large muscle groups and causes the body to use more oxygen than it would while resting."
+  },
+  {
+   "old": "passive exercise",
+   "new": "static exercise",
+   "quote_britannica": "The pultive is riding in a coach, on behalfbody, or in any other manner. Exdoes me by the continued to a beginning of wearants,",
+   "quote_wikipedia": "Conversely, static exercise (such as weight-lifting) can cause the systolic pressure to rise significantly, albeit transiently, during the performance of the exercise."
+  },
+  {
+   "old": "animal spirits",
+   "new": "physiological well-being",
+   "quote_britannica": "for it accederces the animal fruits, and facilitates their distribution into all the flavor of the body, therefore the parts,",
+   "quote_wikipedia": "Physical exercise is important for maintaining physical fitness and can contribute to maintaining a healthy weight, regulating the digestive system, building and maintaining healthy bone density, muscle strength, and joint mobility, promoting physiological well-being,"
+  },
+  {
+   "old": "gymnastic exercises",
+   "new": "strength and resistance training",
+   "quote_britannica": "for which resion, the wilddom of antiquity appointed rewards for thief who excelled in their gymnastic ercifer,",
+   "quote_wikipedia": "Anaerobic exercise, which includes strength and resistance training, can firm, strengthen, and increase muscle mass, as well as improve bone density, balance, and coordination."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Recommended duration of exercise per week",
+   "quote_wikipedia": "In terms of health benefits, usually, 150 minutes (2 hours and 30 minutes) of moderate-intensity exercise per week is recommended for reducing the risk of health problems."
+  },
+  {
+   "topic": "Classification into aerobic, anaerobic, and flexibility exercises",
+   "quote_wikipedia": "Physical exercises are generally grouped into three types, depending on the overall effect they have on the human body:"
+  },
+  {
+   "topic": "Effect of exercise on the immune system",
+   "quote_wikipedia": "Although there have been hundreds of studies on physical exercise and the immune system, there is little direct evidence on its connection to illness."
+  },
+  {
+   "topic": "Effect of exercise on cancer survival rates",
+   "quote_wikipedia": "A systematic review evaluated 45 studies that examined the relationship between physical activity and cancer survival rates."
+  },
+  {
+   "topic": "Effect of physical inactivity on global mortality",
+   "quote_wikipedia": "Overall, physical inactivity causes 9% of premature mortality worldwide."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 413,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "animal economy",
+     "new": "overall health"
+    },
+    {
+     "old": "active exercise",
+     "new": "aerobic exercise"
+    },
+    {
+     "old": "passive exercise",
+     "new": "static exercise"
+    },
+    {
+     "old": "animal spirits",
+     "new": "physiological well-being"
+    },
+    {
+     "old": "gymnastic exercises",
+     "new": "strength and resistance training"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.125
+  },
+  "coverage": {
+   "dropped_share": 0.5,
+   "wiki_only_topics": [
+    "Recommended duration of exercise per week",
+    "Classification into aerobic, anaerobic, and flexibility exercises",
+    "Effect of exercise on the immune system",
+    "Effect of exercise on cancer survival rates",
+    "Effect of physical inactivity on global mortality"
+   ]
+  },
+  "enduring_share": 0.375,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 4
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

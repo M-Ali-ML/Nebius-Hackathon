@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:2171:6",
+ "cite_britannica": "[B:2171:6]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2171",
+ "row_index": 2171,
+ "image_sha256": "f8869fa95f190d0e556bf8d2397c0c36da436ea1b23405995f0aac0f398f26d5",
+ "headword": "ATE",
+ "topic_hint": null,
+ "wiki_page_id": "79071",
+ "wiki_revision_id": "1353135063",
+ "wiki_title": "Ate (mythology)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Ate_(mythology)",
+ "text_sha256": "3860215ef0303638229bfaed03ed228d2884c6f4fdd4bdb1cf6d0d45bff6cdfc",
+ "cite_wikipedia": "[W:79071:1353135063]",
+ "rerank_logit": -5.611006,
+ "rerank_margin": 2.342574,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2994,
+  "prompt_tokens": 3275,
+  "total_tokens": 6269,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 675,
+ "article_chars_used": 10000,
+ "article_chars_total": 16085,
+ "similarities": [
+  {
+   "point": "Ate is the daughter of Jupiter/Zeus",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+  },
+  {
+   "point": "Ate was banished from heaven/Olympus",
+   "quote_britannica": "Jupiter expelled his retirement on Ates, as the author of that miichief; and threw her headlong from heaven to earth, featuring the floodal never return children again",
+   "quote_wikipedia": "Ate was banished from Olympus by Zeus for blinding him to Hera 's trickery denying Heracles his birthright."
+  },
+  {
+   "point": "The banishment is connected to the birth of Hercules/Heracles",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Ate was banished from Olympus by Zeus for blinding him to Hera 's trickery denying Heracles his birthright."
+  },
+  {
+   "point": "The name of the goddess is derived from a Greek verb meaning to hurt/harm",
+   "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Parentage: Britannica says only Jupiter, Wikipedia also cites Hesiod making her daughter of Eris",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+  },
+  {
+   "point": "Meaning of the name: Britannica says 'to hurt', Wikipedia gives delusion, recklessness, folly, ruin",
+   "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+  },
+  {
+   "point": "Nature of the figure: Britannica calls her a goddess of mischief, Wikipedia describes her as a personification of moral blindness and error",
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+  },
+  {
+   "point": "Reason for banishment: Britannica ties it to mischief at Hercules' birth, Wikipedia specifies Zeus was blinded to Hera's trickery",
+   "quote_britannica": "For Juno ha-ving decided Jupiter, in scaling Enulflets to be born before Hercules, Jupiter expelled his retirement on Ates, as the author of that miichief; and threw her headlong from heaven to earth, featuring the floodal never return children again",
+   "quote_wikipedia": "Zeus blamed Ate for clouding his mind causing him not to see Hera's deception. In great anger Zeus grabbed Ate by the hair and flung her from Mount Olympus, and thereby Ate came to inhabit the \"fields of men\"."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Ate is the goddess of mischief in Pagan theology",
+   "tag": "renamed",
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+  },
+  {
+   "claim": "Ate was the daughter of Jupiter",
+   "tag": "enduring",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+  },
+  {
+   "claim": "Ate was cast down from heaven at the birth of Hercules",
+   "tag": "enduring",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Ate was banished from Olympus by Zeus for blinding him to Hera 's trickery denying Heracles his birthright."
+  },
+  {
+   "claim": "Jupiter expelled Ate because Juno had decided that Eurystheus should be born before Hercules",
+   "tag": "enduring",
+   "quote_britannica": "For Juno ha-ving decided Jupiter, in scaling Enulflets to be born before Hercules, Jupiter expelled his retirement on Ates, as the author of that miichief; and threw her headlong from heaven to earth, featuring the floodal never return children again",
+   "quote_wikipedia": "According to Agamemnon, when Alcmene was about to give birth to Zeus's son Heracles, Zeus, in his great pride, boasted that on that day would be born a man, of Zeus's blood, who would be king of the Argives. But Hera tricked Zeus into swearing an unbreakable oath such that whatever man, of Zeus's blood, born that day would be king. Then Hera delayed the birth of Heracles, and caused Eurystheus, the great-grandson of Zeus, to be born prematurely, and thus Heracles lost the birthright Zeus had intended for him."
+  },
+  {
+   "claim": "Jupiter threw Ate headlong from heaven to earth and she would never return",
+   "tag": "enduring",
+   "quote_britannica": "Jupiter expelled his retirement on Ates, as the author of that miichief; and threw her headlong from heaven to earth, featuring the floodal never return children again",
+   "quote_wikipedia": "So said he, and whirling her in his hand flung her from the starry heaven, and quickly she came to the tilled fields of men."
+  },
+  {
+   "claim": "The name of the goddess comes from a Greek word meaning to hurt",
+   "tag": "renamed",
+   "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\"."
+  },
+  {
+   "claim": "Her being the daughter of Jupiter means that no evil happens to us but by the permissive providence",
+   "tag": "dropped",
+   "quote_britannica": "Her being the daughter of Jupiter means, according to mythologiils, has no evil happens to us but by the permitief providence, and her healthment to earth denotes the terrible effects of divine jul-tice among men.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Her banishment to earth denotes the terrible effects of divine justice among men",
+   "tag": "dropped",
+   "quote_britannica": "Her being the daughter of Jupiter means, according to mythologiils, has no evil happens to us but by the permitief providence, and her healthment to earth denotes the terrible effects of divine jul-tice among men.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "goddels of mithief",
+   "new": "personification of moral blindness and error",
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+  },
+  {
+   "old": "Jupiter",
+   "new": "Zeus",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+  },
+  {
+   "old": "Hercules",
+   "new": "Heracles",
+   "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+   "quote_wikipedia": "Ate was banished from Olympus by Zeus for blinding him to Hera 's trickery denying Heracles his birthright."
+  },
+  {
+   "old": "Pagan theology",
+   "new": "Greek mythology",
+   "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+   "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+  },
+  {
+   "old": "to hart",
+   "new": "to hurt",
+   "quote_britannica": "The name of the goddels comes from stars, men, to hart.",
+   "quote_wikipedia": "The meaning of her name, the Greek word atē (ἄτη), is difficult to define. Atē is a verbal noun of the verb aáō (ἀάω). According to The Cambridge Greek Lexicon, aáō means to \"lead astray\", \"befuddle\", \"blind\", or \"delude\", while ἄτη can mean: (1) the state of \"delusion, infatuation (inflicted on a person's mind by a god, esp Zeus)\", (2) \"reckless behavior... recklessness, folly\", and (3) \"ruin, calamity, harm\"."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Hesiod's account of Ate as daughter of Eris and her siblings",
+   "quote_wikipedia": "Hesiod presented Ate as one of the several offspring of Eris, all of whom were personifications representing some of the many harms which can arise out of discord and strife. Hesiod particular associates Ate with her sister Dysnomia (Lawlessness). While listing the children of Eris, he lists both on the same line (230) of his Theogony and says they are \"much like one another\"."
+  },
+  {
+   "topic": "Ate's role in Homer's Iliad, including the parable of Prayers and Book 19 speech",
+   "quote_wikipedia": "In Homer, atē is something inflicted by the gods; it causes delusion, then folly, then disaster. Ate, as the personification of atē, receives its fullest development in Homer 's Iliad, his epic poem about the Trojan War. However, to what extent Homer may have considered Ate to be an actual divinity as opposed to a mere allegory is unclear."
+  },
+  {
+   "topic": "Ate in Aeschylus's Oresteia and connection to Helen and Clytemnestra",
+   "quote_wikipedia": "Ate also appears as an agent of Zeus' justice in Aeschylus 's tragic trilogy the Oresteia. In Agamemnon, the first play of the trilogy, Ate is linked with Helen of Troy, and Agamemnon's wife Clytemnestra, both of whom act as agents of Zeus' retribution."
+  },
+  {
+   "topic": "The landing place of Ate in Phrygia and the founding of Troy",
+   "quote_wikipedia": "According to the mythographer Apollodorus, when Ate was thrown down by Zeus, Ate landed in Phrygia at a place called \"the hill of the Phrygian Ate\", where the city of Troy was founded."
+  },
+  {
+   "topic": "Ate as an agent of Zeus' divine retribution and justice",
+   "quote_wikipedia": "Ate (or the impersonal atē) is often referred to as the agent (or instrument) of Zeus' divine retribution. In the Iliad, Zeus is begged to send Ate so that the denier of \"Prayers... may fall and pay full recompense.\""
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 114,
+   "edits_per_100_words": 0.88
+  },
+  "lexical": {
+   "renamed_share": 0.25,
+   "term_pairs": [
+    {
+     "old": "goddels of mithief",
+     "new": "personification of moral blindness and error"
+    },
+    {
+     "old": "Jupiter",
+     "new": "Zeus"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Hercules",
+     "new": "Heracles"
+    },
+    {
+     "old": "Pagan theology",
+     "new": "Greek mythology"
+    },
+    {
+     "old": "to hart",
+     "new": "to hurt"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Hesiod's account of Ate as daughter of Eris and her siblings",
+    "Ate's role in Homer's Iliad, including the parable of Prayers and Book 19 speech",
+    "Ate in Aeschylus's Oresteia and connection to Helen and Clytemnestra",
+    "The landing place of Ate in Phrygia and the founding of Troy",
+    "Ate as an agent of Zeus' divine retribution and justice"
+   ]
+  },
+  "enduring_share": 0.5,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 2,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

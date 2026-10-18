@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:251:1",
+ "cite_britannica": "[B:251:1]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:251",
+ "row_index": 251,
+ "image_sha256": "69952e7c4a0f40267d357d04308f674155b3ab206ce8f2f4887124ce481f8c1d",
+ "headword": "SWIVELS",
+ "topic_hint": null,
+ "wiki_page_id": "1933308",
+ "wiki_revision_id": "1351532151",
+ "wiki_title": "Swivel",
+ "wiki_url": "https://en.wikipedia.org/wiki/Swivel",
+ "text_sha256": "3a184ad03e1ab7ac049483c110e17d6723cba04b8e876b38b6ed1689786e231f",
+ "cite_wikipedia": "[W:1933308:1351532151]",
+ "rerank_logit": -7.314892,
+ "rerank_margin": 0.951624,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2140,
+  "prompt_tokens": 1450,
+  "total_tokens": 3590,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 993,
+ "article_chars_used": 3111,
+ "article_chars_total": 3111,
+ "similarities": [
+  {
+   "point": "Both describe a swivel as a device that allows rotation or turning.",
+   "quote_britannica": "SWIVELS, a kind of ring made to turn round in a fluids, or other ring.",
+   "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+  },
+  {
+   "point": "Both describe a cylindrical rod or pivot that turns within a support.",
+   "quote_britannica": "of which the lowest treminutes in a cylindrical pivot rolling in the locket, fo as to support the weight of the canon.",
+   "quote_wikipedia": "A common design for a swivel is a cylindrical rod that can turn freely within a support structure."
+  },
+  {
+   "point": "Both mention nautical applications of swivels.",
+   "quote_britannica": "and is fixed in a locked on the top of the ship's ride, then, or how, and also in her tops.",
+   "quote_wikipedia": "Swivels are also used in the nautical sector as an element of the anchor rode and in a boat mooring systems."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes swivels as rings turning in fluids, while Wikipedia describes them as connections allowing rotation.",
+   "quote_britannica": "SWIVELS, a kind of ring made to turn round in a fluids, or other ring.",
+   "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+  },
+  {
+   "point": "Britannica mentions a hybrid frame and iron heads for directing the gun, while Wikipedia discusses anchor swivels and corrosion.",
+   "quote_britannica": "By means of this frame, which called the hybrid, and as iron heads on its cafsible, the game be directed by the head to any object.",
+   "quote_wikipedia": "The biggest concern about anchor swivels is that they might introduce a weak link to the rode."
+  },
+  {
+   "point": "Britannica focuses on military use in ship tops, while Wikipedia covers civilian uses like chairs and casters.",
+   "quote_britannica": "It is therefore very necellary in the tops, particularly when loaded with multiclusls, to fire down on the upper decks of the shelter in an area.",
+   "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A swivel is a kind of ring made to turn round in a fluid or other ring.",
+   "tag": "enduring",
+   "quote_britannica": "SWIVELS, a kind of ring made to turn round in a fluids, or other ring.",
+   "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+  },
+  {
+   "claim": "A swivel can be a cylindrical pivot rolling in a support to bear weight.",
+   "tag": "enduring",
+   "quote_britannica": "of which the lowest treminutes in a cylindrical pivot rolling in the locket, fo as to support the weight of the canon.",
+   "quote_wikipedia": "A common design for a swivel is a cylindrical rod that can turn freely within a support structure."
+  },
+  {
+   "claim": "Swivels are used on ships in the tops for artillery.",
+   "tag": "enduring",
+   "quote_britannica": "and is fixed in a locked on the top of the ship's ride, then, or how, and also in her tops.",
+   "quote_wikipedia": "Swivels are also used in the nautical sector as an element of the anchor rode and in a boat mooring systems."
+  },
+  {
+   "claim": "A frame allows the gun to be directed to any object.",
+   "tag": "superseded",
+   "quote_britannica": "By means of this frame, which called the hybrid, and as iron heads on its cafsible, the game be directed by the head to any object.",
+   "quote_wikipedia": "A swivel joint for a pipe is often a threaded connection in between which at least one of the pipes is curved, often at an angle of 45 or 90 degrees."
+  },
+  {
+   "claim": "Swivels are necessary in the tops to fire down on upper decks.",
+   "tag": "dropped",
+   "quote_britannica": "It is therefore very necellary in the tops, particularly when loaded with multiclusls, to fire down on the upper decks of the shelter in an area.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "ring",
+   "new": "connection",
+   "quote_britannica": "SWIVELS, a kind of ring made to turn round in a fluids, or other ring.",
+   "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+  },
+  {
+   "old": "cylindrical pivot",
+   "new": "cylindrical rod",
+   "quote_britannica": "of which the lowest treminutes in a cylindrical pivot rolling in the locket, fo as to support the weight of the canon.",
+   "quote_wikipedia": "A common design for a swivel is a cylindrical rod that can turn freely within a support structure."
+  },
+  {
+   "old": "hybrid",
+   "new": "frame",
+   "quote_britannica": "By means of this frame, which called the hybrid, and as iron heads on its cafsible, the game be directed by the head to any object.",
+   "quote_wikipedia": "The rod is usually prevented from slipping out by a nut, washer or thickening of the rod."
+  },
+  {
+   "old": "ship's ride",
+   "new": "boat",
+   "quote_britannica": "and is fixed in a locked on the top of the ship's ride, then, or how, and also in her tops.",
+   "quote_wikipedia": "Swivels are also used in the nautical sector as an element of the anchor rode and in a boat mooring systems."
+  },
+  {
+   "old": "tops",
+   "new": "nautical sector",
+   "quote_britannica": "It is therefore very necellary in the tops, particularly when loaded with multiclusls, to fire down on the upper decks of the shelter in an area.",
+   "quote_wikipedia": "Swivels are also used in the nautical sector as an element of the anchor rode and in a boat mooring systems."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Swivel joint for pipes",
+   "quote_wikipedia": "A swivel joint for a pipe is often a threaded connection in between which at least one of the pipes is curved, often at an angle of 45 or 90 degrees."
+  },
+  {
+   "topic": "Anchor swivel uses and concerns",
+   "quote_wikipedia": "The biggest concern about anchor swivels is that they might introduce a weak link to the rode."
+  },
+  {
+   "topic": "Corrosion in stainless steel swivels",
+   "quote_wikipedia": "The chromium in stainless steel creates a passivation layer on the surface that protects the steel from rusting."
+  },
+  {
+   "topic": "Threaded shaft and weld issues",
+   "quote_wikipedia": "In come cases the shaft is threaded with a nut welded onto it to hold the two bits together."
+  },
+  {
+   "topic": "Lateral loads on anchor swivels",
+   "quote_wikipedia": "When a boat swings on a well-embedded anchor, this can cause strong lateral loads on the swivel, causing its jaws to be pried open - thus disconnecting the chain from the swivel."
+  }
+ ],
+ "rejected": [
+  {
+   "section": "similarities",
+   "item": {
+    "point": "Both mention that swivels are used with guns or cannons.",
+    "quote_britannica": "Swivet-Canonas, is a fault piece of artillery belonging to a filing of way which carries a flux of half a pound.",
+    "quote_wikipedia": "A swivel is a connection that allows the connected object, such as a gun, chair, swivel caster, or an anchor rode to rotate horizontally or vertically."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "differences",
+   "item": {
+    "point": "Britannica describes a specific cannon mounting on ships, while Wikipedia describes general swivel designs.",
+    "quote_britannica": "Swivet-Canonas, is a fault piece of artillery belonging to a filing of way which carries a flux of half a pound, and is fixed in a locked on the top of the ship's ride, then, or how, and also in her tops.",
+    "quote_wikipedia": "A common design for a swivel is a cylindrical rod that can turn freely within a support structure. The rod is usually prevented from slipping out by a nut, washer or thickening of the rod."
+   },
+   "reason": "quote_britannica not found in entry text"
+  },
+  {
+   "section": "claims",
+   "item": {
+    "claim": "The piece carries a flux of half a pound.",
+    "tag": "dropped",
+    "quote_britannica": "Swivet-Canonas, is a fault piece of artillery belonging to a filing of way which carries a flux of half a pound, and is fixed in a locked on the top of the ship's ride, then, or how, and also in her tops.",
+    "quote_wikipedia": null
+   },
+   "reason": "quote_britannica not found in entry text"
+  }
+ ],
+ "quote_check": {
+  "kept": 21,
+  "rejected": 3
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 3,
+   "words": 191,
+   "edits_per_100_words": 1.57
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "ring",
+     "new": "connection"
+    },
+    {
+     "old": "cylindrical pivot",
+     "new": "cylindrical rod"
+    },
+    {
+     "old": "hybrid",
+     "new": "frame"
+    },
+    {
+     "old": "ship's ride",
+     "new": "boat"
+    },
+    {
+     "old": "tops",
+     "new": "nautical sector"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.2
+  },
+  "coverage": {
+   "dropped_share": 0.2,
+   "wiki_only_topics": [
+    "Swivel joint for pipes",
+    "Anchor swivel uses and concerns",
+    "Corrosion in stainless steel swivels",
+    "Threaded shaft and weld issues",
+    "Lateral loads on anchor swivels"
+   ]
+  },
+  "enduring_share": 0.6,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 1
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

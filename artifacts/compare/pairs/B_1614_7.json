@@ -1,0 +1,142 @@
+{
+ "entry_id": "B:1614:7",
+ "cite_britannica": "[B:1614:7]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1614",
+ "row_index": 1614,
+ "image_sha256": "ea352b487d650c713a3e6bdd8e4bc1ded85e0d7558c3fa1d9cdbce89abc38ca3",
+ "headword": "THORAX",
+ "topic_hint": null,
+ "wiki_page_id": "262601",
+ "wiki_revision_id": "1348986839",
+ "wiki_title": "Thorax",
+ "wiki_url": "https://en.wikipedia.org/wiki/Thorax",
+ "text_sha256": "a6aac0b89ae2c1fce1ce7ecca6ca4c1a144646cd9b1d64115d7e9ad2a32386a0",
+ "cite_wikipedia": "[W:262601:1348986839]",
+ "rerank_logit": 3.497211,
+ "rerank_margin": 3.435724,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 968,
+  "prompt_tokens": 2699,
+  "total_tokens": 3667,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 40,
+ "article_chars_used": 10000,
+ "article_chars_total": 10308,
+ "similarities": [
+  {
+   "point": "Both define the thorax as the body region between the neck and the abdomen.",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "The thorax (pl.: thoraces or thoraxes) or chest is a part of the anatomy of mammals and other tetrapod animals located between the neck and the abdomen."
+  },
+  {
+   "point": "Both identify the thorax as one of the three main body divisions in insects.",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "In insects, crustaceans, and the extinct trilobites, the thorax is one of the three main divisions of the body, each in turn composed of multiple segments."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica is a brief cross-reference, while Wikipedia provides a detailed anatomical description.",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "The human thorax includes the thoracic cavity and the thoracic wall. It contains organs including the heart, lungs, and thymus gland, as well as muscles and various other internal structures."
+  },
+  {
+   "point": "Wikipedia includes extensive information on chest trauma and diseases, which Britannica does not mention.",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "Injury to the chest (also referred to as chest trauma, thoracic injury, or thoracic trauma) results in up to 1 / 4 of all deaths due to trauma in the United States."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The thorax is a part of anatomy.",
+   "tag": "enduring",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "The thorax (pl.: thoraces or thoraxes) or chest is a part of the anatomy of mammals and other tetrapod animals located between the neck and the abdomen."
+  },
+  {
+   "claim": "The thorax is located between the neck and the abdomen.",
+   "tag": "enduring",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "The thorax (pl.: thoraces or thoraxes) or chest is a part of the anatomy of mammals and other tetrapod animals located between the neck and the abdomen."
+  },
+  {
+   "claim": "The thorax is one of the three main divisions of the body in insects, crustaceans, and trilobites.",
+   "tag": "enduring",
+   "quote_britannica": "THORAX, in anatomy. See Anatomy, p. 277.",
+   "quote_wikipedia": "In insects, crustaceans, and the extinct trilobites, the thorax is one of the three main divisions of the body, each in turn composed of multiple segments."
+  }
+ ],
+ "term_pairs": [],
+ "wiki_only_topics": [
+  {
+   "topic": "Human thoracic anatomy and organs",
+   "quote_wikipedia": "The human thorax includes the thoracic cavity and the thoracic wall. It contains organs including the heart, lungs, and thymus gland, as well as muscles and various other internal structures."
+  },
+  {
+   "topic": "Etymology of the word thorax",
+   "quote_wikipedia": "The word thorax comes from the Greek θώραξ thṓrax \" breastplate, cuirass, corslet \" via Latin: thorax."
+  },
+  {
+   "topic": "Chest trauma and diseases",
+   "quote_wikipedia": "Injury to the chest (also referred to as chest trauma, thoracic injury, or thoracic trauma) results in up to 1 / 4 of all deaths due to trauma in the United States."
+  },
+  {
+   "topic": "Insect thoracic segments and structure",
+   "quote_wikipedia": "In most insects, the thorax itself is composed of three segments; the prothorax, the mesothorax, and the metathorax."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 11,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 7,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "Human thoracic anatomy and organs",
+    "Etymology of the word thorax",
+    "Chest trauma and diseases",
+    "Insect thoracic segments and structure"
+   ]
+  },
+  "enduring_share": 1.0,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 3,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

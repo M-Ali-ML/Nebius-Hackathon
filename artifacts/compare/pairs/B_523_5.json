@@ -1,0 +1,212 @@
+{
+ "entry_id": "B:523:5",
+ "cite_britannica": "[B:523:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:523",
+ "row_index": 523,
+ "image_sha256": "a583606e375ad92d79af8ad8b4fabc4fa22632e6ccbeea6e20f0fa47a27e2858",
+ "headword": "ENDYMON",
+ "topic_hint": null,
+ "wiki_page_id": "739097",
+ "wiki_revision_id": "1344055979",
+ "wiki_title": "Endymion (mythology)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Endymion_(mythology)",
+ "text_sha256": "ae97a5f92599a754030475ac4b0c6f79d5f12c4bf30f13d068d0658031328aaf",
+ "cite_wikipedia": "[W:739097:1344055979]",
+ "rerank_logit": -7.468516,
+ "rerank_margin": 1.726366,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1313,
+  "prompt_tokens": 2446,
+  "total_tokens": 3759,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 373,
+ "article_chars_used": 7144,
+ "article_chars_total": 7144,
+ "similarities": [
+  {
+   "point": "Endymion's association with Mount Latmus in Caria",
+   "quote_britannica": "he retired into Caria to mount Lat-mos",
+   "quote_wikipedia": "said to reside on Mount Latmus in Caria"
+  },
+  {
+   "point": "Endymion's study of celestial bodies",
+   "quote_britannica": "where he sluded the bewenly bodies",
+   "quote_wikipedia": "first human to observe the movements of the moon"
+  },
+  {
+   "point": "Endymion's connection to the moon",
+   "quote_britannica": "but chiefly the moo's which gave rise to the false of the poets",
+   "quote_wikipedia": "the role of lover of Selene, the Moon goddess"
+  },
+  {
+   "point": "Endymion sleeping on a hill",
+   "quote_britannica": "as he lay alleep upon the top of that hill",
+   "quote_wikipedia": "Endymion looked when he was asleep in the cave on Mount Latmus"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Endymion's kingship and expulsion",
+   "quote_britannica": "the 1zth king of Elia. Being expelled his kingdom",
+   "quote_wikipedia": "was variously a handsome Aeolian shepherd, hunter, or king who was said to rule and live at Olympia in Elis"
+  },
+  {
+   "point": "Cause of the myth about Endymion and the moon",
+   "quote_britannica": "which gave rise to the false of the poets, that he was beloved by the moo",
+   "quote_wikipedia": "Pliny the Elder mentions Endymion as the first human to observe the movements of the moon, which (according to Pliny) accounts for Endymion's infatuation with its tutelary goddess"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Endymion was the 12th king of Elia",
+   "tag": "superseded",
+   "quote_britannica": "the 1zth king of Elia",
+   "quote_wikipedia": "was variously a handsome Aeolian shepherd, hunter, or king who was said to rule and live at Olympia in Elis"
+  },
+  {
+   "claim": "Endymion was expelled from his kingdom",
+   "tag": "dropped",
+   "quote_britannica": "Being expelled his kingdom",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Endymion retired to Mount Latmus in Caria",
+   "tag": "enduring",
+   "quote_britannica": "he retired into Caria to mount Lat-mos",
+   "quote_wikipedia": "said to reside on Mount Latmus in Caria"
+  },
+  {
+   "claim": "Endymion studied the heavenly bodies",
+   "tag": "enduring",
+   "quote_britannica": "where he sluded the bewenly bodies",
+   "quote_wikipedia": "first human to observe the movements of the moon"
+  },
+  {
+   "claim": "The moon visited Endymion every night while he slept",
+   "tag": "enduring",
+   "quote_britannica": "who visited him every night as he lay alleep upon the top of that hill",
+   "quote_wikipedia": "Every night, Selene visited him where he slept"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Elia",
+   "new": "Elis",
+   "quote_britannica": "the 1zth king of Elia",
+   "quote_wikipedia": "rule and live at Olympia in Elis"
+  },
+  {
+   "old": "Lat-mos",
+   "new": "Mount Latmus",
+   "quote_britannica": "he retired into Caria to mount Lat-mos",
+   "quote_wikipedia": "said to reside on Mount Latmus in Caria"
+  },
+  {
+   "old": "bewenly bodies",
+   "new": "movements of the moon",
+   "quote_britannica": "where he sluded the bewenly bodies",
+   "quote_wikipedia": "first human to observe the movements of the moon"
+  },
+  {
+   "old": "moo",
+   "new": "Selene",
+   "quote_britannica": "that he was beloved by the moo",
+   "quote_wikipedia": "lover of Selene, the Moon goddess"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Confusion over Endymion's identity",
+   "quote_wikipedia": "There is confusion over Endymion's identity, as some sources suppose that he was, or was related to, the prince of Elis, and others suggest he was a shepherd from Caria."
+  },
+  {
+   "topic": "Endymion's tomb locations",
+   "quote_wikipedia": "Consequently, Endymion's tomb has been attributed to two different sites. The people of Heracleia claimed that he was laid to rest on Mount Latmus, while the Eleans declared that it was at Olympia."
+  },
+  {
+   "topic": "Selene's request for eternal youth",
+   "quote_wikipedia": "she asked her cousin, Zeus, to grant him eternal youth so that he would never leave her."
+  },
+  {
+   "topic": "Fifty daughters of Endymion and Selene",
+   "quote_wikipedia": "by him had fifty daughters who are equated by some scholars (such as James George Frazer or H. J. Rose) with the fifty months of the Olympiad."
+  },
+  {
+   "topic": "Modern reworkings of the myth",
+   "quote_wikipedia": "The myth surrounding Endymion has been expanded and reworked during the modern period by figures like Henry Wadsworth Longfellow and John Keats (in his 1818 narrative poem Endymion)."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 20,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 70,
+   "edits_per_100_words": 1.43
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "Lat-mos",
+     "new": "Mount Latmus"
+    },
+    {
+     "old": "bewenly bodies",
+     "new": "movements of the moon"
+    },
+    {
+     "old": "moo",
+     "new": "Selene"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Elia",
+     "new": "Elis"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.2
+  },
+  "coverage": {
+   "dropped_share": 0.2,
+   "wiki_only_topics": [
+    "Confusion over Endymion's identity",
+    "Endymion's tomb locations",
+    "Selene's request for eternal youth",
+    "Fifty daughters of Endymion and Selene",
+    "Modern reworkings of the myth"
+   ]
+  },
+  "enduring_share": 0.6,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 1,
+   "dropped": 1
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

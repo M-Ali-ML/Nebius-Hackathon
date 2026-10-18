@@ -1,0 +1,192 @@
+{
+ "entry_id": "B:2464:8",
+ "cite_britannica": "[B:2464:8]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2464",
+ "row_index": 2464,
+ "image_sha256": "24f450326eee13b008306d2b355bd49b295db96603186268db20b85552cf958e",
+ "headword": "CABIRI",
+ "topic_hint": null,
+ "wiki_page_id": "82889",
+ "wiki_revision_id": "1348781554",
+ "wiki_title": "Cabeiri",
+ "wiki_url": "https://en.wikipedia.org/wiki/Cabeiri",
+ "text_sha256": "60eb0b5a6f4e5bcfcc956e9324658580fed002badcde342d53deb360ddeec342",
+ "cite_wikipedia": "[W:82889:1348781554]",
+ "rerank_logit": -7.950317,
+ "rerank_margin": 1.886491,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1668,
+  "prompt_tokens": 3020,
+  "total_tokens": 4688,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 504,
+ "article_chars_used": 10000,
+ "article_chars_total": 10347,
+ "similarities": [
+  {
+   "point": "Both texts state that the deities were worshipped at Thebes and Lemnos.",
+   "quote_britannica": "celebrated in Thebes and Lemnos, but especially in Samotbracis",
+   "quote_wikipedia": "centered in the north Aegean Islands of Lemnos and possibly Samothrace —at the Samothrace temple complex —and at Thebes."
+  },
+  {
+   "point": "Both texts mention that initiates were thought to receive protection from dangers.",
+   "quote_britannica": "All who were initiated into the welfare of the fests, gods, were fought to be featured thereby from florms at tea",
+   "quote_wikipedia": "Samothrace offered an initiatory mystery, which promised safety and prosperity to seamen."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica describes the festival as being in honour of the cabrii, while Wikipedia describes the Cabeiri as enigmatic chthonic deities.",
+   "quote_britannica": "fellirals in honour of the cabrii, celebrated in Thebes and Lemnos",
+   "quote_wikipedia": "were a group of enigmatic chthonic deities."
+  },
+  {
+   "point": "Britannica describes an initiation rite involving a throne and riband, whereas Wikipedia states that little is known about the secret initiation ceremonies.",
+   "quote_britannica": "The economy of imitation was performed by placing the candidate, crowned with white-hemches, and grilled about the hons with a purple riband, on a kind of throne",
+   "quote_wikipedia": "due to the secret nature of mystery cults in the ancient world little survives to indicate what was involved in these initiation ceremonies"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The cult was celebrated in Thebes and Lemnos.",
+   "tag": "enduring",
+   "quote_britannica": "celebrated in Thebes and Lemnos, but especially in Samotbracis",
+   "quote_wikipedia": "centered in the north Aegean Islands of Lemnos and possibly Samothrace —at the Samothrace temple complex —and at Thebes."
+  },
+  {
+   "claim": "The cult was especially celebrated in Samothrace.",
+   "tag": "enduring",
+   "quote_britannica": "celebrated in Thebes and Lemnos, but especially in Samotbracis, an island conferred to the cabin.",
+   "quote_wikipedia": "centered in the north Aegean Islands of Lemnos and possibly Samothrace —at the Samothrace temple complex —and at Thebes."
+  },
+  {
+   "claim": "Initiates were thought to be protected from storms at sea and other dangers.",
+   "tag": "enduring",
+   "quote_britannica": "All who were initiated into the welfare of the fests, gods, were fought to be featured thereby from florms at tea, and all other dangers.",
+   "quote_wikipedia": "Samothrace offered an initiatory mystery, which promised safety and prosperity to seamen."
+  },
+  {
+   "claim": "The initiation involved placing a crowned candidate on a throne with a purple riband.",
+   "tag": "dropped",
+   "quote_britannica": "The economy of imitation was performed by placing the candidate, crowned with white-hemches, and grilled about the hons with a purple riband, on a kind of throne",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Priests and previously initiated persons surrounded the throne during the ceremony.",
+   "tag": "dropped",
+   "quote_britannica": "about which the priets, and prisons before initiated, denoted.",
+   "quote_wikipedia": null
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "cabrii",
+   "new": "Cabeiri",
+   "quote_britannica": "fellirals in honour of the cabrii, celebrated in Thebes and Lemnos",
+   "quote_wikipedia": "In Greek mythology, the Cabeiri or Cabiri / k ə ˈ b aɪ r iː / (Ancient Greek: Κάβειροι, romanized: Kábeiroi)"
+  },
+  {
+   "old": "Samotbracis",
+   "new": "Samothrace",
+   "quote_britannica": "celebrated in Thebes and Lemnos, but especially in Samotbracis, an island conferred to the cabin.",
+   "quote_wikipedia": "centered in the north Aegean Islands of Lemnos and possibly Samothrace —at the Samothrace temple complex —and at Thebes."
+  },
+  {
+   "old": "fests, gods",
+   "new": "Cabeiri",
+   "quote_britannica": "All who were initiated into the welfare of the fests, gods, were fought to be featured thereby from florms at tea, and all other dangers.",
+   "quote_wikipedia": "In Greek mythology, the Cabeiri or Cabiri / k ə ˈ b aɪ r iː / (Ancient Greek: Κάβειροι, romanized: Kábeiroi), also transliterated Kabeiri or Kabiri, were a group of enigmatic chthonic deities."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Etymology and proposed linguistic origins of the name Cabeiri",
+   "quote_wikipedia": "In the past, the Semitic word kabir (\"great\") has been compared to Κάβειροι since at least Joseph Justus Scaliger in the sixteenth century, but nothing else seemed to point to a Semitic origin, until the idea of \"great\" gods expressed by the Semitic root kbr was definitively attested for North Syria in the thirteenth century BCE, in texts from Emar published by D. Arnaud in 1985–87."
+  },
+  {
+   "topic": "Specific names and genealogies of the Cabeiri",
+   "quote_wikipedia": "When represented as a pair of males and a pair of females the Cabeiri's most common names are Axiocersus and Cadmilus for the pair of males and Axierus and Axiocersa for the pair of females."
+  },
+  {
+   "topic": "Comparison with other mythological races such as the Telchines and Cyclopes",
+   "quote_wikipedia": "In myth, the Cabeiri bear many similarities to other fabulous races, such as the Telchines of Rhodes, the Cyclopes, the Dactyls, the Korybantes, and the Kuretes."
+  },
+  {
+   "topic": "Archaeological evidence and survival of the Lemnian cult through Hellenization",
+   "quote_wikipedia": "In Lemnos the cult of the Cabeiri survived, according to archaeological evidence, through the conquest: an ancient sanctuary dedicated to the Cabeiri is identifiable by traces of inscriptions, and seems to have survived the process of Hellenization."
+  },
+  {
+   "topic": "The Cabeiri at Thebes in Boeotia and associated votive finds",
+   "quote_wikipedia": "At Thebes in Boeotia, a sanctuary for the Cabeiri existed some miles east of the city. There are more varied finds than on Lemnos; they include many little bronze votive bulls and which carry on into Roman times, when the traveller Pausanias, always alert to the history of cults, learned that it was Demeter Kabeiriia who instigated the initiation cult there in the name of Prometheus and his son Aitnaios."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 83,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "fests, gods",
+     "new": "Cabeiri"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "cabrii",
+     "new": "Cabeiri"
+    },
+    {
+     "old": "Samotbracis",
+     "new": "Samothrace"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.4,
+   "wiki_only_topics": [
+    "Etymology and proposed linguistic origins of the name Cabeiri",
+    "Specific names and genealogies of the Cabeiri",
+    "Comparison with other mythological races such as the Telchines and Cyclopes",
+    "Archaeological evidence and survival of the Lemnian cult through Hellenization",
+    "The Cabeiri at Thebes in Boeotia and associated votive finds"
+   ]
+  },
+  "enduring_share": 0.6,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 5,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -1,0 +1,57 @@
+{
+ "entry_id": "P:2479",
+ "prompt_version": "compare-v2",
+ "reply": {
+  "id": "chatcmpl-b80c05629d457172",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\n  \"similarities\": [\n    {\n      \"point\": \"Both describe diligence as a legal process for debt recovery.\",\n      \"quote_britannica\": \"Actions of proving the tenor are, on account of their importance, appropriate to the court of Sellon\",\n      \"quote_wikipedia\": \"Diligence is a term in Scots law with no single definition but is commonly used to describe debt collection and debt recovery proceedings against a debtor by a creditor in Scottish courts.\"\n    },\n    {\n      \"point\": \"Both mention that diligence is executed by court officers.\",\n      \"quote_britannica\": \"Actions proceeded anciently upon brives lifting from the chancery, directed to the judiciary or judge-ordinary, who tried the matter by a jury\",\n      \"quote_wikipedia\": \"Diligence is usually executed by Sheriff court officers but may also be carried out by messengers-at-arms.\"\n    },\n    {\n      \"point\": \"Both discuss the role of decrees in legal proceedings.\",\n      \"quote_britannica\": \"nor an action in which derece is pronounced, because it has got its full completion\",\n      \"quote_wikipedia\": \"Diligence for enforcement of a non-monetary obligation recognised by a court decree (pronounced 'Dee Cree', known in other jurisdictions as a court order)\"\n    },\n    {\n      \"point\": \"Both reference the historical development of legal procedures.\",\n      \"quote_britannica\": \"But fummonies were, immediately upon the infiltration of the college of Jultices, introduced in the place of brives.\",\n      \"quote_wikipedia\": \"The history of diligence is obscure, with the first substantial historical research carried out in the 18th century.\"\n    }\n  ],\n  \"differences\": [\n    {\n      \"point\": \"Britannica focuses on proving the tenor of lost writings, while Wikipedia focuses on debt collection.\",\n      \"quote_britannica\": \"Regularly, no deed can be served by this action, without other animals in writing, referring to that which is libelled\",\n      \"quote_wikipedia\": \"Diligence is a term in Scots law with no single definition but is commonly used to describe debt collection and debt recovery proceedings against a debtor by a creditor in Scottish courts.\"\n    },\n    {\n      \"point\": \"Britannica describes ancient brives, while Wikipedia describes modern statutory diligence.\",\n      \"quote_britannica\": \"Actions proceeded anciently upon brives lifting from the chancery, directed to the judiciary or judge-ordinary\",\n      \"quote_wikipedia\": \"There are many statutes dealing with the law of debt-related diligences, these include: Debtors (Scotland) Act 1987\"\n    },\n    {\n      \"point\": \"Britannica details inducie legator time limits, while Wikipedia details modern debtor protections.\",\n      \"quote_britannica\": \"The days indulged by law to a defender, between his citation and appearance, to prepare for his defense, are called inducie legator.\",\n      \"quote_wikipedia\": \"A debtor who is a natural person is entitled to receive a Debt Advice and Information Package when diligence proceedings are raised against him.\"\n    },\n    {\n      \"point\": \"Britannica discusses actions of multiple pointing, while Wikipedia discusses attachment of property.\",\n      \"quote_britannica\": \"The action of double or multiple pointing may be also reduced declaratory.\",\n      \"quote_wikipedia\": \"Attachment is a form of diligence that allows a creditor to seize and sell a debtor's corporeal moveable property\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"claim\": \"Actions of proving the tenor are appropriate to the court of Session.\",\n      \"tag\": \"enduring\",\n      \"quote_britannica\": \"Actions of proving the tenor are, on account of their importance, appropriate to the court of Sellon\",\n      \"quote_wikipedia\": \"The law of diligence is part of the law of actions in Scots private law.\"\n    },\n    {\n      \"claim\": \"Summonses replaced brives after the establishment of the College of Justice.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"But fummonies were, immediately upon the infiltration of the college of Jultices, introduced in the place of brives.\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Defenders within the kingdom are allowed seventy-one days for the first and second diets of appearance.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"I like to within the kingdom, seventy one and life days, for the lift and second diets of appearances, mult be allowed him for that purpose\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Defenders in Orkney or Zetland must be cited on forty days.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Defenders relating in Orkney or Zelians mult be cited on forty days.\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Spoilzies and ejections proceed on fifteen days.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Spuilzies and ejections proceed on fifteen days; wakenings\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"An action of transferment transfers an action against a deceased defender to their representative.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"An action of transferment is allo of this fort, whereby an action during the pendency of which the defender happens to die, is craved to be transferenced against his representative\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"A process of wakening applies when an action lies dormant for a year.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"An action is find to flew, when it lies over, not limited in for a year, in which case its effect is lafpend\",\n      \"quote_wikipedia\": null\n    },\n    {\n      \"claim\": \"Actions of unanfumng may be purified before any judge-ordinary.\",\n      \"tag\": \"dropped\",\n      \"quote_britannica\": \"Action of unanfumng may be purified before any judge-ordinary.\",\n      \"quote_wikipedia\": null\n    }\n  ],\n  \"term_pairs\": [\n    {\n      \"old\": \"Sellon\",\n      \"new\": \"Session\",\n      \"quote_britannica\": \"appropriate to the court of Sellon\",\n      \"quote_wikipedia\": \"Scottish courts.\"\n    },\n    {\n      \"old\": \"brives\",\n      \"new\": \"summonses\",\n      \"quote_britannica\": \"Actions proceeded anciently upon brives lifting from the chancery\",\n      \"quote_wikipedia\": \"But fummonies were, immediately upon the infiltration of the college of Jultices, introduced in the place of brives.\"\n    },\n    {\n      \"old\": \"derece\",\n      \"new\": \"decree\",\n      \"quote_britannica\": \"nor an action in which derece is pronounced\",\n      \"quote_wikipedia\": \"recognised by a court decree (pronounced 'Dee Cree'\"\n    },\n    {\n      \"old\": \"induicie legator\",\n      \"new\": \"days allowed for appearance\",\n      \"quote_britannica\": \"are called inducie legator.\",\n      \"quote_wikipedia\": \"Time to Pay Directions are available to debtors at the commencement of court proceedings\"\n    },\n    {\n      \"old\": \"unanfumng\",\n      \"new\": \"transumpt\",\n      \"quote_britannica\": \"Action of unanfumng may be purified before any judge-ordinary.\",\n      \"quote_wikipedia\": \"which we called transmpts, and acts as effoul us an extract from the register.\"\n    }\n  ],\n  \"wiki_only_topics\": [\n    {\n      \"topic\": \"Debt Arrangement Scheme (DAS)\",\n      \"quote_wikipedia\": \"A debtor can avoid diligence by entering into a debt arrangement scheme (DAS).\"\n    },\n    {\n      \"topic\": \"Time to Pay Directions\",\n      \"quote_wikipedia\": \"Another protection available to debtors are Time to Pay Directions.\"\n    },\n    {\n      \"topic\": \"Attachment of corporeal moveable property\",\n      \"quote_wikipedia\": \"Attachment is a form of diligence that allows a creditor to seize and sell a debtor's corporeal moveable property\"\n    },\n    {\n      \"topic\": \"Debt Advice and Information Package (DAIP)\",\n      \"quote_wikipedia\": \"A debtor who is a natural person is entitled to receive a Debt Advice and Information Package when diligence proceedings are raised against him.\"\n    },\n    {\n      \"topic\": \"Land attachment\",\n      \"quote_wikipedia\": \"The newest form of diligence, land attachment, will be introduced into Scots law when Part 4 of the Bankruptcy and Diligence (Scotland) Act 2007 is brought into force.\"\n    }\n  ]\n}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning_content": null
+    },
+    "stop_reason": null,
+    "token_ids": null,
+    "routed_experts": null
+   }
+  ],
+  "created": 1792325785,
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.1.dev1+g1bed5fc81-tp2-9705eecb",
+  "usage": {
+   "completion_tokens": 1948,
+   "prompt_tokens": 4183,
+   "total_tokens": 6131,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null,
+  "_seconds": 7.7
+ }
+}

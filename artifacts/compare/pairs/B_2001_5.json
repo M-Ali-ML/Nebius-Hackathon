@@ -1,0 +1,250 @@
+{
+ "entry_id": "B:2001:5",
+ "cite_britannica": "[B:2001:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2001",
+ "row_index": 2001,
+ "image_sha256": "93040a5ab3625efc0259c9878caea3e2285bc73aae0c1fda452f9f5198dedd67",
+ "headword": "SILLIUS TALIOLOS",
+ "topic_hint": null,
+ "wiki_page_id": "996527",
+ "wiki_revision_id": "1353828824",
+ "wiki_title": "Silius Italicus",
+ "wiki_url": "https://en.wikipedia.org/wiki/Silius_Italicus",
+ "text_sha256": "5270c816008e028b2f2920ee850cab8ee5ebba0c7e841c74b50f6741b6b8c0ef",
+ "cite_wikipedia": "[W:996527:1353828824]",
+ "rerank_logit": -3.975209,
+ "rerank_margin": 1.215575,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1793,
+  "prompt_tokens": 3099,
+  "total_tokens": 4892,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 1008,
+ "article_chars_used": 10000,
+ "article_chars_total": 10834,
+ "similarities": [
+  {
+   "point": "Both state the epic poem consists of 17 books.",
+   "quote_britannica": "author of an epic poem in 17 books",
+   "quote_wikipedia": "His surviving work is the 17-book Punica"
+  },
+  {
+   "point": "Both state the poem concerns the Second Punic War.",
+   "quote_britannica": "an hilloy of the second Ponte was",
+   "quote_wikipedia": "an epic poem about the Second Punic War"
+  },
+  {
+   "point": "Both state the poet was born during the reign of Tiberius.",
+   "quote_britannica": "He was born in the reign of Thierius",
+   "quote_wikipedia": "Tiberius Catius Asconius Silius Italicus (Latin:, c. 26 – c. 101 AD)"
+  },
+  {
+   "point": "Both state the poet was a renowned advocate/orator.",
+   "quote_britannica": "he became a celebrated advocate and molt accomplished senior",
+   "quote_wikipedia": "In early life Silius was a renowned forensic orator"
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica claims the poem is about a battle deciding the empire in favor of the Romans; Wikipedia states it is about the Second Punic War.",
+   "quote_britannica": "an hilloy of the second Ponte was, to famous for having decided the empire of the world in savour of the Romanes",
+   "quote_wikipedia": "His surviving work is the 17-book Punica, an epic poem about the Second Punic War"
+  },
+  {
+   "point": "Britannica claims the poet was born at Italica in Spain or Cerdinam in Italy; Wikipedia says his birthplace has not been securely identified.",
+   "quote_britannica": "whether he was born at Italica in Spain, or at Cerdinam in Italy",
+   "quote_wikipedia": "but his birthplace has not been securely identified"
+  },
+  {
+   "point": "Britannica claims the poet was an informer under Nero; Wikipedia states he was generally believed to have voluntarily become an informer under Nero.",
+   "quote_britannica": "He is field to",
+   "quote_wikipedia": "Silius was generally believed to have voluntarily and enthusiastically become an informer under Nero"
+  },
+  {
+   "point": "Britannica claims the poet was born in the reign of Tiberius; Wikipedia gives a birth range of c. 26 – c. 101 AD.",
+   "quote_britannica": "He was born in the reign of Thierius",
+   "quote_wikipedia": "Tiberius Catius Asconius Silius Italicus (Latin:, c. 26 – c. 101 AD)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The poet is an ancient Roman poet and author of an epic poem in 17 books.",
+   "tag": "enduring",
+   "quote_britannica": "an ancient Roman poet, and author of an epic poem in 17 books",
+   "quote_wikipedia": "His surviving work is the 17-book Punica"
+  },
+  {
+   "claim": "The poem contains an account of the second Punic War.",
+   "tag": "enduring",
+   "quote_britannica": "which con-tains an hilloy of the second Ponte was",
+   "quote_wikipedia": "an epic poem about the Second Punic War"
+  },
+  {
+   "claim": "The poem is famous for having decided the empire of the world in favor of the Romans.",
+   "tag": "superseded",
+   "quote_britannica": "to famous for having decided the empire of the world in savour of the Romanes",
+   "quote_wikipedia": "His surviving work is the 17-book Punica, an epic poem about the Second Punic War"
+  },
+  {
+   "claim": "He was born in the reign of Tiberius.",
+   "tag": "enduring",
+   "quote_britannica": "He was born in the reign of Thierius",
+   "quote_wikipedia": "Tiberius Catius Asconius Silius Italicus (Latin:, c. 26 – c. 101 AD)"
+  },
+  {
+   "claim": "He derived the name of Italica from the place of his birth.",
+   "tag": "dropped",
+   "quote_britannica": "is fogoped to have derived the name of Italica from the place of his birth",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "He was born at Italica in Spain or at Cerdinam in Italy.",
+   "tag": "dropped",
+   "quote_britannica": "whether he was born at Italica in Spain, or at Cerdinam in Italy",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "He applied himself to the law and became a celebrated advocate.",
+   "tag": "renamed",
+   "quote_britannica": "he applied himself to the bay; and, by a choi institution of Greece, succeeded fo well, like he became a celebrated advocate",
+   "quote_wikipedia": "In early life Silius was a renowned forensic orator"
+  },
+  {
+   "claim": "He was possessed of the confidence of the highest in the republic when Nero died.",
+   "tag": "superseded",
+   "quote_britannica": "even to the confidity, of which he was poffied when Nono died",
+   "quote_wikipedia": "He was consul in the year of Nero's death (AD 68)"
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "hilloy",
+   "new": "Punica",
+   "quote_britannica": "which con-tains an hilloy of the second Ponte was",
+   "quote_wikipedia": "His surviving work is the 17-book Punica"
+  },
+  {
+   "old": "second Ponte",
+   "new": "Second Punic War",
+   "quote_britannica": "which con-tains an hilloy of the second Ponte was",
+   "quote_wikipedia": "an epic poem about the Second Punic War"
+  },
+  {
+   "old": "bay",
+   "new": "law",
+   "quote_britannica": "he applied himself to the bay",
+   "quote_wikipedia": "In early life Silius was a renowned forensic orator"
+  },
+  {
+   "old": "Thierius",
+   "new": "Tiberius",
+   "quote_britannica": "He was born in the reign of Thierius",
+   "quote_wikipedia": "Tiberius Catius Asconius Silius Italicus"
+  },
+  {
+   "old": "Nono",
+   "new": "Nero",
+   "quote_britannica": "when Nono died",
+   "quote_wikipedia": "year of Nero's death (AD 68)"
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Sources for the life of Silius Italicus",
+   "quote_wikipedia": "The sources for the life of Silius Italicus are primarily Letter 3.7 of Pliny the Younger"
+  },
+  {
+   "topic": "Silius as an informer under Nero",
+   "quote_wikipedia": "Silius was generally believed to have voluntarily and enthusiastically become an informer under Nero"
+  },
+  {
+   "topic": "Silius as proconsul of Asia",
+   "quote_wikipedia": "Silius became proconsul of Asia AD 77-78 as attested in an inscription from Aphrodisias"
+  },
+  {
+   "topic": "Silius's retirement and villas",
+   "quote_wikipedia": "As he aged, he moved permanently to his villas in Campania"
+  },
+  {
+   "topic": "Silius's suicide",
+   "quote_wikipedia": "Stricken by an incurable tumour after the age of 75, he starved himself to death around 101 AD"
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 26,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 186,
+   "edits_per_100_words": 0.54
+  },
+  "lexical": {
+   "renamed_share": 0.125,
+   "term_pairs": [
+    {
+     "old": "hilloy",
+     "new": "Punica"
+    },
+    {
+     "old": "second Ponte",
+     "new": "Second Punic War"
+    },
+    {
+     "old": "bay",
+     "new": "law"
+    },
+    {
+     "old": "Nono",
+     "new": "Nero"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Thierius",
+     "new": "Tiberius"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.25
+  },
+  "coverage": {
+   "dropped_share": 0.25,
+   "wiki_only_topics": [
+    "Sources for the life of Silius Italicus",
+    "Silius as an informer under Nero",
+    "Silius as proconsul of Asia",
+    "Silius's retirement and villas",
+    "Silius's suicide"
+   ]
+  },
+  "enduring_share": 0.375,
+  "claim_counts": {
+   "enduring": 3,
+   "renamed": 1,
+   "superseded": 2,
+   "dropped": 2
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

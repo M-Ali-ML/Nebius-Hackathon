@@ -1,0 +1,230 @@
+{
+ "entry_id": "B:560:2",
+ "cite_britannica": "[B:560:2]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560",
+ "row_index": 560,
+ "image_sha256": "c458f594fc79392e42082ac7a8c338082e8d5e2c2c79dd2f49f1940b91144300",
+ "headword": "AMHURIST",
+ "topic_hint": null,
+ "wiki_page_id": "2305125",
+ "wiki_revision_id": "1338635003",
+ "wiki_title": "Nicholas Amhurst",
+ "wiki_url": "https://en.wikipedia.org/wiki/Nicholas_Amhurst",
+ "text_sha256": "18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9",
+ "cite_wikipedia": "[W:2305125:1338635003]",
+ "rerank_logit": -5.673667,
+ "rerank_margin": 4.178508,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 2203,
+  "prompt_tokens": 1580,
+  "total_tokens": 3783,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 973,
+ "article_chars_used": 3425,
+ "article_chars_total": 3425,
+ "similarities": [
+  {
+   "point": "Both identify Amhurst as an English poet and political writer.",
+   "quote_britannica": "AMHURIST (Nicola); an English poet and political writer,",
+   "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+  },
+  {
+   "point": "Both state he was born at Marden in Kent.",
+   "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+   "quote_wikipedia": "Amhurst was born at Marden, Kent."
+  },
+  {
+   "point": "Both state he was connected to St John's College, Oxford.",
+   "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+   "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+  },
+  {
+   "point": "Both state he died in 1742.",
+   "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+   "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Britannica gives no birth date, while Wikipedia gives 16 October 1697.",
+   "quote_britannica": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent",
+   "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+  },
+  {
+   "point": "Britannica says he was accepted for irregularity of conduct, while Wikipedia says he was expelled for irregularities of conduct.",
+   "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+   "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct,"
+  },
+  {
+   "point": "Britannica mentions a poem called Coluba Britainans, while Wikipedia mentions Oculus Britanniæ.",
+   "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+   "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+  },
+  {
+   "point": "Britannica says he died of a broken heart, while Wikipedia says neglect after the 1742 overthrow hastened his death.",
+   "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+   "quote_wikipedia": "On the overthrow of the government in 1742 the opposition leaders did nothing for the useful editor of the Craftsman, and this neglect is said to have hastened Amhurst's death,"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Amhurst was born at Marden in Kent.",
+   "tag": "enduring",
+   "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+   "quote_wikipedia": "Amhurst was born at Marden, Kent."
+  },
+  {
+   "claim": "He was educated at St John's College, Oxford.",
+   "tag": "enduring",
+   "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+   "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+  },
+  {
+   "claim": "He was expelled from Oxford for irregularities of conduct and Whig principles.",
+   "tag": "enduring",
+   "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+   "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles."
+  },
+  {
+   "claim": "He wrote a satire called Terræ Filius about Oxford.",
+   "tag": "renamed",
+   "quote_britannica": "in a book entitled Terre Filosa.",
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+  },
+  {
+   "claim": "He wrote a poem called The Convocation.",
+   "tag": "enduring",
+   "quote_britannica": "and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite.",
+   "quote_wikipedia": "in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly;"
+  },
+  {
+   "claim": "He was a prominent writer for the political paper The Craftsman.",
+   "tag": "renamed",
+   "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+  },
+  {
+   "claim": "He was a drudge of his party for nearly 20 years.",
+   "tag": "enduring",
+   "quote_britannica": "after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ;",
+   "quote_wikipedia": "James Ralph cited Amhurst as a cautionary example of a party writer left unrewarded after the 1742 settlement following Walpole’s fall, calling him \"a Drudge of his Party for the best Part of Twenty Years\""
+  },
+  {
+   "claim": "He died neglected and was buried at a bookseller's charity.",
+   "tag": "enduring",
+   "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+   "quote_wikipedia": "claiming he died neglected and was buried at a bookseller’s charity."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "Terre Filosa",
+   "new": "Terræ Filius",
+   "quote_britannica": "in a book entitled Terre Filosa.",
+   "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+  },
+  {
+   "old": "Zie Grafjnaar",
+   "new": "The Craftsman",
+   "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+   "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+  },
+  {
+   "old": "Coluba Britainans",
+   "new": "Oculus Britanniæ",
+   "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+   "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "His education at Merchant Taylors' School.",
+   "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+  },
+  {
+   "topic": "His early works including Protestant Popery and The Protestant Session.",
+   "quote_wikipedia": "a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719),"
+  },
+  {
+   "topic": "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+   "quote_wikipedia": "He had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members."
+  },
+  {
+   "topic": "The custom of the Terræ filius orator at Oxford.",
+   "quote_wikipedia": "An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius."
+  },
+  {
+   "topic": "His imprisonment over the imaginary letter from Colley Cibber.",
+   "quote_wikipedia": "In 1737 an imaginary letter from Colley Cibber was inserted, in which he was made to suggest that many plays by Shakespeare and the older dramatists contained passages which might be regarded as seditious. He therefore desired to be appointed censor of all plays brought on the stage. This was regarded as a \"suspected\" libel, and a warrant was issued for the arrest of the printer. Amhurst surrendered himself instead, and suffered a short imprisonment."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 24,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 0,
+   "words": 175,
+   "edits_per_100_words": 0.0
+  },
+  "lexical": {
+   "renamed_share": 0.25,
+   "term_pairs": [
+    {
+     "old": "Zie Grafjnaar",
+     "new": "The Craftsman"
+    }
+   ],
+   "likely_ocr_or_spelling": [
+    {
+     "old": "Terre Filosa",
+     "new": "Terræ Filius"
+    },
+    {
+     "old": "Coluba Britainans",
+     "new": "Oculus Britanniæ"
+    }
+   ]
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.0,
+   "wiki_only_topics": [
+    "His education at Merchant Taylors' School.",
+    "His early works including Protestant Popery and The Protestant Session.",
+    "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+    "The custom of the Terræ filius orator at Oxford.",
+    "His imprisonment over the imaginary letter from Colley Cibber."
+   ]
+  },
+  "enduring_share": 0.75,
+  "claim_counts": {
+   "enduring": 6,
+   "renamed": 2,
+   "superseded": 0,
+   "dropped": 0
+  },
+  "claims_checked": 8,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

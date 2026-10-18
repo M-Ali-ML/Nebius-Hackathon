@@ -1,0 +1,187 @@
+{
+ "entry_id": "B:2464:5",
+ "cite_britannica": "[B:2464:5]",
+ "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:2464",
+ "row_index": 2464,
+ "image_sha256": "24f450326eee13b008306d2b355bd49b295db96603186268db20b85552cf958e",
+ "headword": "CABIN",
+ "topic_hint": null,
+ "wiki_page_id": "1468228",
+ "wiki_revision_id": "1326520528",
+ "wiki_title": "Cabin (ship)",
+ "wiki_url": "https://en.wikipedia.org/wiki/Cabin_(ship)",
+ "text_sha256": "6057ba635221c8126768cde2656d1435d0d8104064e5f032c1b5355aa92b5025",
+ "cite_wikipedia": "[W:1468228:1326520528]",
+ "rerank_logit": -3.540377,
+ "rerank_margin": 2.122037,
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1312,
+  "prompt_tokens": 1410,
+  "total_tokens": 2722,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  }
+ },
+ "prompt_version": "compare-v2",
+ "entry_chars_used": 329,
+ "article_chars_used": 3793,
+ "article_chars_total": 3793,
+ "similarities": [
+  {
+   "point": "The great cabin belongs to the captain or chief commander",
+   "quote_britannica": "The great cabin is the chief of ’all, and that which properly belongs to the captain, or chief commander.",
+   "quote_wikipedia": "The captain or commanding officer would occupy the \"great cabin\" that normally spanned the width of the stern and had large windows."
+  },
+  {
+   "point": "Officers have cabins to lie in",
+   "quote_britannica": "particularly on the quarter-deck, and on each side of the fleerage, for the officers of the flip to lie in.",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+  }
+ ],
+ "differences": [
+  {
+   "point": "Scope of cabins beyond ships",
+   "quote_britannica": "CABIN, in the sea-language, a final room, or apartment, whereby there are a great many in fewelful parts of a flip,",
+   "quote_wikipedia": "A cabin or berthing is an enclosed space generally on a ship or an aircraft."
+  },
+  {
+   "point": "Passenger accommodation",
+   "quote_britannica": "for the officers of the flip to lie in.",
+   "quote_wikipedia": "In ships carrying passengers, they are normally accommodated in cabins, taking the terminology familiar to seafarers."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A cabin is a final room or apartment in a ship",
+   "tag": "enduring",
+   "quote_britannica": "CABIN, in the sea-language, a final room, or apartment, whereby there are a great many in fewelful parts of a flip,",
+   "quote_wikipedia": "A cabin or berthing is an enclosed space generally on a ship or an aircraft."
+  },
+  {
+   "claim": "There are many cabins in fewelful parts of a ship",
+   "tag": "dropped",
+   "quote_britannica": "whereby there are a great many in fewelful parts of a flip, particularly on the quarter-deck,",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Cabins are on the quarter-deck and each side of the fleerage",
+   "tag": "dropped",
+   "quote_britannica": "particularly on the quarter-deck, and on each side of the fleerage, for the officers of the flip to lie in.",
+   "quote_wikipedia": null
+  },
+  {
+   "claim": "Officers lie in cabins",
+   "tag": "enduring",
+   "quote_britannica": "for the officers of the flip to lie in.",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+  },
+  {
+   "claim": "The great cabin is the chief of all",
+   "tag": "enduring",
+   "quote_britannica": "The great cabin is the chief of ’all, and that which properly belongs to the captain, or chief commander.",
+   "quote_wikipedia": "The captain or commanding officer would occupy the \"great cabin\" that normally spanned the width of the stern and had large windows."
+  },
+  {
+   "claim": "The great cabin properly belongs to the captain or chief commander",
+   "tag": "enduring",
+   "quote_britannica": "The great cabin is the chief of ’all, and that which properly belongs to the captain, or chief commander.",
+   "quote_wikipedia": "The captain or commanding officer would occupy the \"great cabin\" that normally spanned the width of the stern and had large windows."
+  }
+ ],
+ "term_pairs": [
+  {
+   "old": "flip",
+   "new": "ship",
+   "quote_britannica": "fewelful parts of a flip, particularly on the quarter-deck,",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+  },
+  {
+   "old": "fleerage",
+   "new": "ship",
+   "quote_britannica": "and on each side of the fleerage, for the officers of the flip to lie in.",
+   "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+  }
+ ],
+ "wiki_only_topics": [
+  {
+   "topic": "Deckhouses",
+   "quote_wikipedia": "A cabin which protrudes above the level of a ship's deck may be referred to as a deckhouse."
+  },
+  {
+   "topic": "Warship cabin subdivisions and bulk-heads",
+   "quote_wikipedia": "In large warships, the cabin was subdivided into day and night cabins (bedrooms) by movable panels, called bulk-heads, that could be removed in time of battle to leave the cabin clear for the gunners to use the stern chasers several of which were usually stationed in the cabin."
+  },
+  {
+   "topic": "Admiral's appropriation of the captain's cabin",
+   "quote_wikipedia": "On large three decker warships in the age of sail the captain's cabin was sometimes appropriated by the Admiral. The captain would be consigned to the cabin below on the middle gun-deck."
+  },
+  {
+   "topic": "Modern warship in-port and sea cabins",
+   "quote_wikipedia": "In most modern warships, the commanding officer has a main cabin—the in-port cabin, often adjacent to the ship's central control room (operations room)—and a sea cabin adjacent to the bridge."
+  },
+  {
+   "topic": "Spacecraft cabins and life support",
+   "quote_wikipedia": "In spacecraft, cabins are required to fully supply food and oxygen for their crew. On missions lasting a year or longer, the cabins have to be self-sustaining, i.e. replenish their own water and oxygen."
+  }
+ ],
+ "rejected": [],
+ "quote_check": {
+  "kept": 17,
+  "rejected": 0
+ },
+ "drift": {
+  "orthographic": {
+   "norm_edits": 1,
+   "words": 60,
+   "edits_per_100_words": 1.67
+  },
+  "lexical": {
+   "renamed_share": 0.0,
+   "term_pairs": [
+    {
+     "old": "flip",
+     "new": "ship"
+    },
+    {
+     "old": "fleerage",
+     "new": "ship"
+    }
+   ],
+   "likely_ocr_or_spelling": []
+  },
+  "knowledge": {
+   "superseded_share": 0.0
+  },
+  "coverage": {
+   "dropped_share": 0.333,
+   "wiki_only_topics": [
+    "Deckhouses",
+    "Warship cabin subdivisions and bulk-heads",
+    "Admiral's appropriation of the captain's cabin",
+    "Modern warship in-port and sea cabins",
+    "Spacecraft cabins and life support"
+   ]
+  },
+  "enduring_share": 0.667,
+  "claim_counts": {
+   "enduring": 4,
+   "renamed": 0,
+   "superseded": 0,
+   "dropped": 2
+  },
+  "claims_checked": 6,
+  "note": "shares count only claims whose quotes passed the substring check"
+ },
+ "status": "ok"
+}

@@ -97,3 +97,21 @@ Candidate 6 cases (lead decides): successes lightning, firedamp, old-terms rerun
 - Result: modes tie on the right sources cited (6/6) and on unresolved citations (0). bm25_only is cheapest (60.5k tokens, 29 s vs 66.7k, 39 s for full). On firedamp only bm25_only grounded the Wikipedia side, because LanceDB `wiki_chunks` only holds matched articles. Inference: use a hybrid (vector index for Britannica, Wikipedia BM25 fallback).
 - Found and fixed: Hermes stream-json cuts tool output at 5,000 chars in transcripts. The plugin now writes full results to `NEMOTRON_TOOL_LOG`; the runner saves them as `tool_log` in each transcript (checked). Earlier transcripts have only the cut output.
 - Plugin reinstalled in data/hermes (4 tools). After merge, the plugin default `NEMOTRON_REPO` (main checkout) must contain this code.
+
+## Third task (from 14:30)
+
+### Hybrid retrieval (commits 2ffa1c6, 03b7181)
+- `NEMOTRON_RETRIEVAL_MODE=hybrid` is the default. Britannica: LanceDB vectors. Wikipedia: LanceDB wiki_chunks + live BM25 (top 20, 1,000-char excerpts); all reranked together (max 32 docs: 6+6+20 for side=both). Each hit has `source: lancedb|bm25`.
+- Margin is now measured to the next different entry/article on the same side; `side_confidence` gives a flag per side.
+- 7 ablation questions in hybrid: 2.7 tool calls, 40,834 tokens, 22.5 s (full: 4.3, 66,688, 38.6 s). 6/6 grounded on both sides (firedamp now quoted from the bm25 hit). Caveat: skill gained one line before this run.
+
+### view_neighbors (commits 50d6878, 4d85e47)
+- Tool 5 of 5 in plugin v0.4.0. Reuses neighbors.py; cached Parse blocks or live Parse. Cites neighbors as `[R:<row>]`.
+- Runs: plate 2077 success ([R:2078] MICROSCOPE Plate CCC); plate 651 first run failed (173k tokens, never tried before=2), rerun after a skill rule found [R:649] (46k tokens); continuation B:13:0 correct negative; B:452 rerun repaired by skill rule 6 (view_scan shows blank cover).
+- Finding: neighbors help plates; for continuations the scan before is rarely the printed page before (about 13 scans per volume).
+- Plugin and skill reinstalled in data/hermes.
+
+## Demo prep (from 14:41)
+- docs/demo-commands.md: setup, start command, 3 questions (lightning, plate 2077, old terms with find_drift), alternate (B:452 blank cover), expected tool calls, lines to point at, runs NOT to use.
+- First rehearsal on main c533508 ran in `full` mode (runner default bug) and plate 2077 failed with the provider limit "At most 8 image(s) may be provided in one prompt". Fixed in 3402ab4: runner default hybrid, view_neighbors returns one contact-sheet image, skill states the 8-image budget. Main needs this commit before recording.
+- New findings: "superseded facts" demo run took an OCR error as a fact change (ounce "fitteenth" = "ſixteenth" on the scan). A scan-checked "renamed" run kept only 2 of 20 candidates. Lexical drift is dominated by OCR noise.

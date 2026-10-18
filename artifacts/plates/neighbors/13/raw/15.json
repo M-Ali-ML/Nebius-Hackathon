@@ -1,0 +1,46 @@
+{
+ "id": "chatcmpl-015ae18f-515a-422b-b7fe-8386a9df13a0",
+ "object": "chat.completion",
+ "created": 1792327096,
+ "model": "nvidia/nemotron-3.5-parse",
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "<x_0.0><y_0.0><x_0.998><y_0.9984><class_Picture>",
+    "refusal": null,
+    "annotations": null,
+    "audio": null,
+    "function_call": null,
+    "reasoning": null
+   },
+   "logprobs": null,
+   "finish_reason": "stop",
+   "stop_reason": null,
+   "token_ids": null,
+   "routed_experts": null
+  }
+ ],
+ "service_tier": null,
+ "system_fingerprint": "vllm-0.26.0-d51b4524",
+ "usage": {
+  "prompt_tokens": 518,
+  "total_tokens": 524,
+  "completion_tokens": 6,
+  "prompt_tokens_details": null
+ },
+ "prompt_logprobs": null,
+ "prompt_token_ids": null,
+ "prompt_text": null,
+ "kv_transfer_params": null,
+ "ec_transfer_params": null,
+ "metrics": null,
+ "_run": {
+  "seconds": 0.42,
+  "attempt": 0,
+  "max_tokens": 8744,
+  "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:15",
+  "image_sha256": "ac6b9a97b5b5919d392457944d4569f4a3765d38ae74682dc3097a3a5217542b"
+ }
+}

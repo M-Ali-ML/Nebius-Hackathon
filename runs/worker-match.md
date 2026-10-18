@@ -102,3 +102,32 @@ Known problems (page pass):
 - Examples: rerank fixed B:1910:0 (Lightning), B:1214:1 (Damsel), B:1680:0 (Carpentry); broke B:1614:1 (Thirsty (disambiguation) over Polydipsia; the decision step recovers it).
 - Rerun: `uv run python -c "from pathlib import Path; from nemotron_challenge.ablation_eval import evaluate; evaluate(Path('/Users/aly/repos/Nebius-Hackathon/artifacts'))"`
 - Limits: 40 items, one reader, only 4 negatives. Candidate recall is the main bottleneck.
+
+## Update 4: vision query expansion
+
+- Module `src/nemotron_challenge/vision_expand.py`: `run_vision` (Super VL + BM25 + Embed VL + Rerank VL, resumable, 3 threads), `apply_vision` (decisions, page table), `vision_recall`.
+- `run_page_match` now writes `page_matches_v1.jsonl` (text passes only) and then applies vision results to `page_matches.jsonl` when `match/vision_expand/` exists.
+- Super VL gets the scan (JPEG, longest side 1,600 px) + running head, thinking off, max 600 tokens; it returns subject + 3 to 5 phrases. It never decides a match.
+- 46 non-plate unmatched pages: 45 answered, 1 failed (546: Super VL reports a blank page, so the Parse text for 546 is invented). Logged in `match/vision_failures.jsonl`.
+- 7 accepted: 217 Farm, 257 Jonathan Swift, 383 Political economy, 473 Conchology, 914 Arabs, 1324 Hedge, 1722 Arsenic.
+- Page coverage: 45 -> 52 of 100. `extract/coverage.json` -> `match_coverage.vision_expand`, `pages_matched_final`.
+- Labeled set (6 positives on expanded pages): gold in pool 4 -> 6, gold in top 10 3 -> 5, top 1 after 2.
+- Cost: 45 calls, 28,321 prompt + 1,808 completion tokens, 1.4 s per call.
+- LanceDB rebuilt: 259 entries, 1,054 wiki chunks, 91 articles.
+- Rerun: `uv run python -c "from pathlib import Path; from nemotron_challenge.config import Settings; from nemotron_challenge.vision_expand import run_vision; run_vision(Settings.from_env(), Path('/Users/aly/repos/Nebius-Hackathon/artifacts'))"` then `run_page_match` (see Update 2).
+- Known: correct top-1 but rejected by the rules: 13 Shipbuilding, 247 Mount Etna, 268 Laurus.
+
+## Update 5: uncertainty report
+
+FOR THE SITE WORKER: show these fields.
+- Pages: `artifacts/match/page_matches.jsonl`, rows with `status: no_clear_counterpart` now have
+  `uncertainty_cause` (one of `no_text`, `ocr_failure`, `obsolete_or_minor`, `pool_miss`, `threshold_miss`, `other`)
+  and `uncertainty_note` (short text, with "likely article: X" when we can name it).
+- Entries: `artifacts/match/uncertainty.jsonl`, key `id` (`B:<row>:<n>` or `P:<row>`), fields `cause`, `cause_label`
+  (human-readable), `right_article`, `note`, `evidence`, `best_long` / `best_short` / `best`.
+- Labels for the six causes: `causes` in `artifacts/match/uncertainty_summary.json`.
+
+What: `src/nemotron_challenge/uncertainty.py` + `uncertainty_causes.tsv` (one reader's cause per item). `run_page_match` reapplies it.
+Counts (entries / pages): no_text 20/6, ocr_failure 37/1, obsolete_or_minor 24/1, pool_miss 47/16, threshold_miss 43/19, other 18/5. Totals 189/48.
+Doc: `docs/uncertainty.md` (counts, 2 examples per cause, fixes).
+Rerun: `uv run python -c "from pathlib import Path; from nemotron_challenge.uncertainty import run_uncertainty; print(run_uncertainty(Path('/Users/aly/repos/Nebius-Hackathon/artifacts')))"`

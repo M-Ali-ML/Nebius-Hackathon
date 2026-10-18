@@ -28,10 +28,12 @@ Say: "To separate language from knowledge, Super VL tags each historical claim w
 Show: Hermes terminal, lightning question (`runs/agent/20261018-140114-...`). Show the tool calls, the `view_scan` image read, and the cited answer.
 Say: "The Hermes agent runs on Super VL with our four tools. It searches LanceDB, reads the pair and the drift, and looks at the original scan to check the OCR. Every claim cites a Britannica entry and a Wikipedia revision, and it reports when a match is uncertain."
 
-## 2:35 to 2:55 Failures
+## 2:35 to 2:55 Failures and repairs
 
-Show: failure-1 then success-3 (old terms), then failure-3 (page 452).
-Say: "Three failures taught us the most. A corpus-wide question failed after 35 tool calls, but the agent invented nothing. We added a find_drift tool, and the same question worked with 86 percent fewer tokens. Page 452 is a blank cover: Parse invented text, and the error passed through every stage. The case files explain each one."
+Show: plate 2077 with view_neighbors (cut the search part), then failure-1 next to success-3 (old terms; point only at "Botnhic gulph -> Gulf of Bothnia", the other two pairs are OCR errors), then failure-3 (page 452).
+Say: "Plate 2077 is blank. Our view_neighbors tool shows Super VL the next scan, which is the real microscope plate. Three failures taught us the most. A corpus-wide question failed after 35 tool calls, but the agent invented nothing. We added a find_drift tool, and the same question worked with 86 percent fewer tokens. Page 452 is a blank cover: Parse invented text, and the error passed through every stage. The case files explain each one."
+
+Commands, timings, and runs not to use: [docs/demo-commands.md](demo-commands.md).
 
 ## 2:55 to 3:00 Close
 

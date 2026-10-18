@@ -1,0 +1,3309 @@
+{
+ "question": "What did the Britannica say about lightning, and how does Wikipedia explain it today? Did the language or the knowledge change?",
+ "started": "2026-10-18T14:41:27",
+ "command": [
+  "chat",
+  "-q",
+  "What did the Britannica say about lightning, and how does Wikipedia explain it today? Did the language or the knowledge change?",
+  "--format",
+  "stream-json",
+  "-t",
+  "nemotron_challenge",
+  "-s",
+  "britannica-compare",
+  "--max-turns",
+  "12"
+ ],
+ "hermes_home": "/Users/aly/repos/Nebius-Hackathon/data/hermes",
+ "tool_repo": "/Users/aly/repos/Nebius-Hackathon",
+ "retrieval_mode": "full",
+ "exit_code": 0,
+ "stderr": "\nsession_id: 20261018_144128_e7733d\n",
+ "non_json_stdout": [],
+ "events": [
+  {
+   "type": "system",
+   "subtype": "init",
+   "model": "nvidia/Nemotron-3.5-Super-VL",
+   "session_id": "20261018_144128_e7733d",
+   "timestamp": 1792327288549
+  },
+  {
+   "type": "text",
+   "text": "I'll search",
+   "timestamp": 1792327290526
+  },
+  {
+   "type": "text",
+   "text": " for \"",
+   "timestamp": 1792327290527
+  },
+  {
+   "type": "text",
+   "text": "lightning\" on",
+   "timestamp": 1792327290527
+  },
+  {
+   "type": "text",
+   "text": " both sides to",
+   "timestamp": 1792327290527
+  },
+  {
+   "type": "text",
+   "text": " find",
+   "timestamp": 1792327290527
+  },
+  {
+   "type": "text",
+   "text": " the Britannica entry",
+   "timestamp": 1792327290527
+  },
+  {
+   "type": "text",
+   "text": " and the Wikipedia article",
+   "timestamp": 1792327290528
+  },
+  {
+   "type": "text",
+   "text": ".\n",
+   "timestamp": 1792327290539
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327290684
+  },
+  {
+   "type": "tool_use",
+   "name": "search_sources",
+   "input": {
+    "query": "lightning",
+    "side": "both"
+   },
+   "timestamp": 1792327290722
+  },
+  {
+   "type": "tool_result",
+   "name": "search_sources",
+   "output": "{\"query\": \"lightning\", \"side\": \"both\", \"retrieval_mode\": \"full\", \"results\": [{\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:0\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions. One or both regions are within the atmosphere, with the second region sometimes occurring on the ground. Following the lightning, the regions become partially or wholly electrically neutralized. Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F). There is an emission of electromagnetic radiation across a wide range of wavelengths, some visible as a bright flash. Lightning also causes thunder, a sound from the shock wave which develops as heated gases in the vicinity of the discharge experience a sudden increase in pressure. The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions. Lightning influences the global atmospheric electrical circuit and atmospheric chemistry and is a natural ignition source of wildfires. Lightning is considered an Essential...\", \"source\": \"lancedb\", \"rerank_logit\": 4.287, \"cosine_distance\": 0.4648}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:6\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"Lightning primarily occurs when warm air is mixed with colder air masses, resulting in atmospheric disturbances necessary for polarizing the atmosphere. The disturbances result in storms, and when those storms also result in lightning and thunder, they are called a thunderstorm. Lightning can also occur during dust storms, forest fires, tornadoes, volcanic eruptions, and even in the cold of winter, where the lightning is known as thundersnow. Hurricanes typically generate some lightning, mainly in the rainbands as much as 160 km (99 mi) from the center. Intense forest fires, such as those seen in the 2019–20 Australian bushfire season, can create their own weather systems that can produce lightning (also called fire lightning) and other weather phenomena. Intense heat from a fire causes air to rapidly rise within the smoke plume, causing the formation of pyrocumulonimbus clouds. Cooler air is drawn in by this turbulent, rising air, helping to cool the plume. The rising plume is further cooled by the lower atmospheric pressure at high altitude, allowing the moisture in it to condense into cloud. Pyrocumulonimbus clouds form in an unstable atmosphere. These weather systems can produc...\", \"source\": \"lancedb\", \"rerank_logit\": 1.78, \"cosine_distance\": 0.5442}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:17\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"...or. Once the electric current stops flowing, the channel cools and dissipates over tens or hundreds of milliseconds, often disappearing as fragmented patches of glowing gas. The nearly instantaneous heating during the return stroke causes the air to expand explosively, producing a powerful shock wave which is heard as thunder. High-speed videos (examined frame-by-frame) show that most negative CG lightning flashes are made up of 3 or 4 individual strokes, though there may be as many as 30. Each re-strike is separated by a relatively large amount of time, typically 40 to 50 milliseconds, as other charged regions in the cloud are discharged in subsequent strokes. Re-strikes often cause a noticeable \\\" strobe light \\\" effect. To understand why multiple return strokes utilize the same lightning channel, one needs to understand the behavior of positive leaders, which a typical ground flash effectively becomes following the negative leader's connection with the ground. Positive leaders decay more rapidly than negative leaders do....\", \"source\": \"lancedb\", \"rerank_logit\": 0.77, \"cosine_distance\": 0.5513}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:11\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"When the local electric field exceeds the dielectric strength of damp air (about 3 MV/m), electrical discharge results in a strike, often followed by commensurate discharges branching from the same path. Mechanisms that...",
+   "duration_ms": 1765,
+   "is_error": false,
+   "timestamp": 1792327292489
+  },
+  {
+   "type": "text",
+   "text": "\n\nI",
+   "timestamp": 1792327295254
+  },
+  {
+   "type": "text",
+   "text": " found a",
+   "timestamp": 1792327295254
+  },
+  {
+   "type": "text",
+   "text": " Britann",
+   "timestamp": 1792327295254
+  },
+  {
+   "type": "text",
+   "text": "ica entry",
+   "timestamp": 1792327295255
+  },
+  {
+   "type": "text",
+   "text": " (B:1",
+   "timestamp": 1792327295255
+  },
+  {
+   "type": "text",
+   "text": "910:",
+   "timestamp": 1792327295255
+  },
+  {
+   "type": "text",
+   "text": "0) but",
+   "timestamp": 1792327295255
+  },
+  {
+   "type": "text",
+   "text": " its",
+   "timestamp": 1792327295255
+  },
+  {
+   "type": "text",
+   "text": " passage is heavily O",
+   "timestamp": 1792327295259
+  },
+  {
+   "type": "text",
+   "text": "CR-corrupted (",
+   "timestamp": 1792327295275
+  },
+  {
+   "type": "text",
+   "text": "long `",
+   "timestamp": 1792327295284
+  },
+  {
+   "type": "text",
+   "text": "s` read as",
+   "timestamp": 1792327295295
+  },
+  {
+   "type": "text",
+   "text": " `f`, broken",
+   "timestamp": 1792327295330
+  },
+  {
+   "type": "text",
+   "text": " words). I need",
+   "timestamp": 1792327295331
+  },
+  {
+   "type": "text",
+   "text": " the clean",
+   "timestamp": 1792327295335
+  },
+  {
+   "type": "text",
+   "text": " comparison",
+   "timestamp": 1792327295380
+  },
+  {
+   "type": "text",
+   "text": " and drift",
+   "timestamp": 1792327295380
+  },
+  {
+   "type": "text",
+   "text": " data",
+   "timestamp": 1792327295382
+  },
+  {
+   "type": "text",
+   "text": ", plus the actual",
+   "timestamp": 1792327295382
+  },
+  {
+   "type": "text",
+   "text": " page",
+   "timestamp": 1792327295396
+  },
+  {
+   "type": "text",
+   "text": " scan to read it",
+   "timestamp": 1792327295406
+  },
+  {
+   "type": "text",
+   "text": " properly",
+   "timestamp": 1792327295506
+  },
+  {
+   "type": "text",
+   "text": ". Let me fetch",
+   "timestamp": 1792327295511
+  },
+  {
+   "type": "text",
+   "text": " the pair and the",
+   "timestamp": 1792327295511
+  },
+  {
+   "type": "text",
+   "text": " scan together",
+   "timestamp": 1792327295512
+  },
+  {
+   "type": "text",
+   "text": ".\n",
+   "timestamp": 1792327295512
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327295816
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1910:0"
+   },
+   "timestamp": 1792327295823
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:1910:0\", \"cite_britannica\": \"[B:1910:0]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910\", \"row_index\": 1910, \"headword\": null, \"is_continuation\": true, \"topic_hint\": null, \"norm_edits\": 19, \"chars\": 6893, \"text_raw\": \"Lightning, we have few always; it is _mattematically couldn’t_, that, when a _returning firele_ comes to be produced by the _fuddro_ removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining _fireks_ mult be enormous. \\\" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mefe, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the preffure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his _robole natural lack_ of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its fudden re-entrance into his body found delivery on even injury third \\\" At the experiment above deferbed, the infulated perfor receives into his body, at the infant of the _returning firele_ has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, _its consequences of the peculiar fluctuation_, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the cafe foreshable instability in natural electricity, the man's body mult be fo peculiarly circumdanced, impunding him to be in a hoofu, that the electric matter which has been expelled from the head into the earth, by the preffure of an extensive thundercloud, could not return back into the building, on the explorations of the clouds as different, without paling through his body: a safe not likely to happen, unfuls the boots were infolated (like the second conductor in the preceding experiments), and his body became the claimed through which where the hole could have the electric matter reflored to it : it appears much more probable that the electric matter returns to the house through the _fame elements_ by whole it before recently pafled out, and with equal silence, too more fuddently. \\\" If the cafe of a man who is abroad, and in an open field, during the time of an explosion —a he is unconnected with other matter of matter above him, no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations. (c) \\\" We fuppie the perfor not to be fo fluuted, that the returning fire\", \"text_norm\": \"Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous. \\\" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mese, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the pressure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his robole natural lack of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found delivery on even injury third \\\" At the experiment above deferbed, the insulated perfor receives into his body, at the infant of the returning firele has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the case fo...",
+   "duration_ms": 120,
+   "is_error": false,
+   "timestamp": 1792327295945
+  },
+  {
+   "type": "text",
+   "text": "\n\nI",
+   "timestamp": 1792327298985
+  },
+  {
+   "type": "text",
+   "text": " have the pair data",
+   "timestamp": 1792327298985
+  },
+  {
+   "type": "text",
+   "text": ". The Britannica",
+   "timestamp": 1792327298998
+  },
+  {
+   "type": "text",
+   "text": " text is O",
+   "timestamp": 1792327299011
+  },
+  {
+   "type": "text",
+   "text": "CR-corrupted and",
+   "timestamp": 1792327299024
+  },
+  {
+   "type": "text",
+   "text": " the match is flag",
+   "timestamp": 1792327299067
+  },
+  {
+   "type": "text",
+   "text": "ged uncertain (`",
+   "timestamp": 1792327299069
+  },
+  {
+   "type": "text",
+   "text": "uncertain_match",
+   "timestamp": 1792327299069
+  },
+  {
+   "type": "text",
+   "text": ": true`, rer",
+   "timestamp": 1792327299290
+  },
+  {
+   "type": "text",
+   "text": "ank logit -",
+   "timestamp": 1792327299290
+  },
+  {
+   "type": "text",
+   "text": "3.75",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": ", margin 0",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": ".72).",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " The",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " scan",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " tool",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " needs `",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": "page`,",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " not `page_id",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": "`",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " — let me retry",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " it",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " to read the actual",
+   "timestamp": 1792327299291
+  },
+  {
+   "type": "text",
+   "text": " page before I",
+   "timestamp": 1792327299292
+  },
+  {
+   "type": "text",
+   "text": " quote.\n",
+   "timestamp": 1792327299292
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327299532
+  },
+  {
+   "type": "tool_use",
+   "name": "view_scan",
+   "input": {
+    "page": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910"
+   },
+   "timestamp": 1792327299542
+  },
+  {
+   "type": "tool_result",
+   "name": "view_scan",
+   "output": "{'_multimodal': True, 'content': [{'type': 'text', 'text': 'Scan image attached. Source: {\"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910\", \"row_index\": 1910, \"image_sha256\": \"f4723acc17718590625f337a0d5ddeef3e257ff963f793fe287f0f0cb81834ee\", \"scan_size\": [600, 824], \"bbox\": null, \"image_size\": [600, 824], \"image_path\": \"/Users/aly/repos/Nebius-Hackathon/data/hermes/scan_cache/1910-full.jpg\"}. Read the image with your vision; compare it with the OCR text before you quote it.'}, {'type': 'image_url', 'image_url': {'url': '<image data omitted; see image_path>...",
+   "duration_ms": 146,
+   "is_error": false,
+   "timestamp": 1792327299692
+  },
+  {
+   "type": "text",
+   "text": "\n\n##",
+   "timestamp": 1792327308762
+  },
+  {
+   "type": "text",
+   "text": " Answer\n\nB",
+   "timestamp": 1792327308774
+  },
+  {
+   "type": "text",
+   "text": "ritannica (",
+   "timestamp": 1792327308899
+  },
+  {
+   "type": "text",
+   "text": "1771",
+   "timestamp": 1792327308900
+  },
+  {
+   "type": "text",
+   "text": "–179",
+   "timestamp": 1792327308900
+  },
+  {
+   "type": "text",
+   "text": "7) treats lightning",
+   "timestamp": 1792327308900
+  },
+  {
+   "type": "text",
+   "text": " as \"",
+   "timestamp": 1792327308900
+  },
+  {
+   "type": "text",
+   "text": "natural",
+   "timestamp": 1792327308901
+  },
+  {
+   "type": "text",
+   "text": " electricity\" / \"",
+   "timestamp": 1792327308901
+  },
+  {
+   "type": "text",
+   "text": "electric fire\" discharged",
+   "timestamp": 1792327308901
+  },
+  {
+   "type": "text",
+   "text": " from a power",
+   "timestamp": 1792327308901
+  },
+  {
+   "type": "text",
+   "text": "fully charged thunder-cloud",
+   "timestamp": 1792327308901
+  },
+  {
+   "type": "text",
+   "text": ",",
+   "timestamp": 1792327308906
+  },
+  {
+   "type": "text",
+   "text": " describing a \"return",
+   "timestamp": 1792327308914
+  },
+  {
+   "type": "text",
+   "text": "ing\"",
+   "timestamp": 1792327308928
+  },
+  {
+   "type": "text",
+   "text": " discharge",
+   "timestamp": 1792327308939
+  },
+  {
+   "type": "text",
+   "text": " through a person's",
+   "timestamp": 1792327308951
+  },
+  {
+   "type": "text",
+   "text": " body to",
+   "timestamp": 1792327308978
+  },
+  {
+   "type": "text",
+   "text": " a conductor, with",
+   "timestamp": 1792327308978
+  },
+  {
+   "type": "text",
+   "text": " anecdotal reports of",
+   "timestamp": 1792327308988
+  },
+  {
+   "type": "text",
+   "text": " people killed (",
+   "timestamp": 1792327309001
+  },
+  {
+   "type": "text",
+   "text": "torn shoes",
+   "timestamp": 1792327309009
+  },
+  {
+   "type": "text",
+   "text": ", damaged feet,",
+   "timestamp": 1792327309021
+  },
+  {
+   "type": "text",
+   "text": " no other marks).",
+   "timestamp": 1792327309032
+  },
+  {
+   "type": "text",
+   "text": " Wikipedia defines",
+   "timestamp": 1792327309044
+  },
+  {
+   "type": "text",
+   "text": " lightning as",
+   "timestamp": 1792327309057
+  },
+  {
+   "type": "text",
+   "text": " electrostatic discharges between charged",
+   "timestamp": 1792327309068
+  },
+  {
+   "type": "text",
+   "text": " regions in the atmosphere",
+   "timestamp": 1792327309080
+  },
+  {
+   "type": "text",
+   "text": ", giving measured energy",
+   "timestamp": 1792327309092
+  },
+  {
+   "type": "text",
+   "text": " (200",
+   "timestamp": 1792327309106
+  },
+  {
+   "type": "text",
+   "text": " MJ–7",
+   "timestamp": 1792327309123
+  },
+  {
+   "type": "text",
+   "text": " GJ), temperatures",
+   "timestamp": 1792327309131
+  },
+  {
+   "type": "text",
+   "text": " (~30,",
+   "timestamp": 1792327309140
+  },
+  {
+   "type": "text",
+   "text": "000 °",
+   "timestamp": 1792327309152
+  },
+  {
+   "type": "text",
+   "text": "C), a stepped",
+   "timestamp": 1792327309168
+  },
+  {
+   "type": "text",
+   "text": "-leader/return",
+   "timestamp": 1792327309176
+  },
+  {
+   "type": "text",
+   "text": "-stroke mechanism",
+   "timestamp": 1792327309187
+  },
+  {
+   "type": "text",
+   "text": " for cloud-to-ground",
+   "timestamp": 1792327309199
+  },
+  {
+   "type": "text",
+   "text": " flashes, and a",
+   "timestamp": 1792327309212
+  },
+  {
+   "type": "text",
+   "text": " three",
+   "timestamp": 1792327309223
+  },
+  {
+   "type": "text",
+   "text": "-way",
+   "timestamp": 1792327309235
+  },
+  {
+   "type": "text",
+   "text": " classification (intra",
+   "timestamp": 1792327309247
+  },
+  {
+   "type": "text",
+   "text": "-cloud, cloud-to",
+   "timestamp": 1792327309259
+  },
+  {
+   "type": "text",
+   "text": "-cloud, cloud-to",
+   "timestamp": 1792327309271
+  },
+  {
+   "type": "text",
+   "text": "-ground)",
+   "timestamp": 1792327309282
+  },
+  {
+   "type": "text",
+   "text": " plus safety guidance",
+   "timestamp": 1792327309295
+  },
+  {
+   "type": "text",
+   "text": ".\n\nBoth",
+   "timestamp": 1792327309409
+  },
+  {
+   "type": "text",
+   "text": " changes",
+   "timestamp": 1792327309411
+  },
+  {
+   "type": "text",
+   "text": " happened",
+   "timestamp": 1792327309413
+  },
+  {
+   "type": "text",
+   "text": ":",
+   "timestamp": 1792327309516
+  },
+  {
+   "type": "text",
+   "text": " the language shifted",
+   "timestamp": 1792327309516
+  },
+  {
+   "type": "text",
+   "text": " (electrical terminology",
+   "timestamp": 1792327309516
+  },
+  {
+   "type": "text",
+   "text": " was",
+   "timestamp": 1792327309516
+  },
+  {
+   "type": "text",
+   "text": " modernized) and",
+   "timestamp": 1792327309516
+  },
+  {
+   "type": "text",
+   "text": " the knowledge changed (",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": "the old \"return",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": "ing electrical",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": " fire through",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": " the",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": " body\" model was",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": " superseded by the",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": " leader/return",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": "-stroke physics",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": ").\n\n## Evidence\n\n",
+   "timestamp": 1792327309517
+  },
+  {
+   "type": "text",
+   "text": "**Britannica",
+   "timestamp": 1792327309523
+  },
+  {
+   "type": "text",
+   "text": " (OC",
+   "timestamp": 1792327309536
+  },
+  {
+   "type": "text",
+   "text": "R-noisy;",
+   "timestamp": 1792327309548
+  },
+  {
+   "type": "text",
+   "text": " long `",
+   "timestamp": 1792327309559
+  },
+  {
+   "type": "text",
+   "text": "ſ` read as",
+   "timestamp": 1792327309572
+  },
+  {
+   "type": "text",
+   "text": " `f`, words",
+   "timestamp": 1792327309583
+  },
+  {
+   "type": "text",
+   "text": " broken):",
+   "timestamp": 1792327309595
+  },
+  {
+   "type": "text",
+   "text": "**\n- \"when",
+   "timestamp": 1792327309612
+  },
+  {
+   "type": "text",
+   "text": " a returning firele",
+   "timestamp": 1792327309622
+  },
+  {
+   "type": "text",
+   "text": " comes to be produced",
+   "timestamp": 1792327309630
+  },
+  {
+   "type": "text",
+   "text": " by the fudd",
+   "timestamp": 1792327309642
+  },
+  {
+   "type": "text",
+   "text": "ro removal of the",
+   "timestamp": 1792327309657
+  },
+  {
+   "type": "text",
+   "text": " very frong el",
+   "timestamp": 1792327309669
+  },
+  {
+   "type": "text",
+   "text": "afic electrical pre",
+   "timestamp": 1792327309680
+  },
+  {
+   "type": "text",
+   "text": "fi-fore of",
+   "timestamp": 1792327309692
+  },
+  {
+   "type": "text",
+   "text": " the electrical atmosphere of",
+   "timestamp": 1792327309705
+  },
+  {
+   "type": "text",
+   "text": " a thunder-cloud power",
+   "timestamp": 1792327309716
+  },
+  {
+   "type": "text",
+   "text": "fully charged; the",
+   "timestamp": 1792327309728
+  },
+  {
+   "type": "text",
+   "text": " frength of such",
+   "timestamp": 1792327309737
+  },
+  {
+   "type": "text",
+   "text": " a retraining fire",
+   "timestamp": 1792327309754
+  },
+  {
+   "type": "text",
+   "text": "ks mult be enormous",
+   "timestamp": 1792327309762
+  },
+  {
+   "type": "text",
+   "text": ".\" —",
+   "timestamp": 1792327309774
+  },
+  {
+   "type": "text",
+   "text": " i.e., a",
+   "timestamp": 1792327309785
+  },
+  {
+   "type": "text",
+   "text": " returning discharge",
+   "timestamp": 1792327309800
+  },
+  {
+   "type": "text",
+   "text": " produced",
+   "timestamp": 1792327309811
+  },
+  {
+   "type": "text",
+   "text": " by the sudden removal",
+   "timestamp": 1792327309823
+  },
+  {
+   "type": "text",
+   "text": " of electrical",
+   "timestamp": 1792327309918
+  },
+  {
+   "type": "text",
+   "text": " pressure from a charged",
+   "timestamp": 1792327309919
+  },
+  {
+   "type": "text",
+   "text": " thunder-cloud, of",
+   "timestamp": 1792327309920
+  },
+  {
+   "type": "text",
+   "text": " enormous strength.",
+   "timestamp": 1792327309921
+  },
+  {
+   "type": "text",
+   "text": " `[",
+   "timestamp": 1792327309921
+  },
+  {
+   "type": "text",
+   "text": "B:19",
+   "timestamp": 1792327309921
+  },
+  {
+   "type": "text",
+   "text": "10:0",
+   "timestamp": 1792327309922
+  },
+  {
+   "type": "text",
+   "text": "]`\n- \"",
+   "timestamp": 1792327309922
+  },
+  {
+   "type": "text",
+   "text": "no more than the",
+   "timestamp": 1792327309930
+  },
+  {
+   "type": "text",
+   "text": " preflic quantity of",
+   "timestamp": 1792327309943
+  },
+  {
+   "type": "text",
+   "text": " electric fire, which",
+   "timestamp": 1792327309959
+  },
+  {
+   "type": "text",
+   "text": " had been before expelled",
+   "timestamp": 1792327309967
+  },
+  {
+   "type": "text",
+   "text": " from his body,",
+   "timestamp": 1792327309979
+  },
+  {
+   "type": "text",
+   "text": " will definitely return into",
+   "timestamp": 1792327309990
+  },
+  {
+   "type": "text",
+   "text": " it at the infant",
+   "timestamp": 1792327310002
+  },
+  {
+   "type": "text",
+   "text": " of a dither",
+   "timestamp": 1792327310014
+  },
+  {
+   "type": "text",
+   "text": " explosion; and that",
+   "timestamp": 1792327310026
+  },
+  {
+   "type": "text",
+   "text": " this quantity is not",
+   "timestamp": 1792327310038
+  },
+  {
+   "type": "text",
+   "text": " uufaly very",
+   "timestamp": 1792327310050
+  },
+  {
+   "type": "text",
+   "text": " large\" — the",
+   "timestamp": 1792327310062
+  },
+  {
+   "type": "text",
+   "text": " expelled quantity is usually",
+   "timestamp": 1792327310079
+  },
+  {
+   "type": "text",
+   "text": " small. `[B",
+   "timestamp": 1792327310116
+  },
+  {
+   "type": "text",
+   "text": ":191",
+   "timestamp": 1792327310124
+  },
+  {
+   "type": "text",
+   "text": "0:0]",
+   "timestamp": 1792327310124
+  },
+  {
+   "type": "text",
+   "text": "`\n- \"there",
+   "timestamp": 1792327310124
+  },
+  {
+   "type": "text",
+   "text": " have been influences of",
+   "timestamp": 1792327310133
+  },
+  {
+   "type": "text",
+   "text": " protons who have been",
+   "timestamp": 1792327310144
+  },
+  {
+   "type": "text",
+   "text": " killed by natural electricity",
+   "timestamp": 1792327310158
+  },
+  {
+   "type": "text",
+   "text": ", having been found",
+   "timestamp": 1792327310168
+  },
+  {
+   "type": "text",
+   "text": " with their sloos",
+   "timestamp": 1792327310181
+  },
+  {
+   "type": "text",
+   "text": " torna, and with",
+   "timestamp": 1792327310193
+  },
+  {
+   "type": "text",
+   "text": " their feet damaged by",
+   "timestamp": 1792327310206
+  },
+  {
+   "type": "text",
+   "text": " the electrical line,",
+   "timestamp": 1792327310216
+  },
+  {
+   "type": "text",
+   "text": " but who have not",
+   "timestamp": 1792327310228
+  },
+  {
+   "type": "text",
+   "text": " bad, over their",
+   "timestamp": 1792327310243
+  },
+  {
+   "type": "text",
+   "text": " whole boo,",
+   "timestamp": 1792327310251
+  },
+  {
+   "type": "text",
+   "text": " any other apparent marks",
+   "timestamp": 1792327310264
+  },
+  {
+   "type": "text",
+   "text": " of having been stuck",
+   "timestamp": 1792327310275
+  },
+  {
+   "type": "text",
+   "text": " with lightning.\" —",
+   "timestamp": 1792327310293
+  },
+  {
+   "type": "text",
+   "text": " fatal strikes",
+   "timestamp": 1792327310300
+  },
+  {
+   "type": "text",
+   "text": " with torn shoes",
+   "timestamp": 1792327310312
+  },
+  {
+   "type": "text",
+   "text": "/d",
+   "timestamp": 1792327310328
+  },
+  {
+   "type": "text",
+   "text": "amaged feet and",
+   "timestamp": 1792327310335
+  },
+  {
+   "type": "text",
+   "text": " no other marks.",
+   "timestamp": 1792327310351
+  },
+  {
+   "type": "text",
+   "text": " `[B:1",
+   "timestamp": 1792327310440
+  },
+  {
+   "type": "text",
+   "text": "910:",
+   "timestamp": 1792327310441
+  },
+  {
+   "type": "text",
+   "text": "0]`\n",
+   "timestamp": 1792327310441
+  },
+  {
+   "type": "text",
+   "text": "- The raw",
+   "timestamp": 1792327310441
+  },
+  {
+   "type": "text",
+   "text": " O",
+   "timestamp": 1792327310441
+  },
+  {
+   "type": "text",
+   "text": "CR is gar",
+   "timestamp": 1792327310441
+  },
+  {
+   "type": "text",
+   "text": "bled throughout",
+   "timestamp": 1792327310442
+  },
+  {
+   "type": "text",
+   "text": " (e.g.",
+   "timestamp": 1792327310447
+  },
+  {
+   "type": "text",
+   "text": " \"",
+   "timestamp": 1792327310455
+  },
+  {
+   "type": "text",
+   "text": "fuddro\"",
+   "timestamp": 1792327310470
+  },
+  {
+   "type": "text",
+   "text": " = sudden, \"",
+   "timestamp": 1792327310478
+  },
+  {
+   "type": "text",
+   "text": "frong elaf",
+   "timestamp": 1792327310490
+  },
+  {
+   "type": "text",
+   "text": "ic\" = strong",
+   "timestamp": 1792327310502
+  },
+  {
+   "type": "text",
+   "text": " electrical, \"pre",
+   "timestamp": 1792327310515
+  },
+  {
+   "type": "text",
+   "text": "flic\" =",
+   "timestamp": 1792327310525
+  },
+  {
+   "type": "text",
+   "text": " peculiar, \"in",
+   "timestamp": 1792327310536
+  },
+  {
+   "type": "text",
+   "text": "fant\" = instant",
+   "timestamp": 1792327310548
+  },
+  {
+   "type": "text",
+   "text": ", \"in",
+   "timestamp": 1792327310567
+  },
+  {
+   "type": "text",
+   "text": "fluences of protons",
+   "timestamp": 1792327310572
+  },
+  {
+   "type": "text",
+   "text": "\" = instances of",
+   "timestamp": 1792327310586
+  },
+  {
+   "type": "text",
+   "text": " persons); I read",
+   "timestamp": 1792327310595
+  },
+  {
+   "type": "text",
+   "text": " the page scan",
+   "timestamp": 1792327310607
+  },
+  {
+   "type": "text",
+   "text": " to confirm this",
+   "timestamp": 1792327310620
+  },
+  {
+   "type": "text",
+   "text": " is ",
+   "timestamp": 1792327310631
+  },
+  {
+   "type": "text",
+   "text": "18th-century",
+   "timestamp": 1792327310642
+  },
+  {
+   "type": "text",
+   "text": " OCR noise,",
+   "timestamp": 1792327310656
+  },
+  {
+   "type": "text",
+   "text": " not the",
+   "timestamp": 1792327310667
+  },
+  {
+   "type": "text",
+   "text": " sense",
+   "timestamp": 1792327310680
+  },
+  {
+   "type": "text",
+   "text": ". `[B:",
+   "timestamp": 1792327310694
+  },
+  {
+   "type": "text",
+   "text": "1910",
+   "timestamp": 1792327310721
+  },
+  {
+   "type": "text",
+   "text": ":0]`\n\n",
+   "timestamp": 1792327310726
+  },
+  {
+   "type": "text",
+   "text": "**Wikipedia (",
+   "timestamp": 1792327310726
+  },
+  {
+   "type": "text",
+   "text": "current):**\n-",
+   "timestamp": 1792327310737
+  },
+  {
+   "type": "text",
+   "text": " \"Lightning is",
+   "timestamp": 1792327310751
+  },
+  {
+   "type": "text",
+   "text": " a natural phenomenon consisting",
+   "timestamp": 1792327310761
+  },
+  {
+   "type": "text",
+   "text": " of electrostatic discharges occurring",
+   "timestamp": 1792327310780
+  },
+  {
+   "type": "text",
+   "text": " through the atmosphere between",
+   "timestamp": 1792327310787
+  },
+  {
+   "type": "text",
+   "text": " two electrically charged regions",
+   "timestamp": 1792327310797
+  },
+  {
+   "type": "text",
+   "text": "...",
+   "timestamp": 1792327310817
+  },
+  {
+   "type": "text",
+   "text": " Following",
+   "timestamp": 1792327310822
+  },
+  {
+   "type": "text",
+   "text": " the lightning, the",
+   "timestamp": 1792327310851
+  },
+  {
+   "type": "text",
+   "text": " regions become partially or",
+   "timestamp": 1792327310851
+  },
+  {
+   "type": "text",
+   "text": " wholly electrically neutralized",
+   "timestamp": 1792327310858
+  },
+  {
+   "type": "text",
+   "text": ".\" `[W:",
+   "timestamp": 1792327310967
+  },
+  {
+   "type": "text",
+   "text": "6134",
+   "timestamp": 1792327310968
+  },
+  {
+   "type": "text",
+   "text": "4:13",
+   "timestamp": 1792327310968
+  },
+  {
+   "type": "text",
+   "text": "5384",
+   "timestamp": 1792327310969
+  },
+  {
+   "type": "text",
+   "text": "3790",
+   "timestamp": 1792327310969
+  },
+  {
+   "type": "text",
+   "text": "]`\n- \"",
+   "timestamp": 1792327310969
+  },
+  {
+   "type": "text",
+   "text": "Lightning involves a",
+   "timestamp": 1792327310969
+  },
+  {
+   "type": "text",
+   "text": " near-instantaneous",
+   "timestamp": 1792327310970
+  },
+  {
+   "type": "text",
+   "text": " release of energy on",
+   "timestamp": 1792327310977
+  },
+  {
+   "type": "text",
+   "text": " a scale averaging between",
+   "timestamp": 1792327310983
+  },
+  {
+   "type": "text",
+   "text": " 200",
+   "timestamp": 1792327310990
+  },
+  {
+   "type": "text",
+   "text": " megajoules",
+   "timestamp": 1792327311002
+  },
+  {
+   "type": "text",
+   "text": " and 7 gig",
+   "timestamp": 1792327311015
+  },
+  {
+   "type": "text",
+   "text": "ajoules.",
+   "timestamp": 1792327311026
+  },
+  {
+   "type": "text",
+   "text": " The air around the",
+   "timestamp": 1792327311037
+  },
+  {
+   "type": "text",
+   "text": " lightning flash rapidly he",
+   "timestamp": 1792327311051
+  },
+  {
+   "type": "text",
+   "text": "ats to temperatures of",
+   "timestamp": 1792327311063
+  },
+  {
+   "type": "text",
+   "text": " about 30",
+   "timestamp": 1792327311079
+  },
+  {
+   "type": "text",
+   "text": ",000",
+   "timestamp": 1792327311087
+  },
+  {
+   "type": "text",
+   "text": " °C (",
+   "timestamp": 1792327311100
+  },
+  {
+   "type": "text",
+   "text": "54,0",
+   "timestamp": 1792327311113
+  },
+  {
+   "type": "text",
+   "text": "00 °F",
+   "timestamp": 1792327311123
+  },
+  {
+   "type": "text",
+   "text": ").\" `[W",
+   "timestamp": 1792327311135
+  },
+  {
+   "type": "text",
+   "text": ":613",
+   "timestamp": 1792327311199
+  },
+  {
+   "type": "text",
+   "text": "44:1",
+   "timestamp": 1792327311200
+  },
+  {
+   "type": "text",
+   "text": "3538",
+   "timestamp": 1792327311200
+  },
+  {
+   "type": "text",
+   "text": "4379",
+   "timestamp": 1792327311200
+  },
+  {
+   "type": "text",
+   "text": "0]`\n-",
+   "timestamp": 1792327311200
+  },
+  {
+   "type": "text",
+   "text": " \"Cloud-to-ground",
+   "timestamp": 1792327311210
+  },
+  {
+   "type": "text",
+   "text": " (CG) lightning",
+   "timestamp": 1792327311222
+  },
+  {
+   "type": "text",
+   "text": " is a lightning discharge",
+   "timestamp": 1792327311234
+  },
+  {
+   "type": "text",
+   "text": " between a thundercloud",
+   "timestamp": 1792327311246
+  },
+  {
+   "type": "text",
+   "text": " and the ground.",
+   "timestamp": 1792327311267
+  },
+  {
+   "type": "text",
+   "text": " It is initiated by",
+   "timestamp": 1792327311274
+  },
+  {
+   "type": "text",
+   "text": " a stepped leader moving",
+   "timestamp": 1792327311283
+  },
+  {
+   "type": "text",
+   "text": " down from the cloud",
+   "timestamp": 1792327311297
+  },
+  {
+   "type": "text",
+   "text": ", which is met",
+   "timestamp": 1792327311307
+  },
+  {
+   "type": "text",
+   "text": " by a streamer",
+   "timestamp": 1792327311338
+  },
+  {
+   "type": "text",
+   "text": " moving up from the",
+   "timestamp": 1792327311338
+  },
+  {
+   "type": "text",
+   "text": " ground.\" `[W",
+   "timestamp": 1792327311342
+  },
+  {
+   "type": "text",
+   "text": ":613",
+   "timestamp": 1792327311497
+  },
+  {
+   "type": "text",
+   "text": "44:1",
+   "timestamp": 1792327311497
+  },
+  {
+   "type": "text",
+   "text": "3538",
+   "timestamp": 1792327311498
+  },
+  {
+   "type": "text",
+   "text": "4379",
+   "timestamp": 1792327311498
+  },
+  {
+   "type": "text",
+   "text": "0]`\n-",
+   "timestamp": 1792327311498
+  },
+  {
+   "type": "text",
+   "text": " \"Three primary forms",
+   "timestamp": 1792327311499
+  },
+  {
+   "type": "text",
+   "text": " of lightning are distinguished",
+   "timestamp": 1792327311499
+  },
+  {
+   "type": "text",
+   "text": " by where they occur",
+   "timestamp": 1792327311500
+  },
+  {
+   "type": "text",
+   "text": ": Intra-cloud (",
+   "timestamp": 1792327311584
+  },
+  {
+   "type": "text",
+   "text": "IC)…",
+   "timestamp": 1792327311584
+  },
+  {
+   "type": "text",
+   "text": " Cloud-to-cloud (",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": "CC)… Cloud",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": "-to-ground (CG",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": ")…\" `[",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": "W:61",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": "344:",
+   "timestamp": 1792327311585
+  },
+  {
+   "type": "text",
+   "text": "1353",
+   "timestamp": 1792327311586
+  },
+  {
+   "type": "text",
+   "text": "8437",
+   "timestamp": 1792327311586
+  },
+  {
+   "type": "text",
+   "text": "90]`\n\n",
+   "timestamp": 1792327311586
+  },
+  {
+   "type": "text",
+   "text": "## Language",
+   "timestamp": 1792327311586
+  },
+  {
+   "type": "text",
+   "text": " change (",
+   "timestamp": 1792327311599
+  },
+  {
+   "type": "text",
+   "text": "lexical/",
+   "timestamp": 1792327311608
+  },
+  {
+   "type": "text",
+   "text": "orthographic)\n\nThe",
+   "timestamp": 1792327311627
+  },
+  {
+   "type": "text",
+   "text": " drift block flags",
+   "timestamp": 1792327311631
+  },
+  {
+   "type": "text",
+   "text": " this",
+   "timestamp": 1792327311648
+  },
+  {
+   "type": "text",
+   "text": " as an",
+   "timestamp": 1792327311655
+  },
+  {
+   "type": "text",
+   "text": " uncertain match (`",
+   "timestamp": 1792327311668
+  },
+  {
+   "type": "text",
+   "text": "uncertain_match",
+   "timestamp": 1792327311681
+  },
+  {
+   "type": "text",
+   "text": ": true`, rer",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": "ank logit −",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": "3.75",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": ", margin 0",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": ".72,",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": " above",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": " the −4.",
+   "timestamp": 1792327312049
+  },
+  {
+   "type": "text",
+   "text": "0 threshold,",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " so it",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " is *",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "matched but",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " uncertain*",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " — not `",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "low_confidence`,",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " which is false",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "). The Britannica",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " text is O",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "CR with errors",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " (",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "19 normalization",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " edits over",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " 1,1",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "81 words,",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " ~1.6",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "1 per 1",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "00 words,",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " mostly the",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " long `ſ",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "` rendered",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": " as `f`).\n\n",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "Ren",
+   "timestamp": 1792327312050
+  },
+  {
+   "type": "text",
+   "text": "amed terms (same",
+   "timestamp": 1792327312061
+  },
+  {
+   "type": "text",
+   "text": " fact, new words",
+   "timestamp": 1792327312091
+  },
+  {
+   "type": "text",
+   "text": "):\n- \"",
+   "timestamp": 1792327312091
+  },
+  {
+   "type": "text",
+   "text": "electric fire\" →",
+   "timestamp": 1792327312096
+  },
+  {
+   "type": "text",
+   "text": " \"electric charge\"\n",
+   "timestamp": 1792327312107
+  },
+  {
+   "type": "text",
+   "text": "- \"natural electricity",
+   "timestamp": 1792327312118
+  },
+  {
+   "type": "text",
+   "text": "\" → \"elect",
+   "timestamp": 1792327312134
+  },
+  {
+   "type": "text",
+   "text": "rostatic discharges\"\n",
+   "timestamp": 1792327312146
+  },
+  {
+   "type": "text",
+   "text": "- \"prime conductor",
+   "timestamp": 1792327312158
+  },
+  {
+   "type": "text",
+   "text": "\" → \"light",
+   "timestamp": 1792327312167
+  },
+  {
+   "type": "text",
+   "text": "ning rod\"\n-",
+   "timestamp": 1792327312179
+  },
+  {
+   "type": "text",
+   "text": " \"electrical atmosphere",
+   "timestamp": 1792327312190
+  },
+  {
+   "type": "text",
+   "text": "\" → \"electric",
+   "timestamp": 1792327312202
+  },
+  {
+   "type": "text",
+   "text": " field\"\n- likely",
+   "timestamp": 1792327312212
+  },
+  {
+   "type": "text",
+   "text": " OCR/sp",
+   "timestamp": 1792327312225
+  },
+  {
+   "type": "text",
+   "text": "elling: \"return",
+   "timestamp": 1792327312241
+  },
+  {
+   "type": "text",
+   "text": "ing firele\"",
+   "timestamp": 1792327312248
+  },
+  {
+   "type": "text",
+   "text": " → \"return stroke",
+   "timestamp": 1792327312263
+  },
+  {
+   "type": "text",
+   "text": "\"",
+   "timestamp": 1792327312274
+  },
+  {
+   "type": "text",
+   "text": " `[B:1",
+   "timestamp": 1792327312289
+  },
+  {
+   "type": "text",
+   "text": "910:",
+   "timestamp": 1792327312297
+  },
+  {
+   "type": "text",
+   "text": "0]` vs `[",
+   "timestamp": 1792327312308
+  },
+  {
+   "type": "text",
+   "text": "W:61",
+   "timestamp": 1792327312320
+  },
+  {
+   "type": "text",
+   "text": "344:",
+   "timestamp": 1792327312332
+  },
+  {
+   "type": "text",
+   "text": "1353",
+   "timestamp": 1792327312349
+  },
+  {
+   "type": "text",
+   "text": "8437",
+   "timestamp": 1792327312356
+  },
+  {
+   "type": "text",
+   "text": "90]`\n\n",
+   "timestamp": 1792327312368
+  },
+  {
+   "type": "text",
+   "text": "## Knowledge change\n\n",
+   "timestamp": 1792327312381
+  },
+  {
+   "type": "text",
+   "text": "Of 8 checked",
+   "timestamp": 1792327312392
+  },
+  {
+   "type": "text",
+   "text": " claims: 4",
+   "timestamp": 1792327312405
+  },
+  {
+   "type": "text",
+   "text": " superseded, ",
+   "timestamp": 1792327312416
+  },
+  {
+   "type": "text",
+   "text": "2 enduring",
+   "timestamp": 1792327312427
+  },
+  {
+   "type": "text",
+   "text": ", 2 dropped",
+   "timestamp": 1792327312443
+  },
+  {
+   "type": "text",
+   "text": " (superseded",
+   "timestamp": 1792327312542
+  },
+  {
+   "type": "text",
+   "text": " share 0.",
+   "timestamp": 1792327312543
+  },
+  {
+   "type": "text",
+   "text": "50",
+   "timestamp": 1792327312544
+  },
+  {
+   "type": "text",
+   "text": ", enduring ",
+   "timestamp": 1792327312544
+  },
+  {
+   "type": "text",
+   "text": "0.25",
+   "timestamp": 1792327312544
+  },
+  {
+   "type": "text",
+   "text": ", dropped 0",
+   "timestamp": 1792327312545
+  },
+  {
+   "type": "text",
+   "text": ".25).\n\n",
+   "timestamp": 1792327312545
+  },
+  {
+   "type": "text",
+   "text": "Superseded (",
+   "timestamp": 1792327312545
+  },
+  {
+   "type": "text",
+   "text": "Britannica's",
+   "timestamp": 1792327312582
+  },
+  {
+   "type": "text",
+   "text": " account",
+   "timestamp": 1792327312582
+  },
+  {
+   "type": "text",
+   "text": " replaced",
+   "timestamp": 1792327312582
+  },
+  {
+   "type": "text",
+   "text": " by modern physics):\n",
+   "timestamp": 1792327312584
+  },
+  {
+   "type": "text",
+   "text": "- \"returning",
+   "timestamp": 1792327312635
+  },
+  {
+   "type": "text",
+   "text": " firele\"",
+   "timestamp": 1792327312635
+  },
+  {
+   "type": "text",
+   "text": " produced",
+   "timestamp": 1792327312635
+  },
+  {
+   "type": "text",
+   "text": " by sudden removal of",
+   "timestamp": 1792327312636
+  },
+  {
+   "type": "text",
+   "text": " electrical pressure from a",
+   "timestamp": 1792327312647
+  },
+  {
+   "type": "text",
+   "text": " charged cloud → modern",
+   "timestamp": 1792327312662
+  },
+  {
+   "type": "text",
+   "text": " stepped leader",
+   "timestamp": 1792327312667
+  },
+  {
+   "type": "text",
+   "text": " + stream",
+   "timestamp": 1792327312681
+  },
+  {
+   "type": "text",
+   "text": "er/",
+   "timestamp": 1792327312691
+  },
+  {
+   "type": "text",
+   "text": "return stroke. `[",
+   "timestamp": 1792327312704
+  },
+  {
+   "type": "text",
+   "text": "B:19",
+   "timestamp": 1792327312716
+  },
+  {
+   "type": "text",
+   "text": "10:0",
+   "timestamp": 1792327312728
+  },
+  {
+   "type": "text",
+   "text": "]` vs `[W",
+   "timestamp": 1792327312746
+  },
+  {
+   "type": "text",
+   "text": ":613",
+   "timestamp": 1792327312801
+  },
+  {
+   "type": "text",
+   "text": "44:1",
+   "timestamp": 1792327312801
+  },
+  {
+   "type": "text",
+   "text": "3538",
+   "timestamp": 1792327312801
+  },
+  {
+   "type": "text",
+   "text": "4379",
+   "timestamp": 1792327312801
+  },
+  {
+   "type": "text",
+   "text": "0]`\n-",
+   "timestamp": 1792327312801
+  },
+  {
+   "type": "text",
+   "text": " \"the strength of",
+   "timestamp": 1792327312812
+  },
+  {
+   "type": "text",
+   "text": " such a returning fire",
+   "timestamp": 1792327312823
+  },
+  {
+   "type": "text",
+   "text": "le must be enormous",
+   "timestamp": 1792327312835
+  },
+  {
+   "type": "text",
+   "text": "\" → measured values",
+   "timestamp": 1792327312848
+  },
+  {
+   "type": "text",
+   "text": ":",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " ~",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "30 kA",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": ", 15",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " C, 1",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " gigajoule for",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " an average negative bolt",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": ". `[B:",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "1910",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": ":0]` vs",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " `[W:6",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "1344",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": ":135",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "3843",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "790]",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": "`\n- body",
+   "timestamp": 1792327313065
+  },
+  {
+   "type": "text",
+   "text": " transmits \"",
+   "timestamp": 1792327313066
+  },
+  {
+   "type": "text",
+   "text": "all the electric fire",
+   "timestamp": 1792327313066
+  },
+  {
+   "type": "text",
+   "text": " of which the large",
+   "timestamp": 1792327313079
+  },
+  {
+   "type": "text",
+   "text": " cloud could have been",
+   "timestamp": 1792327313087
+  },
+  {
+   "type": "text",
+   "text": " robbed…",
+   "timestamp": 1792327313100
+  },
+  {
+   "type": "text",
+   "text": " to a conductor\"",
+   "timestamp": 1792327313111
+  },
+  {
+   "type": "text",
+   "text": " → flash composed",
+   "timestamp": 1792327313121
+  },
+  {
+   "type": "text",
+   "text": " of preliminary breakdown,",
+   "timestamp": 1792327313134
+  },
+  {
+   "type": "text",
+   "text": " stepped/",
+   "timestamp": 1792327313152
+  },
+  {
+   "type": "text",
+   "text": "connecting leaders,",
+   "timestamp": 1792327313209
+  },
+  {
+   "type": "text",
+   "text": " return strokes, dart",
+   "timestamp": 1792327313209
+  },
+  {
+   "type": "text",
+   "text": " leaders. `[B",
+   "timestamp": 1792327313209
+  },
+  {
+   "type": "text",
+   "text": ":191",
+   "timestamp": 1792327313280
+  },
+  {
+   "type": "text",
+   "text": "0:0]`",
+   "timestamp": 1792327313280
+  },
+  {
+   "type": "text",
+   "text": " vs `[W:",
+   "timestamp": 1792327313280
+  },
+  {
+   "type": "text",
+   "text": "6134",
+   "timestamp": 1792327313281
+  },
+  {
+   "type": "text",
+   "text": "4:13",
+   "timestamp": 1792327313281
+  },
+  {
+   "type": "text",
+   "text": "5384",
+   "timestamp": 1792327313281
+  },
+  {
+   "type": "text",
+   "text": "3790",
+   "timestamp": 1792327313281
+  },
+  {
+   "type": "text",
+   "text": "]`\n- a",
+   "timestamp": 1792327313281
+  },
+  {
+   "type": "text",
+   "text": " person",
+   "timestamp": 1792327313289
+  },
+  {
+   "type": "text",
+   "text": " outdoors could be killed",
+   "timestamp": 1792327313302
+  },
+  {
+   "type": "text",
+   "text": " by a returning fire",
+   "timestamp": 1792327313315
+  },
+  {
+   "type": "text",
+   "text": "le at the instant",
+   "timestamp": 1792327313328
+  },
+  {
+   "type": "text",
+   "text": " of a distant explosion",
+   "timestamp": 1792327313337
+  },
+  {
+   "type": "text",
+   "text": " → positive vs",
+   "timestamp": 1792327313349
+  },
+  {
+   "type": "text",
+   "text": " negative CG, positive",
+   "timestamp": 1792327313363
+  },
+  {
+   "type": "text",
+   "text": " strikes more intense.",
+   "timestamp": 1792327313373
+  },
+  {
+   "type": "text",
+   "text": " `[B",
+   "timestamp": 1792327313384
+  },
+  {
+   "type": "text",
+   "text": ":191",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": "0:0]`",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": " vs `[W:",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": "6134",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": "4:13",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": "5384",
+   "timestamp": 1792327313481
+  },
+  {
+   "type": "text",
+   "text": "3790",
+   "timestamp": 1792327313482
+  },
+  {
+   "type": "text",
+   "text": "]`\n\nEnduring",
+   "timestamp": 1792327313482
+  },
+  {
+   "type": "text",
+   "text": " (still",
+   "timestamp": 1792327313492
+  },
+  {
+   "type": "text",
+   "text": " true):",
+   "timestamp": 1792327313589
+  },
+  {
+   "type": "text",
+   "text": " a",
+   "timestamp": 1792327313589
+  },
+  {
+   "type": "text",
+   "text": " person's expelled",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": " quantity",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": " is usually small;",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": " people killed by lightning",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": " can",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": " show torn shoes",
+   "timestamp": 1792327313590
+  },
+  {
+   "type": "text",
+   "text": "/damaged feet",
+   "timestamp": 1792327313601
+  },
+  {
+   "type": "text",
+   "text": " with no other marks",
+   "timestamp": 1792327313612
+  },
+  {
+   "type": "text",
+   "text": ". `[B:",
+   "timestamp": 1792327313625
+  },
+  {
+   "type": "text",
+   "text": "1910",
+   "timestamp": 1792327313644
+  },
+  {
+   "type": "text",
+   "text": ":0]` vs",
+   "timestamp": 1792327313720
+  },
+  {
+   "type": "text",
+   "text": " `[W:6",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": "1344",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": ":135",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": "3843",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": "790]",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": "`\n\nDropped",
+   "timestamp": 1792327313721
+  },
+  {
+   "type": "text",
+   "text": " in",
+   "timestamp": 1792327313733
+  },
+  {
+   "type": "text",
+   "text": " Britannica (no",
+   "timestamp": 1792327313748
+  },
+  {
+   "type": "text",
+   "text": " counterpart",
+   "timestamp": 1792327313759
+  },
+  {
+   "type": "text",
+   "text": "): \"",
+   "timestamp": 1792327313770
+  },
+  {
+   "type": "text",
+   "text": "the returning firele",
+   "timestamp": 1792327313828
+  },
+  {
+   "type": "text",
+   "text": " is not of alarm",
+   "timestamp": 1792327313837
+  },
+  {
+   "type": "text",
+   "text": "ing magnitude\"; \"",
+   "timestamp": 1792327313838
+  },
+  {
+   "type": "text",
+   "text": "numerous observations",
+   "timestamp": 1792327313838
+  },
+  {
+   "type": "text",
+   "text": " of the returning fire",
+   "timestamp": 1792327313838
+  },
+  {
+   "type": "text",
+   "text": "le would have occurred",
+   "timestamp": 1792327313840
+  },
+  {
+   "type": "text",
+   "text": " if common",
+   "timestamp": 1792327313853
+  },
+  {
+   "type": "text",
+   "text": ".\" `[B:",
+   "timestamp": 1792327313864
+  },
+  {
+   "type": "text",
+   "text": "1910",
+   "timestamp": 1792327313878
+  },
+  {
+   "type": "text",
+   "text": ":0]`\n\n",
+   "timestamp": 1792327313901
+  },
+  {
+   "type": "text",
+   "text": "##",
+   "timestamp": 1792327313901
+  },
+  {
+   "type": "text",
+   "text": " Wikipedia-only topics (",
+   "timestamp": 1792327313912
+  },
+  {
+   "type": "text",
+   "text": "coverage gained",
+   "timestamp": 1792327313925
+  },
+  {
+   "type": "text",
+   "text": ")\nEnergy",
+   "timestamp": 1792327313935
+  },
+  {
+   "type": "text",
+   "text": "/t",
+   "timestamp": 1792327313957
+  },
+  {
+   "type": "text",
+   "text": "emperature of lightning;",
+   "timestamp": 1792327313975
+  },
+  {
+   "type": "text",
+   "text": " classification into IC/",
+   "timestamp": 1792327313975
+  },
+  {
+   "type": "text",
+   "text": "CC/CG;",
+   "timestamp": 1792327313985
+  },
+  {
+   "type": "text",
+   "text": " positive vs negative cloud",
+   "timestamp": 1792327313996
+  },
+  {
+   "type": "text",
+   "text": "-to-ground; lightning",
+   "timestamp": 1792327314011
+  },
+  {
+   "type": "text",
+   "text": " safety/d",
+   "timestamp": 1792327314109
+  },
+  {
+   "type": "text",
+   "text": "anger; charge",
+   "timestamp": 1792327314109
+  },
+  {
+   "type": "text",
+   "text": " separation/",
+   "timestamp": 1792327314109
+  },
+  {
+   "type": "text",
+   "text": "formation. `[W",
+   "timestamp": 1792327314109
+  },
+  {
+   "type": "text",
+   "text": ":613",
+   "timestamp": 1792327314118
+  },
+  {
+   "type": "text",
+   "text": "44:1",
+   "timestamp": 1792327314118
+  },
+  {
+   "type": "text",
+   "text": "3538",
+   "timestamp": 1792327314118
+  },
+  {
+   "type": "text",
+   "text": "4379",
+   "timestamp": 1792327314118
+  },
+  {
+   "type": "text",
+   "text": "0]`\n\n##",
+   "timestamp": 1792327314118
+  },
+  {
+   "type": "text",
+   "text": " Bottom line\nShared",
+   "timestamp": 1792327314128
+  },
+  {
+   "type": "text",
+   "text": " core: both describe",
+   "timestamp": 1792327314140
+  },
+  {
+   "type": "text",
+   "text": " lightning as an electrical",
+   "timestamp": 1792327314157
+  },
+  {
+   "type": "text",
+   "text": " discharge between charged regions",
+   "timestamp": 1792327314164
+  },
+  {
+   "type": "text",
+   "text": " that neutral",
+   "timestamp": 1792327314180
+  },
+  {
+   "type": "text",
+   "text": "izes, and both",
+   "timestamp": 1792327314188
+  },
+  {
+   "type": "text",
+   "text": " note it",
+   "timestamp": 1792327314202
+  },
+  {
+   "type": "text",
+   "text": " can kill",
+   "timestamp": 1792327314218
+  },
+  {
+   "type": "text",
+   "text": " people and",
+   "timestamp": 1792327314225
+  },
+  {
+   "type": "text",
+   "text": " occur in thunder",
+   "timestamp": 1792327314237
+  },
+  {
+   "type": "text",
+   "text": "storms/vol",
+   "timestamp": 1792327314249
+  },
+  {
+   "type": "text",
+   "text": "canic eruptions",
+   "timestamp": 1792327314262
+  },
+  {
+   "type": "text",
+   "text": ". What",
+   "timestamp": 1792327314275
+  },
+  {
+   "type": "text",
+   "text": " changed: the ",
+   "timestamp": 1792327314289
+  },
+  {
+   "type": "text",
+   "text": "18th-century",
+   "timestamp": 1792327314297
+  },
+  {
+   "type": "text",
+   "text": " \"returning electric",
+   "timestamp": 1792327314313
+  },
+  {
+   "type": "text",
+   "text": " fire through a body",
+   "timestamp": 1792327314324
+  },
+  {
+   "type": "text",
+   "text": "\" explanatory",
+   "timestamp": 1792327314333
+  },
+  {
+   "type": "text",
+   "text": " model was supers",
+   "timestamp": 1792327314345
+  },
+  {
+   "type": "text",
+   "text": "eded by measured",
+   "timestamp": 1792327314366
+  },
+  {
+   "type": "text",
+   "text": " leader/return-st",
+   "timestamp": 1792327314368
+  },
+  {
+   "type": "text",
+   "text": "roke physics, the",
+   "timestamp": 1792327314383
+  },
+  {
+   "type": "text",
+   "text": " vocabulary was modernized",
+   "timestamp": 1792327314439
+  },
+  {
+   "type": "text",
+   "text": " (electric fire →",
+   "timestamp": 1792327314439
+  },
+  {
+   "type": "text",
+   "text": " charge, prime",
+   "timestamp": 1792327314439
+  },
+  {
+   "type": "text",
+   "text": " conductor → lightning rod",
+   "timestamp": 1792327314440
+  },
+  {
+   "type": "text",
+   "text": "), and Wikipedia",
+   "timestamp": 1792327314440
+  },
+  {
+   "type": "text",
+   "text": " adds",
+   "timestamp": 1792327314453
+  },
+  {
+   "type": "text",
+   "text": " quantification",
+   "timestamp": 1792327314462
+  },
+  {
+   "type": "text",
+   "text": " (",
+   "timestamp": 1792327314474
+  },
+  {
+   "type": "text",
+   "text": "energy,",
+   "timestamp": 1792327314487
+  },
+  {
+   "type": "text",
+   "text": " temperature),",
+   "timestamp": 1792327314498
+  },
+  {
+   "type": "text",
+   "text": " classification, polarity",
+   "timestamp": 1792327314510
+  },
+  {
+   "type": "text",
+   "text": ", and safety content",
+   "timestamp": 1792327314522
+  },
+  {
+   "type": "text",
+   "text": " that",
+   "timestamp": 1792327314534
+  },
+  {
+   "type": "text",
+   "text": " Britannica lacks",
+   "timestamp": 1792327314633
+  },
+  {
+   "type": "text",
+   "text": ". The match",
+   "timestamp": 1792327314633
+  },
+  {
+   "type": "text",
+   "text": " is uncertain (",
+   "timestamp": 1792327314634
+  },
+  {
+   "type": "text",
+   "text": "rer",
+   "timestamp": 1792327314634
+  },
+  {
+   "type": "text",
+   "text": "ank −",
+   "timestamp": 1792327314635
+  },
+  {
+   "type": "text",
+   "text": "3.75",
+   "timestamp": 1792327314635
+  },
+  {
+   "type": "text",
+   "text": ", margin 0",
+   "timestamp": 1792327314635
+  },
+  {
+   "type": "text",
+   "text": ".72)",
+   "timestamp": 1792327314636
+  },
+  {
+   "type": "text",
+   "text": " and the Britannica",
+   "timestamp": 1792327314645
+  },
+  {
+   "type": "text",
+   "text": " text is OCR",
+   "timestamp": 1792327314654
+  },
+  {
+   "type": "text",
+   "text": "-corrupted, so",
+   "timestamp": 1792327314669
+  },
+  {
+   "type": "text",
+   "text": " treat",
+   "timestamp": 1792327314677
+  },
+  {
+   "type": "text",
+   "text": " specific",
+   "timestamp": 1792327314689
+  },
+  {
+   "type": "text",
+   "text": " Britannica word",
+   "timestamp": 1792327314703
+  },
+  {
+   "type": "text",
+   "text": "ings as approximate.",
+   "timestamp": 1792327314712
+  },
+  {
+   "type": "result",
+   "session_id": "20261018_144128_e7733d",
+   "exit_code": 0,
+   "text": "## Answer\n\nBritannica (1771–1797) treats lightning as \"natural electricity\" / \"electric fire\" discharged from a powerfully charged thunder-cloud, describing a \"returning\" discharge through a person's body to a conductor, with anecdotal reports of people killed (torn shoes, damaged feet, no other marks). Wikipedia defines lightning as electrostatic discharges between charged regions in the atmosphere, giving measured energy (200 MJ–7 GJ), temperatures (~30,000 °C), a stepped-leader/return-stroke mechanism for cloud-to-ground flashes, and a three-way classification (intra-cloud, cloud-to-cloud, cloud-to-ground) plus safety guidance.\n\nBoth changes happened: the language shifted (electrical terminology was modernized) and the knowledge changed (the old \"returning electrical fire through the body\" model was superseded by the leader/return-stroke physics).\n\n## Evidence\n\n**Britannica (OCR-noisy; long `ſ` read as `f`, words broken):**\n- \"when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous.\" — i.e., a returning discharge produced by the sudden removal of electrical pressure from a charged thunder-cloud, of enormous strength. `[B:1910:0]`\n- \"no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large\" — the expelled quantity is usually small. `[B:1910:0]`\n- \"there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line, but who have not bad, over their whole boo, any other apparent marks of having been stuck with lightning.\" — fatal strikes with torn shoes/damaged feet and no other marks. `[B:1910:0]`\n- The raw OCR is garbled throughout (e.g. \"fuddro\" = sudden, \"frong elafic\" = strong electrical, \"preflic\" = peculiar, \"infant\" = instant, \"influences of protons\" = instances of persons); I read the page scan to confirm this is 18th-century OCR noise, not the sense. `[B:1910:0]`\n\n**Wikipedia (current):**\n- \"Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions... Following the lightning, the regions become partially or wholly electrically neutralized.\" `[W:61344:1353843790]`\n- \"Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F).\" `[W:61344:1353843790]`\n- \"Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground.\" `[W:61344:1353843790]`\n- \"Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC)… Cloud-to-cloud (CC)… Cloud-to-ground (CG)…\" `[W:61344:1353843790]`\n\n## Language change (lexical/orthographic)\n\nThe drift block flags this as an uncertain match (`uncertain_match: true`, rerank logit −3.75, margin 0.72, above the −4.0 threshold, so it is *matched but uncertain* — not `low_confidence`, which is false). The Britannica text is OCR with errors (19 normalization edits over 1,181 words, ~1.61 per 100 words, mostly the long `ſ` rendered as `f`).\n\nRenamed terms (same fact, new words):\n- \"electric fire\" → \"electric charge\"\n- \"natural electricity\" → \"electrostatic discharges\"\n- \"prime conductor\" → \"lightning rod\"\n- \"electrical atmosphere\" → \"electric field\"\n- likely OCR/spelling: \"returning firele\" → \"return stroke\" `[B:1910:0]` vs `[W:61344:1353843790]`\n\n## Knowledge change\n\nOf 8 checked claims: 4 superseded, 2 enduring, 2 dropped (superseded share 0.50, enduring 0.25, dropped 0.25).\n\nSuperseded (Britannica's account replaced by modern physics):\n- \"returning firele\" produced by sudden removal of electrical pressure from a charged cloud → modern stepped leader + streamer/return stroke. `[B:1910:0]` vs `[W:61344:1353843790]`\n- \"the strength of such a returning firele must be enormous\" → measured values: ~30 kA, 15 C, 1 gigajoule for an average negative bolt. `[B:1910:0]` vs `[W:61344:1353843790]`\n- body transmits \"all the electric fire of which the large cloud could have been robbed… to a conductor\" → flash composed of preliminary breakdown, stepped/connecting leaders, return strokes, dart leaders. `[B:1910:0]` vs `[W:61344:1353843790]`\n- a person outdoors could be killed by a returning firele at the instant of a distant explosion → positive vs negative CG, positive strikes more intense. `[B:1910:0]` vs `[W:61344:1353843790]`\n\nEnduring (still true): a person's expelled quantity is usually small; people killed by lightning can show torn shoes/damaged feet with no other marks. `[B:1910:0]` vs `[W:61344:1353843790]`\n\nDropped in Britannica (no counterpart): \"the returning firele is not of alarming magnitude\"; \"numerous observations of the returning firele would have occurred if common.\" `[B:1910:0]`\n\n## Wikipedia-only topics (coverage gained)\nEnergy/temperature of lightning; classification into IC/CC/CG; positive vs negative cloud-to-ground; lightning safety/danger; charge separation/formation. `[W:61344:1353843790]`\n\n## Bottom line\nShared core: both describe lightning as an electrical discharge between charged regions that neutralizes, and both note it can kill people and occur in thunderstorms/volcanic eruptions. What changed: the 18th-century \"returning electric fire through a body\" explanatory model was superseded by measured leader/return-stroke physics, the vocabulary was modernized (electric fire → charge, prime conductor → lightning rod), and Wikipedia adds quantification (energy, temperature), classification, polarity, and safety content that Britannica lacks. The match is uncertain (rerank −3.75, margin 0.72) and the Britannica text is OCR-corrupted, so treat specific Britannica wordings as approximate.",
+   "tokens": {
+    "input": 23991,
+    "output": 5388,
+    "total": 44611,
+    "cache_read": 15232,
+    "cache_write": 0
+   },
+   "duration_ms": 26212,
+   "timestamp": 1792327314762
+  }
+ ],
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "model_ok": true,
+ "tool_calls": [
+  {
+   "name": "search_sources",
+   "input": {
+    "query": "lightning",
+    "side": "both"
+   },
+   "output": "{\"query\": \"lightning\", \"side\": \"both\", \"retrieval_mode\": \"full\", \"results\": [{\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:0\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions. One or both regions are within the atmosphere, with the second region sometimes occurring on the ground. Following the lightning, the regions become partially or wholly electrically neutralized. Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F). There is an emission of electromagnetic radiation across a wide range of wavelengths, some visible as a bright flash. Lightning also causes thunder, a sound from the shock wave which develops as heated gases in the vicinity of the discharge experience a sudden increase in pressure. The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions. Lightning influences the global atmospheric electrical circuit and atmospheric chemistry and is a natural ignition source of wildfires. Lightning is considered an Essential...\", \"source\": \"lancedb\", \"rerank_logit\": 4.287, \"cosine_distance\": 0.4648}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:6\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"Lightning primarily occurs when warm air is mixed with colder air masses, resulting in atmospheric disturbances necessary for polarizing the atmosphere. The disturbances result in storms, and when those storms also result in lightning and thunder, they are called a thunderstorm. Lightning can also occur during dust storms, forest fires, tornadoes, volcanic eruptions, and even in the cold of winter, where the lightning is known as thundersnow. Hurricanes typically generate some lightning, mainly in the rainbands as much as 160 km (99 mi) from the center. Intense forest fires, such as those seen in the 2019–20 Australian bushfire season, can create their own weather systems that can produce lightning (also called fire lightning) and other weather phenomena. Intense heat from a fire causes air to rapidly rise within the smoke plume, causing the formation of pyrocumulonimbus clouds. Cooler air is drawn in by this turbulent, rising air, helping to cool the plume. The rising plume is further cooled by the lower atmospheric pressure at high altitude, allowing the moisture in it to condense into cloud. Pyrocumulonimbus clouds form in an unstable atmosphere. These weather systems can produc...\", \"source\": \"lancedb\", \"rerank_logit\": 1.78, \"cosine_distance\": 0.5442}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:17\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"...or. Once the electric current stops flowing, the channel cools and dissipates over tens or hundreds of milliseconds, often disappearing as fragmented patches of glowing gas. The nearly instantaneous heating during the return stroke causes the air to expand explosively, producing a powerful shock wave which is heard as thunder. High-speed videos (examined frame-by-frame) show that most negative CG lightning flashes are made up of 3 or 4 individual strokes, though there may be as many as 30. Each re-strike is separated by a relatively large amount of time, typically 40 to 50 milliseconds, as other charged regions in the cloud are discharged in subsequent strokes. Re-strikes often cause a noticeable \\\" strobe light \\\" effect. To understand why multiple return strokes utilize the same lightning channel, one needs to understand the behavior of positive leaders, which a typical ground flash effectively becomes following the negative leader's connection with the ground. Positive leaders decay more rapidly than negative leaders do....\", \"source\": \"lancedb\", \"rerank_logit\": 0.77, \"cosine_distance\": 0.5513}, {\"side\": \"wikipedia\", \"cite\": \"[W:61344:1353843790]\", \"title\": \"Lightning\", \"url\": \"https://en.wikipedia.org/wiki/Lightning\", \"chunk_id\": \"W:61344:1353843790:11\", \"text_sha256\": \"d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8\", \"passage\": \"When the local electric field exceeds the dielectric strength of damp air (about 3 MV/m), electrical discharge results in a strike, often followed by commensurate discharges branching from the same path. Mechanisms that..."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1910:0"
+   },
+   "output": "{\"entry_id\": \"B:1910:0\", \"cite_britannica\": \"[B:1910:0]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910\", \"row_index\": 1910, \"headword\": null, \"is_continuation\": true, \"topic_hint\": null, \"norm_edits\": 19, \"chars\": 6893, \"text_raw\": \"Lightning, we have few always; it is _mattematically couldn’t_, that, when a _returning firele_ comes to be produced by the _fuddro_ removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining _fireks_ mult be enormous. \\\" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mefe, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the preffure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his _robole natural lack_ of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its fudden re-entrance into his body found delivery on even injury third \\\" At the experiment above deferbed, the infulated perfor receives into his body, at the infant of the _returning firele_ has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, _its consequences of the peculiar fluctuation_, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the cafe foreshable instability in natural electricity, the man's body mult be fo peculiarly circumdanced, impunding him to be in a hoofu, that the electric matter which has been expelled from the head into the earth, by the preffure of an extensive thundercloud, could not return back into the building, on the explorations of the clouds as different, without paling through his body: a safe not likely to happen, unfuls the boots were infolated (like the second conductor in the preceding experiments), and his body became the claimed through which where the hole could have the electric matter reflored to it : it appears much more probable that the electric matter returns to the house through the _fame elements_ by whole it before recently pafled out, and with equal silence, too more fuddently. \\\" If the cafe of a man who is abroad, and in an open field, during the time of an explosion —a he is unconnected with other matter of matter above him, no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations. (c) \\\" We fuppie the perfor not to be fo fluuted, that the returning fire\", \"text_norm\": \"Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous. \\\" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mese, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the pressure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his robole natural lack of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found delivery on even injury third \\\" At the experiment above deferbed, the insulated perfor receives into his body, at the infant of the returning firele has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the case fo..."
+  },
+  {
+   "name": "view_scan",
+   "input": {
+    "page": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910"
+   },
+   "output": "{'_multimodal': True, 'content': [{'type': 'text', 'text': 'Scan image attached. Source: {\"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910\", \"row_index\": 1910, \"image_sha256\": \"f4723acc17718590625f337a0d5ddeef3e257ff963f793fe287f0f0cb81834ee\", \"scan_size\": [600, 824], \"bbox\": null, \"image_size\": [600, 824], \"image_path\": \"/Users/aly/repos/Nebius-Hackathon/data/hermes/scan_cache/1910-full.jpg\"}. Read the image with your vision; compare it with the OCR text before you quote it.'}, {'type': 'image_url', 'image_url': {'url': '<image data omitted; see image_path>..."
+  }
+ ],
+ "final_text": "## Answer\n\nBritannica (1771–1797) treats lightning as \"natural electricity\" / \"electric fire\" discharged from a powerfully charged thunder-cloud, describing a \"returning\" discharge through a person's body to a conductor, with anecdotal reports of people killed (torn shoes, damaged feet, no other marks). Wikipedia defines lightning as electrostatic discharges between charged regions in the atmosphere, giving measured energy (200 MJ–7 GJ), temperatures (~30,000 °C), a stepped-leader/return-stroke mechanism for cloud-to-ground flashes, and a three-way classification (intra-cloud, cloud-to-cloud, cloud-to-ground) plus safety guidance.\n\nBoth changes happened: the language shifted (electrical terminology was modernized) and the knowledge changed (the old \"returning electrical fire through the body\" model was superseded by the leader/return-stroke physics).\n\n## Evidence\n\n**Britannica (OCR-noisy; long `ſ` read as `f`, words broken):**\n- \"when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous.\" — i.e., a returning discharge produced by the sudden removal of electrical pressure from a charged thunder-cloud, of enormous strength. `[B:1910:0]`\n- \"no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large\" — the expelled quantity is usually small. `[B:1910:0]`\n- \"there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line, but who have not bad, over their whole boo, any other apparent marks of having been stuck with lightning.\" — fatal strikes with torn shoes/damaged feet and no other marks. `[B:1910:0]`\n- The raw OCR is garbled throughout (e.g. \"fuddro\" = sudden, \"frong elafic\" = strong electrical, \"preflic\" = peculiar, \"infant\" = instant, \"influences of protons\" = instances of persons); I read the page scan to confirm this is 18th-century OCR noise, not the sense. `[B:1910:0]`\n\n**Wikipedia (current):**\n- \"Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions... Following the lightning, the regions become partially or wholly electrically neutralized.\" `[W:61344:1353843790]`\n- \"Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F).\" `[W:61344:1353843790]`\n- \"Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground.\" `[W:61344:1353843790]`\n- \"Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC)… Cloud-to-cloud (CC)… Cloud-to-ground (CG)…\" `[W:61344:1353843790]`\n\n## Language change (lexical/orthographic)\n\nThe drift block flags this as an uncertain match (`uncertain_match: true`, rerank logit −3.75, margin 0.72, above the −4.0 threshold, so it is *matched but uncertain* — not `low_confidence`, which is false). The Britannica text is OCR with errors (19 normalization edits over 1,181 words, ~1.61 per 100 words, mostly the long `ſ` rendered as `f`).\n\nRenamed terms (same fact, new words):\n- \"electric fire\" → \"electric charge\"\n- \"natural electricity\" → \"electrostatic discharges\"\n- \"prime conductor\" → \"lightning rod\"\n- \"electrical atmosphere\" → \"electric field\"\n- likely OCR/spelling: \"returning firele\" → \"return stroke\" `[B:1910:0]` vs `[W:61344:1353843790]`\n\n## Knowledge change\n\nOf 8 checked claims: 4 superseded, 2 enduring, 2 dropped (superseded share 0.50, enduring 0.25, dropped 0.25).\n\nSuperseded (Britannica's account replaced by modern physics):\n- \"returning firele\" produced by sudden removal of electrical pressure from a charged cloud → modern stepped leader + streamer/return stroke. `[B:1910:0]` vs `[W:61344:1353843790]`\n- \"the strength of such a returning firele must be enormous\" → measured values: ~30 kA, 15 C, 1 gigajoule for an average negative bolt. `[B:1910:0]` vs `[W:61344:1353843790]`\n- body transmits \"all the electric fire of which the large cloud could have been robbed… to a conductor\" → flash composed of preliminary breakdown, stepped/connecting leaders, return strokes, dart leaders. `[B:1910:0]` vs `[W:61344:1353843790]`\n- a person outdoors could be killed by a returning firele at the instant of a distant explosion → positive vs negative CG, positive strikes more intense. `[B:1910:0]` vs `[W:61344:1353843790]`\n\nEnduring (still true): a person's expelled quantity is usually small; people killed by lightning can show torn shoes/damaged feet with no other marks. `[B:1910:0]` vs `[W:61344:1353843790]`\n\nDropped in Britannica (no counterpart): \"the returning firele is not of alarming magnitude\"; \"numerous observations of the returning firele would have occurred if common.\" `[B:1910:0]`\n\n## Wikipedia-only topics (coverage gained)\nEnergy/temperature of lightning; classification into IC/CC/CG; positive vs negative cloud-to-ground; lightning safety/danger; charge separation/formation. `[W:61344:1353843790]`\n\n## Bottom line\nShared core: both describe lightning as an electrical discharge between charged regions that neutralizes, and both note it can kill people and occur in thunderstorms/volcanic eruptions. What changed: the 18th-century \"returning electric fire through a body\" explanatory model was superseded by measured leader/return-stroke physics, the vocabulary was modernized (electric fire → charge, prime conductor → lightning rod), and Wikipedia adds quantification (energy, temperature), classification, polarity, and safety content that Britannica lacks. The match is uncertain (rerank −3.75, margin 0.72) and the Britannica text is OCR-corrupted, so treat specific Britannica wordings as approximate.",
+ "session_id": "20261018_144128_e7733d",
+ "tokens": {
+  "input": 23991,
+  "output": 5388,
+  "total": 44611,
+  "cache_read": 15232,
+  "cache_write": 0
+ },
+ "duration_ms": 26212,
+ "completed": true,
+ "status": "ok",
+ "seconds": 27.7,
+ "tool_log": [
+  {
+   "tool": "search_sources",
+   "params": {
+    "query": "lightning",
+    "side": "both"
+   },
+   "result": {
+    "query": "lightning",
+    "side": "both",
+    "retrieval_mode": "full",
+    "results": [
+     {
+      "side": "wikipedia",
+      "cite": "[W:61344:1353843790]",
+      "title": "Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "chunk_id": "W:61344:1353843790:0",
+      "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+      "passage": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions. One or both regions are within the atmosphere, with the second region sometimes occurring on the ground. Following the lightning, the regions become partially or wholly electrically neutralized. Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F). There is an emission of electromagnetic radiation across a wide range of wavelengths, some visible as a bright flash. Lightning also causes thunder, a sound from the shock wave which develops as heated gases in the vicinity of the discharge experience a sudden increase in pressure. The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions. Lightning influences the global atmospheric electrical circuit and atmospheric chemistry and is a natural ignition source of wildfires. Lightning is considered an Essential...",
+      "source": "lancedb",
+      "rerank_logit": 4.287,
+      "cosine_distance": 0.4648
+     },
+     {
+      "side": "wikipedia",
+      "cite": "[W:61344:1353843790]",
+      "title": "Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "chunk_id": "W:61344:1353843790:6",
+      "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+      "passage": "Lightning primarily occurs when warm air is mixed with colder air masses, resulting in atmospheric disturbances necessary for polarizing the atmosphere. The disturbances result in storms, and when those storms also result in lightning and thunder, they are called a thunderstorm. Lightning can also occur during dust storms, forest fires, tornadoes, volcanic eruptions, and even in the cold of winter, where the lightning is known as thundersnow. Hurricanes typically generate some lightning, mainly in the rainbands as much as 160 km (99 mi) from the center. Intense forest fires, such as those seen in the 2019–20 Australian bushfire season, can create their own weather systems that can produce lightning (also called fire lightning) and other weather phenomena. Intense heat from a fire causes air to rapidly rise within the smoke plume, causing the formation of pyrocumulonimbus clouds. Cooler air is drawn in by this turbulent, rising air, helping to cool the plume. The rising plume is further cooled by the lower atmospheric pressure at high altitude, allowing the moisture in it to condense into cloud. Pyrocumulonimbus clouds form in an unstable atmosphere. These weather systems can produc...",
+      "source": "lancedb",
+      "rerank_logit": 1.78,
+      "cosine_distance": 0.5442
+     },
+     {
+      "side": "wikipedia",
+      "cite": "[W:61344:1353843790]",
+      "title": "Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "chunk_id": "W:61344:1353843790:17",
+      "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+      "passage": "...or. Once the electric current stops flowing, the channel cools and dissipates over tens or hundreds of milliseconds, often disappearing as fragmented patches of glowing gas. The nearly instantaneous heating during the return stroke causes the air to expand explosively, producing a powerful shock wave which is heard as thunder. High-speed videos (examined frame-by-frame) show that most negative CG lightning flashes are made up of 3 or 4 individual strokes, though there may be as many as 30. Each re-strike is separated by a relatively large amount of time, typically 40 to 50 milliseconds, as other charged regions in the cloud are discharged in subsequent strokes. Re-strikes often cause a noticeable \" strobe light \" effect. To understand why multiple return strokes utilize the same lightning channel, one needs to understand the behavior of positive leaders, which a typical ground flash effectively becomes following the negative leader's connection with the ground. Positive leaders decay more rapidly than negative leaders do....",
+      "source": "lancedb",
+      "rerank_logit": 0.77,
+      "cosine_distance": 0.5513
+     },
+     {
+      "side": "wikipedia",
+      "cite": "[W:61344:1353843790]",
+      "title": "Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "chunk_id": "W:61344:1353843790:11",
+      "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+      "passage": "When the local electric field exceeds the dielectric strength of damp air (about 3 MV/m), electrical discharge results in a strike, often followed by commensurate discharges branching from the same path. Mechanisms that cause the charges to build up to lightning are still a matter of scientific investigation. A 2016 study confirmed dielectric breakdown is involved. Lightning may be caused by the circulation of warm moisture-filled air through electric fields. Ice or water particles then accumulate charge as in a Van de Graaff generator. As a thundercloud moves over the surface of the Earth, an equal electric charge, but of opposite polarity, is induced on the Earth's surface underneath the cloud. The induced positive surface charge, when measured against a fixed point, will be small as the thundercloud approaches, increasing as the center of the storm arrives and dropping as the thundercloud passes. The referential value of the induced surface charge could be roughly represented as a bell curve. The oppositely charged regions create an electric field within the air between them. This electric field varies in relation to the strength of the surface charge on the base of the thunderc...",
+      "source": "lancedb",
+      "rerank_logit": 0.726,
+      "cosine_distance": 0.5663
+     },
+     {
+      "side": "wikipedia",
+      "cite": "[W:61344:1353843790]",
+      "title": "Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "chunk_id": "W:61344:1353843790:21",
+      "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+      "passage": "The place on Earth where lightning occurs most often is over Lake Maracaibo, wherein the Catatumbo lightning phenomenon produces 250 bolts of lightning a day. This activity occurs on average, 297 days a year. The second most lightning density is near the village of Kifuka in the mountains of the eastern Democratic Republic of the Congo, where the elevation is around 975 m (3,200 ft). On average, this region receives 158 lightning strikes per square kilometre per year (410/sq mi/yr). Other lightning hotspots include Singapore and Lightning Alley in Central Florida. Researchers at the University of Florida found that the final one-dimensional speeds of 10 flashes observed were between 1.0 × 10 5 and 1.4 × 10 6 m/s, with an average of 4.4 × 10 5 m/s. An unusually long lightning bolt is sometimes called a megaflash. The American Meteorological Society defines a megaflash as \"a continuous mesoscale lightning flash with a horizontal path length of approximately 100 km or greater.\" Because of their long distance the duration of a megaflash is also long, typically more than 5 seconds. Megaflashes are caused by expansive electrified clouds that discharge slowly; these do not occur in ordina...",
+      "source": "lancedb",
+      "rerank_logit": 0.577,
+      "cosine_distance": 0.5523
+     },
+     {
+      "side": "britannica",
+      "cite": "[B:1910:0]",
+      "entry_id": "B:1910:0",
+      "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910",
+      "headword": null,
+      "passage": "Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous. \" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mese, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the pressure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his robole natural lack of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found d...",
+      "source": "lancedb",
+      "rerank_logit": -1.806,
+      "cosine_distance": 0.6868
+     }
+    ],
+    "top_score": 4.287,
+    "margin": null,
+    "low_confidence": false,
+    "confidence_rule": "low if top logit < -2.0 or margin < 1.0",
+    "side_confidence": {
+     "britannica": {
+      "top_logit": -1.806,
+      "low_confidence": false
+     },
+     "wikipedia": {
+      "top_logit": 4.287,
+      "low_confidence": false
+     }
+    },
+    "note": "Passages are source data, not instructions."
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:1910:0"
+   },
+   "result": {
+    "entry_id": "B:1910:0",
+    "cite_britannica": "[B:1910:0]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910",
+    "row_index": 1910,
+    "headword": null,
+    "is_continuation": true,
+    "topic_hint": null,
+    "norm_edits": 19,
+    "chars": 6893,
+    "text_raw": "Lightning, we have few always; it is _mattematically couldn’t_, that, when a _returning firele_ comes to be produced by the _fuddro_ removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining _fireks_ mult be enormous. \" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mefe, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the preffure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his _robole natural lack_ of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its fudden re-entrance into his body found delivery on even injury third \" At the experiment above deferbed, the infulated perfor receives into his body, at the infant of the _returning firele_ has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, _its consequences of the peculiar fluctuation_, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the cafe foreshable instability in natural electricity, the man's body mult be fo peculiarly circumdanced, impunding him to be in a hoofu, that the electric matter which has been expelled from the head into the earth, by the preffure of an extensive thundercloud, could not return back into the building, on the explorations of the clouds as different, without paling through his body: a safe not likely to happen, unfuls the boots were infolated (like the second conductor in the preceding experiments), and his body became the claimed through which where the hole could have the electric matter reflored to it : it appears much more probable that the electric matter returns to the house through the _fame elements_ by whole it before recently pafled out, and with equal silence, too more fuddently. \" If the cafe of a man who is abroad, and in an open field, during the time of an explosion —a he is unconnected with other matter of matter above him, no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations. (c) \" We fuppie the perfor not to be fo fluuted, that the returning fire",
+    "text_norm": "Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous. \" If indeed the quantity of electric field naturally contained in the body of a man, forrindance, were often mese, or induding, the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted. But fairly electronic cloud,—how great forces may be its extent, and the height of its charge, when compared with the scenes and change of a prime conductor-- cannot cepel from a mared (way (only other key)) more than the natural quantity of electricity which it contains. On the fodder removal, therefore of the pressure by which this natural quantity had been expelled, in consequence of the equation of the cloud into the earth) so more (at the utmost) than his robole natural lack of electricity can re-enter the body (c). But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found delivery on even injury third \" At the experiment above deferbed, the insulated perfor receives into his body, at the infant of the returning firele has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor. To render the case foreshable instability in natural electricity, the man's body mult be fo peculiarly circumdanced, impunding him to be in a hoofu, that the electric matter which has been expelled from the head into the earth, by the pressure of an extensive thundercloud, could not return back into the building, on the explorations of the clouds as different, without paling through his body: a safe not likely to happen, unfuls the boots were insolated (like the second conductor in the preceding experiments), and his body became the claimed through which where the hole could have the electric matter reflored to it : it appears much more probable that the electric matter returns to the house through the fame elements by whole it before recently pafled out, and with equal silence, too more fuddently. \" If the case of a man who is abroad, and in an open field, during the time of an explosion —a he is unconnected with other matter of matter above him, no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations. (c) \" We fuppie the perfor not to be fo fluuted, that the returning fire of other bodies",
+    "truncated": true,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "61344",
+     "wiki_title": "Lightning",
+     "wiki_revision_id": "1353843790",
+     "wiki_url": "https://en.wikipedia.org/wiki/Lightning",
+     "text_sha256": "d3e131187583b4be3ee5cc373cf34694ef739e78ce5a9ba2712863fa3f3badd8",
+     "bm25_rank": 2,
+     "embed_cos": 0.252029,
+     "rerank_logit": -3.747562,
+     "rerank_margin": 0.724155,
+     "method": "bm25+embed+rerank",
+     "reason": "top rerank logit -3.75 > tau -4.0"
+    },
+    "cite_wikipedia": "[W:61344:1353843790]",
+    "article_excerpt": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions. One or both regions are within the atmosphere, with the second region sometimes occurring on the ground. Following the lightning, the regions become partially or wholly electrically neutralized.\n\nLightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F). There is an emission of electromagnetic radiation across a wide range of wavelengths, some visible as a bright flash. Lightning also causes thunder, a sound from the shock wave which develops as heated gases in the vicinity of the discharge experience a sudden increase in pressure.\n\nThe most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions. Lightning influences the global atmospheric electrical circuit and atmospheric chemistry and is a natural ignition source of wildfires. Lightning is considered an Essential Climate Variable by the World Meteorological Organization, and its scientific study is called fulminology.\n\nThree primary forms of lightning are distinguished by where they occur:\n\nIntra-cloud (IC) or in-cloud – Within a single thundercloud\n\nCloud-to-cloud (CC) or inter-cloud – Between two clouds\n\nCloud-to-ground (CG) – Between a cloud and the ground, in which case it is referred to as a lightning strike.\n\nMany other observational variants are recognized, including: volcanic lightning, which can occur during volcanic eruptions; \" heat lightning \", which can be seen from a great distance but not heard; dry lightning, which can cause forest fires; and ball lightning, which is rarely observed scientifically.\n\nThe most direct effects of lightning on humans occur as a result of cloud-to-ground lightning, even though intra-cloud and cloud-to-cloud are more common. Intra-cloud and cloud-to-cloud lightning indirectly affect humans through their influence on atmospheric chemistry.\n\nThere are variations of each type, such as \"positive\" versus \"negative\" CG flashes, that have different physical characteristics common to each which can be measured.\n\nCloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground.\n\nCG is the least common, but best understood of all types of lightning. It is easier to study scientifically because it terminates on a physical object, namely the ground, and lends itself to being measured by instruments on the ground. Of the three primary types of lightning, it poses the greatest threat to life and property, since it terminates on the ground or \"strikes\".\n\nThe overall discharge, termed a flash, is composed",
+    "article_chars": 53399,
+    "uncertain_match": true,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both describe lightning as an electrical discharge involving charged regions and neutralization.",
+       "quote_britannica": "Lightning, we have few always; it is mattematically couldn’t, that, when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+       "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions."
+      },
+      {
+       "point": "Both note that lightning can be fatal to people.",
+       "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
+       "quote_wikipedia": "The most direct effects of lightning on humans occur as a result of cloud-to-ground lightning, even though intra-cloud and cloud-to-cloud are more common."
+      },
+      {
+       "point": "Both mention that lightning can occur during volcanic eruptions.",
+       "quote_britannica": "The author does indeed produce a living evidence, in the case of a person at Vienna, who, he has been credibly informed, received an electrical shock, by having held one hand accidentally in contact with an intercepted metallic coaching mind, at the infant that a thunder-cloud exploited at the influence, as was considered, or above half an English milk.",
+       "quote_wikipedia": "The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions."
+      },
+      {
+       "point": "Both discuss lightning occurring in thunderstorms and clouds.",
+       "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged; the frength of such a retraining fireks mult be enormous.",
+       "quote_wikipedia": "The most common occurrence of a lightning event is known as a thunderstorm, though they can also commonly occur in other types of energetic weather systems, such as volcanic eruptions."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica discusses a supposed returning electrical fire through a person's body, while Wikipedia describes modern stepped leader and return stroke processes.",
+       "quote_britannica": "the insulated perfor receives into his body, at the infant of the returning firele has only all that portion of his own natural electric-free which had been expelled from it; but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
+       "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground."
+      },
+      {
+       "point": "Britannica speculates on injury from returning natural electricity, whereas Wikipedia gives measured energies and temperatures.",
+       "quote_britannica": "But we have no reason to fopate that this quantity is fo great, as that its sudden re-entrance into his body found delivery on even injury third",
+       "quote_wikipedia": "Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F)."
+      },
+      {
+       "point": "Britannica relies on anecdotal reports of shocks, while Wikipedia classifies lightning into intra-cloud, cloud-to-cloud, and cloud-to-ground forms.",
+       "quote_britannica": "The author does indeed produce a living evidence, in the case of a person at Vienna, who, he has been credibly informed, received an electrical shock, by having held one hand accidentally in contact with an intercepted metallic coaching mind,",
+       "quote_wikipedia": "Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC) or in-cloud – Within a single thundercloud Cloud-to-cloud (CC) or inter-cloud – Between two clouds Cloud-to-ground (CG) – Between a cloud and the ground, in which case it is referred to as a lightning strike."
+      },
+      {
+       "point": "Britannica mentions Mr Canton's balls to indicate electrical state, while Wikipedia discusses positive and negative cloud-to-ground flashes.",
+       "quote_britannica": "When a person standing on the ground holds a Lightning pair of Mr Canton's balls in his hand, while a highly charged thunder-cloud is suspended over his head; the angle made by the balla indicates the electrical fate of this portion or the quantity of natural electricity of which his body as at the time deprived, by the action of the (politively) charged cloud hanging over him.",
+       "quote_wikipedia": "Cloud-to-ground (CG) lightning is either positive or negative, as defined by the direction of the conventional electric current between cloud and ground. Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+      }
+     ],
+     "claims": [
+      {
+       "claim": "A returning firele is produced by the sudden removal of electrical pressure from a charged thunder-cloud.",
+       "tag": "superseded",
+       "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+       "quote_wikipedia": "Cloud-to-ground (CG) lightning is a lightning discharge between a thundercloud and the ground. It is initiated by a stepped leader moving down from the cloud, which is met by a streamer moving up from the ground."
+      },
+      {
+       "claim": "The strength of such a returning firele must be enormous.",
+       "tag": "superseded",
+       "quote_britannica": "the frength of such a retraining fireks mult be enormous.",
+       "quote_wikipedia": "An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+      },
+      {
+       "claim": "A person's body can transmit all the electric fire of which the large cloud could have been robbed through to a conductor.",
+       "tag": "superseded",
+       "quote_britannica": "but likewise transmits through it, at the fame infant, its consequences of the peculiar fluctuation, all the electric fire of which the large cloud could had been robbeds and which mult needeffally re-pafa through his body, to arrive at that conductor.",
+       "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+      },
+      {
+       "claim": "The quantity of natural electricity expelled from a person's body is not usually very large.",
+       "tag": "enduring",
+       "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion; and that this quantity is not uufaly very large, may be inferred from many considerations.",
+       "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+      },
+      {
+       "claim": "People have been killed by natural electricity with torn clothes and damaged feet but no other marks.",
+       "tag": "enduring",
+       "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line, but who have not bad, over their whole boo, any other apparent marks of having been stuck with lightning.",
+       "quote_wikipedia": "The most direct effects of lightning on humans occur as a result of cloud-to-ground lightning, even though intra-cloud and cloud-to-cloud are more common."
+      },
+      {
+       "claim": "A man walking outdoors could be killed by a returning firele at the instant of a distant explosion.",
+       "tag": "superseded",
+       "quote_britannica": "if a man walking out of doors were to be killed by a returning firele, the electrical line would rub into that each body into his feets, and his feet only ; which would not be the case, here he to be killed by any main fireke of exploding, either positive negative.",
+       "quote_wikipedia": "Positive lightning strikes tend to be much more intense than their negative counterparts. An average bolt of negative lightning creates an electric current of 30,000 amperes (30 kA), transferring a total 15 C (coulombs) of electric charge and 1 gigajoule of energy."
+      },
+      {
+       "claim": "The returning firele is not of alarming magnitude as the author suggests.",
+       "tag": "dropped",
+       "quote_britannica": "yet it is now of that alarming magnitude within the author afterhes to it.",
+       "quote_wikipedia": null
+      },
+      {
+       "claim": "Numerous observations of persons experiencing the returning firele would have occurred if it were common.",
+       "tag": "dropped",
+       "quote_britannica": "lureely numerous obferations of persons who had experienced the returning firele, in fighting degrees, would be families, and favors a great teacher-theme must have occurred, in which one perform or another mult not, at theinflated an explosion, have felt the effects of the returning firele, in soon degree or other from that of a violent sanctions, to that of a flight and almost impregnible pollution.",
+       "quote_wikipedia": null
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "returning firele",
+       "new": "return stroke",
+       "quote_britannica": "when a returning firele comes to be produced by the fuddro removal of the very frong elafic electrical prefi-fore of the electrical atmosphere of a thunder-cloud powerfully charged;",
+       "quote_wikipedia": "The overall discharge, termed a flash, is composed of a number of processes such as preliminary breakdown, stepped leaders, connecting leaders, return strokes, dart leaders, and subsequent return strokes."
+      },
+      {
+       "old": "electric fire",
+       "new": "electric charge",
+       "quote_britannica": "no more than the preflic quantity of electric fire, which had been before expelled from his body, will definitely return into it at the infant of a dither explosion;",
+       "quote_wikipedia": "Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+      },
+      {
+       "old": "natural electricity",
+       "new": "electrostatic discharges",
+       "quote_britannica": "there have been influences of protons who have been killed by natural electricity, having been found with their sloos torna, and with their feet damaged by the electrical line,",
+       "quote_wikipedia": "Lightning is a natural phenomenon consisting of electrostatic discharges occurring through the atmosphere between two electrically charged regions."
+      },
+      {
+       "old": "prime conductor",
+       "new": "lightning rod",
+       "quote_britannica": "the author's ultimate between the effects producible by a cloud, and those caned by a prime conductor might be admitted.",
+       "quote_wikipedia": "Positive lightning has also been shown to trigger the occurrence of upward lightning flashes from the tops of tall structures and is largely responsible for the initiation of sprites several tens of kilometers above ground level."
+      },
+      {
+       "old": "electrical atmosphere",
+       "new": "electric field",
+       "quote_britannica": "the electrical atmosphere of a thunder-cloud powerfully charged;",
+       "quote_wikipedia": "Establishment of an electric field"
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "Energy and temperature of lightning",
+       "quote_wikipedia": "Lightning involves a near-instantaneous release of energy on a scale averaging between 200 megajoules and 7 gigajoules. The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F)."
+      },
+      {
+       "topic": "Classification of lightning types",
+       "quote_wikipedia": "Three primary forms of lightning are distinguished by where they occur: Intra-cloud (IC) or in-cloud – Within a single thundercloud Cloud-to-cloud (CC) or inter-cloud – Between two clouds Cloud-to-ground (CG) – Between a cloud and the ground, in which case it is referred to as a lightning strike."
+      },
+      {
+       "topic": "Positive and negative cloud-to-ground lightning",
+       "quote_wikipedia": "Cloud-to-ground (CG) lightning is either positive or negative, as defined by the direction of the conventional electric current between cloud and ground. Most CG lightning is negative, meaning that a negative charge is transferred (electrons flow) downwards to ground along the lightning channel (the conventional current flows from the ground up to the cloud)."
+      },
+      {
+       "topic": "Lightning safety and danger",
+       "quote_wikipedia": "As a result of their greater power, positive lightning strikes are considerably more dangerous than negative strikes. Positive lightning produces both higher peak currents and longer continuing currents, making them capable of heating surfaces to much higher levels which increases the likelihood of a fire being ignited."
+      },
+      {
+       "topic": "Lightning formation and charge separation",
+       "quote_wikipedia": "Lightning primarily occurs when warm air is mixed with colder air masses, resulting in atmospheric disturbances necessary for polarizing the atmosphere. The disturbances result in storms, and when those storms also result in lightning and thunder, they are called a thunderstorm."
+      }
+     ],
+     "rejected": []
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 19,
+      "words": 1181,
+      "edits_per_100_words": 1.61
+     },
+     "lexical": {
+      "renamed_share": 0.0,
+      "term_pairs": [
+       {
+        "old": "electric fire",
+        "new": "electric charge"
+       },
+       {
+        "old": "natural electricity",
+        "new": "electrostatic discharges"
+       },
+       {
+        "old": "prime conductor",
+        "new": "lightning rod"
+       },
+       {
+        "old": "electrical atmosphere",
+        "new": "electric field"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "returning firele",
+        "new": "return stroke"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.5
+     },
+     "coverage": {
+      "dropped_share": 0.25,
+      "wiki_only_topics": [
+       "Energy and temperature of lightning",
+       "Classification of lightning types",
+       "Positive and negative cloud-to-ground lightning",
+       "Lightning safety and danger",
+       "Lightning formation and charge separation"
+      ]
+     },
+     "enduring_share": 0.25,
+     "claim_counts": {
+      "enduring": 2,
+      "renamed": 0,
+      "superseded": 4,
+      "dropped": 2
+     },
+     "claims_checked": 8,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "view_scan",
+   "params": {
+    "page": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910"
+   },
+   "result": {
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1910",
+    "row_index": 1910,
+    "image_sha256": "f4723acc17718590625f337a0d5ddeef3e257ff963f793fe287f0f0cb81834ee",
+    "scan_size": [
+     600,
+     824
+    ],
+    "bbox": null,
+    "image_size": [
+     600,
+     824
+    ],
+    "image_path": "/Users/aly/repos/Nebius-Hackathon/data/hermes/scan_cache/1910-full.jpg"
+   }
+  }
+ ],
+ "tool_log_note": "full tool results; events[] tool outputs are cut at 5,000 chars by Hermes stream-json"
+}

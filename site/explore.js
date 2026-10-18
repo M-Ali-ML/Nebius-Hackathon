@@ -9,8 +9,9 @@
     if (text != null) node.textContent = text;
     return node;
   }
+  function pressed(b) { return b.getAttribute("aria-pressed") === "true"; }
   function citeB(r) {
-    var a = el("a", "cite", r.b || "[B:?]");
+    var a = el("a", "cite b", r.b || "[B:?]");
     if (r.row != null) a.href = "pages/" + r.row + ".html";
     return a;
   }
@@ -19,11 +20,11 @@
     if (r.rev) { a.href = r.rev; a.target = "_blank"; a.rel = "noopener"; }
     return a;
   }
-  function quoteCell(cite, quote, label, missing) {
+  function quoteCell(cite, quote, label, missing, side) {
     var td = el("td", "qcell");
     td.appendChild(cite);
-    if (label) td.appendChild(el("span", "small muted", " " + label));
-    td.appendChild(el("div", "qt", quote ? "“" + quote + "”" : "(no quote)"));
+    if (label) td.appendChild(el("span", "src-label", label));
+    td.appendChild(el("div", "qt" + (side === "b" ? " qb" : ""), quote ? "“" + quote + "”" : (missing || "(no quote)")));
     return td;
   }
   function hay(r, keys) {
@@ -35,15 +36,15 @@
   var qc = document.getElementById("q-claims"), tbodyC = document.getElementById("rows-claims");
   function renderClaims() {
     var q = qc.value.toLowerCase().trim(), on = {};
-    document.querySelectorAll(".tagbox").forEach(function (c) { on[c.value] = c.checked; });
+    document.querySelectorAll(".tagbox").forEach(function (c) { on[c.dataset.tag] = pressed(c); });
     var frag = document.createDocumentFragment(), n = 0;
     claims.forEach(function (r) {
       if (!on[r.tag] || (q && r._s.indexOf(q) < 0)) return;
       n++;
       var tr = el("tr");
-      var td = el("td"); td.appendChild(el("span", "tag " + r.tag, r.tag)); tr.appendChild(td);
+      var td = el("td"); td.appendChild(el("span", "pill " + r.tag, r.tag)); tr.appendChild(td);
       tr.appendChild(el("td", "claimtext", r.claim || ""));
-      tr.appendChild(quoteCell(citeB(r), r.qb, r.head));
+      tr.appendChild(quoteCell(citeB(r), r.qb, r.head, null, "b"));
       tr.appendChild(quoteCell(citeW(r), r.qw, r.title, r.tag === "dropped" ? "(not found in the article)" : null));
       frag.appendChild(tr);
     });
@@ -56,14 +57,14 @@
   function renderTerms() {
     var q = qt.value.toLowerCase().trim(), frag = document.createDocumentFragment(), n = 0;
     terms.forEach(function (r) {
-      if ((r.ocr && !showOcr.checked) || (q && r._s.indexOf(q) < 0)) return;
+      if ((r.ocr && !pressed(showOcr)) || (q && r._s.indexOf(q) < 0)) return;
       n++;
       var tr = el("tr", r.ocr ? "ocr" : "");
       var old = el("td", "old", r.old || "");
-      if (r.ocr) old.appendChild(el("span", "badge", "likely OCR or spelling"));
+      if (r.ocr) old.appendChild(el("span", "pill", "likely OCR or spelling"));
       tr.appendChild(old);
       tr.appendChild(el("td", "new", r.new || ""));
-      tr.appendChild(quoteCell(citeB(r), r.qb, r.head));
+      tr.appendChild(quoteCell(citeB(r), r.qb, r.head, null, "b"));
       tr.appendChild(quoteCell(citeW(r), r.qw, r.title));
       frag.appendChild(tr);
     });
@@ -72,9 +73,11 @@
   }
 
   qc.addEventListener("input", renderClaims);
-  document.querySelectorAll(".tagbox").forEach(function (c) { c.addEventListener("change", renderClaims); });
+  document.querySelectorAll(".tagbox").forEach(function (c) {
+    c.addEventListener("click", function () { c.setAttribute("aria-pressed", pressed(c) ? "false" : "true"); renderClaims(); });
+  });
   qt.addEventListener("input", renderTerms);
-  showOcr.addEventListener("change", renderTerms);
+  showOcr.addEventListener("click", function () { showOcr.setAttribute("aria-pressed", pressed(showOcr) ? "false" : "true"); renderTerms(); });
 
   document.querySelectorAll(".tab").forEach(function (b) {
     b.addEventListener("click", function () {

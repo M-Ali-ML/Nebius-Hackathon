@@ -29,8 +29,8 @@ Demonstrate and document:
 
 ## Datasets
 
-- **Historical Britannica:** National Library of Scotland — Encyclopaedia Britannica Illustrated
-- **Wikipedia:** Wikimedia Foundation — Wikipedia Structured Contents
+- [**Historical Britannica:** National Library of Scotland — Encyclopaedia Britannica Illustrated](https://huggingface.co/datasets/NationalLibraryOfScotland/encyclopaedia_britannica_illustrated)
+- [**Wikipedia:** Wikimedia Foundation — Wikipedia Structured Contents](https://www.kaggle.com/datasets/wikimedia-foundation/wikipedia-structured-contents)
 
 Record the dataset versions or download dates you use so that your comparisons are reproducible.
 

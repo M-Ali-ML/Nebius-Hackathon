@@ -1,39 +1,57 @@
-{% extends "base.html" %}{% set root = "" %}
+{% extends "base.html" %}{% set root = "" %}{% set active = "index.html" %}
+{% from "_macros.html" import search_icon %}
 {% block title %}Pages: Britannica and Wikipedia{% endblock %}
 {% block content %}
 <main class="wide">
-  <h1>Encyclopaedia Britannica scans</h1>
-  <p class="lead">{{ totals.pages }} scanned pages. Each page has the scan with Parse 3.5 layout blocks, a LaTeX document compiled from those blocks, and the Wikipedia articles our retrieval matched to its entries.</p>
+  <header class="pagehead">
+    <h1>Encyclopaedia Britannica scans</h1>
+    <p class="lead">{{ totals.pages }} scanned pages. Each page has the scan with Parse 3.5 layout blocks, a LaTeX document compiled from those blocks, and the Wikipedia articles our retrieval matched to its entries.</p>
+  </header>
   <ul class="stats">
-    <li><b>{{ totals.pages }}</b> pages</li>
-    <li><b>{{ totals.latex_ok }}</b> LaTeX builds ok</li>
-    <li><b>{{ totals.entries if inputs.has_entries else "n/a" }}</b> entries</li>
-    <li><b>{{ totals.pages_matched if inputs.has_page_matches else "n/a" }}</b> pages matched</li>
-    <li><b>{{ totals.matched if inputs.has_matches else "n/a" }}</b> entries matched</li>
-    <li><b>{{ totals.uncertain if inputs.has_matches else "n/a" }}</b> no clear counterpart</li>
-    {% if totals.errors %}<li><b>{{ totals.errors }}</b> match errors</li>{% endif %}
+    <li><b>{{ totals.pages }}</b><span>pages</span></li>
+    <li><b>{{ totals.latex_ok }}</b><span>LaTeX builds ok</span></li>
+    <li><b>{{ totals.entries if inputs.has_entries else "n/a" }}</b><span>entries</span></li>
+    <li><b>{{ totals.pages_matched if inputs.has_page_matches else "n/a" }}</b><span>pages matched</span></li>
+    <li><b>{{ totals.matched if inputs.has_matches else "n/a" }}</b><span>entries matched</span></li>
+    <li><b>{{ totals.uncertain if inputs.has_matches else "n/a" }}</b><span>no clear counterpart</span></li>
+    {% if totals.errors %}<li><b>{{ totals.errors }}</b><span>match errors</span></li>{% endif %}
   </ul>
   {% if not inputs.has_entries %}<p class="note">Entry segmentation output (extract/entries.jsonl) is not available yet.</p>{% endif %}
   {% if not inputs.has_matches %}<p class="note">Match output (match/matches.jsonl) is not available yet.</p>{% endif %}
-  <input id="filter" class="filter" type="search" placeholder="Filter by row or running head">
-  <table class="pages" id="pages">
-    <thead><tr><th>Scan</th><th>Row</th><th>Running head</th><th>Page match</th><th>Blocks</th><th>Entries</th><th>Matched</th><th>Uncertain</th><th>LaTeX</th></tr></thead>
+  <div class="toolbar">
+    <label class="search">{{ search_icon() }}<input id="filter" type="search" placeholder="Filter by row or running head" aria-label="Filter by row or running head"></label>
+    <div class="chips" id="index-filters" role="group" aria-label="Filter pages">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span class="count">{{ rows|length }}</span></button>
+      <button type="button" class="chip" data-filter="matched" aria-pressed="false" style="--c: var(--emerald-400)">Matched <span class="count">{{ rows|selectattr("page_match")|selectattr("page_match.status", "equalto", "matched")|list|length }}</span></button>
+      <button type="button" class="chip" data-filter="uncertain" aria-pressed="false" style="--c: var(--amber-400)">Uncertain <span class="count">{{ rows|selectattr("page_match")|rejectattr("page_match.status", "equalto", "matched")|list|length }}</span></button>
+      <button type="button" class="chip" data-filter="plate" aria-pressed="false">Plates <span class="count">{{ rows|selectattr("plate_status")|list|length }}</span></button>
+      {% for c, label in causes.items() %}{% if cause_counts[c] %}
+      <button type="button" class="chip" data-filter="cause-{{ c }}" aria-pressed="false" style="--c: var(--amber-300)" title="uncertainty cause">{{ label }} <span class="count">{{ cause_counts[c] }}</span></button>
+      {% endif %}{% endfor %}
+    </div>
+    <span class="count-label" id="n-shown"></span>
+  </div>
+  <div class="tablewrap">
+  <table class="data" id="pages">
+    <thead><tr><th>Scan</th><th>Row</th><th>Running head</th><th>Page match</th><th class="n">Blocks</th><th class="n">Entries</th><th class="n">Matched</th><th class="n">Uncertain</th><th>LaTeX</th></tr></thead>
     <tbody>
-    {% for r in rows %}
-      <tr data-search="{{ r.row }} {{ r.head|lower }}">
-        <td><a href="pages/{{ r.row }}.html">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}no scan{% endif %}</a></td>
-        <td><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
-        <td class="head">{{ r.head or "(no running head)" }}{% if r.plate_status %} <span class="badge {{ 'ok' if r.plate_status == 'matched' else ('bad' if r.plate_status == 'error' else 'warn') }}">plate: {{ r.plate_status }}</span>{% endif %}</td>
-        <td class="pm">{% set pm = r.page_match %}{% if pm %}{% if pm.status == "matched" %}<span class="badge ok">matched</span> <a href="{{ pm.wiki_url }}" target="_blank" rel="noopener">{{ pm.wiki_title }}</a>{% else %}<span class="badge warn" title="{{ pm.reason }}">uncertain</span> <span class="small muted">{{ pm.wiki_title }}</span>{% endif %}{% else %}<span class="small muted">n/a</span>{% endif %}</td>
-        <td>{{ r.n_blocks }}</td>
-        <td>{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
-        <td>{{ r.n_matched if inputs.has_matches else "n/a" }}</td>
-        <td>{{ r.n_uncertain if inputs.has_matches else "n/a" }}</td>
-        <td><span class="badge {{ 'ok' if r.latex == 'ok' else 'bad' }}" title="{{ r.latex_error }}">{{ r.latex }}</span>{% if r.has_pdf %} <a href="pdf/{{ r.row }}.pdf">PDF</a>{% endif %}</td>
+    {% for r in rows %}{% set pm = r.page_match %}{% set u = (pm or {}).uncertainty %}
+      <tr class="rowlink" data-href="pages/{{ r.row }}.html" data-search="{{ r.row }} {{ r.head|lower }}"
+          data-tags="{% if pm %}{{ 'matched' if pm.status == 'matched' else 'uncertain' }}{% endif %}{% if r.plate_status %} plate{% endif %}{% if u and pm.status != 'matched' %} cause-{{ u.cause }}{% endif %}">
+        <td><a href="pages/{{ r.row }}.html" aria-label="row {{ r.row }}">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}<span class="small muted">no scan</span>{% endif %}</a></td>
+        <td class="rowid"><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
+        <td class="head">{{ r.head or "(no running head)" }}{% if r.plate_status %}<span class="pill {{ 'ok' if r.plate_status == 'matched' else ('bad' if r.plate_status == 'error' else 'uncertain') }}">plate: {{ r.plate_status }}</span>{% endif %}</td>
+        <td class="pm">{% if pm %}{% if pm.status == "matched" %}<span class="pill matched">matched</span><a class="link ext" href="{{ pm.wiki_url }}" target="_blank" rel="noopener">{{ pm.wiki_title }}</a>{% else %}<span class="pill uncertain" title="{{ pm.reason }}">uncertain</span>{% if u %}<span class="pill cause" title="uncertainty cause: {{ u.cause }}">{{ u.label }}</span>{% if u.note %}<span class="cause-note" title="{{ u.note }}">{{ u.note }}</span>{% endif %}{% else %}<span class="small muted">{{ pm.wiki_title }}</span>{% endif %}{% endif %}{% else %}<span class="small muted">n/a</span>{% endif %}</td>
+        <td class="n">{{ r.n_blocks }}</td>
+        <td class="n{{ ' zero' if not r.n_entries }}">{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
+        <td class="n{{ ' zero' if not r.n_matched }}">{{ r.n_matched if inputs.has_matches else "n/a" }}</td>
+        <td class="n{{ ' zero' if not r.n_uncertain }}">{{ r.n_uncertain if inputs.has_matches else "n/a" }}</td>
+        <td class="latex"><span class="dot-status {{ 'ok' if r.latex == 'ok' else 'bad' }}" title="LaTeX {{ r.latex }} {{ r.latex_error }}"></span>{% if r.has_pdf %}<a href="pdf/{{ r.row }}.pdf">PDF</a>{% else %} <span class="small muted">{{ r.latex }}</span>{% endif %}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
+  </div>
 </main>
 {% endblock %}
 {% block scripts %}<script src="app.js"></script>{% endblock %}

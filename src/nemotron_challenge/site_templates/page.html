@@ -1,110 +1,130 @@
-{% extends "base.html" %}{% set root = "../" %}
+{% extends "base.html" %}{% set root = "../" %}{% set active = "" %}
+{% from "_macros.html" import scores, cause %}
 {% block title %}Row {{ page.row }}: {{ page.head or "page" }}{% endblock %}
 {% block bodyclass %}page-view{% endblock %}
-{% block content %}
-<div class="pagebar">
-  {% if nav.prev is not none %}<a href="{{ nav.prev }}.html">&larr; row {{ nav.prev }}</a>{% else %}<span></span>{% endif %}
-  <h1>Row {{ page.row }} <span class="muted">{{ page.head }}</span></h1>
-  {% if nav.next is not none %}<a href="{{ nav.next }}.html">row {{ nav.next }} &rarr;</a>{% else %}<span></span>{% endif %}
+{% block crumbs %}
+<div class="crumbs">
+  <span class="sep">/</span>
+  <a class="btn sm" href="../index.html">Pages</a>
+  <span class="sep">/</span>
+  <span class="here mono">Row {{ page.row }}</span>
+  {% if page.head %}<span class="head" title="running head (Parse text)">{{ page.head }}</span>{% endif %}
+  <span class="stepper">
+    {% if nav.prev is not none %}<a class="btn secondary icon" href="{{ nav.prev }}.html" title="Previous: row {{ nav.prev }}" aria-label="Previous: row {{ nav.prev }}">&larr;</a>{% else %}<span class="btn secondary icon" aria-disabled="true">&larr;</span>{% endif %}
+    {% if nav.next is not none %}<a class="btn secondary icon" href="{{ nav.next }}.html" title="Next: row {{ nav.next }}" aria-label="Next: row {{ nav.next }}">&rarr;</a>{% else %}<span class="btn secondary icon" aria-disabled="true">&rarr;</span>{% endif %}
+  </span>
 </div>
-<div class="panes">
-  <section class="pane source">
-    <h2>Source: scan and Parse blocks</h2>
-    <div class="toggles" id="toggles">
-      <label><input type="checkbox" id="toggle-all" checked> boxes</label>
-      {% for cls, color in colors.items() %}
-      <label><input type="checkbox" class="cls-toggle" value="{{ cls }}" checked><span class="swatch" style="background:{{ color }}"></span>{{ cls }}</label>
-      {% endfor %}
-    </div>
-    <div class="scanwrap" style="aspect-ratio: 1 / {{ '%.4f'|format(aspect) }}">
-      {% if page.has_scan %}<img src="../scans/{{ page.filename }}" alt="scan row {{ page.row }}">{% else %}<p class="note">Scan file missing.</p>{% endif %}
-      <svg class="overlay" viewBox="0 0 1 1" preserveAspectRatio="none" id="overlay">
-        {% for b in blocks %}
-        <rect class="blk" data-cls="{{ b.cls }}" data-order="{{ b.order }}" x="{{ b.bbox[0] }}" y="{{ b.bbox[1] }}"
-              width="{{ (b.bbox[2] - b.bbox[0])|round(4) }}" height="{{ (b.bbox[3] - b.bbox[1])|round(4) }}"
-              style="stroke:{{ b.color }};fill:{{ b.color }}"><title>#{{ b.order }} {{ b.cls }}: {{ b.text[:160] }}</title></rect>
+{% endblock %}
+{% block content %}
+<main class="workbench">
+  <section class="pane source" aria-label="Source: scan and Parse blocks">
+    <div class="pane-head">
+      <span class="pane-title">Source · scan and Parse blocks</span>
+      <div class="chips" id="toggles">
+        <button type="button" class="chip" id="toggle-all" aria-pressed="true">Boxes</button>
+        {% for cls, color in colors.items() %}
+        <button type="button" class="chip cls-toggle" data-cls="{{ cls }}" aria-pressed="true" style="--c: {{ color }}"><span class="sw"></span>{{ cls }}</button>
         {% endfor %}
-      </svg>
-      <div class="tip" id="tip" hidden></div>
+      </div>
     </div>
-    <details class="blocktext">
-      <summary>Parse text by block ({{ blocks|length }} blocks, reading order)</summary>
-      <ol start="0">
-        {% for b in blocks %}<li data-order="{{ b.order }}"><span class="cls" style="color:{{ b.color }}">{{ b.cls }}</span> {{ b.text }}</li>{% endfor %}
-      </ol>
-    </details>
-    <dl class="prov">
-      <dt>page_id</dt><dd>{{ page.page_id }}</dd>
-      <dt>image sha256</dt><dd>{{ page.image_sha256 }}</dd>
-      <dt>Parse</dt><dd>{{ page.parse_model }}, finish {{ page.finish_reason }}</dd>
-    </dl>
+    <div class="pane-body">
+      <div class="scanwrap" style="aspect-ratio: 1 / {{ '%.4f'|format(aspect) }}">
+        {% if page.has_scan %}<img src="../scans/{{ page.filename }}" alt="scan row {{ page.row }}">{% else %}<p class="note">Scan file missing.</p>{% endif %}
+        <svg class="overlay" viewBox="0 0 1 1" preserveAspectRatio="none" id="overlay">
+          {% for b in blocks %}
+          <rect class="blk" data-cls="{{ b.cls }}" data-order="{{ b.order }}" x="{{ b.bbox[0] }}" y="{{ b.bbox[1] }}"
+                width="{{ (b.bbox[2] - b.bbox[0])|round(4) }}" height="{{ (b.bbox[3] - b.bbox[1])|round(4) }}"
+                style="stroke:{{ b.color }};fill:{{ b.color }}"><title>#{{ b.order }} {{ b.cls }}: {{ b.text[:160] }}</title></rect>
+          {% endfor %}
+        </svg>
+        <div class="tip" id="tip" hidden></div>
+      </div>
+      <details class="blocktext">
+        <summary>Parse text by block <span class="meta">{{ blocks|length }} blocks</span> <span class="muted">reading order</span></summary>
+        <ol start="0">
+          {% for b in blocks %}<li data-order="{{ b.order }}"><span class="ord">{{ b.order }}</span><div><span class="cls" style="color:{{ b.color }}">{{ b.cls }}</span>{{ b.text }}</div></li>{% endfor %}
+        </ol>
+      </details>
+      <dl class="prov">
+        <dt>page_id</dt><dd>{{ page.page_id }}</dd>
+        <dt>sha256</dt><dd>{{ page.image_sha256 }}</dd>
+        <dt>Parse</dt><dd>{{ page.parse_model }} · finish {{ page.finish_reason }}</dd>
+      </dl>
+    </div>
   </section>
 
-  <section class="pane latex">
-    <h2>LaTeX document from Parse blocks
-      <span class="badge {{ 'ok' if page.latex == 'ok' else 'bad' }}">{{ page.latex }}</span>
-      {% if page.two_column %}<span class="badge">two columns</span>{% endif %}</h2>
+  <section class="pane latex" aria-label="LaTeX document from Parse blocks">
+    <div class="pane-head">
+      <span class="pane-title">LaTeX from Parse blocks</span>
+      <span class="pill {{ 'ok' if page.latex == 'ok' else 'bad' }}">{{ page.latex }}</span>
+      {% if page.two_column %}<span class="pill">two columns</span>{% endif %}
+      {% if page.has_pdf %}<span class="end">
+        <a class="btn secondary sm" href="../pdf/{{ page.row }}.pdf">Open PDF</a>
+        <a class="btn secondary sm" href="../pdf/{{ page.row }}.tex">LaTeX source</a>
+      </span>{% endif %}
+    </div>
     {% if page.has_pdf %}
       <iframe class="pdf" src="../pdf/{{ page.row }}.pdf#view=FitH" title="compiled PDF row {{ page.row }}"></iframe>
-      <p class="small"><a href="../pdf/{{ page.row }}.pdf">Open PDF</a> · <a href="../pdf/{{ page.row }}.tex">LaTeX source</a></p>
     {% else %}
-      <p class="note">No PDF for this page.</p>
-      {% if page.latex_error %}<pre class="err">{{ page.latex_error }}</pre>{% endif %}
+      <div class="pane-body">
+        <p class="note">No PDF for this page.</p>
+        {% if page.latex_error %}<pre class="err">{{ page.latex_error }}</pre>{% endif %}
+      </div>
     {% endif %}
   </section>
 
-  <section class="pane generated">
+  <aside class="pane inspector" aria-label="Generated: matches and comparison">
+    <div class="pane-head"><span class="pane-title">Inspector · generated</span><span class="end"><span class="meta">{{ page.n_entries }} entries</span></span></div>
     {% if page_match %}{% include "page_match.html" %}{% endif %}
     {% if plate %}{% include "plate.html" %}{% endif %}
     {% if drift %}{% include "drift.html" %}{% endif %}
-    <h2>Generated: Wikipedia matches per entry</h2>
-    {% if not inputs.has_entries %}
-      <p class="note">Entry segmentation is not available yet.</p>
-    {% elif not entries %}
-      <p class="note">No entries were segmented on this page.</p>
-    {% else %}
-      {% if not inputs.has_matches %}<p class="note">Match output is not available yet. Entries are shown without matches.</p>{% endif %}
-      <ul class="entries">
-      {% for e in entries %}
-        {% set m = e.match %}
-        <li class="entry {{ m.status if m else 'pending' }}" data-orders="{{ e.block_orders|join(',') }}">
-          <div class="ehead">
-            <span class="eid">{{ e.entry_id }}</span>
-            <b>{{ e.headword or "(continuation)" }}</b>
-          </div>
-          <p class="snippet" title="Parse text">{{ (e.text_raw or "")[:220] }}{% if (e.text_raw or "")|length > 220 %}…{% endif %}</p>
-          {% if m %}
-            {% if m.status == "matched" %}
-              <div class="match">
-                <span class="badge ok">matched</span>
-                <a href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>
-                <span class="small">rev {{ m.wiki_revision_id }}</span>
-              </div>
-            {% elif m.status == "no_clear_counterpart" %}
-              <div class="match">
-                <span class="badge warn">uncertain: no clear counterpart</span>
-                {% if m.wiki_title %}<span class="small">best candidate: {% if m.wiki_url %}<a href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>{% else %}{{ m.wiki_title }}{% endif %}</span>{% endif %}
-              </div>
-            {% else %}
-              <div class="match"><span class="badge bad">{{ m.status }}</span> <span class="small">{{ m.reason }}</span></div>
-            {% endif %}
-            <div class="scores small">
-              {% if m.rerank_logit is not none %}rerank {{ '%.2f'|format(m.rerank_logit) }}{% endif %}
-              {% if m.rerank_margin is not none %} · margin {{ '%.2f'|format(m.rerank_margin) }}{% endif %}
-              {% if m.embed_cos is not none %} · cos {{ '%.3f'|format(m.embed_cos) }}{% endif %}
-              {% if m.bm25_rank is not none %} · BM25 rank {{ m.bm25_rank }}{% endif %}
-              {% if m.method %} · {{ m.method }}{% endif %}
+    <section class="isec">
+      <div class="isec-h"><h2>Entries · Wikipedia matches</h2>{% if entries %}<span class="aside mono">{{ page.n_matched }} matched · {{ page.n_uncertain }} uncertain</span>{% endif %}</div>
+      {% if not inputs.has_entries %}
+        <p class="note">Entry segmentation is not available yet.</p>
+      {% elif not entries %}
+        <p class="note">No entries were segmented on this page.</p>
+      {% else %}
+        {% if not inputs.has_matches %}<p class="note">Match output is not available yet. Entries are shown without matches.</p>{% endif %}
+        <ul class="entries">
+        {% for e in entries %}
+          {% set m = e.match %}
+          <li class="entry {{ m.status if m else 'pending' }}" data-orders="{{ e.block_orders|join(',') }}">
+            <div class="ehead">
+              <span class="meta">{{ e.entry_id }}</span>
+              <b>{{ e.headword or "(continuation)" }}</b>
             </div>
-            {% if m.reason and m.status != "error" %}<div class="small muted">{{ m.reason }}</div>{% endif %}
-          {% else %}
-            <div class="match"><span class="badge">not processed</span></div>
-          {% endif %}
-          {% if e.has_pair %}<div class="small">Comparison saved: compare/pairs/{{ e.entry_id }}.json</div>{% endif %}
-        </li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  </section>
-</div>
+            <p class="snippet" title="Parse text">{{ (e.text_raw or "")[:220] }}{% if (e.text_raw or "")|length > 220 %}…{% endif %}</p>
+            {% if m %}
+              {% if m.status == "matched" %}
+                <div class="match">
+                  <span class="pill matched">matched</span>
+                  <a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>
+                  <span class="cite">rev {{ m.wiki_revision_id }}</span>
+                </div>
+              {% elif m.status == "no_clear_counterpart" %}
+                <div class="match">
+                  <span class="pill uncertain" title="uncertain: no clear counterpart">uncertain</span>
+                  {{ cause(e.uncertainty) }}
+                </div>
+                {% if m.wiki_title %}<div class="topic">Best candidate: {% if m.wiki_url %}<a class="link ext" href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>{% else %}{{ m.wiki_title }}{% endif %}</div>{% endif %}
+              {% else %}
+                <div class="match"><span class="pill bad">{{ m.status }}</span> <span class="small">{{ m.reason }}</span></div>
+              {% endif %}
+              {{ scores(m) }}
+              {% if m.reason and m.status != "error" %}<div class="reason">{{ m.reason }}</div>{% endif %}
+            {% else %}
+              <div class="match"><span class="pill">not processed</span></div>
+            {% endif %}
+            {% if e.has_pair %}<div class="saved">comparison saved: compare/pairs/{{ e.entry_id }}.json</div>{% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+    <div class="page-foot">Built {{ built }}. Britannica scans: public domain (CC0). Wikipedia text: CC BY-SA 4.0, linked by page and revision. OCR text is Parse 3.5 output without correction.</div>
+  </aside>
+</main>
 {% endblock %}
+{% block footer %}{% endblock %}
 {% block scripts %}<script src="../app.js"></script>{% endblock %}

@@ -28,6 +28,12 @@ CLASS_COLORS = {
     "Page-footer": "#a0aec0", "List-item": "#2f855a", "Caption": "#b7791f", "Footnote": "#6b46c1",
     "Picture": "#d53f8c", "Table": "#00838f", "Formula": "#5a67d8",
 }
+# Short pill labels for match/uncertainty.jsonl causes (see docs/uncertainty.md).
+CAUSE_LABELS = {
+    "no_text": "no usable text", "ocr_failure": "Parse/OCR failure", "obsolete_or_minor": "obsolete or minor subject",
+    "pool_miss": "candidate pool miss", "threshold_miss": "threshold miss", "other": "other",
+}
+DOCS = Path(__file__).resolve().parents[2] / "docs"
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -81,6 +87,16 @@ def load_inputs(work_dir: Path) -> dict[str, Any]:
         item["has_pair"] = item["pair"] is not None
         by_row.setdefault(entry.get("row_index"), []).append(item)
     page_matches = {m["row_index"]: m for m in read_jsonl(work_dir / "match" / "page_matches.jsonl") if "row_index" in m}
+    uncertainty = {u["id"]: u for u in read_jsonl(work_dir / "match" / "uncertainty.jsonl") if "id" in u}
+    for items in by_row.values():
+        for item in items:
+            u = uncertainty.get(item.get("entry_id"))
+            item["uncertainty"] = {"cause": u.get("cause"), "label": CAUSE_LABELS.get(u.get("cause"), u.get("cause")),
+                                   "note": u.get("note"), "right_article": u.get("right_article")} if u else None
+    for m in page_matches.values():
+        cause = m.get("uncertainty_cause")
+        m["uncertainty"] = {"cause": cause, "label": CAUSE_LABELS.get(cause, cause),
+                            "note": m.get("uncertainty_note")} if cause else None
     return {"entries": entries, "matches": matches, "by_row": by_row, "page_matches": page_matches,
             "has_entries": bool(entries), "has_matches": bool(matches), "has_page_matches": bool(page_matches)}
 
@@ -155,6 +171,7 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
     site_dir.mkdir(parents=True, exist_ok=True)
     for asset in ("style.css", "app.js", "explore.js"):
         shutil.copy2(TEMPLATES / asset, site_dir / asset)
+    _copy(DOCS / "uncertainty.md", site_dir / "docs" / "uncertainty.md")
 
     records = sorted((json.loads(p.read_text()) for p in (work_dir / "extract" / "pages").glob("*.json")),
                      key=lambda r: r["row_index"])
@@ -210,7 +227,9 @@ def build_site(work_dir: Path, site_dir: Path | None = None) -> dict[str, Any]:
         "pages_matched": sum(m.get("status") == "matched" for m in inputs["page_matches"].values()),
     }
     (site_dir / "index.html").write_text(env.get_template("index.html").render(
-        rows=rows, totals=totals, inputs=inputs, built=built))
+        rows=rows, totals=totals, inputs=inputs, built=built, causes=CAUSE_LABELS,
+        cause_counts={c: sum(((r["page_match"] or {}).get("uncertainty") or {}).get("cause") == c for r in rows)
+                      for c in CAUSE_LABELS}))
     analysis = build_analysis(env, work_dir, site_dir, built, inputs, rows, totals)
     (site_dir / "how.html").write_text(env.get_template("how.html").render(built=built))
     explore = build_explore(env, work_dir, site_dir, built)

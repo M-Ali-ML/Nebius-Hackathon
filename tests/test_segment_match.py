@@ -162,3 +162,13 @@ def test_ablation_eval_scores_saved_candidates(tmp_path):
     assert s["methods"]["bm25+embed+rerank (long query)"]["p_at_1_gold_in_pool"] == 1.0
     assert s["methods"]["bm25+embed+rerank (long query)"]["no_match_accuracy"] == 1.0
     assert (m / "ablation.png").is_file() and s["examples"]["rerank_fixed"][0]["entry_id"] == "B:1:0"
+
+
+def test_vision_reply_parsing_and_subject():
+    from nemotron_challenge.vision_expand import parse_reply, subject_head
+    r = parse_reply('Sure: {"subject": "Etna", "phrases": ["Mount Etna", "Etna eruption", " "]}')
+    assert r == {"subject": "Etna", "phrases": ["Mount Etna", "Etna eruption"]}
+    with pytest.raises(ValueError):
+        parse_reply('{"subject": "Blank page", "phrases": []}')
+    assert subject_head("Swift, Jonathan") == "Jonathan Swift"
+    assert subject_head("Conserves (sweets)") == "Conserves"

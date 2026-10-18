@@ -1,6 +1,8 @@
 name: nemotron-challenge
-version: "0.1.0"
-description: Participant comparison tool scaffold. Team implementation required.
+version: "0.2.0"
+description: Evidence tools for Britannica (1771-1797) vs Wikipedia comparison. search_sources, get_pair, view_scan.
 provides_tools:
-  - challenge_compare
+  - search_sources
+  - get_pair
+  - view_scan
 capabilities: []

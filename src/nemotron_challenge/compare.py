@@ -271,6 +271,13 @@ def check(data: dict[str, Any], btext: str, wtext: str) -> tuple[dict[str, list]
     return kept, rejected
 
 
+def spelling_like(old: str, new: str, cutoff: float = 0.7) -> bool:
+    """True when old and new differ only a little in letters: more likely OCR or spelling than a new term."""
+    from difflib import SequenceMatcher
+
+    return SequenceMatcher(None, old.lower(), new.lower()).ratio() >= cutoff
+
+
 def drift(entry: dict[str, Any], kept: dict[str, list]) -> dict[str, Any]:
     n_words = max(1, len(entry["text_raw"].split()))
     tags = Counter(c["tag"] for c in kept["claims"])
@@ -280,7 +287,10 @@ def drift(entry: dict[str, Any], kept: dict[str, list]) -> dict[str, Any]:
         "orthographic": {"norm_edits": entry.get("norm_edits", 0), "words": n_words,
                          "edits_per_100_words": round(100 * entry.get("norm_edits", 0) / n_words, 2)},
         "lexical": {"renamed_share": share("renamed"),
-                    "term_pairs": [{"old": t["old"], "new": t["new"]} for t in kept["term_pairs"]]},
+                    "term_pairs": [{"old": t["old"], "new": t["new"]} for t in kept["term_pairs"]
+                                   if not spelling_like(t["old"], t["new"])],
+                    "likely_ocr_or_spelling": [{"old": t["old"], "new": t["new"]} for t in kept["term_pairs"]
+                                               if spelling_like(t["old"], t["new"])]},
         "knowledge": {"superseded_share": share("superseded")},
         "coverage": {"dropped_share": share("dropped"), "wiki_only_topics": [t["topic"] for t in kept["wiki_only_topics"]]},
         "enduring_share": share("enduring"),

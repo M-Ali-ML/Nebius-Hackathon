@@ -1,0 +1,2307 @@
+{
+ "question": "Which old terms in the Britannica have different modern names in Wikipedia? Give three examples with quotes from both sides.",
+ "started": "2026-10-18T14:47:15",
+ "command": [
+  "chat",
+  "-q",
+  "Which old terms in the Britannica have different modern names in Wikipedia? Give three examples with quotes from both sides.",
+  "--format",
+  "stream-json",
+  "-t",
+  "nemotron_challenge",
+  "-s",
+  "britannica-compare",
+  "--max-turns",
+  "12"
+ ],
+ "hermes_home": "/Users/aly/repos/Nebius-Hackathon/data/hermes",
+ "tool_repo": "/Users/aly/orca/workspaces/Nebius-Hackathon/mvp-agent",
+ "retrieval_mode": "hybrid",
+ "exit_code": 0,
+ "stderr": "\nsession_id: 20261018_144716_1788ec\n",
+ "non_json_stdout": [],
+ "events": [
+  {
+   "type": "system",
+   "subtype": "init",
+   "model": "nvidia/Nemotron-3.5-Super-VL",
+   "session_id": "20261018_144716_1788ec",
+   "timestamp": 1792327636701
+  },
+  {
+   "type": "text",
+   "text": "I",
+   "timestamp": 1792327639332
+  },
+  {
+   "type": "text",
+   "text": "'ll start by loading",
+   "timestamp": 1792327639333
+  },
+  {
+   "type": "text",
+   "text": " the schemas",
+   "timestamp": 1792327639340
+  },
+  {
+   "type": "text",
+   "text": " for the nemotron",
+   "timestamp": 1792327639379
+  },
+  {
+   "type": "text",
+   "text": "_challenge tools I",
+   "timestamp": 1792327639380
+  },
+  {
+   "type": "text",
+   "text": " need.\n",
+   "timestamp": 1792327639381
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327639461
+  },
+  {
+   "type": "tool_use",
+   "name": "tool_describe",
+   "input": {
+    "names": [
+     "find_drift",
+     "get_pair",
+     "search_sources"
+    ]
+   },
+   "timestamp": 1792327639480
+  },
+  {
+   "type": "tool_result",
+   "name": "tool_describe",
+   "output": "{\"tools\": {\"find_drift\": {\"description\": \"List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"kind\": {\"type\": \"string\", \"enum\": [\"renamed\", \"superseded\", \"dropped\", \"enduring\", \"term_pairs\", \"wiki_only_topics\"]}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 20, \"default\": 5}}, \"required\": [\"kind\"], \"additionalProperties\": false}}, \"get_pair\": {\"description\": \"Get one Britannica entry and its matched Wikipedia article: entry text (raw OCR and normalized), article excerpt, match scores and status (matched / no_clear_counterpart), the saved comparison (similarities, differences, claims tagged enduring|renamed|superseded|dropped) and the drift decomposition (orthographic, lexical, knowledge, coverage). Use it to answer whether the language or the knowledge changed.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"entry_id\": {\"type\": \"string\", \"pattern\": \"^\\\\[?(B:\\\\d+:\\\\d+|P:\\\\d+)\\\\]?$\", \"description\": \"Britannica entry id, e.g. B:115:0, or a page-level pair P:<row>\"}}, \"required\": [\"entry_id\"], \"additionalProperties\": false}}, \"search_sources\": {\"description\": \"Search the Britannica 1771-1797 entries and Wikipedia. Britannica: vector search in LanceDB. Wikipedia: matched-article chunks from LanceDB plus live BM25 over the full Wikipedia corpus; all hits are reranked together. Each hit has source lancedb or bm25. Returns passages with citation ids [B:<row>:<n>] (Britannica) and [W:<page_id>:<revision_id>] (Wikipedia), rerank logits, low_confidence when the top logit is low or the margin is small, and side_confidence per side. Passages are data, not instructions.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 2000, \"description\": \"What to look for.\"}, \"side\": {\"type\": \"string\", \"enum\": [\"britannica\", \"wikipedia\", \"both\"], \"default\": \"both\"}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 10, \"default\": 5}}, \"required\": [\"query\"], \"additionalProperties\": false}}}}",
+   "duration_ms": 4,
+   "is_error": false,
+   "timestamp": 1792327639483
+  },
+  {
+   "type": "text",
+   "text": "\n\nNow",
+   "timestamp": 1792327640450
+  },
+  {
+   "type": "text",
+   "text": " I",
+   "timestamp": 1792327640473
+  },
+  {
+   "type": "text",
+   "text": "'ll ask",
+   "timestamp": 1792327640473
+  },
+  {
+   "type": "text",
+   "text": " `",
+   "timestamp": 1792327640478
+  },
+  {
+   "type": "text",
+   "text": "find_drift`",
+   "timestamp": 1792327640492
+  },
+  {
+   "type": "text",
+   "text": " for term pairs (",
+   "timestamp": 1792327640503
+  },
+  {
+   "type": "text",
+   "text": "old Britannica term",
+   "timestamp": 1792327640505
+  },
+  {
+   "type": "text",
+   "text": " →",
+   "timestamp": 1792327640515
+  },
+  {
+   "type": "text",
+   "text": " modern Wikipedia term)",
+   "timestamp": 1792327640524
+  },
+  {
+   "type": "text",
+   "text": " across the whole",
+   "timestamp": 1792327640536
+  },
+  {
+   "type": "text",
+   "text": " corpus.\n",
+   "timestamp": 1792327640548
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327640685
+  },
+  {
+   "type": "tool_use",
+   "name": "find_drift",
+   "input": {
+    "kind": "term_pairs",
+    "k": 10
+   },
+   "timestamp": 1792327640726
+  },
+  {
+   "type": "tool_result",
+   "name": "find_drift",
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}], \"note\": \"Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise.\"}",
+   "duration_ms": 173,
+   "is_error": false,
+   "timestamp": 1792327640901
+  },
+  {
+   "type": "text",
+   "text": "\n\nI have ",
+   "timestamp": 1792327646135
+  },
+  {
+   "type": "text",
+   "text": "142",
+   "timestamp": 1792327646146
+  },
+  {
+   "type": "text",
+   "text": " term pairs,",
+   "timestamp": 1792327646160
+  },
+  {
+   "type": "text",
+   "text": " but several look like",
+   "timestamp": 1792327646214
+  },
+  {
+   "type": "text",
+   "text": " OCR noise (",
+   "timestamp": 1792327646215
+  },
+  {
+   "type": "text",
+   "text": "e.g.",
+   "timestamp": 1792327646215
+  },
+  {
+   "type": "text",
+   "text": " \"tenparts\"",
+   "timestamp": 1792327646215
+  },
+  {
+   "type": "text",
+   "text": "→\"tenements",
+   "timestamp": 1792327646216
+  },
+  {
+   "type": "text",
+   "text": "\", \"cry",
+   "timestamp": 1792327646227
+  },
+  {
+   "type": "text",
+   "text": "\"→\"c",
+   "timestamp": 1792327646243
+  },
+  {
+   "type": "text",
+   "text": "rown\", \"back",
+   "timestamp": 1792327646259
+  },
+  {
+   "type": "text",
+   "text": "ache\"→\"",
+   "timestamp": 1792327646264
+  },
+  {
+   "type": "text",
+   "text": "MD\"). I need",
+   "timestamp": 1792327646276
+  },
+  {
+   "type": "text",
+   "text": " to verify the genuine",
+   "timestamp": 1792327646289
+  },
+  {
+   "type": "text",
+   "text": " lexical",
+   "timestamp": 1792327646306
+  },
+  {
+   "type": "text",
+   "text": " renames with `",
+   "timestamp": 1792327646321
+  },
+  {
+   "type": "text",
+   "text": "get_pair` to",
+   "timestamp": 1792327646332
+  },
+  {
+   "type": "text",
+   "text": " see normalized text and",
+   "timestamp": 1792327646347
+  },
+  {
+   "type": "text",
+   "text": " clean",
+   "timestamp": 1792327646365
+  },
+  {
+   "type": "text",
+   "text": " quotes. Let me",
+   "timestamp": 1792327646391
+  },
+  {
+   "type": "text",
+   "text": " check the two strongest",
+   "timestamp": 1792327646391
+  },
+  {
+   "type": "text",
+   "text": " candidates.\n",
+   "timestamp": 1792327646395
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327646648
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1327:8"
+   },
+   "timestamp": 1792327646657
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1327\", \"row_index\": 1327, \"headword\": \"HUGUENOTS\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 1, \"chars\": 154, \"text_raw\": \"HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinifts of France. The name had its first rife in 1560; but authors are\", \"text_norm\": \"HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France. The name had its first rife in 1560; but authors are\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"75899\", \"wiki_title\": \"Huguenots\", \"wiki_revision_id\": \"1352397655\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Huguenots\", \"text_sha256\": \"6fc195d107e2a4b62d6f12aebd20441aeb72eb83155178b0108222bd40b490e1\", \"bm25_rank\": 2, \"embed_cos\": 0.471657, \"rerank_logit\": -1.23139, \"rerank_margin\": 4.13297, \"method\": \"bm25+embed+rerank\", \"reason\": \"top rerank logit -1.23 > tau -4.0\"}, \"cite_wikipedia\": \"[W:75899:1352397655]\", \"article_excerpt\": \"The Huguenots (/ ˈ h juː ɡ ə n ɒ t s / HEW -gə-nots, UK also /- n oʊ z / - nohz; French:) are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism. The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550. Huguenot was frequently used in reference to those of the Reformed Church of France from the time of the Protestant Reformation. By contrast, the Protestant populations of eastern France, in Alsace, Moselle, and Montbéliard, were mainly Lutherans.\\n\\nIn his Encyclopedia of Protestantism, Hans Hillerbrand wrote that on the eve of the St. Bartholomew's Day massacre in 1572, the Huguenot community made up as much as 10% of the French population. By 1600, it declined to 7–8%, and was reduced further late in the century after the return of persecution under Louis XIV, who instituted the Dragonnades to forcibly convert Protestants, and then finally revoked all Protestant rights in his Edict of Fontainebleau of 1685. In 1686, Protestants comprised just 1% of the population.\\n\\nThe Huguenots were concentrated in the southern and western parts of the Kingdom of France. As Huguenots gained influence and more openly displayed their faith, Catholic hostility grew. A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598. The Huguenots were led by Jeanne d'Albret; her son, the future Henry IV (who would later convert to Catholicism in order to become king); and the princes of Condé. The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy.\\n\\nHuguenot rebellions in the 1620s resulted in the abolition of their political and military privileges. They retained the religious provisions of the Edict of Nantes until the rule of Louis XIV, who gradually increased persecution of Protestantism until he issued the Edict of Fontainebleau (1685). This ended legal recognition of Protestantism in France and the Huguenots were forced to either convert to Catholicism (possibly as Nicodemites) or flee as refugees; they were subject to violent Dragonnades. Louis XIV claimed the French Huguenot population was reduced from about 900,000 or 800,000 adherents to just 1,000 or 1,500. He exaggerated the decline, but the Dragonnades were devastating for the French Protestant community. The exodus of Huguenots from France created a brain drain, as many of them had occupied important places in society.\\n\\nThe remaining Huguenots faced continued persecution under Louis XV. By the time of his death in 1774, Calvinism had been all but eliminated from France. Persecution of Protestants officially ended with the Edict of Versailles, signed by Louis XVI in 1787. Two years later, with the Revolutionary Declaration of the Rights of Man and of the Citizen of 1789, Protestants gained equal rights as citizens.\\n\\nA term used orig\", \"article_chars\": 70120, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both associate the origin of the name with events around 1560, including the Amboise plot.\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560\"}, {\"point\": \"Both state that the name was originally used in derision or hatred.\", \"quote_britannica\": \"an application given by way of concept to the referred or Protestant Calvinists of France.\", \"quote_wikipedia\": \"The name, Huguenot, \\\"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\\\"\"}, {\"point\": \"Both note that the etymol...",
+   "duration_ms": 110,
+   "is_error": false,
+   "timestamp": 1792327646769
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1017:11"
+   },
+   "timestamp": 1792327646770
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017\", \"row_index\": 1017, \"headword\": \"HELSINGIA\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 105, \"text_raw\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"text_norm\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"191032\", \"wiki_title\": \"Hälsingland\", \"wiki_revision_id\": \"1338024466\", \"wiki_url\": \"https://en.wikipedia.org/wiki/H%C3%A4lsingland\", \"text_sha256\": \"e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c\", \"bm25_rank\": 1, \"embed_cos\": 0.452285, \"rerank_logit\": -4.237162, \"rerank_margin\": 5.712891, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -4.24 > -8.0 and margin 5.71 >= 1.2\"}, \"cite_wikipedia\": \"[W:191032:1338024466]\", \"article_excerpt\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\\n\\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\\n\\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\\n\\nThe following municipalities have their seats in Hälsingland:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nLjusdal\\n\\nNordanstig\\n\\nOvanåker\\n\\nSöderhamn\\n\\nThe six largest settlements are:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nSöderhamn\\n\\nLjusdal\\n\\nEdsbyn\\n\\nIggesund\\n\\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\\n\\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\\n\\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\\n\\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\\n\\nIn the medieval age, the \\\"Helsings\\\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\\n\\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\\n\\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco\", \"article_chars\": 6276, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both identify Helsingia as a province of Sweden.\", \"quote_britannica\": \"HELSINGIA, a province of Sweden,\", \"quote_wikipedia\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden.\"}, {\"point\": \"Both state that the province borders the Gulf of Bothnia.\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"point\": \"Both state that the province borders Dalarna.\", \"quote_britannica\": \"and by Dalecarila on the well.\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}], \"differences\": [{\"point\": \"Britannica gives only two borders, while Wikipedia lists five bordering ...",
+   "duration_ms": 101,
+   "is_error": false,
+   "timestamp": 1792327646873
+  },
+  {
+   "type": "text",
+   "text": "\n\nI",
+   "timestamp": 1792327653414
+  },
+  {
+   "type": "text",
+   "text": " have two solid",
+   "timestamp": 1792327653415
+  },
+  {
+   "type": "text",
+   "text": ",",
+   "timestamp": 1792327653428
+  },
+  {
+   "type": "text",
+   "text": " verified",
+   "timestamp": 1792327653438
+  },
+  {
+   "type": "text",
+   "text": " examples. I",
+   "timestamp": 1792327653451
+  },
+  {
+   "type": "text",
+   "text": " need a third clean",
+   "timestamp": 1792327653486
+  },
+  {
+   "type": "text",
+   "text": " one. Let me",
+   "timestamp": 1792327653487
+  },
+  {
+   "type": "text",
+   "text": " check the Nicholas",
+   "timestamp": 1792327653487
+  },
+  {
+   "type": "text",
+   "text": " Amhurst candidate (\"",
+   "timestamp": 1792327653499
+  },
+  {
+   "type": "text",
+   "text": "Zie Grafjna",
+   "timestamp": 1792327653531
+  },
+  {
+   "type": "text",
+   "text": "ar\" → \"",
+   "timestamp": 1792327653572
+  },
+  {
+   "type": "text",
+   "text": "The Craftsman",
+   "timestamp": 1792327653573
+  },
+  {
+   "type": "text",
+   "text": "\") and pull more",
+   "timestamp": 1792327653573
+  },
+  {
+   "type": "text",
+   "text": " term pairs to find",
+   "timestamp": 1792327653573
+  },
+  {
+   "type": "text",
+   "text": " additional",
+   "timestamp": 1792327653573
+  },
+  {
+   "type": "text",
+   "text": " genuine ren",
+   "timestamp": 1792327653584
+  },
+  {
+   "type": "text",
+   "text": "ames.\n",
+   "timestamp": 1792327653606
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327653740
+  },
+  {
+   "type": "text",
+   "text": "\n",
+   "timestamp": 1792327653884
+  },
+  {
+   "type": "tool_use",
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:560:2"
+   },
+   "timestamp": 1792327653901
+  },
+  {
+   "type": "tool_result",
+   "name": "get_pair",
+   "output": "{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560\", \"row_index\": 560, \"headword\": \"AMHURIST\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 979, \"text_raw\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"text_norm\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"2305125\", \"wiki_title\": \"Nicholas Amhurst\", \"wiki_revision_id\": \"1338635003\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Nicholas_Amhurst\", \"text_sha256\": \"18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9\", \"bm25_rank\": 1, \"embed_cos\": 0.393226, \"rerank_logit\": -5.673667, \"rerank_margin\": 4.178508, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -5.67 > -8.0 and margin 4.18 >= 1.2\"}, \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"article_excerpt\": \"Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\\n\\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\\n\\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\\n\\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly resp...",
+   "duration_ms": 126,
+   "is_error": false,
+   "timestamp": 1792327654028
+  },
+  {
+   "type": "tool_use",
+   "name": "find_drift",
+   "input": {
+    "k": 20,
+    "kind": "term_pairs"
+   },
+   "timestamp": 1792327654029
+  },
+  {
+   "type": "tool_result",
+   "name": "find_drift",
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"pattern join\", \"new\": \"fetlock\", \"quote_britannica\": \"placed behind and be low the pattern join\", \"quote_wikipedia\": \"on the underside of the fetlock of a horse or other equine.\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"tufi\", \"new\": \"feather\", \"quote_britannica\": \"hide under the tufi of the fetlock.\", \"quote_wikipedia\": \"long hairs on the lower legs.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"old\": \"goddels of mithief\", \"new\": \"personification of moral blindness and error\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wi...",
+   "duration_ms": 99,
+   "is_error": false,
+   "timestamp": 1792327654130
+  },
+  {
+   "type": "text",
+   "text": "\n\nThree old",
+   "timestamp": 1792327680629
+  },
+  {
+   "type": "text",
+   "text": " Britann",
+   "timestamp": 1792327680634
+  },
+  {
+   "type": "text",
+   "text": "ica terms with",
+   "timestamp": 1792327680644
+  },
+  {
+   "type": "text",
+   "text": " modern Wikipedia names (",
+   "timestamp": 1792327680653
+  },
+  {
+   "type": "text",
+   "text": "from",
+   "timestamp": 1792327680666
+  },
+  {
+   "type": "text",
+   "text": " `",
+   "timestamp": 1792327680675
+  },
+  {
+   "type": "text",
+   "text": "find_drift kind",
+   "timestamp": 1792327680682
+  },
+  {
+   "type": "text",
+   "text": ": term_pairs",
+   "timestamp": 1792327680796
+  },
+  {
+   "type": "text",
+   "text": "`, the",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " top three",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " by rer",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": "ank margin",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": ";",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " all three",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " matches",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " are `matched`",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " with `uncert",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": "ain_match: false",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": "`):\n\n1.",
+   "timestamp": 1792327680797
+  },
+  {
+   "type": "text",
+   "text": " **\"rife\"",
+   "timestamp": 1792327680806
+  },
+  {
+   "type": "text",
+   "text": " → \"common use",
+   "timestamp": 1792327680814
+  },
+  {
+   "type": "text",
+   "text": "\"** — HUG",
+   "timestamp": 1792327680823
+  },
+  {
+   "type": "text",
+   "text": "UENOTS",
+   "timestamp": 1792327680835
+  },
+  {
+   "type": "text",
+   "text": "\n   - Britann",
+   "timestamp": 1792327680842
+  },
+  {
+   "type": "text",
+   "text": "ica: \"The",
+   "timestamp": 1792327680850
+  },
+  {
+   "type": "text",
+   "text": " name had its first",
+   "timestamp": 1792327680860
+  },
+  {
+   "type": "text",
+   "text": " r",
+   "timestamp": 1792327680881
+  },
+  {
+   "type": "text",
+   "text": "ife in 1",
+   "timestamp": 1792327680881
+  },
+  {
+   "type": "text",
+   "text": "560\"",
+   "timestamp": 1792327680893
+  },
+  {
+   "type": "text",
+   "text": " [B:1",
+   "timestamp": 1792327680897
+  },
+  {
+   "type": "text",
+   "text": "327:",
+   "timestamp": 1792327680907
+  },
+  {
+   "type": "text",
+   "text": "8]\n   -",
+   "timestamp": 1792327680915
+  },
+  {
+   "type": "text",
+   "text": " Wikipedia: \"The",
+   "timestamp": 1792327680925
+  },
+  {
+   "type": "text",
+   "text": " term ... was in",
+   "timestamp": 1792327680933
+  },
+  {
+   "type": "text",
+   "text": " common use by around",
+   "timestamp": 1792327680946
+  },
+  {
+   "type": "text",
+   "text": " 155",
+   "timestamp": 1792327680954
+  },
+  {
+   "type": "text",
+   "text": "0.\" [W",
+   "timestamp": 1792327680964
+  },
+  {
+   "type": "text",
+   "text": ":758",
+   "timestamp": 1792327681010
+  },
+  {
+   "type": "text",
+   "text": "99:1",
+   "timestamp": 1792327681011
+  },
+  {
+   "type": "text",
+   "text": "3523",
+   "timestamp": 1792327681011
+  },
+  {
+   "type": "text",
+   "text": "9765",
+   "timestamp": 1792327681011
+  },
+  {
+   "type": "text",
+   "text": "5]\n   -",
+   "timestamp": 1792327681011
+  },
+  {
+   "type": "text",
+   "text": " Drift-tagged as",
+   "timestamp": 1792327681020
+  },
+  {
+   "type": "text",
+   "text": " a `renamed",
+   "timestamp": 1792327681029
+  },
+  {
+   "type": "text",
+   "text": "` claim (lex",
+   "timestamp": 1792327681041
+  },
+  {
+   "type": "text",
+   "text": "ical: same fact",
+   "timestamp": 1792327681144
+  },
+  {
+   "type": "text",
+   "text": " — when the name",
+   "timestamp": 1792327681145
+  },
+  {
+   "type": "text",
+   "text": " came into use —",
+   "timestamp": 1792327681146
+  },
+  {
+   "type": "text",
+   "text": " new words).\n\n2",
+   "timestamp": 1792327681146
+  },
+  {
+   "type": "text",
+   "text": ". **\"Botnh",
+   "timestamp": 1792327681147
+  },
+  {
+   "type": "text",
+   "text": "ic gulph\"",
+   "timestamp": 1792327681147
+  },
+  {
+   "type": "text",
+   "text": " → \"Gulf",
+   "timestamp": 1792327681148
+  },
+  {
+   "type": "text",
+   "text": " of Bothnia\"**",
+   "timestamp": 1792327681148
+  },
+  {
+   "type": "text",
+   "text": " — HELS",
+   "timestamp": 1792327681148
+  },
+  {
+   "type": "text",
+   "text": "INGIA\n  ",
+   "timestamp": 1792327681149
+  },
+  {
+   "type": "text",
+   "text": " - Britannica:",
+   "timestamp": 1792327681149
+  },
+  {
+   "type": "text",
+   "text": " \"bounded by",
+   "timestamp": 1792327681152
+  },
+  {
+   "type": "text",
+   "text": " the Botnhic",
+   "timestamp": 1792327681160
+  },
+  {
+   "type": "text",
+   "text": " gulph on the",
+   "timestamp": 1792327681169
+  },
+  {
+   "type": "text",
+   "text": " cafl\" [",
+   "timestamp": 1792327681179
+  },
+  {
+   "type": "text",
+   "text": "B:10",
+   "timestamp": 1792327681213
+  },
+  {
+   "type": "text",
+   "text": "17:1",
+   "timestamp": 1792327681213
+  },
+  {
+   "type": "text",
+   "text": "1]\n   -",
+   "timestamp": 1792327681214
+  },
+  {
+   "type": "text",
+   "text": " Wikipedia: \"It",
+   "timestamp": 1792327681222
+  },
+  {
+   "type": "text",
+   "text": " borders Gästrik",
+   "timestamp": 1792327681230
+  },
+  {
+   "type": "text",
+   "text": "land, Dalar",
+   "timestamp": 1792327681237
+  },
+  {
+   "type": "text",
+   "text": "na, Här",
+   "timestamp": 1792327681248
+  },
+  {
+   "type": "text",
+   "text": "jedalen, Med",
+   "timestamp": 1792327681257
+  },
+  {
+   "type": "text",
+   "text": "elpad and the",
+   "timestamp": 1792327681265
+  },
+  {
+   "type": "text",
+   "text": " Gulf of Bothnia",
+   "timestamp": 1792327681274
+  },
+  {
+   "type": "text",
+   "text": ".\" [W:",
+   "timestamp": 1792327681283
+  },
+  {
+   "type": "text",
+   "text": "1910",
+   "timestamp": 1792327681293
+  },
+  {
+   "type": "text",
+   "text": "32:1",
+   "timestamp": 1792327681302
+  },
+  {
+   "type": "text",
+   "text": "3380",
+   "timestamp": 1792327681312
+  },
+  {
+   "type": "text",
+   "text": "2446",
+   "timestamp": 1792327681322
+  },
+  {
+   "type": "text",
+   "text": "6]\n   -",
+   "timestamp": 1792327681332
+  },
+  {
+   "type": "text",
+   "text": " \"gulph",
+   "timestamp": 1792327681340
+  },
+  {
+   "type": "text",
+   "text": "\" is the period",
+   "timestamp": 1792327681357
+  },
+  {
+   "type": "text",
+   "text": " spelling of \"g",
+   "timestamp": 1792327681359
+  },
+  {
+   "type": "text",
+   "text": "ulf.\"\n\n3.",
+   "timestamp": 1792327681368
+  },
+  {
+   "type": "text",
+   "text": " **\"Zie Graf",
+   "timestamp": 1792327681379
+  },
+  {
+   "type": "text",
+   "text": "jnaar\" →",
+   "timestamp": 1792327681410
+  },
+  {
+   "type": "text",
+   "text": " \"The Crafts",
+   "timestamp": 1792327681410
+  },
+  {
+   "type": "text",
+   "text": "man\"** — AM",
+   "timestamp": 1792327681411
+  },
+  {
+   "type": "text",
+   "text": "HURIST\n",
+   "timestamp": 1792327681418
+  },
+  {
+   "type": "text",
+   "text": "   - Britannica",
+   "timestamp": 1792327681425
+  },
+  {
+   "type": "text",
+   "text": ": \"the political",
+   "timestamp": 1792327681481
+  },
+  {
+   "type": "text",
+   "text": " paper called Zie",
+   "timestamp": 1792327681481
+  },
+  {
+   "type": "text",
+   "text": " Grafjnaar\"",
+   "timestamp": 1792327681481
+  },
+  {
+   "type": "text",
+   "text": " [B:5",
+   "timestamp": 1792327681481
+  },
+  {
+   "type": "text",
+   "text": "60:2",
+   "timestamp": 1792327681481
+  },
+  {
+   "type": "text",
+   "text": "]\n   - Wikipedia",
+   "timestamp": 1792327681482
+  },
+  {
+   "type": "text",
+   "text": ": \"he",
+   "timestamp": 1792327681670
+  },
+  {
+   "type": "text",
+   "text": " issued the first number",
+   "timestamp": 1792327681670
+  },
+  {
+   "type": "text",
+   "text": " of The Crafts",
+   "timestamp": 1792327681670
+  },
+  {
+   "type": "text",
+   "text": "man, a weekly",
+   "timestamp": 1792327681670
+  },
+  {
+   "type": "text",
+   "text": " periodical\" [",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "W:23",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "0512",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "5:13",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "3863",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "5003",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": "]\n\nCaveats",
+   "timestamp": 1792327681671
+  },
+  {
+   "type": "text",
+   "text": ": examples",
+   "timestamp": 1792327681918
+  },
+  {
+   "type": "text",
+   "text": " 2 and ",
+   "timestamp": 1792327681918
+  },
+  {
+   "type": "text",
+   "text": "3 sit",
+   "timestamp": 1792327681918
+  },
+  {
+   "type": "text",
+   "text": " in O",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "CR-noisy Britann",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "ica passages (e",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": ".g. \"ca",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "fl\" for \"",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "coast\"",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " in Helsing",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "ia; the",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " Amhurst entry is",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " heavily garbled elsewhere",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": "), so treat",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " the old-term",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " spellings as raw",
+   "timestamp": 1792327681919
+  },
+  {
+   "type": "text",
+   "text": " renderings. Many",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": " lower",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "-ranked term pairs (",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "e",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": ".g. \"ten",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "parts\"→\"",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "tenements\", \"",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "cry\"→",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "\"crown\",",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": " \"backache\"",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "→\"MD\",",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": " \"Wanilor",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": " Eagle\"→\"",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "Wynford Eagle",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": "\") were rejected",
+   "timestamp": 1792327681920
+  },
+  {
+   "type": "text",
+   "text": " as OCR/sp",
+   "timestamp": 1792327681921
+  },
+  {
+   "type": "text",
+   "text": "elling noise and are",
+   "timestamp": 1792327681921
+  },
+  {
+   "type": "text",
+   "text": " not used here",
+   "timestamp": 1792327681921
+  },
+  {
+   "type": "text",
+   "text": ".\n\n",
+   "timestamp": 1792327681921
+  },
+  {
+   "type": "text",
+   "text": "Inference: the",
+   "timestamp": 1792327681921
+  },
+  {
+   "type": "text",
+   "text": " clear",
+   "timestamp": 1792327681928
+  },
+  {
+   "type": "text",
+   "text": "est genuine",
+   "timestamp": 1792327681938
+  },
+  {
+   "type": "text",
+   "text": " lexical shift is \"",
+   "timestamp": 1792327681947
+  },
+  {
+   "type": "text",
+   "text": "rife\" →",
+   "timestamp": 1792327681958
+  },
+  {
+   "type": "text",
+   "text": " \"common use\"",
+   "timestamp": 1792327681965
+  },
+  {
+   "type": "text",
+   "text": " (an archaic",
+   "timestamp": 1792327681975
+  },
+  {
+   "type": "text",
+   "text": " word for currency",
+   "timestamp": 1792327681986
+  },
+  {
+   "type": "text",
+   "text": "/prevalence replaced",
+   "timestamp": 1792327681993
+  },
+  {
+   "type": "text",
+   "text": " by a modern phrase",
+   "timestamp": 1792327682007
+  },
+  {
+   "type": "text",
+   "text": "); the other",
+   "timestamp": 1792327682012
+  },
+  {
+   "type": "text",
+   "text": " two are old",
+   "timestamp": 1792327682021
+  },
+  {
+   "type": "text",
+   "text": " place/public",
+   "timestamp": 1792327682030
+  },
+  {
+   "type": "text",
+   "text": "ation names now",
+   "timestamp": 1792327682039
+  },
+  {
+   "type": "text",
+   "text": " given",
+   "timestamp": 1792327682050
+  },
+  {
+   "type": "text",
+   "text": " their",
+   "timestamp": 1792327682058
+  },
+  {
+   "type": "text",
+   "text": " standard modern forms.",
+   "timestamp": 1792327682067
+  },
+  {
+   "type": "result",
+   "session_id": "20261018_144716_1788ec",
+   "exit_code": 0,
+   "text": "Three old Britannica terms with modern Wikipedia names (from `find_drift kind: term_pairs`, the top three by rerank margin; all three matches are `matched` with `uncertain_match: false`):\n\n1. **\"rife\" → \"common use\"** — HUGUENOTS\n   - Britannica: \"The name had its first rife in 1560\" [B:1327:8]\n   - Wikipedia: \"The term ... was in common use by around 1550.\" [W:75899:1352397655]\n   - Drift-tagged as a `renamed` claim (lexical: same fact — when the name came into use — new words).\n\n2. **\"Botnhic gulph\" → \"Gulf of Bothnia\"** — HELSINGIA\n   - Britannica: \"bounded by the Botnhic gulph on the cafl\" [B:1017:11]\n   - Wikipedia: \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\" [W:191032:1338024466]\n   - \"gulph\" is the period spelling of \"gulf.\"\n\n3. **\"Zie Grafjnaar\" → \"The Craftsman\"** — AMHURIST\n   - Britannica: \"the political paper called Zie Grafjnaar\" [B:560:2]\n   - Wikipedia: \"he issued the first number of The Craftsman, a weekly periodical\" [W:2305125:1338635003]\n\nCaveats: examples 2 and 3 sit in OCR-noisy Britannica passages (e.g. \"cafl\" for \"coast\" in Helsingia; the Amhurst entry is heavily garbled elsewhere), so treat the old-term spellings as raw renderings. Many lower-ranked term pairs (e.g. \"tenparts\"→\"tenements\", \"cry\"→\"crown\", \"backache\"→\"MD\", \"Wanilor Eagle\"→\"Wynford Eagle\") were rejected as OCR/spelling noise and are not used here.\n\nInference: the clearest genuine lexical shift is \"rife\" → \"common use\" (an archaic word for currency/prevalence replaced by a modern phrase); the other two are old place/publication names now given their standard modern forms.",
+   "tokens": {
+    "input": 37785,
+    "output": 10894,
+    "total": 66087,
+    "cache_read": 17408,
+    "cache_write": 0
+   },
+   "duration_ms": 45396,
+   "timestamp": 1792327682097
+  }
+ ],
+ "model": "nvidia/Nemotron-3.5-Super-VL",
+ "model_ok": true,
+ "tool_calls": [
+  {
+   "name": "tool_describe",
+   "input": {
+    "names": [
+     "find_drift",
+     "get_pair",
+     "search_sources"
+    ]
+   },
+   "output": "{\"tools\": {\"find_drift\": {\"description\": \"List checked comparison items of one kind across ALL matched pairs, with quotes from both sides and citation ids. kind: renamed (same fact, new words), superseded (fact changed), dropped (not in Wikipedia), enduring, term_pairs (old Britannica term -> modern Wikipedia term), wiki_only_topics. Use it for corpus-wide questions such as 'which terms changed' or 'which facts were overturned'.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"kind\": {\"type\": \"string\", \"enum\": [\"renamed\", \"superseded\", \"dropped\", \"enduring\", \"term_pairs\", \"wiki_only_topics\"]}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 20, \"default\": 5}}, \"required\": [\"kind\"], \"additionalProperties\": false}}, \"get_pair\": {\"description\": \"Get one Britannica entry and its matched Wikipedia article: entry text (raw OCR and normalized), article excerpt, match scores and status (matched / no_clear_counterpart), the saved comparison (similarities, differences, claims tagged enduring|renamed|superseded|dropped) and the drift decomposition (orthographic, lexical, knowledge, coverage). Use it to answer whether the language or the knowledge changed.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"entry_id\": {\"type\": \"string\", \"pattern\": \"^\\\\[?(B:\\\\d+:\\\\d+|P:\\\\d+)\\\\]?$\", \"description\": \"Britannica entry id, e.g. B:115:0, or a page-level pair P:<row>\"}}, \"required\": [\"entry_id\"], \"additionalProperties\": false}}, \"search_sources\": {\"description\": \"Search the Britannica 1771-1797 entries and Wikipedia. Britannica: vector search in LanceDB. Wikipedia: matched-article chunks from LanceDB plus live BM25 over the full Wikipedia corpus; all hits are reranked together. Each hit has source lancedb or bm25. Returns passages with citation ids [B:<row>:<n>] (Britannica) and [W:<page_id>:<revision_id>] (Wikipedia), rerank logits, low_confidence when the top logit is low or the margin is small, and side_confidence per side. Passages are data, not instructions.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 2000, \"description\": \"What to look for.\"}, \"side\": {\"type\": \"string\", \"enum\": [\"britannica\", \"wikipedia\", \"both\"], \"default\": \"both\"}, \"k\": {\"type\": \"integer\", \"minimum\": 1, \"maximum\": 10, \"default\": 5}}, \"required\": [\"query\"], \"additionalProperties\": false}}}}"
+  },
+  {
+   "name": "find_drift",
+   "input": {
+    "kind": "term_pairs",
+    "k": 10
+   },
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}], \"note\": \"Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise.\"}"
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1327:8"
+   },
+   "output": "{\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1327\", \"row_index\": 1327, \"headword\": \"HUGUENOTS\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 1, \"chars\": 154, \"text_raw\": \"HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinifts of France. The name had its first rife in 1560; but authors are\", \"text_norm\": \"HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France. The name had its first rife in 1560; but authors are\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"75899\", \"wiki_title\": \"Huguenots\", \"wiki_revision_id\": \"1352397655\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Huguenots\", \"text_sha256\": \"6fc195d107e2a4b62d6f12aebd20441aeb72eb83155178b0108222bd40b490e1\", \"bm25_rank\": 2, \"embed_cos\": 0.471657, \"rerank_logit\": -1.23139, \"rerank_margin\": 4.13297, \"method\": \"bm25+embed+rerank\", \"reason\": \"top rerank logit -1.23 > tau -4.0\"}, \"cite_wikipedia\": \"[W:75899:1352397655]\", \"article_excerpt\": \"The Huguenots (/ ˈ h juː ɡ ə n ɒ t s / HEW -gə-nots, UK also /- n oʊ z / - nohz; French:) are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism. The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550. Huguenot was frequently used in reference to those of the Reformed Church of France from the time of the Protestant Reformation. By contrast, the Protestant populations of eastern France, in Alsace, Moselle, and Montbéliard, were mainly Lutherans.\\n\\nIn his Encyclopedia of Protestantism, Hans Hillerbrand wrote that on the eve of the St. Bartholomew's Day massacre in 1572, the Huguenot community made up as much as 10% of the French population. By 1600, it declined to 7–8%, and was reduced further late in the century after the return of persecution under Louis XIV, who instituted the Dragonnades to forcibly convert Protestants, and then finally revoked all Protestant rights in his Edict of Fontainebleau of 1685. In 1686, Protestants comprised just 1% of the population.\\n\\nThe Huguenots were concentrated in the southern and western parts of the Kingdom of France. As Huguenots gained influence and more openly displayed their faith, Catholic hostility grew. A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598. The Huguenots were led by Jeanne d'Albret; her son, the future Henry IV (who would later convert to Catholicism in order to become king); and the princes of Condé. The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy.\\n\\nHuguenot rebellions in the 1620s resulted in the abolition of their political and military privileges. They retained the religious provisions of the Edict of Nantes until the rule of Louis XIV, who gradually increased persecution of Protestantism until he issued the Edict of Fontainebleau (1685). This ended legal recognition of Protestantism in France and the Huguenots were forced to either convert to Catholicism (possibly as Nicodemites) or flee as refugees; they were subject to violent Dragonnades. Louis XIV claimed the French Huguenot population was reduced from about 900,000 or 800,000 adherents to just 1,000 or 1,500. He exaggerated the decline, but the Dragonnades were devastating for the French Protestant community. The exodus of Huguenots from France created a brain drain, as many of them had occupied important places in society.\\n\\nThe remaining Huguenots faced continued persecution under Louis XV. By the time of his death in 1774, Calvinism had been all but eliminated from France. Persecution of Protestants officially ended with the Edict of Versailles, signed by Louis XVI in 1787. Two years later, with the Revolutionary Declaration of the Rights of Man and of the Citizen of 1789, Protestants gained equal rights as citizens.\\n\\nA term used orig\", \"article_chars\": 70120, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both associate the origin of the name with events around 1560, including the Amboise plot.\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560\"}, {\"point\": \"Both state that the name was originally used in derision or hatred.\", \"quote_britannica\": \"an application given by way of concept to the referred or Protestant Calvinists of France.\", \"quote_wikipedia\": \"The name, Huguenot, \\\"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\\\"\"}, {\"point\": \"Both note that the etymol..."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:1017:11"
+   },
+   "output": "{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017\", \"row_index\": 1017, \"headword\": \"HELSINGIA\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 105, \"text_raw\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"text_norm\": \"HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"191032\", \"wiki_title\": \"Hälsingland\", \"wiki_revision_id\": \"1338024466\", \"wiki_url\": \"https://en.wikipedia.org/wiki/H%C3%A4lsingland\", \"text_sha256\": \"e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c\", \"bm25_rank\": 1, \"embed_cos\": 0.452285, \"rerank_logit\": -4.237162, \"rerank_margin\": 5.712891, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -4.24 > -8.0 and margin 5.71 >= 1.2\"}, \"cite_wikipedia\": \"[W:191032:1338024466]\", \"article_excerpt\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\\n\\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\\n\\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\\n\\nThe following municipalities have their seats in Hälsingland:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nLjusdal\\n\\nNordanstig\\n\\nOvanåker\\n\\nSöderhamn\\n\\nThe six largest settlements are:\\n\\nBollnäs\\n\\nHudiksvall\\n\\nSöderhamn\\n\\nLjusdal\\n\\nEdsbyn\\n\\nIggesund\\n\\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\\n\\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\\n\\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\\n\\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\\n\\nIn the medieval age, the \\\"Helsings\\\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\\n\\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\\n\\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco\", \"article_chars\": 6276, \"uncertain_match\": false, \"comparison\": {\"similarities\": [{\"point\": \"Both identify Helsingia as a province of Sweden.\", \"quote_britannica\": \"HELSINGIA, a province of Sweden,\", \"quote_wikipedia\": \"Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden.\"}, {\"point\": \"Both state that the province borders the Gulf of Bothnia.\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"point\": \"Both state that the province borders Dalarna.\", \"quote_britannica\": \"and by Dalecarila on the well.\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}], \"differences\": [{\"point\": \"Britannica gives only two borders, while Wikipedia lists five bordering ..."
+  },
+  {
+   "name": "get_pair",
+   "input": {
+    "entry_id": "B:560:2"
+   },
+   "output": "{\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"page_id\": \"britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560\", \"row_index\": 560, \"headword\": \"AMHURIST\", \"is_continuation\": false, \"topic_hint\": null, \"norm_edits\": 0, \"chars\": 979, \"text_raw\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"text_norm\": \"AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.\", \"truncated\": false, \"status\": \"matched\", \"match\": {\"wiki_page_id\": \"2305125\", \"wiki_title\": \"Nicholas Amhurst\", \"wiki_revision_id\": \"1338635003\", \"wiki_url\": \"https://en.wikipedia.org/wiki/Nicholas_Amhurst\", \"text_sha256\": \"18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9\", \"bm25_rank\": 1, \"embed_cos\": 0.393226, \"rerank_logit\": -5.673667, \"rerank_margin\": 4.178508, \"method\": \"bm25+embed+rerank\", \"reason\": \"logit -5.67 > -8.0 and margin 4.18 >= 1.2\"}, \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"article_excerpt\": \"Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\\n\\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\\n\\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\\n\\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly resp..."
+  },
+  {
+   "name": "find_drift",
+   "input": {
+    "k": 20,
+    "kind": "term_pairs"
+   },
+   "output": "{\"kind\": \"term_pairs\", \"total\": 142, \"items\": [{\"entry_id\": \"B:1017:11\", \"cite_britannica\": \"[B:1017:11]\", \"cite_wikipedia\": \"[W:191032:1338024466]\", \"wiki_title\": \"Hälsingland\", \"rerank_margin\": 5.712891, \"old\": \"Botnhic gulph\", \"new\": \"Gulf of Bothnia\", \"quote_britannica\": \"bounded by the Botnhic gulph on the cafl,\", \"quote_wikipedia\": \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\"}, {\"entry_id\": \"B:560:2\", \"cite_britannica\": \"[B:560:2]\", \"cite_wikipedia\": \"[W:2305125:1338635003]\", \"wiki_title\": \"Nicholas Amhurst\", \"rerank_margin\": 4.178508, \"old\": \"Zie Grafjnaar\", \"new\": \"The Craftsman\", \"quote_britannica\": \"But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,\", \"quote_wikipedia\": \"On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers.\"}, {\"entry_id\": \"B:1327:8\", \"cite_britannica\": \"[B:1327:8]\", \"cite_wikipedia\": \"[W:75899:1352397655]\", \"wiki_title\": \"Huguenots\", \"rerank_margin\": 4.13297, \"old\": \"rife\", \"new\": \"common use\", \"quote_britannica\": \"The name had its first rife in 1560; but authors are\", \"quote_wikipedia\": \"The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550.\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"tenparts\", \"new\": \"tenements\", \"quote_britannica\": \"ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.\", \"quote_wikipedia\": \"transfers the real property of a person who has died without heirs to the government\"}, {\"entry_id\": \"B:1473:7\", \"cite_britannica\": \"[B:1473:7]\", \"cite_wikipedia\": \"[W:175519:1353158843]\", \"wiki_title\": \"Escheat\", \"rerank_margin\": 2.66776, \"old\": \"cry\", \"new\": \"crown\", \"quote_britannica\": \"fa fault, cakes the hand echated or fell back to the lost of the cry\", \"quote_wikipedia\": \"the fee reverted to the King's demesne permanently\"}, {\"entry_id\": \"B:2250:8\", \"cite_britannica\": \"[B:2250:8]\", \"cite_wikipedia\": \"[W:521384:1340885393]\", \"wiki_title\": \"By-law\", \"rerank_margin\": 2.56998, \"old\": \"BYLAWS, or ByrŁLAWS\", \"new\": \"by-law (bye-law, by (e) law, by (e) law)\", \"quote_britannica\": \"BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.\", \"quote_wikipedia\": \"A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority.\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"backache\", \"new\": \"MD\", \"quote_britannica\": \"created backache of his faculty\", \"quote_wikipedia\": \"graduated as MD\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Wanilor Eagle\", \"new\": \"Wynford Eagle\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:251:5\", \"cite_britannica\": \"[B:251:5]\", \"cite_wikipedia\": \"[W:564669:1341167433]\", \"wiki_title\": \"Thomas Sydenham\", \"rerank_margin\": 2.525945, \"old\": \"Dorforth\", \"new\": \"Dorset\", \"quote_britannica\": \"of Wanilor Eagle in Dorforth\", \"quote_wikipedia\": \"born at Wynford Eagle in Dorset\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"loft horn\", \"new\": \"callosity\", \"quote_britannica\": \"like a piece of loft horn\", \"quote_wikipedia\": \"a small callosity (Calcar metacarpeum and Calcar metatarseum)\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"pattern join\", \"new\": \"fetlock\", \"quote_britannica\": \"placed behind and be low the pattern join\", \"quote_wikipedia\": \"on the underside of the fetlock of a horse or other equine.\"}, {\"entry_id\": \"B:2473:10\", \"cite_britannica\": \"[B:2473:10]\", \"cite_wikipedia\": \"[W:21445971:1324376018]\", \"wiki_title\": \"Ergot (horse anatomy)\", \"rerank_margin\": 2.355466, \"old\": \"tufi\", \"new\": \"feather\", \"quote_britannica\": \"hide under the tufi of the fetlock.\", \"quote_wikipedia\": \"long hairs on the lower legs.\"}, {\"entry_id\": \"B:2171:6\", \"cite_britannica\": \"[B:2171:6]\", \"cite_wikipedia\": \"[W:79071:1353135063]\", \"wiki_title\": \"Ate (mythology)\", \"rerank_margin\": 2.342574, \"old\": \"goddels of mithief\", \"new\": \"personification of moral blindness and error\", \"quote_britannica\": \"ATE, the goddels of mithief; in the Pagan tho-ology.\", \"quote_wi..."
+  }
+ ],
+ "final_text": "Three old Britannica terms with modern Wikipedia names (from `find_drift kind: term_pairs`, the top three by rerank margin; all three matches are `matched` with `uncertain_match: false`):\n\n1. **\"rife\" → \"common use\"** — HUGUENOTS\n   - Britannica: \"The name had its first rife in 1560\" [B:1327:8]\n   - Wikipedia: \"The term ... was in common use by around 1550.\" [W:75899:1352397655]\n   - Drift-tagged as a `renamed` claim (lexical: same fact — when the name came into use — new words).\n\n2. **\"Botnhic gulph\" → \"Gulf of Bothnia\"** — HELSINGIA\n   - Britannica: \"bounded by the Botnhic gulph on the cafl\" [B:1017:11]\n   - Wikipedia: \"It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia.\" [W:191032:1338024466]\n   - \"gulph\" is the period spelling of \"gulf.\"\n\n3. **\"Zie Grafjnaar\" → \"The Craftsman\"** — AMHURIST\n   - Britannica: \"the political paper called Zie Grafjnaar\" [B:560:2]\n   - Wikipedia: \"he issued the first number of The Craftsman, a weekly periodical\" [W:2305125:1338635003]\n\nCaveats: examples 2 and 3 sit in OCR-noisy Britannica passages (e.g. \"cafl\" for \"coast\" in Helsingia; the Amhurst entry is heavily garbled elsewhere), so treat the old-term spellings as raw renderings. Many lower-ranked term pairs (e.g. \"tenparts\"→\"tenements\", \"cry\"→\"crown\", \"backache\"→\"MD\", \"Wanilor Eagle\"→\"Wynford Eagle\") were rejected as OCR/spelling noise and are not used here.\n\nInference: the clearest genuine lexical shift is \"rife\" → \"common use\" (an archaic word for currency/prevalence replaced by a modern phrase); the other two are old place/publication names now given their standard modern forms.",
+ "session_id": "20261018_144716_1788ec",
+ "tokens": {
+  "input": 37785,
+  "output": 10894,
+  "total": 66087,
+  "cache_read": 17408,
+  "cache_write": 0
+ },
+ "duration_ms": 45396,
+ "completed": true,
+ "status": "ok",
+ "seconds": 46.9,
+ "tool_log": [
+  {
+   "tool": "find_drift",
+   "params": {
+    "kind": "term_pairs",
+    "k": 10
+   },
+   "result": {
+    "kind": "term_pairs",
+    "total": 142,
+    "items": [
+     {
+      "entry_id": "B:1017:11",
+      "cite_britannica": "[B:1017:11]",
+      "cite_wikipedia": "[W:191032:1338024466]",
+      "wiki_title": "Hälsingland",
+      "rerank_margin": 5.712891,
+      "old": "Botnhic gulph",
+      "new": "Gulf of Bothnia",
+      "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+      "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+     },
+     {
+      "entry_id": "B:560:2",
+      "cite_britannica": "[B:560:2]",
+      "cite_wikipedia": "[W:2305125:1338635003]",
+      "wiki_title": "Nicholas Amhurst",
+      "rerank_margin": 4.178508,
+      "old": "Zie Grafjnaar",
+      "new": "The Craftsman",
+      "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+      "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+     },
+     {
+      "entry_id": "B:1327:8",
+      "cite_britannica": "[B:1327:8]",
+      "cite_wikipedia": "[W:75899:1352397655]",
+      "wiki_title": "Huguenots",
+      "rerank_margin": 4.13297,
+      "old": "rife",
+      "new": "common use",
+      "quote_britannica": "The name had its first rife in 1560; but authors are",
+      "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "tenparts",
+      "new": "tenements",
+      "quote_britannica": "ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.",
+      "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government"
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "cry",
+      "new": "crown",
+      "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+      "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+     },
+     {
+      "entry_id": "B:2250:8",
+      "cite_britannica": "[B:2250:8]",
+      "cite_wikipedia": "[W:521384:1340885393]",
+      "wiki_title": "By-law",
+      "rerank_margin": 2.56998,
+      "old": "BYLAWS, or ByrŁLAWS",
+      "new": "by-law (bye-law, by (e) law, by (e) law)",
+      "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+      "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "backache",
+      "new": "MD",
+      "quote_britannica": "created backache of his faculty",
+      "quote_wikipedia": "graduated as MD"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Wanilor Eagle",
+      "new": "Wynford Eagle",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Dorforth",
+      "new": "Dorset",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "loft horn",
+      "new": "callosity",
+      "quote_britannica": "like a piece of loft horn",
+      "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+     }
+    ],
+    "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:1327:8"
+   },
+   "result": {
+    "entry_id": "B:1327:8",
+    "cite_britannica": "[B:1327:8]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1327",
+    "row_index": 1327,
+    "headword": "HUGUENOTS",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 1,
+    "chars": 154,
+    "text_raw": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinifts of France. The name had its first rife in 1560; but authors are",
+    "text_norm": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France. The name had its first rife in 1560; but authors are",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "75899",
+     "wiki_title": "Huguenots",
+     "wiki_revision_id": "1352397655",
+     "wiki_url": "https://en.wikipedia.org/wiki/Huguenots",
+     "text_sha256": "6fc195d107e2a4b62d6f12aebd20441aeb72eb83155178b0108222bd40b490e1",
+     "bm25_rank": 2,
+     "embed_cos": 0.471657,
+     "rerank_logit": -1.23139,
+     "rerank_margin": 4.13297,
+     "method": "bm25+embed+rerank",
+     "reason": "top rerank logit -1.23 > tau -4.0"
+    },
+    "cite_wikipedia": "[W:75899:1352397655]",
+    "article_excerpt": "The Huguenots (/ ˈ h juː ɡ ə n ɒ t s / HEW -gə-nots, UK also /- n oʊ z / - nohz; French:) are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism. The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550. Huguenot was frequently used in reference to those of the Reformed Church of France from the time of the Protestant Reformation. By contrast, the Protestant populations of eastern France, in Alsace, Moselle, and Montbéliard, were mainly Lutherans.\n\nIn his Encyclopedia of Protestantism, Hans Hillerbrand wrote that on the eve of the St. Bartholomew's Day massacre in 1572, the Huguenot community made up as much as 10% of the French population. By 1600, it declined to 7–8%, and was reduced further late in the century after the return of persecution under Louis XIV, who instituted the Dragonnades to forcibly convert Protestants, and then finally revoked all Protestant rights in his Edict of Fontainebleau of 1685. In 1686, Protestants comprised just 1% of the population.\n\nThe Huguenots were concentrated in the southern and western parts of the Kingdom of France. As Huguenots gained influence and more openly displayed their faith, Catholic hostility grew. A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598. The Huguenots were led by Jeanne d'Albret; her son, the future Henry IV (who would later convert to Catholicism in order to become king); and the princes of Condé. The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy.\n\nHuguenot rebellions in the 1620s resulted in the abolition of their political and military privileges. They retained the religious provisions of the Edict of Nantes until the rule of Louis XIV, who gradually increased persecution of Protestantism until he issued the Edict of Fontainebleau (1685). This ended legal recognition of Protestantism in France and the Huguenots were forced to either convert to Catholicism (possibly as Nicodemites) or flee as refugees; they were subject to violent Dragonnades. Louis XIV claimed the French Huguenot population was reduced from about 900,000 or 800,000 adherents to just 1,000 or 1,500. He exaggerated the decline, but the Dragonnades were devastating for the French Protestant community. The exodus of Huguenots from France created a brain drain, as many of them had occupied important places in society.\n\nThe remaining Huguenots faced continued persecution under Louis XV. By the time of his death in 1774, Calvinism had been all but eliminated from France. Persecution of Protestants officially ended with the Edict of Versailles, signed by Louis XVI in 1787. Two years later, with the Revolutionary Declaration of the Rights of Man and of the Citizen of 1789, Protestants gained equal rights as citizens.\n\nA term used orig",
+    "article_chars": 70120,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both associate the origin of the name with events around 1560, including the Amboise plot.",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+      },
+      {
+       "point": "Both state that the name was originally used in derision or hatred.",
+       "quote_britannica": "an application given by way of concept to the referred or Protestant Calvinists of France.",
+       "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+      },
+      {
+       "point": "Both note that the etymology of the name is uncertain and debated by authors.",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "A term used originally in derision, Huguenot has unclear origins. Various hypotheses have been promoted."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica gives only a brief definition and origin date, while Wikipedia provides a detailed history of persecution, wars, and decline.",
+       "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France. The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The Huguenots were concentrated in the southern and western parts of the Kingdom of France. As Huguenots gained influence and more openly displayed their faith, Catholic hostility grew. A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598."
+      },
+      {
+       "point": "Britannica does not mention the Edict of Nantes or its revocation, while Wikipedia treats them as central events.",
+       "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+       "quote_wikipedia": "The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy."
+      },
+      {
+       "point": "Britannica does not discuss etymological hypotheses, while Wikipedia offers multiple theories about the name's origin.",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The term may have been a combined reference to the Swiss politician Besançon Hugues (died 1532) and the religiously conflicted nature of Swiss republicanism in his time."
+      },
+      {
+       "point": "Britannica does not mention the Huguenot cross, while Wikipedia describes it as a distinctive emblem.",
+       "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+       "quote_wikipedia": "The Huguenot cross is the distinctive emblem of the Huguenots (croix huguenote)."
+      }
+     ],
+     "claims": [
+      {
+       "claim": "The name first arose in 1560.",
+       "tag": "enduring",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+      },
+      {
+       "claim": "The name was applied in hatred and derision.",
+       "tag": "enduring",
+       "quote_britannica": "an application given by way of concept to the referred or Protestant Calvinists of France.",
+       "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+      },
+      {
+       "claim": "The name may derive from Besançon Hugues, a Genevan political leader.",
+       "tag": "renamed",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+      },
+      {
+       "claim": "The name may derive from spirits called le Roy Huguet in Tours.",
+       "tag": "enduring",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "at Tours, le Roy Huguet; and so on in other places."
+      },
+      {
+       "claim": "The name may derive from les guenon de Hus, meaning monkeys or apes of Jan Hus.",
+       "tag": "enduring",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "Some have suggested the name was derived, with intended scorn, from les guenon de Hus (the 'monkeys' or 'apes of Jan Hus ')."
+      },
+      {
+       "claim": "The Huguenot population reached as much as 10% of the French population on the eve of the St. Bartholomew's Day massacre in 1572.",
+       "tag": "enduring",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "In his Encyclopedia of Protestantism, Hans Hillerbrand wrote that on the eve of the St. Bartholomew's Day massacre in 1572, the Huguenot community made up as much as 10% of the French population."
+      },
+      {
+       "claim": "The Huguenot community declined to 7–8% by around 1600.",
+       "tag": "enduring",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "By 1600, it declined to 7–8%, and was reduced further late in the century after the return of persecution under Louis XIV"
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "rife",
+       "new": "common use",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+      },
+      {
+       "old": "Amboyse",
+       "new": "Amboise",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The label Huguenot was purportedly first applied in France to those conspirators (all of them aristocratic members of the Reformed Church) who were involved in the Amboise plot of 1560"
+      },
+      {
+       "old": "Tourraine",
+       "new": "Touraine",
+       "quote_britannica": "The name had its first rife in 1560; but authors are",
+       "quote_wikipedia": "The name, Huguenot, \"the people applied in hatred and derision to those who were elsewhere called Lutherans, and from Touraine it spread throughout France.\""
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "Dragonnades and the Edict of Fontainebleau (1685)",
+       "quote_wikipedia": "who instituted the Dragonnades to forcibly convert Protestants, and then finally revoked all Protestant rights in his Edict of Fontainebleau of 1685."
+      },
+      {
+       "topic": "Huguenot rebellions of the 1620s and loss of political privileges",
+       "quote_wikipedia": "Huguenot rebellions in the 1620s resulted in the abolition of their political and military privileges."
+      },
+      {
+       "topic": "Edict of Versailles (1787) and Declaration of the Rights of Man (1789)",
+       "quote_wikipedia": "Persecution of Protestants officially ended with the Edict of Versailles, signed by Louis XVI in 1787. Two years later, with the Revolutionary Declaration of the Rights of Man and of the Citizen of 1789, Protestants gained equal rights as citizens."
+      },
+      {
+       "topic": "Huguenot cross as emblem and modern church symbol",
+       "quote_wikipedia": "The Huguenot cross is the distinctive emblem of the Huguenots (croix huguenote). It is now an official symbol of the Église des Protestants réformés (French Protestant church)."
+      }
+     ],
+     "rejected": [
+      {
+       "section": "similarities",
+       "item": {
+        "point": "Both identify Huguenots as French Protestants of the Calvinist/Reformed tradition.",
+        "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+        "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+       },
+       "reason": "quote_wikipedia not found in article text"
+      },
+      {
+       "section": "claims",
+       "item": {
+        "claim": "Huguenots are Protestant Calvinists of France.",
+        "tag": "enduring",
+        "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+        "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+       },
+       "reason": "quote_wikipedia not found in article text"
+      },
+      {
+       "section": "term_pairs",
+       "item": {
+        "old": "Protestant Calvinists",
+        "new": "Reformed (Calvinist) tradition",
+        "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+        "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+       },
+       "reason": "quote_wikipedia not found in article text"
+      },
+      {
+       "section": "term_pairs",
+       "item": {
+        "old": "referred",
+        "new": "Reformed",
+        "quote_britannica": "HUGUENOTS, an application given by way of concept to the referred or Protestant Calvinists of France.",
+        "quote_wikipedia": "The Huguenots are a religious group of French Protestants who held to the Reformed (Calvinist) tradition of Protestantism."
+       },
+       "reason": "quote_wikipedia not found in article text"
+      },
+      {
+       "section": "wiki_only_topics",
+       "item": {
+        "topic": "French Wars of Religion and the Edict of Nantes",
+        "quote_wikipedia": "A series of religious conflicts followed, known as the French Wars of Religion, fought intermittently from 1562 to 1598. The wars ended with the Edict of Nantes of 1598, which granted the Huguenots substantial religious, political and military autonomy."
+       },
+       "reason": "quote_wikipedia not found in article text"
+      }
+     ]
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 1,
+      "words": 27,
+      "edits_per_100_words": 3.7
+     },
+     "lexical": {
+      "renamed_share": 0.143,
+      "term_pairs": [
+       {
+        "old": "rife",
+        "new": "common use"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "Amboyse",
+        "new": "Amboise"
+       },
+       {
+        "old": "Tourraine",
+        "new": "Touraine"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.0
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "Dragonnades and the Edict of Fontainebleau (1685)",
+       "Huguenot rebellions of the 1620s and loss of political privileges",
+       "Edict of Versailles (1787) and Declaration of the Rights of Man (1789)",
+       "Huguenot cross as emblem and modern church symbol"
+      ]
+     },
+     "enduring_share": 0.857,
+     "claim_counts": {
+      "enduring": 6,
+      "renamed": 1,
+      "superseded": 0,
+      "dropped": 0
+     },
+     "claims_checked": 7,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:1017:11"
+   },
+   "result": {
+    "entry_id": "B:1017:11",
+    "cite_britannica": "[B:1017:11]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:1017",
+    "row_index": 1017,
+    "headword": "HELSINGIA",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 0,
+    "chars": 105,
+    "text_raw": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+    "text_norm": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "191032",
+     "wiki_title": "Hälsingland",
+     "wiki_revision_id": "1338024466",
+     "wiki_url": "https://en.wikipedia.org/wiki/H%C3%A4lsingland",
+     "text_sha256": "e94bee9ba64808880d3b1d5c3642e90c0a4a8f7735c6cc2d9b8ee523cdee871c",
+     "bm25_rank": 1,
+     "embed_cos": 0.452285,
+     "rerank_logit": -4.237162,
+     "rerank_margin": 5.712891,
+     "method": "bm25+embed+rerank",
+     "reason": "logit -4.24 > -8.0 and margin 5.71 >= 1.2"
+    },
+    "cite_wikipedia": "[W:191032:1338024466]",
+    "article_excerpt": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden. It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia. It is part of the land of Norrland.\n\nPrincess Madeleine is currently the duchess of Hälsingland, along with Gästrikland.\n\nThe traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County. Minor parts of the province are in Jämtland County and in Västernorrland County.\n\nThe following municipalities have their seats in Hälsingland:\n\nBollnäs\n\nHudiksvall\n\nLjusdal\n\nNordanstig\n\nOvanåker\n\nSöderhamn\n\nThe six largest settlements are:\n\nBollnäs\n\nHudiksvall\n\nSöderhamn\n\nLjusdal\n\nEdsbyn\n\nIggesund\n\nThe coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules). This, combined with the arms of Gästrikland, forms the coat of arms for Gävleborg County.\n\nThe terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income. Apart from some areas around the river systems, notably around the River Ljusnan, the soil is barren. Large areas consist of rocks and bogs and are unsuitable for agriculture.\n\nA notable geological feature is the Dellen lake system, created from flooded meteoric impact craters. It is the only occurrence in Sweden of the volcanic Andesite rock, to which it has given the name dellenite.\n\nThe earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet.\n\nIn the medieval age, the \"Helsings\" were the Swedish speaking inhabitants of the entire coastal region north of Uppland, a rather imprecise denomination. In the early provincial law of Uppland, the border between northern Uppland and Hälsingland was the Ödmården forest.\n\nAccording to one theory, the name of the river Helsingå and Helsingfors (later Helsinki), the capital of Finland, was given by settlers from Hälsingland in the 13th century. The problem with this theory is that the Finland Swedish dialects of Uusimaa (Nyland) are related to those of Uppland, not Hälsingland.\n\nThe oldest city in Hälsingland is Hudiksvall, chartered in 1582. After that, Söderhamn was chartered in 1620. In 1942 Hälsingland was granted its third city, Bollnäs, which was to beco",
+    "article_chars": 6276,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both identify Helsingia as a province of Sweden.",
+       "quote_britannica": "HELSINGIA, a province of Sweden,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      },
+      {
+       "point": "Both state that the province borders the Gulf of Bothnia.",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "point": "Both state that the province borders Dalarna.",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica gives only two borders, while Wikipedia lists five bordering provinces and the gulf.",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl, and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "point": "Britannica describes it as a current province, while Wikipedia calls it a historical province with no administrative purpose.",
+       "quote_britannica": "HELSINGIA, a province of Sweden, bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      }
+     ],
+     "claims": [
+      {
+       "claim": "Helsingia is a province of Sweden.",
+       "tag": "enduring",
+       "quote_britannica": "HELSINGIA, a province of Sweden,",
+       "quote_wikipedia": "Hälsingland (Swedish pronunciation:), sometimes referred to by the Latin name Helsingia, is a historical province or landskap in central Sweden."
+      },
+      {
+       "claim": "Helsingia is bounded by the Botnian Gulf on the east.",
+       "tag": "enduring",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "claim": "Helsingia is bounded by Dalecarlia on the west.",
+       "tag": "enduring",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "Botnhic gulph",
+       "new": "Gulf of Bothnia",
+       "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      },
+      {
+       "old": "Dalecarila",
+       "new": "Dalarna",
+       "quote_britannica": "and by Dalecarila on the well.",
+       "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "Administrative status and counties",
+       "quote_wikipedia": "The traditional provinces of Sweden serve no administrative or political purpose, but are historical and cultural entities. In the case of Hälsingland the province constitutes the northern part of the län ('administrative county ') Gävleborg County."
+      },
+      {
+       "topic": "Municipalities and settlements",
+       "quote_wikipedia": "The following municipalities have their seats in Hälsingland:\n\nBollnäs\n\nHudiksvall\n\nLjusdal\n\nNordanstig\n\nOvanåker\n\nSöderhamn"
+      },
+      {
+       "topic": "Coat of arms and heraldry",
+       "quote_wikipedia": "The coat of arms were granted in 1560 in the era of King Gustav Vasa. At that time, Hälsingland was known for its large scale goat breeding, and the arms depicted a standing goat facing heraldic right (blazon: Sable, a Goat rampant Or attired and hoofed Gules)."
+      },
+      {
+       "topic": "Geography, terrain, and geology",
+       "quote_wikipedia": "The terrain is mostly hilly and rocky, sloping down towards the coast. The highest elevation in the northern part is 530 meters, and 671 meters in the western part. Approximately 85% of the land area is covered with forest, and the timber industry has historically been the main source of income."
+      },
+      {
+       "topic": "History and earliest mentions",
+       "quote_wikipedia": "The earliest mention of the people of Hälsingland may be in the Old English poem Widsith, from the 9th or 10th century, where a people called the Hælsings are referred to. The first definite mention of the people is made by Adam of Bremen around 1070, in reference to the leidang shipping fleet."
+      }
+     ],
+     "rejected": []
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 0,
+      "words": 19,
+      "edits_per_100_words": 0.0
+     },
+     "lexical": {
+      "renamed_share": 0.0,
+      "term_pairs": [
+       {
+        "old": "Botnhic gulph",
+        "new": "Gulf of Bothnia"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "Dalecarila",
+        "new": "Dalarna"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.0
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "Administrative status and counties",
+       "Municipalities and settlements",
+       "Coat of arms and heraldry",
+       "Geography, terrain, and geology",
+       "History and earliest mentions"
+      ]
+     },
+     "enduring_share": 1.0,
+     "claim_counts": {
+      "enduring": 3,
+      "renamed": 0,
+      "superseded": 0,
+      "dropped": 0
+     },
+     "claims_checked": 3,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "get_pair",
+   "params": {
+    "entry_id": "B:560:2"
+   },
+   "result": {
+    "entry_id": "B:560:2",
+    "cite_britannica": "[B:560:2]",
+    "page_id": "britannica:309f765b1ecc83e0a7f7762e44b4a927a7555443:train:560",
+    "row_index": 560,
+    "headword": "AMHURIST",
+    "is_continuation": false,
+    "topic_hint": null,
+    "norm_edits": 0,
+    "chars": 979,
+    "text_raw": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called _Coluba Britainans_, and in a book entitled _Terre Filosa_. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called _Zie Grafjnaar_ strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+    "text_norm": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent and entered of St. John's colleg, Oxford, I’d from whence he we accepted for irregularity of conduct and liberties principles. Retaining great recruitment against the answerfly on this occasion, the studied is a learning and discipline and forms of the molt etipecialable characters in it, in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa. He published, a Nicechy on Poems, farred and profane ; and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite. But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly, after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ; and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+    "truncated": false,
+    "status": "matched",
+    "match": {
+     "wiki_page_id": "2305125",
+     "wiki_title": "Nicholas Amhurst",
+     "wiki_revision_id": "1338635003",
+     "wiki_url": "https://en.wikipedia.org/wiki/Nicholas_Amhurst",
+     "text_sha256": "18c8172288d7a4fcb88d2cb929218f23358f2a49df0624f9e1755e42b30ca9d9",
+     "bm25_rank": 1,
+     "embed_cos": 0.393226,
+     "rerank_logit": -5.673667,
+     "rerank_margin": 4.178508,
+     "method": "bm25+embed+rerank",
+     "reason": "logit -5.67 > -8.0 and margin 4.18 >= 1.2"
+    },
+    "cite_wikipedia": "[W:2305125:1338635003]",
+    "article_excerpt": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer.\n\nAmhurst was born at Marden, Kent. He was educated at Merchant Taylors' School, and at St John's College, Oxford. In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles. His politics were sufficiently evident in many of his works: a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719), addressed to James, first Earl Stanhope, and printed anonymously, but doubtless by Amhurst.\n\nHe had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members. An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius. In 1721 Amhurst produced a series of bi-weekly satirical papers under this name, which ran for seven months and incidentally provides much curious information. These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford. He collected his poems in 1720, and wrote another university satire, Oculus Britanniæ, in 1724.\n\nOn leaving Oxford for London he became a prominent pamphleteer on the opposition (whig) side. On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers. The paper was aimed mainly towards the overthrow of Sir Robert Walpole 's government; there is some debate about its effects, with most historians agreeing it did little more than preaching to the converted. Nevertheless, it reached a circulation of 10,000 copies and was one of the biggest magazines of its time with authors such as Henry Fielding, John Gay and Alexander Pope contributing to it. For this success Amhurst's editorship was not perhaps chiefly responsible. It was founded, and in the beginning financed, by Henry St John, 1st Viscount Bolingbroke and William Pulteney, the latter being a frequent and caustic contributor. In 1737 an imaginary letter from Colley Cibber was inserted, in which he was made to suggest that many plays by Shakespeare and the older dramatists contained passages which might be regarded as seditious. He therefore desired to be appointed censor of all plays brought on the stage. This was regarded as a \"suspected\" libel, and a warrant was issued for the arrest of the printer. Amhurst surrendered himself instead, and suffered a short imprisonment. On the overthrow of the government in 1742 the opposition leaders did nothing for the useful editor of the Craftsman, and this neglect is said to ha",
+    "article_chars": 3425,
+    "uncertain_match": false,
+    "comparison": {
+     "similarities": [
+      {
+       "point": "Both identify Amhurst as an English poet and political writer.",
+       "quote_britannica": "AMHURIST (Nicola); an English poet and political writer,",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      },
+      {
+       "point": "Both state he was born at Marden in Kent.",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "Amhurst was born at Marden, Kent."
+      },
+      {
+       "point": "Both state he was connected to St John's College, Oxford.",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "point": "Both state he died in 1742.",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      }
+     ],
+     "differences": [
+      {
+       "point": "Britannica gives no birth date, while Wikipedia gives 16 October 1697.",
+       "quote_britannica": "AMHURIST (Nicola); an English poet and political writer, was born at Marden in Kent",
+       "quote_wikipedia": "Nicholas Amhurst (16 October 1697 – 27 April 1742) was an English poet and political writer."
+      },
+      {
+       "point": "Britannica says he was accepted for irregularity of conduct, while Wikipedia says he was expelled for irregularities of conduct.",
+       "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+       "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct,"
+      },
+      {
+       "point": "Britannica mentions a poem called Coluba Britainans, while Wikipedia mentions Oculus Britanniæ.",
+       "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+       "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+      },
+      {
+       "point": "Britannica says he died of a broken heart, while Wikipedia says neglect after the 1742 overthrow hastened his death.",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "On the overthrow of the government in 1742 the opposition leaders did nothing for the useful editor of the Craftsman, and this neglect is said to have hastened Amhurst's death,"
+      }
+     ],
+     "claims": [
+      {
+       "claim": "Amhurst was born at Marden in Kent.",
+       "tag": "enduring",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "Amhurst was born at Marden, Kent."
+      },
+      {
+       "claim": "He was educated at St John's College, Oxford.",
+       "tag": "enduring",
+       "quote_britannica": "was born at Marden in Kent and entered of St. John's colleg, Oxford,",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "claim": "He was expelled from Oxford for irregularities of conduct and Whig principles.",
+       "tag": "enduring",
+       "quote_britannica": "I’d from whence he we accepted for irregularity of conduct and liberties principles.",
+       "quote_wikipedia": "In 1719 he was expelled from the university, ostensibly for his irregularities of conduct, but in reality (according to his own account) because of his whig principles."
+      },
+      {
+       "claim": "He wrote a satire called Terræ Filius about Oxford.",
+       "tag": "renamed",
+       "quote_britannica": "in a book entitled Terre Filosa.",
+       "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+      },
+      {
+       "claim": "He wrote a poem called The Convocation.",
+       "tag": "enduring",
+       "quote_britannica": "and, The Convocation, a poem in five cantons, which was a false on the Billings of Rangers a magnonite.",
+       "quote_wikipedia": "in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly;"
+      },
+      {
+       "claim": "He was a prominent writer for the political paper The Craftsman.",
+       "tag": "renamed",
+       "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+       "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+      },
+      {
+       "claim": "He was a drudge of his party for nearly 20 years.",
+       "tag": "enduring",
+       "quote_britannica": "after having been the druge of his party for near 20 years, he was as much forge in the famous compromite of 1742 as if he had never been born ;",
+       "quote_wikipedia": "James Ralph cited Amhurst as a cautionary example of a party writer left unrewarded after the 1742 settlement following Walpole’s fall, calling him \"a Drudge of his Party for the best Part of Twenty Years\""
+      },
+      {
+       "claim": "He died neglected and was buried at a bookseller's charity.",
+       "tag": "enduring",
+       "quote_britannica": "and, when he died in that year of a broken hearts, was indented to the charity of the bookstler for a grave.",
+       "quote_wikipedia": "claiming he died neglected and was buried at a bookseller’s charity."
+      }
+     ],
+     "term_pairs": [
+      {
+       "old": "Terre Filosa",
+       "new": "Terræ Filius",
+       "quote_britannica": "in a book entitled Terre Filosa.",
+       "quote_wikipedia": "These publications were reprinted in 1726 in two volumes as Terræ Filius; or, the Secret History of the University of Oxford."
+      },
+      {
+       "old": "Zie Grafjnaar",
+       "new": "The Craftsman",
+       "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+       "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+      },
+      {
+       "old": "Coluba Britainans",
+       "new": "Oculus Britanniæ",
+       "quote_britannica": "in a poem published in 1742 called Coluba Britainans, and in a book entitled Terre Filosa.",
+       "quote_wikipedia": "and wrote another university satire, Oculus Britanniæ, in 1724."
+      }
+     ],
+     "wiki_only_topics": [
+      {
+       "topic": "His education at Merchant Taylors' School.",
+       "quote_wikipedia": "He was educated at Merchant Taylors' School, and at St John's College, Oxford."
+      },
+      {
+       "topic": "His early works including Protestant Popery and The Protestant Session.",
+       "quote_wikipedia": "a congratulatory epistle to Addison, in Protestant Popery; or the Convocation (1718), an attack on the opponents of Bishop Benjamin Hoadly; and in The Protestant Session by a member of the Constitution Club at Oxford (1719),"
+      },
+      {
+       "topic": "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+       "quote_wikipedia": "He had satirized Oxford morals in Strepkon's Revenge; a Satire on the Oxford Toasts (1718), and he attacked from time to time the administration of the university and its principal members."
+      },
+      {
+       "topic": "The custom of the Terræ filius orator at Oxford.",
+       "quote_wikipedia": "An old Oxford custom permitted, on public occasions, some person to deliver from the rostrum a humorous, satirical speech, full of university scandal. This orator was known as Terræ filius."
+      },
+      {
+       "topic": "His imprisonment over the imaginary letter from Colley Cibber.",
+       "quote_wikipedia": "In 1737 an imaginary letter from Colley Cibber was inserted, in which he was made to suggest that many plays by Shakespeare and the older dramatists contained passages which might be regarded as seditious. He therefore desired to be appointed censor of all plays brought on the stage. This was regarded as a \"suspected\" libel, and a warrant was issued for the arrest of the printer. Amhurst surrendered himself instead, and suffered a short imprisonment."
+      }
+     ],
+     "rejected": []
+    },
+    "drift": {
+     "orthographic": {
+      "norm_edits": 0,
+      "words": 175,
+      "edits_per_100_words": 0.0
+     },
+     "lexical": {
+      "renamed_share": 0.25,
+      "term_pairs": [
+       {
+        "old": "Zie Grafjnaar",
+        "new": "The Craftsman"
+       }
+      ],
+      "likely_ocr_or_spelling": [
+       {
+        "old": "Terre Filosa",
+        "new": "Terræ Filius"
+       },
+       {
+        "old": "Coluba Britainans",
+        "new": "Oculus Britanniæ"
+       }
+      ]
+     },
+     "knowledge": {
+      "superseded_share": 0.0
+     },
+     "coverage": {
+      "dropped_share": 0.0,
+      "wiki_only_topics": [
+       "His education at Merchant Taylors' School.",
+       "His early works including Protestant Popery and The Protestant Session.",
+       "His satire Strepkon's Revenge; a Satire on the Oxford Toasts.",
+       "The custom of the Terræ filius orator at Oxford.",
+       "His imprisonment over the imaginary letter from Colley Cibber."
+      ]
+     },
+     "enduring_share": 0.75,
+     "claim_counts": {
+      "enduring": 6,
+      "renamed": 2,
+      "superseded": 0,
+      "dropped": 0
+     },
+     "claims_checked": 8,
+     "note": "shares count only claims whose quotes passed the substring check"
+    }
+   }
+  },
+  {
+   "tool": "find_drift",
+   "params": {
+    "k": 20,
+    "kind": "term_pairs"
+   },
+   "result": {
+    "kind": "term_pairs",
+    "total": 142,
+    "items": [
+     {
+      "entry_id": "B:1017:11",
+      "cite_britannica": "[B:1017:11]",
+      "cite_wikipedia": "[W:191032:1338024466]",
+      "wiki_title": "Hälsingland",
+      "rerank_margin": 5.712891,
+      "old": "Botnhic gulph",
+      "new": "Gulf of Bothnia",
+      "quote_britannica": "bounded by the Botnhic gulph on the cafl,",
+      "quote_wikipedia": "It borders Gästrikland, Dalarna, Härjedalen, Medelpad and the Gulf of Bothnia."
+     },
+     {
+      "entry_id": "B:560:2",
+      "cite_britannica": "[B:560:2]",
+      "cite_wikipedia": "[W:2305125:1338635003]",
+      "wiki_title": "Nicholas Amhurst",
+      "rerank_margin": 4.178508,
+      "old": "Zie Grafjnaar",
+      "new": "The Craftsman",
+      "quote_britannica": "But he is left known for the flare he had in the political paper called Zie Grafjnaar strongly,",
+      "quote_wikipedia": "On the 5 December 1726 he issued the first number of The Craftsman, a weekly periodical, which he conducted under the pseudonym of Caleb D'Anvers."
+     },
+     {
+      "entry_id": "B:1327:8",
+      "cite_britannica": "[B:1327:8]",
+      "cite_wikipedia": "[W:75899:1352397655]",
+      "wiki_title": "Huguenots",
+      "rerank_margin": 4.13297,
+      "old": "rife",
+      "new": "common use",
+      "quote_britannica": "The name had its first rife in 1560; but authors are",
+      "quote_wikipedia": "The term, which may be derived from the name of a Swiss political leader, the Genevan burgomaster Besançon Hugues, was in common use by around 1550."
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "tenparts",
+      "new": "tenements",
+      "quote_britannica": "ESCHEAT, in law, signifies any lands or tenparts that cafinally fail to a Lord within his manor.",
+      "quote_wikipedia": "transfers the real property of a person who has died without heirs to the government"
+     },
+     {
+      "entry_id": "B:1473:7",
+      "cite_britannica": "[B:1473:7]",
+      "cite_wikipedia": "[W:175519:1353158843]",
+      "wiki_title": "Escheat",
+      "rerank_margin": 2.66776,
+      "old": "cry",
+      "new": "crown",
+      "quote_britannica": "fa fault, cakes the hand echated or fell back to the lost of the cry",
+      "quote_wikipedia": "the fee reverted to the King's demesne permanently"
+     },
+     {
+      "entry_id": "B:2250:8",
+      "cite_britannica": "[B:2250:8]",
+      "cite_wikipedia": "[W:521384:1340885393]",
+      "wiki_title": "By-law",
+      "rerank_margin": 2.56998,
+      "old": "BYLAWS, or ByrŁLAWS",
+      "new": "by-law (bye-law, by (e) law, by (e) law)",
+      "quote_britannica": "BYLAWS, or ByrŁLAWS, private and peculiar laws for the good government of a city, court, or other community, made by the general content of the mem-bers.",
+      "quote_wikipedia": "A by-law (bye-law, by (e) law, by (e) law), is a set of rules or law established by an organization or community so as to regulate itself, as allowed or provided for by some higher authority."
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "backache",
+      "new": "MD",
+      "quote_britannica": "created backache of his faculty",
+      "quote_wikipedia": "graduated as MD"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Wanilor Eagle",
+      "new": "Wynford Eagle",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:251:5",
+      "cite_britannica": "[B:251:5]",
+      "cite_wikipedia": "[W:564669:1341167433]",
+      "wiki_title": "Thomas Sydenham",
+      "rerank_margin": 2.525945,
+      "old": "Dorforth",
+      "new": "Dorset",
+      "quote_britannica": "of Wanilor Eagle in Dorforth",
+      "quote_wikipedia": "born at Wynford Eagle in Dorset"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "loft horn",
+      "new": "callosity",
+      "quote_britannica": "like a piece of loft horn",
+      "quote_wikipedia": "a small callosity (Calcar metacarpeum and Calcar metatarseum)"
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "pattern join",
+      "new": "fetlock",
+      "quote_britannica": "placed behind and be low the pattern join",
+      "quote_wikipedia": "on the underside of the fetlock of a horse or other equine."
+     },
+     {
+      "entry_id": "B:2473:10",
+      "cite_britannica": "[B:2473:10]",
+      "cite_wikipedia": "[W:21445971:1324376018]",
+      "wiki_title": "Ergot (horse anatomy)",
+      "rerank_margin": 2.355466,
+      "old": "tufi",
+      "new": "feather",
+      "quote_britannica": "hide under the tufi of the fetlock.",
+      "quote_wikipedia": "long hairs on the lower legs."
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "old": "goddels of mithief",
+      "new": "personification of moral blindness and error",
+      "quote_britannica": "ATE, the goddels of mithief; in the Pagan tho-ology.",
+      "quote_wikipedia": "In Greek mythology, Ate (Ancient Greek: Ἄτη, romanized: Átē, lit. ' Delusion, Recklessness, Folly, Ruin ') is the personification of moral blindness and error."
+     },
+     {
+      "entry_id": "B:2171:6",
+      "cite_britannica": "[B:2171:6]",
+      "cite_wikipedia": "[W:79071:1353135063]",
+      "wiki_title": "Ate (mythology)",
+      "rerank_margin": 2.342574,
+      "old": "Jupiter",
+      "new": "Zeus",
+      "quote_britannica": "She was daughter of Jupiter, and cast down from heaven at the birth of Hercules.",
+      "quote_wikipedia": "Homer calls Ate the daughter of Zeus, while Hesiod has Ate as the daughter of Eris (Strife)."
+     },
+     {
+      "entry_id": "B:2171:9",
+      "cite_britannica": "[B:2171:9]",
+      "cite_wikipedia": "[W:13770710:1352684512]",
+      "wiki_title": "Aternum",
+      "rerank_margin": 2.267812,
+      "old": "Lucerna",
+      "new": "Roman",
+      "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris",
+      "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+     },
+     {
+      "entry_id": "B:2171:9",
+      "cite_britannica": "[B:2171:9]",
+      "cite_wikipedia": "[W:13770710:1352684512]",
+      "wiki_title": "Aternum",
+      "rerank_margin": 2.267812,
+      "old": "Alteris",
+      "new": "Pescara",
+      "quote_britannica": "ATERNUM, s town of Lucerna in Italy, now Alteris, (Chorusas )).",
+      "quote_wikipedia": "Aternum was a Roman town, on the site of Pescara, in Italy."
+     },
+     {
+      "entry_id": "B:2171:4",
+      "cite_britannica": "[B:2171:4]",
+      "cite_wikipedia": "[W:28777761:1347832688]",
+      "wiki_title": "Achievement (heraldry)",
+      "rerank_margin": 2.218275,
+      "old": "fluid",
+      "new": "escutcheon",
+      "quote_britannica": "together with all the exterior ornament of the fluid; as helmes, mantle, credit, scrolls, and motto, together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+      "quote_wikipedia": "An achievement comprises not only the arms displayed on the escutcheon, the central element, but also the following elements surrounding it (from top to bottom):"
+     },
+     {
+      "entry_id": "B:2171:4",
+      "cite_britannica": "[B:2171:4]",
+      "cite_wikipedia": "[W:28777761:1347832688]",
+      "wiki_title": "Achievement (heraldry)",
+      "rerank_margin": 2.218275,
+      "old": "marhalled",
+      "new": "depiction",
+      "quote_britannica": "together with such quarterings as may have been acquired by aliiances, all marhalled in order.",
+      "quote_wikipedia": "is a full display or depiction of all the heraldic components to which the bearer of a coat of arms is entitled."
+     },
+     {
+      "entry_id": "B:2464:5",
+      "cite_britannica": "[B:2464:5]",
+      "cite_wikipedia": "[W:1468228:1326520528]",
+      "wiki_title": "Cabin (ship)",
+      "rerank_margin": 2.122037,
+      "old": "flip",
+      "new": "ship",
+      "quote_britannica": "fewelful parts of a flip, particularly on the quarter-deck,",
+      "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+     },
+     {
+      "entry_id": "B:2464:5",
+      "cite_britannica": "[B:2464:5]",
+      "cite_wikipedia": "[W:1468228:1326520528]",
+      "wiki_title": "Cabin (ship)",
+      "rerank_margin": 2.122037,
+      "old": "fleerage",
+      "new": "ship",
+      "quote_britannica": "and on each side of the fleerage, for the officers of the flip to lie in.",
+      "quote_wikipedia": "In sailing ships, the officers and paying passengers would have an individual or shared cabin."
+     }
+    ],
+    "note": "Items passed the quote substring check. term_pairs exclude pairs that look like OCR or spelling noise."
+   }
+  }
+ ],
+ "tool_log_note": "full tool results; events[] tool outputs are cut at 5,000 chars by Hermes stream-json"
+}

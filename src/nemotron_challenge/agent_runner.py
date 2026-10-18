@@ -66,7 +66,7 @@ def summarize(events: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def ask(question: str, *, repo: Path, max_turns: int = 12, timeout: int = 900, runs: Path = RUNS,
-        retrieval_mode: str = "full") -> Path:
+        retrieval_mode: str = "hybrid") -> Path:
     from dotenv import dotenv_values
 
     import tempfile
@@ -182,7 +182,7 @@ def score_run(rec: dict[str, Any], expect_b: str | None, expect_w: str | None, w
     return out
 
 
-def run_ablation(modes: tuple[str, ...] = ("bm25_only", "embed_only", "full"), *, repo: Path,
+def run_ablation(modes: tuple[str, ...] = ("bm25_only", "embed_only", "full", "hybrid"), *, repo: Path,
                  questions: list[dict[str, Any]] = ABLATION_QUESTIONS, runs: Path = RUNS / "ablation") -> dict[str, Any]:
     from concurrent.futures import ThreadPoolExecutor
 

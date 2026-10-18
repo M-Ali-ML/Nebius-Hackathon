@@ -33,6 +33,8 @@
   --rose-50: #fff1f2; --rose-200: #fecdd3; --rose-700: #be123c;
   --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb; --gray-300: #d1d5db; --gray-400: #9ca3af; --gray-500: #6b7280; --gray-700: #374151; --gray-800: #1f2937;
   --enduring: var(--green-400); --renamed: var(--sky-400); --superseded: var(--amber-400); --dropped: var(--gray-400);
+  --hf-yellow: #ffd21e; --hf-orange: #ff9d00; --hf-yellow-50: #fffbeb;
+  --card: linear-gradient(to bottom right, var(--gray-50), var(--background));
   --side-britannica: #c9b48c; --side-wikipedia: var(--gray-400);
 }
 
@@ -476,3 +478,30 @@ td.pm .cause-note { display: none; }
 #index-filters.show-causes #cause-chips { display: inline-flex; }
 .claim .q { padding-bottom: 0; border-bottom: var(--s2) solid transparent; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; cursor: pointer; }
 .claim .q.open { -webkit-line-clamp: unset; }
+
+/* Hugging Face cards, tags, and accent. The yellow/orange accent is used only for the brand mark and the primary button. */
+.brand { display: inline-flex; align-items: center; gap: var(--s2); }
+.brand .mark { width: 18px; height: 18px; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--hf-yellow), var(--hf-orange)); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06); }
+.btn.primary { color: var(--foreground); border: 1px solid #fde68a; background: linear-gradient(to bottom, var(--hf-yellow-50), #fef3c7); }
+.btn.primary:hover { background: linear-gradient(to bottom, #fef3c7, #fde68a); color: var(--foreground); box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05); }
+
+.stats, .kpis { border: 0; border-radius: 0; overflow: visible; gap: var(--s3); }
+.stats li, .kpi {
+  margin: 0; border: 1px solid var(--border); border-radius: var(--radius-lg, 12px); background: var(--card);
+  transition: box-shadow .15s;
+}
+.stats li:hover, .kpi:hover { box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05); }
+.frame, figure.plot, .gen-box, details.disclose { border-radius: 12px; background: var(--card); }
+.claim { border-radius: 12px; }
+.tablewrap { border-radius: 12px; }
+.src-box { border-radius: 12px; }
+
+.pane.latex .pane-head, .pane.inspector .pane-head { background: linear-gradient(to bottom, var(--gray-50), var(--background)); }
+.pane.inspector .pane-head { background: linear-gradient(to bottom, var(--background), var(--inspector)); }
+.pane-title { color: var(--gray-700); }
+
+/* HF tag style for chips and pills: rounded, light top-to-bottom gradient */
+.pill { border-radius: var(--radius-sm); padding: 1px 7px; }
+.pill.gen, .pill:not([class*=" "]) { background: linear-gradient(to bottom, var(--background), var(--gray-100)); border-color: var(--border); color: var(--gray-700); }
+.meta, .cite { border-radius: var(--radius-sm); }
+.chip { border-radius: var(--radius); padding: 4px 10px; }

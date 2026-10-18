@@ -11,6 +11,8 @@ from typing import Any
 
 REPO = os.environ.get("NEMOTRON_REPO", "/Users/aly/repos/Nebius-Hackathon")
 TIMEOUT = 180
+# command that runs the project's Python; the Space sets NEMOTRON_TOOL_CMD="python"
+TOOL_CMD = os.environ.get("NEMOTRON_TOOL_CMD", "uv run --quiet python").split()
 
 SEARCH_SCHEMA = {
     "name": "search_sources",
@@ -136,7 +138,7 @@ def _call(tool: str, params: dict[str, Any]) -> dict[str, Any]:
 def _run(tool: str, params: dict[str, Any]) -> dict[str, Any]:
     try:
         proc = subprocess.run(
-            ["uv", "run", "--quiet", "python", "-m", "nemotron_challenge.agent_tools", tool, json.dumps(params)],
+            [*TOOL_CMD, "-m", "nemotron_challenge.agent_tools", tool, json.dumps(params)],
             cwd=REPO, env=_clean_env(), capture_output=True, text=True, timeout=TIMEOUT)
     except (OSError, subprocess.TimeoutExpired) as exc:
         return {"error": f"tool process failed: {exc}"}

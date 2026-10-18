@@ -1,0 +1,107 @@
+{% extends "base.html" %}{% set root = "../" %}
+{% block title %}Row {{ page.row }}: {{ page.head or "page" }}{% endblock %}
+{% block bodyclass %}page-view{% endblock %}
+{% block content %}
+<div class="pagebar">
+  {% if nav.prev is not none %}<a href="{{ nav.prev }}.html">&larr; row {{ nav.prev }}</a>{% else %}<span></span>{% endif %}
+  <h1>Row {{ page.row }} <span class="muted">{{ page.head }}</span></h1>
+  {% if nav.next is not none %}<a href="{{ nav.next }}.html">row {{ nav.next }} &rarr;</a>{% else %}<span></span>{% endif %}
+</div>
+<div class="panes">
+  <section class="pane source">
+    <h2>Source: scan and Parse blocks</h2>
+    <div class="toggles" id="toggles">
+      <label><input type="checkbox" id="toggle-all" checked> boxes</label>
+      {% for cls, color in colors.items() %}
+      <label><input type="checkbox" class="cls-toggle" value="{{ cls }}" checked><span class="swatch" style="background:{{ color }}"></span>{{ cls }}</label>
+      {% endfor %}
+    </div>
+    <div class="scanwrap" style="aspect-ratio: 1 / {{ '%.4f'|format(aspect) }}">
+      {% if page.has_scan %}<img src="../scans/{{ page.filename }}" alt="scan row {{ page.row }}">{% else %}<p class="note">Scan file missing.</p>{% endif %}
+      <svg class="overlay" viewBox="0 0 1 1" preserveAspectRatio="none" id="overlay">
+        {% for b in blocks %}
+        <rect class="blk" data-cls="{{ b.cls }}" data-order="{{ b.order }}" x="{{ b.bbox[0] }}" y="{{ b.bbox[1] }}"
+              width="{{ (b.bbox[2] - b.bbox[0])|round(4) }}" height="{{ (b.bbox[3] - b.bbox[1])|round(4) }}"
+              style="stroke:{{ b.color }};fill:{{ b.color }}"><title>#{{ b.order }} {{ b.cls }}: {{ b.text[:160] }}</title></rect>
+        {% endfor %}
+      </svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <details class="blocktext">
+      <summary>Parse text by block ({{ blocks|length }} blocks, reading order)</summary>
+      <ol start="0">
+        {% for b in blocks %}<li data-order="{{ b.order }}"><span class="cls" style="color:{{ b.color }}">{{ b.cls }}</span> {{ b.text }}</li>{% endfor %}
+      </ol>
+    </details>
+    <dl class="prov">
+      <dt>page_id</dt><dd>{{ page.page_id }}</dd>
+      <dt>image sha256</dt><dd>{{ page.image_sha256 }}</dd>
+      <dt>Parse</dt><dd>{{ page.parse_model }}, finish {{ page.finish_reason }}</dd>
+    </dl>
+  </section>
+
+  <section class="pane latex">
+    <h2>LaTeX document from Parse blocks
+      <span class="badge {{ 'ok' if page.latex == 'ok' else 'bad' }}">{{ page.latex }}</span>
+      {% if page.two_column %}<span class="badge">two columns</span>{% endif %}</h2>
+    {% if page.has_pdf %}
+      <iframe class="pdf" src="../pdf/{{ page.row }}.pdf#view=FitH" title="compiled PDF row {{ page.row }}"></iframe>
+      <p class="small"><a href="../pdf/{{ page.row }}.pdf">Open PDF</a> · <a href="../pdf/{{ page.row }}.tex">LaTeX source</a></p>
+    {% else %}
+      <p class="note">No PDF for this page.</p>
+      {% if page.latex_error %}<pre class="err">{{ page.latex_error }}</pre>{% endif %}
+    {% endif %}
+  </section>
+
+  <section class="pane generated">
+    <h2>Generated: Wikipedia matches</h2>
+    {% if not inputs.has_entries %}
+      <p class="note">Entry segmentation is not available yet.</p>
+    {% elif not entries %}
+      <p class="note">No entries were segmented on this page.</p>
+    {% else %}
+      {% if not inputs.has_matches %}<p class="note">Match output is not available yet. Entries are shown without matches.</p>{% endif %}
+      <ul class="entries">
+      {% for e in entries %}
+        {% set m = e.match %}
+        <li class="entry {{ m.status if m else 'pending' }}" data-orders="{{ e.block_orders|join(',') }}">
+          <div class="ehead">
+            <span class="eid">{{ e.entry_id }}</span>
+            <b>{{ e.headword or "(continuation)" }}</b>
+          </div>
+          <p class="snippet" title="Parse text">{{ (e.text_raw or "")[:220] }}{% if (e.text_raw or "")|length > 220 %}…{% endif %}</p>
+          {% if m %}
+            {% if m.status == "matched" %}
+              <div class="match">
+                <span class="badge ok">matched</span>
+                <a href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>
+                <span class="small">rev {{ m.wiki_revision_id }}</span>
+              </div>
+            {% elif m.status == "no_clear_counterpart" %}
+              <div class="match">
+                <span class="badge warn">uncertain: no clear counterpart</span>
+                {% if m.wiki_title %}<span class="small">best candidate: {% if m.wiki_url %}<a href="{{ m.wiki_url }}" target="_blank" rel="noopener">{{ m.wiki_title }}</a>{% else %}{{ m.wiki_title }}{% endif %}</span>{% endif %}
+              </div>
+            {% else %}
+              <div class="match"><span class="badge bad">{{ m.status }}</span> <span class="small">{{ m.reason }}</span></div>
+            {% endif %}
+            <div class="scores small">
+              {% if m.rerank_logit is not none %}rerank {{ '%.2f'|format(m.rerank_logit) }}{% endif %}
+              {% if m.rerank_margin is not none %} · margin {{ '%.2f'|format(m.rerank_margin) }}{% endif %}
+              {% if m.embed_cos is not none %} · cos {{ '%.3f'|format(m.embed_cos) }}{% endif %}
+              {% if m.bm25_rank is not none %} · BM25 rank {{ m.bm25_rank }}{% endif %}
+              {% if m.method %} · {{ m.method }}{% endif %}
+            </div>
+            {% if m.reason and m.status != "error" %}<div class="small muted">{{ m.reason }}</div>{% endif %}
+          {% else %}
+            <div class="match"><span class="badge">not processed</span></div>
+          {% endif %}
+          {% if e.has_pair %}<div class="small">Comparison saved: compare/pairs/{{ e.entry_id }}.json</div>{% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}<script src="../app.js"></script>{% endblock %}

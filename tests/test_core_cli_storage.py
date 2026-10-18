@@ -31,7 +31,7 @@ def test_live_doctor_reports_missing_resources(monkeypatch):
     assert report["inference"] == "not tested"
 
 
-@pytest.mark.parametrize("stage", ["extract", "match", "compare", "agent", "site", "evaluate"])
+@pytest.mark.parametrize("stage", ["extract", "match", "compare", "agent", "evaluate"])
 def test_unfinished_stage_fails_with_guide_and_creates_no_result(stage, tmp_path, capsys):
     path = tmp_path / "team-artifacts"
     assert main(["run", stage, "--work-dir", str(path)]) == 2

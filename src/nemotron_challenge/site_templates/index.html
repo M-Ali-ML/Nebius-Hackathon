@@ -1,0 +1,37 @@
+{% extends "base.html" %}{% set root = "" %}
+{% block title %}Pages: Britannica and Wikipedia{% endblock %}
+{% block content %}
+<main class="wide">
+  <h1>Encyclopaedia Britannica scans</h1>
+  <p class="lead">{{ totals.pages }} scanned pages. Each page has the scan with Parse 3.5 layout blocks, a LaTeX document compiled from those blocks, and the Wikipedia articles our retrieval matched to its entries.</p>
+  <ul class="stats">
+    <li><b>{{ totals.pages }}</b> pages</li>
+    <li><b>{{ totals.latex_ok }}</b> LaTeX builds ok</li>
+    <li><b>{{ totals.entries if inputs.has_entries else "n/a" }}</b> entries</li>
+    <li><b>{{ totals.matched if inputs.has_matches else "n/a" }}</b> matched</li>
+    <li><b>{{ totals.uncertain if inputs.has_matches else "n/a" }}</b> no clear counterpart</li>
+    {% if totals.errors %}<li><b>{{ totals.errors }}</b> match errors</li>{% endif %}
+  </ul>
+  {% if not inputs.has_entries %}<p class="note">Entry segmentation output (extract/entries.jsonl) is not available yet.</p>{% endif %}
+  {% if not inputs.has_matches %}<p class="note">Match output (match/matches.jsonl) is not available yet.</p>{% endif %}
+  <input id="filter" class="filter" type="search" placeholder="Filter by row or running head">
+  <table class="pages" id="pages">
+    <thead><tr><th>Scan</th><th>Row</th><th>Running head</th><th>Blocks</th><th>Entries</th><th>Matched</th><th>Uncertain</th><th>LaTeX</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr data-search="{{ r.row }} {{ r.head|lower }}">
+        <td><a href="pages/{{ r.row }}.html">{% if r.has_scan %}<img class="thumb" src="thumbs/{{ r.row }}.jpg" alt="scan row {{ r.row }}" loading="lazy">{% else %}no scan{% endif %}</a></td>
+        <td><a href="pages/{{ r.row }}.html">{{ r.row }}</a></td>
+        <td class="head">{{ r.head or "(no running head)" }}</td>
+        <td>{{ r.n_blocks }}</td>
+        <td>{{ r.n_entries if inputs.has_entries else "n/a" }}</td>
+        <td>{{ r.n_matched if inputs.has_matches else "n/a" }}</td>
+        <td>{{ r.n_uncertain if inputs.has_matches else "n/a" }}</td>
+        <td><span class="badge {{ 'ok' if r.latex == 'ok' else 'bad' }}" title="{{ r.latex_error }}">{{ r.latex }}</span>{% if r.has_pdf %} <a href="pdf/{{ r.row }}.pdf">PDF</a>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</main>
+{% endblock %}
+{% block scripts %}<script src="app.js"></script>{% endblock %}

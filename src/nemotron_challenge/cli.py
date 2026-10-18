@@ -64,6 +64,10 @@ def parser() -> argparse.ArgumentParser:
     run = sub.add_parser("run", help="run a team milestone")
     run.add_argument("stage", choices=tasks.STAGES)
     run.add_argument("--work-dir", type=Path, default=Path("artifacts"))
+    plates = sub.add_parser("plates", help="visual matching for picture-only plate pages (Super VL, Embed VL, Rerank VL)")
+    plates.add_argument("--work-dir", type=Path, default=Path("artifacts"))
+    plates.add_argument("--cache-dir", type=Path, default=Path("data/cache"))
+    plates.add_argument("--rows", type=int, nargs="*", help="only these plate rows")
     data = sub.add_parser("data", help="inspect or fetch the pinned source scans")
     data_sub = data.add_subparsers(dest="data_command", required=True)
     data_sub.add_parser("show")
@@ -88,7 +92,12 @@ def main(argv: list[str] | None = None) -> int:
                 result, status = doctor(settings, live=args.live)
                 print(json.dumps(result, indent=2))
                 return status
-            result = getattr(tasks, args.stage)(settings, args.work_dir)
+            if args.command == "plates":
+                from .plates import run_plates
+
+                result = run_plates(settings, args.work_dir, args.cache_dir, args.rows or None)
+            else:
+                result = getattr(tasks, args.stage)(settings, args.work_dir)
         print(json.dumps(result, indent=2))
         return 0
     except NotImplementedError as exc:

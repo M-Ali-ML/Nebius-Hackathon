@@ -54,6 +54,7 @@
   </section>
 
   <section class="pane generated">
+    {% if plate %}{% include "plate.html" %}{% endif %}
     <h2>Generated: Wikipedia matches</h2>
     {% if not inputs.has_entries %}
       <p class="note">Entry segmentation is not available yet.</p>

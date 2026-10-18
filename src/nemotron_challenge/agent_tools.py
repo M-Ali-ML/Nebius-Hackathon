@@ -20,7 +20,7 @@ from .config import Settings
 
 MAIN = Path(os.environ.get("NEMOTRON_MAIN", "/Users/aly/repos/Nebius-Hackathon"))
 ARTIFACTS = Path(os.environ.get("NEMOTRON_ARTIFACTS", str(MAIN / "artifacts")))
-LOW_LOGIT = 0.0      # top rerank logit below this: low confidence
+LOW_LOGIT = -2.0     # top rerank logit below this: low confidence (heuristic; logits here run negative)
 LOW_MARGIN = 1.0     # top1 - top2 logit below this: low confidence
 PASSAGE_CHARS = 1200
 RERANK_DOC_CHARS = 4000
@@ -81,9 +81,11 @@ def search_sources(query: str, side: str = "both", k: int = 5, settings: Setting
         vec = _retry(lambda: retr.embed([query], "query"), "embed query")[0]
         candidates = []
         for table in tables:
-            if table not in db.table_names():
+            try:
+                tbl = db.open_table(table)
+            except (ValueError, FileNotFoundError):
                 continue
-            rows = db.open_table(table).search(vec).metric("cosine").limit(12 if side == "both" else 20).to_list()
+            rows = tbl.search(vec).metric("cosine").limit(12 if side == "both" else 20).to_list()
             for row in rows:
                 row.pop("vector", None)
                 row["_table"] = table
@@ -95,8 +97,15 @@ def search_sources(query: str, side: str = "both", k: int = 5, settings: Setting
         docs = [(c.get("text_norm") or c.get("text") or "")[:RERANK_DOC_CHARS] or "(empty)" for c in candidates]
         ranked = _retry(lambda: retr.rerank(query, docs), "rerank")
     ranked = sorted(ranked, key=lambda r: r["relevance_score"], reverse=True)
+    chosen = ranked[:k]
+    if side == "both":  # keep the best hit of each side so the agent can cite both
+        for table in ("entries", "wiki_chunks"):
+            if not any(candidates[r["index"]]["_table"] == table for r in chosen):
+                best = next((r for r in ranked if candidates[r["index"]]["_table"] == table), None)
+                if best is not None:
+                    chosen.append(best)
     results = []
-    for r in ranked[:k]:
+    for r in chosen:
         c = candidates[r["index"]]
         if c["_table"] == "entries":
             item = {"side": "britannica", "cite": entry_cite(c["entry_id"]), "entry_id": c["entry_id"],

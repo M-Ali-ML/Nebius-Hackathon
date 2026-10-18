@@ -13,13 +13,7 @@ Public repository: https://github.com/M-Ali-ML/Nebius-Hackathon
 
 ![Who runs what](docs/diagrams/who-runs-what.svg)
 
-## Steps
-
-![Pipeline steps](docs/diagrams/pipeline.svg)
-
-## Hermes agent
-
-![How Hermes answers](docs/diagrams/hermes.svg)
+The step map and the Hermes map are on [site/how.html](site/how.html).
 
 The saved run is already in this checkout: `site/`, `artifacts/`, `docs/cases/`, and `runs/agent/`. You can read it before you call a model. A full rerun needs the steps below.
 

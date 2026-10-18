@@ -4,10 +4,10 @@ This report describes our BERTopic-style topic modeling pipeline across historic
 
 ## Files
 
-- Module: [`src/nemotron_challenge/topics.py`](file:///Users/aly/repos/Nebius-Hackathon/src/nemotron_challenge/topics.py)
-- Structured output: [`artifacts/compare/topics.json`](file:///Users/aly/repos/Nebius-Hackathon/artifacts/compare/topics.json)
-- Raw model reply: [`artifacts/compare/raw_topics_super.json`](file:///Users/aly/repos/Nebius-Hackathon/artifacts/compare/raw_topics_super.json)
-- Shared-space figure: [`artifacts/compare/shared_space_umap.png`](file:///Users/aly/repos/Nebius-Hackathon/artifacts/compare/shared_space_umap.png)
+- Module: [`src/nemotron_challenge/topics.py`](../src/nemotron_challenge/topics.py)
+- Structured output: [`artifacts/compare/topics.json`](../artifacts/compare/topics.json)
+- Raw model reply: [`artifacts/compare/raw_topics_super.json`](../artifacts/compare/raw_topics_super.json)
+- Shared-space figure: [`artifacts/compare/shared_space_umap.png`](../artifacts/compare/shared_space_umap.png)
 
 ## Pipeline stages
 

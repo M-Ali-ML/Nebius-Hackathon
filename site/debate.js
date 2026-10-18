@@ -12,7 +12,7 @@
   const TOOL_ICON = { search_sources: "search", get_pair: "file", view_scan: "image", find_drift: "search", view_neighbors: "image" };
   const fmt = (n) => (n == null ? "?" : n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n));
 
-  let d = 0, shown = 0, playing = false, speed = 1, timer = null, token = 0;
+  let d = 0, shown = 0, playing = false, speed = 1, SPEEDS = [0.25, 0.5, 0.75, 1, 1.5, 2], timer = null, token = 0;
 
   function debate() { return DATA.debates[d]; }
 
@@ -177,17 +177,17 @@
       span.innerHTML = toolChips({ tools: [tl] }, true);
       const chip = span.firstElementChild;
       tools.appendChild(chip);
-      if (!(await wait(420, t))) return false;
+      if (!(await wait(1100, t))) return false;
       chip.classList.remove("run");
       chip.querySelector("svg") && (chip.querySelector("svg").outerHTML = icon(tl.error ? "alert" : "check"));
     }
-    if (!(await wait(st.kind === "turn" ? 500 : 250, t))) return false;
+    if (!(await wait(st.kind === "turn" ? 1400 : 700, t))) return false;
     ind && ind.remove();
     if (st.kind === "final") fireConfetti(st.winner);
     for (let k = 0; k < words.length; k++) {
       words[k].classList.add("on", "cur");
       if (k) words[k - 1].classList.remove("cur");
-      if (k % 2 === 0 && !(await wait(38, t))) return false;
+      if (!(await wait(110, t))) return false;
       if (k % 12 === 0 && i > 0) follow(el, false);
     }
     words.length && words[words.length - 1].classList.remove("cur");
@@ -202,7 +202,7 @@
     while (playing) {
       const ok = await reveal();
       if (!ok || !playing) break;
-      if (!(await wait(900, token))) break;
+      if (!(await wait(2600, token))) break;
     }
     if (shown >= debate().steps.length) playing = false;
     updateControls();
@@ -249,7 +249,7 @@
     prev: () => { pause(); renderUpTo(shown - 1); writeHash(); },
     end: () => { pause(); renderUpTo(debate().steps.length); writeHash(); },
     restart: () => { pause(); renderUpTo(0); writeHash(); play(); },
-    speed: () => { speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; document.querySelector(".ctl.speed").textContent = speed + "x"; },
+    speed: (dir = 1) => { const i = SPEEDS.indexOf(speed); speed = SPEEDS[(i + dir + SPEEDS.length) % SPEEDS.length]; document.querySelector(".ctl.speed").textContent = speed + "x"; },
     share: () => { writeHash(); const url = location.href; (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => toast("Link to this step copied"), () => toast(url)); },
   };
 
@@ -314,7 +314,8 @@
     else if (k === "ArrowLeft") act.prev();
     else if (k === "e" || k === "E") act.end();
     else if (k === "r" || k === "R") act.restart();
-    else if (k === "s" || k === "S") act.speed();
+    else if (k === "s") act.speed(1);
+    else if (k === "S") act.speed(-1);
     else if (/^[1-9]$/.test(k) && +k <= DATA.debates.length) select(+k - 1, 0, true);
   });
   addEventListener("hashchange", () => { const h = readHash(); if (h && (h.i !== d || h.n !== shown)) select(h.i, h.n, false); });

@@ -22,17 +22,21 @@ tags:
 
 # Britannica Across Time
 
+**Winner of the NVIDIA track** at the Nebius Build Week hackathon, for the best use of an NVIDIA Nemotron model.
+
 **What did people know in the 1700s, and what do we know now?**
 We read 100 scanned pages of the 18th-century Encyclopaedia Britannica with NVIDIA Nemotron models, matched each entry to its modern Wikipedia article, and split every difference into four kinds of drift: the spelling changed, the name changed, the knowledge changed, or the topic was dropped.
 Every claim on this site has a quote from both sources, and every quote was checked against the source text.
 
-[Open the archive](${app_url}) · [Dataset](${dataset_url}) · [Code on GitHub](${github})
+**[Open the archive](${app_url})** · [Dataset](${dataset_url}) · [Code on GitHub](${github})
 
 ![The archive index: 100 scanned pages with match status and uncertainty causes](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/index.png)
 
 ![A page view: the scan with Parse 3.5 boxes, the compiled LaTeX PDF, and the Wikipedia match with drift claims](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/page.png)
 
 ![Explore changes: every claim with a quote from each side](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/explore.png)
+
+![Analysis: coverage and the share of enduring, renamed, superseded, and dropped claims](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/analysis.png)
 
 ## What you can do in the demo
 

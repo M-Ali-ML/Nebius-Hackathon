@@ -2,14 +2,39 @@
 
 We match 100 scanned pages of the Encyclopaedia Britannica (1768 to 1860) to modern Wikipedia articles, then separate a change in spelling from a change in knowledge.
 
-Public repository: https://github.com/M-Ali-ML/Nebius-Hackathon
+**Winner of the NVIDIA track** at the Nebius Build Week hackathon, for the best use of an NVIDIA Nemotron model.
 
-- Archive: https://huggingface.co/spaces/nebius-build-week/britannica-across-time
-- Dataset: https://huggingface.co/datasets/nebius-build-week/britannica-wikipedia-drift
-- Local archive: open `site/index.html` (maps on `site/how.html`)
-- Atlas: open `site/atlas.html`. Method: [docs/atlas.md](docs/atlas.md)
-- Debate: open `site/debate.html`. Three Hermes agents. Method: [docs/debate.md](docs/debate.md)
-- APIs, packages, and file layout: [docs/technical.md](docs/technical.md)
+## Open it on Hugging Face
+
+The archive is a Hugging Face Space. Open it here:
+
+**https://huggingface.co/spaces/nebius-build-week/britannica-across-time**
+
+The dataset of entries, matches, claims, and agent transcripts is [nebius-build-week/britannica-wikipedia-drift](https://huggingface.co/datasets/nebius-build-week/britannica-wikipedia-drift).
+
+The pictures below are the live Space. Each one links to that screen.
+
+### The archive
+
+[![The archive index: 100 scanned pages, match status, and the five Nemotron stages](docs/hf/img/index.png)](https://nebius-build-week-britannica-across-time.static.hf.space/)
+
+### One page: the scan, the LaTeX rebuild, and the Wikipedia match
+
+[![Page 1910: Parse boxes on the lightning scan, the compiled PDF, and the drift claims](docs/hf/img/page.png)](https://nebius-build-week-britannica-across-time.static.hf.space/pages/1910.html)
+
+### Every claim, with a quote from both sides
+
+[![Explore: enduring, renamed, superseded, and dropped claims with Britannica and Wikipedia quotes](docs/hf/img/explore.png)](https://nebius-build-week-britannica-across-time.static.hf.space/explore.html)
+
+### What changed, and why some pages have no match
+
+[![Analysis: coverage counts and the drift bar](docs/hf/img/analysis.png)](https://nebius-build-week-britannica-across-time.static.hf.space/analysis.html)
+
+The same Space also has the [atlas](https://nebius-build-week-britannica-across-time.static.hf.space/atlas.html) and the [debate](https://nebius-build-week-britannica-across-time.static.hf.space/debate.html).
+
+Source: https://github.com/M-Ali-ML/Nebius-Hackathon
+
+Local copies, if you already have this checkout: `site/index.html`, `site/atlas.html`, `site/debate.html`. Method notes: [docs/atlas.md](docs/atlas.md), [docs/debate.md](docs/debate.md), [docs/technical.md](docs/technical.md).
 
 ## Who runs what
 

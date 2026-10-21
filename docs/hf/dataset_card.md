@@ -67,14 +67,21 @@ configs:
 
 # Britannica to Wikipedia Drift
 
+**Winner of the NVIDIA track** at the Nebius Build Week hackathon, for the best use of an NVIDIA Nemotron model.
+
 **How did knowledge change between the 18th-century Encyclopaedia Britannica and today's Wikipedia?**
 This dataset links 262 entries from 100 scanned Britannica pages to modern Wikipedia articles, keeps every retrieval score, and splits each difference into claims that endured, were renamed, were superseded, or were dropped.
 Each claim has a quote from both sides, and each quote was checked as an exact substring of its source.
 
-- Demo (browse every page, scan, and claim): [${space_id}](${space_url})
-- Code (full pipeline): [${github}](${github})
+**Browse it:** [${space_id}](${space_url})
+
+Code: [${github}](${github})
+
+![The archive on Hugging Face: 100 scanned pages and the five Nemotron stages](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/index.png)
 
 ![Page view in the demo: scan with Parse 3.5 boxes, LaTeX rebuild, and the Wikipedia match with drift claims](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/page.png)
+
+![Explore changes: every claim with a quote from each side](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/explore.png)
 
 ## Quick start
 

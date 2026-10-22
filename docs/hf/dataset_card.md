@@ -83,6 +83,8 @@ Code: [${github}](${github})
 
 ![Explore changes: every claim with a quote from each side](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/explore.png)
 
+![Agent debate on the Space: the Scholar of 1790 and the Wikipedian open on lightning](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/debate.png)
+
 ## Quick start
 
 ```python

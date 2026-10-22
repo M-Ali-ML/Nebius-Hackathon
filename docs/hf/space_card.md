@@ -38,28 +38,9 @@ Every claim on this site has a quote from both sources, and every quote was chec
 
 ![Analysis: coverage and the share of enduring, renamed, superseded, and dropped claims](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/analysis.png)
 
-## What you can do in the demo
+![Agent debate: three Hermes agents on Nemotron 3.5 Super VL argue what lightning is. The Scholar of 1790 cites only Britannica. The Wikipedian cites only Wikipedia.](https://huggingface.co/spaces/${space_id}/resolve/main/img_card/debate.png)
 
-- **Read a scan with its layout.** Each page shows the scan with Parse 3.5 boxes (text, headers, pictures). Turn box layers on and off, and read the Parse text block by block in reading order.
-- **Compare the scan with a clean LaTeX rebuild.** All 100 pages were compiled to PDF from the Parse blocks, 89 of them in two columns.
-- **See the modern counterpart.** Each entry links to the matched Wikipedia article and revision, with the BM25 rank, embed cosine, rerank logit, and margin that decided the match.
-- **See why a match failed.** Pages with no clear counterpart get a cause: no usable text, OCR failure, obsolete subject, candidate pool miss, or threshold miss.
-- **Read the drift.** For each matched pair, claims are tagged enduring, renamed, superseded, or dropped, each with a Britannica quote and a Wikipedia quote.
-- **Explore changes across the corpus.** The Explore page lists every claim and every old -> new term pair, with search and filters by type. Click `[B:..]` to see the scan and `[W:..]` to open the exact Wikipedia revision.
-- **Read the analysis.** Coverage, causes of unmatched pages, drift shares, word frequencies, and visual matching of engraving plates.
-
-## Headline numbers
-
-| Stage | Result |
-| --- | --- |
-| Parse 3.5 | 100 of 100 scans parsed, 262 entries, 723 long-s and ligature repairs |
-| LaTeX | 100 of 100 PDFs compiled |
-| Matching | ${pages_matched} of 100 pages and ${entries_matched} of 262 entries matched; the rest carry a stated cause |
-| Retrieval (P@1, 40 hand labels, gold in pool) | BM25 ${p1_bm25} -> + Embed VL ${p1_embed} -> + Rerank VL ${p1_rerank} |
-| Drift (${claims_checked} quote-checked claims, ${pairs} pairs) | enduring ${enduring}, renamed ${renamed}, superseded ${superseded}, dropped ${dropped} |
-| Agent | Hermes with 4 team tools; 3 success and 3 failure cases kept with full transcripts |
-
-The retrieval labels are our own judgment, from one reader. OCR noise inflates the renamed and superseded shares. The quote check proves that a quote exists in its source, not that it supports the claim.
+Results, setup, the atlas, the debate, and the six case studies are in the [docs](${github}/blob/main/docs/README.md).
 
 ## Nemotron models used
 

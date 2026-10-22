@@ -21,7 +21,7 @@
 ## Reproduce the run
 
 Maps: `docs/diagrams/who-runs-what.svg`, `docs/diagrams/pipeline.svg`, `docs/diagrams/hermes.svg`.
-Setup, APIs, and package versions: `README.md` and `docs/technical.md`.
+Setup, APIs, and package versions: `docs/setup.md` and `docs/technical.md`.
 
 ### 1. Setup and run commands
 

@@ -1,6 +1,6 @@
 # Technical record
 
-Maps: [who runs what](diagrams/who-runs-what.svg), [steps](diagrams/pipeline.svg), [Hermes](diagrams/hermes.svg). Setup commands: [README](../README.md).
+Maps: [who runs what](diagrams/who-runs-what.svg), [steps](diagrams/pipeline.svg), [Hermes](diagrams/hermes.svg). Setup commands: [setup.md](setup.md).
 
 ## Models
 
